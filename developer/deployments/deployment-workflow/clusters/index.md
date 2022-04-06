@@ -53,7 +53,7 @@ Accordingly, [PVs](https://kubernetes.io/docs/concepts/storage/persistent-volum
 - Specify the Shared Volume Size in **GB**. The minimum value is **1GB**, and the maximum value is **200GB**.
 
 
-![](/assets/developer-ui-guide/volume-size.png "")
+![](/developer/assets/developer-ui-guide/volume-size.png "")
 
 
 - Click **Create**. Your Shared Volume is created. Once the cluster starts, a [PV](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) auto-provisioner is automatically created with a default storage class. If the Kubernetes manifest for the app specifies a [PVC](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims), a [PV](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) is created and then binds to the [PVC](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims).
@@ -115,18 +115,18 @@ When creating a cluster instance, a list of supported compute resources(flavors)
 - Click the **+** plus sign on the right upper-hand corner to create a cluster instance. The Create Cluster Instances page opens.
 
 
-![](/assets/developer-ui-guide/create-cluster.png "")
+![](/developer/assets/developer-ui-guide/create-cluster.png "")
 
 **Note:** Additional fields may appear depending on your selection(s).
 
 - Populate all required fields, and click **Create**. A view of the progress is displayed and may take up to a few minutes for the action to complete.
 
 
-![](/assets/developer-ui-guide/cluster-instance-progress.png "")
+![](/developer/assets/developer-ui-guide/cluster-instance-progress.png "")
 
 
 - To view your newly added cluster instance, navigate back to the Cluster Instances submenu. You may also delete the cluster instance by clicking on the Action menu icon.
 
 
-![](/assets/cluster-instance-list1.png "")
+![](/developer/assets/cluster-instance-list1.png "")
 

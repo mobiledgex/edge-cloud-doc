@@ -34,7 +34,7 @@ The Unity Client for this Docker Server is also **open source** and integrated w
 From a new Unity project, import the MobiledgeX Unity SDK. To do this, open the Package Manager under the Window Menu `Window/Package Manager`.
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/PackageManager.gif" class="img-fluid slb" alt="Open Unity Package Manager">
+  <img src="/developer/assets/edgemultiplay/PackageManager.gif" class="img-fluid slb" alt="Open Unity Package Manager">
   <figcaption>Open Unity Package Manager</figcaption>
 
 </figure>
@@ -42,7 +42,7 @@ From a new Unity project, import the MobiledgeX Unity SDK. To do this, open the 
 Next, click the `+` icon and **Import Using Git URL**. Copy and paste this URL : `https://github.com/mobiledgex/edge-cloud-sdk-unity.git`
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/add_using_git_unity.gif" class="img-fluid slb" alt="Add MobiledgeX Package using git url">
+  <img src="/developer/assets/edgemultiplay/add_using_git_unity.gif" class="img-fluid slb" alt="Add MobiledgeX Package using git url">
   <figcaption>Add MobiledgeX Package using git url</figcaption>
 
 </figure>
@@ -50,7 +50,7 @@ Next, click the `+` icon and **Import Using Git URL**. Copy and paste this URL :
 Once the MobiledgeX SDK has finished installing, there will now be a new **MobiledgeX Menu**. From the MobiledgeX Menu **Import EdgeMultiplay**, select `MobiledgeX/Examples/EdgeMultiplay`
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/EdgeMultiplay_Example.gif" class="img-fluid slb" alt="Add EdgeMultiplay from MobiledgeX Menu">
+  <img src="/developer/assets/edgemultiplay/EdgeMultiplay_Example.gif" class="img-fluid slb" alt="Add EdgeMultiplay from MobiledgeX Menu">
   <figcaption>Add EdgeMultiplay from MobiledgeX Menu</figcaption>
 
 </figure>
@@ -62,7 +62,7 @@ Once EdgeMultiplay is installed in your Project Assets, we need to provide appli
 From MobiledgeX Menu go to `MobiledgeX/Setup`
 
 <figure class="third">
-  <img src="/assets/unity-sdk/mobiledgex-menu.png" class="img-fluid slb" alt="MobiledgeX Menu">
+  <img src="/developer/assets/unity-sdk/mobiledgex-menu.png" class="img-fluid slb" alt="MobiledgeX Menu">
   <figcaption>MobiledgeX Menu</figcaption>
 
 </figure>
@@ -76,7 +76,7 @@ Add the following credentials:
 - **App Version** : `1.3`
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/EdgeMultiplay-AppDefsv1-1.png" class="img-fluid slb" alt="EdgeMultiplay Application Definition">
+  <img src="/developer/assets/edgemultiplay/EdgeMultiplay-AppDefsv1-1.png" class="img-fluid slb" alt="EdgeMultiplay Application Definition">
   <figcaption>EdgeMultiplay Application Definition</figcaption>
 
 </figure>
@@ -90,13 +90,13 @@ Now you are all set to connect to an Edge Multiplay Game Server!
 To test Edge Multiplay, we have provided an example implementation of Ping Pong with Edge Multiplay. In Your Projects folder, under `EdgeMultiplay/Examples`, there is a `PingPongExample.unitypackage` file. Double click it to import that example into your assets.
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/PingPongEdgeMultiplayMenu.png" class="img-fluid slb" alt="Connected to Edge Multiplay Server">
+  <img src="/developer/assets/edgemultiplay/PingPongEdgeMultiplayMenu.png" class="img-fluid slb" alt="Connected to Edge Multiplay Server">
   <figcaption>Connected to Edge Multiplay Server</figcaption>
 
 </figure>
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/PingPongImportPackage.png" class="img-fluid slb" alt="Import PingPong to your project">
+  <img src="/developer/assets/edgemultiplay/PingPongImportPackage.png" class="img-fluid slb" alt="Import PingPong to your project">
   <figcaption>Import PingPong to your project</figcaption>
 
 </figure>
@@ -106,7 +106,7 @@ Once the import finishes, you will now have PingPongGame as a folder under your 
 If you see the following text, you have successfully connected to an instance of the server. To play the Ping Pong Sample, you will need to **Build and Run** another instance of the client.
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/pingpongtext.png" class="img-fluid slb" alt="Connected to Edge Multiplay Server">
+  <img src="/developer/assets/edgemultiplay/pingpongtext.png" class="img-fluid slb" alt="Connected to Edge Multiplay Server">
   <figcaption>Connected to Edge Multiplay Server</figcaption>
 
 </figure>

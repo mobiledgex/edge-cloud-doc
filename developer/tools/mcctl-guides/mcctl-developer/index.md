@@ -415,7 +415,7 @@ $ curl http://hellocluster.hamburg-main.tdg.mobiledgex.net:8000 &lt;!DOCTYPE htm
 ```
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/hello-world.png" class="img-fluid slb" alt="">
+  <img src="/developer/assets/developer-ui-guide/hello-world.png" class="img-fluid slb" alt="">
   <figcaption>
 
 </figcaption>

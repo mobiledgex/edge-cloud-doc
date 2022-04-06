@@ -21,11 +21,11 @@ The MobiledgeX Edge-Cloud Console provides a **Monitoring Dashboard** to help yo
 
 The Monitoring Dashboard provides many ways to filter the data you need to view and access. You can view by organization, regions, metric types, app instance, cluster instance or cloudlet, and search by admins, developers, or operators. You can also filter by time ranges. While the maximum allocated days you can search for audit logs is one day (within the last 24hrs), you can further refine your search for logs with the span of the 24 hour period.  Start time default is 12:00a.m. and End Time default is 11:59p.m.
 
-![Monitoring Metrics Window](/assets/monitoring.png "Monitoring Metrics Window")
+![Monitoring Metrics Window](/developer/assets/monitoring.png "Monitoring Metrics Window")
 
 The toolbar at the top of the Monitoring page contains many options for filtering data.
 
-![](/assets/monitor-tools.png "")
+![](/developer/assets/monitor-tools.png "")
 
 
 - **Organization icon:** This allows you to choose which Organization you want to manage. This icon is helpful when you are not on the Organization page. Selecting this icon will create a dropdown menu of all your organizations.

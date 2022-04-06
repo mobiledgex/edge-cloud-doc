@@ -28,13 +28,13 @@ For documentation on method usage and code snippets, you can refer to our [Mobil
 
 The fastest way to import the MobiledgeX Unity SDK into your project is by using the Package Manager. You can open it from *Window &gt; Package Manager* in Unity. To add our MobiledgeX Package, select the **+** icon and select **“Add package from git URL…”**
 
-![Unity: Package Manager](/assets/unity-sdk/add-git-url.png "Unity: Package Manager")
+![Unity: Package Manager](/developer/assets/unity-sdk/add-git-url.png "Unity: Package Manager")
 
 Enter [https://github.com/mobiledgex/edge-cloud-sdk-unity.git](https://github.com/mobiledgex/edge-cloud-sdk-unity.git) in the text field, which will automatically start the process of importing the package into your application.
 
 Once that completes, you will see the MobiledgeX SDK within your Package Manager and the SDK will be available under the Packages tab of your Project.
 
-![Project: Packages tab](/assets/unity-sdk/mobiledgex-package.png "Project: Packages tab")
+![Project: Packages tab](/developer/assets/unity-sdk/mobiledgex-package.png "Project: Packages tab")
 
 ### 2019.2.x
 
@@ -79,7 +79,7 @@ After you finish editing and save the file, select the Unity editor and it will 
 
 Once you have successfully imported the Unity package, you will see a new tab as part of the Unity menu labeled **MobiledgeX**
 
-![Unity menu: MobiledgeX](/assets/unity-sdk/mobiledgex-menu.png "Unity menu: MobiledgeX")
+![Unity menu: MobiledgeX](/developer/assets/unity-sdk/mobiledgex-menu.png "Unity menu: MobiledgeX")
 
 Select **Setup**, which will open a new Unity window asking you for your application’s
 
@@ -87,15 +87,15 @@ Select **Setup**, which will open a new Unity window asking you for your applica
 - `app name`
 - `app version number`
 
-![Unity menu: Setup](/assets/unity-sdk/mobiledgex-unity-window.png "Unity menu: Setup")
+![Unity menu: Setup](/developer/assets/unity-sdk/mobiledgex-unity-window.png "Unity menu: Setup")
 
 After you provide your application credentials, select the setup button, which will communicate with the DME to verify that your application definition exists on the MobiledgeX console. If successful, your project will be set up with the correct plugins and resources necessary to use our APIs. You can verify if these files were generated correctly by looking in the Plugins and Resources folders of your project.
 
-![Generated Plugins](/assets/unity-sdk/generated-plugins.png "Generated Plugins")
+![Generated Plugins](/developer/assets/unity-sdk/generated-plugins.png "Generated Plugins")
 
-![Generated Resources](/assets/unity-sdk/generated-resources.png "Generated Resources")
+![Generated Resources](/developer/assets/unity-sdk/generated-resources.png "Generated Resources")
 
-![MobiledgeX settings](/assets/unity-sdk/mobiledgex-settings.png "MobiledgeX settings")
+![MobiledgeX settings](/developer/assets/unity-sdk/mobiledgex-settings.png "MobiledgeX settings")
 
 **Important:** Make sure your Resources/MobiledgeXSettings.asset file has the correct information for your application.
 
@@ -293,7 +293,7 @@ You can find LocationService component in the Unity Editor Inspector.
 
 Select `AddComponent` then select (MobiledgeX/LocationService)
 
-![Location Services Component](/assets/unity-sdk/mobiledgex-unity-location-service.png "Location Services Component")
+![Location Services Component](/developer/assets/unity-sdk/mobiledgex-unity-location-service.png "Location Services Component")
 
 If the user rejects the Location permission, a `Location Exception` will be thrown. Check ExampleRest.cs for handling location exception example.
 
@@ -313,11 +313,11 @@ mxi.useFallbackLocation = true;
 
 The minimum API we support for Android is API Version 24. In your player settings, make sure to set the minimum API to 24, otherwise you will be unable to build your project.
 
-![Example: Android Version error](/assets/unity-sdk/android_version_error.png "Example: Android Version error")
+![Example: Android Version error](/developer/assets/unity-sdk/android_version_error.png "Example: Android Version error")
 
 ## Known Issues
 
 If you receive the following error and cannot compile your Unity project, restart Unity.
 
-![Example: Metadata error](/assets/unity-sdk/metadata_error.png "Example: Metadata error")
+![Example: Metadata error](/developer/assets/unity-sdk/metadata_error.png "Example: Metadata error")
 

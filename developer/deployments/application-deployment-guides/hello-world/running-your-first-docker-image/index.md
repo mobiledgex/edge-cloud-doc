@@ -36,7 +36,7 @@ In the top right of the Cluster Instances page, select the plus sign icon to st
 - IP Access: **Dedicated**
 - [Flavor](https://dev-publish.mobiledgex.com/deployments/deployment-workflow/flavors): **m4.small**
 
-![](/assets/developer-ui-guide/create-cluster.png "")
+![](/developer/assets/developer-ui-guide/create-cluster.png "")
 
 Then select **Create**, which will begin the process allocating the necessary resources for your Application on the Cloudlet you selected.
 
@@ -59,7 +59,7 @@ For our Hello World image, input the following:
 
 </li>
 
-![](/assets/create_app.png "")
+![](/developer/assets/create_app.png "")
 
 ### Notices
 
@@ -90,7 +90,7 @@ If you DID NOT create a Cluster Instance in Step 0,
 - Auto-Cluster: **Turn On**
 - IP Access: **Dedicated**
 
-![](/assets/create_app_inst.png "")
+![](/developer/assets/create_app_inst.png "")
 
 Select **Create**, which will start the process of running your image on our cloudlet, in this case **Hamburg-Main**. Give the process a couple minutes and then if it is all successful, head over to the **Application Instances** tab to see your newly created Application Instance.
 
@@ -98,5 +98,5 @@ Select **Create**, which will start the process of running your image on our clo
 
 On the App Instances page, select the **HelloWorld** Application Instance you just created, which will provide a status of the Application. You should see a field called URI, which is the publicly accessible domain unique to your instance. For HelloWorld, copy and paste that into a web browser and you should now see our beautiful Hello World webpage.
 
-![](/assets/exampleinstance.png "")
+![](/developer/assets/exampleinstance.png "")
 

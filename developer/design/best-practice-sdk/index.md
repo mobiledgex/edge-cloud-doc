@@ -18,7 +18,7 @@ In this guide, the best practices for utilizing MobiledgeX’s SDKs are explaine
 
 The process for connecting to a cloudlet will require your application to call two functions: `RegisterClient` and `FindCloudlet`. Calling these functions provides the URI of an application instance from a cloudlet that will best serve your client. The best-returned application instance is determined by two factors: *the user’s current location* and *the network connection*. Once your client application receives the URI, it may begin communicating with your deployed backend server. Please see the diagram below.
 
-![](/assets/connect-client-app/endtoend.png "")
+![](/developer/assets/connect-client-app/endtoend.png "")
 
 ## FindCloudlet  
 

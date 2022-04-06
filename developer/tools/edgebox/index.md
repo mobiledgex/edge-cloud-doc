@@ -62,7 +62,7 @@ g. **Latitude and Longitude:** Provide one for your cloudlet, or use the default
 Once you see **Cloudlet is up** at the Terminal prompt, the cloudlet is now running on your laptop.
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/cloudlet-up.png" class="img-fluid slb" alt="Cloudlet status in Terminal">
+  <img src="/developer/assets/developer-ui-guide/cloudlet-up.png" class="img-fluid slb" alt="Cloudlet status in Terminal">
   <figcaption>Cloudlet status in Terminal</figcaption>
 
 </figure>
@@ -98,7 +98,7 @@ positional arguments:
 
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/verify-cloudlet-edgebox.png" class="img-fluid slb" alt="Verifying Cloudlet">
+  <img src="/developer/assets/developer-ui-guide/verify-cloudlet-edgebox.png" class="img-fluid slb" alt="Verifying Cloudlet">
   <figcaption>Verifying Cloudlet</figcaption>
 
 </figure>
@@ -111,7 +111,7 @@ positional arguments:
 
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/create-devorg-edgebox.png" class="img-fluid slb" alt="Create Developer Organization">
+  <img src="/developer/assets/developer-ui-guide/create-devorg-edgebox.png" class="img-fluid slb" alt="Create Developer Organization">
   <figcaption>Create Developer Organization</figcaption>
 
 </figure>
@@ -119,7 +119,7 @@ positional arguments:
 The Create Organization screen opens.
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/create-org-edgebox.png" class="img-fluid slb" alt="Create Organization screen">
+  <img src="/developer/assets/developer-ui-guide/create-org-edgebox.png" class="img-fluid slb" alt="Create Organization screen">
   <figcaption>Create Organization screen</figcaption>
 
 </figure>
@@ -173,7 +173,7 @@ c. **Auto Cluster Instance:** Enable this option.
 
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/progress-edgebox.png" class="img-fluid slb" alt="Progress Bar">
+  <img src="/developer/assets/developer-ui-guide/progress-edgebox.png" class="img-fluid slb" alt="Progress Bar">
   <figcaption>Progress Bar</figcaption>
 
 </figure>
@@ -184,7 +184,7 @@ c. **Auto Cluster Instance:** Enable this option.
 
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/app-inst-uri-edgebox.png" class="img-fluid slb" alt="App Instances URI">
+  <img src="/developer/assets/developer-ui-guide/app-inst-uri-edgebox.png" class="img-fluid slb" alt="App Instances URI">
   <figcaption>App Instances URI</figcaption>
 
 </figure>
@@ -195,7 +195,7 @@ c. **Auto Cluster Instance:** Enable this option.
 
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/comp-vision-app-edgebox.png" class="img-fluid slb" alt="Computer Vision Face Detection">
+  <img src="/developer/assets/developer-ui-guide/comp-vision-app-edgebox.png" class="img-fluid slb" alt="Computer Vision Face Detection">
   <figcaption>Computer Vision Face Detection</figcaption>
 
 </figure>

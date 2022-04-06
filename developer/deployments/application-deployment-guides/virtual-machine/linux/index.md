@@ -127,7 +127,7 @@ runcmd:
 
 **Note:** While optional, if you wish to SSH into your VM using SSH keys, make sure to add your SSH public key to the **Auth Key** section under **Advanced Settings**.
 
-![Create Apps screen](/assets/how-to-deploy-vm/create-app-linux.png "Create Apps screen")
+![Create Apps screen](/developer/assets/how-to-deploy-vm/create-app-linux.png "Create Apps screen")
 
 The console will process your request and return you to the Apps page where you should see your application.
 
@@ -155,11 +155,11 @@ You are ready to deploy your application. The App Instances page is where you pr
 
 After the VM has been successfully provisioned, select **Application Instance** in order to view the Application Instance Details page. This page will contain all the information specific to your Virtual Machine Deployment, including the external IP address to connect to the instance.
 
-![External URI for Virtual Machine](/assets/how-to-deploy-vm/vm-uri.png "External URI for Virtual Machine")
+![External URI for Virtual Machine](/developer/assets/how-to-deploy-vm/vm-uri.png "External URI for Virtual Machine")
 
 To test that your VM was deployed correctly, navigate to the App Instance page and under the quick access menu, select [Terminal](/deployments/deployment-workflow/app-instances#using-terminal). For the CentOS, you should be able to login with the credentials specified in the Deployment Manifest i.e. `demouser`, `changemeplz`.
 
-![CentOS Application Instance in Terminal](/assets/how-to-deploy-vm/vm-terminal.png "CentOS Application Instance in Terminal")
+![CentOS Application Instance in Terminal](/developer/assets/how-to-deploy-vm/vm-terminal.png "CentOS Application Instance in Terminal")
 
 To SSH into your instance with the updated port, you may use the following command:
 

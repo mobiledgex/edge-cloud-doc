@@ -53,7 +53,7 @@ If you are interested in learning more about what this command does, please refe
 You should now have a sucessfully running Docker container for Edge Multiplay.
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/EdgeMultiplay-Docker.png" class="img-fluid slb" alt="Edge Multiplay Running on docker container hosted locally">
+  <img src="/developer/assets/edgemultiplay/EdgeMultiplay-Docker.png" class="img-fluid slb" alt="Edge Multiplay Running on docker container hosted locally">
   <figcaption>Edge Multiplay Running on docker container hosted locally</figcaption>
 
 </figure>
@@ -85,7 +85,7 @@ cd edge-multiplay-node-server
 Now the server is running on your local host
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/localhost_server_running.png" class="img-fluid slb" alt="Edge Multiplay Running locally using node">
+  <img src="/developer/assets/edgemultiplay/localhost_server_running.png" class="img-fluid slb" alt="Edge Multiplay Running locally using node">
   <figcaption>Edge Multiplay Running locally using node</figcaption>
 
 </figure>
@@ -97,7 +97,7 @@ With that running, head to the **Unity section below** on how to use the SDK to 
 In Unity, on the EdgeManager component. Check useLocalHostServer and add your local host address (127.0.0.1)
 
 <figure class="third">
-  <img src="/assets/edgemultiplay/localhost.png" class="img-fluid slb" alt="Edge Manager Local Host Settings">
+  <img src="/developer/assets/edgemultiplay/localhost.png" class="img-fluid slb" alt="Edge Manager Local Host Settings">
   <figcaption>Edge Manager Local Host Settings</figcaption>
 
 </figure>

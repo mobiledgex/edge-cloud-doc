@@ -219,7 +219,7 @@ private String[] colors = {
 
 #### Example rendered output:  
 
-![Example: Rendered Pose output](/assets/computer-vision-api/render-pose-detection.png "Example: Rendered Pose output")
+![Example: Rendered Pose output](/developer/assets/computer-vision-api/render-pose-detection.png "Example: Rendered Pose output")
 
 ## Object Detection
 
@@ -279,5 +279,5 @@ curl https://reservable6.berlin-main.tdg.mobiledgex.net:8008/object/detect/  -F 
 
 #### Example rendered output:  
 
-![Example: Rendered Detection output](/assets/computer-vision-api/render-object-detection.png "Example: Rendered Detection output")
+![Example: Rendered Detection output](/developer/assets/computer-vision-api/render-object-detection.png "Example: Rendered Detection output")
 

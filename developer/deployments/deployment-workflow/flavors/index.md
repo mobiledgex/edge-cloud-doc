@@ -51,5 +51,5 @@ The following actions may be performed on this page:
 - Filter Flavors by region
 - Type in a few letters to auto-populate your search results
 
-![Flavors page](/assets/flavorespage.png "Flavors page")
+![Flavors page](/developer/assets/flavorespage.png "Flavors page")
 

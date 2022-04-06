@@ -37,11 +37,11 @@ artifactory_password=[Mobiledgex Password]
 
 Once you have opened the Workshop Completed application within Android Studio, you will need to update the project so that it is in **Android** view. This will allow Android Studio to correctly read the project.
 
-![Android View](/assets/how-to-add-edge-support-to-an-android-app/android-view-screenshot.png "Android View")
+![Android View](/developer/assets/how-to-add-edge-support-to-an-android-app/android-view-screenshot.png "Android View")
 
 Once in Android View, you can verify that the project is working correctly by deploying it to your Android phone by selecting **Run/Run App**. Once the build completes and the app is deployed to your phone, you should see the MobiledgeX Workshop running.
 
-![MobiledgeX Workshop App](/assets/how-to-add-edge-support-to-an-android-app/workshop-completed.png "MobiledgeX Workshop App")
+![MobiledgeX Workshop App](/developer/assets/how-to-add-edge-support-to-an-android-app/workshop-completed.png "MobiledgeX Workshop App")
 
 ## Project Dependencies
 
@@ -58,7 +58,7 @@ implementation "io.grpc:grpc-protobuf-lite:${grpcVersion}"
 
 If you are changing versions or adding these packages for the first time, you will need to make sure you click **Sync Now** to pull in the newly added libraries.
 
-![Sync Gradle File Dependencies](/assets/how-to-add-edge-support-to-an-android-app/6.png "Sync Gradle File Dependencies")
+![Sync Gradle File Dependencies](/developer/assets/how-to-add-edge-support-to-an-android-app/6.png "Sync Gradle File Dependencies")
 
 ## Device Permissions
 

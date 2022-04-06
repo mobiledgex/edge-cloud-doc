@@ -36,11 +36,11 @@ When specifying the port, you are limited to the following:
 
 **Warning:** Validation between ports/names are not performed automatically. Therefore, when specifying your ports/names, you must ensure that there are no conflicts between them. Otherwise, your deployment will not succeed.
 
-![Create Apps Screen](/assets/developer-ui-guide/create-apps.png "Create Apps Screen")
+![Create Apps Screen](/developer/assets/developer-ui-guide/create-apps.png "Create Apps Screen")
 
 Once you have defined your application, it will appear on the Apps page.
 
-![Application Definition list](/assets/developer-ui-guide/apps-list.png "Application Definition list")
+![Application Definition list](/developer/assets/developer-ui-guide/apps-list.png "Application Definition list")
 
 ## Application Versioning
 

@@ -43,7 +43,7 @@ Step 3: Locate the pre-extracted MatchingEngineSDKRestLibrary.dll file in the ho
 ```
 ~/.nuget/packages/mobiledgex.matchingenginesdkrestlibrary
 cd ~/.nuget/packages/mobiledgex.matchingenginesdkrestlibrary/&lt;newest_version&gt;/lib/netstandard2.0/
-cp MatchingEngineSDKRestLibrary.dll &lt;unity project&gt;/Assets/Plugins
+cp MatchingEngineSDKRestLibrary.dll &lt;unity project&gt;/developer/assets/Plugins
 
 ```
 

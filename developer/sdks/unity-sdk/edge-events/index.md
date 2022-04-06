@@ -19,7 +19,7 @@ These continuous events are sent through a [GRPC](https://grpc.io/) bi-direction
 - From the Unity package manager, select the plus sign icon and then choose `Add package from git URL...` and paste the following link, which imports the Unity SDK from the edge-events branch: [https://github.com/mobiledgex/edge-cloud-sdk-unity.git#edge-events](https://github.com/mobiledgex/edge-cloud-sdk-unity.git#edge-events)
 
 
-![Add Package from Git](/assets/add-comp-vision-unity/add-package-git.png "Add Package from Git")
+![Add Package from Git](/developer/assets/add-comp-vision-unity/add-package-git.png "Add Package from Git")
 
 ## Setup
 
@@ -29,13 +29,13 @@ These continuous events are sent through a [GRPC](https://grpc.io/) bi-direction
 - Then select **Setup**. On MacOS, this will trigger a security warning that the GRPC DLL is not signed. This warning will not be triggered on Windows.
 
 
-![GRPC Warning](/assets/unity-edge-events/grpc-warning.png "GRPC Warning")
+![GRPC Warning](/developer/assets/unity-edge-events/grpc-warning.png "GRPC Warning")
 
 
 - After this security warning is triggered, you will need to head into MacOS secruity settings and select **Allow Anyway** for the `grcp_csharp_ext.bundle`.
 
 
-![MacOS Secruity](/assets/unity-edge-events/macos-secruity.png "MacOS Secruity")
+![MacOS Secruity](/developer/assets/unity-edge-events/macos-secruity.png "MacOS Secruity")
 
 
 - Once the security warning has been resolved, select **Setup** again, which should now succeeded.
@@ -45,11 +45,11 @@ These continuous events are sent through a [GRPC](https://grpc.io/) bi-direction
 
 To make using Edge Events simpler, the SDK provides a configuration to make it easier to determine what events and settings you would like to listen to. These configs are located in the MobiledgeX menu under **Edge Event Config**.
 
-![Edge Event Config Menu](/assets/unity-edge-events/edge-events-menu.png "Edge Event Config Menu")
+![Edge Event Config Menu](/developer/assets/unity-edge-events/edge-events-menu.png "Edge Event Config Menu")
 
 This will open up a menu with the various settings you can use to configure MobiledgeX Edge Events. You can scroll over the tooltips for each event to learn more about the specific event and how you would like to configure them.
 
-![Edge Events Configs](/assets/unity-edge-events/edge-events-configs.png "Edge Events Configs")
+![Edge Events Configs](/developer/assets/unity-edge-events/edge-events-configs.png "Edge Events Configs")
 
 To utilize edge events configs, need to add the `EdgeEventsManager` component into your scene. Then when you use MobiledgeXIntegration object, you will be able to pass the EdgeEventsManager component to the Intergration and then listen for when a better suitable cloudlet has been found.
 

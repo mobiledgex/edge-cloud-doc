@@ -24,5 +24,5 @@ To enable high availability, specify the **Min Active Instances** setting on t
 
 Application high availability works in conjunction with the `FindCloudlet` client demand-based deployment. Instances may be deployed in response to client demand, or to meet the minimum active instances requirement in the policy. For demand-based auto deployment, instances are only created on cloudlets that are listed on the policy. To meet the **minimum active instances** requirement, a cloudlet from the list that has seen recent client activity will be selected. If no such activity exists, then the next available cloudlet on the list will be chosen. With demand-based auto deployment, only one instance of the app will be automatically deployed per cloudlet.
 
-![](/assets/ha-select.png "")
+![](/developer/assets/ha-select.png "")
 

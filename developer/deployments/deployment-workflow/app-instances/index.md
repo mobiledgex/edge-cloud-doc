@@ -22,7 +22,7 @@ The following actions may be performed on this page using the top taskbar:
 - Create a new app instance
 - Refresh your list of app instances
 
-![Top taskbar of App Instances page](/assets/appinstancesactions.png "Top taskbar of App Instances page")
+![Top taskbar of App Instances page](/developer/assets/appinstancesactions.png "Top taskbar of App Instances page")
 
 The icons listed along your app instances table will allow you to perform several other actions.
 
@@ -30,7 +30,7 @@ The icons listed along your app instances table will allow you to perform severa
 - View the Health Status of an App Instance
 - Access the quick access menu under Actions to either **Refresh** or **Delete** the application, or access **Terminal**
 
-![Example App Instances and quick access actions](/assets/appinstances.png "Example App Instances and quick access actions")
+![Example App Instances and quick access actions](/developer/assets/appinstances.png "Example App Instances and quick access actions")
 
 ## Understanding MobiledgeX Reservable Cluster Instances
 
@@ -52,19 +52,19 @@ The next step is creating an app instance. There are two ways to do this:
 - Select **App Instances** from the left navigation. Then, on the App Instances page, select the plus sign icon to launch the Create App Instance page. Alternatively, select **Apps** from the left navigation. Find the existing app you want to create an App Instance for, and select the Actions icon for that app. Then, in the dropdown menu that appears, select **Create App Instance**.
 
 
-![Create app instances screen](/assets/provision.png "Create app instances screen")
+![Create app instances screen](/developer/assets/provision.png "Create app instances screen")
 
 
 - Once you populate all the required fields, select **Create**. It can take up to a few minutes to deploy your application to one of our cloudlets. The Progress bar displays the current status of the deployment.
 
 
-![Application progress bar](/assets/developer-ui-guide/app-progress3.png "Application progress bar")
+![Application progress bar](/developer/assets/developer-ui-guide/app-progress3.png "Application progress bar")
 
 
 - Once deployed, information about the application appears on the App Instances page.
 
 
-![App Instances screen](/assets/appinstances.png "App Instances screen")
+![App Instances screen](/developer/assets/appinstances.png "App Instances screen")
 
 ## Using Terminal
 
@@ -83,20 +83,20 @@ For app instance K8s and docker deployment types, Termina **l** will provide acc
 - From the Actions menu, select **Terminal**.
 
 
-![The Terminal action on the App Instances page](/assets/AppInstTerminal.png "The Terminal action on the App Instances page")
+![The Terminal action on the App Instances page](/developer/assets/AppInstTerminal.png "The Terminal action on the App Instances page")
 
 
 - To run a command, make sure the Request dropdown displays **Run Command**.
 
 
-![Show Run command](/assets/developer-ui-guide/show-run-command1.png "Show Run command")
+![Show Run command](/developer/assets/developer-ui-guide/show-run-command1.png "Show Run command")
 
 
 - Type in a command in the Command field, and select **Connect**. You can start an interactive session if you wish, which is equivalent to the `docker -it` command.
 - To view log files, make sure the Request dropdown displays **Show Logs**.
 
 
-![Terminal: Request: Show Logs](/assets/developer-ui-guide/show-logs.png "Terminal: Request: Show Logs")
+![Terminal: Request: Show Logs](/developer/assets/developer-ui-guide/show-logs.png "Terminal: Request: Show Logs")
 
 
 - Select any modifiers, for example, you can add timestamps, follow the log, which is equivalent to the `docker logs- f` command, or select a time window from which to view logs.
@@ -111,5 +111,5 @@ For app instance K8s and docker deployment types, Termina **l** will provide acc
 
 For app instance VM deployment types, Terminal will attempt to make a console connection to the VM. However, for Windows VM or Linux VM, Terminal may not be supported for cases where some cloudlets platforms are VCD instead of OpenStack.
 
-![Console connection attempts](/assets/vm-deployment-type.png "Console connection attempts")
+![Console connection attempts](/developer/assets/vm-deployment-type.png "Console connection attempts")
 

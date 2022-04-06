@@ -35,7 +35,7 @@ After logging in, you will see the user verification **I’m not a robot** che
 - From the [Edge-Cloud Console](https://console.mobiledgex.net/) select **Register** on the upper-right hand corner. A **Create New Account** screen opens.
 
 
-![](/assets/account1.png "")
+![](/developer/assets/account1.png "")
 
 
 - Provide your credentials. Here are some guidelines:
@@ -46,7 +46,7 @@ After logging in, you will see the user verification **I’m not a robot** che
 You may optionally select **Generate** to have the system generate a password for you. We suggest managing your password securely or using a password management tool like [LastPass](https://www.lastpass.com/) to safely store your password.
 
 
-![](/assets/account2.png "")
+![](/developer/assets/account2.png "")
 
 
 - Provide a valid email address to associate to this account. Use this email address later to access a link and verify your account.
@@ -66,7 +66,7 @@ To set up two-factor authentication:
 - Select **SIGN UP**. The barcode screen opens.
 
 
-![](/assets/account3.png "")
+![](/developer/assets/account3.png "")
 
 **Note:** If you do not have an authentication app on your phone, select **Enter this text code instead** to manually enter a code.
 
@@ -74,7 +74,7 @@ To set up two-factor authentication:
 - Select **Done**. You will see a message on the screen that look like the following example:
 
 
-![](/assets/account4.png "")
+![](/developer/assets/account4.png "")
 
 
 - Continue to follow the instructions to verify your email. You will see a **Sign in** screen after your email is validated.
@@ -82,7 +82,7 @@ To set up two-factor authentication:
 - You will see the OTP (One-Time Passcode) screen. You can either retrieve the OTP from the authenticator app or from your email used to register the account. Note that your OTP expires after 2 minutes of receiving it. If you need to generate another OTP, select **Login** in the right-hand corner of the console.
 
 
-![](/assets/account5.png "")
+![](/developer/assets/account5.png "")
 
 
 - Enter the OTP, and select **Validate OTP**. You are now logged on to the Console.

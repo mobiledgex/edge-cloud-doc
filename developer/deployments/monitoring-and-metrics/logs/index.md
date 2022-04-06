@@ -21,21 +21,21 @@ Historical activities performed by you and others within your organization are l
 
 On the right side of the MobiledgeX console is the **Logs Column**. The Logs Column contains three icons, Audit Logs, Event Logs, and Usage Logs. Select **Events Logs** from the menu.
 
-![Logs Icon](/assets/eventlogs.png "Logs Icon")
+![Logs Icon](/developer/assets/eventlogs.png "Logs Icon")
 
 You will see a Live view of the Events Log. From the Live view, you can also go to a more specific search by using the **Filter** icon or the **Time Range** icon.
 
-![Example Event Log](/assets/event-main.png "Example Event Log")
+![Example Event Log](/developer/assets/event-main.png "Example Event Log")
 
 Select the **filter icon** on the top left.
 
-![](/assets/filter-time-range-1631031725.png "")
+![](/developer/assets/filter-time-range-1631031725.png "")
 
 You will see the Filter and Tags option, along with a Time range. Click the + sign to expand the Tags. If you do not wish to enter a value for your selected tag, you can input an asterisk in the **Value** field. Click the + sign multiple times if you wish to add a query using additional tags.
 
 Tags are a list of objects that you can use to query your search.  Scroll through the options in the Tag list, specify a date range, and click **Apply.** The availability of tags is specific to your role as developer.
 
-![Filter Event Logs](/assets/tags-menu.png "Filter Event Logs")
+![Filter Event Logs](/developer/assets/tags-menu.png "Filter Event Logs")
 
 ## Events list
 
@@ -60,11 +60,11 @@ The following table lists the events supported by our platform.
 
 Select **Audit Logs** from the Logs Column.
 
-![Log Icon](/assets/audit-logs.png "Log Icon")
+![Log Icon](/developer/assets/audit-logs.png "Log Icon")
 
 This will pull up the Audit Logs page, which allows you to view a record of historical events performed by you, your organization’s members, or the system. As mentioned earlier, each event is associated with a TraceID. If you run into an error you need assistance with, please send the **Trace ID** to MobiledgeX Support to assist with troubleshooting.
 
-![Example Audit Log](/assets/audit-logs-page.png "Example Audit Log")
+![Example Audit Log](/developer/assets/audit-logs-page.png "Example Audit Log")
 
 ## Usage Logs
 
@@ -74,17 +74,17 @@ Usage logs pull data in from your existing configurations for application instan
 
 Select **Usage Logs** from the Logs Column.
 
-![](/assets/usage-logs.png "")
+![](/developer/assets/usage-logs.png "")
 
 The following is an example screen displayed when you click Usage log.
 
-![Usage Logs](/assets/monitoring/usage-logs.png "Usage Logs")
+![Usage Logs](/developer/assets/monitoring/usage-logs.png "Usage Logs")
 
 The left panel contains tabs to view detailed information about cluster instances, app instances, etc., depending on your selections. Underneath those options are specific information detailing things such as start time, region, action, status, etc. You can view the items specific to the available selection--cluster instance, app instance, cloudlets, etc. For example, if you want to see a cluster instance usage log, you will see items like Flavors, vCPU, RAM, and Disk.
 
 The right panel contains the actual usage logs for these objects where you can view information such as actions and status.  You may filter the logs based on month, day, hour, or minute. The left and right arrow icons will move through selections of the highlighted time interval. If you would like to return to the current time interval, select the **Today** icon, which looks like a calendar. The time interval can be changed by selecting **Month**, **Day**, **Hour**, or **Minute**.
 
-![](/assets/timeline.png "")
+![](/developer/assets/timeline.png "")
 
 The **Action** row contains color-coded bars, indicating whether something was created or deleted while the **Status** row contains color-coded bars to indicated whether the object is up or down. By clicking and holding the bar, you can expand your view to extend the dates.
 

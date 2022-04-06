@@ -52,11 +52,11 @@ Let’s start by getting the base version of [NGINX](https://hub.docker.com/_/n
 
 This command will be running a few different tasks, which might take a minute to complete. Once you see “ready for start up” printed in the terminal, head over to a web browser and type the address “localhost:8080”
 
-![Docker Run NGINX](/assets/hello-world/dockerrun.png "Docker Run NGINX")
+![Docker Run NGINX](/developer/assets/hello-world/dockerrun.png "Docker Run NGINX")
 
 You should now see the message **Welcome to nginx!** Congratulations, in one line you just spun up your first docker web server locally!
 
-![Welcome to nginx!](/assets/hello-world/nginx.png "Welcome to nginx!")
+![Welcome to nginx!](/developer/assets/hello-world/nginx.png "Welcome to nginx!")
 
 Let’s break down the command in a little more detail:
 
@@ -67,7 +67,7 @@ Let’s break down the command in a little more detail:
 
 To stop the server, you can do Ctl-C in the Terminal. Alternatively, you can use the [Docker Dashboard](https://docs.docker.com/desktop/dashboard/) to stop the container.
 
-![](/assets/hello-world/dockerdashboard.png "")
+![](/developer/assets/hello-world/dockerdashboard.png "")
 
 ## Step 2: Creating your First Docker Image
 
@@ -111,7 +111,7 @@ Then just like we did with [NGINX](https://hub.docker.com/_/nginx) we can run 
 
 To test this, head over to `localhost:8080` again in your browser and you should now see this page (if you don’t see this, your browser may have cached the old page, so refresh the page).
 
-![Hello World!](/assets/hello-world/helloworld.png "Hello World!")
+![Hello World!](/developer/assets/hello-world/helloworld.png "Hello World!")
 
 ## Step 3: Uploading Your Docker Image To MobiledgeX
 

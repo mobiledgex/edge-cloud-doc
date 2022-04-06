@@ -23,17 +23,17 @@ After logging onto the [Edge-Cloud Console](https://console.mobiledgex.net), the
 
 1. From the Organizations screen, select the arrow next to Create Organization to Run Apps on Telco Edge.
 
-![Organizations Screen](/assets/developer-ui-guide/organization-create.png "Organizations Screen")
+![Organizations Screen](/developer/assets/developer-ui-guide/organization-create.png "Organizations Screen")
 
 The Create Organization page opens.
 
-![Create Organization screen](/assets/developer-ui-guide/create-organization.png "Create Organization screen")
+![Create Organization screen](/developer/assets/developer-ui-guide/create-organization.png "Create Organization screen")
 
 2. For *Organization Name*, type in a name of your organization. Observe the naming convention rules as mentioned earlier.
 
 3. Type in an *address* and *phone number*, and select **Create**. The Step 2 Add User page opens.
 
-![Add User screen](/assets/developer-ui-guide/add-users.png "Add User screen")
+![Add User screen](/developer/assets/developer-ui-guide/add-users.png "Add User screen")
 
 4. You can start adding your users and assign them roles, or skip this step and return to it later.
 
@@ -47,7 +47,7 @@ Although your organization is listed, it’s currently not managed. Select the *
 
 Next to the **Manage** button is an Actions page where you can perform such tasks such as **Audit**, **Add User**, **Update** and **Delete** your organization.
 
-![Action Page](/assets/developer-ui-guide/actions.png "Action Page")
+![Action Page](/developer/assets/developer-ui-guide/actions.png "Action Page")
 
 ## View Users &amp; Roles
 
@@ -60,7 +60,7 @@ The following actions may be performed on this page:
 
 From the Actions page, you can select the quick Actions icon and select **Delete** to delete the user from the organization.
 
-![Users and Roles screen](/assets/developer-ui-guide/delete-user-action-icon.png "Users and Roles screen")
+![Users and Roles screen](/developer/assets/developer-ui-guide/delete-user-action-icon.png "Users and Roles screen")
 
 ## Role-Based Access Control (RBAC)
 
@@ -75,5 +75,5 @@ Role-based access control provides varying levels of access specified by the use
 
 There are a number of UI pages that let you sort and filter by the headers available, such as region, organization, app, deployment types, and so forth. This feature is called group filtering. To filter the information displayed on your pages, select and drag any of your headings and drop it into the **Drag header here to group by** icon.
 
-![Sort and Filter icon](/assets/developer-ui-guide/filter-icon.png "Sort and Filter icon")
+![Sort and Filter icon](/developer/assets/developer-ui-guide/filter-icon.png "Sort and Filter icon")
 

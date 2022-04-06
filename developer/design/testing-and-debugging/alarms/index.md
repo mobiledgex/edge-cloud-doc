@@ -38,7 +38,7 @@ The AlertManager is a global component of MobiledgeX’s product and is responsi
 
 The image below illustrates the AlertManager workflow. A user can create an alert receiver and set up their preferred notification method through the Edge-Cloud Console. Once an alert receiver is created, the receiver is pushed to the MobiledgeX Platform. When an alarm is triggered, the Alert Manager within the platform sends an alert notification to the user for mitigation. Currently, alert notifications are sent only for application instance(s) that are down-`AppInstDown`.
 
-![Alert Manager Workflow](/assets/alertreceiver.png "Alert Manager Workflow")
+![Alert Manager Workflow](/developer/assets/alertreceiver.png "Alert Manager Workflow")
 
 ### Alert management
 
@@ -98,7 +98,7 @@ Once you have defined your Alert Policy, you attach the rule to an existing appl
 
 When you set up to generate an alert on the UI based on your alert policy, the title of your alert, by default, will be the name of your alert. However, if you specify ’Title’ in the Annotations section and provide an alert name, the existing default title of your alert name will be overwritten by the value you specified in your Annotation. With ’Description’, If you did not provide a description when you first created your alert policy, the description of the alert will be blank. However, the description will be pulled from the Annotation value if you provided a ’Description’ in your Annotation.
 
-![Alert Policy Annotations](/assets/developer-ui-guide/annotation-1628783853.png "Alert Policy Annotations")
+![Alert Policy Annotations](/developer/assets/developer-ui-guide/annotation-1628783853.png "Alert Policy Annotations")
 
 #### Set up an Alert Policy:</strong>
 
@@ -106,13 +106,13 @@ When you set up to generate an alert on the UI based on your alert policy, the t
 - From the left navigation, expand **Policies** and select **Alert Policy**.
 
 
-![Alert Policy Create page](/assets/developer-ui-guide/alert-policy-create.png "Alert Policy Create page")
+![Alert Policy Create page](/developer/assets/developer-ui-guide/alert-policy-create.png "Alert Policy Create page")
 
 
 - Specify all the required fields, and click **Create Policy**. Your new Alert Policy will appear on the Alert Policy page.
 
 
-![Alert Policy page](/assets/developer-ui-guide/alert-policy-page.png "Alert Policy page")
+![Alert Policy page](/developer/assets/developer-ui-guide/alert-policy-page.png "Alert Policy page")
 
 
 - From the left navigation, scroll down to **Apps**.
@@ -121,14 +121,14 @@ When you set up to generate an alert on the UI based on your alert policy, the t
 - Scroll down to the Alert Policies field under Advanced Settings and select an Alert Policy from the drop-down list to attach the policy to your application.
 
 
-![Alert Policies](/assets/developer-ui-guide/alert-policies.png "Alert Policies")
+![Alert Policies](/developer/assets/developer-ui-guide/alert-policies.png "Alert Policies")
 
 
 - Click **Create** or **Update,** depending on whether you’re adding a new application or updating an existing one.<br>Your application is now associated with the Alert Policy.
 - If an application instance was created from the application and then you decide to add an alert policy or another alert policy to the application, you must perform an application instance update.
 
 
-![Update Application Instance](/assets/-update-app.png "Update Application Instance")
+![Update Application Instance](/developer/assets/-update-app.png "Update Application Instance")
 
 ## Alert Receiver and MobiledgeX APIs
 
@@ -149,23 +149,23 @@ While you can use the `mcctl` tool and the commands provided to set up your al
 - Navigate to the Alert Receivers sub-menu and click the **+** plus sign. The Create Receiver screen opens.
 
 
-![Create Alert Receiver screen](/assets/developer-ui-guide/create-alert-receiver-dev.png "Create Alert Receiver screen")
+![Create Alert Receiver screen](/developer/assets/developer-ui-guide/create-alert-receiver-dev.png "Create Alert Receiver screen")
 
 
 - Additional fields appear depending on your selections. Populate all the required fields.
 
 
-![Additional Alert Receiver fields](/assets/developer-ui-guide/additional-alert-receiver.png "Additional Alert Receiver fields")
+![Additional Alert Receiver fields](/developer/assets/developer-ui-guide/additional-alert-receiver.png "Additional Alert Receiver fields")
 
 
 - Your new Alert Receiver will appear on the Alert Receivers page.
 
 
-![Alert Receiver list](/assets/developer-ui-guide/alert-receiver-list.png "Alert Receiver list")
+![Alert Receiver list](/developer/assets/developer-ui-guide/alert-receiver-list.png "Alert Receiver list")
 
 
 - When you click the Alert icon, information about the alert is displayed.
 
 
-![Information about Alerts](/assets/developer-ui-guide/alert-descr1.png "Information about Alerts")
+![Information about Alerts](/developer/assets/developer-ui-guide/alert-descr1.png "Information about Alerts")
 

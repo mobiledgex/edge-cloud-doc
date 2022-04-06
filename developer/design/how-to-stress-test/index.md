@@ -112,7 +112,7 @@ You can also use the Stream option in the top right in order to monitor real tim
 If you see that the utilization is too high for your use case, you may need to consider either changing your application to run on a larger [flavor](/deployments/deployment-workflow/flavors) or alternatively if you are using Kubernetes, you may want to change your thresholds for leveraging [auto-scaling](/deployments/application-runtime/autoscale).
 
 <figure class="half">
-  <img src="/assets/stress-test/monitoring-stress-test.png" class="img-fluid slb" alt="Monitoring Tab in MobiledgeX Console">
+  <img src="/developer/assets/stress-test/monitoring-stress-test.png" class="img-fluid slb" alt="Monitoring Tab in MobiledgeX Console">
   <figcaption>Monitoring Tab in MobiledgeX Console</figcaption>
 
 </figure>

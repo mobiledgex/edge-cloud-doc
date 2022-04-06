@@ -26,13 +26,13 @@ The following actions may be performed on this page:
 - Toggle **Map:** to only view a list of cloudlets and hide the entire map
 - Select the refresh button to refresh the list of available cloudlets
 
-![](/assets/cloudletspage.png "")
+![](/developer/assets/cloudletspage.png "")
 
 ### Cloudlet Pools
 
 Cloudlet Pools are collections of cloudlets that are defined on a per-regional basis. One of the advantages of becoming a member of a Cloudlet Pool is having the ability to deploy your applications to a private cloudlet. This, however, does not restrict you from deploying to other *public* cloudlets or deploying to other *private* cloudlets associated with other organizations you may be part of. Operators may set up a Pool membership where they will invite the DevManager of a specified organization to become a member of the Cloudlet Pool. If you are part of the organization that received an invite from the Operator to associate with a Cloudlet Pool, you can either accept or deny the invite via a query to become a member of that Pool. Once you become a member, you can view your Pool membership from the Cloudlet Pool page.
 
-![](/assets/cloudletpools.png "")
+![](/developer/assets/cloudletpools.png "")
 
 #### Permissions and roles
 

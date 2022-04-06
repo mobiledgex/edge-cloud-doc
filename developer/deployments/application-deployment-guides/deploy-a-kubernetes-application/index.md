@@ -17,7 +17,7 @@ Before continuing, make sure you have read about applications and learned how to
 
 In the MobiledgeX Edge-Cloud Console left navigation, select **Apps**. Then, in the top right corner, select the plus sign icon. This will take you to the Create Apps page.
 
-![](/assets/createappsk8s.png "")
+![](/developer/assets/createappsk8s.png "")
 
 In the Deployment Type box, enter *kubernetes*.
 
@@ -86,7 +86,7 @@ For the other boxes, you should enter the relevant information for your app.
 
 You can open the Ports and the Configs boxes by selecting the corresponding plus sign icons. In the Kind dropdown menu that appears, make sure you select *Environment Variables Yaml*.
 
-![](/assets/portsconfigs.png "")
+![](/developer/assets/portsconfigs.png "")
 
 Once you have completed these steps, select the green box **Create** at the bottom of the page.
 
@@ -96,7 +96,7 @@ An [app instance](https://developers.mobiledgex.com/deployments/deployment-workf
 
 After creating the Kubernetes app, select **App Instances** in the left navigation. Then, in the top right corner, select the plus sign icon similar to the previous step.
 
-![](/assets/k8sinstance.png "")
+![](/developer/assets/k8sinstance.png "")
 
 Enter values in each box that correspond with your app. Then, select **Create**.
 
@@ -104,7 +104,7 @@ Enter values in each box that correspond with your app. Then, select **Create**.
 
 On the Application Instance page click on the Application Instance you just created, which will provide a status of the Application. You should see a field called `URI`, which is the publicly accessible domain unique to your instance. For the example Hello World application, copy and paste that into a web browser and you should now see the Hello World webpage.
 
-![Example of app instance](/assets/exampleinstance.png "Example of app instance")
+![Example of app instance](/developer/assets/exampleinstance.png "Example of app instance")
 
 As a follow-up, visit the [Auto Scaling with Kubernetes](https://developers.mobiledgex.com/deployments/application-runtime/autoscale/) guide to learn how to scale your deployed application.
 

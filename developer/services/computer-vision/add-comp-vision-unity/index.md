@@ -22,13 +22,13 @@ This guide describes how to add the MobiledgeX OpenCV Computer Vision library to
 - In your Unity Project, select **Window &gt; Package Manager**.<br>
 
 
-![](/assets/add-comp-vision-unity/package-manager.png "")
+![](/developer/assets/add-comp-vision-unity/package-manager.png "")
 
 
 - In the Unity Package Manager, select **Add package from git URL...**
 
 
-![](/assets/add-comp-vision-unity/add-package-git.png "")
+![](/developer/assets/add-comp-vision-unity/add-package-git.png "")
 
 
 - Copy and paste this URL: `https://github.com/mobiledgex/edge-cloud-sdk-unity.git` Now, your MobiledgeX SDK is added to your Project packages.
@@ -42,13 +42,13 @@ If you have a Unity version older than **2019.3**, please check [our Unity SDK
 - From the menu bar, select **MobiledgeX &gt; Examples &gt; ComputerVision**.
 
 
-![](/assets/add-comp-vision-unity/example-compvision.png "")
+![](/developer/assets/add-comp-vision-unity/example-compvision.png "")
 
 
 - Select **Import**.
 
 
-![](/assets/add-comp-vision-unity/import.png "")
+![](/developer/assets/add-comp-vision-unity/import.png "")
 
 ## Step 3: Add Applications credentials
 
@@ -56,7 +56,7 @@ If you have a Unity version older than **2019.3**, please check [our Unity SDK
 - Select **MobiledgeX &gt; Setup**.
 
 
-![](/assets/add-comp-vision-unity/setup.png "")
+![](/developer/assets/add-comp-vision-unity/setup.png "")
 
 
 - Enter Application Credentials to connect your Unity Project to the ComputerVision server.
@@ -67,7 +67,7 @@ If you have a Unity version older than **2019.3**, please check [our Unity SDK
 - **App Version:** 2.2
 - **Region:** EU<br>
 
-![Setup screen fields](/assets/add-comp-vision-unity/samples.png "Setup screen fields")
+![Setup screen fields](/developer/assets/add-comp-vision-unity/samples.png "Setup screen fields")
 
 
 - Select **Setup**. Your Unity Project is ready for **ComputerVision**.
@@ -85,7 +85,7 @@ If you have a Unity version older than **2019.3**, please check [our Unity SDK
 
 The ComputerVision Component is provided to make integration with the Computer Vision server simple without needing to code any interactions. The ComputerVision Component uses the MobiledgeX Location Service component to connect you to the nearest cloudlet (data center) where the computer vision back-end is deployed. Below are all the configurable parameters provided by the component that developers can leverage to customize the service as well as visuals displayed from data processed by the Computer Vision server.
 
-![Computer Vision Component for Unity](/assets/add-comp-vision-unity/location-service.png "Computer Vision Component for Unity")
+![Computer Vision Component for Unity](/developer/assets/add-comp-vision-unity/location-service.png "Computer Vision Component for Unity")
 
 - **Connection Mode** Select the desired connection, either WebSocket or REST. WebSocket is a stateful protocol; however, REST relies on stateless protocol instead. WebSocket connections can scale vertically on a single server, whereas REST, which is HTTP based, can scale horizontally.
 - **Service Mode** Face Detection, Object Detection.

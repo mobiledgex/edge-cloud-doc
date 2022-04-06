@@ -69,17 +69,17 @@ qemu-system-x86_64 -drive driver=qcow2,file=${QCOW},if=virtio -m 4096 \ -nic use
 
 This will open up a window to the Virtual Machine emulator which will start the Windows Installation process.
 
-![CentOS Application Instance in Terminal](/assets/windows-vm/windows-setup.png "CentOS Application Instance in Terminal")
+![CentOS Application Instance in Terminal](/developer/assets/windows-vm/windows-setup.png "CentOS Application Instance in Terminal")
 
 Continue through the Windows Installation process until you get to an empty Windows page that asks which drive to install Windows. Select **Load Drivers** to select the Windows VirtIO drivers to load. Choose the Red Hat VirtIO SCSI controller that corresponds to the version of Windows you are trying to install. For example, if you are installing Windows Server 2019, then select the driver with 2K19 in the path.
 
-![Windows Load Driver](/assets/windows-vm/load-driver.png "Windows Load Driver")
+![Windows Load Driver](/developer/assets/windows-vm/load-driver.png "Windows Load Driver")
 
 Then, continue through the Windows Installation process, until you are able to log in to your VM.
 
 ## Step 4: Enable Internet Access for the Virtual Machine
 
-![Install VirtIO NetKVM](/assets/windows-vm/VirtIO NetKVM.png "Install VirtIO NetKVM")
+![Install VirtIO NetKVM](/developer/assets/windows-vm/VirtIO NetKVM.png "Install VirtIO NetKVM")
 
 ## Step 5: Enable Remote Desktop Protocol (optional)
 
@@ -150,7 +150,7 @@ You are now ready to create an application. The Apps page lets you define your b
 - For *Port*, enter **3389**, and select **TCP** for RDP.
 
 
-![Create Windows App](/assets/windows-vm/create-windows-app.png "Create Windows App")
+![Create Windows App](/developer/assets/windows-vm/create-windows-app.png "Create Windows App")
 
 The console will process your request and return you to the Apps screen where you should see your application.
 
@@ -177,11 +177,11 @@ You are ready to deploy your application. The App Instances page is where you pr
 
 After the VM has been successfully provisioned, select the Application Instance in order to view the Application Instance Details page. This page will contain all the information specific to your VM Deployment, including the external IP address to connect to the instance.
 
-![External URI for Virtual Machine](/assets/how-to-deploy-vm/vm-uri.png "External URI for Virtual Machine")
+![External URI for Virtual Machine](/developer/assets/how-to-deploy-vm/vm-uri.png "External URI for Virtual Machine")
 
 To test that your VM was deployed correctly, navigate to the App Instance page and under the quick access menu, select [Terminal](/deployments/deployment-workflow/app-instances#using-terminal).
 
 **Note:** Not all Cloudlets will support this feature and if you run into errors for a specific cloudlet, it is recommended to connect to the App Instance via RDP has mentioned above.
 
-![Windows VM in MobiledgeX Terminal](/assets/windows-vm/windows-terminal.png "Windows VM in MobiledgeX Terminal")
+![Windows VM in MobiledgeX Terminal](/developer/assets/windows-vm/windows-terminal.png "Windows VM in MobiledgeX Terminal")
 

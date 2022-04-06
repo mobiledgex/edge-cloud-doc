@@ -35,7 +35,7 @@ The image below illustrates scenarios covering TCP traffic to secure your applic
 - For Load Balancer deployments, the limited maximum amount of TCP ports currently supported is **1000**, while the limited maximum amount of UPD ports currently supported is **10000**.
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/mex-and-tls-rev.png" class="img-fluid slb" alt="MobiledgeX and TLS">
+  <img src="/developer/assets/developer-ui-guide/mex-and-tls-rev.png" class="img-fluid slb" alt="MobiledgeX and TLS">
   <figcaption>MobiledgeX and TLS</figcaption>
 
 </figure>
@@ -57,7 +57,7 @@ For UDP, traffic is sent through the Load Balancer as well, but since it's datag
 **Note:** Currently, UDP datagrams are limited to a maximum size of 1,400 bytes. Datagrams greater than 1,400 bytes will be dropped by the Load Balancer. Also, UDP traffic through the shared Load Balancer is subject to the same port remapping that is noted for TCP traffic.
 
 <figure class="half">
-  <img src="/assets/developer-ui-guide/mex-lb-udp.png" class="img-fluid slb" alt="MobiledgeX and UDP">
+  <img src="/developer/assets/developer-ui-guide/mex-lb-udp.png" class="img-fluid slb" alt="MobiledgeX and UDP">
   <figcaption>MobiledgeX and UDP</figcaption>
 
 </figure>

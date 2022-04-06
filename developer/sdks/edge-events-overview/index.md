@@ -13,11 +13,11 @@ To take advantage of edge computing, a client device needs to be connected to th
 
 EdgeEvents is a streaming API that provides a bidirectional connection between the client device and the MobiledgeX Distributed Matching Engine (DME) to answer how to best maintain an edge connection. Periodic data updates such as location or latency are sent from the client to the MobiledgeX DME, which will then send relevant events to your device, such as a closer cloudlet. At this point, you can respond accordingly to your application needs.
 
-![Edge Events Architecture](/assets/Edge-Events.jpg "Edge Events Architecture")
+![Edge Events Architecture](/developer/assets/Edge-Events.jpg "Edge Events Architecture")
 
 EdgeEvents also provides a wealth of statistics related to device, location, and latency through visualizations in the MobiledgeX console or MC APIs (mcctl). Developers can see user location patterns or latency heat maps to help figure out where to deploy new app instances. Developers can also see stats about the device information of their users to gain insights into their user base. These insights can be viewed on the [Monitoring](/deployments/monitoring-and-metrics/monitoring-edge-events) page of the MobiledgeX Edge-Cloud Console.
 
-![Edge Events Map View](/assets/monitoring/edge-events/cloudlet-location-default-page.png "Edge Events Map View")
+![Edge Events Map View](/developer/assets/monitoring/edge-events/cloudlet-location-default-page.png "Edge Events Map View")
 
 ## How To Use Edge Events
 

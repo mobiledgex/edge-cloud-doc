@@ -13,7 +13,7 @@ Learn how to auto scale your Kubernetes (K8s) edge applications using MobiledgeX
 
 The auto scale policy governs scaling up or down the number of nodes of a Kubernetes cluster to provide more or fewer compute resources respectively for your application. By optionally defining the target CPU load, Memory load, and/or number of Active Connections, the auto scale policy will automatically add or remove nodes within the Kubernetes cluster so that the average value per node is approximately equal to the target. Once the auto scale policy is created, it can be referenced when creating a new cluster from the cluster instance page.
 
-![Add Auto Scale Policy to Cluster](/assets/auto-scale-policy/auto-scale-cluster.png "Add Auto Scale Policy to Cluster")
+![Add Auto Scale Policy to Cluster](/developer/assets/auto-scale-policy/auto-scale-cluster.png "Add Auto Scale Policy to Cluster")
 
 When creating a Kubernetes App Definition, under Advanced Settings, **ScaleWithCluster** should be set to **true** to have Kubernetes scale your app across all nodes within the cluster. Otherwise, your app will only run on one node in the cluster. As a result of that,  auto scale will not trigger, and you won’t be unable to take advantage of an auto scaled cluster.
 
@@ -44,7 +44,7 @@ When creating a Kubernetes App Definition, under Advanced Settings, **ScaleWithC
 - Once you have populated all required or relevant fields, select the **Create Policy** button at the bottom of the page.
 
 
-![Auto-Scale Policy](/assets/auto-scale-policy/add-autoscale-policy.png "Auto-Scale Policy")
+![Auto-Scale Policy](/developer/assets/auto-scale-policy/add-autoscale-policy.png "Auto-Scale Policy")
 
 ## Attach an Auto Scale Policy to a Kubernetes Cluster
 
@@ -56,7 +56,7 @@ There are two methods of attaching an auto scale policy to a Kubernetes cluster,
 - In the Auto Scale Policy text box dropdown, select the Auto Scale Policy you just created.
 
 
-![](/assets/autoscalecluster.png "")
+![](/developer/assets/autoscalecluster.png "")
 
 
 - Select **Create** or **Update** at the bottom of the page.

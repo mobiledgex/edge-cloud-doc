@@ -13,7 +13,7 @@ Cloudlet Pools are collections of [cloudlets](/deployments/deployment-workflow/c
 
 Only developer Managers of your [organization](/deployments/accounts/org-users) will be able to accept or withdraw from a Cloudlet Pool.
 
-![Cloudlet Pool UI](/assets/cloudlet-pool/cloudlet-pool-dev.png "Cloudlet Pool UI")
+![Cloudlet Pool UI](/developer/assets/cloudlet-pool/cloudlet-pool-dev.png "Cloudlet Pool UI")
 
 **Note:** Operators can view developers’ logs and events from the [monitoring ](https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/) dashboard if they are part of the Cloudlet Pool.
 

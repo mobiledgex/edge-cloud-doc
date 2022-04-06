@@ -56,11 +56,11 @@ implementation ’com.android.volley:volley:1.1.1’
 
 #### Add Face Box Renderer to Layout
 
-![Face Box Rendered to Layout](/assets/how-to-android-workshop-add-face-detection-to-workshop-app/1.png "Face Box Rendered to Layout")
+![Face Box Rendered to Layout](/developer/assets/how-to-android-workshop-add-face-detection-to-workshop-app/1.png "Face Box Rendered to Layout")
 
 In the WorkshopSkeleton project, there is an **edgeFaceBoxRender** placeholder that is defined as a generic View. Let’s update it to a FaceBoxRenderer. Open **app/res/layout/fragment*face*processor.xml**. If the editor comes up in "Design" mode, change to the "Code" view (see pink oval below).
 
-![Fragment_Face_Processor.xml](/assets/how-to-android-workshop-add-face-detection-to-workshop-app/2.png "Fragment_Face_Processor.xml")
+![Fragment_Face_Processor.xml](/developer/assets/how-to-android-workshop-add-face-detection-to-workshop-app/2.png "Fragment_Face_Processor.xml")
 
 Now search for **edgeFaceBoxRender**. Change its definition from "View" to "com.mobiledgex.computervision.FaceBoxRenderer".
 
@@ -79,7 +79,7 @@ It will now look like this:
 
 Now let’s edit the main class we will be using for Face Detection. Open **app/java/com.mobiledgex.workshopskeleton/FaceProcessorFragment.java**.
 
-![FaceProcessorFragment.java](/assets/how-to-android-workshop-add-face-detection-to-workshop-app/3.png "FaceProcessorFragment.java")
+![FaceProcessorFragment.java](/developer/assets/how-to-android-workshop-add-face-detection-to-workshop-app/3.png "FaceProcessorFragment.java")
 
 ### Imports
 
@@ -301,7 +301,7 @@ getActivity().runOnUiThread(new Runnable() {
 
 ## Almost There
 
-![Example 1: Face Detection](/assets/how-to-android-workshop-add-face-detection-to-workshop-app/4.jpg "Example 1: Face Detection")
+![Example 1: Face Detection](/developer/assets/how-to-android-workshop-add-face-detection-to-workshop-app/4.jpg "Example 1: Face Detection")
 
 ## Miscellaneous
 
@@ -367,7 +367,7 @@ If you start the Face Detection activity now and point the camera at your face, 
 
 - Supports both portrait and landscape mode.
 
-![Example 2: Multiple Faces Recognized in Landscape Mode](/assets/how-to-android-workshop-add-face-detection-to-workshop-app/5.jpg "Example 2: Multiple Faces Recognized in Landscape Mode")
+![Example 2: Multiple Faces Recognized in Landscape Mode](/developer/assets/how-to-android-workshop-add-face-detection-to-workshop-app/5.jpg "Example 2: Multiple Faces Recognized in Landscape Mode")
 
 ## Going Farther
 
@@ -509,7 +509,7 @@ Intent intent = new Intent(this, PoseProcessorActivity.class);
 - Select the rear camera and point at someone’s full body (or a group of people) to create a colored wireframe of their pose.
 
 
-![Example 3: Pose Detection](/assets/how-to-android-workshop-add-face-detection-to-workshop-app/6.jpg "Example 3: Pose Detection")
+![Example 3: Pose Detection](/developer/assets/how-to-android-workshop-add-face-detection-to-workshop-app/6.jpg "Example 3: Pose Detection")
 
 ## Multi-Purpose App
 

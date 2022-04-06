@@ -40,7 +40,7 @@ Add your console **username** and **password** as secrets to your Github rep
 - Select **Add secret**.
 
 
-![GitHub Repository Secrets Page](/assets/git-hub-actions/secrets.png "GitHub Repository Secrets Page")
+![GitHub Repository Secrets Page](/developer/assets/git-hub-actions/secrets.png "GitHub Repository Secrets Page")
 
 The username and password are stored as `MOBILEDGEX_USERNAME` and `MOBILEDGEX_PASSWORD`, which are used as variables in the configuration files. Refer to the [main.yml](https://github.com/mobiledgex/github-actions-sample/blob/master/.github/workflows/main.yml) file as an example.
 
@@ -92,11 +92,11 @@ steps:
 
 The following section of the sample file displays the Docker actions required to build and publish the Docker image to the registry. Make sure to change the repository name and path to match the name and path of the image you will be deploying.
 
-![Push to GitHub](/assets/git-hub-actions/push-to-git.png "Push to GitHub")
+![Push to GitHub](/developer/assets/git-hub-actions/push-to-git.png "Push to GitHub")
 
 The following section of the sample file uses this custom action, as shown below, to deploy your application to our cloudlets. You can learn more about this action from this repository.
 
-![Deploy Application](/assets/sample-code-1.png "Deploy Application")
+![Deploy Application](/developer/assets/sample-code-1.png "Deploy Application")
 
 **Note:** You can use the same workflow process as described above to perform different actions as long as you assign a different name for each workflow. In cases where you want to deploy your application to a specific cloudlet, for example, remember to specify the paths to `appconfig` and `appinstsconfig`. These *optional* parameters are defaulted to `.mobiledgex/app.yml` and `.mobiledgex/appinsts.yml`, respectively.
 

@@ -77,5 +77,5 @@ You will receive an error if you attempt to delete an auto provision policy wher
 - Once your auto provision policy is created, apply the policy to your [applicaton definition](https://developers.mobiledgex.com/deployments/deployment-workflow/app-definition) under the **Advanced Settings**.
 
 
-![Create Auto Provisioning Policy screen](/assets/provision.png "Create Auto Provisioning Policy screen")
+![Create Auto Provisioning Policy screen](/developer/assets/provision.png "Create Auto Provisioning Policy screen")
 

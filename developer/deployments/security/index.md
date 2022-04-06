@@ -17,9 +17,9 @@ Because Trust Policies are at the cloudlet-level, there is no configuration requ
 
 **Note:** Non-trusted applications cannot be deployed to Trusted cloudlets.
 
-![Trust Policy option](/assets/developer-ui-guide/trusted-policy.png "Trust Policy option")
+![Trust Policy option](/developer/assets/developer-ui-guide/trusted-policy.png "Trust Policy option")
 
 All existing Trust Policies are displayed on the Trust Policy page.
 
-![Trust Policy page](/assets/developer-ui-guide/trust-policy-page.png "Trust Policy page")
+![Trust Policy page](/developer/assets/developer-ui-guide/trust-policy-page.png "Trust Policy page")
 

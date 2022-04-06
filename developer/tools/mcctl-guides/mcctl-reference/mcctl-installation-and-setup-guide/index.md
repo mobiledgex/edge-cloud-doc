@@ -18,7 +18,7 @@ The `mcctl` utility is designed to provide access to the MobiledgeX APIs from 
 - On the left navigation, select **Artifacts**. Then, in the folder directory, select **downloads &gt; mcctl &gt; **(preferred operating system)** &gt; mcctl**.
 
 
-![](/assets/artifactory.png "")
+![](/developer/assets/artifactory.png "")
 
 
 - Download the mcctl file.

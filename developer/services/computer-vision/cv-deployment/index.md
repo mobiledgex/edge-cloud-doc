@@ -45,7 +45,7 @@ Once the [sampleapps](https://github.com/mobiledgex/edge-cloud-sampleapps.git)�
 - Make a single line edit at the top of the `Makefile` where you will change the `ORGNAME` value to the name of the organization you created using the Console. Note that the `Makefile` is case-sensitive, and therefore, ensure the name of your organization is typed in all lower-case. Here’s an example:
 
 
-![Makefile example](/assets/developer-ui-guide/makefile-example.png "Makefile example")
+![Makefile example](/developer/assets/developer-ui-guide/makefile-example.png "Makefile example")
 
 
 - Save the `Makefile`.
@@ -88,7 +88,7 @@ After successfully uploading your application image to the MobiledgeX Docker reg
 - Select **m4.medium** as the Flavor of the compute instance that this application will be running.
 - Use 2 TCP ports: **8008** and **8011**. For 8008, also enable the **TLS** option.
 
-![Create Apps screen](/assets/how-to-deploy-a-backend-application-to-mobiledgex/app-defv2.png "Create Apps screen")
+![Create Apps screen](/developer/assets/how-to-deploy-a-backend-application-to-mobiledgex/app-defv2.png "Create Apps screen")
 
 
 - Select **Create**. The application appears on the Apps page. You can select the application to view details.
@@ -121,20 +121,20 @@ You are now ready to deploy your application onto a cloudlet and create an Appli
 - Under Actions, select **Create Instance** the quick view menu.
 
 
-![Apps page: Quick Access menu](/assets/how-to-deploy-a-backend-application-to-mobiledgex/actions-launch-buttonv2.png "Apps page: Quick Access menu")
+![Apps page: Quick Access menu](/developer/assets/how-to-deploy-a-backend-application-to-mobiledgex/actions-launch-buttonv2.png "Apps page: Quick Access menu")
 
 
 - The **Create App Instance** page opens. Select an **Operator** and **Cloudlet** from the available lists to deploy your application.
 
 
-![Create App Instance screen](/assets/how-to-deploy-a-backend-application-to-mobiledgex/create-app-instv2.png "Create App Instance screen")
+![Create App Instance screen](/developer/assets/how-to-deploy-a-backend-application-to-mobiledgex/create-app-instv2.png "Create App Instance screen")
 
 
 - Select the cluster instance created in Step 5 from the drop-down list, or enable **Auto Cluster Instance**.
 - Select **Create**. You can view the progress via the Progress bar. It can take up to a few minutes to deploy your application to the specified cloudlet.
 
 
-![Progress bar](/assets/how-to-deploy-a-backend-application-to-mobiledgex/progress-bar.png "Progress bar")
+![Progress bar](/developer/assets/how-to-deploy-a-backend-application-to-mobiledgex/progress-bar.png "Progress bar")
 
 After you’ve successfully deployed your application, information about your deployed application appears on the App Instances page.
 
@@ -146,9 +146,9 @@ You can view and monitor historical activities made by you, or others, within yo
 
 Normally your client app would find your deployed App Instance by using the FindCloudlet API call with our SDKs. However, the ComputerVision app provides a built-in client that you can test immediately. Select the App Instance you just deployed and look at the URI value:
 
-![URI value in App Instance details](/assets/how-to-deploy-a-backend-application-to-mobiledgex/app-inst-uri.png "URI value in App Instance details")
+![URI value in App Instance details](/developer/assets/how-to-deploy-a-backend-application-to-mobiledgex/app-inst-uri.png "URI value in App Instance details")
 
 You can copy this and paste it into your web browser address bar to create the URL you need in the form "https://URI:8008". For the example shown, the full URL would be "[https://cv-cluster.munich-main.tdg.mobiledgex.net:8008](https://cv-cluster.munich-main.tdg.mobiledgex.net:8008)". After entering this URL, you should see a **MobiledgeX Face Detection** app running in your web browser.
 
-![JavaScript Computer Vision client in web browser](/assets/how-to-deploy-a-backend-application-to-mobiledgex/cv-javascript-client.jpg "JavaScript Computer Vision client in web browser")
+![JavaScript Computer Vision client in web browser](/developer/assets/how-to-deploy-a-backend-application-to-mobiledgex/cv-javascript-client.jpg "JavaScript Computer Vision client in web browser")
 

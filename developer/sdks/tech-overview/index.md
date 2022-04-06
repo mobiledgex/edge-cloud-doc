@@ -11,7 +11,7 @@ Learn how our APIs work to connect Client Applications to deployed Application I
 
 This guide provides you with a closer look at the MobiledgeX API layer, and how to use our APIs to connect to deployed application instances. The following diagram illustrates the architecture of MobiledgeX’s platform. We will be focusing on the API layer depicted in this diagram. You can find more detailed information about our architecture in our [product overview](https://developers.mobiledgex.com/product/overview) guide.
 
-![](/assets/getting-started/architectural-diagram.png "")
+![](/developer/assets/getting-started/architectural-diagram.png "")
 
 ## Why Use the MobiledgeX APIs and SDKs
 
@@ -133,5 +133,5 @@ With the `HTTPClient` object, we can then create a network request to the depl
 
 The following graphic illustrates each of the API calls covered above to connect your client application with your deployed server application successfully. The blue lines shown connect to the DME while the green line connects to your application.
 
-![](/assets/endtoend2.png "")
+![](/developer/assets/endtoend2.png "")
 

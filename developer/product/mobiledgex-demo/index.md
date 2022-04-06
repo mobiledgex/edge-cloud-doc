@@ -72,27 +72,27 @@ See [Edge Events Overview](/sdks/edge-events-overview) for more details on how E
 
 This app can be used for testing different Edge Events configurations. If you don’t change any settings, you will be using the default configuration, where all attributes have been set to common values. To override the defaults and create your own configuration, open the main menu, select **Settings**, then **Matching Engine Settings** and you will see this screen:
 
-![Matching Engine Settings](/assets/android-demo-app/matching-engine-settings.png "Matching Engine Settings")
+![Matching Engine Settings](/developer/assets/android-demo-app/matching-engine-settings.png "Matching Engine Settings")
 
 The **Enable Edge Events** toggle can be turned off if you wish to disable Edge Events. In this case, all Edge Events settings are grayed out and cannot be edited.
 
 The initial setting for **Override Default Configuration** is off. In that case, default values that are populated by `matchingEngine.createDefaultEdgeEventsConfig()` will be used, and editing of the **Edge Events Settings** is disabled. If the override is switched on, then the items are enabled, and any of the values can be customized.
 
-![Overrivde Edge Events](/assets/android-demo-app/override-default-config.png "Overrivde Edge Events")
+![Overrivde Edge Events](/developer/assets/android-demo-app/override-default-config.png "Overrivde Edge Events")
 
 After turning on **Override Default Configuration** and selecting **Edge Events Config**, this screen is shown:
 
-![Edge Event Configs](/assets/android-demo-app/edge-events-config.png "Edge Event Configs")
+![Edge Event Configs](/developer/assets/android-demo-app/edge-events-config.png "Edge Event Configs")
 
 On first run, all items are populated with the original default values. Any edited settings are retained, even when turning **Override** off and back on.
 
 Selecting **FindCloudlet Event Triggers** displays this screen where the user can toggle individual triggers on or off:
 
-![Edge Event Triggers](/assets/android-demo-app/findcloudlet-event-triggers.png "Edge Event Triggers")
+![Edge Event Triggers](/developer/assets/android-demo-app/findcloudlet-event-triggers.png "Edge Event Triggers")
 
 Back on the Matching Engine Settings page, selecting **Latency Update Config** shows this screen:
 
-![Latency Update Config](/assets/android-demo-app/latency-update-config.png "Latency Update Config")
+![Latency Update Config](/developer/assets/android-demo-app/latency-update-config.png "Latency Update Config")
 
 Selecting **Update Pattern** shows a list of values:
 
@@ -134,7 +134,7 @@ The app can visualize how Edge Events are used to select a new app instance to c
 - The mobile icon will jump to the Start point and then start moving along the route. At one second intervals, the new mobile icon position is reported via the Edge Events connection. Whenever it is closer to a new cloudlet, Edge Events will inform the app of the new cloudlet info, and the app will perform a connection test, then mark the cloudlet in green and draw a connecting line.
 
 
-![Driving Route completed, with final closest cloudlet selected.](/assets/android-demo-app/route-mode-driving.png "Driving Route completed, with final closest cloudlet selected.")
+![Driving Route completed, with final closest cloudlet selected.](/developer/assets/android-demo-app/route-mode-driving.png "Driving Route completed, with final closest cloudlet selected.")
 
 ## Computer Vision Demos 
 

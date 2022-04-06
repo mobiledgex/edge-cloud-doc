@@ -30,7 +30,7 @@ July 27th, 2021
 
 If you receive the following error and cannot compile your Unity project, restart Unity.
 
-![](/assets/unity-sdk/metadata_error.png "")
+![](/developer/assets/unity-sdk/metadata_error.png "")
 
 ## MobiledgeX SDK 2.4.1 
 
@@ -58,7 +58,7 @@ March 9th, 2021
 
 If you receive the following error and cannot compile your Unity project, restart Unity.
 
-![](/assets/unity-sdk/metadata_error.png "")
+![](/developer/assets/unity-sdk/metadata_error.png "")
 
 ## MobiledgeX SDK 2.4.0 
 
@@ -101,7 +101,7 @@ December 10th, 2020
 
 If you receive the following error and cannot compile your Unity project, restart Unity.
 
-![](/assets/unity-sdk/metadata_error.png "")
+![](/developer/assets/unity-sdk/metadata_error.png "")
 
 ## MobiledgeX SDK 2.1.3 
 
@@ -133,7 +133,7 @@ September 24th, 2020
 
 If you receive the following error and cannot compile your Unity project, restart Unity.
 
-![](/assets/unity-sdk/metadata_error.png "")
+![](/developer/assets/unity-sdk/metadata_error.png "")
 
 ## MobiledgeX SDK 2.1.2 
 
@@ -174,7 +174,7 @@ In order to upgrade to the latest version of the SDK, you will need to do the fo
 - *Assets/Plugins/MobiledgeX/*
 - Assets/Resources/MobiledgeXSettings.asset
 
-![](/assets/release-notes/upgrade-delete-step.png "")
+![](/developer/assets/release-notes/upgrade-delete-step.png "")
 
 
 - Re-add the Unity Git Package to your project by going to the Unity Package Manager and re-inputting the [Git URL](https://github.com/mobiledgex/edge-cloud-sdk-unity.git). For more detailed instructions on this procedure, take a look at the [Unity SDK guide](/sdks/unity-sdk/unity-sdk-download).
@@ -194,7 +194,7 @@ In order to upgrade to the latest version of the SDK, you will need to do the fo
 
 If you receive the following error and cannot compile your Unity project, restart Unity.
 
-![](/assets/unity-sdk/metadata_error.png "")
+![](/developer/assets/unity-sdk/metadata_error.png "")
 
 ## MobiledgeX SDK 2.1.0
 
@@ -229,7 +229,7 @@ In order to upgrade to the latest version of the SDK, you will need to do the fo
 - Assets/Plugins/MobiledgeX/
 - Assets/Resources/MobiledgeXSettings.asset
 
-![](/assets/release-notes/upgrade-delete-step.png "")
+![](/developer/assets/release-notes/upgrade-delete-step.png "")
 
 2. Re-add the Unity Git Package to your project by going to the Unity Package Manager and re-inputting the [Git URL](https://github.com/mobiledgex/edge-cloud-sdk-unity.git). For more detailed instructions on this procedure, take a look at the [Unity SDK guide](/sdks/unity-sdk/unity-sdk-download).
 
@@ -257,7 +257,7 @@ Additionally, a few function names have changed on the **MobiledgeXIntegration**
 
 If you receive the following error and cannot compile your Unity project, restart Unity.
 
-![](/assets/unity-sdk/metadata_error.png "")
+![](/developer/assets/unity-sdk/metadata_error.png "")
 
 #### iOS
 
@@ -275,7 +275,7 @@ If you were using an older version of any of the SDKs, follow the instructions o
 
 - **Android:** Use the createDefault&lt;API&gt;Request, which has the majority of the defaults set via the Builder API. API refers to the functions listed below.
 - **Swift, Unity, C#:** Optional parameters are now included in the APIs. Named parameters are available if a parameter is included in the create request for thing such as AuthToken, Tags, Cell ID, etc. A list of all optional parameters can be found on our API documentation.
-- **Unity:** Re-download the [Integrations scripts](https://github.com/vmohanx/edge-cloud-sampleapps/tree/master/unity/PingPongGameExample/PingPongGame/Assets/Scripts/Integration) from the edge cloud sample apps if you were using them prior to this release.
+- **Unity:** Re-download the [Integrations scripts](https://github.com/vmohanx/edge-cloud-sampleapps/tree/master/unity/PingPongGameExample/PingPongGame/developer/assets/Scripts/Integration) from the edge cloud sample apps if you were using them prior to this release.
 
 ### New Features  
 

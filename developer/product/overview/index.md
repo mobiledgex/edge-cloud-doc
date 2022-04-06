@@ -16,7 +16,7 @@ The MobiledgeX platform specializes in edge cloud operations and provides an Edg
 
 The Mobile Network Edge is a distributed network of data centers which telecommunication operators around the world manage. A unique feature of these Mobile Network Edge data centers, what we refer to as [cloudlets](/deployments/deployment-workflow/cloudlets), is that they are located at cellular tower networks. As a result, application data can be routed on a 4G or 5G cellular connection from a **device**, such as a smart phone, through the **cell tower**, directly to your **application server** in the data center.
 
-![MobiledgeX Data Flow diagram](/assets/mobiledgex/data-path.png "MobiledgeX Data Flow diagram")
+![MobiledgeX Data Flow diagram](/developer/assets/mobiledgex/data-path.png "MobiledgeX Data Flow diagram")
 
 This results in the two primary benefits compared to traditional cloud computing:
 

@@ -36,7 +36,7 @@ For example, the developers of **Application X** expect an average of 200 Concur
 
 While stress testing your applications based on your Load Estimates, you can leverage the MobiledgeX [Monitoring](/deployments/monitoring-and-metrics) tools to help make informed decision about when it is necessary to scale our your applications. As shown in the diagram below, you can simply select a deployed application instance and then check the performance of the instance across various compute metrics such as CPU, Memory, Disk Utilization, etc. Based on the values you are noticing, you may then update your application instances accordingly based on the recommendations in the following sections.
 
-![MobiledgeX Monitoring](/assets/monitoring/monitoring-3.0-screen.png "MobiledgeX Monitoring")
+![MobiledgeX Monitoring](/developer/assets/monitoring/monitoring-3.0-screen.png "MobiledgeX Monitoring")
 
 ## Vertical Scaling
 

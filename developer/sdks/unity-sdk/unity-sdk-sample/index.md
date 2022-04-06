@@ -25,19 +25,19 @@ This Ping Pong Game is built in Unity and is provided as a sample as reference t
 
 Edge Multiplay is deployed on operator networks around the world. As such in this guide, we will not be focused on the deployments, but instead focused on how to find the closest instance of Edge Multiplay through the MobiledgeX Unity SDK that we can use for the Unity Ping Pong application.
 
-![Ping Pong Demo](/assets/adding-mobiledgeX-matchingengine-sdk-to-unity-ping-pong-demo-app/1.jpg "Ping Pong Demo")
+![Ping Pong Demo](/developer/assets/adding-mobiledgeX-matchingengine-sdk-to-unity-ping-pong-demo-app/1.jpg "Ping Pong Demo")
 
 ## Step 1: Import the MobiledgeX Unity SDK
 
 From any Unity project, you can import the MobiledgeX Unity SDK via the Package Manager. You can open it from *Window &gt; Package Manager* in Unity. To add our MobiledgeX Package, select the **+** icon and click on **“Add package from git URL…”**
 
-![Package Manager](/assets/unity-sdk/add-git-url.png "Package Manager")
+![Package Manager](/developer/assets/unity-sdk/add-git-url.png "Package Manager")
 
 Enter `https://github.com/mobiledgex/edge-cloud-sdk-unity.git` in the text field, which will automatically start the process of importing the package into your application.
 
 Once that completes, you will see the MobiledgeX SDK within your Package Manager and the SDK will be available under the Packages tab of your Project.
 
-![MobiledgeX Unity Package](/assets/unity-sdk/mobiledgex-package.png "MobiledgeX Unity Package")
+![MobiledgeX Unity Package](/developer/assets/unity-sdk/mobiledgex-package.png "MobiledgeX Unity Package")
 
 ## Step 2: Setup Edge Multiplay
 
@@ -45,7 +45,7 @@ Once the MobiledgeX SDK has finished installing, there will now be a new **Mobil
 
 To test Edge Multiplay, we have provided an example implementation of Ping Pong with Edge Multiplay. Under the EdgeMultiplay menu, click `Examples/PingPong`, which will begin importing the Edge Multiplay
 
-![Edge Multiplay Import](/assets/edgemultiplay/PingPongEdgeMultiplayMenu.png "Edge Multiplay Import")
+![Edge Multiplay Import](/developer/assets/edgemultiplay/PingPongEdgeMultiplayMenu.png "Edge Multiplay Import")
 
 Once the import finishes, you will now have PingPongGame as a folder under your Assets. Under PingPongGame/Scenes, there will be a `PingPongScene`, which you may open.
 
@@ -59,13 +59,13 @@ To test this Ping Pong game, you will need to connect to an instance of the Edge
 
 To use these credentials, using the MobiledgeX Menu go to `MobiledgeX/Setup`, which will open a Unity window for inputting the credentials. Once you have entered the credentials above, you will need to click Setup, which will register and make sure the credentials above are valid on the MobiledgeX platform.
 
-![MobiledgeX Setup Window](/assets/unity-sdk/mobiledgex-menu.png "MobiledgeX Setup Window")
+![MobiledgeX Setup Window](/developer/assets/unity-sdk/mobiledgex-menu.png "MobiledgeX Setup Window")
 
 If this is successfully, you may now **Run** the Ping Pong scene.
 
 If you see the following text, you have successfully connected to an instance of the server. To play the Ping Pong Sample, you will need to **Build and Run** another instance of the client.
 
-![Connect to Ping Pong](/assets/edgemultiplay/pingpongtext.png "Connect to Ping Pong")
+![Connect to Ping Pong](/developer/assets/edgemultiplay/pingpongtext.png "Connect to Ping Pong")
 
 ## MobiledgeX SDK Integration
 

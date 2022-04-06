@@ -55,19 +55,19 @@ ZIP files need to contain a `manifest.yaml` file, and should also include other 
 
 Although you may have specified the ports in your manifest, doing so does not open the ports automatically. You must also set (open) the ports via the [Edge-Cloud Console](https://console.mobiledgex.net) from the Create Apps page.
 
-![Ports settings](/assets/developer-ui-guide/set-ports.png "Ports settings")
+![Ports settings](/developer/assets/developer-ui-guide/set-ports.png "Ports settings")
 
 ### Option 1: Docker Compose file as input
 
 If you want to use the Docker Compose file as input, simply input the plain text manually into the **Deployment Manifest** text box from the Create Apps page. The other option is to use the file selection option and reference your file from your local server, where your text file is loaded into the **Deployment Manifest** text box.
 
-![Deployment Manifest Docker example](/assets/developer-ui-guide/manifest-docker-example-new.png "Deployment Manifest Docker example")
+![Deployment Manifest Docker example](/developer/assets/developer-ui-guide/manifest-docker-example-new.png "Deployment Manifest Docker example")
 
 ### Option 2: Docker Compose as a ZIP or non-ZIP file from a file system or HTTP Server
 
 To reference your Docker Compose ZIP file, make sure you are referencing it as a URL from an HTTP server. The server should be accessible without requiring authentication. For non-ZIP files, you can use the file selection option and reference your non-ZIP file from your local server, where it will load the content into the **Deployment Manifest** text box.
 
-![File Selection Option](/assets/developer-ui-guide/files-selection-option.png "File Selection Option")
+![File Selection Option](/developer/assets/developer-ui-guide/files-selection-option.png "File Selection Option")
 
 ### Option 3: Docker Compose as a ZIP file on Artifactory
 
@@ -86,7 +86,7 @@ If you choose to use a Docker image to deploy a Kubernetes Manifest, you can:
 
   **Note:** You cannot use a ZIP file with Kubernetes to deploy your application.
 
-![Folder icon to reference Deployment Manifest](/assets/developer-ui-guide/k8s.png "Folder icon to reference Deployment Manifest")
+![Folder icon to reference Deployment Manifest](/developer/assets/developer-ui-guide/k8s.png "Folder icon to reference Deployment Manifest")
 
 It’s important to remember to specify the **Service** section within the `k8s.yaml` file. Otherwise, your deployment will not succeed.  The following is an example of a deployment manifest.
 
@@ -134,17 +134,17 @@ It’s important to remember to specify the **Service** section within the `k8s.
 
 You can use a helm chart, which is a collection of files related to your Kubernetes resources, to deploy your application. If you wish to use a single helm chart for your application deployment, specify the URL path, for example, `https://resources.gigaspaces.com/helm-charts:gigaspaces/insightedge` to the helm chart as input into the **Image Path** field under **Create Apps**. You are not required to provide any input into the Deployment Manifest section.
 
-![Create Apps screen: Image Path input field](/assets/developer-ui-guide/helm-path.png "Create Apps screen: Image Path input field")
+![Create Apps screen: Image Path input field](/developer/assets/developer-ui-guide/helm-path.png "Create Apps screen: Image Path input field")
 
 When you specify the helm chart as input in the image path, you have the option to add an **Annotation**. Annotations are conditions or tags added as dependencies. This area is a free form region where you can specify conditions or tags specific to your helm chart. For example, in the **Key** field, you can type in `version` and in the **Value** field, type in the version of your helm chart, such as `1.0`.
 
-![Create Apps screen: Annotations](/assets/developer-ui-guide/annotation.png "Create Apps screen: Annotations")
+![Create Apps screen: Annotations](/developer/assets/developer-ui-guide/annotation.png "Create Apps screen: Annotations")
 
 If you require additional configurations for your application, such as adding environmental variables or including customization files for helm deployments,  you can specify these types of configurations by specifying the content of the configuration file in the *Config* field, and selecting either **Environmental Variables** or **Helm Customization**.
 
 Refer to our tutorial [Deploy a Helm V3 Application](https://developers.mobiledgex.com/deployments/application-deployment-guides/deploy-helm/) for detailed steps on how to deploy a Helm application.
 
-![Create Apps screen: Configs](/assets/developer-ui-guide/config-helm.png "Create Apps screen: Configs")
+![Create Apps screen: Configs](/developer/assets/developer-ui-guide/config-helm.png "Create Apps screen: Configs")
 
 ## Upload images to MobiledgeX registries
 
