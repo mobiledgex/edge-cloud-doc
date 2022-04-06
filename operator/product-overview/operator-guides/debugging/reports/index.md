@@ -183,7 +183,7 @@ Viewing, running, and creating reports are role-based. Please refer to the table
 - The Create Report Scheduler screen opens.
 
 
-![Create Report Scheduler screen](/assets/create-report-scheduler.png "Create Report Scheduler screen")
+![Create Report Scheduler screen](/operator/assets/create-report-scheduler.png "Create Report Scheduler screen")
 
 
 - Populate the required fields.
@@ -195,7 +195,7 @@ a. **Name:** Type a name for the report<br>b. **Organization:** This is auto-pop
 
 **Note:** When you create a report scheduler for a future date, the Last Report Status column may display a red X. This means that the report is in a pending state. It will turn into a green checkmark once the report is run as scheduled.
 
-![Report Scheduler list](/assets/report-scheduler-list.png "Report Scheduler list")
+![Report Scheduler list](/operator/assets/report-scheduler-list.png "Report Scheduler list")
 
 
 - Select the **Generate** button to generate a .pdf of the usage report to download locally.
@@ -235,7 +235,7 @@ There are two options for creating these topics:
 **Note:**
 `kafkacluster` is the URL of the Bootstrap endpoint. If you are using the Confluent Cloud, this is shown in the cluster settings:
 
-![](/assets/cluster.png "")
+![](/operator/assets/cluster.png "")
 
 `kafkauser` and `kafkapassword` = A valid user/pass for the cluster OR an API Key / Secret if an API key has been set up for the cluster.
 

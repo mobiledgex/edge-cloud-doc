@@ -337,5 +337,5 @@ The following is a list of vCloud User Operation APIs which should be made avail
 
 ## VCD  MobiledgeX Deployment Architecture
 
-![vCloud Directory VMware Component Diagram](/assets/vcd.png "vCloud Directory VMware Component Diagram")
+![vCloud Directory VMware Component Diagram](/operator/assets/vcd.png "vCloud Directory VMware Component Diagram")
 

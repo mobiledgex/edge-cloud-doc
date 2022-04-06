@@ -67,7 +67,7 @@ These files can be downloaded in one of two ways:
 
 You can use your console username/password to log into the MobiledgeX Artifactory installation and download the artifacts using the web browser of your choice. The files are under the Base images folder and are further broken down by format/type.
 
-![Directories in Artifactory](/assets/vm-pool/artifactory.png "Directories in Artifactory")
+![Directories in Artifactory](/operator/assets/vm-pool/artifactory.png "Directories in Artifactory")
 
 #### From the CLI
 
@@ -87,7 +87,7 @@ curl -u &lt;CONSOLEUSER&gt;:&lt;CONSOLEPASS&gt;  -O "https://artifactory.mobile
 
 It is vital to ensure that the artifacts are not corrupted in the file transfer. Artifactory computes a SHA256 Checksum for each file it serves. You will need to generate the SHA256 checksum on the downloaded file and then compare it to the checksum in Artifactory.
 
-![Checksum in Artifactory](/assets/vm-pool/checksum-artifactory.png "Checksum in Artifactory")
+![Checksum in Artifactory](/operator/assets/vm-pool/checksum-artifactory.png "Checksum in Artifactory")
 
 #### Computing the SHA256
 
@@ -110,7 +110,7 @@ SHA-256 (./mobiledgex-v3.1.6.qcow2) = 167fefcf151002e9f4b411c09d455d8b0d194c7adc
 
 Under Windows, you can use the [Get-FileHash](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7) commandlet in PowerShell to calculate the SHA256:
 
-![Powershell](/assets/vm-pool/powershell.png "Powershell")
+![Powershell](/operator/assets/vm-pool/powershell.png "Powershell")
 
 If the SHA256 calculated locally does not match the value provided in Artifactory, delete the file and retry the download. If this still does not match, please contact MobiledgeX support.
 
@@ -126,7 +126,7 @@ The specific steps required to load the VCD catalog resources will vary dependin
 - Select Source and upload OVF and VMDK files downloaded in Step 2.
 
 
-![VCD portal](/assets/vm-pool/vcd-portal.png "VCD portal")
+![VCD portal](/operator/assets/vm-pool/vcd-portal.png "VCD portal")
 
 
 - Select **Next**.
@@ -134,13 +134,13 @@ The specific steps required to load the VCD catalog resources will vary dependin
 - Under **Select vApp Template Name**, select the catalog to which you are deploying the vAPP.
 
 
-![Select catalog](/assets/vm-pool/vcd-portal-select-template.png "Select catalog")
+![Select catalog](/operator/assets/vm-pool/vcd-portal-select-template.png "Select catalog")
 
 
 - Select **Finish**.
 
 
-![Upload and process template](/assets/vm-pool/vapp-templates.png "Upload and process template")
+![Upload and process template](/operator/assets/vm-pool/vapp-templates.png "Upload and process template")
 
 
 - Wait for the template to complete uploading and processing.

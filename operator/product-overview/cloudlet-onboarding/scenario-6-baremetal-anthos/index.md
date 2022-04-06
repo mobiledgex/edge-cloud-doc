@@ -7,7 +7,7 @@ description: Support for Bare Metal Anthos
 
 In the Anthos bare metal deployment option, workloads run on a Kubernetes cluster on bare metal. This implementation allows for efficient use of resources as there is no virtualization layer. The Google Kubernetes stack is directly installed on the bare metal servers, and then the MobiledgeX platform is deployed to install and manage applications. Developer workloads are separated into namespaces, and network policies are automatically created when the MobiledgeX platform deploys these workloads to keep them separated. This model supports only Kubernetes-based applications. The cluster can be viewed within the Google Anthos dashboard when registered with a GCP account. Security and RBAC control of the developer workloads is maintained within the MobiledgeX ecosystem and not on the public cloud.
 
-![Anthos Reference Architecture](/assets/hybrid-edge.png "Anthos Reference Architecture")
+![Anthos Reference Architecture](/operator/assets/hybrid-edge.png "Anthos Reference Architecture")
 
 ## Anthos on Bare Metal Minimum Requirements
 

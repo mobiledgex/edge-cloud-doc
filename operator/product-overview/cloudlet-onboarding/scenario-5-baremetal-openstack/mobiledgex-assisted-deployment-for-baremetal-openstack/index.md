@@ -11,5 +11,5 @@ In MobiledgeX assisted OpenStack Deployment model, the operator provides a bunch
 
 MobiledgeX, or the MobiledgeX IaaS provider, installs the most optimal operating systems on these bare metal servers, constructs the IaaS OpenStack, and builds the cloudlet on this Stack. MobiledgeX will also guide the Networking design, manage the network configurations on the bare metal side, and support Firewall in IaaS Stack for open networks, or provides recommended ingress and egress firewall specifications for restricted traffic scenarios. The operator manages switches and routers, and oversees the network’s main firewall, while MobiledgeX maintains the cloudlets and supports the rest of the Edge operations.
 
-![](/assets/cloudlet-deployment-operator/scenario1b-RA.png "")
+![](/operator/assets/cloudlet-deployment-operator/scenario1b-RA.png "")
 

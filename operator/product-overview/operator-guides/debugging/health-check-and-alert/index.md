@@ -39,7 +39,7 @@ The AlertManager is a global component of MobiledgeX’s product and is responsi
 
 The image below illustrates the AlertManager workflow. A cloud operator can create an alert receiver and set up their preferred notification method through the Edge-Cloud Console. Once an alert receiver is created, the receiver is pushed to the MobiledgeX platform. When an alarm is triggered, the Alert Manager from within the platform sends an alert notification to the cloud operator for mitigation.
 
-![Alert Receiver Workflow](/assets/alertreceiver-1645124892.png "Alert Receiver Workflow")
+![Alert Receiver Workflow](/operator/assets/alertreceiver-1645124892.png "Alert Receiver Workflow")
 
 ### Alert management
 
@@ -70,7 +70,7 @@ While you can use the `mcctl` tool and the commands provided to set up your al
 - Your new Alert Receiver will appear on the Alert Receivers page. When you select the Alert icon, information about the alert is displayed.
 
 
-![Create Alert Receiver screen](/assets/health-checks-alarms/create-alert-screen.png "Create Alert Receiver screen")
+![Create Alert Receiver screen](/operator/assets/health-checks-alarms/create-alert-screen.png "Create Alert Receiver screen")
 
 ### Resolving alerts
 

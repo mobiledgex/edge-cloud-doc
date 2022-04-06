@@ -73,27 +73,27 @@ The same events that are presented using the `mcctl` commands can also be viewed
 
 On the right side of the MobiledgeX console, there should be three buttons in what is called the **Logs Column**. The Logs Column contains three icons, Audit Logs, Event Logs, and Usage Logs. Select **Events Logs** from the menu.
 
-![](/assets/eventlogs.png "")
+![](/operator/assets/eventlogs.png "")
 
 You will see a Live view of the Events log, as shown below.
 
-![Events Log- Live view](/assets/event-main.png "Events Log- Live view")
+![Events Log- Live view](/operator/assets/event-main.png "Events Log- Live view")
 
 You can also go from the Live view to a more specific search by using the **Filter** and **Time Range** icons. Select the filter icon on the top left, as shown below.
 
-![Filter icon](/assets/filter-time-range.png "Filter icon")
+![Filter icon](/operator/assets/filter-time-range.png "Filter icon")
 
 You will see the Filter and Tags option, along with a Time range. Click the + sign to expand the Tags. If you do not wish to enter a value for your selected tag, you can input an asterisk in the **Value** field. Click the + sign multiple times if you wish to add a query using additional tags.
 
-![Filter options](/assets/tags-menu.png "Filter options")
+![Filter options](/operator/assets/tags-menu.png "Filter options")
 
 Tags are a list of objects that you can use to query your search.  Scroll through the options in the Tag list, specify a date range, and click **Fetch.** The availability of tags is specific to your role as developer or operator.
 
-![Tags options](/assets/tags.png "Tags options")
+![Tags options](/operator/assets/tags.png "Tags options")
 
 The following screen examples show the one-to-one mapping between the UI and CLI command when you use the filter tags to search for the events.
 
-![Events-UI example](/assets/tagsvalues.png "Events-UI example")
+![Events-UI example](/operator/assets/tagsvalues.png "Events-UI example")
 
 **CLI command example mapping to the above UI example:**
 
@@ -124,11 +124,11 @@ Select **Audit Logs** to view a record of historical events performed by you, yo
 
 The following example shows an audit log search and displays the location of where you can find the audit term name. For example, DeleteApp is a term from `type=audit`.
 
-![Audit Log search-UI example](/assets/auditlogsfilter.png "Audit Log search-UI example")
+![Audit Log search-UI example](/operator/assets/auditlogsfilter.png "Audit Log search-UI example")
 
 The following screen example shows the one-to-one mapping between the CLI command and the UI when you use the filter to search events.
 
-![Events-UI example](/assets/Screen-Shot-2021-09-13-at-1.20.31-PM.png "Events-UI example")
+![Events-UI example](/operator/assets/Screen-Shot-2021-09-13-at-1.20.31-PM.png "Events-UI example")
 
 ### Events list
 
@@ -379,17 +379,17 @@ Usage logs pull data in from your existing configurations for application instan
 
 Select the **Usage Logs** from the Logs Column on the right side of the console.
 
-![Usage log option](/assets/usage-logs-1631112201.png "Usage log option")
+![Usage log option](/operator/assets/usage-logs-1631112201.png "Usage log option")
 
 The following is an example screen displayed when you click Usage log.
 
-![Usage log screen](/assets/usage-logs.png "Usage log screen")
+![Usage log screen](/operator/assets/usage-logs.png "Usage log screen")
 
 The left panel contains tabs to view detailed information about cluster instances, app instances, etc., depending on your selections. Underneath those options are specific information detailing things such as start time, region, action, status, etc. You can view the items specific to the available selection--cluster instance, app instance, cloudlets, etc. For example, if you want to see a cluster instance usage log, you will see items like Flavors, vCPU, RAM, and Disk.
 
 The right panel contains the actual usage logs for these objects where you can view information such as actions and status.  You may filter the logs based on month, day, hour, or minute. The left and right arrow icons will move through selections of the highlighted time interval. If you would like to return to the current time interval, select the **Today** icon, which looks like a calendar. The time interval can be changed by selecting **Month**, **Day**, **Hour**, or **Minute**.
 
-![](/assets/timeline.png "")
+![](/operator/assets/timeline.png "")
 
 The **Action** row contains color-coded bars, indicating whether something was created or deleted while the **Status** row contains color-coded bars to indicated whether the object is up or down. By clicking and dragging the bar, you can expand your view to extend the dates.
 
@@ -435,7 +435,7 @@ The Monitoring Dashboard provides many ways to filter the data you need to view 
 
 You can also refresh your data and specify your refresh rate by **seconds**, **minutes**, or **hours**. You will see a progress bar at the top of the page which serves as an indicator. Click the eye icon to customize your view and include specific metrics information.
 
-![Monitoring Dashboard](/assets/Monitoring.png "Monitoring Dashboard")
+![Monitoring Dashboard](/operator/assets/Monitoring.png "Monitoring Dashboard")
 
 You may find the following information displayed on your Monitoring Dashboard:
 
@@ -502,40 +502,40 @@ You can view latency statistics and filter them by cloudlet, location, and data 
 
 <br>1. From the Monitoring page, select the Actions menu and click **Show Latency Metrics.**
 
-![Monitoring page](/assets/show-latency-metrics.png "Monitoring page")
+![Monitoring page](/operator/assets/show-latency-metrics.png "Monitoring page")
 
-![Default view](/assets/monitor-dashboard/stats-data/default-view.png "Default view")
+![Default view](/operator/assets/monitor-dashboard/stats-data/default-view.png "Default view")
 
 From the Default view page, the time slider appears at the bottom of the page where you can slide to view aggregated data for the available period of time. The top left side of the screen displays the latency bar (heatmap) while the upper-hand corner of the screen displays cloudlet details.
 
 Use the drop-down box on the upper-righthand side to specify the absolute time range and apply it or select a relative time range.
 
-![Time range selection](/assets/monitor-dashboard/time-selection.png "Time range selection")
+![Time range selection](/operator/assets/monitor-dashboard/time-selection.png "Time range selection")
 
-![Time range selection box](/assets/monitor-dashboard/time-range-selection.png "Time range selection box")
+![Time range selection box](/operator/assets/monitor-dashboard/time-range-selection.png "Time range selection box")
 
 You can also filter latency data by avg. min, and max.
 
-![Filter latency range](/assets/monitor-dashboard/stats-data/avg-latency.png "Filter latency range")
+![Filter latency range](/operator/assets/monitor-dashboard/stats-data/avg-latency.png "Filter latency range")
 
 
 - Click the target location icon under **Cloudlet Location** to display the Cloudlet location view.
 
 
-![Cloudlet target location icon](/assets/monitor-dashboard/stats-data/target-icon.png "Cloudlet target location icon")
+![Cloudlet target location icon](/operator/assets/monitor-dashboard/stats-data/target-icon.png "Cloudlet target location icon")
 
 The Cloudlet location default page opens.
 
-![Cloudlet location default page](/assets/monitor-dashboard/stats-data/clould-location-default-page.png "Cloudlet location default page")
+![Cloudlet location default page](/operator/assets/monitor-dashboard/stats-data/clould-location-default-page.png "Cloudlet location default page")
 
 The purple cloud that you see in the sample above displays the average latency data based on cloudlets, and not location.
 
 - To drill-down latency data for a specific location type, click the **Location Tile**.
 
 
-![Location Tile](/assets/monitor-dashboard/stats-data/location-tile.png "Location Tile")
+![Location Tile](/operator/assets/monitor-dashboard/stats-data/location-tile.png "Location Tile")
 
-![Average location type](/assets/monitor-dashboard/stats-data/avg-location-tile.png "Average location type")
+![Average location type](/operator/assets/monitor-dashboard/stats-data/avg-location-tile.png "Average location type")
 
 The example above shows the location in green, which takes the average of the latency aggregated for all cloudlets within that particular location and records that under **No. of Sample**.
 
@@ -550,13 +550,13 @@ As mentioned earlier, you can view Developer metrics as long as they are part of
 
 To view the different types of Developer metrics, navigate to the Cloudlet drop-down option and select **App Inst**, **Cluster Inst**, or **Cloudlet**, as shown below.
 
-![Cloudlet drop-down option](/assets/cloudlet.png "Cloudlet drop-down option")
+![Cloudlet drop-down option](/operator/assets/cloudlet.png "Cloudlet drop-down option")
 
-![Developer metrics options](/assets/cluster-instance.png "Developer metrics options")
+![Developer metrics options](/operator/assets/cluster-instance.png "Developer metrics options")
 
 Depending on your selection, the Monitoring Dashboard will display Developer metrics specific to what you selected from the options provided.
 
-![Developer metrics](/assets/app-inst.png "Developer metrics")
+![Developer metrics](/operator/assets/app-inst.png "Developer metrics")
 
 ### Client cloudlet usage metrics 
 

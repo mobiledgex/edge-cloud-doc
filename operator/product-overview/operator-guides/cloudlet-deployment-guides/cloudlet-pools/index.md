@@ -28,7 +28,7 @@ Finally, to offer managed edge services to end customers, the platform must prov
 
 **Step 1:** In the MobiledgeX Edge-Cloud Console, go to the left navigation and select **Cloudlet Pools**, then click the **+** sign on the top right-hand corner of the screen. The Create Cloudlet Pool menu opens
 
-![Create Cloudlet Pool screen](/assets/operator-ui-guide/create-cloudlet-pool.png "Create Cloudlet Pool screen")
+![Create Cloudlet Pool screen](/operator/assets/operator-ui-guide/create-cloudlet-pool.png "Create Cloudlet Pool screen")
 
 **Step 2:** In the **Region** box, select either **US** or **EU** from the dropdown menu. Once specified, the **Cloudlets** selection box auto-populates with all available cloudlets for that region.
 
@@ -47,11 +47,11 @@ The **Operator ** field is required and will auto-populate with the name of th
 
 **Step 8:** Select **Create Invitation**. As an OperatorManager or OperatorContributor, you’re sending an invite as a query to the DeveloperManager of the organization you wish to invite to become a member of your Cloudlet Pool. They will then create a query response to either accept or reject the invite.
 
-![Invite Organization to Cloudlet Pool](/assets/cloudlet-pool-invite-org.png "Invite Organization to Cloudlet Pool")
+![Invite Organization to Cloudlet Pool](/operator/assets/cloudlet-pool-invite-org.png "Invite Organization to Cloudlet Pool")
 
 If you wish to invite additional organizations or remove organizations as members of your Cloudlet Pool(s), you can do so from the Cloudlet Pools page using the Actions menu, as shown below.
 
-![Cloudlet Pools: Actions menu options](/assets/cloudlet-pool-actions-menu.png "Cloudlet Pools: Actions menu options")
+![Cloudlet Pools: Actions menu options](/operator/assets/cloudlet-pool-actions-menu.png "Cloudlet Pools: Actions menu options")
 
 Once Developers are part of your Cloudlet Pool, you may view Developer metrics. For more information, refer to the [Monitoring and Metrics Guide](https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/).
 

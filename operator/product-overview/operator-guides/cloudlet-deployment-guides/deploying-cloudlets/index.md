@@ -39,21 +39,21 @@ Some things to note about trust policies:
 - On the left-hand navigation, select **Policies**. Then, from the dropdown menu, select **Trust Policy**. The Trust Policy menu opens.
 
 
-![](/assets/trust.png "")
+![](/operator/assets/trust.png "")
 
 
 - On the Trust Policy screen, select the plus icon in the top right. This will open the Create Trust Policy menu.
 
 
-![](/assets/trustpolicymenu.png "")
+![](/operator/assets/trustpolicymenu.png "")
 
 
 - Toggle the Full Isolation mode to disable it. The **Outbound Security Rules** section appears. If you want to block all ports, you must enable Full Isolation mode.
 
 
-![Create Trust Policy](/assets/trust-policy/create-trust-policy.png "Create Trust Policy")
+![Create Trust Policy](/operator/assets/trust-policy/create-trust-policy.png "Create Trust Policy")
 
-![Outbound Security Rules](/assets/trust-policy/outbound-security.png "Outbound Security Rules")
+![Outbound Security Rules](/operator/assets/trust-policy/outbound-security.png "Outbound Security Rules")
 
 
 - Set up your Outbound Security Rules and click **Create Policy**.
@@ -84,7 +84,7 @@ In Direct access, API Access to the Operator Infra endpoint (eg: Openstack/vCD a
 </li>
 
 
-![Create Cloud screen](/assets/operator-ui-guide/create-cloudlet.png "Create Cloud screen")
+![Create Cloud screen](/operator/assets/operator-ui-guide/create-cloudlet.png "Create Cloud screen")
 
 
 - For *Region*, select a region from the drop-down list to deploy the cloudlet.
@@ -177,11 +177,11 @@ Once the cloudlet is available, the state will change to **Online.**
 
 You’re done! The deployed cloudlet can now be viewed from the Cloudlets page.
 
-![Cloudlets screen](/assets/operator-ui-guide/cloudlets-page.png "Cloudlets screen")
+![Cloudlets screen](/operator/assets/operator-ui-guide/cloudlets-page.png "Cloudlets screen")
 
 If you wish to add resource management after you have created the cloudlet, you can go back and update your cloudlet to add the resources.
 
-![Resource Quota](/assets/Screenshot-2021-04-26-at-8.54.33-PM-1621809027.png "Resource Quota")
+![Resource Quota](/operator/assets/Screenshot-2021-04-26-at-8.54.33-PM-1621809027.png "Resource Quota")
 
 ### Restricted access:
 
@@ -194,7 +194,7 @@ If you wish to add resource management after you have created the cloudlet, you 
 - Click the **+** sign on the upper top right-hand corner to open the Create Cloudlet page.
 
 
-![Create Cloudlet-Restricted Access](/assets/operator-ui-guide/create-cloudlet-restricted.png "Create Cloudlet-Restricted Access")
+![Create Cloudlet-Restricted Access](/operator/assets/operator-ui-guide/create-cloudlet-restricted.png "Create Cloudlet-Restricted Access")
 
 
 - For *Region*, select a region from the drop-down list to deploy the cloudlet.
@@ -282,7 +282,7 @@ qnHyIvj9XNpuGgMvDgq357kZQS9e5XVH5icSvW1kr2kX2f1t
 - Once all the required fields are populated, click **Create** option, and then a popup screen will appear instructing the user to wait and download the cloudlet manifest template (usually a heat template for Openstack)  and bringup the cloudlet services using this template in the remote infrastructure. MobiledgeX console keeps showing the created cloudlet status as "Not Present" until the user brings up the cloudlet in his infrastructure via a template.
 
 
-![Progress bar](/assets/operator-ui-guide/progress-bar-1601588798.png "Progress bar")
+![Progress bar](/operator/assets/operator-ui-guide/progress-bar-1601588798.png "Progress bar")
 
 
 - Once the cloudlet creation step is completed in the MobiledgeX console, click the **Show Manifest** option from the Actions menu to bring up the Cloudlet Manifest file which will have pending restricted onboarding steps and also option to download the Cloudlet Manifest file which user need to run on on his IaaS infrastructure. Follow the below-mentioned steps to set up the cloudlet in restricted mode.
@@ -294,13 +294,13 @@ qnHyIvj9XNpuGgMvDgq357kZQS9e5XVH5icSvW1kr2kX2f1t
 </li>
 
 
-![Example: Cloudlet Manifest file](/assets/operator-ui-guide/manifest-1616985857.png "Example: Cloudlet Manifest file")
+![Example: Cloudlet Manifest file](/operator/assets/operator-ui-guide/manifest-1616985857.png "Example: Cloudlet Manifest file")
 
 
 - In the case of the Openstack IaaS infrastructure, execute the downloaded Cloudlet Manifest file a.k.a HEAT stack template via OpenStack stack create command, and wait for the MobiledgeX bootstrap Platform VM to appear in your infrastructure. Once created, the Platform VM which will have an IP address to egress to the internet will automatically complete the cloudlet on-boarding.
 
 
-![Example: Heat Stack Template](/assets/operator-ui-guide/heat-stack.png "Example: Heat Stack Template")
+![Example: Heat Stack Template](/operator/assets/operator-ui-guide/heat-stack.png "Example: Heat Stack Template")
 
 
 - Click the **Progress** indicator in the MobiledgeX console to view the updated state as the cloudlet is being deployed. Refreshing may to 15 minutes to complete.
@@ -311,5 +311,5 @@ Once the cloudlet is available, the state will change to **Online.**
 
 You’re done! The deployed cloudlet can now be viewed from the Cloudlets page. The example screenshot shows both online and offline cloudlets.
 
-![Cloudlets screen](/assets/cloudlet-1635517033.png "Cloudlets screen")
+![Cloudlets screen](/operator/assets/cloudlet-1635517033.png "Cloudlets screen")
 

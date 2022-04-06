@@ -11,5 +11,5 @@ In the VMPool deployment model, cloudlet and app work loads are deployed to the 
 
 VMPool deployment supports only cloud-native containerized workloads like Docker and Kubernetes deployments. Virtual Machine Provisioning deployment is not supported.
 
-![](/assets/cloudlet-deployment-operator/scenario1a-RA.png "")
+![](/operator/assets/cloudlet-deployment-operator/scenario1a-RA.png "")
 

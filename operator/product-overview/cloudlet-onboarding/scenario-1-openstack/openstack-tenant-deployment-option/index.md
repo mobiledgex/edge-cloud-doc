@@ -9,7 +9,7 @@ description: Supported OpenStack Tenant Deployment
 
 In this model, the operator supplies an OpenStack Tenant account within their existing OpenStack Infrastructure (for eg: VMware VIO, Redhat RHOSP or Cisco VIM) to MobiledgeX with configured UE Wireless and External Internet Provider networks. With this model, the operator manages the OpenStack IaaS stack, flavors, and its associated external networking. MobiledgeX is provided access to the OpenStack endpoint, with granted permissions to create the VMs and networks in the assigned OpenStack tenant. Once the OpenStack tenant Networking design is finalized, either MobiledgeX or operator itself via MobiledgeX console onboards the cloudlets. MobiledgeX will maintain the cloudlets and support the rest of the Edge operations.
 
-![](/assets/cloudlet-deployment-operator/scenario2a-RA.png "")
+![](/operator/assets/cloudlet-deployment-operator/scenario2a-RA.png "")
 
 ## Scope and Constraints
 

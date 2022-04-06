@@ -17,17 +17,17 @@ Please note that cloudlets should be in the maintenance state before the actual 
 
 **Step 2:** Click on **Actions** tab of the Operator Cloudlet you plan to set the maintenance state and select the **Update** cloudlet option.
 
-![](/assets/updatecloudlet.png "")
+![](/operator/assets/updatecloudlet.png "")
 
 **Step 3:** Under **Advanced Settings** section of Update Cloudlet, select the **Maintenance Start** option for the **Maintenance State** field (**No failover** option can be selected if Cloudlet AutoProvisioning failover to a different cloudlet of the same Operator is not planned for redundancy).
 
-![](/assets/operational-readiness/2.png "")
+![](/operator/assets/operational-readiness/2.png "")
 
 **Step 4:** Select the **Update** tab which will automatically put Cloudlet in maintenance state.
 
-![](/assets/operational-readiness/3.png "")
+![](/operator/assets/operational-readiness/3.png "")
 
-![](/assets/maintenance.png "")
+![](/operator/assets/maintenance.png "")
 
 ## To Restore Normal Operation of Cloudlet from Maintenance Mode:
 
@@ -35,15 +35,15 @@ Please note that cloudlets should be in the maintenance state before the actual 
 
 **Step 2:** Select the **Actions** tab of the Operator Cloudlet which is already in the maintenance state and select the **Update** Cloudlet option.
 
-![](/assets/actionsupdate.png "")
+![](/operator/assets/actionsupdate.png "")
 
 **Step 3:** In **Advanced Settings** section of **Update Cloudlet,** select the **Normal Operation** option for **Maintenance State** field.
 
-![](/assets/operational-readiness/5.png "")
+![](/operator/assets/operational-readiness/5.png "")
 
 **Step 4:** Select the **Update** tab which will automatically put the Cloudlet back to normal operation and will be available online from the maintenance state.
 
-![](/assets/operational-readiness/6.png "")
+![](/operator/assets/operational-readiness/6.png "")
 
-![](/assets/updatedcloudlet-1635786864.png "")
+![](/operator/assets/updatedcloudlet-1635786864.png "")
 

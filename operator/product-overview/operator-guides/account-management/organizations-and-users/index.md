@@ -23,17 +23,17 @@ After logging onto the [Edge-Cloud Console](https://console.mobiledgex.net/), t
 
 Step 1: From the Organizations screen, select the arrow corresponding to **Create Organization to Host Telco Edge**.
 
-![Create Organization](/assets/operator-ui-guide/add-organization.png "Create Organization")
+![Create Organization](/operator/assets/operator-ui-guide/add-organization.png "Create Organization")
 
 The Create Organization page opens.
 
-![Create Organization screen](/assets/operator-ui-guide/create-organization.png "Create Organization screen")
+![Create Organization screen](/operator/assets/operator-ui-guide/create-organization.png "Create Organization screen")
 
 Step 2: For **Organization Name**, type in the name of your organization. Observe the naming convention rules as mentioned earlier.
 
 Step 3: Type in an address and phone number, and select **Create**. The Step 2 Add User page opens.
 
-![Add User](/assets/operator-ui-guide/add-user.png "Add User")
+![Add User](/operator/assets/operator-ui-guide/add-user.png "Add User")
 
 Step 4: You can start adding your users and assigning them roles, or skip this step and return to it later.
 
@@ -43,19 +43,19 @@ Step 5: Select **Add User**.
 
 Step 6: To confirm that your user(s) was added, select Users &amp; Roles on the left-navigation.
 
-![Users &amp; Roles screen](/assets/operator-ui-guide/users-roles.png "Users &amp; Roles screen")
+![Users &amp; Roles screen](/operator/assets/operator-ui-guide/users-roles.png "Users &amp; Roles screen")
 
 Although your organization is listed, it’s currently not managed. Select the **Manage** button associated with the organization you would like to manage. Remember to perform this step each time you log into the [Edge-Cloud Console](https://console.mobiledgex.net/). Selecting **Manage** for your organization ensures you are working within the correct organization. Additionally, selecting **Manage** displays all the available submenus on the left navigation pane. However, to expand or collapse the submenus, select the icon as shown in the image below.
 
 Next to the **Manage** button is an Actions menu where you can perform such tasks such as **Audit**, **Add User**, **Update** and **Delete** your organization.
 
-![Manage your organization](/assets/operator-ui-guide/manage-organization.png "Manage your organization")
+![Manage your organization](/operator/assets/operator-ui-guide/manage-organization.png "Manage your organization")
 
 ### Disabling Edgebox
 
 As mentioned earlier, organization members will not be able to create cloudlets until you contact MobiledgeX Admin. Currently, the UI provides a **Disable Edgebox** option which will require a MobiledgeX Admin to manually disable. Once that is complete, members of your organizations will be able to create cloudlets.
 
-![Disabling Edgebox](/assets/edge-box-1618416562.png "Disabling Edgebox")
+![Disabling Edgebox](/operator/assets/edge-box-1618416562.png "Disabling Edgebox")
 
 ### Users and roles
 
@@ -66,7 +66,7 @@ The following actions may be performed on this page, depending on you role withi
 - In the Search bar, type in the first few letters of your search to filter your search.
 - From the Actions menu, select the **Actions** icon and select **Delete** from the dropdown to delete the user.
 
-![Users &amp; Roles screen](/assets/users-roles.png "Users &amp; Roles screen")
+![Users &amp; Roles screen](/operator/assets/users-roles.png "Users &amp; Roles screen")
 
 ### Assign role-based access control (RBAC)
 

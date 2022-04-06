@@ -13,7 +13,7 @@ First, create an account, if you haven’t already done so. All users must have 
 
 **Step 1:** From the [Edge-Cloud Console](https://console.mobiledgex.net/#/), select **Register**. A Create New Account screen opens.
 
-![Create New Account screen](/assets/operator-ui-guide/create-new-account.png "Create New Account screen")
+![Create New Account screen](/operator/assets/operator-ui-guide/create-new-account.png "Create New Account screen")
 
 **Step 2:** Provide your credentials. Here are some guidelines:
 
@@ -22,7 +22,7 @@ First, create an account, if you haven’t already done so. All users must have 
 
 You may optionally select **Generate** to have the system generate a password for you. We suggest managing your password securely or using a password management tool like [LastPass](https://www.lastpass.com/) to safely store your password.
 
-![Password guidelines](/assets/operator-ui-guide/passwd-guide1.png "Password guidelines")
+![Password guidelines](/operator/assets/operator-ui-guide/passwd-guide1.png "Password guidelines")
 
 **Step 3:** Provide a valid email address to associate to this account. Use this email address later to access a link and verify your account.
 
@@ -43,7 +43,7 @@ You can optionally set up two-factor authentication for your account. If you wan
 
 **Step 2:** Select **SIGN UP**. The barcode screen opens.
 
-![Scan barcode screen](/assets/operator-ui-guide/scan-bar-code.png "Scan barcode screen")
+![Scan barcode screen](/operator/assets/operator-ui-guide/scan-bar-code.png "Scan barcode screen")
 
 **Note:** If you do not have an authentication app on your phone, select **enter this text code instead** to manually enter a code.
 
@@ -51,7 +51,7 @@ You can optionally set up two-factor authentication for your account. If you wan
 
 **Step 4:** Select **Done**. You will see a message on the screen that look like the following example:
 
-![Welcome screen](/assets/operator-ui-guide/welcome.png "Welcome screen")
+![Welcome screen](/operator/assets/operator-ui-guide/welcome.png "Welcome screen")
 
 **Step 5:** Continue to follow the instructions to verify your email. You will see a **Sign in** screen after your email is validated.
 
@@ -59,7 +59,7 @@ You can optionally set up two-factor authentication for your account. If you wan
 
 **Step 7:** You will see the One-Time Passcode (OTP) screen. You can either retrieve the OTP from the authenticator app or from your email used to register the account. Note that your OTP expires after 2 minutes of receiving it. If you need to generate another OTP, select **Login** in the right-hand corner of the console.
 
-![One-Time Passcode screen](/assets/operator-ui-guide/otp-screen.png "One-Time Passcode screen")
+![One-Time Passcode screen](/operator/assets/operator-ui-guide/otp-screen.png "One-Time Passcode screen")
 
 **Step 8:** Enter the OTP, and click **Validate OTP**. You are now logged on to the Console.
 

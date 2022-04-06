@@ -11,7 +11,7 @@ This document describes MobiledgeX’s approach to security standards and guidel
 
 MobiledgeX’s platform aggregates edge infrastructure across operator network locations through one standard interface that application developers can use to design, deploy, and manage their applications. As MobiledgeX’s platform operates across operator infrastructure, security responsibilities become shared between MobiledgeX and the operators. Operators are responsible for securing the underlying infrastructure/IaaS layer. At the same time, MobiledgeX’s Platform Layer is responsible for security as a Tenant inside the operator’s Network. MobiledgeX’s Service Layer operates on a global level within the Public Cloud and is responsible for securing MobiledgeX’s OperatorUsers. The diagram below illustrates the shared responsibilities and various layers, as described.
 
-![MobiledgeX shared security responsibility model](/assets/security-standards-policies/shared-model.png "MobiledgeX shared security responsibility model")
+![MobiledgeX shared security responsibility model](/operator/assets/security-standards-policies/shared-model.png "MobiledgeX shared security responsibility model")
 
 ### MobiledgeX security responsibilities
 

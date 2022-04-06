@@ -48,7 +48,7 @@ Watch this instructional video:
 - Once you see the Cloudlet is up at the Terminal prompt, the cloudlet is now running on your laptop.
 
 
-![Cloudlet status in terminal](/assets/edgebox/cloudlet-up.png "Cloudlet status in terminal")
+![Cloudlet status in terminal](/operator/assets/edgebox/cloudlet-up.png "Cloudlet status in terminal")
 
 #### EdgeBox commands
 
@@ -87,7 +87,7 @@ The following commands are available:
 - Scroll over to the region where you created your cloudlet and verify that it exists in the map view.
 
 
-![Example deployed cloudlets](/assets/examplecloudlets.png "Example deployed cloudlets")
+![Example deployed cloudlets](/operator/assets/examplecloudlets.png "Example deployed cloudlets")
 
 ### Step 4. Create an application to deploy onto the cloudlet
 
@@ -96,11 +96,11 @@ The following commands are available:
 - Select the right arrow for Developers, as shown below.
 
 
-![Create developer organization](/assets/edgebox/create-devorg-edgebox.png "Create developer organization")
+![Create developer organization](/operator/assets/edgebox/create-devorg-edgebox.png "Create developer organization")
 
 The Create Organization screen opens.
 
-![Create organization screen](/assets/edgebox/create-org-edgebox.png "Create organization screen")
+![Create organization screen](/operator/assets/edgebox/create-org-edgebox.png "Create organization screen")
 
 
 - Populate all required fields, name your Developer Organization as *edgeusertest*, and select **Create**.
@@ -159,14 +159,14 @@ Follow the steps below to add your Developer Organization to your cloudlet.
 - Select **Create. ** You will see Progress status appear, showing the process of spinning up the application instance while it runs through the process of setting up a cluster and the docker container.
 
 
-![Progress bar](/assets/edgebox/progress-edgebox.png "Progress bar")
+![Progress bar](/operator/assets/edgebox/progress-edgebox.png "Progress bar")
 
 
 - Navigate to the App Instances menu on the left navigation to open the  Apps Instance page. You should see the application instance being monitored by the MobiledgeX platform.
 - Select the App Instance, and the following page appears.
 
 
-![App instance URI](/assets/edgebox/app-inst-uri-edgebox.png "App instance URI")
+![App instance URI](/operator/assets/edgebox/app-inst-uri-edgebox.png "App instance URI")
 
 
 - Scroll down the page until you see **URI** and copy and paste the URI address into a browser using port `8008`.
