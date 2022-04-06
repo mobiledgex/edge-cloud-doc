@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='https://api.mobiledgex.net/mc/'" />
+
+        <title>Redirecting to https://api.mobiledgex.net/mc/</title>
+    </head>
+    <body>
+        Redirecting to [https://api.mobiledgex.net/mc/](https://api.mobiledgex.net/mc/).
+    </body>
+
+</html>
