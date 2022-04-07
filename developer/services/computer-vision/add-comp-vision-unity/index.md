@@ -9,7 +9,7 @@ Learn how to add the MobiledgeX OpenCV Computer Vision library to your Unity Pro
 
 **Last Modified:** 11/24/21
 
-This guide describes how to add the MobiledgeX OpenCV Computer Vision library to your Unity Project. For the latest application credentials to use the Computer Vision library deployed to MobiledgeX, please refer to [Step 3](https://developers.mobiledgex.com/services/computer-vision/add-comp-vision-unity/#step-3-add-applications-credentials) below.
+This guide describes how to add the MobiledgeX OpenCV Computer Vision library to your Unity Project. For the latest application credentials to use the Computer Vision library deployed to MobiledgeX, please refer to [Step 3](/developer/services/computer-vision/add-comp-vision-unity/index.md) below.
 <div class="embed-responsive embed-responsive-16by9">
 <!-- Youtube and Video -->
 <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/WdcnHoE9B0k" ...>
@@ -34,7 +34,7 @@ This guide describes how to add the MobiledgeX OpenCV Computer Vision library to
 - Copy and paste this URL: `https://github.com/mobiledgex/edge-cloud-sdk-unity.git` Now, your MobiledgeX SDK is added to your Project packages.
 
 
-If you have a Unity version older than **2019.3**, please check [our Unity SDK doc](https://developers.mobiledgex.com/sdks/unity-sdk/unity-sdk-download#20192x) for installation steps. We also recommended that you upgrade your Unity version.
+If you have a Unity version older than **2019.3**, please check [our Unity SDK doc](/developer/sdks/unity-sdk/unity-sdk-download#20192x/index.md) for installation steps. We also recommended that you upgrade your Unity version.
 
 ## Step 2: Import **ComputerVision** to your Unity Project
 

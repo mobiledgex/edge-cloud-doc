@@ -25,7 +25,7 @@ Below, we will provide two approaches that you can take to run the server.
 
 Have questions or suggestions to make this solution even better? [Join the MobiledgeX Community Discord!](https://discord.gg/VZPu6AvSp5)
 
-<h2 id="option-1">Option 1 : Using Docker to Run Edge Multiplay
+## Option 1 : Using Docker to Run Edge Multiplay
 
 ### Prerequisites
 
@@ -34,8 +34,8 @@ Have questions or suggestions to make this solution even better? [Join the Mobil
 
 ### 1. Download the EdgeMultiplay Server Source Code
 
-<pre>
-<code class="language-bash">git clone https://github.com/mobiledgex/edge-multiplay-node-server
+```
+git clone https://github.com/mobiledgex/edge-multiplay-node-server
 cd edge-multiplay-node-server
 
 ```
@@ -44,7 +44,7 @@ cd edge-multiplay-node-server
 
 `docker image build -t edgemultiplay:1.0 .`
 
-If you are interested in learning more about what this command does, please refer to our [Hello World guide](/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image#step-2-creating-your-first-docker-image).
+If you are interested in learning more about what this command does, please refer to our [Hello World guide](/developer/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image#step-2-creating-your-first-docker-image/index.md).
 
 ### 3. Run the Edge Multiplay Container
 
@@ -52,14 +52,10 @@ If you are interested in learning more about what this command does, please refe
 
 You should now have a sucessfully running Docker container for Edge Multiplay.
 
-<figure class="third">
-  <img src="/developer/assets/edgemultiplay/EdgeMultiplay-Docker.png" class="img-fluid slb" alt="Edge Multiplay Running on docker container hosted locally">
-  <figcaption>Edge Multiplay Running on docker container hosted locally</figcaption>
-
-</figure>
+![Edge Multiplay Running on docker container hosted locally](/developer/assets/edgemultiplay/EdgeMultiplay-Docker.png "Edge Multiplay Running on docker container hosted locally")
 
 With that running, head to the **Unity section below** on how to use the SDK to connect to your local server.
-<h2 id="option-2">Option 2 : Using NodeJS to Run Edge Multiplay
+## Option 2 : Using NodeJS to Run Edge Multiplay
 
 ### Prerequisites
 
@@ -68,8 +64,8 @@ With that running, head to the **Unity section below** on how to use the SDK to 
 
 ### 1. Download the EdgeMultiplay Server Source Code
 
-<pre>
-<code class="language-bash">git clone https://github.com/mobiledgex/edge-multiplay-node-server
+```
+git clone https://github.com/mobiledgex/edge-multiplay-node-server
 cd edge-multiplay-node-server
 
 ```
@@ -84,11 +80,7 @@ cd edge-multiplay-node-server
 
 Now the server is running on your local host
 
-<figure class="third">
-  <img src="/developer/assets/edgemultiplay/localhost_server_running.png" class="img-fluid slb" alt="Edge Multiplay Running locally using node">
-  <figcaption>Edge Multiplay Running locally using node</figcaption>
-
-</figure>
+![Edge Multiplay Running locally using node](/developer/assets/edgemultiplay/localhost_server_running.png "Edge Multiplay Running locally using node")
 
 With that running, head to the **Unity section below** on how to use the SDK to connect to your local server.
 
@@ -96,13 +88,5 @@ With that running, head to the **Unity section below** on how to use the SDK to 
 
 In Unity, on the EdgeManager component. Check useLocalHostServer and add your local host address (127.0.0.1)
 
-<figure class="third">
-  <img src="/developer/assets/edgemultiplay/localhost.png" class="img-fluid slb" alt="Edge Manager Local Host Settings">
-  <figcaption>Edge Manager Local Host Settings</figcaption>
-
-</figure>
-
-## Where to Go From Here
-
-If you are interested in deploying this server on MobiledgeX, please contact us either on [Discord](https://discord.gg/VZPu6AvSp5) or set a time to chat on our [Getting Started page](/getting-started).
+![Edge Manager Local Host Settings](/developer/assets/edgemultiplay/localhost.png "Edge Manager Local Host Settings")
 

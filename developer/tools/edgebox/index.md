@@ -61,11 +61,7 @@ g. **Latitude and Longitude:** Provide one for your cloudlet, or use the default
 
 Once you see **Cloudlet is up** at the Terminal prompt, the cloudlet is now running on your laptop.
 
-<figure class="half">
-  <img src="/developer/assets/developer-ui-guide/cloudlet-up.png" class="img-fluid slb" alt="Cloudlet status in Terminal">
-  <figcaption>Cloudlet status in Terminal</figcaption>
-
-</figure>
+![Cloudlet status in Terminal](/developer/assets/developer-ui-guide/cloudlet-up.png "Cloudlet status in Terminal")
 
 ### EdgeBox Commands
 
@@ -97,11 +93,7 @@ positional arguments:
 - In the map view, scroll over to the region where you created your cloudlet and verify that it exists.
 
 
-<figure class="half">
-  <img src="/developer/assets/developer-ui-guide/verify-cloudlet-edgebox.png" class="img-fluid slb" alt="Verifying Cloudlet">
-  <figcaption>Verifying Cloudlet</figcaption>
-
-</figure>
+![Verifying Cloudlet](/developer/assets/developer-ui-guide/verify-cloudlet-edgebox.png "Verifying Cloudlet")
 
 ## Step 4 Create an Application to Deploy onto the Cloudlet
 
@@ -110,19 +102,11 @@ positional arguments:
 - Click the right arrow for Developers, as shown below.
 
 
-<figure class="half">
-  <img src="/developer/assets/developer-ui-guide/create-devorg-edgebox.png" class="img-fluid slb" alt="Create Developer Organization">
-  <figcaption>Create Developer Organization</figcaption>
-
-</figure>
+![Create Developer Organization](/developer/assets/developer-ui-guide/create-devorg-edgebox.png "Create Developer Organization")
 
 The Create Organization screen opens.
 
-<figure class="half">
-  <img src="/developer/assets/developer-ui-guide/create-org-edgebox.png" class="img-fluid slb" alt="Create Organization screen">
-  <figcaption>Create Organization screen</figcaption>
-
-</figure>
+![Create Organization screen](/developer/assets/developer-ui-guide/create-org-edgebox.png "Create Organization screen")
 
 
 - Populate all required fields, name your **Developer Organization**, and click **Create**.
@@ -172,33 +156,21 @@ c. **Auto Cluster Instance:** Enable this option.
 - Click **Create**.  You will see **Progress** status appear showing the process of spinning up the application instance while it runs through the process of setting up a cluster as well as the docker container.
 
 
-<figure class="half">
-  <img src="/developer/assets/developer-ui-guide/progress-edgebox.png" class="img-fluid slb" alt="Progress Bar">
-  <figcaption>Progress Bar</figcaption>
-
-</figure>
+![Progress Bar](/developer/assets/developer-ui-guide/progress-edgebox.png "Progress Bar")
 
 
 - Navigate to the App Instances menu on the left navigation to open the  Apps Instance page. You should see the application instance being monitored by the MobiledgeX Platform.
 - Click on the App Instance and the following page appears.
 
 
-<figure class="half">
-  <img src="/developer/assets/developer-ui-guide/app-inst-uri-edgebox.png" class="img-fluid slb" alt="App Instances URI">
-  <figcaption>App Instances URI</figcaption>
-
-</figure>
+![App Instances URI](/developer/assets/developer-ui-guide/app-inst-uri-edgebox.png "App Instances URI")
 
 
 - Scroll down the page until you see **URI**, then copy and paste the URI address into a browser using port `8008`.
 - You should see the **Computer Vision Face Detection** application working.
 
 
-<figure class="half">
-  <img src="/developer/assets/developer-ui-guide/comp-vision-app-edgebox.png" class="img-fluid slb" alt="Computer Vision Face Detection">
-  <figcaption>Computer Vision Face Detection</figcaption>
-
-</figure>
+![Computer Vision Face Detection](/developer/assets/developer-ui-guide/comp-vision-app-edgebox.png "Computer Vision Face Detection")
 
 Since this Docker instance is running locally, you can switch to a `localhost:8008`, where you can set up a pseudo HTTPS connection and use the webcam to run face detection.
 

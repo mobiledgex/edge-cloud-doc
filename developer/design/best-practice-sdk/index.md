@@ -7,7 +7,7 @@ Learn the best practices for utilizing the MobiledgeX Client SDKs for Android, i
 
 ---
 
-In this guide, the best practices for utilizing MobiledgeX’s SDKs are explained. Before reading this guide, it is recommended that you read [Connecting Client Application to Deployed Cloudlets](/sdks/overview), which details how to use our SDKs and APIs. Specifically, this guide will cover:
+In this guide, the best practices for utilizing MobiledgeX’s SDKs are explained. Before reading this guide, it is recommended that you read [Connecting Client Application to Deployed Cloudlets](/developer/sdks/overview/index.md), which details how to use our SDKs and APIs. Specifically, this guide will cover:
 
 - When and how often `FindCloudlet` should be used within your application’s deployment
 - When should your application use `VerifyLocation`
@@ -41,7 +41,7 @@ As part of each SDK, the `FindCloudlet` function has an optional parameter, `Fin
 
 However, **Proximity** mode is unable to verify if the application instance has the lowest possible latency within available application instances. To resolve this, our SDK offers the second option-**Performance** mode. In **Performance** mode, instead of calling the `FindCloudlet` REST API, the SDK calls `GetAppInstList` and receives a list of all the application instances that are deployed for your application. Next, the SDK measures latency by using the `PerformanceMetrics` API and designates the application instance with the lowest latency. Please note that **Performance** mode may take some additional time to determine which application instance has the lowest latency. Depending on your application’s requirements, having a low latency may be a prerequisite. If this is the case, **Performance** mode is recommended.
 
-If you would like to learn how to implement Performance mode for a language specific SDK, please refer to our [SDK manuals](/apis).
+If you would like to learn how to implement Performance mode for a language specific SDK, please refer to our [SDK manuals](/developer/apis/index.md).
 
 ## Performance Metrics  
 
@@ -53,7 +53,7 @@ It is recommended to establish the **NetTest** class on a separate thread. Setti
 
 ## WiFi Use Case  
 
-[Connecting Client Applications to Deployed Cloudlets](/sdks/overview) explains how the SDK uses the **MCC-MNC** from your device’s cellular connection to select the DME for your client application. However, when your device cannot establish a cellular connection, your device will be unable to determine an **MCC-MNC**. In this instance, the SDK will opt to connect to the WIFI DME: `https://wifi.dme.mobiledgex.net:38001`.
+[Connecting Client Applications to Deployed Cloudlets](/developer/sdks/overview/index.md) explains how the SDK uses the **MCC-MNC** from your device’s cellular connection to select the DME for your client application. However, when your device cannot establish a cellular connection, your device will be unable to determine an **MCC-MNC**. In this instance, the SDK will opt to connect to the WIFI DME: `https://wifi.dme.mobiledgex.net:38001`.
 
 WIFI DME is an auxiliary connection option. WIFI DME ensures a device can connect to the nearest app instance when a cellular connection cannot be established. In this case, the WIFI DME requests are implemented through a process called [NS1 lookup](https://ns1.com/resources/how-geographic-routing-works). The [NS1 lookup](https://ns1.com/resources/how-geographic-routing-works) process will route WIFI DME requests to the closest regional DME.
 

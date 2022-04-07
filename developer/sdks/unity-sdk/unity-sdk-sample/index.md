@@ -9,7 +9,7 @@ Learn the potential benefits for low latency in a real-time application on an ed
 
 **Last Modified:** 7/15/2021
 
-The MobiledgeX Ping Pong application demonstrates how to integrate the MobiledgeX SDK as well as Edge Multiplay service into a Unity game or app. For this specific guide, we will be focusing on the MobiledgeX Unity SDK Integration. Please refer to the [Edge Multiplay Service](/services/unity-edgemultiplay) guides if you are interested in integrating Edge Multiplay into your Unity multiplayer games.
+The MobiledgeX Ping Pong application demonstrates how to integrate the MobiledgeX SDK as well as Edge Multiplay service into a Unity game or app. For this specific guide, we will be focusing on the MobiledgeX Unity SDK Integration. Please refer to the [Edge Multiplay Service](/developer/services/unity-edgemultiplay/index.md) guides if you are interested in integrating Edge Multiplay into your Unity multiplayer games.
 
 ## Prerequisites
 
@@ -69,7 +69,7 @@ If you see the following text, you have successfully connected to an instance of
 
 ## MobiledgeX SDK Integration
 
-For the rest of this guide, we will be breaking down how Edge Multiplay integrates with the MobiledgeX Unity SDK and highlighting the key areas of the code base to understand how the SDK works. We will show how to use the MobiledgeX Distributed Matching Engine APIs to register the user and find the optimal edge data center (cloudlet) running the app. To learn more about the workflow, you may refer to the [SDK Technical Overview Documentation](/sdks/tech-overview).
+For the rest of this guide, we will be breaking down how Edge Multiplay integrates with the MobiledgeX Unity SDK and highlighting the key areas of the code base to understand how the SDK works. We will show how to use the MobiledgeX Distributed Matching Engine APIs to register the user and find the optimal edge data center (cloudlet) running the app. To learn more about the workflow, you may refer to the [SDK Technical Overview Documentation](/developer/sdks/tech-overview/index.md).
 
 We will be showing the implementation for the following:
 
@@ -118,7 +118,7 @@ The `useFallbackLocation` paramter similarly specifies a default location to use
 
 The next integration method that is used is `integration.RegisterAndFindCloudlet()`. This function combines both APIs mentioned above into a single function that will need to be called. Because this is a network call to the MobiledgeX APIs, it takes some time before an answer is returned and this is required to be made asynchronously.
 
-If desired, you may call Register Client and Find Cloudlet separately. Find Cloudlet is particularly relevant to call multiple times in your application lifetime since users might move to a different location that is closer to a different cloudlet. Knowing when to call Find Cloudlet can be determined using [Edge Events](/sdks/edge-events-overview).
+If desired, you may call Register Client and Find Cloudlet separately. Find Cloudlet is particularly relevant to call multiple times in your application lifetime since users might move to a different location that is closer to a different cloudlet. Knowing when to call Find Cloudlet can be determined using [Edge Events](/developer/sdks/edge-events-overview/index.md).
 
 ```
 await integration.RegisterClient(); //registers the device with the MobiledgeX APIs based on the Setup
@@ -132,7 +132,7 @@ await integration.FindCloudlet(); //finds the closests application instance
 
 If `RegisterAndFindCloudlet` is successful, MobiledgeXIntegration will have stored FindCloudletReply, which contains information about your backend server: *Full Qualified Domain Name*, *Port Mappings*, etc.
 
-Depending on how you configured your application, you may now have all the information you need to access your application. However if you used a [Shared Load Balancer](/design/load-balancing) for your application, it is possible that the ports may have been mapped differently than what you may have assigned when creating your application. As such, it is generally recommended to call the `GetAppPort` function to determine what your port has been mapped to.
+Depending on how you configured your application, you may now have all the information you need to access your application. However if you used a [Shared Load Balancer](/developer/design/load-balancing/index.md) for your application, it is possible that the ports may have been mapped differently than what you may have assigned when creating your application. As such, it is generally recommended to call the `GetAppPort` function to determine what your port has been mapped to.
 
 **Note:** Edge Mulitplay only has one TCP port exposed, so we did not specify a port number since `GetAppPort` grabs the first AppPort it finds. If you have multiple ports, you must specify the port number and protocol specific to the connection you want. This allows you to create as many connections as needed.
 

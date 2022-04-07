@@ -11,7 +11,7 @@ Ready, set, deploy!
 
 The App Instances page is where you provision your application and deploy it to a cloudlet. This step is called application provisioning. This page displays information such as the current applications running on the platform and their location. MobiledgeX allows you to deploy your applications to multiple cloudlets within the same region.
 
-You also have the option to create an auto-provision policy, where based on the information you provide, MobiledgeX can automatically deploy your app instance for you and locate the most optimal cloudlet(s). Once you create your auto-provision policy, you must specify the policy during the application definition process within the Apps page. For steps on how to set up your auto-provision policy, see the section [To create an auto-provision policy](https://developers.mobiledgex.com/deployments/application-runtime/auto-prov#create).
+You also have the option to create an auto-provision policy, where based on the information you provide, MobiledgeX can automatically deploy your app instance for you and locate the most optimal cloudlet(s). Once you create your auto-provision policy, you must specify the policy during the application definition process within the Apps page. For steps on how to set up your auto-provision policy, see the section [To create an auto-provision policy](/developer/deployments/application-runtime/auto-prov#create/index.md).
 
 The following actions may be performed on this page using the top taskbar:
 
@@ -34,7 +34,7 @@ The icons listed along your app instances table will allow you to perform severa
 
 ## Understanding MobiledgeX Reservable Cluster Instances
 
-MobiledgeX will pre-allocate a set of cluster instances on each cloudlet for app instances that use [auto-provisioning](https://developers.mobiledgex.com/deployments/application-runtime/auto-prov#auto-provisioning-policy). With this feature, apps are automatically matched up with the appropriate reservable cluster instance resource requirements. When creating an app instance, and the cluster name is prefixed with "AutoCluster", the system will dynamically create and select a free reservable cluster instance for you to use. Once the app instance is removed or deleted from the reservable autocluster, other app instances are free to use it.
+MobiledgeX will pre-allocate a set of cluster instances on each cloudlet for app instances that use [auto-provisioning](/developer/deployments/application-runtime/auto-prov#auto-provisioning-policy/index.md). With this feature, apps are automatically matched up with the appropriate reservable cluster instance resource requirements. When creating an app instance, and the cluster name is prefixed with "AutoCluster", the system will dynamically create and select a free reservable cluster instance for you to use. Once the app instance is removed or deleted from the reservable autocluster, other app instances are free to use it.
 
 ## Provision Your Application
 

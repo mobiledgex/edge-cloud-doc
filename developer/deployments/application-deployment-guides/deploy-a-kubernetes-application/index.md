@@ -9,7 +9,7 @@ This guide will show developers how to deploy a k8s.yaml file onto the Mobiledge
 
 **Last Modified:** 11/18/2021
 
-This guide will  show you how to create and deploy an app onto the MobiledgeX platform using a Kubernetes (k8s) application. This guide will utilize an example Docker Image previously shown in the [Create and Upload Your First Docker Image to MobiledgeX](https://developers.mobiledgex.com/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image/) page as we go step by step. If you have your own Kubernetes application, you can manually enter the relevant information throughout this tutorial.
+This guide will  show you how to create and deploy an app onto the MobiledgeX platform using a Kubernetes (k8s) application. This guide will utilize an example Docker Image previously shown in the [Create and Upload Your First Docker Image to MobiledgeX](/developer/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image/index.md) page as we go step by step. If you have your own Kubernetes application, you can manually enter the relevant information throughout this tutorial.
 
 Before continuing, make sure you have read about applications and learned how to create an app using the MobiledgeX platform [here](https://dev-publish.mobiledgex.com/deployments/deployment-workflow/app-definition).
 
@@ -92,7 +92,7 @@ Once you have completed these steps, select the green box **Create** at the bott
 
 ## Create App Instances
 
-An [app instance](https://developers.mobiledgex.com/deployments/deployment-workflow/app-instances/) is the deployment of app(s) through a cloudlet.
+An [app instance](/developer/deployments/deployment-workflow/app-instances/index.md) is the deployment of app(s) through a cloudlet.
 
 After creating the Kubernetes app, select **App Instances** in the left navigation. Then, in the top right corner, select the plus sign icon similar to the previous step.
 
@@ -106,5 +106,5 @@ On the Application Instance page click on the Application Instance you just c
 
 ![Example of app instance](/developer/assets/exampleinstance.png "Example of app instance")
 
-As a follow-up, visit the [Auto Scaling with Kubernetes](https://developers.mobiledgex.com/deployments/application-runtime/autoscale/) guide to learn how to scale your deployed application.
+As a follow-up, visit the [Auto Scaling with Kubernetes](/developer/deployments/application-runtime/autoscale/index.md) guide to learn how to scale your deployed application.
 

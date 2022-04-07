@@ -17,14 +17,14 @@ July 27th, 2021
 
 ### What’s New
 
-- [MobiledgeX Edge Events](/sdks/edge-events-overview) : Edge Events is a **NEW** feature of the MobiledgeX SDKs that allows you to receive events from MobiledgeX to determine the optimal edge server to connect with for your client device. This can be used in tandem with the [MobiledgeX Monitoring tools](/deployments/monitoring-and-metrics/monitoring-edge-events) to make smarter decision on how to best optimize your application.
+- [MobiledgeX Edge Events](/developer/sdks/edge-events-overview/index.md) : Edge Events is a **NEW** feature of the MobiledgeX SDKs that allows you to receive events from MobiledgeX to determine the optimal edge server to connect with for your client device. This can be used in tandem with the [MobiledgeX Monitoring tools](/developer/deployments/monitoring-and-metrics/monitoring-edge-events/index.md) to make smarter decision on how to best optimize your application.
 
 - SDKs made available today for iOS and Android devices
 - Unity SDK with Edge Events is currently available in beta
 
 </li>
 - Updated the MobiledgeX SDK Demo Application with the latest SDK to make it easier to try Edge Events.
-- MobiledgeX Services (Computer Vision and Edge Multiplay) now support Github Actions CI/CD and can now be used as references to integrate [MobiledgeX Github Actions](/deployments/ci-cd/github-actions) into your applications CI/CD pipeline.
+- MobiledgeX Services (Computer Vision and Edge Multiplay) now support Github Actions CI/CD and can now be used as references to integrate [MobiledgeX Github Actions](/developer/deployments/ci-cd/github-actions/index.md) into your applications CI/CD pipeline.
 
 ### Known Issues
 
@@ -85,9 +85,9 @@ December 10th, 2020
 
 - **NEW** Multiplayer Example : EdgeMultiplay provided in the MobieldgeX Menu Sample using Websockets &amp; UDP (EdgeMultiplay), to be found under MobiledgeX Menu (MobiledgeX/Examples).
 - **NEW** [Video Example](https://youtu.be/8fGakyNBotg) on how to use Edge Multiplay.
-- **NEW** Example of the MobiledgeX [Ping Pong](/sdks/unity-sdk/unity-sdk-sample) sample application using Edge Multiplay.
+- **NEW** Example of the MobiledgeX [Ping Pong](/developer/sdks/unity-sdk/unity-sdk-sample/index.md) sample application using Edge Multiplay.
 - **NEW** [Open Source NodeJS Multiplayer Game Server](https://github.com/mobiledgex/edge-mutiplay-node-server) for Edge Multiplay
-- [Computer Vision Example](/services/computer-vision/add-comp-vision-unity) updated to support 2.4 SDK and includes more supported Servers.
+- [Computer Vision Example](/developer/services/computer-vision/add-comp-vision-unity/index.md) updated to support 2.4 SDK and includes more supported Servers.
 - Open Source [Magic Leap Sample](https://github.com/mobiledgex/edge-cloud-sampleapps/tree/master/unity/MagicLeapFaceDetectionPOC) connecting to the MobiledgeX Computer Vision Server
 
 #### Documention
@@ -95,7 +95,7 @@ December 10th, 2020
 - **NEW** API Documentation for the [Unity SDK](https://mobiledgex.github.io/unity-samples/index.html)
 - **NEW** API Documentation for the [C# SDK](https://api.mobiledgex.net/swagger/mexdemo/edge-cloud-sdk-csharp/html/index.html)
 - **NEW** API Documentation for [Unity Edge Multiplay](https://mobiledgex.github.io/edge-multiplay-unity-client/)
-- [How to Stress Test an Application Instance on MobiledgeX](/design/how-to-stress-test)
+- [How to Stress Test an Application Instance on MobiledgeX](/developer/design/how-to-stress-test/index.md)
 
 ### Known Issues
 
@@ -177,7 +177,7 @@ In order to upgrade to the latest version of the SDK, you will need to do the fo
 ![](/developer/assets/release-notes/upgrade-delete-step.png "")
 
 
-- Re-add the Unity Git Package to your project by going to the Unity Package Manager and re-inputting the [Git URL](https://github.com/mobiledgex/edge-cloud-sdk-unity.git). For more detailed instructions on this procedure, take a look at the [Unity SDK guide](/sdks/unity-sdk/unity-sdk-download).
+- Re-add the Unity Git Package to your project by going to the Unity Package Manager and re-inputting the [Git URL](https://github.com/mobiledgex/edge-cloud-sdk-unity.git). For more detailed instructions on this procedure, take a look at the [Unity SDK guide](/developer/sdks/unity-sdk/unity-sdk-download/index.md).
 
 
 ### Documentation
@@ -231,7 +231,7 @@ In order to upgrade to the latest version of the SDK, you will need to do the fo
 
 ![](/developer/assets/release-notes/upgrade-delete-step.png "")
 
-2. Re-add the Unity Git Package to your project by going to the Unity Package Manager and re-inputting the [Git URL](https://github.com/mobiledgex/edge-cloud-sdk-unity.git). For more detailed instructions on this procedure, take a look at the [Unity SDK guide](/sdks/unity-sdk/unity-sdk-download).
+2. Re-add the Unity Git Package to your project by going to the Unity Package Manager and re-inputting the [Git URL](https://github.com/mobiledgex/edge-cloud-sdk-unity.git). For more detailed instructions on this procedure, take a look at the [Unity SDK guide](/developer/sdks/unity-sdk/unity-sdk-download/index.md).
 
 Additionally, a few function names have changed on the **MobiledgeXIntegration** class. If you were using any of the following functions, here is what you need to update:
 
@@ -269,7 +269,7 @@ May 5th, 2020
 
 ### Upgrade
 
-If you were using an older version of any of the SDKs, follow the instructions on our [SDK &amp; Libraries](/sdks) page for the specific platform and download the latest release, then upgrade your project.
+If you were using an older version of any of the SDKs, follow the instructions on our [SDK &amp; Libraries](/developer/sdks/index.md) page for the specific platform and download the latest release, then upgrade your project.
 
 **Recommendations:**
 

@@ -9,13 +9,13 @@ Add Edge support to the Android workshop application
 
 **Last Modified:** 11/23/21
 
-In this guide, we will be making use of a MobiledgeX library: the **MobiledgeX MatchingEngine** library exposes various services that MobiledgeX offers such as finding the nearest MobiledgeX [Cloudlet](/deployments/deployment-workflow/cloudlets) for client-server communication or workload processing offload.
+In this guide, we will be making use of a MobiledgeX library: the **MobiledgeX MatchingEngine** library exposes various services that MobiledgeX offers such as finding the nearest MobiledgeX [Cloudlet](/developer/deployments/deployment-workflow/cloudlets/index.md) for client-server communication or workload processing offload.
 
 This library has been published to a Maven repository and we will be adding them to our workshop project.  To download the code and read instructions on how to run it yourself, check out code on the [MobiledgeX Samples Github](https://github.com/mobiledgex/edge-cloud-sampleapps/tree/master/android/WorkshopCompleted). In this tutorial, we’ll show you the key bits of code necessary on how the sample integrates the MobiledgeX Android SDK.
 
 ## Prerequisites
 
-- A MobiledgeX [Console Account](/getting-started/) to access our SDKs on the MobiledgeX [Artifactory](https://artifactory.mobiledgex.net)
+- A MobiledgeX [Console Account](/developer/getting-started/index.md) to access our SDKs on the MobiledgeX [Artifactory](https://artifactory.mobiledgex.net)
 - Experience with Android app development.
 - Android Studio 4.2 installed or higher
 - A device with API v.23 or higher (Android 6.0)
@@ -98,7 +98,7 @@ if (mRpUtil.getNeededPermissions(this).size() &gt; 0) {
 
 ## Android MatchingEngine SDK Intetgration
 
-We will show how to use the MobiledgeX Distributed Matching Engine APIs to register the user and find the optimal edge data center (cloudlet) running the app. To learn more about the workflow, you may refer to the [SDK Technical Overview Documentation](/sdks/tech-overview).
+We will show how to use the MobiledgeX Distributed Matching Engine APIs to register the user and find the optimal edge data center (cloudlet) running the app. To learn more about the workflow, you may refer to the [SDK Technical Overview Documentation](/developer/sdks/tech-overview/index.md).
 
 We will be showing the implementation for the following:
 
@@ -202,7 +202,7 @@ return socket;
 
 ## Edge Events
 
-Edge Events allows your Android app to continuously send and get updates from MobiledgeX in order for our platform to determine if there is a more suitable cloudlet for your client to connect to. To simplify integration, the Android SDK provides a Default Configuration method that you may utilize, that sets parameters for when your app would like to switch to a different cloudlet. To learn more about Edge Events, refer to your guide on [Maintaining Optimal Connectivity to the Edge](/sdks/edge-events-overview).
+Edge Events allows your Android app to continuously send and get updates from MobiledgeX in order for our platform to determine if there is a more suitable cloudlet for your client to connect to. To simplify integration, the Android SDK provides a Default Configuration method that you may utilize, that sets parameters for when your app would like to switch to a different cloudlet. To learn more about Edge Events, refer to your guide on [Maintaining Optimal Connectivity to the Edge](/developer/sdks/edge-events-overview/index.md).
 
 ```
 mEdgeEventsSubscriber = new EdgeEventsSubscriber(); me.getEdgeEventsBus().register(mEdgeEventsSubscriber);

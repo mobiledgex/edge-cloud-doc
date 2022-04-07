@@ -9,7 +9,7 @@ This guide will show developers how to deploy their own Helm charts onto the Mob
 
 Helm is a packaging manager for Kubernetes. This guide will help show you how to use Helm charts to package your app and deploy it. MobiledgeX does not host these charts, but can access any public repositories you intend to use.
 
-Before continuing, make sure you have read about applications and learned how to create an app using the MobiledgeX platform [here](/deployments/deployment-workflow/app-definition).
+Before continuing, make sure you have read about applications and learned how to create an app using the MobiledgeX platform [here](/developer/deployments/deployment-workflow/app-definition/index.md).
 
 ## Creating Apps
 
@@ -64,13 +64,13 @@ In the Kind dropdown menu, make sure you select **Helm Customization Yaml**.
 
 For this specific example, the TCP Port configured has to match the port configured in the custom Config.
 
-Under Ports, consult the [Specifying Application Definition](https://developers.mobiledgex.com/deployments/deployment-workflow/app-definition/#specify-application-definition) of the Application Definition page for correct procedure.
+Under Ports, consult the [Specifying Application Definition](/developer/deployments/deployment-workflow/app-definition/index.md) of the Application Definition page for correct procedure.
 
 Once you have completed these steps, select the green box **Create** at the bottom of the page.
 
 ## Create App Instances
 
-An [app instance](https://developers.mobiledgex.com/deployments/deployment-workflow/app-instances/) is the deployment of app(s) through a cloudlet.
+An [app instance](/developer/deployments/deployment-workflow/app-instances/index.md) is the deployment of app(s) through a cloudlet.
 
 After creating the helm-based app, select **App Instances** in the left navigation. Then, in the top right corner, click the plus sign icon similar to the previous step. The app instance creation is the same as for Docker, or K8s App Instance.
 

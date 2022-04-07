@@ -15,7 +15,7 @@ Alerts are generated when criteria that are defined by the user are met. Alerts 
 - Root LB is offline
 - Alert Policy
 
-For more information on the type of issues that can generate alerts, refer to the document on [Health Check](https://developers.mobiledgex.com/design/testing-and-debugging/health-check).
+For more information on the type of issues that can generate alerts, refer to the document on [Health Check](/developer/design/testing-and-debugging/health-check/index.md).
 
 ## Alert notifications
 

@@ -24,7 +24,7 @@ johndoe@JDOE-MAC ~ % sh
 sh-3.2$
 ```
 
-The header for your terminal window should read sh as well now. More info about using the terminal can be found in the [Application Instances](https://developers.mobiledgex.com/deployments/deployment-workflow/app-instances/#using-terminal) article.
+The header for your terminal window should read sh as well now. More info about using the terminal can be found in the [Application Instances](/developer/deployments/deployment-workflow/app-instances/index.md) article.
 
 ## SSHD Example
 
@@ -71,7 +71,7 @@ services:
 
 ### Deploy to MobiledgeX
 
-The steps to create and deploy an application to the MobiledgeX platform are out of scope for this document, but can be reviewed at the [MobiledgeX Developer Portal] ([https://developers.mobiledgex.com/](https://developers.mobiledgex.com/)). The application and application instance definitions for this exercise are provided here as a reference.
+The steps to create and deploy an application to the MobiledgeX platform are out of scope for this document, but can be reviewed at the [MobiledgeX Developer Portal] ([https://developers.mobiledgex.com/](/developer/index.md)). The application and application instance definitions for this exercise are provided here as a reference.
 
 #### Application definition
 

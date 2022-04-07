@@ -14,7 +14,7 @@ The MobiledgeX platform specializes in edge cloud operations and provides an Edg
 
 ## What is Mobile Network Edge Computing?
 
-The Mobile Network Edge is a distributed network of data centers which telecommunication operators around the world manage. A unique feature of these Mobile Network Edge data centers, what we refer to as [cloudlets](/deployments/deployment-workflow/cloudlets), is that they are located at cellular tower networks. As a result, application data can be routed on a 4G or 5G cellular connection from a **device**, such as a smart phone, through the **cell tower**, directly to your **application server** in the data center.
+The Mobile Network Edge is a distributed network of data centers which telecommunication operators around the world manage. A unique feature of these Mobile Network Edge data centers, what we refer to as [cloudlets](/developer/deployments/deployment-workflow/cloudlets/index.md), is that they are located at cellular tower networks. As a result, application data can be routed on a 4G or 5G cellular connection from a **device**, such as a smart phone, through the **cell tower**, directly to your **application server** in the data center.
 
 ![MobiledgeX Data Flow diagram](/developer/assets/mobiledgex/data-path.png "MobiledgeX Data Flow diagram")
 
@@ -31,7 +31,7 @@ To get started, [Sign Up For Early Access]() to MobiledgeX.
 
 MobiledgeX offers three core products that simplify developing an edge computing application:
 
-- [MobiledgeX Edge-Cloud Console](/product/mobiledgex-edge-cloud): Portal to deploy VMs and containerized applications on various Mobile Network Edge Cloudlets
-- [MobiledgeX SDKs](/product/mobiledgex-sdk): Enables a device to find the closest cloudlet based on location and cellular connection
-- [MobiledgeX Edge Services](/product/mobiledgex-edge-services): Tested products that allow you to focus on building applications for your clients.
+- [MobiledgeX Edge-Cloud Console](/developer/product/mobiledgex-edge-cloud/index.md): Portal to deploy VMs and containerized applications on various Mobile Network Edge Cloudlets
+- [MobiledgeX SDKs](/developer/product/mobiledgex-sdk/index.md): Enables a device to find the closest cloudlet based on location and cellular connection
+- [MobiledgeX Edge Services](/developer/product/mobiledgex-edge-services/index.md): Tested products that allow you to focus on building applications for your clients.
 

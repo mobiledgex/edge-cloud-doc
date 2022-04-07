@@ -50,15 +50,15 @@ In addition to showing the details of the cloudlet, this page allows the initiat
 
 ### Register Client 
 
-This will call the [RegisterClientAPI](/sdks/tech-overview#register-client) with information that identifies this app’s backend software. The session cookie is shown to verify that the call was successful.
+This will call the [RegisterClientAPI](/developer/sdks/tech-overview#register-client/index.md) with information that identifies this app’s backend software. The session cookie is shown to verify that the call was successful.
 
 ### Get App Instances 
 
-This will call the [GetAppInstListAPI](/sdks/tech-overview#getappinstlist) to find everywhere our backend is running, and will draw a cloudlet icon for every location found.
+This will call the [GetAppInstListAPI](/developer/sdks/tech-overview#getappinstlist/index.md) to find everywhere our backend is running, and will draw a cloudlet icon for every location found.
 
 ### Find Closest Cloudlet
 
-This will call the [FindCloudletAPI](/sdks/tech-overview#find-cloudlet) with our current GPS coordinates to determine which cloudlet running our backend is the closest. That cloudlet icon will turn green, and a line will be drawn between the cloudlet and our location.
+This will call the [FindCloudletAPI](/developer/sdks/tech-overview#find-cloudlet/index.md) with our current GPS coordinates to determine which cloudlet running our backend is the closest. That cloudlet icon will turn green, and a line will be drawn between the cloudlet and our location.
 
 ## GPS Spoofing Demo 
 
@@ -68,7 +68,7 @@ If you select **Spoof**, this new location will be used for subsequent **Find Cl
 
 ## Edge Events
 
-See [Edge Events Overview](/sdks/edge-events-overview) for more details on how Edge Events work.
+See [Edge Events Overview](/developer/sdks/edge-events-overview/index.md) for more details on how Edge Events work.
 
 This app can be used for testing different Edge Events configurations. If you don’t change any settings, you will be using the default configuration, where all attributes have been set to common values. To override the defaults and create your own configuration, open the main menu, select **Settings**, then **Matching Engine Settings** and you will see this screen:
 
@@ -160,9 +160,9 @@ Face Recognition is similar, but instead of only detecting the presence of a fac
 
 ### Object Detection
 
-Object Detection uses PyTorch on a [GPU-enabled cloudlet](/deployments/application-deployment-guides/gpu) to detect objects in images sent from the camera to the ComputerVision app instance. The server processes the image, and for every object detected, returns coordinates of the bounding rectangle, the class name of the object, and the confidence level. This data is rendered as an overlay over the camera preview image.
+Object Detection uses PyTorch on a [GPU-enabled cloudlet](/developer/deployments/application-deployment-guides/gpu/index.md) to detect objects in images sent from the camera to the ComputerVision app instance. The server processes the image, and for every object detected, returns coordinates of the bounding rectangle, the class name of the object, and the confidence level. This data is rendered as an overlay over the camera preview image.
 
 ### Pose Detection
 
-Pose Detection uses OpenPose on a [GPU-enabled cloudlet](/deployments/application-deployment-guides/gpu) to detect the pose of human bodies. Like the other activities, images from the camera are sent to the cloudlet for processing. Instead of rectangular coordinates, points representing the bones of the pose(s) are received and rendered.  There is no Edge/Cloud comparison for this activity. A single cloudlet is used for image processing.  Note that Pose Detection does not use the result of **Find Closest Cloudlet** because there are a limited number of GPU-enabled cloudlets available.
+Pose Detection uses OpenPose on a [GPU-enabled cloudlet](/developer/deployments/application-deployment-guides/gpu/index.md) to detect the pose of human bodies. Like the other activities, images from the camera are sent to the cloudlet for processing. Instead of rectangular coordinates, points representing the bones of the pose(s) are received and rendered.  There is no Edge/Cloud comparison for this activity. A single cloudlet is used for image processing.  Note that Pose Detection does not use the result of **Find Closest Cloudlet** because there are a limited number of GPU-enabled cloudlets available.
 

@@ -26,25 +26,25 @@ The table below shows the deployment methods and platform features available for
 
 ### Autoscale
 
-The auto-scale policy governs scaling the number of nodes of a Kubernetes cluster to provide more compute resources for your application by monitoring the CPU load on the nodes. For more information, see [Autoscale](/deployments/application-runtime/autoscale).
+The auto-scale policy governs scaling the number of nodes of a Kubernetes cluster to provide more compute resources for your application by monitoring the CPU load on the nodes. For more information, see [Autoscale](/developer/deployments/application-runtime/autoscale/index.md).
 
 ### Auto-Provision
 
-The auto-provision policy can be set to manage the deployment of application instances to different cloudlets providing better service and redundancy. The auto-provision policy works by monitoring `FindCloudlet` requests for applications across all cloudlets associated with the policy. For more information, see [Auto-Provisioning Policy](/deployments/application-runtime/auto-prov).
+The auto-provision policy can be set to manage the deployment of application instances to different cloudlets providing better service and redundancy. The auto-provision policy works by monitoring `FindCloudlet` requests for applications across all cloudlets associated with the policy. For more information, see [Auto-Provisioning Policy](/developer/deployments/application-runtime/auto-prov/index.md).
 
 ### Health Check
 
 The MobiledgeX Platform provides a Health Check function that manages autoscaling and failover of applications. The Health Check periodically tests specified ports ensuring that applications are responding correctly and available for service requests.
 
-When creating an application with the Console, `mcctl` utility, or directly via the API, a Health Check on a per-port and per-protocol basis may be added. It is vital to ensure that the application instance backend is listening and capable of responding on all ports that have Health Check enabled. Otherwise, the Health Check process will report a failure condition when the port is tested. For more information, see [Health Check](/design/testing-and-debugging/health-check).
+When creating an application with the Console, `mcctl` utility, or directly via the API, a Health Check on a per-port and per-protocol basis may be added. It is vital to ensure that the application instance backend is listening and capable of responding on all ports that have Health Check enabled. Otherwise, the Health Check process will report a failure condition when the port is tested. For more information, see [Health Check](/developer/design/testing-and-debugging/health-check/index.md).
 
 ### Load Balancer
 
-You can determine how traffic is routed to application instances. For more information, see [Load Balance](/design/load-balancing).
+You can determine how traffic is routed to application instances. For more information, see [Load Balance](/developer/design/load-balancing/index.md).
 
 ### TLS Termination
 
-MobiledgeX offers TLS termination at the load balancer. With TLS termination, the resulting traffic is sent directly to your application instance, allowing you to quickly and securely deploy your application. Enable the TLS option when you specify your port(s) within the Create Apps page. The TLS option removes the need to generate and manage Certs, and eliminates the requirement to configure your application for TLS. For more information, see [Securing application access with TLS](/design/load-balancing).
+MobiledgeX offers TLS termination at the load balancer. With TLS termination, the resulting traffic is sent directly to your application instance, allowing you to quickly and securely deploy your application. Enable the TLS option when you specify your port(s) within the Create Apps page. The TLS option removes the need to generate and manage Certs, and eliminates the requirement to configure your application for TLS. For more information, see [Securing application access with TLS](/developer/design/load-balancing/index.md).
 
 ### Languages
 
@@ -52,7 +52,7 @@ The MobiledgeX platform does not require the use of specific languages, as long 
 
 ### Security Considerations
 
-MobiledgeX recommends that your application is secured according to industry best practices and any internal guidelines your organization maintains. If you need assistance securing your application, MobiledgeX provides features designed to help secure your application. These include [Trust Policies](https://developers.mobiledgex.com/deployments/security), TLS security for inbound connections, and the default denial of any inbound traffic that is not explicitly set for an application.
+MobiledgeX recommends that your application is secured according to industry best practices and any internal guidelines your organization maintains. If you need assistance securing your application, MobiledgeX provides features designed to help secure your application. These include [Trust Policies](/developer/deployments/security/index.md), TLS security for inbound connections, and the default denial of any inbound traffic that is not explicitly set for an application.
 
 Additionally, containerized workloads should adhere to the following criteria:
 
@@ -82,11 +82,11 @@ For virtual machine deployments, it is not possible to update the ports on a dep
 
 All data required for applications to run correctly should be loaded as part of the initialization process. If you require persistent data, it is recommended that the persistent data store is located in a non-edge location. Once the data store is located, pull the data to the edge as needed. Be sure to allow for the time necessary to populate your edge application with the data as part of your high availability/scaling procedures.
 
-If you require persistent storage on the edge, you may make use of the volumes defined in the application definition. If you choose to do this, it is recommended that you establish the architecture of your application in such a way that it is readily available through clustering or replication. Additionally, ensure to have a defined backup/recovery process, and it is tested regularly. For more information, see [Shared Volume support](/deployments/deployment-workflow/clusters#shared-volume-support).
+If you require persistent storage on the edge, you may make use of the volumes defined in the application definition. If you choose to do this, it is recommended that you establish the architecture of your application in such a way that it is readily available through clustering or replication. Additionally, ensure to have a defined backup/recovery process, and it is tested regularly. For more information, see [Shared Volume support](/developer/deployments/deployment-workflow/clusters#shared-volume-support/index.md).
 
 ### Continuous Integration
 
-MobiledgeX’s API may be used to enable CI/CD pipelines by using tools such as [GitHub Actions](/deployments/ci-cd/github-actions) or Jenkins jobs.
+MobiledgeX’s API may be used to enable CI/CD pipelines by using tools such as [GitHub Actions](/developer/deployments/ci-cd/github-actions/index.md) or Jenkins jobs.
 
 ### Secret Storage
 
@@ -97,7 +97,7 @@ When deploying workloads to the Edge, you will likely have secrets (passwords, k
 
 ### Load Shedding/Throttling
 
-Your applications should contain logic that allows it to throttle requests; this ensures that the application will not be overwhelmed by those requests to the point where it affects user experience. The threshold at which the application will begin to throttle or shed connections should be defined as higher than the thresholds defined within the MobiledgeX Platform for the [Autoscale](/deployments/application-runtime/autoscale) and [Auto-provision](/deployments/application-runtime/auto-prov) policies. Setting your threshold higher provides a safety net for applications if an issue occurs within the application instance or if excessive traffic is sent to the instance.
+Your applications should contain logic that allows it to throttle requests; this ensures that the application will not be overwhelmed by those requests to the point where it affects user experience. The threshold at which the application will begin to throttle or shed connections should be defined as higher than the thresholds defined within the MobiledgeX Platform for the [Autoscale](/developer/deployments/application-runtime/autoscale/index.md) and [Auto-provision](/developer/deployments/application-runtime/auto-prov/index.md) policies. Setting your threshold higher provides a safety net for applications if an issue occurs within the application instance or if excessive traffic is sent to the instance.
 
 Setting a threshold also defines a reference when the application needs to either be scaled or when more instances are provisioned.
 

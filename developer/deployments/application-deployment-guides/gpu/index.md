@@ -85,13 +85,13 @@ spec:
 
 The MobiledgeX platform supports [Nvidia vGPU](https://www.nvidia.com/en-us/data-center/virtual-solutions/) technology in order to maximize the performance of GPU workloads and help scale applications. vGPUs can be used in two cases:
 
-- When using a vGPU sliced [flavor](/deployments/deployment-workflow/flavors) on the MobiledgeX platform
+- When using a vGPU sliced [flavor](/developer/deployments/deployment-workflow/flavors/index.md) on the MobiledgeX platform
 
 - When virtualization a GPU to perform a task the GPU is not capable of i.e. Graphics Rendering on AI GPU like the Tesla T4
 
-For [Virtual Machine](/deployments/application-deployment-guides/virtual-machine) deployments, for the above use cases, you will be required to install vGPU drivers in your [application instance](/deployments/deployment-workflow/app-instances). These drivers will vary from cloudlet to cloudlet and as such, you will need to download &amp; install these drivers into your application instance based on the cloudlet you have deployed your application. Drivers can be downloaded via the [MobiledgeX Controller APIs](https://api.mobiledgex.net/mc). Below are some examples using the MobiledgeX [mcctl CLI](/tools/mcctl-guides) to find the relevant drivers for your application instance and get the download URL for the drivers.
+For [Virtual Machine](/developer/deployments/application-deployment-guides/virtual-machine/index.md) deployments, for the above use cases, you will be required to install vGPU drivers in your [application instance](/developer/deployments/deployment-workflow/app-instances/index.md). These drivers will vary from cloudlet to cloudlet and as such, you will need to download &amp; install these drivers into your application instance based on the cloudlet you have deployed your application. Drivers can be downloaded via the [MobiledgeX Controller APIs](https://api.mobiledgex.net/mc). Below are some examples using the MobiledgeX [mcctl CLI](/developer/tools/mcctl-guides/index.md) to find the relevant drivers for your application instance and get the download URL for the drivers.
 
-For Docker and Kubernetes applications, the correct vGPU driver for the cloudlet is automatically installed during [cluster](/deployments/deployment-workflow/clusters) creation and such you will only need to need to define the GPU requirements in your Deployment Manifest as outlined above.
+For Docker and Kubernetes applications, the correct vGPU driver for the cloudlet is automatically installed during [cluster](/developer/deployments/deployment-workflow/clusters/index.md) creation and such you will only need to need to define the GPU requirements in your Deployment Manifest as outlined above.
 
 ### Show List of Drivers
 

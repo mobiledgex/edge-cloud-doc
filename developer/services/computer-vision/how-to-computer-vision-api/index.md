@@ -24,7 +24,7 @@ The server supports several different `Content-Type` values in the HTTP request.
 
 In the `curl` examples included below, the multipart/form-data format is used. Different HTTP libraries in different languages may use one of the other Content-Type formats, so we have added support for the most common ones.
 
-Please note that the hostnames used in the examples are only examples. Normally, your app would perform a [FindCloudlet](/sdks/overview-2#find-cloudlet) call, and use the FQDN from the result. See the [SDK Documentation](/sdks) for details. Alternatively, you can find a dynamic list of sample hostnames you can use [here](http://dme-inventory.mobiledgex.net/cvprovisioning.json).
+Please note that the hostnames used in the examples are only examples. Normally, your app would perform a [FindCloudlet](/developer/sdks/overview-2#find-cloudlet/index.md) call, and use the FQDN from the result. See the [SDK Documentation](/developer/sdks/index.md) for details. Alternatively, you can find a dynamic list of sample hostnames you can use [here](http://dme-inventory.mobiledgex.net/cvprovisioning.json).
 
 ## Face Detection
 

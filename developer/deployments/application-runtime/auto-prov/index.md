@@ -74,7 +74,7 @@ You will receive an error if you attempt to delete an auto provision policy wher
 - From the Create Auto Provisioning Policy screen, enter information for the required fields.
 - Select the cloudlet(s) specific to the region you selected. Use the arrow to move your cloudlet selection to the box on the right.
 - Now click **Create**. Your Auto-Provisioning Policy appears on the Policies page. The quick access menu under Actions let you add cloudlet, delete cloudlet, or delete the entire Auto-Provisioning Policy.
-- Once your auto provision policy is created, apply the policy to your [applicaton definition](https://developers.mobiledgex.com/deployments/deployment-workflow/app-definition) under the **Advanced Settings**.
+- Once your auto provision policy is created, apply the policy to your [applicaton definition](/developer/deployments/deployment-workflow/app-definition/index.md) under the **Advanced Settings**.
 
 
 ![Create Auto Provisioning Policy screen](/developer/assets/provision.png "Create Auto Provisioning Policy screen")

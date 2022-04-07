@@ -105,9 +105,9 @@ Once that setup has been completed, you can very easily call all the necessary A
 
 #### Getting Edge Connection URL
 
-MobiledgeX SDK uses the device Location and [the device’s MCC-MNC ID (if available)](/sdks/tech-overview) to connect you to the closest Edge cloudlet where you application instance is deployed.
+MobiledgeX SDK uses the device Location and [the device’s MCC-MNC ID (if available)](/developer/sdks/tech-overview/index.md) to connect you to the closest Edge cloudlet where you application instance is deployed.
 
-If your carrier is not supported yet by MobiledgeX the SDK will throw a RegisterClientException. You can catch this exception and instead use WifiOnly(true) to connect to [the wifi dme](/sdks/tech-overview#distributed-matching-engine), which will connect you to the closest [regional DME](/sdks/tech-overview#distributed-matching-engine).
+If your carrier is not supported yet by MobiledgeX the SDK will throw a RegisterClientException. You can catch this exception and instead use WifiOnly(true) to connect to [the wifi dme](/developer/sdks/tech-overview#distributed-matching-engine/index.md), which will connect you to the closest [regional DME](/developer/sdks/tech-overview#distributed-matching-engine/index.md).
 
 ```
 using MobiledgeX;

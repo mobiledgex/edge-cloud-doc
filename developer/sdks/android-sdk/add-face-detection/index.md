@@ -33,7 +33,7 @@ This library has been published to a Maven repository and we will be adding itfd
 - Android Studio installed and up to date. This installation can be a lengthy process, so please have your
 - development environment in good shape before the start of the workshop.
 - Access to the **Workshop Skeleton** app code.
-- Worked through [Add Edge Support to an Android Application](https://developers.mobiledgex.com/sdks/android-sdk/android-sdk-sample)
+- Worked through [Add Edge Support to an Android Application](/developer/sdks/android-sdk/android-sdk-sample/index.md)
 
 
 ## Instructions
@@ -168,7 +168,7 @@ mCameraToolbar.setTitle("Face Detection");
 
 ```
 
-Here, we are using the mHost and mPort variables that were set in the GetConnection Workflow in the [How To: Add Edge Support to the Android Workshop App](https://developers.mobiledgex.com/guides-and-tutorials/how-to-add-edge-support-to-an-android-app) document.
+Here, we are using the mHost and mPort variables that were set in the GetConnection Workflow in the [How To: Add Edge Support to the Android Workshop App](/developer/guides-and-tutorials/how-to-add-edge-support-to-an-android-app/index.md) document.
 
 ### Face Box Renderer
 

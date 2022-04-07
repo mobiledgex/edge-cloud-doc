@@ -28,7 +28,7 @@ For Virtual Machine (VM) deployment, use a VM image as a QCOW2 format. With the 
 $ curl -u&lt;username&gt; -T &lt;pathtofile&gt; "https://artifactory.mobiledgex.net/artifactory/repo-cloudxr/&lt;targetfilepath&gt;" --progress-bar -o &lt;upload status filename&gt;
 ```
 
-Refer to the [Deploying Virtual Machines](/deployments/application-deployment-guides/virtual-machine) tutorials to learn how to deploy a VM.
+Refer to the [Deploying Virtual Machines](/developer/deployments/application-deployment-guides/virtual-machine/index.md) tutorials to learn how to deploy a VM.
 
 ## Docker
 
@@ -73,7 +73,7 @@ To reference your Docker Compose ZIP file, make sure you are referencing it as a
 
 If you wish to reference your Docker Compose ZIP file from Artifactory, you can do so the same way you reference the ZIP file from an HTTP server. Instead of navigating to an HTTP server, you’re navigating to the ZIP file that you uploaded to MobiledgeX Artifactory. The format of the path is similar to the path that you provided when you first create your organization and pushed an image to our repository, like this: `https://artifactory.mobiledgex.net/artifactory/repo-mobilegeX/post_redis_compose.ZIP`.
 
-For Options 2 and 3 where you want to perform a ZIP deployment, provide the URL in the Deployment Manifest text box and ensure the image path is blank. For an example on how to deploy a ZIP file, refer to the [How to create a docker-compose deployment using multiple files](https://developers.mobiledgex.com/deployments/application-deployment-guides/how-to-deploy-docker-compose/) tutorial.
+For Options 2 and 3 where you want to perform a ZIP deployment, provide the URL in the Deployment Manifest text box and ensure the image path is blank. For an example on how to deploy a ZIP file, refer to the [How to create a docker-compose deployment using multiple files](/developer/deployments/application-deployment-guides/how-to-deploy-docker-compose/index.md) tutorial.
 
 ## Kubernetes
 
@@ -142,7 +142,7 @@ When you specify the helm chart as input in the image path, you have the option 
 
 If you require additional configurations for your application, such as adding environmental variables or including customization files for helm deployments,  you can specify these types of configurations by specifying the content of the configuration file in the *Config* field, and selecting either **Environmental Variables** or **Helm Customization**.
 
-Refer to our tutorial [Deploy a Helm V3 Application](https://developers.mobiledgex.com/deployments/application-deployment-guides/deploy-helm/) for detailed steps on how to deploy a Helm application.
+Refer to our tutorial [Deploy a Helm V3 Application](/developer/deployments/application-deployment-guides/deploy-helm/index.md) for detailed steps on how to deploy a Helm application.
 
 ![Create Apps screen: Configs](/developer/assets/developer-ui-guide/config-helm.png "Create Apps screen: Configs")
 

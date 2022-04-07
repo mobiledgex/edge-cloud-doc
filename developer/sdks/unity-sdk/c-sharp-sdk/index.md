@@ -13,7 +13,7 @@ The MobiledgeX Client Library enables an application to register and then locate
 
 The Matching Engine C# SDK provides everything required to create applications for your devices.
 
-**Note:** If you are want to develop Apps using Unity, please see the Unity C# SDK documentation, [here](https://developers.mobiledgex.com/sdks/unity-sdk/unity-sdk-download).
+**Note:** If you are want to develop Apps using Unity, please see the Unity C# SDK documentation, [here](/developer/sdks/unity-sdk/unity-sdk-download/index.md).
 
 ## Prerequisites
 

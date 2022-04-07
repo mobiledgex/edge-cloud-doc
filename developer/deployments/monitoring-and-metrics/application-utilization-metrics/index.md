@@ -9,7 +9,7 @@ Learn about the monitoring utilization metrics that are provided by MobiledgeX t
 
 Metrics refer to the availability of resources such as vCPU, memory, disk, RAM, etc. The MobiledgeX platform collects metrics for both cluster instances and application instances.
 
-Collecting resource metrics is useful if you use them in conjunction with [alerts](/design/testing-and-debugging/alarms/) that can help you identify issues and quickly respond to them. For example, you can set alerts and be notified when you have exceeded the threshold for vCPU. Metric information can also be useful when you want to understand the utilization of your resources to determine the percentage of your resource’s capacity that is in use and whether to increase them based on user demand.
+Collecting resource metrics is useful if you use them in conjunction with [alerts](/developer/design/testing-and-debugging/alarms/index.md) that can help you identify issues and quickly respond to them. For example, you can set alerts and be notified when you have exceeded the threshold for vCPU. Metric information can also be useful when you want to understand the utilization of your resources to determine the percentage of your resource’s capacity that is in use and whether to increase them based on user demand.
 
 ## Monitoring Dashboard
 
@@ -51,7 +51,7 @@ You may find the following information displayed on your Monitoring Dashboard:
 
 ## Metrics Reference
 
-The following table provides a list of metrics and their details for each cluster, application instance, and cloudlets. Head over to the [mcctl Utility Reference](https://developers.mobiledgex.com/tools/mcctl-guides/mcctl-reference/#metric-commands) guide for more information on their commands and example usages.
+The following table provides a list of metrics and their details for each cluster, application instance, and cloudlets. Head over to the [mcctl Utility Reference](/developer/tools/mcctl-guides/mcctl-reference/index.md) guide for more information on their commands and example usages.
 
 ### Cluster metrics 
 

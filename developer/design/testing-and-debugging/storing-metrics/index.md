@@ -523,7 +523,7 @@ done
 
 ## Contact support
 
-If you have reviewed our [documentation set](https://developers.mobiledgex.com) and [FAQ](https://developers.mobiledgex.com/support) page, and unable to find an answer to your question, you can contact our [Support Team](mailto:support@mobiledgex.com).
+If you have reviewed our [documentation set](/developer) and [FAQ](https://developers.mobiledgex.com/support/index.md) page, and unable to find an answer to your question, you can contact our [Support Team](mailto:support@mobiledgex.com).
 
 You can also email the [Support Team](mailto:support@mobiledgex.com) to assist you in resolving product issues. To help expedite your request, make sure you copy and paste the tracid, which can be found on the audit logs page, into your email with a brief description of your issue.
 

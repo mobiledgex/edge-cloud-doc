@@ -9,9 +9,9 @@ Define the application definition used to create application instances that can 
 
 **Last Modified:** 11/15/21
 
-The Apps page lets you create application definitions for any applications deploying to our registry. Doing this creates an ’inventory’ of your applications that are part of the registry. Creating an application definition also prepares it for deployment. Refer to our [Tutorial: Deploying an application to the MobiledgeX platform](/services/computer-vision/cv-deployment) for steps on how to deploy a sample application.
+The Apps page lets you create application definitions for any applications deploying to our registry. Doing this creates an ’inventory’ of your applications that are part of the registry. Creating an application definition also prepares it for deployment. Refer to our [Tutorial: Deploying an application to the MobiledgeX platform](/developer/services/computer-vision/cv-deployment/index.md) for steps on how to deploy a sample application.
 
-You can mark each application as **Trusted** if you wish to deploy and configure your outbound connections as prohibited. Upon deployment of your application, the security policy is applied and thus, making your deployment fully private. For more information, refer to the section on [Security and Trust Policies](/deployments/security). Note that this is only supported for Dedicated IP access.
+You can mark each application as **Trusted** if you wish to deploy and configure your outbound connections as prohibited. Upon deployment of your application, the security policy is applied and thus, making your deployment fully private. For more information, refer to the section on [Security and Trust Policies](/developer/deployments/security/index.md). Note that this is only supported for Dedicated IP access.
 
 The following actions may be performed on this page:
 

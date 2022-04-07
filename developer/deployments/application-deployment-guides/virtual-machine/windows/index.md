@@ -17,7 +17,7 @@ In this tutorial, you will learn how to:
 
 ## Prerequisites
 
-- A [MobiledgeX Console Account](/deployments/accounts/manage-accts) where you know your [organization](/deployments/accounts/org-users) name.
+- A [MobiledgeX Console Account](/developer/deployments/accounts/manage-accts/index.md) where you know your [organization](/developer/deployments/accounts/org-users/index.md) name.
 - Download and have installed [qemu-system-x86_64](https://www.qemu.org/download/)
 
 ## Step 1: Download Windows ISO Images
@@ -42,7 +42,7 @@ With the ISO file you just downloaded, we will need to use that to install Windo
 There are two parameters you will need to specify as part of the command:
 
 - The **Name** of the qcow2. In this example, it is called `windows.qcow2`
-- The **Disk Space** allocated for the Virtual Machine i.e. 30 GB. If this value is higher than the disk space for a given [flavor](/deployments/deployment-workflow/flavors/) you would like to use on MobiledgeX, then the Virtual Machine will fail to load. As such, it is recommended to keep this value low to be compatible with as many flavors on MobiledgeX as possible. You can expand the Disk Space later once an [Application Instance](https://developers.mobiledgex.com/deployments/deployment-workflow/app-instances/) has been created on MobiledgeX if a flavor is chosen with more disk space available than the what you provision here.
+- The **Disk Space** allocated for the Virtual Machine i.e. 30 GB. If this value is higher than the disk space for a given [flavor](/developer/deployments/deployment-workflow/flavors/index.md) you would like to use on MobiledgeX, then the Virtual Machine will fail to load. As such, it is recommended to keep this value low to be compatible with as many flavors on MobiledgeX as possible. You can expand the Disk Space later once an [Application Instance](/developer/deployments/deployment-workflow/app-instances/index.md) has been created on MobiledgeX if a flavor is chosen with more disk space available than the what you provision here.
 
 ```
 qemu-img create -f qcow2 windows.qcow2 30G
@@ -179,7 +179,7 @@ After the VM has been successfully provisioned, select the Application Instance 
 
 ![External URI for Virtual Machine](/developer/assets/how-to-deploy-vm/vm-uri.png "External URI for Virtual Machine")
 
-To test that your VM was deployed correctly, navigate to the App Instance page and under the quick access menu, select [Terminal](/deployments/deployment-workflow/app-instances#using-terminal).
+To test that your VM was deployed correctly, navigate to the App Instance page and under the quick access menu, select [Terminal](/developer/deployments/deployment-workflow/app-instances#using-terminal/index.md).
 
 **Note:** Not all Cloudlets will support this feature and if you run into errors for a specific cloudlet, it is recommended to connect to the App Instance via RDP has mentioned above.
 

@@ -30,9 +30,9 @@ At its simplest, our SDKs use the following two methods (in pseudocode) in order
 
 To get started, head to our Client SDK section and download the SDK of your choice as well as run the provided sample applications.
 
-- [Android SDK](/sdks/android-sdk)
-- [iOS SDK](/sdks/ios-sdk)
-- [Unity SDK](/sdks/unity-sdk)
+- [Android SDK](/developer/sdks/android-sdk/index.md)
+- [iOS SDK](/developer/sdks/ios-sdk/index.md)
+- [Unity SDK](/developer/sdks/unity-sdk/index.md)
 
 </div>
 

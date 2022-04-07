@@ -15,7 +15,7 @@ To download the code and read instructions on how to run it yourself, check out 
 
 ## Prerequisites
 
-- A MobiledgeX [Console Account](/getting-started/) to access our SDKs on the MobiledgeX [Artifactory](https://artifactory.mobiledgex.net)
+- A MobiledgeX [Console Account](/developer/getting-started/index.md) to access our SDKs on the MobiledgeX [Artifactory](https://artifactory.mobiledgex.net)
 - MacOS Computer and an iOS Device
 - Xcode (From the Apple store, search for [Xcode](https://developer.apple.com/xcode/))
 - An Apple ID. Create an ID from the developer site on [Apple](https://developer.apple.com)
@@ -52,7 +52,7 @@ This will look at the podspecs specified in the Podfile: `source https://github.
 
 ## iOS MatchingEngine SDK
 
-The iOS MatchingEngine SDK uses the Promises framework to easily work with asynchronous code. We will be using the MobiledgeX Distributed Matching Engine APIs to register the user and find the optimal edge data center (cloudlet) running the app. To learn more about the workflow, you may refer to the [SDK Technical Overview Documentation](/sdks/tech-overview).
+The iOS MatchingEngine SDK uses the Promises framework to easily work with asynchronous code. We will be using the MobiledgeX Distributed Matching Engine APIs to register the user and find the optimal edge data center (cloudlet) running the app. To learn more about the workflow, you may refer to the [SDK Technical Overview Documentation](/developer/sdks/tech-overview/index.md).
 
 We will be showing the implementation for the following:
 

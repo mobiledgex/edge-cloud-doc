@@ -16,7 +16,7 @@ In this tutorial, you will learn how to:
 
 ## Prerequisites
 
-- A [MobiledgeX Console Account](/deployments/accounts/manage-accts) where you know your [organization](/deployments/accounts/org-users) name.
+- A [MobiledgeX Console Account](/developer/deployments/accounts/manage-accts/index.md) where you know your [organization](/developer/deployments/accounts/org-users/index.md) name.
 - A Virtual Machine image in QCOW2 format. Instructions to download a sample image are provided below.
 
 ## Step 1: Setup a VM image file 
@@ -157,7 +157,7 @@ After the VM has been successfully provisioned, select **Application Instance** 
 
 ![External URI for Virtual Machine](/developer/assets/how-to-deploy-vm/vm-uri.png "External URI for Virtual Machine")
 
-To test that your VM was deployed correctly, navigate to the App Instance page and under the quick access menu, select [Terminal](/deployments/deployment-workflow/app-instances#using-terminal). For the CentOS, you should be able to login with the credentials specified in the Deployment Manifest i.e. `demouser`, `changemeplz`.
+To test that your VM was deployed correctly, navigate to the App Instance page and under the quick access menu, select [Terminal](/developer/deployments/deployment-workflow/app-instances#using-terminal/index.md). For the CentOS, you should be able to login with the credentials specified in the Deployment Manifest i.e. `demouser`, `changemeplz`.
 
 ![CentOS Application Instance in Terminal](/developer/assets/how-to-deploy-vm/vm-terminal.png "CentOS Application Instance in Terminal")
 

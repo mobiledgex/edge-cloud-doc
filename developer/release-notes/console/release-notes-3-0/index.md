@@ -11,7 +11,7 @@ MobiledgeX Edge-Cloud Console Release Notes 3.0
 
 The **MobiledgeX** **Edge-Cloud 3.0** release offers many new features and enhancements. The following release notes cover details about these features and improvements and provide a list of known issues.
 
-Documentation and resources can be found on our [Developer Portal](https://developers.mobiledgex.com/) where we continuously publish new content and resources to help you realize the potential of our solutions and offers.
+Documentation and resources can be found on our [Developer Portal](/developer/index.md) where we continuously publish new content and resources to help you realize the potential of our solutions and offers.
 
 ### New Features on Edge-Cloud
 
@@ -33,7 +33,7 @@ Developers to join Cloudlet Pool</td>
 
 Developers can now become a member of a cloudlet pool based on Operator’s invitation.
 
-Learn more about Cloudlet Pools [here](/deployments/deployment-workflow/cloudlet-pools). </td>
+Learn more about Cloudlet Pools [here](/developer/deployments/deployment-workflow/cloudlet-pools/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -45,7 +45,7 @@ You can now set up alert policies to further monitor your applications and be al
 
 This feature is currently supported for Kubernetes apps only.
 
-Learn more about Alert Policies [here](/design/testing-and-debugging/alarms#alert-policy). </td>
+Learn more about Alert Policies [here](/developer/design/testing-and-debugging/alarms#alert-policy/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -55,7 +55,7 @@ App Instance alerts</td>
 
 We now generate app instance alerts when the CPU exceeds the defined levels, when the memory exceeds the defined levels, or when the app instance restarts.
 
-Learn more about App Instance Alerts [here](/design/testing-and-debugging/alarms). </td>
+Learn more about App Instance Alerts [here](/developer/design/testing-and-debugging/alarms/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -65,7 +65,7 @@ Alert Severity</td>
 
 You can now classify alerts based on severity levels.  The severity levels include info, warning, and error.
 
-Learn more about Alert Severity [here](/design/testing-and-debugging/alarms). </td>
+Learn more about Alert Severity [here](/developer/design/testing-and-debugging/alarms/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -75,7 +75,7 @@ Monitoring Events and Usage</td>
 
 We have made significant enhancements to the monitoring components. In addition to collecting events and audit events for applications, clusters, and cloudlets, retrieving this data is now performed using the combined events and audits commands. Our search capabilities have been expanded with additional filter and tag options to further refine your search, and you can go from a Live view and switch view to perform a more specific search. Usage logs, which let you view application instances, across client devices, locations, etc., help you understand the application activity occurring within your cloudlets. You can also view usage logs for cluster instances and cloudlet pools.
 
-Learn more about events and usage logs [here](/deployments/monitoring-and-metrics/logs). </td>
+Learn more about events and usage logs [here](/developer/deployments/monitoring-and-metrics/logs/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -85,7 +85,7 @@ Monitor Client Edge Events </td>
 
 You can now view client application data and usage through the Monitoring console. The data can be filtered based on application instance, location, and the type of network used.  However, no location data, user information, and devices are accessible since MobiledgeX does not store that information. Only statistical aggregated data can be viewed.
 
-Learn more about how to use and view edge events [here](/deployments/monitoring-and-metrics/monitoring-edge-events). </td>
+Learn more about how to use and view edge events [here](/developer/deployments/monitoring-and-metrics/monitoring-edge-events/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -95,7 +95,7 @@ Health Checks on VM</td>
 
 We now support application-level health checks on VMs so that when a VM is stopped, a **Healthcheck Fail Server** alert is sent.
 
-Learn more about health checks [here](/design/testing-and-debugging/health-check). </td>
+Learn more about health checks [here](/developer/design/testing-and-debugging/health-check/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -105,7 +105,7 @@ Helm Chart support</td>
 
 We now support Helm Chart v3.
 
-See supported application types [here](/deployments/supported-apps-types). </td>
+See supported application types [here](/developer/deployments/supported-apps-types/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -137,7 +137,7 @@ Kubernetes clusters and GPU resource</td>
 
 We now support Kubernetes clusters with GPU.
 
-Learn how to use GPUs on MobiledgeX [here](/deployments/application-deployment-guides/gpu). </td>
+Learn how to use GPUs on MobiledgeX [here](/developer/deployments/application-deployment-guides/gpu/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -147,7 +147,7 @@ Windows 10 VM image on MobiledgeX Platform</td>
 
 Developers can deploy Windows VM on MobiledgeX Platform using QCOW 2.
 
-Learn how to do deploy Windows VMs [here](/deployments/application-deployment-guides/virtual-machine/windows). </td>
+Learn how to do deploy Windows VMs [here](/developer/deployments/application-deployment-guides/virtual-machine/windows/index.md). </td>
 </tr>
 <tr>
 <td>
@@ -216,7 +216,7 @@ Autoscale policy changes</td>
 
 We have now added UI support to configure the active connections in the autoscale policy based on the number of connections. Additionally, you can now scale by memory and CPU usage.
 
-Learn more about Autoscale policies [here](/deployments/application-runtime/autoscale).</td>
+Learn more about Autoscale policies [here](/developer/deployments/application-runtime/autoscale/index.md).</td>
 </tr>
 <tr>
 <td>

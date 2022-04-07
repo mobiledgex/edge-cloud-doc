@@ -9,7 +9,7 @@ Understanding Flavors and how to choose them
 
 **Last Modified:** 8/20/2021
 
-The term **Flavor** is used by the MobiledgeX platform to define varying resource configurations. Flavors can also be referred to as compute substrates. Flavors include several different resource dimensions and are divided by regions, as listed below. Selected Flavors are specified when you create a cluster instance. To designate the Flavor, choose the best Flavor suited to run your application instances while delivering consistent processing performance; refer to [Sizing your Deployment](/design/sizing-applications) for guidelines.
+The term **Flavor** is used by the MobiledgeX platform to define varying resource configurations. Flavors can also be referred to as compute substrates. Flavors include several different resource dimensions and are divided by regions, as listed below. Selected Flavors are specified when you create a cluster instance. To designate the Flavor, choose the best Flavor suited to run your application instances while delivering consistent processing performance; refer to [Sizing your Deployment](/developer/design/sizing-applications/index.md) for guidelines.
 
 | **Memory** | Amount of memory allocated to the application                    |
 |------------|------------------------------------------------------------------|
@@ -38,7 +38,7 @@ Flavors are also used in virtual machine deployments. Flavors within virtual mac
 
 ## Guidelines for Specifying Flavor
 
-When denoting the Flavor for your application instance, the Flavor assigned to the application instance is dependent on the following scenarios. For information on how to size your deployment and select the most appropriate Flavor for your application instance, refer to the [sizing your deployment](/design/sizing-applications) document.
+When denoting the Flavor for your application instance, the Flavor assigned to the application instance is dependent on the following scenarios. For information on how to size your deployment and select the most appropriate Flavor for your application instance, refer to the [sizing your deployment](/developer/design/sizing-applications/index.md) document.
 
 **Case 1. Manual**. When a cluster instance is designated as Manual (created manually), the Flavor that is selected for the cluster instance is the default Flavor for all application instances without an app-specified Flavor. Please see Case 3 for further details of the app-specific Flavor.
 

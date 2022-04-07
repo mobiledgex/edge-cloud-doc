@@ -105,15 +105,11 @@ Elapsed time: 40 seconds
 
 ## Viewing Monitoring Data
 
-In the MobiledgeX Console, head to the Monitoring tab. This page let’s you see all the metrics data associated with all of your running Application Instances. You can select a specific Application Instance in order to view the performance data associated with that instance such as the CPU, Memory, and Network Usage. For more information on Monitoring, you can refer to our [Monitoring Documentation](/deployments/monitoring-and-metrics).
+In the MobiledgeX Console, head to the Monitoring tab. This page let’s you see all the metrics data associated with all of your running Application Instances. You can select a specific Application Instance in order to view the performance data associated with that instance such as the CPU, Memory, and Network Usage. For more information on Monitoring, you can refer to our [Monitoring Documentation](/developer/deployments/monitoring-and-metrics/index.md).
 
 You can also use the Stream option in the top right in order to monitor real time data, which is perfect to monitor while your Stress Test is running.
 
-If you see that the utilization is too high for your use case, you may need to consider either changing your application to run on a larger [flavor](/deployments/deployment-workflow/flavors) or alternatively if you are using Kubernetes, you may want to change your thresholds for leveraging [auto-scaling](/deployments/application-runtime/autoscale).
+If you see that the utilization is too high for your use case, you may need to consider either changing your application to run on a larger [flavor](/developer/deployments/deployment-workflow/flavors/index.md) or alternatively if you are using Kubernetes, you may want to change your thresholds for leveraging [auto-scaling](/developer/deployments/application-runtime/autoscale/index.md).
 
-<figure class="half">
-  <img src="/developer/assets/stress-test/monitoring-stress-test.png" class="img-fluid slb" alt="Monitoring Tab in MobiledgeX Console">
-  <figcaption>Monitoring Tab in MobiledgeX Console</figcaption>
-
-</figure>
+![Monitoring Tab in MobiledgeX Console](/developer/assets/stress-test/monitoring-stress-test.png "Monitoring Tab in MobiledgeX Console")
 

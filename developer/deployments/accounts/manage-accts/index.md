@@ -94,5 +94,5 @@ If you forgot your password, on the Login screen, select **Forgot Password?**, 
 
 ## Contact Support
 
-If you have reviewed our [documentation set](https://developers.mobiledgex.com/) and [FAQ and Support](https://dev-publish.mobiledgex.com/support) page, and unable to find an answer to your question, you can contact our [Support Team](mailto:support@mobiledgex.com). You can also email the [Support Team](mailto:support@mobiledgex.com) to assist you in resolving product issues.
+If you have reviewed our [documentation set](/developer/index.md) and [FAQ and Support](https://dev-publish.mobiledgex.com/support) page, and unable to find an answer to your question, you can contact our [Support Team](mailto:support@mobiledgex.com). You can also email the [Support Team](mailto:support@mobiledgex.com) to assist you in resolving product issues.
 

@@ -15,7 +15,7 @@ The Matching Engine iOS SDK provides everything required to create edge-enabled 
 
 ## Prerequisites  
 
-- A MobiledgeX [Console Account](/getting-started/) to access our SDKs on the MobiledgeX [Artifactory](https://artifactory.mobiledgex.net)
+- A MobiledgeX [Console Account](/developer/getting-started/index.md) to access our SDKs on the MobiledgeX [Artifactory](https://artifactory.mobiledgex.net)
 - MacOS Big Sur and an iOS Device
 - Xcode 13.2.1 (From the Apple store, search for [Xcode](https://developer.apple.com/xcode/))
 - An Apple ID. Create an ID from the developer site on [Apple](https://developer.apple.com)

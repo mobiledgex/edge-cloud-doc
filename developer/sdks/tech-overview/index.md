@@ -9,7 +9,7 @@ Learn how our APIs work to connect Client Applications to deployed Application I
 
 **Last Modified:** 11/3/2021
 
-This guide provides you with a closer look at the MobiledgeX API layer, and how to use our APIs to connect to deployed application instances. The following diagram illustrates the architecture of MobiledgeX’s platform. We will be focusing on the API layer depicted in this diagram. You can find more detailed information about our architecture in our [product overview](https://developers.mobiledgex.com/product/overview) guide.
+This guide provides you with a closer look at the MobiledgeX API layer, and how to use our APIs to connect to deployed application instances. The following diagram illustrates the architecture of MobiledgeX’s platform. We will be focusing on the API layer depicted in this diagram. You can find more detailed information about our architecture in our [product overview](/developer/product/overview/index.md) guide.
 
 ![](/developer/assets/getting-started/architectural-diagram.png "")
 
@@ -17,7 +17,7 @@ This guide provides you with a closer look at the MobiledgeX API layer, and how 
 
 Once an application instance has been provisioned on the MobiledgeX platform, a URI will be generated for that instance and you can use that URI to connect directly to that application instance. But that is no different from deploying to any public cloud service and as such, just using a URI will not ensure an edge connection. To ensure an edge connection, our APIs are responsible for finding the closest application instance that has been deployed based on a device’s cellular connection and geo-location.
 
-Taking this one step further, our SDKs build on top of our APIs to make it dramatically simpler to find the closest deployed application instance using a few function calls as well as simplifying the process of maintaining an edge connection as a device’s network state or geo-location changes. Moreover, by leveraging the MobiledgeX SDK, it becomes easier to [monitor usage statistics](https://developers.mobiledgex.com/deployments/monitoring-and-metrics) of your application within the MobiledgeX console.
+Taking this one step further, our SDKs build on top of our APIs to make it dramatically simpler to find the closest deployed application instance using a few function calls as well as simplifying the process of maintaining an edge connection as a device’s network state or geo-location changes. Moreover, by leveraging the MobiledgeX SDK, it becomes easier to [monitor usage statistics](/developer/deployments/monitoring-and-metrics/index.md) of your application within the MobiledgeX console.
 
 In short, the MobiledgeX APIs and SDKs are responsible for making sure your client application is connected to the best possible application instance to provide an edge connection.
 
@@ -38,7 +38,7 @@ The primary reason MobiledgeX associates each DME with a MCC-MNC is to create a 
 - Minimizing the number of network hops required to reach an application instance hosted by the same cellular operator as the end user.
 
 
-To minimize latency using MobiledgeX and ensure a fast and stable edge connection, building application for devices with a cellular connection is highly recommended. However, for use cases with devices that do not have a cellular connection and can only connect to the internet with Wifi, MobiledgeX offers regional DMEs, which are responsible for all application instances on cloudlets within a given deployable region like EU, US, or KR. For example, `https://eu-mexdemo.dme.mobiledgex.net:38001/` is responsible for managing application instances and cloudlets deployed to the EU region. To see what cloudlets are associated with a given region, you can check the [cloudlets](https://developers.mobiledgex.com/deployments/deployment-workflow/cloudlets) page within the MobiledgeX console.
+To minimize latency using MobiledgeX and ensure a fast and stable edge connection, building application for devices with a cellular connection is highly recommended. However, for use cases with devices that do not have a cellular connection and can only connect to the internet with Wifi, MobiledgeX offers regional DMEs, which are responsible for all application instances on cloudlets within a given deployable region like EU, US, or KR. For example, `https://eu-mexdemo.dme.mobiledgex.net:38001/` is responsible for managing application instances and cloudlets deployed to the EU region. To see what cloudlets are associated with a given region, you can check the [cloudlets](/developer/deployments/deployment-workflow/cloudlets/index.md) page within the MobiledgeX console.
 
 To make managing these regions easier, we also provide a WiFi DME (`https://wifi.dme.mobiledgex.net:38001/` ), which will send requests to the closest regional DME. In our SDKs, you can use the `UseWifiOnly(true)` function to send all DME requests to the WiFi DME instead of sending requests to the DME with your device’s associated MCC-MNC.
 
@@ -47,7 +47,7 @@ Whether you are developing an application using our REST APIs or leveraging our 
 - Using our **REST APIs**, your app will be responsible for selecting the appropriate DME. If your app cannot get MCC-MNC information, we recommend connecting to the Wifi DME.
 - Using our **SDKs**, the `MatchingEngine` class will automatically select the appropriate DME based on your device’s cellular MCC-MNC. If your device doesn’t have a cellular connection, please call `UseWifiOnly(true)` on the MatchingEngine.
 
-For our [Android](https://developers.mobiledgex.com/sdks/android-sdk) and [iOS](https://developers.mobiledgex.com/sdks/ios-sdk) SDKs, we recommend using the `MatchingEngine` class. For the [Unity SDK](https://developers.mobiledgex.com/sdks/unity-sdk), we recommend using the `MobiledgeXIntegration` class.
+For our [Android](/developer/sdks/android-sdk/index.md) and [iOS](/developer/sdks/ios-sdk/index.md) SDKs, we recommend using the `MatchingEngine` class. For the [Unity SDK](/developer/sdks/unity-sdk/index.md), we recommend using the `MobiledgeXIntegration` class.
 
 In the next few sections, we will cover the various API requests and the order in which you will use these APIs to make a network request.
 
@@ -74,7 +74,7 @@ dme.RegisterClient(rc); //network call
 dme.RegisterClient(DMEURL, DMEPORT, rc); //network call with DME Override
 ```
 
-`RegisterClient` is primarily used to verify that your application has been created. If the application definition does not exist for your organization, the status will return `RS_FAIL`. If this occurs, provide an [application definition](https://developers.mobiledgex.com/deployments/deployment-workflow/app-definition) for your organization and resend the API request.
+`RegisterClient` is primarily used to verify that your application has been created. If the application definition does not exist for your organization, the status will return `RS_FAIL`. If this occurs, provide an [application definition](/developer/deployments/deployment-workflow/app-definition/index.md) for your organization and resend the API request.
 
 ## Find Cloudlet
 

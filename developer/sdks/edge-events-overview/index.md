@@ -15,7 +15,7 @@ EdgeEvents is a streaming API that provides a bidirectional connection between t
 
 ![Edge Events Architecture](/developer/assets/Edge-Events.jpg "Edge Events Architecture")
 
-EdgeEvents also provides a wealth of statistics related to device, location, and latency through visualizations in the MobiledgeX console or MC APIs (mcctl). Developers can see user location patterns or latency heat maps to help figure out where to deploy new app instances. Developers can also see stats about the device information of their users to gain insights into their user base. These insights can be viewed on the [Monitoring](/deployments/monitoring-and-metrics/monitoring-edge-events) page of the MobiledgeX Edge-Cloud Console.
+EdgeEvents also provides a wealth of statistics related to device, location, and latency through visualizations in the MobiledgeX console or MC APIs (mcctl). Developers can see user location patterns or latency heat maps to help figure out where to deploy new app instances. Developers can also see stats about the device information of their users to gain insights into their user base. These insights can be viewed on the [Monitoring](/developer/deployments/monitoring-and-metrics/monitoring-edge-events/index.md) page of the MobiledgeX Edge-Cloud Console.
 
 ![Edge Events Map View](/developer/assets/monitoring/edge-events/cloudlet-location-default-page.png "Edge Events Map View")
 
@@ -49,7 +49,7 @@ Integrating Edge Events into your Application Lifecycle can be simply done in th
 
 - Find your first Application Instance using RegisterClient and FindCloudlet methods in the SDK.
 - Choose whether to enable or disable auto-migration to a new Application Instance. By default, this is enabled and will automatically switch your Edge Events connection to receive updates from a better instance when found. If this is not desired, you can disable it.
-- Create either a Default Configuration or a Custom Configuration for Edge Events. If you choose to use [Performance Mode](/design/best-practice-sdk#proximity-vs-performance-mode--), which validates that the instance you connect to has the lowest latency, then you will be required to provide a port (preferably TCP) to determine latency.
+- Create either a Default Configuration or a Custom Configuration for Edge Events. If you choose to use [Performance Mode](/developer/design/best-practice-sdk#proximity-vs-performance-mode--/index.md), which validates that the instance you connect to has the lowest latency, then you will be required to provide a port (preferably TCP) to determine latency.
 - Call Start Edge Events from the MobiledgeX Matching Engine and pass in your configuration.
 - If you would like to end Edge Events earlier for any reason, your app can call Stop Edge Events.
 

@@ -9,7 +9,7 @@ Lists new features and known issues for the MobiledgeX Edge-Cloud Console.
 
 With the release of [Edge-Cloud R2.0](https://mobiledgex.com/product), a number of capabilities such as the management, operations and monitoring of application deployments and resources are available through an easy-to-use [Edge-Cloud Console](https://console.mobiledgex.net/site1?pg=0). As a Developer, you can use the console to manage your software deployment across all operator’s distributed edge infrastructure, further simplifying the deployment of enterprise resources and applications. Operators, on the other hand,  can use the [Edge-Cloud Console](https://console.mobiledgex.net/site1?pg=0) to monitor the usage of the Operator-owned Cloudlets. Both Developers and Operators can monitor and manage most of their operations through a single pane of glass.
 
-For a comprehensive list of features and capabilities, refer to our recent announcement of [Edge-Cloud 2.0](https://mobiledgex.com/product). Documentation and Resources can be found on our [Developer Portal](https://developers.mobiledgex.com/), where we continuously publish new documentation and resources to help you realize the potential of our solutions and offerings.
+For a comprehensive list of features and capabilities, refer to our recent announcement of [Edge-Cloud 2.0](https://mobiledgex.com/product). Documentation and Resources can be found on our [Developer Portal](/developer/index.md), where we continuously publish new documentation and resources to help you realize the potential of our solutions and offerings.
 
 The table below lists specific features added to our [Edge-Cloud Console](https://console.mobiledgex.net/site1?pg=0).
 

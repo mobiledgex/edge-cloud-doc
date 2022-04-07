@@ -140,7 +140,7 @@ After you’ve successfully deployed your application, information about your de
 
 ## Step 7: Monitor and View Audit Logs
 
-You can view and monitor historical activities made by you, or others, within your organization. Select **Monitoring** from the left navigation to view historical activities through a single pane of glass. For more information on monitoring and audit logs, see the [Edge-Cloud Console Monitoring Guide](https://developers.mobiledgex.com/deployments/monitoring-and-metrics).
+You can view and monitor historical activities made by you, or others, within your organization. Select **Monitoring** from the left navigation to view historical activities through a single pane of glass. For more information on monitoring and audit logs, see the [Edge-Cloud Console Monitoring Guide](/developer/deployments/monitoring-and-metrics/index.md).
 
 ## Step 8: Verify App via Web Browser
 

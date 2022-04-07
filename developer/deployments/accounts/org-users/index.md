@@ -15,7 +15,7 @@ Before you can distribute, upload, and manage applications on the MobiledgeX pla
 
 You must create an organization upon logging onto the console for the first time. Additional organizations can be formed after that. Organization names must be all one word, with no spaces or special characters.
 
-**Note:** It’s best practice to keep the name of your organizations all in lower-case. There are sample files in our tutorials and workshops that require specifying organization names in lower-case to ensure your application uploads successfully to our registries. See Step 2 within the [Deploying an Application to the MobiledgeX platform](/services/computer-vision/how-to-deploy-a-backend-application-to-mobiledgex) guide for an example.
+**Note:** It’s best practice to keep the name of your organizations all in lower-case. There are sample files in our tutorials and workshops that require specifying organization names in lower-case to ensure your application uploads successfully to our registries. See Step 2 within the [Deploying an Application to the MobiledgeX platform](/developer/services/computer-vision/how-to-deploy-a-backend-application-to-mobiledgex/index.md) guide for an example.
 
 After logging onto the [Edge-Cloud Console](https://console.mobiledgex.net), the first screen that appears is the Organizations page. This screen is where you add your organizations and users(*optional*).
 

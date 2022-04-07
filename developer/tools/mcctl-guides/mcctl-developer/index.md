@@ -21,7 +21,7 @@ The `mcctl` utility provides the following:
 - Output formatting options (json, compact json, yaml).
 - Online help/usage information.
 
-The `mcctl` utility is available for Linux x86_64 and macOS, and can be downloaded from the MobiledgeX Artifactory repository. To download the `mcctl` utility, visit the [mcctl Installation and Setup Guide](https://developers.mobiledgex.com/tools/mcctl-guides/mcctl-reference/mcctl-installation-and-setup-guide/).
+The `mcctl` utility is available for Linux x86_64 and macOS, and can be downloaded from the MobiledgeX Artifactory repository. To download the `mcctl` utility, visit the [mcctl Installation and Setup Guide](/developer/tools/mcctl-guides/mcctl-reference/mcctl-installation-and-setup-guide/index.md).
 
 ## Exercise Parameters
 
@@ -1897,5 +1897,5 @@ $
 
 ### Where to go from here
 
-For reference information about the `mcctl` utility, refer to the [mcctl utility Reference](/tools/mcctl-guides/mcctl-reference) guide.
+For reference information about the `mcctl` utility, refer to the [mcctl utility Reference](/developer/tools/mcctl-guides/mcctl-reference/index.md) guide.
 
