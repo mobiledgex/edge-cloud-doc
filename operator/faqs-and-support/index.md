@@ -7,7 +7,7 @@ description: Access the MobiledgeX most frequently asked questions and answers o
 
 ## Support  
 
-If you have any questions about our product and usage, please review our existing documentation on our [Operator Portal](https://operators.mobiledgex.com/) or consult the FAQs section below. If you cannot find what you are looking for, please contact our [support@mobiledgex.com](support@mobiledgex.com).
+If you have any questions about our product and usage, please review our existing documentation on our [Operator Portal](/operator/index.md) or consult the FAQs section below. If you cannot find what you are looking for, please contact our [support@mobiledgex.com](support@mobiledgex.com).
 
 ## FAQs
 

@@ -13,16 +13,16 @@ Cloudlet Pools are collections of cloudlets that are defined on a per-regional b
 
 - Operators must <strong>
 *own*
-</strong> the cloudlets they wish to add members to by [creating the Cloudlet Pool](https://operators.mobiledgex.com/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools#to-create-a-cloudlet-pool).
+</strong> the cloudlets they wish to add members to by [creating the Cloudlet Pool](/operator/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools#to-create-a-cloudlet-pool/index.md).
 - If a cloudlet is not part of a pool, it’s considered a public cloudlet.
 - Cloudlets assigned to one or more pools are considered private cloudlets.
 - A Cloudlet Pool may be associated with one or more organizations, allowing users within that organization to access and use those cloudlets to deploy their applications.
 - Auto-clusters are reserved only for private cloudlets, or members of the cloudletpool. Operators will not be able to see clusters or app instances on public cloudlets.Organizations not associated with a Cloudlet Pool will not see or have access to those cloudlets.
 - Targeted organizations associated with Cloudlet Pools may still deploy their applications to other public cloudlets, or to other private cloudlets from other organizations or pools.
 
-- Operators can view developers’ logs and events from the [monitoring](https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/) dashboard if they are part of the Cloudlet Pool.
+- Operators can view developers’ logs and events from the [monitoring](/operator/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/index.md) dashboard if they are part of the Cloudlet Pool.
 
-Finally, to offer managed edge services to end customers, the platform must provide access to the Operator, allowing the collection of metrics used to detect performance anomalies and institute measures that increase their customer’s workloads’ operational efficiencies. A list of insights provided by the platform can be found at[ https://developers.mobiledgex.com/design/testing-and-debugging](https://developers.mobiledgex.com/design/testing-and-debugging).
+Finally, to offer managed edge services to end customers, the platform must provide access to the Operator, allowing the collection of metrics used to detect performance anomalies and institute measures that increase their customer’s workloads’ operational efficiencies. A list of insights provided by the platform can be found at[ https://developers.mobiledgex.com/design/testing-and-debugging](/operator/developer/design/testing-and-debugging/index.md/index.md).
 
 ## To Create a Cloudlet Pool
 
@@ -53,7 +53,7 @@ If you wish to invite additional organizations or remove organizations as member
 
 ![Cloudlet Pools: Actions menu options](/operator/assets/cloudlet-pool-actions-menu.png "Cloudlet Pools: Actions menu options")
 
-Once Developers are part of your Cloudlet Pool, you may view Developer metrics. For more information, refer to the [Monitoring and Metrics Guide](https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/).
+Once Developers are part of your Cloudlet Pool, you may view Developer metrics. For more information, refer to the [Monitoring and Metrics Guide](/operator/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/index.md).
 
 ### Permissions and roles
 

@@ -1054,7 +1054,7 @@ The following `mcctl` command is helpful for Cloudlet Pool owners to check the u
 
 The information is presented as an event feed for when the resources were reserved (CREATED) and released (DELETED).
 
-This information can also be extracted from the Edge-Cloud Console, shown in the [Monitoring: Events, Usage, and Metrics](https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/) guide.<br>
+This information can also be extracted from the Edge-Cloud Console, shown in the [Monitoring: Events, Usage, and Metrics](/operator/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/index.md) guide.<br>
 
 ```
 $ mcctl --addr https://console.mobiledgex.net billingevents

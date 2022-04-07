@@ -58,7 +58,7 @@ The AlertManager is designed to be configurable via the MobiledgeX APIs, both di
 | Delete an Alert Receiver | `api/v1/auth/alertreceiver/delete` |
 | Show all Alert Receivers | `api/v1/auth/alertreceiver/show`   |
 
-For detailed AlertReceiver API examples, please refer to the [mcctl Utility Reference](https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference#alertreceiver-example) guide.
+For detailed AlertReceiver API examples, please refer to the [mcctl Utility Reference](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference#alertreceiver-example/index.md) guide.
 
 ### Set up alert receivers and notification methods through the console
 

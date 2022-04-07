@@ -148,7 +148,7 @@ infraflavor: m4.medium
 ...
 ```
 
-More details about these commands can be found in the [mcctl Utility Reference](https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/) guide.
+More details about these commands can be found in the [mcctl Utility Reference](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference/index.md) guide.
 
 ### Report Scheduler
 

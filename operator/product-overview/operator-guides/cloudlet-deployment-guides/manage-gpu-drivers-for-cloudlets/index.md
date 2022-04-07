@@ -164,7 +164,7 @@ Once a GPU driver is associated with a cloudlet, MobiledgeX services will automa
 
 ### Step 3: Monitor usage statistics for GPU resources across cloudlets
 
-Operators are provided with statistics on the count of GPUs used across their cloudlets. This gives operators a better insight into the usage pattern of GPUs that can help with cost optimization. This can be viewed in the [Monitoring](https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/) section of the MobiledgeX Edge-Cloud Console.
+Operators are provided with statistics on the count of GPUs used across their cloudlets. This gives operators a better insight into the usage pattern of GPUs that can help with cost optimization. This can be viewed in the [Monitoring](/operator/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/index.md) section of the MobiledgeX Edge-Cloud Console.
 
 MobiledgeX provides insight into GPU usage across cloudlets, so operators can understand usage patterns and help with cost optimization.
 

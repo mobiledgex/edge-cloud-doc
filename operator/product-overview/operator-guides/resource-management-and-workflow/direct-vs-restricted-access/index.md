@@ -7,7 +7,7 @@ description: Learn about the different access types used depending on the IaaS t
 
 ## Resource Management and Workflow
 
-MobiledgeX presently supports [OpenStack Tenant Deployment](https://operators.mobiledgex.com/supported-iaas-stacks/openstack/openstack-tenant-deployment) as the Virtual Machine Orchestration layer.
+MobiledgeX presently supports [OpenStack Tenant Deployment](/operator/supported-iaas-stacks/openstack/openstack-tenant-deployment/index.md) as the Virtual Machine Orchestration layer.
 
 With the OpenStack model, the MobiledgeX Platform is a tenant on an existing OpenStack environment within the operator’s infrastructure. As the operator, you register your cloudlet by providing MobiledgeX with a pool of compute resources and access to the OpenStack API endpoint by specifying a few required parameters, such as dynamic IP addresses, cloudlet names, location of cloudlets, certs, and more, using the [Edge-Cloud Console](https://console.mobiledgex.net/#/). MobiledgeX relies on this information to remotely access the cloudlets to determine resource requirements as well as dynamically track usage. Once MobiledgeX completes its remote probe of the operator’s infrastructure, a record of inventory is maintained within a cloudlet registry.
 
@@ -17,8 +17,7 @@ With the OpenStack model, the MobiledgeX Platform is a tenant on an existing Ope
 
 MobiledgeX relies on the ability to access the operator’s infrastructure (API endpoint) to set up the cloudlets via the Controller to perform various operational tasks. Providing MobiledgeX Direct access makes it seamless for MobiledgeXAdmin to access the operator’s API endpoint through a public network, and to perform those tasks. However, we understand that different operators often use varying security methods, so providing MobiledgeX with Direct access to the API endpoint over the public network may not always be feasible. To overcome this challenge, MobiledgeX provides operators with a means to restrict access from the public network to their infrastructure by specifying the Restricted access type through the [Edge-Cloud Console](https://console.mobiledgex.net/#/). Using the Restricted access type will allow MobiledgeX to create a cloudlet object to then create cloudlets.
 
-If Restricted access type is used, operators are required to take additional steps to ensure their infrastructure is set up so that access to the API endpoint is available and information can be exchanged. Operators will need to create their cloudlets by following a few steps provided directly within a cloudlet Manifest file to bring up the cloudlet. For steps on how to set up Restricted access, refer to the steps as described in <a href="https://operators.mobiledgex.com/edge-cloud-console-guide-for-operators#to-create-and-deploy-cloudlets-using-restricted-access">
-**To create and deploy cloudlets using Restricted access**.</a>
+If Restricted access type is used, operators are required to take additional steps to ensure their infrastructure is set up so that access to the API endpoint is available and information can be exchanged. Operators will need to create their cloudlets by following a few steps provided directly within a cloudlet Manifest file to bring up the cloudlet. For steps on how to set up Restricted access, refer to the steps as described in [To create and deploy cloudlets using Restricted access](/operator/edge-cloud-console-guide-for-operators/index.md).
 
 ## OpenRC and CACert Data for OpenStack Cloud Management
 

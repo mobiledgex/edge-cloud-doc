@@ -15,7 +15,7 @@ In addition to monitoring operator-specific events and metrics, you can also vie
 
 To access monitoring information, you need to be part of the organization that owns the object being queried. For example, to be able to query information about a given cluster or application instance, or cloudlets, you must be part of the organization that owns the cluster or application.
 
-Account management is out of scope for this document, but an explanation of the roles available within the MobiledgeX platform and the security considerations for those roles are available in the [Organizations and Users Guide](https://operators.mobiledgex.com/product-overview/operator-guides/account-management/organizations-and-users/) as well as the [mcctl Utility Reference](https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#account-management) guide.
+Account management is out of scope for this document, but an explanation of the roles available within the MobiledgeX platform and the security considerations for those roles are available in the [Organizations and Users Guide](/operator/product-overview/operator-guides/account-management/organizations-and-users/index.md) as well as the [mcctl Utility Reference](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference/index.md) guide.
 
 ### Trace ID 
 
@@ -31,13 +31,13 @@ There are three monitoring components provided by the MobiledgeX platform in whi
 - Usage Logs
 - Metrics
 
-Details are provided below for each of the three monitoring components, including an overview of how to use the monitoring information from both the Edge-Cloud Console and the MobiledgeX API. Some examples of the `mcctl`commands will be used in this document to demonstrate how to retrieve events, usage, and metric information, but we will not cover their complete usage in detail. If you would like to learn more about these commands, refer to the [mcctl Utility Reference](https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#account-management) guide.
+Details are provided below for each of the three monitoring components, including an overview of how to use the monitoring information from both the Edge-Cloud Console and the MobiledgeX API. Some examples of the `mcctl`commands will be used in this document to demonstrate how to retrieve events, usage, and metric information, but we will not cover their complete usage in detail. If you would like to learn more about these commands, refer to the [mcctl Utility Reference](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference/index.md) guide.
 
 ## Events and Audit Events
 
 The MobiledgeX platform logs events and audit events as they occur. Unlike metrics, which are collected on an ongoing basis on intervals that you define, events include lifecycle milestones such as **applications** created, **clusters** deployed, or **cloudlets** deployed. They are collected as they occur, while audits capture and provide the records of the events.  You can only view events and audit events from Organizations that you are part of.
 
-Events and audits events generate logs that you can use to understand the applications, cloudlets, and their usage and any performance issues detected through a trail of events which include what occurred, when, and where. *Audit logs* may include capturing activities such as logging, creating applications, deleting users, creating policies, etc. You can specify a range within the audit log display by using a range selector (calendar). On the other hand*, event logs *may include system-generated events that include services like auto-provision policy, auto-scaling, application instance, or HA. You can set up notifications of alerts when certain threshold conditions are met or exceeded. For more on **alerts**, see the [Health Check and Alerts Guide](https://operators.mobiledgex.com/product-overview/operator-guides/debugging/health-check-and-alert/#alerts).
+Events and audits events generate logs that you can use to understand the applications, cloudlets, and their usage and any performance issues detected through a trail of events which include what occurred, when, and where. *Audit logs* may include capturing activities such as logging, creating applications, deleting users, creating policies, etc. You can specify a range within the audit log display by using a range selector (calendar). On the other hand*, event logs *may include system-generated events that include services like auto-provision policy, auto-scaling, application instance, or HA. You can set up notifications of alerts when certain threshold conditions are met or exceeded. For more on **alerts**, see the [Health Check and Alerts Guide](/operator/product-overview/operator-guides/debugging/health-check-and-alert/index.md).
 
 Viewing events and audit events are role-based. Therefore, access to the different events and audit events are specific to the role.
 
@@ -65,7 +65,7 @@ Available Commands:
 
 ```
 
-<br>For more information on these commands and usages, refer to the [MCCTL Reference Guide](https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#event-commands). For this guide, we will be focusing more on using the user interface to view the different event types.
+<br>For more information on these commands and usages, refer to the [MCCTL Reference Guide](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference/index.md). For this guide, we will be focusing more on using the user interface to view the different event types.
 
 The same events that are presented using the `mcctl` commands can also be viewed from the Edge-Cloud Console, as described in the next section.
 
@@ -371,7 +371,7 @@ $ mcctl usage app region=US cluster=dockermonitoring appname=app-us cloudlet-org
 117      - 4.65372574416167e+14 118      - DELETED
 ```
 
-For more information on these commands and usages, refer to the [MCCTL Reference Guide](https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#event-commands). For this guide, we will be focusing more on using the user interface to view the different usage logs.
+For more information on these commands and usages, refer to the [MCCTL Reference Guide](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference/index.md). For this guide, we will be focusing more on using the user interface to view the different usage logs.
 
 ### Using the Edge-Cloud Console to view usage logs
 
@@ -401,7 +401,7 @@ Metrics refer to the availability of resources such as vCPU, memory, disk, RAM, 
 - Clusters
 - Application Instances
 
-Collecting resource metrics is useful if you use them in conjunction with [alerts](https://operators.mobiledgex.com/product-overview/operator-guides/debugging/health-check-and-alert/#alerts) that can help you identify issues and quickly respond to them. For example, you can set alerts and be notified when you have exceeded the threshold for vCPU. Metric information can also be useful when you want to understand the utilization of your resources to determine the percentage of your resource’s capacity that is in use and whether to increase them based on user demand.
+Collecting resource metrics is useful if you use them in conjunction with [alerts](/operator/product-overview/operator-guides/debugging/health-check-and-alert/index.md) that can help you identify issues and quickly respond to them. For example, you can set alerts and be notified when you have exceeded the threshold for vCPU. Metric information can also be useful when you want to understand the utilization of your resources to determine the percentage of your resource’s capacity that is in use and whether to increase them based on user demand.
 
 ### Using the MobiledgeX API to view metrics
 
@@ -421,7 +421,7 @@ Available Commands:
 
 ```
 
-For more information on these commands and usages, refer to the [mcctl Utility Reference](https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#event-commands) guide. For this guide, we will be focusing more on using the user interface to view metrics information.
+For more information on these commands and usages, refer to the [mcctl Utility Reference](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference/index.md) guide. For this guide, we will be focusing more on using the user interface to view metrics information.
 
 ### Using the monitoring dashboard to view metrics
 
@@ -448,7 +448,7 @@ You may find the following information displayed on your Monitoring Dashboard:
 
 ## More on metrics
 
-The following table provides a list of metrics and their details for each cluster, application instance, and cloudlets. Head over to the [mcctl Utility Reference](https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#metric-commands) guide for more information on their commands and example usages.
+The following table provides a list of metrics and their details for each cluster, application instance, and cloudlets. Head over to the [mcctl Utility Reference](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference/index.md) guide for more information on their commands and example usages.
 
 ### Cluster Metrics 
 
@@ -546,7 +546,7 @@ Performance is considered optimal when the Location tile is green, along with th
 
 ## Viewing Developer metrics
 
-As mentioned earlier, you can view Developer metrics as long as they are part of your [Cloudlet Pool](https://operators.mobiledgex.com/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools/#to-create-a-cloudlet-pool). When you first log into the Edge-Cloud Console, your default view does not include Developer metrics. However, once you invited your Developer to join your Cloudlet Pool and they have accepted the invitation, the default view will change to include Developer metrics. Please note that you may need to refresh your Monitoring Dashboard.
+As mentioned earlier, you can view Developer metrics as long as they are part of your [Cloudlet Pool](/operator/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools/index.md). When you first log into the Edge-Cloud Console, your default view does not include Developer metrics. However, once you invited your Developer to join your Cloudlet Pool and they have accepted the invitation, the default view will change to include Developer metrics. Please note that you may need to refresh your Monitoring Dashboard.
 
 To view the different types of Developer metrics, navigate to the Cloudlet drop-down option and select **App Inst**, **Cluster Inst**, or **Cloudlet**, as shown below.
 

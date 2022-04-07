@@ -182,7 +182,7 @@ At a minimum, four VMs will be required per datacenter to fully standup the envi
 
 All virtual machines created as part of this deployment will require full access to the full complement of deployed virtual machines.
 
-please refer to our [Firewall Requirement](https://operators.mobiledgex.com/product-overview/security-and-privacy-standards-policies/firewall) section for the network firewall, and security groups configuration needed.
+please refer to our [Firewall Requirement](/operator/product-overview/security-and-privacy-standards-policies/firewall/index.md) section for the network firewall, and security groups configuration needed.
 
 #### Note:
 

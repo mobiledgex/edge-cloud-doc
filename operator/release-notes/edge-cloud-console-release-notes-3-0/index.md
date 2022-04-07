@@ -7,7 +7,7 @@ description: Edge-Cloud Release Notes for 3.0
 
 The **Edge-Cloud 3.0** release offers many new features and enhancements. The following release notes cover details about these features and improvements and provide a list of known issues.
 
-Documentation and resources can be found on our [Operator Portal](https://operators.mobiledgex.com/), where we continuously publish new content and resources to help you realize the potential of our solutions and offers.
+Documentation and resources can be found on our [Operator Portal](/operator/index.md), where we continuously publish new content and resources to help you realize the potential of our solutions and offers.
 
 ### New Features on Edge-Cloud
 

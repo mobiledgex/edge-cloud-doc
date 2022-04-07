@@ -7,13 +7,9 @@ description: Edge-Cloud Release Notes for 2.4
 
 With the release of Edge-Cloud 2.4, several new capabilities and enhancements are offered, including an improved monitoring tool, implementation of CAPTCHA, new events generated for cloudlets, an alarm framework, and much more. These features offer Developers and Operators a secure way of managing accounts and provide powerful tools that easily enable both communities of users to monitor and manage their applications and cloudlets usage. Our improvements simplify day-to-day operations that quickly and proactively help mitigate issues that may arise due to performance irregularities.
 
-Documentation and resources can be found on our <strong>
-[Developer Portal](https://developers.mobiledgex.com/)
-</strong>, where we continuously publish new content and resources to help you realize the potential of our solutions and offerings.
+Documentation and resources can be found on our [Developer Portal](/developer/index.md), where we continuously publish new content and resources to help you realize the potential of our solutions and offerings.
 
-The table below lists specific features added to our <strong>
-[Edge-Cloud Console](https://console.mobiledgex.net/site1?pg=0)
-</strong>.
+The table below lists specific features added to our [Edge-Cloud Console](https://console.mobiledgex.net/site1?pg=0).
 
 ### New Features on Edge-Cloud Console
 

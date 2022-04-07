@@ -9,7 +9,7 @@ description: Learn the different ways to deploy Cloudlets
 
 MobiledgeX cloudlets are self-contained, self-managed entities that can deploy Edge applications in selected locations around the globe on heterogenous operator Infrastructure. Developers can leverage these edge clouds for internal operator workloads to run their applications on mobile network edge infrastructure. We offer two ways to deploy your cloudlets, **Direct** and **Restricted** access which are explained in detail below along with deployment steps needed for following each method.
 
-By default, cloudlets will be defined as public and are accessible for all the MobiledgeX developers to deploy their application instances. If the operator wishes to set up cloudlet as private and is accessible to only users within the operator organization or operator designated developers, please refer to our [Cloudlet Pools](https://operators.mobiledgex.com/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools) section to define cloudlet in cloudlet-pool and associate only designated organizations to access the cloudlet.
+By default, cloudlets will be defined as public and are accessible for all the MobiledgeX developers to deploy their application instances. If the operator wishes to set up cloudlet as private and is accessible to only users within the operator organization or operator designated developers, please refer to our [Cloudlet Pools](/operator/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools/index.md) section to define cloudlet in cloudlet-pool and associate only designated organizations to access the cloudlet.
 
 ## What are Auto-Clusters?
 
@@ -57,7 +57,7 @@ Some things to note about trust policies:
 
 
 - Set up your Outbound Security Rules and click **Create Policy**.
-- Apply the Trust Policy to the [cloudlet.](https://operators.mobiledgex.com/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets#to-create-and-deploy-cloudlets-using-direct-access) This step is performed during the creation of the cloudlet.
+- Apply the Trust Policy to the [cloudlet.](/operator/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets#to-create-and-deploy-cloudlets-using-direct-access/index.md) This step is performed during the creation of the cloudlet.
 - Mark applications as **trusted** and specify the required ports for the applications.<br>
 
 
@@ -65,7 +65,7 @@ Some things to note about trust policies:
 
 As an OperatorManager, you can enable members of your organization to onboard cloudlets, run and deploy edge applications, and test locally without impacting existing network infrastructure. When you create an operator organization, the organization is operating in a default restricted mode: `edge-box only`, which only allows members within your organization to deploy cloudlets locally on their machine.  To change this default mode, contact support@mobiledgex.com to lift the restriction and allow members of your organization to deploy onto Operator cloudlets. They can specify the platform type as platformtype=`PlatformTypeEdgebox` or they can select EdgeBox from the *PlaftformType* field on the Create Cloud page.
 
-For more information about EdgeBox, see [EdgeBox Proof of Concept Testing](https://operators.mobiledgex.com/product-overview/operator-guides/edgebox-proof-of-concept-testing/).
+For more information about EdgeBox, see [EdgeBox Proof of Concept Testing](/operator/product-overview/operator-guides/edgebox-proof-of-concept-testing/index.md).
 
 ### Direct access
 

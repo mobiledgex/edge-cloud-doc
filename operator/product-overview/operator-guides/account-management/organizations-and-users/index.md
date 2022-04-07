@@ -11,7 +11,7 @@ description: Add organizations and manager users
 
 Before you can start creating and deploying cloudlets, you need to create an organization. You can think of an organization as a group of users on the MobiledgeX platform tasked with creating and deploying cloudlets or managing the health of those cloudlets.
 
-You may add developer or operator users to your organization at any time either during or after creating your organization. However, members of your organization, by default, will not have permissions to create cloudlets. For more information, see the section on [Disabling Edgebox](https://operators.mobiledgex.com/product-overview/operator-guides/account-management/organizations-and-users#disabling-edgebox).
+You may add developer or operator users to your organization at any time either during or after creating your organization. However, members of your organization, by default, will not have permissions to create cloudlets. For more information, see the section on [Disabling Edgebox](/operator/product-overview/operator-guides/account-management/organizations-and-users#disabling-edgebox/index.md).
 
 You must create an organization upon logging into the console for the first time. Additional organizations may be formed once the initial organization is built. Organization names must be all one word, with no spaces or special characters.
 
