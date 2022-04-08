@@ -14,14 +14,20 @@ The examples below request the output in JSON format, but it is possible to retr
 **Note:** The `mcctl` utility provides a stable interface to the MobiledgeX APIs. The API can be accessed directly, but the API interface is subject to change.
 
 ```
-$ mcctl --addr [https://console.mobiledgex.net](https://console.mobiledgex.net)  metrics
+$ mcctl metrics
+Usage: mcctl metrics [flags] [command]
+
+Available Commands:
+  app                  View App metrics
+  cluster              View ClusterInst metrics
+  cloudlet             View Cloudlet metrics
+  cloudletusage        View Cloudlet usage
+  clientapiusage       View client API usage
+  clientappusage       View client App usage
+  clientcloudletusage  View client Cloudlet usage
+  appv2                View App metrics(v2 format)
+
 ```
-
-The metrics command will show metrics for:
-
-- `applications`
-- `clusters`
-- `cloudlets`
 
 All metrics commands can be qualified with a time or duration parameter.
 
@@ -36,21 +42,27 @@ Several of the `mcctl` subcommands accept a start/end time to filter output. T
 ## Application Level Metrics
 
 ```
+$ mcctl metrics app
+Usage: mcctl metrics app [flags] [args]
+
 Required Args:
-  region        Region name
-  app-org       Organization or Company name of the App
-  selector      Comma separated list of metrics to view
+  region                  Region name
+  selector                Comma separated list of metrics to view. Available metrics: "cpu", "mem", "disk", "network", "connections", "udp"
 
 Optional Args:
-  appname       App name
-  appvers       App version
-  cluster       Cluster name
-  cluster-org   Organization or Company Name that a Cluster is used by
-  cloudlet      Name of the cloudlet
-  cloudlet-org  Company or Organization name of the cloudlet
-  last          Display the last X metrics
-  starttime     Time to start displaying stats from
-  endtime       Time up to which to display stats
+  limit                   Display the last X metrics
+  numsamples              Display X samples spaced out evenly over start and end times
+  starttime               Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime                 Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage                Relative age from now of search range start (default 48h)
+  endage                  Relative age from now of search range end (default 0)
+  appinsts:#.apporg       Organization or Company name of the App
+  appinsts:#.appname      App name
+  appinsts:#.appvers      App version
+  appinsts:#.cluster      Cluster name
+  appinsts:#.clusterorg   Organization or Company Name that a Cluster is used by
+  appinsts:#.cloudletorg  Company or Organization name of the cloudlet
+  appinsts:#.cloudlet     Name of the cloudlet
 
 ```
 
@@ -305,7 +317,7 @@ data:
 
 ```
 
-### Disk Example
+### Disk example
 
 The filesystem usage for an app instance in bytes.
 
@@ -688,18 +700,24 @@ Transfer-Encoding: chunked
 ## Cluster Level Metrics
 
 ```
+$ mcctl metrics cluster
+Usage: mcctl metrics cluster [flags] [args]
+
 Required Args:
-  region        Region name
-  cluster-org   Organization or Company Name that a Cluster is used by
-  selector      Comma separated list of metrics to view
+  region                      Region name
+  selector                    Comma separated list of metrics to view. Available metrics: "cpu", "mem", "disk", "network", "tcp", "udp"
 
 Optional Args:
-  cluster       Cluster name
-  cloudlet-org  Company or Organization name of the cloudlet
-  cloudlet      Name of the cloudlet
-  last          Display the last X metrics
-  starttime     Time to start displaying stats from
-  endtime       Time up to which to display stats
+  limit                       Display the last X metrics
+  numsamples                  Display X samples spaced out evenly over start and end times
+  starttime                   Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime                     Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage                    Relative age from now of search range start (default 48h)
+  endage                      Relative age from now of search range end (default 0)
+  clusterinsts:#.cluster      Cluster name
+  clusterinsts:#.clusterorg   Organization or Company Name that a Cluster is used by
+  clusterinsts:#.cloudletorg  Company or Organization name of the cloudlet
+  clusterinsts:#.cloudlet     Name of the cloudlet
 
 ```
 

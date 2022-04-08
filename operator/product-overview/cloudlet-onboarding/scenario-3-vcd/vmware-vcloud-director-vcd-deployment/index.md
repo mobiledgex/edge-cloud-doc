@@ -11,15 +11,124 @@ MobiledgeX is provided access to an Organizational Virtual Datacenter (Org VDC).
 
 ## VCD Deployment Requirements Checklist
 
-| **VMware version**   | **Networking**                   | **Resources Pool Minimum for Trial** | **Preferred Resources** | **Storage**                                  | **Org VDC Tenant Permissions**                                                        |
-|----------------------|----------------------------------|--------------------------------------|-------------------------|----------------------------------------------|---------------------------------------------------------------------------------------|
-| vCloud Director 10.0 | NSX-V plus distributed vSwitches | 32-64 vCPU                           | 200 vCPU                | Single shared  datastore for compute cluster | Organization Administrator role required. Vapp leases should be set to ’never expire’ |
-| vCloud Director 10.1 | NSX-T plus distributed vSwitches | 32-64 vCPU                           | 200 vCPU                | Single shared  datastore for compute cluster | Organization Administrator role required. Vapp leases should be set to ’never expire’ |
-| vCloud Director 10.2 | NSX-T plus distributed vSwitches | 32-64 vCPU                           | 200 vCPU                | Single shared  datastore for compute cluster | Organization Administrator role required. Vapp leases should be set to ’never expire’ |
-| vSphere 6.7 (ESXi)   | 8 public IPv4 addresses          | 128-256G RAM                         | 500G RAM                |
-| vCenter Server 6.7   | 500G-1TB Disk                    | 2TB Disk                             |
-| NSX-T                |
-| NSX-V                |
+<table>
+<tbody>
+<tr>
+<td>
+
+**VMware version**
+</td>
+<td>
+
+**Networking**
+</td>
+<td>
+
+**Resources Pool Minimum for Trial**
+</td>
+<td>
+
+**Preferred Resources**
+</td>
+<td>
+
+**Storage**
+</td>
+<td colspan="1" rowspan="1">
+
+**Org VDC Tenant Permissions**
+</td>
+</tr>
+<tr>
+<td>vCloud Director 10.0</td>
+<td>NSX-V plus distributed vSwitches</td>
+<td>32-64 vCPU</td>
+<td>200 vCPU</td>
+<td>
+
+Single shared  datastore for compute cluster
+
+</td>
+<td>Organization Administrator role required. Vapp leases should be set to ’never expire’</td>
+</tr>
+<tr>
+<td>vCloud Director 10.1</td>
+<td>NSX-T plus distributed vSwitches</td>
+<td>32-64 vCPU</td>
+<td>200 vCPU</td>
+<td>
+
+Single shared  datastore for compute cluster
+
+</td>
+<td>Organization Administrator role required. Vapp leases should be set to ’never expire’</td>
+</tr>
+<tr>
+<td>vCloud Director 10.2</td>
+<td>NSX-T plus distributed vSwitches</td>
+<td>32-64 vCPU</td>
+<td>200 vCPU</td>
+<td>
+
+Single shared  datastore for compute cluster
+
+</td>
+<td>Organization Administrator role required. Vapp leases should be set to ’never expire’</td>
+</tr>
+<tr>
+<td>vSphere 6.7 (ESXi)</td>
+<td>
+
+8 public IPv4 addresses
+
+</td>
+<td>
+
+128-256G RAM
+
+</td>
+<td>
+
+500G RAM
+
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vCenter Server 6.7</td>
+<td></td>
+<td>
+
+500G-1TB Disk
+
+</td>
+<td>
+
+2TB Disk
+
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NSX-T</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NSX-V</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 **Note:** Empty cells intentionally left blank.
 
@@ -27,15 +136,35 @@ MobiledgeX is provided access to an Organizational Virtual Datacenter (Org VDC).
 
 MobiledgeX’s Cloudlet Manager Plugin accesses the VCD API endpoint to install the MobiledgeX Platform service referred to as the Cloudlet Resource Manager (CRM). The CRM acts as a Tenant of the Operator’s Virtualization Layer and utilizes VCD APIs to manage applications. The CRM also provides the infrastructure and application runtime statistics to the MobiledgeX Controller (over the Internet). MobiledgeX stores the credentials to the API securely. MobiledgeX requires that both Organization and Tenant access on the IaasS API level is granted via private and public API endpoints. It is not a requirement to place the IaaS endpoint directly on a public IP; it can reside behind a jumphost or by other security measures. However, the VCD API endpoint must be reachable from within the cloudlet itself.
 
-The following values must be populated to enable MobiledgeX deployment within VCD:
-
-| Variable     | Description                                     |
-|--------------|-------------------------------------------------|
-| VDC_NAME     | Name of the Organizational Virtual Datacenter   |
-| VCD_ORG      | Name of the Organization assigned to MobiledgeX |
-| VCD_USER     | Username for MobiledgeX user                    |
-| VCD_PASSWORD | Password for MobiledgeX user                    |
-| VCD_IP       | Cloud Director API endpoint address             |
+The following values must be populated to enable MobiledgeX deployment within VCD.
+<table>
+<tbody>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>VDC_NAME</td>
+<td>Name of the Organizational Virtual Datacenter</td>
+</tr>
+<tr>
+<td>VCD_ORG</td>
+<td>Name of the Organization assigned to MobiledgeX</td>
+</tr>
+<tr>
+<td>VCD_USER</td>
+<td>Username for MobiledgeX user</td>
+</tr>
+<tr>
+<td>VCD_PASSWORD</td>
+<td>Password for MobiledgeX user</td>
+</tr>
+<tr>
+<td>VCD_IP</td>
+<td>Cloud Director API endpoint address</td>
+</tr>
+</tbody>
+</table>
 
 ### VCD APIs
 

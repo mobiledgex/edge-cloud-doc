@@ -10,14 +10,46 @@ description: Learn how to map resources from the MobiledgeX platform to IaaS pla
 The MobiledgeX platform exposes unique node IDs for all deployed Cluster Instances (ClusterInsts) via the API. This allows for mapping resources within the MobiledgeX platform to resources in the underlying IaaS (VMware, OpenStack, Google Compute, AWS, Azure). This can be used by Operators to better manage and monitor the resources in use within their cloudlet.
 
 This information is provided in a `vms` array under the `resources` array for cluster information. The following values are exposed:
-| Item        | Meaning                            | Type   | Example                                                                                                 |
-|-------------|------------------------------------|--------|---------------------------------------------------------------------------------------------------------|
-| name        | vm name                            | string | mex-k8s-node-1-mexplat-stage-hamburg-cloudlet-test-mobiledgex”Unique, with actual format IaaS dependent |
-| type        | type of vm                         | string | loadbalancer, cluster-master, cluster-node                                                              |
-| status      | state of vm                        | string | ACTIVE, STOPPED                                                                                         |
-| infraflavor | vm’s IaaS flavor                   | string | m4.small                                                                                                |
-| ip_address  | external and internal ip addresses | array  | external IP: x.x.x.x                                                                                    |
-
+<table>
+<tbody>
+<tr>
+<th>Item</th>
+<th>Meaning</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>name</td>
+<td>vm name</td>
+<td>string</td>
+<td>mex-k8s-node-1-mexplat-stage-hamburg-cloudlet-test-mobiledgex”Unique, with actual format IaaS dependent</td>
+</tr>
+<tr>
+<td>type</td>
+<td>type of vm</td>
+<td>string</td>
+<td>loadbalancer, cluster-master, cluster-node</td>
+</tr>
+<tr>
+<td>status</td>
+<td>state of vm</td>
+<td>string</td>
+<td>ACTIVE, STOPPED</td>
+</tr>
+<tr>
+<td>infraflavor</td>
+<td>vm’s IaaS flavor</td>
+<td>string</td>
+<td>m4.small</td>
+</tr>
+<tr>
+<td>ip_address</td>
+<td>external and internal ip addresses</td>
+<td>array</td>
+<td>external IP: x.x.x.x</td>
+</tr>
+</tbody>
+</table>
 
 ### Example with mcctl
 

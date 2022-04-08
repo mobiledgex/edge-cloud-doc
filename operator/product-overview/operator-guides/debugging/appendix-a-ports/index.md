@@ -24,12 +24,26 @@ The URI for an application instance is part of the definition for that applicati
 When looking at inbound ports, it is important to understand the difference between *public_port* and *internal_port*. A public port is the port that is exposed to the internet via the loadbalancer or directly. An internal port is used internally within the MobiledgeX platform.
 
 Each port definition includes the type of traffic the port will handle. The table below maps the value to the protocol.
-
-| Value | Protocol |
-|-------|----------|
-| 0     | Unknown  |
-| 1     | TCP      |
-| 2     | UDP      |
+<table>
+<tbody>
+<tr>
+<th>Value</th>
+<th>Protocol</th>
+</tr>
+<tr>
+<td>0</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>1</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>2</td>
+<td>UDP</td>
+</tr>
+</tbody>
+</table>
 
 The port mappings for a given application instance can be retrieved from the API via the following code:
 

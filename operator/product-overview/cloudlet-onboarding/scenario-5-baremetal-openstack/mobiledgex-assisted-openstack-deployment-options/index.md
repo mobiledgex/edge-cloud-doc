@@ -5,11 +5,11 @@ overview_description:
 description: Discusses MobiledgeX assisted Openstack options
 ---
 
-## Deployment Scenario 1:</strong> <strong>Operator Provides Bare Metal Server IPMI Access to MobiledgeX
+## Deployment Scenario 1: Operator Provides Bare Metal Server IPMI Access to MobiledgeX
 
 In this Deployment option, operator provides bare metal Server Management IPMI access to MobiledgeX. MobiledgeX installs operating system, OpenStack (IaaS) and configure server side networking based on the specifications provided by the operator. MobiledgeX then deploys and manages the cloudlet.
 
-## Deployment Scenario 2:</strong> <strong>Operator Installs MobiledgeX Recommended Operating System in Bare Metal Servers and Provide SSH Access to MobiledgeX
+## Deployment Scenario 2: Operator Installs MobiledgeX Recommended Operating System in Bare Metal Servers and Provide SSH Access to MobiledgeX
 
 In this Deployment option, operator setup bare metal servers with MobiledgeX recommended operating system and server side networking. MobiledgeX will then be provided with SSH access to the server. MobiledgeX installs Openstack (IaaS) and deploy cloudlets based on the network specifications provided by the operator.
 

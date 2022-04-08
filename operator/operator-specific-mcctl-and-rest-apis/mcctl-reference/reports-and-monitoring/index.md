@@ -1005,12 +1005,30 @@ mcctl reporter create name=TDGReporter org=TDG schedule=EveryWeek startscheduled
 ```
 
 The following example shows how the report time range is calculated.
-| Item               | Value                                                |
-|--------------------|------------------------------------------------------|
-| Schedule date      | 2021-04-26T00:00:00.000Z                             |
-| Minus 7 days       | 2021-04-19T00:00:00.000Z                             |
-| Time range         | 2021-04-19T00:00:00.000Z to 2021-04-25T00:00:00.000Z |
-| Next schedule date | 2021-05-03T00:00:00.000Z                             |
+<table>
+<tbody>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Schedule date</td>
+<td>2021-04-26T00:00:00.000Z</td>
+</tr>
+<tr>
+<td>Minus 7 days</td>
+<td>2021-04-19T00:00:00.000Z</td>
+</tr>
+<tr>
+<td>Time range</td>
+<td>2021-04-19T00:00:00.000Z to 2021-04-25T00:00:00.000Z</td>
+</tr>
+<tr>
+<td>Next schedule date</td>
+<td>2021-05-03T00:00:00.000Z</td>
+</tr>
+</tbody>
+</table>
 
 ## Manage Reports
 
@@ -1046,7 +1064,9 @@ timezone Timezone in which to show the reports, defaults to UTC
 
 ### Example
 
-`mcctl report generate org=TDG starttime="2021-04-19T00:00:00Z" endtime="2021-04-26T00:00:00Z`
+```
+mcctl report generate org=TDG starttime="2021-04-19T00:00:00Z" endtime="2021-04-26T00:00:00Z
+```
 
 ## Billing Events
 

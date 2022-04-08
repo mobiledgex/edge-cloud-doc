@@ -11,9 +11,7 @@ Turning the onboarded cloudlet into a Private Edge Cloudlet is easy with Mobiled
 
 Cloudlet Pools are collections of cloudlets that are defined on a per-regional basis. As an operator, you may set up a pool membership where only users within the organization associated with the Cloudlet Pool can access the cloudlets defined for that particular pool. Setting up a Cloudlet Pool is useful in cases where you need to segment your private (enterprise) cloudlets from your public cloudlets. Cloudlet Pools may also be used to isolate cloudlets in the production phase of development and, therefore, will only be available for internal use. Here are some general guidelines to keep in mind when creating Cloudlet Pools.
 
-- Operators must <strong>
-*own*
-</strong> the cloudlets they wish to add members to by [creating the Cloudlet Pool](/operator/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools#to-create-a-cloudlet-pool/index.md).
+- Operators must *own* the cloudlets they wish to add members to by [creating the Cloudlet Pool](/operator/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools#to-create-a-cloudlet-pool/index.md).
 - If a cloudlet is not part of a pool, it’s considered a public cloudlet.
 - Cloudlets assigned to one or more pools are considered private cloudlets.
 - A Cloudlet Pool may be associated with one or more organizations, allowing users within that organization to access and use those cloudlets to deploy their applications.
@@ -58,12 +56,60 @@ Once Developers are part of your Cloudlet Pool, you may view Developer metrics. 
 ### Permissions and roles
 
 The following table outlines the permissions and roles associated with sending and viewing Cloudlet Pool invitations.
+<table>
+<tbody>
+<tr>
+<td>
 
-| **Roles**           | **Invite** | **Response** | **ShowGranted/Pending** | **ShowInvite** | **ShowResponse** |
-|---------------------|------------|--------------|-------------------------|----------------|------------------|
-| OperatorManager     | X          | X            | X                       | X              |
-| OperatorContributor | X          | X            | X                       | X              |
-| OperatorViewer      | X          | X            | X                       |
+**Roles**
+</td>
+<td>
+
+**Invite**
+</td>
+<td>
+
+**Response**
+</td>
+<td>
+
+**ShowGranted/Pending**
+</td>
+<td>
+
+**ShowInvite**
+</td>
+<td>
+
+**ShowResponse**
+</td>
+</tr>
+<tr>
+<td>OperatorManager</td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>OperatorContributor</td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>OperatorViewer</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
 
 ### Example Request/Response Query
 

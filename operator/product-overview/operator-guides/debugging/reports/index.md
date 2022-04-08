@@ -168,12 +168,46 @@ The report information may include, but not limited to, the following informatio
 - Graphical representation of all usages
 
 Viewing, running, and creating reports are role-based. Please refer to the table below.
-| **Role**            | **View Report** | **Generate Report** | **Create Report Scheduler** |
-|---------------------|-----------------|---------------------|-----------------------------|
-| OperatorManager     | x               | x                   | x                           |
-| OperatorContributer | x               | x                   | x                           |
-| OperatorViewer      | x               | x                   |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
 
+**Role**
+</td>
+<td colspan="1" rowspan="1">
+
+**View Report**
+</td>
+<td colspan="1" rowspan="1">
+
+**Generate Report**
+</td>
+<td colspan="1" rowspan="1">
+
+**Create Report Scheduler**
+</td>
+</tr>
+<tr>
+<td>OperatorManager</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>OperatorContributer</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>OperatorViewer</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 **Creating a report scheduler:**
 

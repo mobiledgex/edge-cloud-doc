@@ -4,37 +4,304 @@ long_title:
 overview_description:
 description: Supported features across IaaS
 ---
-| Interface                           | Feature | VMPool | VCD | VSphere | OpenStack |
-|-------------------------------------|---------|--------|-----|---------|-----------|
-| *Developer*                         |
-| **Deployment Type**                 |
-| VM                                  | X       | X      | X   |
-| Docker                              | X       | X      | X   | X       |
-| Kubernetes                          | X       | X      | X   | X       |
-| GPU                                 | X       | X      |
-| **Operational Experience**          |
-| Apps Metrics/Insight                | X       | X      | X   | X       |
-| Alerts                              | X       | X      | X   | X       |
-| Events                              | X       | X      | X   | X       |
-| Exec                                | X       | X      | X   | X       |
-| VM Terminal Access                  | X       |
-| **Runtime**                         |
-| Autoprovision                       | X       | X      | X   | X       |
-| Autoscale                           | X       | X      | X   | X       |
-| Application High Availability       | X       | X      | X   | X       |
-| *Operator*                          |
-| **Cloudlet Deployment**             |
-| Automatic Onboarding                | X       | X      | X   |
-| Restricted Onboarding               | X       |
-| **Cloudlet Operational Experience** |
-| Resource Metrics                    | X       | X      | X   | X       |
-| Alerts                              | X       | X      | X   | X       |
-| Logs                                | X       | X      | X   | X       |
-| Resource Management                 | X       | X      | X   | X       |
-| Reporting and Scheduling            | X       | X      | X   | X       |
-| **Private Edge**                    |
-| CloudletPool                        | X       | X      | X   | X       |
-| TrustPolicy                         | X       | X      |
 
+This table shows which developer and operator features are available for different IaaS platforms.
+<table>
+<tbody>
+<tr>
+<th>Interface</th>
+<th>Feature</th>
+<th>VMPool</th>
+<th>VCD</th>
+<th>VSphere</th>
+<th>OpenStack</th>
+<th>Kubernetes Bare Metal</th>
+</tr>
+<tr>
+<td>
 
+*Developer*
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+**Deployment Type**
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>VM</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Docker</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Kubernetes</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>GPU</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+**Operational Experience**
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Apps Metrics/Insight</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>Alerts</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>Events</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>Exec</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>VM Terminal Access</td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+**Runtime**
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Autoprovision</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>Autoscale</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Application High Availability</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>
+
+*Operator*
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+**Cloudlet Deployment**
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Automatic Onboarding</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>Restricted Onboarding</td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+**Cloudlet Operational Experience**
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Resource Metrics</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Alerts</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>Logs</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>Resource Management</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Reporting and Scheduling</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>
+
+**Private Edge**
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>CloudletPool</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td></td>
+<td>TrustPolicy</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 

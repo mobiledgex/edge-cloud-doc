@@ -52,12 +52,44 @@ https://artifactory.mobiledgex.net/artifactory/baseimages/vsphere-ovf-3.1.5/mobi
 ### Step 2: Download resources
 
 MobiledgeX provides the platform image in several formats:
-| **IaaS / VIM** | **File Format/Type** | **Notes**                                                                                     |
-|----------------|----------------------|-----------------------------------------------------------------------------------------------|
-| OpenStack      | qcow2                | QEMU Copy on Write format.                                                                    |
-| VMWare         | vmdk                 | Virtual Machine DisK Image                                                                    |
-| VMWare         | ovf                  | XML file that contains metadata for the VM, Template, or App Template.                        |
-| VMWare         | mf                   | A manifest file containing all SHA1 checksums for all files in the VMWare deployment package. |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**IaaS / VIM**
+</td>
+<td colspan="1" rowspan="1">
+
+**File Format/Type**
+</td>
+<td colspan="1" rowspan="1">
+
+**Notes**
+</td>
+</tr>
+<tr>
+<td>OpenStack</td>
+<td>qcow2</td>
+<td>[QEMU](https://www.qemu.org/) Copy on Write format.</td>
+</tr>
+<tr>
+<td>VMWare</td>
+<td>vmdk</td>
+<td>Virtual Machine DisK Image</td>
+</tr>
+<tr>
+<td>VMWare</td>
+<td>ovf</td>
+<td>XML file that contains metadata for the VM, Template, or App Template.</td>
+</tr>
+<tr>
+<td>VMWare</td>
+<td>mf</td>
+<td>A manifest file containing all SHA1 checksums for all files in the VMWare deployment package.</td>
+</tr>
+</tbody>
+</table>
 
 MobiledgeX will direct you to download the correct format for your environment.
 
@@ -162,12 +194,36 @@ Once the artifacts have been loaded into the catalog, the required virtual machi
 
 #### VM configuration
 
-| **Resource** | **Value** |
-|--------------|-----------|
-| vcpu         | 4         |
-| memory       | 16 Gb     |
-| disk         | 400 Gb    |
-| network      | 1GB       |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Resource**
+</td>
+<td colspan="1" rowspan="1">
+
+**Value**
+</td>
+</tr>
+<tr>
+<td>vcpu</td>
+<td>4</td>
+</tr>
+<tr>
+<td>memory</td>
+<td>16 Gb</td>
+</tr>
+<tr>
+<td>disk</td>
+<td>400 Gb</td>
+</tr>
+<tr>
+<td>network</td>
+<td>1GB</td>
+</tr>
+</tbody>
+</table>
 
 At a minimum, four VMs will be required per datacenter to fully standup the environment.
 

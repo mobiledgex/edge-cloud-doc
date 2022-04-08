@@ -121,15 +121,52 @@ FeatureType=1
 #LingerInterval=10After you have inputted all mandatory and relevant information, select Create at the bottom of the page.
 ```
 
-| **Builds Textbox** | **Example entry**                                                                                                                                                                          |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name:              | Arbitrary but meaningful name                                                                                                                                                              |
-| Driver Path:       | Path to a URL where MobiledgeX can download the driver file from. This can be an account in MobiledgeX Artifactory or some other authenticated or public repository, such as an S3 bucket. |
-| MD5 Sum:           | MD5 Sum For file in the above path                                                                                                                                                         |
-| Driver Path Creds: | In form `username:password`.Only needed if Path above points to a private repository that requires credentials, such as MobiledgeX Artifactory.                                            |
-| Operating System:  | Linux                                                                                                                                                                                      |
-| Kernel Version:    | Please ask MobiledgeX Support for this value as it depends on the base image version being used in the cloudlets.                                                                          |
-| Hypervisor Info:   | Not currently required                                                                                                                                                                     |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Builds Textbox**
+</td>
+<td colspan="1" rowspan="1">
+
+**Example entry**
+</td>
+</tr>
+<tr>
+<td>Name:</td>
+<td>Arbitrary but meaningful name</td>
+</tr>
+<tr>
+<td>Driver Path:</td>
+<td>Path to a URL where MobiledgeX can download the driver file from. This can be an account in MobiledgeX Artifactory or some other authenticated or public repository, such as an S3 bucket.</td>
+</tr>
+<tr>
+<td>MD5 Sum:</td>
+<td>MD5 Sum For file in the above path</td>
+</tr>
+<tr>
+<td>Driver Path Creds:</td>
+<td colspan="1" rowspan="1">
+
+In form `username:password`.
+
+Only needed if Path above points to a private repository that requires credentials, such as MobiledgeX Artifactory.</td>
+</tr>
+<tr>
+<td>Operating System:</td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>Kernel Version:</td>
+<td>Please ask MobiledgeX Support for this value as it depends on the base image version being used in the cloudlets.</td>
+</tr>
+<tr>
+<td>Hypervisor Info:</td>
+<td>Not currently required</td>
+</tr>
+</tbody>
+</table>
 
 For each build specified, MobiledgeX will, if required, do a one-off pull of the driver and then upload it to our `storage.cloud.google.com` account. The credentials are not stored or retained anywhere.
 

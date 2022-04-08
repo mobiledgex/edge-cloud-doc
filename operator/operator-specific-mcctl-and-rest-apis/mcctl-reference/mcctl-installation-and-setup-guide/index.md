@@ -104,37 +104,7 @@ Flags:
 
 ```
 
-Additionally, using the keyword `help` along with the command you wish to view help information will provide additional data. For example, to get help on the `audit` command option, you can simply run:
-
-```
-$ mcctl help audit
-Show audit logs
-
-Usage: mcctl audit [flags] [command]
-
-Available Commands:
-  showself
-  showorg
-  operations
-
-Flags:
-  -h, --help   help for audit
-
-Global Flags:
-      --addr string            MC address (default "http://127.0.0.1:9900")
-      --data string            json formatted input data, alternative to name=val args list
-      --datafile string        file containing json/yaml formatted input data, alternative to name=val args list
-      --debug                  debug
-      --output-format string   output format: yaml, json, or json-compact (default "yaml")
-      --output-stream          stream output incrementally if supported by command (default true)
-      --parsable               generate parsable output
-      --silence-usage          silence-usage
-      --skipverify             don’t verify cert for TLS connections
-      --token string           JWT token
-
-Use "mcctl audit [command] --help" for more information about a command.
-
-```
+Additionally, using the keyword `help` along with the command you wish to view help information will provide additional data.
 
 ### Output formats
 

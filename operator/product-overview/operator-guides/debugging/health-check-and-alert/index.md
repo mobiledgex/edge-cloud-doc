@@ -51,12 +51,41 @@ The MobiledgeX platform provides a flexible alerting interface that includes the
 ### AlertManager and MobiledgeX APIs
 
 The AlertManager is designed to be configurable via the MobiledgeX APIs, both directly and through the `mcctl` utility program, providing flexibility for users integrating with their existing monitoring systems.
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
 
-| **Action**               | **API Route**                      |
-|--------------------------|------------------------------------|
-| Create an Alert Receiver | `api/v1/auth/alertreceiver/create` |
-| Delete an Alert Receiver | `api/v1/auth/alertreceiver/delete` |
-| Show all Alert Receivers | `api/v1/auth/alertreceiver/show`   |
+**Action**
+</td>
+<td colspan="1" rowspan="1">
+
+**API Route**
+</td>
+</tr>
+<tr>
+<td>Create an Alert Receiver</td>
+<td colspan="1" rowspan="1">
+
+`api/v1/auth/alertreceiver/create`
+</td>
+</tr>
+<tr>
+<td>Delete an Alert Receiver</td>
+<td colspan="1" rowspan="1">
+
+`api/v1/auth/alertreceiver/delete`
+</td>
+</tr>
+<tr>
+<td>Show all Alert Receivers</td>
+<td colspan="1" rowspan="1">
+
+`api/v1/auth/alertreceiver/show`
+</td>
+</tr>
+</tbody>
+</table>
 
 For detailed AlertReceiver API examples, please refer to the [mcctl Utility Reference](/operator/operator-specific-mcctl-and-rest-apis/mcctl-reference#alertreceiver-example/index.md) guide.
 

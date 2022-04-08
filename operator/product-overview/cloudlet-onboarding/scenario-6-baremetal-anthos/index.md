@@ -11,13 +11,61 @@ In the Anthos bare metal deployment option, workloads run on a Kubernetes cluste
 
 ## Anthos on Bare Metal Minimum Requirements
 
-| **Hardware Requirements**                | **Software Components** | **Network Requirements**                                                                          |
-|------------------------------------------|-------------------------|---------------------------------------------------------------------------------------------------|
-| RAM size: 128-256GB                      | RAM size: 500G          | 2 10G Ethernet interfaces on public network, bonded                                               |
-| 32-64 vCPU                               | 200 vCPU                | DHCP range: preferably full /28 but at a minimum 8 IPs, in addition to those assigned to the host |
-| Disk range: 500GB-1TB                    | Disk size: 2T           | SSH access from MobiledgeX (can be via Linux jumphost)                                            |
-| Out of band management interface/console | GPU: NVIDA T4           | All firewall ports open from mobile network                                                       |
-| Egress access to internet                |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Hardware Requirements**
+</td>
+<td colspan="1" rowspan="1">
+
+**Software Components**
+</td>
+<td colspan="1" rowspan="1">
+
+**Network Requirements**
+</td>
+</tr>
+<tr>
+<td>RAM size: 128-256GB</td>
+<td>RAM size: 500G</td>
+<td>2 10G Ethernet interfaces on public network, bonded</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+32-64 vCPU
+
+</td>
+<td colspan="1" rowspan="1">
+
+200 vCPU
+
+</td>
+<td>DHCP range: preferably full /28 but at a minimum 8 IPs, in addition to those assigned to the host</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+Disk range: 500GB-1TB
+
+</td>
+<td>Disk size: 2T</td>
+<td>SSH access from MobiledgeX (can be via Linux jumphost)</td>
+</tr>
+<tr>
+<td>Out of band management interface/console</td>
+<td>GPU: NVIDA T4</td>
+<td>All firewall ports open from mobile network</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Egress access to internet</td>
+</tr>
+</tbody>
+</table>
 
 ## MobiledgeX + Anthos Benefits
 

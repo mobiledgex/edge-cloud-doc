@@ -8,16 +8,22 @@ description: Use cloudlet metric commands using mcctl utility
 ## Cloudlet Metrics
 
 ```
+$ mcctl metrics cloudlet
+
 Required Args:
-  region        Region name
-  cloudlet-org  Company or Organization name of the cloudlet
-  selector      Comma separated list of metrics to view, utilization, network, ipusage
+  region                   Region name
+  selector                 Comma separated list of metrics to view. Available metrics: "network", "utilization", "ipusage"
 
 Optional Args:
-  cloudlet      Name of the cloudlet
-  last          Display the last X metrics
-  starttime     Time to start displaying stats from
-  endtime       Time up to which to display stats
+  limit                    Display the last X metrics
+  numsamples               Display X samples spaced out evenly over start and end times
+  starttime                Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime                  Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage                 Relative age from now of search range start (default 48h)
+  endage                   Relative age from now of search range end (default 0)
+  cloudlet                 Name of the cloudlet(Deprecated)
+  cloudlets:#.cloudletorg  Company or Organization name of the cloudlet
+  cloudlets:#.cloudlet     Name of the cloudlet
 
 ```
 
@@ -327,10 +333,6 @@ data:
     values:
     - - "2021-07-13T19:08:10.100138782Z"
       - 1
-
-```
-
-```
 
 ```
 

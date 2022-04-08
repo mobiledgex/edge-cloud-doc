@@ -133,37 +133,306 @@ The following screen example shows the one-to-one mapping between the CLI comman
 ### Events list
 
 The following table lists the events supported by our platform, based on roles. The `mcctl` command to display all the terms can be found in the [MCCTL Reference Guide](https://operator.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference#event-terms).
-| **Role**                               | **Event name**       |
-|----------------------------------------|----------------------|
-| OperatorManager                        | Create Cloudlet Pool |
-| Delete Cloudlet Pool                   |
-| Update Cloudlet Pool                   |
-| Create Cloudlet Pool Access Invitation |
-| Update Cloudlet                        |
-| Stream Cloudlet                        |
-| Create Cloudlet                        |
-| Delete Cloudlet                        |
-| Upgrading Cloudlet                     |
-| Cloudlet Online                        |
-| Create GPU Driver                      |
-| Delete GPU Driver                      |
-| Update GPU Driver                      |
-| Update VM Pool                         |
-| Cloudlet Maintenance Done              |
-| Cloudlet Maintenance Start             |
-| Cloudlet Offline                       |
-| Add Cloudlet ResMapping                |
-| Add Rest Tag                           |
-| Delete VM Pool                         |
-| Create VM Pool                         |
-| Add User                               |
-| Remove User                            |
-| Get Cloudlet Resource Usage            |
-| Get Cloudlet Resource Quota Props      |
-| Remove Cloudlet Pool Member            |
-| Add Cloudlet Pool Member               |
-| Get Cloudlet Manifest                  |
-| Revoke Access Key                      |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Role**
+</td>
+<td colspan="1" rowspan="1">
+
+**Event name**
+</td>
+</tr>
+<tr>
+<td>OperatorManager</td>
+<td>Create Cloudlet Pool</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete Cloudlet Pool</td>
+</tr>
+<tr>
+<td></td>
+<td>Update Cloudlet Pool</td>
+</tr>
+<tr>
+<td></td>
+<td>Create Cloudlet Pool Access Invitation</td>
+</tr>
+<tr>
+<td></td>
+<td>Update Cloudlet</td>
+</tr>
+<tr>
+<td></td>
+<td>Stream Cloudlet</td>
+</tr>
+<tr>
+<td></td>
+<td>Create Cloudlet</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete Cloudlet</td>
+</tr>
+<tr>
+<td></td>
+<td>Upgrading Cloudlet</td>
+</tr>
+<tr>
+<td></td>
+<td>Cloudlet Online</td>
+</tr>
+<tr>
+<td></td>
+<td>Create GPU Driver</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete GPU Driver</td>
+</tr>
+<tr>
+<td></td>
+<td>Update GPU Driver</td>
+</tr>
+<tr>
+<td></td>
+<td>Update VM Pool</td>
+</tr>
+<tr>
+<td></td>
+<td>Cloudlet Maintenance Done</td>
+</tr>
+<tr>
+<td></td>
+<td>Cloudlet Maintenance Start</td>
+</tr>
+<tr>
+<td></td>
+<td>Cloudlet Offline</td>
+</tr>
+<tr>
+<td></td>
+<td>Add Cloudlet ResMapping</td>
+</tr>
+<tr>
+<td></td>
+<td>Add Rest Tag</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete VM Pool</td>
+</tr>
+<tr>
+<td></td>
+<td>Create VM Pool</td>
+</tr>
+<tr>
+<td></td>
+<td>Add User</td>
+</tr>
+<tr>
+<td></td>
+<td>Remove User</td>
+</tr>
+<tr>
+<td></td>
+<td>Get Cloudlet Resource Usage</td>
+</tr>
+<tr>
+<td></td>
+<td>Get Cloudlet Resource Quota Props</td>
+</tr>
+<tr>
+<td></td>
+<td>Remove Cloudlet Pool Member</td>
+</tr>
+<tr>
+<td></td>
+<td>Add Cloudlet Pool Member</td>
+</tr>
+<tr>
+<td></td>
+<td>Get Cloudlet Manifest</td>
+</tr>
+<tr>
+<td></td>
+<td>Revoke Access Key</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Role**
+</td>
+<td colspan="1" rowspan="1">
+
+**Event name**
+</td>
+</tr>
+<tr>
+<td>DevelopManager</td>
+<td>Create App</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete App</td>
+</tr>
+<tr>
+<td></td>
+<td>Update App</td>
+</tr>
+<tr>
+<td></td>
+<td>Create App Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete App Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>App Inst Offline</td>
+</tr>
+<tr>
+<td></td>
+<td>App Inst Online</td>
+</tr>
+<tr>
+<td></td>
+<td>Create AutoScale Policy</td>
+</tr>
+<tr>
+<td></td>
+<td>Update AutoScale Policy</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete AutoScale Policy</td>
+</tr>
+<tr>
+<td></td>
+<td>Free Cluster Inst Reservation</td>
+</tr>
+<tr>
+<td></td>
+<td>Create Cluster Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Reserve Cluster Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>AutoCluster Create</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete Custer Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Create Cloudlet Pool Access Response</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete Cloudlet Pool Access Response</td>
+</tr>
+<tr>
+<td></td>
+<td>Run Command</td>
+</tr>
+<tr>
+<td></td>
+<td>Show Logs</td>
+</tr>
+<tr>
+<td></td>
+<td>Create Org</td>
+</tr>
+<tr>
+<td></td>
+<td>Add User</td>
+</tr>
+<tr>
+<td></td>
+<td>Remove User</td>
+</tr>
+<tr>
+<td></td>
+<td>Request App Inst Latency</td>
+</tr>
+<tr>
+<td></td>
+<td>Update Cluster Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Run Console</td>
+</tr>
+<tr>
+<td></td>
+<td>Show App Inst Client</td>
+</tr>
+<tr>
+<td></td>
+<td>Create AutoProv Policy</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete AutoProv Policy</td>
+</tr>
+<tr>
+<td></td>
+<td>Create Cluster Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete App Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Add AutoProv Policy Cloudlet</td>
+</tr>
+<tr>
+<td></td>
+<td>Remove AutoProv Policy Cloudlet</td>
+</tr>
+<tr>
+<td></td>
+<td>Update App Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete App Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Delete Cluster Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Add AutoProv Policy</td>
+</tr>
+<tr>
+<td></td>
+<td>Create App Inst</td>
+</tr>
+<tr>
+<td></td>
+<td>Remove App AutoProv Policy</td>
+</tr>
+<tr>
+<td></td>
+<td>TLS Certs Error</td>
+</tr>
+</tbody>
+</table>
 
 ## Usage Logs
 
@@ -452,28 +721,124 @@ The following table provides a list of metrics and their details for each cluste
 
 ### Cluster Metrics 
 
-| **Metric ** | **Measurement Unit ** | **Measurement Detail **                                                                           |
-|-------------|-----------------------|---------------------------------------------------------------------------------------------------|
-| CPU         | Percentage            | CPU usage expressed as a percentage of allocated CPU.                                             |
-| MEM         | Percentage            | Memory usage expressed as a percentage of allocated Memory.                                       |
-| DISK        | Percentage            | Filesystem usage expressed as a percentage of available disk.                                     |
-| NET         | Bytes/Sec             | Transmit and Received data expressed as bytes/sec averaged over sixty seconds (60s)               |
-| TCP         | Integer               | Total number of tcp connections / retransmissions expressed as an integer.                        |
-| UDP         | Integer               | Total number of udp datagrams transmitted and received, plus any errors expressed as an integer.  |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Metric **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Unit **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Detail **
+</td>
+</tr>
+<tr>
+<td>CPU </td>
+<td>Percentage </td>
+<td>CPU usage expressed as a percentage of allocated CPU. </td>
+</tr>
+<tr>
+<td>MEM </td>
+<td>Percentage </td>
+<td>Memory usage expressed as a percentage of allocated Memory. </td>
+</tr>
+<tr>
+<td>DISK </td>
+<td>Percentage </td>
+<td>Filesystem usage expressed as a percentage of available disk. </td>
+</tr>
+<tr>
+<td>NET </td>
+<td>Bytes/Sec </td>
+<td>Transmit and Received data expressed as bytes/sec averaged over sixty seconds (60s) </td>
+</tr>
+<tr>
+<td>TCP </td>
+<td>Integer </td>
+<td>Total number of tcp connections / retransmissions expressed as an integer. </td>
+</tr>
+<tr>
+<td>UDP </td>
+<td>Integer </td>
+<td>Total number of udp datagrams transmitted and received, plus any errors expressed as an integer. </td>
+</tr>
+</tbody>
+</table>
 
 ### Application Instances 
 
-| **Metric**                                    | **Measurement Unit **   | **Measurement Detail **                                                                |
-|-----------------------------------------------|-------------------------|----------------------------------------------------------------------------------------|
-| CPU                                           | Percentage              | CPU usage expressed as a percentage of allocated CPU.                                  |
-| MEM                                           | Bytes                   | Memory footprint expressed in Bytes.                                                   |
-| DISK                                          | Bytes                   | Filesystem usage expressed in Bytes.                                                   |
-| NET                                           | Bytes/Sec               | Transmit and Received data expressed as bytes/sec averaged over sixty seconds (60s)    |
-| Connections per Port(Bytes Sent/Received)     | Bytes/Sec               | Bytes sent/received averaged over sixty seconds (60s).                                 |
-| Connections per Port(Sessions)                | Sessions                | Count for accepted, handled, and active sessions.                                      |
-| Connections per Port(Session Time Histogram)  | Connection time in ms.  | Data is reported for:
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Metric**
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Unit **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Detail **
+</td>
+</tr>
+<tr>
+<td>CPU </td>
+<td>Percentage </td>
+<td>CPU usage expressed as a percentage of allocated CPU. </td>
+</tr>
+<tr>
+<td>MEM </td>
+<td>Bytes </td>
+<td>Memory footprint expressed in Bytes. </td>
+</tr>
+<tr>
+<td>DISK </td>
+<td>Bytes </td>
+<td>Filesystem usage expressed in Bytes. </td>
+</tr>
+<tr>
+<td>NET </td>
+<td>Bytes/Sec </td>
+<td>Transmit and Received data expressed as bytes/sec averaged over sixty seconds (60s) </td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+Connections per Port
+
+(Bytes Sent/Received) </td>
+<td>Bytes/Sec </td>
+<td>Bytes sent/received averaged over sixty seconds (60s). </td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+Connections per Port
+
+(Sessions) </td>
+<td>Sessions </td>
+<td>Count for accepted, handled, and active sessions. </td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+Connections per Port
+
+(Session Time Histogram) </td>
+<td>Connection time in ms. </td>
+<td colspan="1" rowspan="1">
+
+Data is reported for:
 
 - P0
+
 - P25
 - P50
 - P75
@@ -482,19 +847,65 @@ The following table provides a list of metrics and their details for each cluste
 - P99
 - P99.5
 - P99.9
-- P100 |
+- P100
+
+<br>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Cloudlet Metrics 
 
-| **Metric **                 | **Measurement Unit **                                                                                                                                                                                                                                                                                                          | **Measurement Detail **                                                                                                                                                                                                                                                                                        |
-|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Utilization                 | Multiple; based on context                                                                                                                                                                                                                                                                                                     | - **diskMax:** Max available Disk size in GB- **diskUsed:** Disk used at a timestamp in GBs- **memMax:** Max memory on this cloudlet in MB- **memUsed:** Memory used at timestamp in MB- **vCpuMax:** Max available number of vCPUs on this cloudlet- **vCpuUsed:** Number vCPUs on this cloudlet at timestamp |
-| Network                     | Bytes                                                                                                                                                                                                                                                                                                                          | Broken down by bytes sent and bytes received.                                                                                                                                                                                                                                                                  |
-| Multiple; based on context  | 
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Metric **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Unit **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Detail **
+</td>
+</tr>
+<tr>
+<td>Utilization </td>
+<td>Multiple; based on context </td>
+<td colspan="1" rowspan="1">
+
+- **diskMax:** Max available Disk size in GB
+- **diskUsed:** Disk used at a timestamp in GBs
+- **memMax:** Max memory on this cloudlet in MB
+- **memUsed:** Memory used at timestamp in MB
+- **vCpuMax:** Max available number of vCPUs on this cloudlet
+- **vCpuUsed:** Number vCPUs on this cloudlet at timestamp
+
+</td>
+</tr>
+<tr>
+<td>Network </td>
+<td>Bytes </td>
+<td>Broken down by bytes sent and bytes received. </td>
+</tr>
+<tr>
+<td></td>
+<td>Multiple; based on context </td>
+<td colspan="1" rowspan="1">
+
 - **floatingIpsMax:** Maximum available number of floating IP addresses
 - **floatingIpsUsed:** Number of floating IP addresses in use on this cloudlet at timestamp
 - **ipv4Max:** Maximum available number of external IPv4 addresses
-- **ipv4Used:** Number of external IPv4 addresses in use on this cloudlet at timestamp |
+- **ipv4Used:** Number of external IPv4 addresses in use on this cloudlet at timestamp
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ## Viewing Aggregated Statistical Data
 
@@ -560,18 +971,70 @@ Depending on your selection, the Monitoring Dashboard will display Developer met
 
 ### Client cloudlet usage metrics 
 
-| **Metric ** | **Measurement Unit **          | **Measurement Detail **     |
-|-------------|--------------------------------|-----------------------------|
-| Latency     | milliseconds                   | Returns min/max/avg. values |
-| Device info | Returns the number of sessions |                             |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
 
+**Metric **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Unit **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Detail **
+</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>milliseconds</td>
+<td>Returns min/max/avg. values</td>
+</tr>
+<tr>
+<td>Device info</td>
+<td></td>
+<td>Returns the number of sessions</td>
+</tr>
+</tbody>
+</table>
 
 ### Client app usage metrics 
 
-| **Metric ** | **Measurement Unit **                                                                     | **Measurement Detail **    |
-|-------------|-------------------------------------------------------------------------------------------|----------------------------|
-| Latency     | milliseconds                                                                              | - **signalstrength-** null |
-| Device info | **DeviceInfoDynamic**: Info on dynamic devices
-**DeviceInforStatic**: Info on static devices |
+<table>
+<tbody>
+<tr>
+<td>
 
+**Metric **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Unit **
+</td>
+<td colspan="1" rowspan="1">
+
+**Measurement Detail **
+</td>
+</tr>
+<tr>
+<td>Latency </td>
+<td>milliseconds</td>
+<td colspan="1" rowspan="1">
+
+- **signalstrength-** null
+
+</td>
+</tr>
+<tr>
+<td>Device info</td>
+<td></td>
+<td colspan="1" rowspan="1">
+
+**DeviceInfoDynamic**-Info on dynamic devices<br>
+**DeviceInforStatic**-Info on static devices</td>
+</tr>
+</tbody>
+</table>
 

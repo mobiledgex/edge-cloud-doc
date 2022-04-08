@@ -20,11 +20,53 @@ MobiledgeX only controls resource management within the scope of the MobiledgeX 
 ### Step 1: Validate OpenStack deployment
 
 The OpenStack environment and permissions need to be configured to meet or exceed the minimum requirements provided below.
-| OpenStack Version       | - Queens or Higher                                                                                                                                                                                                                                                                        |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenStack Services      | - Glance- Glance Image Cache (if supported)- Nova- Heat- Keystone- Neutron- Cinder- Ceilometer                                                                                                                                                                                            |
-| OpenStack Required APIs | - create stack (heat)- server list, create, delete, set properties- image list, save, create, delete- network list, create, delete- subnet list, create, delete- router create, delete, add and delete ports- flavor list, show, create- security group rule list and create- show limits |
-| OpenStack Endpoint      | Available to MobiledgeX Controller VM                                                                                                                                                                                                                                                     |
+<table>
+<tbody>
+<tr>
+<th>OpenStack Version</th>
+<td colspan="1" rowspan="1">
+
+- Queens or Higher
+
+</td>
+</tr>
+<tr>
+<th>OpenStack Services</th>
+<td colspan="1" rowspan="1">
+
+- Glance
+- Glance Image Cache (if supported)
+- Nova
+- Heat
+- Keystone
+- Neutron
+- Cinder
+- Ceilometer
+
+</td>
+</tr>
+<tr>
+<th>OpenStack Required APIs</th>
+<td colspan="1" rowspan="1">
+
+- create stack (heat)
+- server list, create, delete, set properties
+- image list, save, create, delete
+- network list, create, delete
+- subnet list, create, delete
+- router create, delete, add and delete ports
+- flavor list, show, create
+- security group rule list and create
+- show limits
+
+</td>
+</tr>
+<tr>
+<th>OpenStack Endpoint</th>
+<td>Available to MobiledgeX Controller VM</td>
+</tr>
+</tbody>
+</table>
 
 ### Step 2: Validate network configuration
 

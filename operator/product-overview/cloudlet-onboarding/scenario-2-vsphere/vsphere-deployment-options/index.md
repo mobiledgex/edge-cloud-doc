@@ -5,7 +5,7 @@ overview_description:
 description: Discusses VSphere deployment options
 ---
 
-In this Deployment option, MobiledgeX software runs on VMware Esxi servers managed by operator VMware VCenter. MobiledgeX is provided with access to the operator VCenter APIs. MobiledgeX deploys cloudlet and manages the resources via operator Provided VCenter access.
+In this Deployment option, MobiledgeX software runs on VMware Esxi servers managed by Operator VMware VCenter. MobiledgeX is provided with access to the Operator VCenter APIs. MobiledgeX deploys the cloudlet and manages the resources via operator Provided VCenter access.
 
 #### vSphere Deployment Checklist
 
@@ -20,7 +20,7 @@ In this Deployment option, MobiledgeX software runs on VMware Esxi servers manag
 - 200 vCPU or more in Total
 - 500 GB RAM or more in Total
 - 2TB HDD/Disk or more in Total. It should be shared storage for DRS/HA.
-- PCI PassThrough GPU (eg: NVIDA T4) or vGPU enabled with corresponding licenses to use it.
+- PCI PassThrough GPU (eg: NVIDIA T4) or vGPU enabled with corresponding licenses to use it.
 
 ##### VMware vSphere Requirements:
 
@@ -30,12 +30,12 @@ In this Deployment option, MobiledgeX software runs on VMware Esxi servers manag
 
 ##### Networking Requirements:
 
-- /28 External Public or External Wireless Network with a minimum of 8 ip’s.
+- /28 External Public or External Wireless Network with a minimum of 8 IPs.
 
 **Networks**
 
 - External UE Wireless Network - **Mandatory**
-- External Internet Network - **Optional** needed only if UE Wireless Network can’t reach MobiledgeX Public end points.
+- External Internet Network - **Optional** needed only if UE Wireless Network can’t reach MobiledgeX Public endpoints.
 - Internal L2 only isolated Network - Mandatory
 
 ##### Image Requirements

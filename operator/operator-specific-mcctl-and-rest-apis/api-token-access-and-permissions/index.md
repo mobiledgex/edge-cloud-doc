@@ -141,35 +141,276 @@ The permissions specified in the command may give access to multiple related ope
 `users`
 ** permissions.**
 
-| Resource                   | Action  | Permitted Operations |
-|----------------------------|---------|----------------------|
-| alert                      | manage  | CreateAlert          |
-| DeleteAlert                |
-| alert                      | view    | ShowAlert            |
-| cloudlets                  | manage  | CreateCloudlet       |
-| DeleteCloudlet             |
-| UpdateCloudlet             |
-| cloudlets                  | view    | ShowCloudlet         |
-| cloudletpools              | manage  | CreateCloudletPool   |
-| DeleteCloudletPool         |
-| UpdateCloudletPool         |
-| cloudletpools              | view    | ShowCloudletPool     |
-| ShowClusterinst            |
-| ShowAppinst                |
-| cloudletanalytics          | view    | ShowCloudlet         |
-| MetricsCloudlet            |
-| MetricsCloudletusage       |
-| MetricsClientCloudletusage |
-| restagtbl                  | manage  | CreateTagTable       |
-| DeleteTagTable             |
-| UpdateTageTable            |
-| restagtbl                  | view    | ShowTagTable         |
-| users                      | manage  | CreateUser           |
-| DeleteUser                 |
-| Updateuser                 |
-| AddUser                    |
-| users                      | show    | ShowUser             |
-| ShowUserRole               |
+<table>
+<tbody>
+<tr>
+<th>Resource</th>
+<th>Action</th>
+<th>Permitted Operations</th>
+</tr>
+<tr>
+<td>alert</td>
+<td>manage</td>
+<td>CreateAlert</td>
+</tr>
+<tr>
+<td>
 
+<br>
+<br>
+</td>
+<td>
 
+<br>
+<br>
+</td>
+<td>DeleteAlert</td>
+</tr>
+<tr>
+<td>alert</td>
+<td>view</td>
+<td>ShowAlert</td>
+</tr>
+<tr>
+<td>cloudlets</td>
+<td>manage</td>
+<td>CreateCloudlet</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>DeleteCloudlet</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>UpdateCloudlet</td>
+</tr>
+<tr>
+<td>cloudlets</td>
+<td>view</td>
+<td>ShowCloudlet</td>
+</tr>
+<tr>
+<td>cloudletpools</td>
+<td>manage </td>
+<td>CreateCloudletPool</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>DeleteCloudletPool</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>UpdateCloudletPool</td>
+</tr>
+<tr>
+<td>cloudletpools</td>
+<td>view</td>
+<td>ShowCloudletPool</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>ShowClusterinst</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>ShowAppinst</td>
+</tr>
+<tr>
+<td>cloudletanalytics </td>
+<td>view</td>
+<td>ShowCloudlet</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>MetricsCloudlet</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>MetricsCloudletusage</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>MetricsClientCloudletusage</td>
+</tr>
+<tr>
+<td>restagtbl</td>
+<td>manage</td>
+<td>CreateTagTable</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>DeleteTagTable</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>UpdateTageTable</td>
+</tr>
+<tr>
+<td>restagtbl</td>
+<td>view</td>
+<td>ShowTagTable</td>
+</tr>
+<tr>
+<td>users</td>
+<td>manage</td>
+<td>CreateUser</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>DeleteUser</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>Updateuser</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>AddUser</td>
+</tr>
+<tr>
+<td>users</td>
+<td>show</td>
+<td>ShowUser</td>
+</tr>
+<tr>
+<td>
+
+<br>
+<br>
+</td>
+<td>
+
+<br>
+<br>
+</td>
+<td>ShowUserRole</td>
+</tr>
+</tbody>
+</table>
 

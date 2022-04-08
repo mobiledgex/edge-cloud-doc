@@ -71,12 +71,40 @@ The following actions may be performed on this page, depending on you role withi
 ### Assign role-based access control (RBAC)
 
 Role-based access control provides varying levels of access specified by the user’s role and responsibilities. Setting the user’s roles and responsibilities requires establishing permissions and privileges, consequently, enabling access for authorized users. MobiledgeX provides three different levels of RBAC with varying privileges, as outlined below. Note that specifying RBAC for each user is performed within the Organization page.
+<table>
+<tbody>
+<tr>
+<th>Role</th>
+<th>Privileges</th>
+</tr>
+<tr>
+<td>Operator Manager</td>
+<td colspan="1" rowspan="1">
 
-| Role                 | Privileges                                                                   |
-|----------------------|------------------------------------------------------------------------------|
-| Operator Manager     | - **Manage:** Users and Roles, Cloudlets- **View:** Monitoring, Audit Logs   |
-| Operator Contributor | - **Manage:** Cloudlets- **View:** Users &amp; Roles, Monitoring, Audit Logs |
-| Operator Viewer      | - **View:** Users &amp; Roles, Cloudlets, Monitoring, Audit Logs             |
+- **Manage:** Users and Roles, Cloudlets
+- **View:** Monitoring, Audit Logs
+
+</td>
+</tr>
+<tr>
+<td>Operator Contributor</td>
+<td colspan="1" rowspan="1">
+
+- **Manage:** Cloudlets
+- **View:** Users &amp; Roles, Monitoring, Audit Logs
+
+</td>
+</tr>
+<tr>
+<td>Operator Viewer</td>
+<td colspan="1" rowspan="1">
+
+- **View:** Users &amp; Roles, Cloudlets, Monitoring, Audit Logs
+
+</td>
+</tr>
+</tbody>
+</table>
 
 For **OperatorManager** and **OperatorContributor**, contact support@mobiledgex.com to obtain access to the create cloudlet page.
 

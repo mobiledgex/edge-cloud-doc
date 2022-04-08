@@ -5,7 +5,7 @@ overview_description:
 description: Discusses the various OpenStack Tenant Deployment options
 ---
 
-## Deployment Option A:</strong> <strong>Operator Provides OpenStack End Point Credentials to MobiledgeX
+## Deployment Option A: Operator Provides OpenStack End Point Credentials to MobiledgeX
 
 In this Deployment option, MobiledgeX software is a tenant on an existing Operator OpenStack environment.  MobiledgeX is provided with a pool of compute resources and access to the OpenStack API endpoint. MobiledgeX create cloudlets and needed platform software components using these resources and endpoint access and manage the cloudlets henceforth. MobiledgeX will also manage required Firewall in OpenStack tenant level for open networks. The operator can optionally manage additional Firewall as well for restricted cases.
 
@@ -63,7 +63,7 @@ In this Deployment option, MobiledgeX software is a tenant on an existing Operat
 - DISK (GB): 20,40,80 or 160
 - GPU: 1 - Optional
 
-## Deployment Option B:</strong> <strong>Operator Onboards MobiledgeX Cloudlet via MobiledgeX Console
+## Deployment Option B: Operator Onboards MobiledgeX Cloudlet via MobiledgeX Console
 
 In this Deployment option, MobiledgeX software will be a tenant on an existing Operator OpenStack environment Operator will access MobiledgeX console, furnish cloudlet general and geographic information along with OpenStack tenant access credentials and create the cloudlets based on the instructions provided in MobiledgeX console. MobiledgeX will manage the cloudlets automatically henceforth. MobiledgeX will also manage required Firewall in OpenStack level for open networks. Operator can optionally manage additional Firewall as well for restricted cases.
 
