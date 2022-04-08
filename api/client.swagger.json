@@ -1,0 +1,979 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "MobiledgeX Client API",
+    "description": "\n# Introduction\n\nMobiledgeX provides a set of SDKs and Libraries containing a collection of operations and resources that assist in creating applications for the many services offered by MobiledgeX.\nOnce an application is built and registered, our services locate the nearest cloudlet server, connecting you to one of our edge server instances.\nOur services will also verify a device's location, ensuring the optimum compute instance is used, and much more, once you are on the edge.\n\nMobiledgeX’s MatchingEngine SDKs and Libraries are available in different languages and platforms, which include Android, Unity, and iOS, allowing for easy application development.\n\nThe Performance Metrics API, provided with each SDKs, tracks the average latency characteristics of the edge network. To take advantage of this API, you must add your application server’s Application Instance to a list of sites in order to periodically ping them.\n\nWithin the left navigational menu, scroll to the desired SDK, based on your preferred language or platform, to view the accompanying APIs.\nTo reference these APIs, including their resources and schema, click Edge REST APIs.\n\n# Edge SDK - Android\n\n## RegisterClient\nRegisters the client with the closest Distributed Matching Engine (the nearest edge location in the Operator network) and validates the legitimacy of the mobile subscriber. All session information is encrypted.\n\nExample Code:\n```java\nimport com.mobiledgex.matchingengine.MatchingEngine;\n\nMatchingEngine me = new MatchingEngine(this);\nAppClient.RegisterClientRequest registerClientRequest = me.createDefaultRegisterClientRequest(activityContext, organizationName)\n    .build();\nAppClient.RegisterClientReply registerClientReply = me.registerClient(registerClientRequest, 10000);\n```\n\nExample Response:\n```java\ndistributed_match_engine.AppClient$RegisterClientReply@e3d72edd\n\nsession_cookie: \"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODA0OTgwMTksImlhdCI6MTU4MDQxMTYxOSwia2V5Ijp7InBlZXJpcCI6IjEwLjI0MC4wLjgiLCJkZXZuYW1lIjoiTW9iaWxlZGdlWCIsImFwcG5hbWUiOiJNb2JpbGVkZ2VYIFNESyBEZW1vIiwiYXBwdmVycyI6IjEuMCIsInVuaXF1ZWlkdHlwZSI6ImRtZS1rc3VpZCIsInVuaXF1ZWlkIjoiMVg3eXFjdEZJNFA4R2lYNkhNYjFVQTRiUU1LIiwia2lkIjo0fX0.9kM38-mqfcRZhT59YRb3f3ZE1OuwchQgcBEHlRufg07gwgt55CkrMNubUeZvPmyGbwKHUYKr4z3cG8i4PfR1sA\"\nstatus: RS_SUCCESS\nstatus_value: 1\ntoken_server_uri: \"http://mexdemo.tok.mobiledgex.net:9999/its?followURL=https://dme.mobiledgex.net/verifyLoc\"\n```\n\n## FindCloudlet\n\nLocates the most optimal edge computing footprint and allows the registered application to find the application backend by leveraging the location, application subscription, and service provider agreement.\nIf there are no suitable cloudlet instances available, the client may connect to the application server located in the public cloud.\n\nExample Code:\n```java\nimport com.mobiledgex.matchingengine.MatchingEngine;\n\nMatchingEngine me = new MatchingEngine(this);\nAppClient.FindCloudletRequest findCloudletRequest = me.createDefaultFindCloudletRequest(activityContext, location)\n    .setCarrierName(carrierName)\n    .build();\nAppClient.FindCloudletReply findCloudletReply = me.findCloudlet(findCloudletRequest, 10000);\n```\n\nExample Response:\n```java\ndistributed_match_engine.AppClient$FindCloudletReply@2119fe09\n\ncloudlet_location {\n  latitude: 41.87\n  longitude: -93.097\n  timestamp {\n    seconds: 0\n  }\n}\nfqdn: \"mobiledgexmobiledgexsdkdemo10.mexdemo-app-cluster.centralus-main.azure.mobiledgex.net\"\nports {\n  fqdn_prefix: \"mobiledgexsdkdemo-tcp.\"\n  internal_port: 7777\n  proto: L_PROTO_TCP\n  proto_value: 1\n  public_port: 7777\n}\nstatus: FIND_FOUND\nstatus_value: 1\n```\n\n## VerifyLocation\nVerifies that the GPS coordinates accurately report the actual location of the device.\n\nExample Code:\n```java\nimport com.mobiledgex.matchingengine.MatchingEngine;\n\nMatchingEngine me = new MatchingEngine(this);\nAppClient.VerifyLocationRequest verifyRequest = me.createDefaultVerifyLocationRequest(activityContext, location)\n   .setCarrierName(carrierName)\n   .build();\nAppClient.VerifyLocationReply verifiedLocation = me.verifyLocation(verifyRequest, 10000);\n```\nExample Response\n```java\ndistributed_match_engine.AppClient$VerifyLocationReply@107c45be\n\ngps_location_accuracy_km: -1.0\ngps_location_status: LOC_MISMATCH_SAME_COUNTRY\ngps_location_status_value: 2\n```\n\n## GetConnection\nFunction that gets a “connection” object (depending on Protocol of\nspecified connection and language) bound to the cellular interface and\nconnected to the application backend (as specified by findCloudletReply).\n\nParameters:\n   * `findCloudletReply` AppClient.FindCloudletReply:  Object returned from findCloudlet API\n   * `appPort` AppPort: AppPort object from Ports field in FindCloudletReply\n   * `portNum` int: Used if developer specified a port range and wants a specific port (use -1 if it it doesn’t matter)\n   * `timeoutMs` int: Milliseconds\n\nReturn:\nAll return a Future object to facilitate asynchronous code\n   * `getTcpSocket` Future\u003cSocket\u003e (import java.net.Socket)\n   * `getTcpSslSocket` Future\u003cSSLSocket\u003e (import javax.net.ssl.SSLSocket)\n   * `getUdpSocket` Future\u003cDatagramSocket\u003e (import java.net.DatagramSocket)\n   * `getHttpClient` Future\u003cOkHttpClient\u003e (import com.squareup.okhttp.OkHttpClient)\n\nExample Code:\n```java\nAppConnectionManager appConnect = me.getAppConnectionManager();\ntry {\n    AppClient.FindCloudletRequest findCloudletRequest = me.createDefaultFindCloudletRequest(activityContext, location)\n      .setCarrierName(carrierName)\n      .build();\n    AppClient.FindCloudletReply findCloudletReply = me.findCloudlet(findCloudletRequest, 10000);\n    HashMap\u003cInteger, AppPort\u003e portMap = appConnect.getTCPMap(findCloudletReply);\n    AppPort appPort = portMap.get(internal_port); // This internal port depends entirely the AppInst configuration/Docker image.\n    Future\u003cSocket\u003e fs = appConnect.getTcpSocket(findCloudletReply, appPort, public_port, (int)GRPC_TIMEOUT_MS);\n    Socket s = fs.get();\n    try {\n        /* use Socket */\n    } catch (IOException ioe) {\n        /* handle exception */\n    }\n} catch (DmeDnsException dde) {\n    /* handle exception */\n} catch (ExecutionException ee) {\n   /* handle exception */\n} catch (StatusRuntimeException sre) {\n    /* handle exception */\n} catch (InterruptedException ie) {\n    /* handle exception */\n} finally {\n    s.close();\n}\n```\n\n## PerformanceMetrics\n\nPerformance Metrics API tracks the average latency of the edge network for your application server’s Application Instance. You must add the Application Instance to a list of sites where they can be pinged. Performance metrics are available for all supported SDKs.\n\n### NetTest\n\nInitialization:\n```java\nNetTest()\n```\n\nClass Variables:\n   * boolean runTest\n   * int PingIntervalMS (default to 5000)\n   * int TestTimeoutMS (default to 5000)\n   * int ConnectTimeoutMS (default to 5000)\n   * LinkedBlockingQueue\u003cSite\u003e sites (import java.util.concurrent.LinkedBlockingQueue)\n\nClass Functions:\n   * boolean doTest(boolean enable)\n   * void RunNetTest()\n\n### Site\n\nInitialization:\n```java\nSite(Network network, String host, int port)\nSite(Network network, NetTest.TestType testType, int numSamples, String l7Path)\nSite(Network network, NetTest.TestType testType, int numSamples, String host, int port)\n```\n\nClass Variables:\n   * Network network\n   * String host\n   * int port\n   * String l7Path\n   * double lastPingMs\n   * NetTest.TestType testType\n   * double[] samples\n   * double average\n   * double stddev\n\nClass Functions:\n   * addSample(double time)\n   * recalculateStats()\n\nExample Code:\n```java\nimport com.mobiledgex.matchingengine.performancemetrics.NetTest;\nimport com.mobiledgex.matchingengine.performancemetrics.Site;\n\nNetTest netTest = new NetTest();\nSite site = new Site(mMatchingEngine.getNetworkManager().getActiveNetwork(), NetTest.TestType.CONNECT, numSamples, l7Url);\nnetTest.sites.add(site);\nnetTest.doTest(true);\n```\n\n# Edge SDK - C#\n\nThe Matching Engine C# SDK provides everything required to create\napplications for your devices. It includes libraries that enable\napplications to register and locate the nearest edge cloudlet backend\nserver for use. The libraries also allows verification of a device’s\nlocation for all location-specific tasks.  For detailed descriptions of\nnamespaces, classes, functions, and variables within the MobiledgeX C#\nSDK, visit the [SDK Documentation](/swagger/{{ENVIRON}}/edge-cloud-sdk-csharp/html/index.html).\n\nSome of the most commonly used functions are listed below.\n\n## RegisterClient\n[RegisterClient](/swagger/{{ENVIRON}}/edge-cloud-sdk-csharp/html/group__functions__dmeapis.html#RegisterClient)\nregisters the client with the closest Distributed Matching Engine (the nearest edge location in the Operator network) and validates the legitimacy of the mobile subscriber. All session information is encrypted.\n\n## FindCloudlet\n[FindCloudlet](/swagger/{{ENVIRON}}/edge-cloud-sdk-csharp/html/group__functions__dmeapis.html#FindCloudlet)\nlocates the most optimal edge computing footprint and allows the registered application to find the application backend by leveraging location, application subscription, and service provider agreement.\nIf there are no suitable cloudlet instances available, the client may connect to the application server located in the public cloud.\n\n## GetConnection\n[GetConnection](/swagger/{{ENVIRON}}/edge-cloud-sdk-csharp/html/group__functions__getconnection.html)\ngets a “connection” object (depending on Protocol of\nspecified connection and language) bound to cellular interface and\nconnected to application backend (as specified by findCloudletReply).\n\n## PerformanceMetrics\n[PerformanceMetrics](/swagger/{{ENVIRON}}/edge-cloud-sdk-csharp/html/group__classes__util.html)\ntracks the average latency of the edge network for your application server’s Application Instance. You must add the Application Instance to a list of sites where they can be pinged. Performance metrics are available for all supported SDKs.\n\n# Edge SDK - iOS\n\n## RegisterClient\nRegisters the client with the closest Distributed Matching Engine (the nearest edge location in the Operator network) and validates the legitimacy of the mobile subscriber. All session information is encrypted.\n\nExample Code:\n```swift\nimport MobiledgeXiOSLibrary\n\nlet matchingEngine = MatchingEngine()\nlet registerClientRequest = matchingEngine.createRegisterClientRequest(orgName: orgName)\nlet registerClientReplyPromise = matchingEngine.registerClient(request: registerClientRequest)\n.then { registerClientReply in\n    \\* handle registerClientReply*\\\n}\n```\n\nExample Response:\n```swift\n[\"unique_id\": ,\n\"status\": RS_SUCCESS,\n\"session_cookie\": eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODA1MDAxMzIsImlhdCI6MTU4MDQxMzczMiwia2V5Ijp7InBlZXJpcCI6IjE\nyNy4wLjAuMSIsImRldm5hbWUiOiJNb2JpbGVkZ2VYIiwiYXBwbmFtZSI6Ik1vYmlsZWRnZVggU0RLIERlbW8iLCJhcHB2ZXJzIjoiMS4wIiwidW5pcXVlaWR0eXBlI\njoiZG1lLWtzdWlkIiwidW5pcXVlaWQiOiIxWDgzOEVNbWJsNjYzSlNnT0dSVHFPYko1M3AiLCJraWQiOjR9fQ.kcrmNOYRLV_irLpYpdN6-oCgj4EakuTgMbIInNs1\nJvCPm5vCjshO3CCbY_pCbcovUL-EemXZcWXqxYmz_SqIow,\n\"tags\": \u003c__NSArray0 0x7fff80615170\u003e(),\n\"unique_id_type\": ,\n\"ver\": 0,\n\"token_server_uri\": http://mexdemo.tok.mobiledgex.net:9999/its?followURL=https://dme.mobiledgex.net/verifyLoc]\n```\n\n## FindCloudlet\n\nLocates the most optimal edge computing footprint and allows the registered application to find the application backend by leveraging the location, application subscription, and service provider agreement.\nIf there are no suitable cloudlet instances available, the client may connect to the application server located in the public cloud.\n\nExample Code:\n```swift\nimport MobiledgeXiOSLibrary\n\nlet matchingEngine = MatchingEngine()\nlet findCloudletRequest = matchingEngine.createFindCloudletRequest(gpsLocation: loc, carrierName: carrierName)\nlet findCloudletReplyPromise = matchingEngine.findCloudlet(request: findCloudletRequest)\n.then { findCloudletReply in\n    \\* handle findCloudletReply*\\\n}\n```\n\nExample Response:\n```swift\n[\"tags\": \u003c__NSArray0 0x7fff80615170\u003e(),\n\"cloudlet_location\": {\n   altitude = 0;\n   course = 0;\n   \"horizontal_accuracy\" = 0;\n   latitude = \"41.87\";\n   longitude = \"-93.09699999999999\";\n   speed = 0;\n   timestamp = {\n     nanos = 0;\n     seconds = 0;\n   };\n   \"vertical_accuracy\" = 0;\n},\n\"ver\": 0,\n\"fqdn\": mobiledgexmobiledgexsdkdemo10.mexdemo-app-cluster.centralus-main.azure.mobiledgex.net,\n\"ports\": \u003c__NSSingleObjectArrayI 0x600003d394f0\u003e(\n{\n  \"end_port\" = 0;\n  \"fqdn_prefix\" = \"mobiledgexsdkdemo-tcp.\";\n  \"internal_port\" = 7777;\n  \"path_prefix\" = \"\";\n  proto = \"L_PROTO_TCP\";\n  \"public_port\" = 7777;\n}),\n\"status\": FIND_FOUND]\n```\n\n## VerifyLocation\nVerifies that the GPS coordinates accurately report the actual location of the device.\n\nExample Code:\n```swift\nimport MobiledgeXiOSLibrary\n\nlet matchingEngine = MatchingEngine()\nlet verifyLocationRequest = matchingEngine.createVerifyLocationRequest(gpsLocation: loc, carrierName: carrierName)\nlet verifyLocationReplyPromise = matchingEngine.verifyLocation(request: verifyLocationRequest)\n.then { verifyLocationReply in\n    /* handle verifyLocationReply */\n}\n```\n\nExample Response:\n```swift\n[\"gps_location_accuracy_km\": -1,\n\"gps_location_status\": LOC_MISMATCH_SAME_COUNTRY,\n\"tags\": \u003c__NSArray0 0x1f909f888\u003e(),\n\"ver\": 0,\n\"tower_status\": TOWER_UNKNOWN]\n```\n\n## GetConnection\nFunction that gets a “connection” object (depending on Protocol of\nspecified connection and language) bound to cellular interface and\nconnected to application backend (as specified by findCloudletReply).\n\nParameters:\n   * `findCloudletReply` [String: AnyObject]: Object returned from findCloudlet API\n   * `appPort` [String: Any]: AppPort object from Ports field in FindCloudletReply\n      * The developer chooses this by using get[Protocol]AppPorts which returns a dictionary (key: internal_port, value: appPort)\n      * Using the known internal_port (specified on app deployment), get correct AppPort\n   *  `desiredPort` int: Used if developer specified a port range and wants a specific port (use -1 if it it doesn’t matter)\n   *  `timeout` Double: Milliseconds. Promise will return with timeout error if GetConnection takes longer than specified timeout\n\nReturn:\nAll return a Google Promises object (PromisesSwift pod) to facilitate asynchronous code\n   *  `getTCPConnection` Promise\u003cCFSocket\u003e\n   *  `getUDPConnection` Promise\u003cCFSocket\u003e\n   *  `getTCPTLSConnection` Promise\u003cNWConnection\u003e (import Network)\n   *  `getUDPDTLSConnection` Promise\u003cNWConnection\u003e (import Network)\n   *  `getHTTPConnection` Promise\u003cURLRequest\u003e\n   *  `getWebsocketConnection` Promise\u003cSocketManager\u003e (Socket.IO-Client-Swift dependency)\n   *  `getBSDTCPConnection` Promise\u003cMobiledgeXiOSLibrary.Socket\u003e (MobiledgeXiOSLibrary.Socket is a struct with 2 fields: addrInfo (UnsafeMutablePointer\u003caddrinfo\u003e) and sockfd (nt32))\n\nExample Code:\n```swift\nmatchingEngine.registerAndFindCloudlet(orgName: orgName, appName: appName, appVers: appVers, gpsLocation: loc, carrierName: carrierName)\n.then { findCloudletReply -\u003e Promise\u003cSocket\u003e in\nguard let appPortsDict = self.matchingEngine.getTCPAppPorts(findCloudletReply: findCloudletReply) else {\n        /* handle error */\n}\nif appPortsDict.capacity == 0 {\n    /* handle error */\n}\nguard let appPort = appPortsDict[internalPort] else {\n    /* handle error */\n}\nreturn self.matchingEngine.getTCPConnection(findCloudletReply: findCloudletReply, appPort: appPort, desiredPort: desiredPort, timeout: 5000)\n}.then { socket in\n    /* read and write using socket */\n    CFRelease(socket) // close socket\n}.catch { error in\n    /* handle error */\n}\n```\n\n## PerformanceMetrics\n\nPerformance Metrics API tracks the average latency of the edge network for your application server’s Application Instance. You must add the Application Instance to a list of sites where they can be pinged. Performance metrics are available for all supported SDKs.\n\n\n### NetTest\n\nInitialization:\n```swift\ninit(sites: [MobiledgeXiOSLibrary.PerformanceMetrics.Site])\n```\n   * `sites` Array of MobiledgeXiOSLibrary.PerformanceMetrics.Site objects\n\nClass Variables:\n   * `sites` [MobiledgeXiOSLibrary.PerformanceMetrics.Site]\n   * `tests` [AnyCancellable]\n   * `timeout` Double (default is 5.0 milliseconds)\n\nClass Functions:\n   * `runTest(interval: Int)` Runs a connect/disconnect test or ping test every “interval” milliseconds per site on a background Dispatch Queue. Collects “latency” stats for each site.\n      * `interval` Time in milliseconds between “ping” tests to\n   * `cancelTest()` Stop running test on background Dispatch Queue\n   * `addSite(site: Site)` Add a site to array of sites to be tested for latency. Stops and restarts runTest() if already running, otherwise only adds to array.\n   * `removeSite()` Removes a site from array of sites. Stops and restarts runTest if already running, otherwise only removes from array.\n\n### Site\nInitialization:\n```swift\ninit(network: String, l7Path: String, testType: NetTest.TestType?, numSamples: Int?)\n```\n   * `network` use MobiledgeXiOSLibrary.NetworkInterface.CELLULAR or .WIFI\n   * `l7Path` Layer 7 path (for HTTP)\n   * _(Optional)_ MobiledgeXiOSLibrary.PerformanceMetrics.NetTest.TestType.CONNECT or .PING\n   * _(Optional)_ Number of samples in rolling average and std dev\n\n```swift\ninit(network: String, host: String, port: String, testType: NetTest.TestType?, numSamples: Int?)\n```\n   * `network` use MobiledgeXiOSLibrary.NetworkInterface.CELLULAR or .WIFI\n   * `host` fqdn of application backend deployed via MobiledgeX infrastructure\n   * `port` port of application backend deployed via MobiledgeX infrastructure\n   * _(Optional)_ `testType` MobiledgeXiOSLibrary.PerformanceMetrics.NetTest.TestType.CONNECT or .PING\n   * _(Optional)_ `numSamples` Number of samples in rolling average and std dev\n\nClass Variables:\n   * `host` String?\n   * `port` String?\n   * `l7Path` String?\n   * `network` String\n   * `testType` NetTest.TestType (defaults to cellular if not initialized)\n   * `lastPingMs` Double?\n   * `avg` Double\n   * `stdDev` Double?\n   * `samples` [Double]\n   * `capacity` Int  (defaults to 5 if not initialized)\n\nClass Functions\n   * `addSample(sample: Double)` add a latency sample (in milliseconds)\n\nExample Code:\n```swift\nimport MobiledgeXiOSLibrary\n\nlet site1 = MobiledgeXiOSLibrary.PerformanceMetrics.Site(network: MobiledgeXiOSLibrary.NetworkInterface.CELLULAR, l7Path: l7Path, testType: MobiledgeXiOSLibrary.PerformanceMetrics.NetTest.TestType.CONNECT, numSamples: 10)\nlet site2 = MobiledgeXiOSLibrary.PerformanceMetrics.Site(network: MobiledgeXiOSLibrary.NetworkInterface.CELLULAR, host: host, port:  port, testType: MobiledgeXiOSLibrary.PerformanceMetrics.NetTest.TestType.CONNECT, numSamples: 10)\n\nlet sites = [site1, site2]\n\nlet netTest = MobiledgeXiOSLibrary.PerformanceMetrics.NetTest(sites: sites)netTest.runTest(interval: interval_milli)\n```\n",
+    "version": "2.0"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/findcloudlet": {
+      "post": {
+        "summary": "FindCloudlet",
+        "description": "Locates the most optimal edge computing footprint and allows the\nregistered application to find the application backend by leveraging the\nlocation, application subscription, and service provider agreement. If\nthere are no suitable cloudlet instances available, the client may connect\nto the application server located in the public cloud.",
+        "operationId": "FindCloudlet",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineFindCloudletReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineFindCloudletRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MatchEngineApi"
+        ]
+      }
+    },
+    "/v1/getappofficialfqdn": {
+      "post": {
+        "operationId": "GetAppOfficialFqdn",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineAppOfficialFqdnReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineAppOfficialFqdnRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MatchEngineApi"
+        ]
+      }
+    },
+    "/v1/registerclient": {
+      "post": {
+        "summary": "RegisterClient",
+        "description": "Registers the client with the closest Distributed Matching Engine (the\nnearest edge location in the Operator network) and validates the\nlegitimacy of the mobile subscriber. All session information is encrypted.",
+        "operationId": "RegisterClient",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineRegisterClientReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineRegisterClientRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MatchEngineApi"
+        ]
+      }
+    },
+    "/v1/streamedgeevent": {
+      "post": {
+        "operationId": "StreamEdgeEvent",
+        "responses": {
+          "200": {
+            "description": "A successful response.(streaming responses)",
+            "schema": {
+              "$ref": "#/x-stream-definitions/distributed_match_engineServerEdgeEvent"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": " (streaming inputs)",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineClientEdgeEvent"
+            }
+          }
+        ],
+        "tags": [
+          "MatchEngineApi"
+        ]
+      }
+    },
+    "/v1/verifylocation": {
+      "post": {
+        "summary": "VerifyLocation",
+        "description": "Verifies that the GPS coordinates accurately report the actual location of the device.",
+        "operationId": "VerifyLocation",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineVerifyLocationReply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/distributed_match_engineVerifyLocationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "MatchEngineApi"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "AppOfficialFqdnReplyAOFStatus": {
+      "type": "string",
+      "enum": [
+        "AOF_UNDEFINED",
+        "AOF_SUCCESS",
+        "AOF_FAIL"
+      ],
+      "default": "AOF_UNDEFINED"
+    },
+    "ClientEdgeEventClientEventType": {
+      "type": "string",
+      "enum": [
+        "EVENT_UNKNOWN",
+        "EVENT_INIT_CONNECTION",
+        "EVENT_TERMINATE_CONNECTION",
+        "EVENT_LATENCY_SAMPLES",
+        "EVENT_LOCATION_UPDATE",
+        "EVENT_CUSTOM_EVENT"
+      ],
+      "default": "EVENT_UNKNOWN"
+    },
+    "DlgMessageDlgAck": {
+      "type": "string",
+      "enum": [
+        "DLG_ACK_EACH_MESSAGE",
+        "DLG_ASY_EVERY_N_MESSAGE",
+        "DLG_NO_ACK"
+      ],
+      "default": "DLG_ACK_EACH_MESSAGE",
+      "title": "Need acknowledgement"
+    },
+    "FindCloudletReplyFindStatus": {
+      "type": "string",
+      "enum": [
+        "FIND_UNKNOWN",
+        "FIND_FOUND",
+        "FIND_NOTFOUND"
+      ],
+      "default": "FIND_UNKNOWN"
+    },
+    "ServerEdgeEventServerEventType": {
+      "type": "string",
+      "enum": [
+        "EVENT_UNKNOWN",
+        "EVENT_INIT_CONNECTION",
+        "EVENT_LATENCY_REQUEST",
+        "EVENT_LATENCY_PROCESSED",
+        "EVENT_CLOUDLET_STATE",
+        "EVENT_CLOUDLET_MAINTENANCE",
+        "EVENT_APPINST_HEALTH",
+        "EVENT_CLOUDLET_UPDATE",
+        "EVENT_ERROR"
+      ],
+      "default": "EVENT_UNKNOWN"
+    },
+    "VerifyLocationReplyGPSLocationStatus": {
+      "type": "string",
+      "enum": [
+        "LOC_UNKNOWN",
+        "LOC_VERIFIED",
+        "LOC_MISMATCH_SAME_COUNTRY",
+        "LOC_MISMATCH_OTHER_COUNTRY",
+        "LOC_ROAMING_COUNTRY_MATCH",
+        "LOC_ROAMING_COUNTRY_MISMATCH",
+        "LOC_ERROR_UNAUTHORIZED",
+        "LOC_ERROR_OTHER"
+      ],
+      "default": "LOC_UNKNOWN"
+    },
+    "VerifyLocationReplyTowerStatus": {
+      "type": "string",
+      "enum": [
+        "TOWER_UNKNOWN",
+        "CONNECTED_TO_SPECIFIED_TOWER",
+        "NOT_CONNECTED_TO_SPECIFIED_TOWER"
+      ],
+      "default": "TOWER_UNKNOWN",
+      "title": "Status of the reply"
+    },
+    "distributed_match_engineAppOfficialFqdnReply": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "API version"
+        },
+        "app_official_fqdn": {
+          "type": "string",
+          "title": "The FQDN to which the app is reached independent of the edge"
+        },
+        "client_token": {
+          "type": "string",
+          "title": "Tokenized client data"
+        },
+        "status": {
+          "$ref": "#/definitions/AppOfficialFqdnReplyAOFStatus",
+          "title": "Status of the reply"
+        },
+        "ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/distributed_match_engineAppPort"
+          },
+          "title": "List of Service Endpoints for AppInst"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "_(optional)_ Vendor specific data"
+        }
+      }
+    },
+    "distributed_match_engineAppOfficialFqdnRequest": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "API version"
+        },
+        "session_cookie": {
+          "type": "string",
+          "title": "Session Cookie from RegisterClientRequest"
+        },
+        "gps_location": {
+          "$ref": "#/definitions/distributed_match_engineLoc",
+          "title": "The GPS location of the user"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "_(optional)_ Vendor specific data"
+        }
+      }
+    },
+    "distributed_match_engineAppPort": {
+      "type": "object",
+      "properties": {
+        "proto": {
+          "$ref": "#/definitions/distributed_match_engineLProto",
+          "title": "TCP (L4) or UDP (L4) protocol"
+        },
+        "internal_port": {
+          "type": "integer",
+          "format": "int32",
+          "title": "Container port"
+        },
+        "public_port": {
+          "type": "integer",
+          "format": "int32",
+          "title": "Public facing port for TCP/UDP (may be mapped on shared LB reverse proxy)"
+        },
+        "fqdn_prefix": {
+          "type": "string",
+          "description": "skip 4 to preserve the numbering. 4 was path_prefix but was removed since we dont need it after removed http\nFQDN prefix to append to base FQDN in FindCloudlet response. May be empty."
+        },
+        "end_port": {
+          "type": "integer",
+          "format": "int32",
+          "description": "A non-zero end port indicates a port range from internal port to end port, inclusive."
+        },
+        "tls": {
+          "type": "boolean",
+          "format": "boolean",
+          "title": "TLS termination for this port"
+        },
+        "nginx": {
+          "type": "boolean",
+          "format": "boolean",
+          "title": "Use nginx proxy for this port if you really need a transparent proxy (udp only)"
+        },
+        "max_pkt_size": {
+          "type": "string",
+          "format": "int64",
+          "title": "Maximum datagram size (udp only)"
+        }
+      },
+      "description": "AppPort describes an L4 or L7 public access port/path mapping. This is used to track external to internal mappings for access via a shared load balancer or reverse proxy.",
+      "title": "Application Port"
+    },
+    "distributed_match_engineClientEdgeEvent": {
+      "type": "object",
+      "properties": {
+        "session_cookie": {
+          "type": "string",
+          "title": "Session Cookie from RegisterClientReply"
+        },
+        "edge_events_cookie": {
+          "type": "string",
+          "title": "Session Cookie from FindCloudletReply"
+        },
+        "event_type": {
+          "$ref": "#/definitions/ClientEdgeEventClientEventType"
+        },
+        "gps_location": {
+          "$ref": "#/definitions/distributed_match_engineLoc",
+          "title": "GPS Location info if event_type is EVENT_LOCATION_UPDATE or EVENT_LATENCY_SAMPLES"
+        },
+        "samples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/distributed_match_engineSample"
+          },
+          "title": "Latency Samples if event_type is EVENT_LATENCY_SAMPLES or EVENT_CUSTOM_EVENT"
+        },
+        "device_info_static": {
+          "$ref": "#/definitions/distributed_match_engineDeviceInfoStatic",
+          "title": "_(optional)_ Static device information for latency and deviceinfo stats \nSend on EVENT_INIT_CONNECTION to get this information in latency stats and deviceinfo stats"
+        },
+        "device_info_dynamic": {
+          "$ref": "#/definitions/distributed_match_engineDeviceInfoDynamic",
+          "title": "_(optional)_ Dynamic device information for latency and deviceinfo stats\nSend on EVENT_INIT_CONNECTION to get this information in first deviceinfo stat\nSend on EVENT_LOCATION_UPDATE to get this information in dynamic deviceinfo stats\nSend on EVENT_LATENCY_SAMPLES to get this information in latency stats"
+        },
+        "custom_event": {
+          "type": "string",
+          "title": "Custom event specified by the application"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "_(optional)_ Vendor specific data"
+        }
+      },
+      "title": "Messages from SDK to DME"
+    },
+    "distributed_match_engineCloudletState": {
+      "type": "string",
+      "enum": [
+        "CLOUDLET_STATE_UNKNOWN",
+        "CLOUDLET_STATE_ERRORS",
+        "CLOUDLET_STATE_READY",
+        "CLOUDLET_STATE_OFFLINE",
+        "CLOUDLET_STATE_NOT_PRESENT",
+        "CLOUDLET_STATE_INIT",
+        "CLOUDLET_STATE_UPGRADE",
+        "CLOUDLET_STATE_NEED_SYNC"
+      ],
+      "default": "CLOUDLET_STATE_UNKNOWN",
+      "description": "CloudletState is the state of the Cloudlet.\n\n - CLOUDLET_STATE_UNKNOWN: Unknown\n - CLOUDLET_STATE_ERRORS: Create/Delete/Update encountered errors (see Errors field of CloudletInfo)\n - CLOUDLET_STATE_READY: Cloudlet is created and ready\n - CLOUDLET_STATE_OFFLINE: Cloudlet is offline (unreachable)\n - CLOUDLET_STATE_NOT_PRESENT: Cloudlet is not present\n - CLOUDLET_STATE_INIT: Cloudlet is initializing\n - CLOUDLET_STATE_UPGRADE: Cloudlet is upgrading\n - CLOUDLET_STATE_NEED_SYNC: Cloudlet needs data to synchronize"
+    },
+    "distributed_match_engineDeviceInfoDynamic": {
+      "type": "object",
+      "properties": {
+        "data_network_type": {
+          "type": "string",
+          "description": "LTE, 5G, etc."
+        },
+        "signal_strength": {
+          "type": "string",
+          "format": "uint64",
+          "title": "Device signal strength"
+        },
+        "carrier_name": {
+          "type": "string",
+          "title": "Carrier name (can be different from cloudlet org if using \"\")"
+        }
+      },
+      "title": "DeviceInfoDynamic"
+    },
+    "distributed_match_engineDeviceInfoStatic": {
+      "type": "object",
+      "properties": {
+        "device_os": {
+          "type": "string",
+          "title": "Android or iOS"
+        },
+        "device_model": {
+          "type": "string",
+          "title": "Device model"
+        }
+      },
+      "title": "DeviceInfoStatic"
+    },
+    "distributed_match_engineDlgReply": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "ack_id": {
+          "type": "string",
+          "format": "uint64",
+          "title": "AckId"
+        },
+        "group_cookie": {
+          "type": "string",
+          "title": "Group Cookie for Secure comm"
+        }
+      }
+    },
+    "distributed_match_engineFindCloudletReply": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "API version"
+        },
+        "status": {
+          "$ref": "#/definitions/FindCloudletReplyFindStatus",
+          "title": "Status return"
+        },
+        "fqdn": {
+          "type": "string",
+          "title": "Fully Qualified Domain Name of the Closest App instance"
+        },
+        "ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/distributed_match_engineAppPort"
+          },
+          "title": "List of Service Endpoints for AppInst"
+        },
+        "cloudlet_location": {
+          "$ref": "#/definitions/distributed_match_engineLoc",
+          "title": "Location of the cloudlet"
+        },
+        "edge_events_cookie": {
+          "type": "string",
+          "title": "Session Cookie for specific EdgeEvents for specific AppInst"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "_(optional)_ Vendor specific data"
+        }
+      }
+    },
+    "distributed_match_engineFindCloudletRequest": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "API version"
+        },
+        "session_cookie": {
+          "type": "string",
+          "description": "Session Cookie from RegisterClientRequest",
+          "title": "Session Cookie"
+        },
+        "carrier_name": {
+          "type": "string",
+          "description": "_(optional)_ By default, all SDKs will automatically fill in this parameter with the MCC+MNC of your current provider. Only override this parameter if you need to filter for a specific carrier on the DME. The DME will filter for App instances that are associated with the specified carrier.\nIf you wish to search for any App Instance on the DME regardless of carrier name, you can input “” to consider all carriers as “Any”.",
+          "title": "Carrier Name"
+        },
+        "gps_location": {
+          "$ref": "#/definitions/distributed_match_engineLoc",
+          "description": "The GPS location of the user",
+          "title": "GPS Location"
+        },
+        "cell_id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(optional)_ Cell ID where the client is",
+          "title": "Cell ID"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "_(optional)_ Vendor specific data",
+          "title": "Tags"
+        }
+      }
+    },
+    "distributed_match_engineHealthCheck": {
+      "type": "string",
+      "enum": [
+        "HEALTH_CHECK_UNKNOWN",
+        "HEALTH_CHECK_FAIL_ROOTLB_OFFLINE",
+        "HEALTH_CHECK_FAIL_SERVER_FAIL",
+        "HEALTH_CHECK_OK",
+        "HEALTH_CHECK_CLOUDLET_OFFLINE"
+      ],
+      "default": "HEALTH_CHECK_UNKNOWN",
+      "description": "Health check status gets set by external, or rootLB health check\n\n - HEALTH_CHECK_UNKNOWN: Health Check is unknown\n - HEALTH_CHECK_FAIL_ROOTLB_OFFLINE: Health Check failure due to RootLB being offline\n - HEALTH_CHECK_FAIL_SERVER_FAIL: Health Check failure due to Backend server being unavailable\n - HEALTH_CHECK_OK: Health Check is ok\n - HEALTH_CHECK_CLOUDLET_OFFLINE: Health Check failure due to Cloudlet Offline",
+      "title": "Health check status"
+    },
+    "distributed_match_engineLProto": {
+      "type": "string",
+      "enum": [
+        "L_PROTO_UNKNOWN",
+        "L_PROTO_TCP",
+        "L_PROTO_UDP"
+      ],
+      "default": "L_PROTO_UNKNOWN",
+      "description": "LProto indicates which protocol to use for accessing an application on a particular port. This is required by Kubernetes for port mapping.\n\n0: `L_PROTO_UNKNOWN`\n1: `L_PROTO_TCP`\n2: `L_PROTO_UDP`\n\n - L_PROTO_UNKNOWN: Unknown protocol\n - L_PROTO_TCP: TCP (L4) protocol\n - L_PROTO_UDP: UDP (L4) protocol",
+      "title": "Layer4 Protocol"
+    },
+    "distributed_match_engineLoc": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "format": "double",
+          "title": "Latitude in WGS 84 coordinates"
+        },
+        "longitude": {
+          "type": "number",
+          "format": "double",
+          "title": "Longitude in WGS 84 coordinates"
+        },
+        "horizontal_accuracy": {
+          "type": "number",
+          "format": "double",
+          "title": "Horizontal accuracy (radius in meters)"
+        },
+        "vertical_accuracy": {
+          "type": "number",
+          "format": "double",
+          "title": "Vertical accuracy (meters)"
+        },
+        "altitude": {
+          "type": "number",
+          "format": "double",
+          "title": "On android only lat and long are guaranteed to be supplied\nAltitude in meters"
+        },
+        "course": {
+          "type": "number",
+          "format": "double",
+          "title": "Course (IOS) / bearing (Android) (degrees east relative to true north)"
+        },
+        "speed": {
+          "type": "number",
+          "format": "double",
+          "title": "Speed (IOS) / velocity (Android) (meters/sec)"
+        },
+        "timestamp": {
+          "$ref": "#/definitions/distributed_match_engineTimestamp",
+          "title": "Timestamp"
+        }
+      },
+      "title": "GPS Location"
+    },
+    "distributed_match_engineMaintenanceState": {
+      "type": "string",
+      "enum": [
+        "NORMAL_OPERATION",
+        "MAINTENANCE_START",
+        "FAILOVER_REQUESTED",
+        "FAILOVER_DONE",
+        "FAILOVER_ERROR",
+        "MAINTENANCE_START_NO_FAILOVER",
+        "CRM_REQUESTED",
+        "CRM_UNDER_MAINTENANCE",
+        "CRM_ERROR",
+        "NORMAL_OPERATION_INIT",
+        "UNDER_MAINTENANCE"
+      ],
+      "default": "NORMAL_OPERATION",
+      "description": "Maintenance allows for planned downtimes of Cloudlets.\nThese states involve message exchanges between the Controller,\nthe AutoProv service, and the CRM. Certain states are only set\nby certain actors.\n\n - NORMAL_OPERATION: Normal operational state\n - MAINTENANCE_START: Request start of maintenance\n - FAILOVER_REQUESTED: Trigger failover for any HA AppInsts\n - FAILOVER_DONE: Failover done\n - FAILOVER_ERROR: Some errors encountered during maintenance failover\n - MAINTENANCE_START_NO_FAILOVER: Request start of maintenance without AutoProv failover\n - CRM_REQUESTED: Request CRM to transition to maintenance\n - CRM_UNDER_MAINTENANCE: CRM request done and under maintenance\n - CRM_ERROR: CRM failed to go into maintenance\n - NORMAL_OPERATION_INIT: Request CRM to transition to normal operation\n - UNDER_MAINTENANCE: Under maintenance",
+      "title": "Cloudlet Maintenance States"
+    },
+    "distributed_match_engineRegisterClientReply": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "API version"
+        },
+        "status": {
+          "$ref": "#/definitions/distributed_match_engineReplyStatus",
+          "title": "Status of the reply"
+        },
+        "session_cookie": {
+          "type": "string",
+          "title": "Session Cookie to be used in later API calls"
+        },
+        "token_server_uri": {
+          "type": "string",
+          "title": "URI for the Token Server"
+        },
+        "unique_id_type": {
+          "type": "string",
+          "description": "_(optional)_ Type of unique ID provided by the server\nA unique_id_type and unique_id may be provided by the client to be registered.\nDuring registering, if a unique_id_type and unique_id are provided by the client in their request,\nthe unique_id_type and unique_id will be left blank in the response.\nBut, if the client does not provide a unique_id_type and unique_id, then the server generates\none and provides the unique_id in the response. If possible, the unique_id should be saved by the\nclient locally and used for subsequent RegisterClient API calls. Otherwise, a new unique_id will be\ngenerated for further API calls.",
+          "title": "Unique ID Type"
+        },
+        "unique_id": {
+          "type": "string",
+          "description": "_(optional)_ Unique identification of the client device or user\nA unique_id_type and unique_id may be provided by the client to be registered.\nDuring registering, if a unique_id_type and unique_id are provided by the client in their request,\nthe unique_id_type and unique_id will be left blank in the response.\nBut, if the client does not provide a unique_id_type and unique_id, then the server generates\none and provides the unique_id in the response. If possible, the unique_id should be saved by the\nclient locally and used for subsequent RegisterClient API calls. Otherwise, a new unique_id will be\ngenerated for further API calls.",
+          "title": "Unique ID"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "_(optional)_ Array of Tags.",
+          "title": "Vendor specific data"
+        }
+      }
+    },
+    "distributed_match_engineRegisterClientRequest": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "API version"
+        },
+        "org_name": {
+          "type": "string",
+          "description": "App developer organization name.",
+          "title": "App Organization Name"
+        },
+        "app_name": {
+          "type": "string",
+          "description": "Name of your application.",
+          "title": "App Name"
+        },
+        "app_vers": {
+          "type": "string",
+          "description": "Application version.",
+          "title": "App Version"
+        },
+        "carrier_name": {
+          "type": "string",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "Carrier Name"
+        },
+        "auth_token": {
+          "type": "string",
+          "description": "_(optional)_ An authentication token supplied by the application.",
+          "title": "Authentication Token"
+        },
+        "cell_id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(optional)_ Cellular ID of where the client is connected.",
+          "title": "Cell ID"
+        },
+        "unique_id_type": {
+          "type": "string",
+          "description": "_(optional)_ Type of unique ID provided by the client.\nIf left blank, a new Unique ID type will be assigned in the RegisterClient Reply.",
+          "title": "Unique ID Type"
+        },
+        "unique_id": {
+          "type": "string",
+          "description": "_(optional)_ Unique identification of the client device or user. May be overridden by the server.\nIf left blank, a new Unique ID will be assigned in the RegisterClient Reply.",
+          "title": "Unique ID"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "_(optional)_ Vendor specific data",
+          "title": "Tags"
+        }
+      }
+    },
+    "distributed_match_engineReplyStatus": {
+      "type": "string",
+      "enum": [
+        "RS_UNDEFINED",
+        "RS_SUCCESS",
+        "RS_FAIL"
+      ],
+      "default": "RS_UNDEFINED"
+    },
+    "distributed_match_engineSample": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "format": "double",
+          "title": "Latency value"
+        },
+        "timestamp": {
+          "$ref": "#/definitions/distributed_match_engineTimestamp",
+          "title": "Timestamp"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "_(optional)_ Vendor specific data"
+        }
+      },
+      "title": "Sample"
+    },
+    "distributed_match_engineServerEdgeEvent": {
+      "type": "object",
+      "properties": {
+        "event_type": {
+          "$ref": "#/definitions/ServerEdgeEventServerEventType"
+        },
+        "cloudlet_state": {
+          "$ref": "#/definitions/distributed_match_engineCloudletState",
+          "title": "Cloudlet state information if cloudlet state is not CLOUDLET_STATE_READY"
+        },
+        "maintenance_state": {
+          "$ref": "#/definitions/distributed_match_engineMaintenanceState",
+          "title": "Cloudlet maintenance state information if maintenance state is not NORMAL_OPERATION"
+        },
+        "health_check": {
+          "$ref": "#/definitions/distributed_match_engineHealthCheck",
+          "title": "AppInst health state information if health check is not HEALTH_CHECK_OK"
+        },
+        "statistics": {
+          "$ref": "#/definitions/distributed_match_engineStatistics",
+          "title": "Summarized RTT Latency stats from samples provided from client if event_type is EVENT_LATENCY"
+        },
+        "new_cloudlet": {
+          "$ref": "#/definitions/distributed_match_engineFindCloudletReply",
+          "title": "New and closer cloudlet if event_type is EVENT_CLOUDLET_UPDATE.\n(EVENT_CLOUDLET_UPDATE occurs if the client is closer to a different cloudlet, or a new closer appinst is created, or a previously down appinst/cloudlet that is closest to the client is now operational)\nAlso sent on EVENT_CLOUDLET_STATE if another cloudlet is available\nAlso sent on EVENT_CLOUDLET_MAINTENANCE, if another cloudlet is available and maintenance_state == UNDER_MAINTENANCE\nAlso sent on EVENT_APPINST_HEALTH, if another cloudlet is available and health_check != HEALTH_CHECK_UNKNOWN"
+        },
+        "error_msg": {
+          "type": "string",
+          "title": "Error message if event_type is EVENT_ERROR"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "_(optional)_ Vendor specific data"
+        }
+      },
+      "title": "Message from DME to SDK"
+    },
+    "distributed_match_engineStatistics": {
+      "type": "object",
+      "properties": {
+        "avg": {
+          "type": "number",
+          "format": "double",
+          "title": "Average"
+        },
+        "min": {
+          "type": "number",
+          "format": "double",
+          "title": "Minimum"
+        },
+        "max": {
+          "type": "number",
+          "format": "double",
+          "title": "Maximum"
+        },
+        "std_dev": {
+          "type": "number",
+          "format": "double",
+          "title": "Square root of unbiased variance"
+        },
+        "variance": {
+          "type": "number",
+          "format": "double",
+          "title": "Unbiased variance"
+        },
+        "num_samples": {
+          "type": "string",
+          "format": "uint64",
+          "title": "Number of samples to create stats"
+        },
+        "timestamp": {
+          "$ref": "#/definitions/distributed_match_engineTimestamp",
+          "title": "Timestamp"
+        }
+      },
+      "title": "Statistics"
+    },
+    "distributed_match_engineTimestamp": {
+      "type": "object",
+      "properties": {
+        "seconds": {
+          "type": "string",
+          "format": "int64"
+        },
+        "nanos": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "This is a simple Timestamp message type\ngrpc-gateway converts google.protobuf.Timestamp into an RFC3339-type string\nwhich is a waste of a conversion, so we define our own"
+    },
+    "distributed_match_engineVerifyLocationReply": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "API version"
+        },
+        "tower_status": {
+          "$ref": "#/definitions/VerifyLocationReplyTowerStatus"
+        },
+        "gps_location_status": {
+          "$ref": "#/definitions/VerifyLocationReplyGPSLocationStatus"
+        },
+        "gps_location_accuracy_km": {
+          "type": "number",
+          "format": "double",
+          "title": "location accuracy, the location is verified to\nbe within this number of kilometers.  Negative value\nmeans no verification was performed"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "_(optional)_ Vendor specific data"
+        }
+      }
+    },
+    "distributed_match_engineVerifyLocationRequest": {
+      "type": "object",
+      "properties": {
+        "ver": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(hidden)_ Reserved for future use",
+          "title": "API version"
+        },
+        "session_cookie": {
+          "type": "string",
+          "description": "Session Cookie from RegisterClientRequest",
+          "title": "Session Cookie"
+        },
+        "carrier_name": {
+          "type": "string",
+          "description": "Unique carrier identification (typically MCC + MNC)",
+          "title": "Carrier Name"
+        },
+        "gps_location": {
+          "$ref": "#/definitions/distributed_match_engineLoc",
+          "description": "The GPS location to verify",
+          "title": "GPS Location"
+        },
+        "verify_loc_token": {
+          "type": "string",
+          "description": "Must be retrieved from TokenServerURI",
+          "title": "Verify Location Token"
+        },
+        "cell_id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "_(optional)_ Cell ID where the client is",
+          "title": "Cell ID"
+        },
+        "tags": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "_(optional)_ Vendor specific data",
+          "title": "Tags"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "type_url": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "runtimeStreamError": {
+      "type": "object",
+      "properties": {
+        "grpc_code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "http_code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "http_status": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  },
+  "x-stream-definitions": {
+    "distributed_match_engineServerEdgeEvent": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/distributed_match_engineServerEdgeEvent"
+        },
+        "error": {
+          "$ref": "#/definitions/runtimeStreamError"
+        }
+      },
+      "title": "Stream result of distributed_match_engineServerEdgeEvent"
+    }
+  }
+}
