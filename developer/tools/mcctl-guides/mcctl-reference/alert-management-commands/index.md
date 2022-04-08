@@ -1,8 +1,8 @@
 ---
 title: Alert Management Commands
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Manage AlertReceiver and create alerts using mcctl
 
 ---
@@ -305,18 +305,18 @@ curl -X POST "https://console.mobiledgex.net:443/api/v1/auth/ctrl/CreateAlertPol
 #### Show using labels
 
 ```
-mcctl alertpolicy show labels="myalertname"="AppInstanceResourceUsage" region=US
-2- key:
-3 organization: wwtdev
-4 name: CPUerrorAlertPolicy
-5 cpuutilizationlimit: 60
-6 severity: error
-7 triggertime: 1m30s
-8 labels:
-9 CPUalert: Error003
-10 myalertname: AppInstanceResourceUsage
-11 wwtdev: tomd
-12 annotations:
+mcctl alertpolicy show labels="myalertname"="AppInstanceResourceUsage" region=US 
+2- key: 
+3 organization: wwtdev 
+4 name: CPUerrorAlertPolicy 
+5 cpuutilizationlimit: 60 
+6 severity: error 
+7 triggertime: 1m30s 
+8 labels: 
+9 CPUalert: Error003 
+10 myalertname: AppInstanceResourceUsage 
+11 wwtdev: tomd 
+12 annotations: 
 13 description: ’[CPU] somedev Error003 on alertpolicytest critical needs 1.21 gigawatts 14 of power’
 ```
 

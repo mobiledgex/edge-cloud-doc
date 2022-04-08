@@ -1,8 +1,8 @@
 ---
 title: MobiledgeX Computer Vision
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how to take advantage of mobile edge computing through the use of our MobiledgeX Computer Vision Android library and Face Detection Server
 
 ---

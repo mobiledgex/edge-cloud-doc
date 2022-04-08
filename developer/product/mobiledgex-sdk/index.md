@@ -1,8 +1,8 @@
 ---
 title: MobiledgeX Client SDKs
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how our SDKs are built on top of our APIs to make it simpler to find the closest deployed application instance
 
 ---

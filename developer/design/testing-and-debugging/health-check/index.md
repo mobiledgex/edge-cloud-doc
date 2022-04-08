@@ -1,8 +1,8 @@
 ---
 title: Health Check
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Understand the various health check types to identify inconsistencies, irregularities, and issues that can possibly decrease operational efficiencies
 
 ---

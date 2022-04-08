@@ -1,8 +1,8 @@
 ---
 title: Application Definition
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Define the application definition used to create application instances that can be deployed on MobiledgeX
 
 ---
@@ -29,17 +29,15 @@ The following actions may be performed on this page:
 - Select **Create**.
 
 
-When specifying the port, you are limited to the following:
+When specifying the port, you are limited to the following:  
 
-- For TCP ports, the maximum number of ports supported is currently 1000.
+- For TCP ports, the maximum number of ports supported is currently 1000.  
 - For UDP ports, the maximum number of ports supported is currently 10000.
 
-**Warning:** Validation between ports/names are not performed automatically. Therefore, when specifying your ports/names, you must ensure that there are no conflicts between them. Otherwise, your deployment will not succeed.
-
+**Warning:** Validation between ports/names are not performed automatically. Therefore, when specifying your ports/names, you must ensure that there are no conflicts between them. Otherwise, your deployment will not succeed.  
 ![Create Apps Screen](/developer/assets/developer-ui-guide/create-apps.png "Create Apps Screen")
 
-Once you have defined your application, it will appear on the Apps page.
-
+Once you have defined your application, it will appear on the Apps page.  
 ![Application Definition list](/developer/assets/developer-ui-guide/apps-list.png "Application Definition list")
 
 ## Application Versioning
@@ -48,7 +46,7 @@ Application version is used as a key within the MobiledgeX platform. This means 
 
 - **Region** : The regions your application can be deployed
 - **Organization** : The organization this application is associated with
-- **Application Name** : The name for application definition
+- **Application Name** : The name for application definition 
 - **Application Version** : The version associated with this application definition
 
 
@@ -56,8 +54,7 @@ Although it is a key, the application version is not checked or parsed by the Mo
 
 ## Upgrade Prompt
 
-When a new version of an application is created, the MobiledgeX platform will prompt you to upgrade any Application Instances that are on a version of the application that is older than the most recently deployed version. Note that this does not perform any check of the data entered into the `version` field; it simply checks to see if there is an updated Application with a new version key.
-
+When a new version of an application is created, the MobiledgeX platform will prompt you to upgrade any Application Instances that are on a version of the application that is older than the most recently deployed version. Note that this does not perform any check of the data entered into the `version` field; it simply checks to see if there is an updated Application with a new version key.  
 ### Setup Application Versioning
 
 

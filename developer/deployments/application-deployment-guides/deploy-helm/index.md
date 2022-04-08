@@ -1,8 +1,8 @@
 ---
 title: Deploy a Helm V3 Application
 long_title: Deploy Helm V3
-overview_description:
-description:
+overview_description: 
+description: 
 This guide will show developers how to deploy their own Helm charts onto the MobiledgeX platform.
 
 ---
@@ -54,8 +54,7 @@ helm install ealenn/echo-server --version 0.3.1
 
 ### Specifying chart customizations (i.e. values.yaml)
 
-There are two ways to provide chart customization values when creating a helm-based App on MobiledgeX platform under Configs on the App Creation page. Begin by expanding the Configs menu by selecting the adjacent plus sign icon:
-
+There are two ways to provide chart customization values when creating a helm-based App on MobiledgeX platform under Configs on the App Creation page. Begin by expanding the Configs menu by selecting the adjacent plus sign icon: 
 ![](/developer/assets/configs.png "")
 
 Either paste the customization values directly into the Config box, or provide an internet reachable path to the chart customization values. (You can use more than one of these, but one of each type is not required).

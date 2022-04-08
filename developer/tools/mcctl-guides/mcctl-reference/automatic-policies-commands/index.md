@@ -1,8 +1,8 @@
 ---
 title: Automatic Policies Commands
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn about policy management commands with mcctl utility
 
 ---
@@ -31,7 +31,7 @@ Flags:
 
 ## Auto Scale Policies
 
-Auto-scale policies allow you to increase or decrease the computing resources for an application based on its needs.
+Auto-scale policies allow you to increase or decrease the computing resources for an application based on its needs.  
 
 ```
 mcctl --addr https://console.mobiledgex.net autoscalepolicy

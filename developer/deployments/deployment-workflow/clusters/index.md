@@ -1,8 +1,8 @@
 ---
 title: Cluster Instances
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Cluster instance descriptions and uses
 
 ---

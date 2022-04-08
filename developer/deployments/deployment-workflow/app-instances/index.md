@@ -1,8 +1,8 @@
 ---
 title: Application Instances
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Ready, set, deploy!
 
 ---
@@ -69,11 +69,32 @@ The next step is creating an app instance. There are two ways to do this:
 ## Using Terminal
 
 MobiledgeX provides terminal access to app instances for VMs, K8s, and docker deployments for the purpose of debugging, testing, and monitoring the overall health of your deployments. Additionally, you can view log files and submit commands to your container. The Actions menu on the App Instances page displays options specific to the deployment type of your app instance.
-| **Deployment Types** | **Actions menu options**                     |
-|----------------------|----------------------------------------------|
-| Helm                 | Update, Refresh, Delete                      |
-| VM                   | Refresh, Delete, Terminal, Power off, Reboot |
-| K8s and Docker       | Update, Refresh, Delete, Terminal            |
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
+
+**Deployment Types**
+</td>
+<td colspan="1" rowspan="1">
+
+**Actions menu options**
+</td>
+</tr>
+<tr>
+<td>Helm</td>
+<td>Update, Refresh, Delete</td>
+</tr>
+<tr>
+<td>VM</td>
+<td>Refresh, Delete, Terminal, Power off, Reboot</td>
+</tr>
+<tr>
+<td>K8s and Docker</td>
+<td>Update, Refresh, Delete, Terminal</td>
+</tr>
+</tbody>
+</table>
 
 #### K8s and Docker deployment types
 
@@ -103,7 +124,7 @@ For app instance K8s and docker deployment types, Termina **l** will provide acc
 - Select **Close** in the upper right-hand corner when done.
 
 
-**Note:** If your workload consists of multiple containers, specify the container you wish to operate on from the Container field.
+**Note:** If your workload consists of multiple containers, specify the container you wish to operate on from the Container field. 
 
 **Note:** You can only operate on running containers. Only running containers are displayed in the Container dropdown. If you wish to operate on a stopped container, you must restart it.
 

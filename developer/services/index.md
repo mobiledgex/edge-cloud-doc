@@ -1,8 +1,8 @@
 ---
 title: MobiledgeX Edge Services
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 MobiledgeX Edge Services are tested products that allow you to focus on building applications for your clients.
 
 ---

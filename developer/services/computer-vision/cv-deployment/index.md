@@ -1,8 +1,8 @@
 ---
 title: Computer Vision Server Deployment
 long_title: Deploying the Computer Vision Service to the MobiledgeX Platform
-overview_description:
-description:
+overview_description: 
+description: 
 How to deploy a Docker Image of Computer Vision to the MobiledgeX platform
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: Runtime Policies
 long_title: Application Policies
-overview_description:
-description:
+overview_description: 
+description: 
 Learn about application containers, VMs, zero-touch management and configuration, security, and scale based on the demand from clients
 
 ---

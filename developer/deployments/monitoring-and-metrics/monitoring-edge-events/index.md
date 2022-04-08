@@ -1,8 +1,8 @@
 ---
 title: Monitoring Edge Events
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Once Edge Events is integrated into your device via the MobiledgeX SDK, you may view the Edge Events data via the MobiledgeX Console
 
 ---
@@ -42,7 +42,7 @@ Displayed on the upper-right hand side is the cloudlet information in which the 
 
 The purple cloud that you see in the sample above displays the average latency data based on cloudlets, and not location.
 
-- To drill down, click the Location tile icon to display the cloudlet location.
+- To drill down, click the Location tile icon to display the cloudlet location. 
 
 
 ![Location Tile Data View](/developer/assets/monitoring/edge-events/drill-down.png "Location Tile Data View")

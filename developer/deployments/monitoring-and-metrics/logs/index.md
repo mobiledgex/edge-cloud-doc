@@ -1,8 +1,8 @@
 ---
 title: Usage Logs & Events
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn about the various logs &amp; events that MobiledgeX supports and records from various sources to store in a single collection
 
 ---
@@ -11,11 +11,11 @@ Learn about the various logs &amp; events that MobiledgeX supports and records f
 
 ## Types of Logs
 
-Historical activities performed by you and others within your organization are logged and viewed from the [Edge-Cloud Console](https://console.mobiledgex.net). Logs are used for diagnostic purposes or error correction and are logged and displayed by date and time. Event logs provide valuable information if you require assistance from MobiledgeX support teams. To forward logs to MobiledgeX, just copy and paste the **traceid**. Then, email the **traceid** to [support@mobiledgex.com](support@mobiledgex.com). Other log types are available. Please see below.
+Historical activities performed by you and others within your organization are logged and viewed from the [Edge-Cloud Console](https://console.mobiledgex.net). Logs are used for diagnostic purposes or error correction and are logged and displayed by date and time. Event logs provide valuable information if you require assistance from MobiledgeX support teams. To forward logs to MobiledgeX, just copy and paste the **traceid**. Then, email the **traceid** to [support@mobiledgex.com](support@mobiledgex.com). Other log types are available. Please see below.  
 
-- **Audit Logs:** Logs user activities such as logging, creating applications, deleting users, creating policies, etc.
+- **Audit Logs:** Logs user activities such as logging, creating applications, deleting users, creating policies, etc.  
 - **Event Logs:** These are system-generated events and can include services such as auto-provision policy, auto-scaling, application instance, or HA, where our platform will trigger events based on these user policies.
-- **Usage Logs:** These logs are generated to view the status (online or offline) of clusters, application instances status, or Cloudlets, and maintenance status.
+- **Usage Logs:** These logs are generated to view the status (online or offline) of clusters, application instances status, or Cloudlets, and maintenance status.  
 
 ## Event Logs
 
@@ -31,28 +31,198 @@ Select the **filter icon** on the top left.
 
 ![](/developer/assets/filter-time-range-1631031725.png "")
 
-You will see the Filter and Tags option, along with a Time range. Click the + sign to expand the Tags. If you do not wish to enter a value for your selected tag, you can input an asterisk in the **Value** field. Click the + sign multiple times if you wish to add a query using additional tags.
+You will see the Filter and Tags option, along with a Time range. Click the + sign to expand the Tags. If you do not wish to enter a value for your selected tag, you can input an asterisk in the **Value** field. Click the + sign multiple times if you wish to add a query using additional tags. 
 
-Tags are a list of objects that you can use to query your search.  Scroll through the options in the Tag list, specify a date range, and click **Apply.** The availability of tags is specific to your role as developer.
-
+Tags are a list of objects that you can use to query your search.  Scroll through the options in the Tag list, specify a date range, and click **Apply.** The availability of tags is specific to your role as developer. 
 ![Filter Event Logs](/developer/assets/tags-menu.png "Filter Event Logs")
 
 ## Events list
 
 The following table lists the events supported by our platform.
+<table>
+<tbody>
+<tr>
+<td colspan="1" rowspan="1">
 
-| Create App  | Create App Inst          | Create AutoScale Policy    | Create Cluster Inst    |
-|-------------|--------------------------|----------------------------|------------------------|
-| Delete App  | Delete App Inst          | Update AutoScale Policy    | Delete Custer Inst     |
-| Update App  | Update App Inst          | Delete AutoScale Policy    | Update Cluster Inst    |
- |
-| Create Org  | App Inst Online          | Add AutoProv Policy        | Create AutoProv Policy |
-| Add User    | App Inst Online          | Remove App AutoProv Policy | Update AutoProv Policy |
-| Remove User | AutoCluster Create       | Delete AutoProv Policy     |
- |
-| Run Command | Request App Inst Latency | Request App Inst Latency   |
-| Run Console | Show App Inst Client     | Show App Inst Client       |
-| Show Logs   | TLS Certs Error          |
+- Create App
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Create App Inst
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Create AutoScale Policy
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Create Cluster Inst
+
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+- Delete App
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Delete App Inst
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Update AutoScale Policy
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Delete Custer Inst
+
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+- Update App
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Update App Inst
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Delete AutoScale Policy
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Update Cluster Inst
+
+</td>
+</tr>
+<tr>
+<th></th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+- Create Org
+
+</td>
+<td>App Inst Online</td>
+<td colspan="1" rowspan="1">
+
+- Add AutoProv Policy
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Create AutoProv Policy
+
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+- Add User
+
+</td>
+<td colspan="1" rowspan="1">
+
+- App Inst Online
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Remove App AutoProv Policy
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Update AutoProv Policy
+
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+- Remove User
+
+</td>
+<td></td>
+<td colspan="1" rowspan="1">
+
+- AutoCluster Create
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Delete AutoProv Policy
+
+</td>
+</tr>
+<tr>
+<th></th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+- Run Command
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Request App Inst Latency
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Request App Inst Latency
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+- Run Console
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Show App Inst Client
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Show App Inst Client
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+
+- Show Logs
+
+</td>
+<td colspan="1" rowspan="1">
+
+- TLS Certs Error
+
+</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 ## Audit Logs
 
@@ -70,7 +240,7 @@ This will pull up the Audit Logs page, which allows you to view a record of hist
 
 You can view application usage (**application instances**) across client devices, locations, and the number of users connected to those applications. Using this data over time helps you understand the application activity that is occurring within your cloudlets, where you can drill down into specific events and uncover usage trends to measure user engagement. Additionally, you can also retrieve usage information about **cluster instances** and **cloudlet pools**. The ability to view cloudlets and cloudlet pool usage are strictly for operators; developers do not have the ability to view usage logs outside of cluster instances and application instances.
 
-Usage logs pull data in from your existing configurations for application instances, clusters, cloudlets, etc. Therefore, if you delete an app instance, for example, and refresh the Usage log, the usage log will indicate that it was deleted.
+Usage logs pull data in from your existing configurations for application instances, clusters, cloudlets, etc. Therefore, if you delete an app instance, for example, and refresh the Usage log, the usage log will indicate that it was deleted. 
 
 Select **Usage Logs** from the Logs Column.
 

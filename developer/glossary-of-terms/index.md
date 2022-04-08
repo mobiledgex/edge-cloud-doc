@@ -1,8 +1,8 @@
 ---
 title: Glossary of Terms
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 This glossary contains definitions for frequently used and technical terms throughout the documentation. Familiarize yourself with these terms to understand their application in the docs.
 
 ---

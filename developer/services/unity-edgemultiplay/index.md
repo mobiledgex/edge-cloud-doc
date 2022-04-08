@@ -1,8 +1,8 @@
 ---
 title: MobiledgeX Multiplayer Service
 long_title: "Edge Multiplay : Unity Multiplayer Solution using Edge Computing"
-overview_description:
-description:
+overview_description: 
+description: 
 These step-by-step guides provide instructions on how to use the MobiledgeX Edge Multiplay Client &amp; Multiplayer Server.
 
 ---

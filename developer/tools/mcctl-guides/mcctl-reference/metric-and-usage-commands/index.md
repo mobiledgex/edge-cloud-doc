@@ -1,8 +1,8 @@
 ---
 title: Metric and Usage Commands
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn about metric and usage commands with mcctl utility
 
 ---
@@ -15,14 +15,21 @@ The examples below request the output in JSON format, but it is possible to retr
 
 **Note:** The `mcctl` utility provides a stable interface to the MobiledgeX APIs. The API can be accessed directly, but the API interface is subject to change.
 
-`$ mcctl --addr https://console.mobiledgex.net metrics`
+```
+$ mcctl metrics
+Usage: mcctl metrics [flags] [command]
 
-The metrics command will show metrics for:
+Available Commands:
+  app                  View App metrics
+  cluster              View ClusterInst metrics
+  cloudlet             View Cloudlet metrics
+  cloudletusage        View Cloudlet usage
+  clientapiusage       View client API usage
+  clientappusage       View client App usage
+  clientcloudletusage  View client Cloudlet usage
+  appv2                View App metrics(v2 format)
 
-- `clients`
-- `applications`
-- `clusters`
-- `cloudlets`
+```
 
 All metrics commands can be qualified with a time or duration parameter.
 
@@ -34,28 +41,34 @@ All metrics commands can be qualified with a time or duration parameter.
 
 Several of the `mcctl` subcommands accept a start/end time to filter output. Time should be passed through in the format as outlined in [RFC 3339](https://tools.ietf.org/html/rfc3339). For example, to specify *10:35 PM UTC on August 7, 2019*, you would code the time as `2019-08-07T20:35:00Z`. Please note that the entire date/time string, including the time zone indicator, must be passed to the command.
 
-### Application Level Metrics
+## Application Level Metrics
 
 ```
+$ mcctl metrics app
+Usage: mcctl metrics app [flags] [args]
+
 Required Args:
-  region        Region name
-  app-org       Organization or Company name of the App
-  selector      Comma separated list of metrics to view
+  region                  Region name
+  selector                Comma separated list of metrics to view. Available metrics: "cpu", "mem", "disk", "network", "connections", "udp"
 
 Optional Args:
-  appname       App name
-  appvers       App version
-  cluster       Cluster name
-  cluster-org   Organization or Company Name that a Cluster is used by
-  cloudlet      Name of the cloudlet
-  cloudlet-org  Company or Organization name of the cloudlet
-  last          Display the last X metrics
-  starttime     Time to start displaying stats from
-  endtime       Time up to which to display stats
+  limit                   Display the last X metrics
+  numsamples              Display X samples spaced out evenly over start and end times
+  starttime               Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime                 Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage                Relative age from now of search range start (default 48h)
+  endage                  Relative age from now of search range end (default 0)
+  appinsts:#.apporg       Organization or Company name of the App
+  appinsts:#.appname      App name
+  appinsts:#.appvers      App version
+  appinsts:#.cluster      Cluster name
+  appinsts:#.clusterorg   Organization or Company Name that a Cluster is used by
+  appinsts:#.cloudletorg  Company or Organization name of the cloudlet
+  appinsts:#.cloudlet     Name of the cloudlet
 
 ```
 
-#### Data Keys
+### Data Keys
 
 - `time`
 - `app`
@@ -72,7 +85,7 @@ Optional Args:
 - `sendBytes`
 - `recvBytes`
 
-#### Example
+### Example
 
 ```
 $ mcctl  --addr [https://console.mobiledgex.net](https://console.mobiledgex.net)  --output-format json metrics app region=EU app/
@@ -238,7 +251,7 @@ org=demoorg selector=cpu,mem,disk,network last=1 appname=mexfastapi10
 
 ```
 
-#### CPU Example
+### CPU example
 
 AppInst CPU usage for an app with 2 containers. CPU value format is in percentages.
 
@@ -306,7 +319,7 @@ data:
 
 ```
 
-#### Disk Example
+### Disk example
 
 The filesystem usage for an app instance in bytes.
 
@@ -340,7 +353,7 @@ data:
 
 ```
 
-#### Network example
+### Network example
 
 Application instance Tx/Rx traffic rate in bytes/seconds averaged over 1 minute.
 
@@ -376,7 +389,7 @@ data:
 
 ```
 
-#### Active Connections Example
+### Active Connections Example
 
 App instance connection information by port; number of accepted, active, and handled connections, as well as the total number of bytes that are sent/received, and a histogram of session times in milliseconds. For example, P50 is the 50th percentile in session time. In the example below, 50% of all sessions lasted 6ms or less.
 
@@ -438,13 +451,13 @@ data:
 
 ```
 
-#### API Example
+### API example
 
 - Valid selector: `api`
 - Valid method names: `RegisterClient`, `VerifyLocation`, `FindCloudlet`, `GetLocation`, `AppinstList`, `FqdnList`, `DynamicLocGroup`, `QosPosition`.
 - `Cellid` 0 is invalid.
 
-#### FindCloudlet Example
+### FindCloudlet example
 
 ```
 $ mcctl --addr https://console.mobiledgex.net  --output-format json metrics clientapiusage region=EU appname=healthcheck appvers=3.1 app-org=demoorg method=FindCloudlet selector=api
@@ -502,7 +515,7 @@ $ mcctl --addr https://console.mobiledgex.net  --output-format json metrics clie
 - `oper`: Operator name where the DME is
 - `reqs`: Number of requests sent since last collection
 
-#### RegisterClient Example
+### RegisterClient example
 
 ```
 $ mcctl --addr https://console.mobiledgex.net  --output-format json metrics clientapiusage region=EU appname=healthcheck appvers=3.1 app-org=demoorg method=RegisterClient selector=api
@@ -634,51 +647,44 @@ $ mcctl --addr https://console.mobiledgex.net  --output-format json metrics clie
 
 **Note:** This allows for a single call with all the results.
 
-### Client App Usage Metrics
+## Client App Usage Metrics
 
 This command is used to collect aggregated latency and device metrics about clients connected to application instances.
 
 ```
-mcctl --addr [https://console.mobiledgex.net](https://console.mobiledgex.net) metrics clientappusage -h
-View client App usage
-
+$ mcctl metrics clientappusage
 Usage: mcctl metrics clientappusage [flags] [args]
 
 Required Args:
   region           Region name
-  selector         Comma separated list of metrics to view. Available metrics: "latency", "deviceinfo", "custom"
+  selector         Comma separated list of metrics to view. Available metrics: "latency", "deviceinfo"
 
 Optional Args:
-  appname          App name
-  appvers          App version
-  app-org          Organization or Company name of the App
-  cluster          Cluster name
-  cluster-org      Organization or Company Name that a Cluster is used by
-  cloudlet         Name of the cloudlet
-  cloudlet-org     Company or Organization name of the cloudlet
-  locationtile     Location tile. Provides the range of GPS coordinates for the location tile/square. Format is:
-                   "LocationUnderLongitude,LocationUnderLatitude_LocationOverLongitude,LocationOverLatitude_LocationTileLength".
-                   LocationUnder are the GPS coordinates of the corner closest to (0,0) of the location tile. LocationOver are the GPS
-                   coordinates of the corner farthest from (0,0) of the location tile. LocationTileLength is the length (in kilometers) of
-                   one side of the location tile square. Can be used for selectors: latency.
-  deviceos         Device operating system. Can be used for selectors: deviceinfo.
-  devicemodel      Device model. Can be used for selectors: deviceinfo.
-  devicecarrier    Device carrier. Can be used for selectors: deviceinfo.
-  datanetworktype  Data network type used by client device. Can be used for selectors: latency, deviceinfo.
   limit            Display the last X metrics
   numsamples       Display X samples spaced out evenly over start and end times
   starttime        Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
   endtime          Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
   startage         Relative age from now of search range start (default 48h)
   endage           Relative age from now of search range end (default 0)
-
-Flags:
-  -h, --help   help for clientappusage
+  appname          App name
+  appvers          App version
+  apporg           Organization or Company name of the App
+  cluster          Cluster name
+  clusterorg       Organization or Company Name that a Cluster is used by
+  cloudlet         Name of the cloudlet
+  cloudletorg      Company or Organization name of the cloudlet
+  locationtile     Location tile. Provides the range of GPS coordinates for the location tile/square. Format is: "LocationUnderLongitude,LocationUnderLatitude_LocationOverLongitude,LocationOverLatitude_LocationTileLength". LocationUnder are the GPS coordinates of the corner closest to (0,0) of the location tile. LocationOver are the GPS coordinates of the corner farthest from (0,0) of the location tile. LocationTileLength is the length (in kilometers) of one side of the location tile square. Can be used for selectors: latency, deviceinfo.
+  deviceos         Device operating system. Can be used for selectors: deviceinfo.
+  devicemodel      Device model. Can be used for selectors: deviceinfo.
+  devicecarrier    Device carrier. Can be used for selectors: deviceinfo.
+  datanetworktype  Data network type used by client device. Can be used for selectors: latency, deviceinfo.
 
 ```
 
+### Example
+
 ```
-mcctl --addr [https://console.mobiledgex.net](https://console.mobiledgex.net) metrics clientappusage region=US selector=latency app-org=automation_dev_org limit=1
+mcctl --addr https://console.mobiledgex.net metrics clientappusage region=US selector=latency app-org=automation_dev_org limit=1
 data:
 - series:
   - columns:
@@ -723,89 +729,86 @@ data:
 
 ```
 
-### Client API Usage Metrics
+## Client API Usage Metrics
 
 ```
-$ mcctl --addr [https://console.mobiledgex.net](https://console.mobiledgex.net) metrics clientapiusage
-Error: missing required args: region selector
+$ mcctl metrics clientapiusage
 Usage: mcctl metrics clientapiusage [flags] [args]
 
 Required Args:
-  region        Region name
-  selector      Comma separated list of metrics to view. Currently only "api" is supported.
+  region       Region name
+  selector     Comma separated list of metrics to view. Currently only "api" is supported.
 
 Optional Args:
-  appname       App name
-  appvers       App version
-  app-org       Organization or Company name of the App
-  cluster       Cluster name
-  cluster-org   Organization or Company Name that a Cluster is used by
-  cloudlet      Name of the cloudlet
-  cloudlet-org  Company or Organization name of the cloudlet
-  method        Api call method, one of: FindCloudlet, PlatformFindCloudlet, RegisterClient, VerifyLocation
-  cellid        Cell tower Id(experimental)
-  limit         Display the last X metrics
-  numsamples    Display X samples spaced out evenly over start and end times
-  starttime     Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
-  endtime       Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
-  startage      Relative age from now of search range start (default 48h)
-  endage        Relative age from now of search range end (default 0)
-
-Flags:
-  -h, --help   help for clientapiusage
+  limit        Display the last X metrics
+  numsamples   Display X samples spaced out evenly over start and end times
+  starttime    Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime      Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage     Relative age from now of search range start (default 48h)
+  endage       Relative age from now of search range end (default 0)
+  appname      App name
+  appvers      App version
+  apporg       Organization or Company name of the App
+  cloudlet     Name of the cloudlet
+  cloudletorg  Company or Organization name of the cloudlet
+  dmecloudlet  Cloudlet name where DME is running
+  dmeorg       Operator org where DME is running
+  method       Api call method, one of: FindCloudlet, PlatformFindCloudlet, RegisterClient, VerifyLocation
 
 ```
 
-### Client Cloudlet API Usage
+## Client Cloudlet API Usage
 
 ```
-$ mcctl --addr [https://console.mobiledgex.net](https://console.mobiledgex.net) metrics clientcloudletusage
-Error: missing required args: selector region cloudlet-org
+$ mcctl metrics  clientcloudletusage
 Usage: mcctl metrics clientcloudletusage [flags] [args]
 
 Required Args:
   region           Region name
-  cloudlet-org     Company or Organization name of the cloudlet
+  cloudletorg      Company or Organization name of the cloudlet
   selector         Comma separated list of metrics to view. Available metrics: "latency", "deviceinfo"
 
 Optional Args:
-  cloudlet         Name of the cloudlet
-  locationtile     Location tile. Provides the range of GPS coordinates for the location tile/square. Format is: "LocationUnderLongitude,LocationUnderLatitude_LocationOverLongitude,LocationOverLatitude_LocationTileLength". LocationUnder are the GPS coordinates of the corner closest to (0,0) of the location tile. LocationOver are the GPS coordinates of the corner farthest from (0,0) of the location tile. LocationTileLength is the length (in kilometers) of one side of the location tile square. Can be used for selectors: latency, deviceinfo.
-  deviceos         Device operating system. Can be used for selectors: deviceinfo.
-  devicemodel      Device model. Can be used for selectors: deviceinfo.
-  devicecarrier    Device carrier. Can be used for selectors: latency, deviceinfo.
-  datanetworktype  Data network type used by client device. Can be used for selectors: latency.
   limit            Display the last X metrics
   numsamples       Display X samples spaced out evenly over start and end times
   starttime        Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
   endtime          Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
   startage         Relative age from now of search range start (default 48h)
   endage           Relative age from now of search range end (default 0)
-
-Flags:
-  -h, --help   help for clientcloudletusage
+  cloudlet         Name of the cloudlet
+  locationtile     Location tile. Provides the range of GPS coordinates for the location tile/square. Format is: "LocationUnderLongitude,LocationUnderLatitude_LocationOverLongitude,LocationOverLatitude_LocationTileLength". LocationUnder are the GPS coordinates of the corner closest to (0,0) of the location tile. LocationOver are the GPS coordinates of the corner farthest from (0,0) of the location tile. LocationTileLength is the length (in kilometers) of one side of the location tile square. Can be used for selectors: latency, deviceinfo.
+  deviceos         Device operating system. Can be used for selectors: deviceinfo.
+  devicemodel      Device model. Can be used for selectors: deviceinfo.
+  devicecarrier    Device carrier. Can be used for selectors: latency, deviceinfo.
+  datanetworktype  Data network type used by client device. Can be used for selectors: latency.
 
 ```
 
-### Cluster Level Metrics
+## Cluster Level Metrics
 
 ```
+$ mcctl metrics cluster
+Usage: mcctl metrics cluster [flags] [args]
+
 Required Args:
-  region        Region name
-  cluster-org   Organization or Company Name that a Cluster is used by
-  selector      Comma separated list of metrics to view
+  region                      Region name
+  selector                    Comma separated list of metrics to view. Available metrics: "cpu", "mem", "disk", "network", "tcp", "udp"
 
 Optional Args:
-  cluster       Cluster name
-  cloudlet-org  Company or Organization name of the cloudlet
-  cloudlet      Name of the cloudlet
-  last          Display the last X metrics
-  starttime     Time to start displaying stats from
-  endtime       Time up to which to display stats
+  limit                       Display the last X metrics
+  numsamples                  Display X samples spaced out evenly over start and end times
+  starttime                   Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime                     Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage                    Relative age from now of search range start (default 48h)
+  endage                      Relative age from now of search range end (default 0)
+  clusterinsts:#.cluster      Cluster name
+  clusterinsts:#.clusterorg   Organization or Company Name that a Cluster is used by
+  clusterinsts:#.cloudletorg  Company or Organization name of the cloudlet
+  clusterinsts:#.cloudlet     Name of the cloudlet
 
 ```
 
-#### Data Keys
+### Data Keys
 
 - `time`
 - `cluster`
@@ -950,13 +953,13 @@ region=EU cluster-org=demoorg selector=cpu,mem,disk,network, tcp, udp last=1
 }
 ```
 
-#### API Example
+### API example
 
 - Valid selector: `api`
 - Valid method names: `RegisterClient`, `VerifyLocation`, `FindCloudlet`, `GetLocation`, `AppinstList`, `FqdnList`, `DynamicLocGroup`, `QosPosition`.
 - `Cellid` 0 is invalid.
 
-**FindCloudlet Example**
+#### FindCloudlet example
 
 ```
 $ http --verify=false --auth-type=jwt --auth=$SUPERPASS POST [https://console.mobiledgex.net/api/v1/auth/metrics/client](https://console.mobiledgex.net/api/v1/auth/metrics/client) &lt;&lt;&lt;\
@@ -1036,7 +1039,7 @@ Transfer-Encoding: chunked
 - `oper`: Operator name where the DME is
 - `reqs`: Number of requests sent since last collection
 
-**RegisterClient Example**
+#### RegisterClient example
 
 ```
 $ http --verify=false --auth-type=jwt --auth=$SUPERPASS POST [https://console.mobiledgex.net/api/v1/auth/metrics/client](https://console.mobiledgex.net/api/v1/auth/metrics/client) &lt;&lt;&lt;\
@@ -1106,7 +1109,7 @@ Transfer-Encoding: chunked
 
 **Note:** `foundCloudlet` and `foundOperator` fields are “null“, these are only available for FindCloudlet method.
 
-**All methods example with start and end time, rather than last N elements**
+#### All methods example with start and end time, rather than last N elements
 
 ```
 $ http --verify=false --auth-type=jwt --auth=$SUPERPASS POST [https://console.mobiledgex.net/api/v1/auth/metrics/client](https://console.mobiledgex.net/api/v1/auth/metrics/client) &lt;&lt;&lt;\
@@ -1238,7 +1241,7 @@ Global Flags:
 **Example**
 
 ```
-$ mcctl usage app --addr=[https://console.mobiledgex.net](https://console.mobiledgex.net) region=US cluster=dockermonitoring appname=app-us cloudlet-org=packet cloudlet= starttime=2020-01-11T05:00:00+00:00 endtime=2021-06-14T23:03:07+00:00 app-org=testmonitor
+$ mcctl usage app --addr=[https://console.mobiledgex.net](https://console.mobiledgex.net) region=US cluster=dockermonitoring appname=app-us cloudlet-org=packet cloudlet= starttime=2020-01-11T05:00:00+00:00 endtime=2021-06-14T23:03:07+00:00 app-org=testmonitor  
 
 data:
 - series:
@@ -1572,6 +1575,7 @@ Global Flags:
 
 ```
 $ mcctl usage cluster --addr=[https://console.mobiledgex.net](https://console.mobiledgex.net) region=EU cluster=TDG-Docker-Cluster cluster-org=testmonitor cloudlet-org=TDG starttime=2021-06-14T05:00:00+00:00 endtime=2021-06-16T23:03:07+00:00
+   
 
 data:
 - series:

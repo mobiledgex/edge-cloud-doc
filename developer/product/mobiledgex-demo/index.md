@@ -1,8 +1,8 @@
 ---
 title: MobiledgeX Demo App
 long_title: MobiledgeX Android Demo App
-overview_description:
-description:
+overview_description: 
+description: 
 The MobiledgeX Android Demo showcases how a Client Device interacts with the MobiledgeX platform and Cloudlets located around the world.
 
 ---
@@ -40,22 +40,18 @@ The MobiledgeX Android Demo App allows you to learn about and experience the Mob
 
 ## Cloudlet Map 
 
-The app’s startup page is a world map showing MobiledgeX cloudlets where the app’s backend is running. If no cloudlets are shown, or you don’t see the set cloudlets you expect to see, click the main menu hamburger icon and select **Settings** &gt; **General Settings**. From here, select the **Region** and **Operator Name** you’re interested in. Tap on any of the cloudlets, and a panel with the cloudlet’s name will appear. On that panel, you can click on the panel to see cloudlet information like latitude, longitude, and distance from your location.
-
+The app’s startup page is a world map showing MobiledgeX cloudlets where the app’s backend is running. If no cloudlets are shown, or you don’t see the set cloudlets you expect to see, click the main menu hamburger icon and select **Settings** &gt; **General Settings**. From here, select the **Region** and **Operator Name** you’re interested in. Tap on any of the cloudlets, and a panel with the cloudlet’s name will appear. On that panel, you can click on the panel to see cloudlet information like latitude, longitude, and distance from your location.  
 ## Cloudlet Details 
 
-In addition to showing the details of the cloudlet, this page allows the initiation of a latency test or download and upload speed tests. The settings of this page allow control of certain conditions, such as the number of packets for the latency test, or the size of the download. Select the gear icon to access these settings.  You can also choose this cloudlet to be used as the Edge server for Face Detection and Face Recognition. Tap the 3-dot menu and select **Use as Face Recognition Edge Host**. The Cloud server can be configured in the same way.
-
+In addition to showing the details of the cloudlet, this page allows the initiation of a latency test or download and upload speed tests. The settings of this page allow control of certain conditions, such as the number of packets for the latency test, or the size of the download. Select the gear icon to access these settings.  You can also choose this cloudlet to be used as the Edge server for Face Detection and Face Recognition. Tap the 3-dot menu and select **Use as Face Recognition Edge Host**. The Cloud server can be configured in the same way.  
 ## SDK Functionality 
 
 ### Register Client 
 
-This will call the [RegisterClientAPI](/developer/sdks/tech-overview#register-client/index.md) with information that identifies this app’s backend software. The session cookie is shown to verify that the call was successful.
-
+This will call the [RegisterClientAPI](/developer/sdks/tech-overview#register-client/index.md) with information that identifies this app’s backend software. The session cookie is shown to verify that the call was successful.  
 ### Get App Instances 
 
-This will call the [GetAppInstListAPI](/developer/sdks/tech-overview#getappinstlist/index.md) to find everywhere our backend is running, and will draw a cloudlet icon for every location found.
-
+This will call the [GetAppInstListAPI](/developer/sdks/tech-overview#getappinstlist/index.md) to find everywhere our backend is running, and will draw a cloudlet icon for every location found.  
 ### Find Closest Cloudlet
 
 This will call the [FindCloudletAPI](/developer/sdks/tech-overview#find-cloudlet/index.md) with our current GPS coordinates to determine which cloudlet running our backend is the closest. That cloudlet icon will turn green, and a line will be drawn between the cloudlet and our location.
@@ -74,7 +70,7 @@ This app can be used for testing different Edge Events configurations. If you do
 
 ![Matching Engine Settings](/developer/assets/android-demo-app/matching-engine-settings.png "Matching Engine Settings")
 
-The **Enable Edge Events** toggle can be turned off if you wish to disable Edge Events. In this case, all Edge Events settings are grayed out and cannot be edited.
+The **Enable Edge Events** toggle can be turned off if you wish to disable Edge Events. In this case, all Edge Events settings are grayed out and cannot be edited. 
 
 The initial setting for **Override Default Configuration** is off. In that case, default values that are populated by `matchingEngine.createDefaultEdgeEventsConfig()` will be used, and editing of the **Edge Events Settings** is disabled. If the override is switched on, then the items are enabled, and any of the values can be customized.
 
@@ -122,7 +118,7 @@ Follow these steps to perform a basic test to verify that Edge Events are operat
 
 ## Route Mode for Demonstrating Edge Events
 
-The app can visualize how Edge Events are used to select a new app instance to connect to when a closer cloudlet is available due to proximity. For Edge Events to be initialized, **Find Closest Cloudlet** must be performed.
+The app can visualize how Edge Events are used to select a new app instance to connect to when a closer cloudlet is available due to proximity. For Edge Events to be initialized, **Find Closest Cloudlet** must be performed. 
 
 - For best results, zoom in on the map so that the available cloudlets are nearly filling the screen, then **Spoof GPS** to a location near one of the cloudlets, then perform **Find Closest Cloudlet**.
 - From the 3-dot menu, select **Route Mode**&gt; **Driving**.
@@ -131,7 +127,7 @@ The app can visualize how Edge Events are used to select a new app instance to c
 - To place additional waypoints to alter the route, long-press on the map where you wish to place the waypoint. From the dialog, choose **Add waypoint to route**. The new route will be calculated from the Start marker through the waypoint and to the End point.
 - Repeat as desired. Waypoints can be moved to new locations just as the Start and End markers can.
 - When satisfied with your route, click the Play button at the bottom center of the screen.
-- The mobile icon will jump to the Start point and then start moving along the route. At one second intervals, the new mobile icon position is reported via the Edge Events connection. Whenever it is closer to a new cloudlet, Edge Events will inform the app of the new cloudlet info, and the app will perform a connection test, then mark the cloudlet in green and draw a connecting line.
+- The mobile icon will jump to the Start point and then start moving along the route. At one second intervals, the new mobile icon position is reported via the Edge Events connection. Whenever it is closer to a new cloudlet, Edge Events will inform the app of the new cloudlet info, and the app will perform a connection test, then mark the cloudlet in green and draw a connecting line. 
 
 
 ![Driving Route completed, with final closest cloudlet selected.](/developer/assets/android-demo-app/route-mode-driving.png "Driving Route completed, with final closest cloudlet selected.")
@@ -140,17 +136,17 @@ The app can visualize how Edge Events are used to select a new app instance to c
 
 Select one of the Detection or Recognition activities from the main menu. You can control several options, like which stats are displayed by selecting the gear icon to access **Computer Vision Settings**. Things to try:
 
-- You may switch between the front and rear camera by tapping the camera icon.
-- Tap the 3-dot menu, and select **Play Video** to process a canned video instead of images from the camera. This function is useful for unattended demos or benchmarking.
+- You may switch between the front and rear camera by tapping the camera icon. 
+- Tap the 3-dot menu, and select **Play Video** to process a canned video instead of images from the camera. This function is useful for unattended demos or benchmarking. 
 - Go to **Settings** and turn on **Show Latency Stats after session** to get a stats summary that can be copy/pasted for additional use.
 
 ### Face Detection
 
-The Face Detection activity provides a visual comparison of the latency offered by an Edge cloudlet vs. that of a server in the public cloud. The Edge cloudlet can be determined in a few ways, in this order of priority:
+The Face Detection activity provides a visual comparison of the latency offered by an Edge cloudlet vs. that of a server in the public cloud. The Edge cloudlet can be determined in a few ways, in this order of priority: 
 
-- The result of **Find Closest Cloudlet**, if performed.
-- Selected from within the Cloudlet Details page options menu. This also activates the **Override Edge cloudlet hostname** value in **Computer Vision Settings**.
-- **Edge Server** entry in the **Computer Vision Settings**, if updated by the user.
+- The result of **Find Closest Cloudlet**, if performed. 
+- Selected from within the Cloudlet Details page options menu. This also activates the **Override Edge cloudlet hostname** value in **Computer Vision Settings**. 
+- **Edge Server** entry in the **Computer Vision Settings**, if updated by the user. 
 - The default hostname from the provisioning data at [http://opencv.facetraining.mobiledgex.net/cvprovisioning.json](http://opencv.facetraining.mobiledgex.net/cvprovisioning.json). Images from the camera are sent to a server that uses OpenCV to detect faces in the image. The server returns coordinates of any faces, and the app renders rectangles around them.
 
 
@@ -164,5 +160,5 @@ Object Detection uses PyTorch on a [GPU-enabled cloudlet](/developer/deployments
 
 ### Pose Detection
 
-Pose Detection uses OpenPose on a [GPU-enabled cloudlet](/developer/deployments/application-deployment-guides/gpu/index.md) to detect the pose of human bodies. Like the other activities, images from the camera are sent to the cloudlet for processing. Instead of rectangular coordinates, points representing the bones of the pose(s) are received and rendered.  There is no Edge/Cloud comparison for this activity. A single cloudlet is used for image processing.  Note that Pose Detection does not use the result of **Find Closest Cloudlet** because there are a limited number of GPU-enabled cloudlets available.
+Pose Detection uses OpenPose on a [GPU-enabled cloudlet](/developer/deployments/application-deployment-guides/gpu/index.md) to detect the pose of human bodies. Like the other activities, images from the camera are sent to the cloudlet for processing. Instead of rectangular coordinates, points representing the bones of the pose(s) are received and rendered.  There is no Edge/Cloud comparison for this activity. A single cloudlet is used for image processing.  Note that Pose Detection does not use the result of **Find Closest Cloudlet** because there are a limited number of GPU-enabled cloudlets available.  
 

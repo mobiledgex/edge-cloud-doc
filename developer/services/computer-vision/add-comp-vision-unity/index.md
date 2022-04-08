@@ -1,8 +1,8 @@
 ---
 title: Unity Computer Vision SDK
 long_title: Add Computer Vision to your Unity Project
-overview_description:
-description:
+overview_description: 
+description: 
 Learn how to add the MobiledgeX OpenCV Computer Vision library to your Unity Project
 
 ---

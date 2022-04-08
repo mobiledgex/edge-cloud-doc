@@ -1,8 +1,8 @@
 ---
 title: Edge Developer Tools
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Tools and Resources that developers may use in order to make it easier to utilize the MobiledgeX platform.
 
 ---

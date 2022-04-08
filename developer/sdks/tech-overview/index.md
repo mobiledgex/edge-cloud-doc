@@ -1,8 +1,8 @@
 ---
 title: Technical Overview
 long_title: MobiledgeX SDK Technical Overview
-overview_description:
-description:
+overview_description: 
+description: 
 Learn how our APIs work to connect Client Applications to deployed Application Instances
 
 ---

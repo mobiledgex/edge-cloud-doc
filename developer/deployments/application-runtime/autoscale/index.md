@@ -1,8 +1,8 @@
 ---
 title: Auto Scaling with Kubernetes
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how to auto scale your Kubernetes (K8s) edge applications using MobiledgeX auto scale policies
 
 ---
@@ -17,8 +17,7 @@ The auto scale policy governs scaling up or down the number of nodes of a Kubern
 
 When creating a Kubernetes App Definition, under Advanced Settings, **ScaleWithCluster** should be set to **true** to have Kubernetes scale your app across all nodes within the cluster. Otherwise, your app will only run on one node in the cluster. As a result of that,  auto scale will not trigger, and you won’t be unable to take advantage of an auto scaled cluster.
 
-**Note:** Auto scale only supports Kubernetes deployments at this time.
-
+**Note:** Auto scale only supports Kubernetes deployments at this time.  
 ## Create An Auto Scale Policy
 
 1. Select **Policies** from the left navigation, and select **Auto Scale Policy** from the dropdown menu. The Auto Scale Policy page opens.
@@ -32,9 +31,9 @@ When creating a Kubernetes App Definition, under Advanced Settings, **ScaleWithC
 - For the **
 **Maximum Nodes**, set the maximum number of cluster nodes for your application
 - For **
-**Stabilization Window**, enter the time, in seconds, that the monitored field should be sampled before triggering an auto-scale action. Setting larger values helps to stabilize scaling, while smaller values will allow your application to be more responsive to traffic.
+**Stabilization Window**, enter the time, in seconds, that the monitored field should be sampled before triggering an auto-scale action. Setting larger values helps to stabilize scaling, while smaller values will allow your application to be more responsive to traffic. 
 
-4. Enter the parameter(s) you would like your application to scale on. You must choose to use at least one parameter from this list. In other words, at least one value must be **non-zero**.
+4. Enter the parameter(s) you would like your application to scale on. You must choose to use at least one parameter from this list. In other words, at least one value must be **non-zero**. 
 
 - **Target CPU:** The target average CPU load per node to maintain. Set to 0 to be disabled.
 - **Target Memory:** The target average memory utilization load per node to maintain. Set to 0 to be disabled.

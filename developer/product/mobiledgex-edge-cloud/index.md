@@ -1,8 +1,8 @@
 ---
 title: MobiledgeX Edge-Cloud Console
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how MobiledgeX Edge Computing platform can help developers host and scale applications on the Mobile Network Edge and reduce latency by bringing applications closer to your users
 
 ---

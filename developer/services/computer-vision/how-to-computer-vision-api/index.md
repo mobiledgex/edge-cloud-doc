@@ -1,8 +1,8 @@
 ---
 title: Computer Vision Server REST API
 long_title: Use the Computer Vision Server REST API
-overview_description:
-description:
+overview_description: 
+description: 
 Learn how to use REST APIs for MobiledgeX Computer Vision Server to integrate Computer Vision Edge Services into your mobile applications.
 
 ---
@@ -13,19 +13,35 @@ This document describes how to use the REST API for the MobiledgeX Computer Visi
 
 The server supports several different `Content-Type` values in the HTTP request. For each `Content-Type`, there are different rules for how the image data must be included.
 
-**Note:** In all cases, using JPEG is encouraged because of its smaller image size which results in faster overall processing.
-
-| Content-Type                      | Image Data                                                                                                                                                               |
-|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| image/png                         | The request body is made up of raw image bytes in the PNG format                                                                                                         |
-| image/jpg                         | The request body is made up of raw image bytes in the JPEG format                                                                                                        |
-| multipart/form-data               | Raw image bytes are included as part of a multi-part form with an input type of file and a name of image, and that part’s `Content-Type` must be image/png or image/jpeg |
-| application/x-www-form-urlencoded | The image is Base64-encoded and included as a POST parameter named image                                                                                                 |
+**Note:** In all cases, using JPEG is encouraged because of its smaller image size which results in faster overall processing.  
+<table>
+<tbody>
+<tr>
+<th>Content-Type</th>
+<th>Image Data</th>
+</tr>
+<tr>
+<td>image/png</td>
+<td>The request body is made up of raw image bytes in the PNG format</td>
+</tr>
+<tr>
+<td>image/jpg </td>
+<td>The request body is made up of raw image bytes in the JPEG format</td>
+</tr>
+<tr>
+<td>multipart/form-data</td>
+<td>Raw image bytes are included as part of a multi-part form with an input type of file and a name of image, and that part’s `Content-Type` must be image/png or image/jpeg</td>
+</tr>
+<tr>
+<td>application/x-www-form-urlencoded</td>
+<td>The image is Base64-encoded and included as a POST parameter named image </td>
+</tr>
+</tbody>
+</table>
 
 In the `curl` examples included below, the multipart/form-data format is used. Different HTTP libraries in different languages may use one of the other Content-Type formats, so we have added support for the most common ones.
 
-Please note that the hostnames used in the examples are only examples. Normally, your app would perform a [FindCloudlet](/developer/sdks/overview-2#find-cloudlet/index.md) call, and use the FQDN from the result. See the [SDK Documentation](/developer/sdks/index.md) for details. Alternatively, you can find a dynamic list of sample hostnames you can use [here](http://dme-inventory.mobiledgex.net/cvprovisioning.json).
-
+Please note that the hostnames used in the examples are only examples. Normally, your app would perform a [FindCloudlet](/developer/sdks/overview-2#find-cloudlet/index.md) call, and use the FQDN from the result. See the [SDK Documentation](/developer/sdks/index.md) for details. Alternatively, you can find a dynamic list of sample hostnames you can use [here](http://dme-inventory.mobiledgex.net/cvprovisioning.json). 
 ## Face Detection
 
 `/detector/detect/`
@@ -38,19 +54,42 @@ Used to send a face image to the server and get back a set of coordinates for an
 
 #### Parameters
 
-|     Parameter |     Description       |
-|---------------|-----------------------|
-|     image     |     The face(s) image |
+<table>
+<tbody>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>image</td>
+<td>The face(s) image</td>
+</tr>
+</tbody>
+</table>
 
 #### Return
 
 JSON string with the following attributes.
-
-|     Attribute            |     Description                                                                                                                                                                              |
-|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     success              |     "True" if face detected, otherwise "false"                                                                                                                                               |
-|     serverprocessingtime |     The time in milliseconds that it took the server to process this image                                                                                                                   |
-|     rects                |     A JSON array of coordinates containing the detected faces. Rectangle format is left, top, right, bottom, in relation to the upper-left origin of 0, 0. Only included if "success"="true" |
+<table>
+<tbody>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>success</td>
+<td>"True" if face detected, otherwise "false"</td>
+</tr>
+<tr>
+<td>serverprocessingtime</td>
+<td>The time in milliseconds that it took the server to process this image</td>
+</tr>
+<tr>
+<td>rects</td>
+<td>A JSON array of coordinates containing the detected faces. Rectangle format is left, top, right, bottom, in relation to the upper-left origin of 0, 0. Only included if "success"="true"</td>
+</tr>
+</tbody>
+</table>
 
 #### Examples
 
@@ -89,21 +128,50 @@ Used to send a face image to the server and get back a set of coordinates for th
 
 #### Parameters
 
-| Parameter | Description    |
-|-----------|----------------|
-| image     | The face image |
+<table>
+<tbody>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>image</td>
+<td>The face image</td>
+</tr>
+</tbody>
+</table>
 
 #### Return
 
 JSON string with a success value of true or false, and if successful, the following JSON values are provided:
-
-| Attribute            | Description                                                                                                                                       |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| success              | "True" if face recognized, otherwise "false"                                                                                                      |
-| subject              | Name of detected face                                                                                                                             |
-| confidence           | Level of confidence. Actually a measure of distance the features are from matching a given subject. Lower is better, with 0 being a perfect match |
-| rect                 | Coordinates of detected face                                                                                                                      |
-| serverprocessingtime | Time in milliseconds that it took the server to process this image                                                                                |
+<table>
+<tbody>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>success</td>
+<td>"True" if face recognized, otherwise "false"</td>
+</tr>
+<tr>
+<td>subject</td>
+<td>Name of detected face</td>
+</tr>
+<tr>
+<td>confidence</td>
+<td>Level of confidence. Actually a measure of distance the features are from matching a given subject. Lower is better, with 0 being a perfect match</td>
+</tr>
+<tr>
+<td>rect</td>
+<td>Coordinates of detected face</td>
+</tr>
+<tr>
+<td>serverprocessingtime</td>
+<td>Time in milliseconds that it took the server to process this image</td>
+</tr>
+</tbody>
+</table>
 
 **Note:** This call will return subject names even with very poor (high distance) confidence values. It is up to the caller to decide what it considers a good prediction. For instance in the [MobiledgeX SDK Demo app](https://play.google.com/store/apps/details?id=com.mobiledgex.sdkdemo), the *RECOGNITION_CONFIDENCE_THRESHOLD* value is 105, which means that any image with a confidence value higher than that will be shown with a subject name of **Unknown**.
 
@@ -143,19 +211,42 @@ Used to send an image with one or more human bodies to the server and get back a
 
 #### Parameters
 
-| Parameter | Description           |
-|-----------|-----------------------|
-| image     | The body/bodies image |
+<table>
+<tbody>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>image</td>
+<td>The body/bodies image</td>
+</tr>
+</tbody>
+</table>
 
 #### Return
 
 JSON string with the following attributes.
-
-| Attribute            | Description                                                                                  |
-|----------------------|----------------------------------------------------------------------------------------------|
-| success              | "True" if pose detected, otherwise "false"                                                   |
-| serverprocessingtime | The time in milliseconds that it took the server to process this image                       |
-| poses                | A JSON array of coordinates containing the detected poses. Only included if "success"="true" |
+<table>
+<tbody>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>success</td>
+<td>"True" if pose detected, otherwise "false"</td>
+</tr>
+<tr>
+<td>serverprocessingtime</td>
+<td>The time in milliseconds that it took the server to process this image </td>
+</tr>
+<tr>
+<td>poses</td>
+<td>A JSON array of coordinates containing the detected poses. Only included if "success"="true"</td>
+</tr>
+</tbody>
+</table>
 
 #### Examples
 
@@ -233,24 +324,61 @@ Used to send an image to the server and get back a set of coordinates and names 
 
 #### Parameters
 
-| Parameter | Description         |
-|-----------|---------------------|
-| image     | The object(s) image |
-
+<table>
+<tbody>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>image</td>
+<td>The object(s) image</td>
+</tr>
+</tbody>
+</table>
 
 #### Return
 
 JSON string with the following attributes.
+<table>
+<tbody>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>success</td>
+<td>"True" if object(s) detected, otherwise "false" </td>
+</tr>
+<tr>
+<td>serverprocessingtime</td>
+<td>The time in milliseconds that it took the server to process this image</td>
+</tr>
+<tr>
+<td>gpu_support</td>
+<td>Whether the server is using a GPU to accelerate image processing</td>
+</tr>
+<tr>
+<td>objects</td>
+<td>A JSON array which may contain a nested JSON array with the following attributes:</td>
+</tr>
+<tr>
+<td></td>
+<td colspan="1" rowspan="1">
 
-| Attribute                                                                                                                                                                                                     | Description                                                                       |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| success                                                                                                                                                                                                       | "True" if object(s) detected, otherwise "false"                                   |
-| serverprocessingtime                                                                                                                                                                                          | The time in milliseconds that it took the server to process this image            |
-| gpu_support                                                                                                                                                                                                   | Whether the server is using a GPU to accelerate image processing                  |
-| objects                                                                                                                                                                                                       | A JSON array which may contain a nested JSON array with the following attributes: |
-| `rect`: Coordinates of the object. Rectangle format is left, top, right, bottom, in relation to the upper-left origin of **0, 0**                                                                             |
-| `class`: Class name of the object, e.g. **ball**, **dog**, etc.                                                                                                                                               |
-| `confidence`: Confidence level that the object was identified correctly. This is different than the confidence value for face recognition. Here the range is **0** to **1**, with **1** being 100% confidence |
+`rect`: Coordinates of the object. Rectangle format is left, top, right, bottom, in relation to the upper-left origin of **0, 0**
+</td>
+</tr>
+<tr>
+<td></td>
+<td>`class`: Class name of the object, e.g. **ball**, **dog**, etc.</td>
+</tr>
+<tr>
+<td></td>
+<td>`confidence`: Confidence level that the object was identified correctly. This is different than the confidence value for face recognition. Here the range is **0** to **1**, with **1** being 100% confidence</td>
+</tr>
+</tbody>
+</table>
 
 #### Examples:
 

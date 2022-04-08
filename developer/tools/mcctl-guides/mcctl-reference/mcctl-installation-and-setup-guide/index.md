@@ -1,8 +1,8 @@
 ---
 title: mcctl Installation and Setup Guide
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Download and install the mcctl utility, review mcctl commands, and manage roles, users, and organizations
 
 ---
@@ -106,8 +106,7 @@ Flags:
 
 ```
 
-Additionally, using the keyword `help` along with the command you wish to view help information will provide additional data.
-
+Additionally, using the keyword `help` along with the command you wish to view help information will provide additional data. 
 ### Output formats
 
 The `mcctl` utility will produce output in three different formats:
@@ -136,7 +135,7 @@ token saved to /home/username/.mctoken
 Commands for which you do not have permission to run will be rejected with a **403** return code from the API.
 
 ```
-$ mcctl config  --addr  [https://console.mobiledgex.net](https://console.mobiledgex.net)   show
+$ mcctl config  --addr  [https://console.mobiledgex.net](https://console.mobiledgex.net)   show   
 Error: Forbidden (403), Forbidden
 Usage: mcctl config show [flags] [args]
 Required Args:
@@ -277,7 +276,7 @@ login successful
 token saved to /Users/john.doe/.mctoken
 ```
 
-The user can turn the one time password feature on or off from their account by logging in and then doing a user update.
+The user can turn the one time password feature on or off from their account by logging in and then doing a user update. 
 
 ```
 $ mcctl --addr [https://console.mobiledgex.net](https://console.mobiledgex.net) user update enabletotp=false

@@ -1,8 +1,8 @@
 ---
 title: "Local Edge Testing : EdgeBox"
 long_title: "Tutorial : Local Edge Testing using MobiledgeX EdgeBox"
-overview_description:
-description:
+overview_description: 
+description: 
 A How-To Guide for Developers to set up MobiledgeX EdgeBox for local edge computing testing.
 
 ---
@@ -80,7 +80,7 @@ positional arguments:
    list                list edgeboxes
    show                show edgebox details
    startall            start all active edgeboxes
-   version             display version
+   version             display version  
 
 ```
 

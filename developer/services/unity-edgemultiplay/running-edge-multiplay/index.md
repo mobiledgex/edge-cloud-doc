@@ -1,8 +1,8 @@
 ---
 title: Running the EdgeMultiplay Server Locally
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 How To Setup the MobiledgeX Edge Multiplay Server Locally and Connect To It With the SDK
 
 ---
@@ -34,8 +34,8 @@ Have questions or suggestions to make this solution even better? [Join the Mobil
 
 ### 1. Download the EdgeMultiplay Server Source Code
 
-```
-git clone https://github.com/mobiledgex/edge-multiplay-node-server
+<pre>
+<code class="language-bash">git clone https://github.com/mobiledgex/edge-multiplay-node-server
 cd edge-multiplay-node-server
 
 ```
@@ -64,8 +64,8 @@ With that running, head to the **Unity section below** on how to use the SDK to 
 
 ### 1. Download the EdgeMultiplay Server Source Code
 
-```
-git clone https://github.com/mobiledgex/edge-multiplay-node-server
+<pre>
+<code class="language-bash">git clone https://github.com/mobiledgex/edge-multiplay-node-server
 cd edge-multiplay-node-server
 
 ```
@@ -89,4 +89,8 @@ With that running, head to the **Unity section below** on how to use the SDK to 
 In Unity, on the EdgeManager component. Check useLocalHostServer and add your local host address (127.0.0.1)
 
 ![Edge Manager Local Host Settings](/developer/assets/edgemultiplay/localhost.png "Edge Manager Local Host Settings")
+
+## Where to Go From Here
+
+If you are interested in deploying this server on MobiledgeX, please contact us either on [Discord](https://discord.gg/VZPu6AvSp5) or set a time to chat on our [Getting Started page](/developer/getting-started/index.md).
 

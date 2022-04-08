@@ -1,8 +1,8 @@
 ---
 title: Integrate Face Detection
 long_title: Add Face Detection to the Android Sample App
-overview_description:
-description:
+overview_description: 
+description: 
 Add Face Detection to an Android workshop application
 
 ---

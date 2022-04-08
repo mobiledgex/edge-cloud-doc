@@ -1,8 +1,8 @@
 ---
 title: Alerts
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 View a list of the different alarm logs to help you take action to repair or maintain the MobiledgeX platform and its components
 
 ---
@@ -58,23 +58,23 @@ To receive notification about all the application instances that are running on 
 Here’s an example of what an alert receiver setup may look like for an application instance:
 
 ```
-name: DevOrgReceiver2
-type: email
-severity: errors
-user: mexadmin
-email: somebody@nowhere.net
-appinst:
-  appkey:
-      organization: DevOrg
-      name: DevOrg SDK Demo
-      version: "1.0"
+name: DevOrgReceiver2  
+type: email  
+severity: errors  
+user: mexadmin  
+email: somebody@nowhere.net  
+appinst:  
+  appkey:  
+      organization: DevOrg  
+      name: DevOrg SDK Demo  
+      version: "1.0"  
     clusterinstkey:
-      clusterkey:
-        name: AppCluster
-      cloudletkey:
-        organization: mexdev
-        name: localtest
-      organization: DevOrg
+      clusterkey:  
+        name: AppCluster  
+      cloudletkey:  
+        organization: mexdev  
+        name: localtest  
+      organization: DevOrg  
 
 ```
 
@@ -133,12 +133,35 @@ When you set up to generate an alert on the UI based on your alert policy, the t
 ## Alert Receiver and MobiledgeX APIs
 
 Alert Receivers are designed to be configurable via the MobiledgeX APIs, directly and through the `mcctl` utility program, providing flexibility for users integrating with their existing monitoring systems.
+<table>
+<tbody>
+<tr>
+<th>Action</th>
+<th>API Route</th>
+</tr>
+<tr>
+<td>Create an Alert Receiver</td>
+<td colspan="1" rowspan="1">
 
-| Action                   | API Route                          |
-|--------------------------|------------------------------------|
-| Create an Alert Receiver | `api/v1/auth/alertreceiver/create` |
-| Delete an Alert Receiver | `api/v1/auth/alertreceiver/delete` |
-| Show all Alert Receivers | `api/v1/auth/alertreceiver/show`   |
+`api/v1/auth/alertreceiver/create`
+</td>
+</tr>
+<tr>
+<td>Delete an Alert Receiver</td>
+<td colspan="1" rowspan="1">
+
+`api/v1/auth/alertreceiver/delete`
+</td>
+</tr>
+<tr>
+<td>Show all Alert Receivers</td>
+<td colspan="1" rowspan="1">
+
+`api/v1/auth/alertreceiver/show`
+</td>
+</tr>
+</tbody>
+</table>
 
 For detailed AlertReceiver API examples, please refer to the [MCCTL Reference Guide](https://dev-stage.mobiledgex.com/tools/mcctl-guides/mcctl-reference).
 
@@ -146,25 +169,25 @@ For detailed AlertReceiver API examples, please refer to the [MCCTL Reference G
 
 While you can use the `mcctl` tool and the commands provided to set up your alerts and notification preferences, we recommend using the Edge-Cloud Console to set up your alert receivers for ease of use.
 
-- Navigate to the Alert Receivers sub-menu and click the **+** plus sign. The Create Receiver screen opens.
+- Navigate to the Alert Receivers sub-menu and click the **+** plus sign. The Create Receiver screen opens. 
 
 
 ![Create Alert Receiver screen](/developer/assets/developer-ui-guide/create-alert-receiver-dev.png "Create Alert Receiver screen")
 
 
-- Additional fields appear depending on your selections. Populate all the required fields.
+- Additional fields appear depending on your selections. Populate all the required fields. 
 
 
 ![Additional Alert Receiver fields](/developer/assets/developer-ui-guide/additional-alert-receiver.png "Additional Alert Receiver fields")
 
 
-- Your new Alert Receiver will appear on the Alert Receivers page.
+- Your new Alert Receiver will appear on the Alert Receivers page.  
 
 
 ![Alert Receiver list](/developer/assets/developer-ui-guide/alert-receiver-list.png "Alert Receiver list")
 
 
-- When you click the Alert icon, information about the alert is displayed.
+- When you click the Alert icon, information about the alert is displayed. 
 
 
 ![Information about Alerts](/developer/assets/developer-ui-guide/alert-descr1.png "Information about Alerts")

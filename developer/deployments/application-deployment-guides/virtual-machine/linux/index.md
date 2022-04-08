@@ -1,8 +1,8 @@
 ---
 title: How To Deploy Linux VMs
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how to deploy a Linux Virtual Machine image to a Cloudlet using the MobiledgeX Edge-Cloud Console
 
 ---
@@ -16,12 +16,12 @@ In this tutorial, you will learn how to:
 
 ## Prerequisites
 
-- A [MobiledgeX Console Account](/developer/deployments/accounts/manage-accts/index.md) where you know your [organization](/developer/deployments/accounts/org-users/index.md) name.
-- A Virtual Machine image in QCOW2 format. Instructions to download a sample image are provided below.
+- A [MobiledgeX Console Account](/developer/deployments/accounts/manage-accts/index.md) where you know your [organization](/developer/deployments/accounts/org-users/index.md) name.  
+- A Virtual Machine image in QCOW2 format. Instructions to download a sample image are provided below.  
 
 ## Step 1: Setup a VM image file 
 
-For your application, you will need to download and setup a VM image. Depending on your use case, you may choose to either setup the VM with your application baked into the image file or alternatively setup your application after it is deployed on MobiledgeX, which may help to reduce the file size of your image.
+For your application, you will need to download and setup a VM image. Depending on your use case, you may choose to either setup the VM with your application baked into the image file or alternatively setup your application after it is deployed on MobiledgeX, which may help to reduce the file size of your image. 
 
 If you already have a VM image, you will need to convert it to the `qcow2` format. We recommend trying the `qemu-img` convert tool. For example,
 
@@ -30,15 +30,15 @@ If you already have a VM image, you will need to convert it to the `qcow2` forma
 
 ```
 
-**Note:** Depending on the state of the image, this process may not work and you might be required to install the image into an empty qcow2. To learn more about this, please refer to our Windows VM installation guide.
+**Note:** Depending on the state of the image, this process may not work and you might be required to install the image into an empty qcow2. To learn more about this, please refer to our Windows VM installation guide. 
 
 If you do not have a VM image and would like to continue with the tutorial, you may download the CentOS-7 qcow2 image from their website: [https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2](https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2)
 
 ## Step 2: Enable SSH (optional)
 
-If you would like to SSH into your VM and your VM does not support **Cloud Init**, then it is required to change the port in your VM image for SSH. This is because the default port `22` for SSH is a reserved port on MobiledgeX.
+If you would like to SSH into your VM and your VM does not support **Cloud Init**, then it is required to change the port in your VM image for SSH. This is because the default port `22` for SSH is a reserved port on MobiledgeX. 
 
-For the CentOS sample image mentioned above, Cloud Init is enabled and so you can skip this step to enable SSH.
+For the CentOS sample image mentioned above, Cloud Init is enabled and so you can skip this step to enable SSH. 
 
 For VMs that do not support Cloud Init, you may do the following to change the port for SSH:
 
@@ -87,26 +87,25 @@ Enter host password for user ’demo’:
   },
   "uri" : "[https://artifactory.mobiledgex.net/artifactory/repo-demoorg/CentOS-7-x86_64-GenericCloud.qcow2](https://artifactory.mobiledgex.net/artifactory/repo-demoorg/CentOS-7-x86_64-GenericCloud.qcow2)"
 
-}%
+}%  
 ```
 
-The proceeding steps require you to have an [md5 sum](https://en.wikipedia.org/wiki/Md5sum). Note that the `md5` is returned as shown in the example above and you can also copy it from Artifactory after you login at a later point in time.
-
+The proceeding steps require you to have an [md5 sum](https://en.wikipedia.org/wiki/Md5sum). Note that the `md5` is returned as shown in the example above and you can also copy it from Artifactory after you login at a later point in time. 
 ## Step 4: Create an Application Definition  
 
 You are now ready to create an application. The Apps page lets you define your backend application deploying to our registry. Performing this steps creates an ’inventory’ of your applications that are part of the registry and prepares it for deployment. Below are the settings recommended for running the `CentOS-7 Sample Virtual Machine`
 
 
 - From the left navigation, select **Apps**.
-- Select the plus sign icon to add a new Application definition.  The Create Apps page opens.
+- Select the plus sign icon to add a new Application definition.  The Create Apps page opens.  
 - Select a for *Region* where you would like your app to be deployed. You may select more than 1. At this time, it is recommended to choose at least **EU.**
-- For *App Name*, type in a name, such as **vmtest**.
-- For *App Version*, type in a version, such as **1.0**.
-- For *Deployment Type*, select **VM**.
+- For *App Name*, type in a name, such as **vmtest**.  
+- For *App Version*, type in a version, such as **1.0**.  
+- For *Deployment Type*, select **VM**.  
 - For VM App OS Type, select **Linux**.
-- Select **Qcow** for *Image Type*.
+- Select **Qcow** for *Image Type*.  
 - For *Image Path*, enter `https://artifactory.mobiledgex.net/artifactory/repo-demoorg/CentOS-7-x86_64-GenericCloud.qcow2#md5:ec8c38b1656ded3e03a6dc0938e201f1, where md5sum is in the format of #md5:sum`
-- For *Default Flavor*, select **EU&gt;m4.small**.
+- For *Default Flavor*, select **EU&gt;m4.small**.  
 - For *Port*, enter **2222**, and select **TCP** or whichever port you choose to use for SSH.
 - Type the following into the *Deployment Manifest*. This is the user-data that will be used for [cloud-init](https://cloudinit.readthedocs.io/en/latest/), which creates an account for the VM &lt;`demouser`, `changemeplz`&gt; and update the SSH port for the VM to be `2222`.
 
@@ -125,39 +124,36 @@ runcmd:
 
 ```
 
-**Note:** While optional, if you wish to SSH into your VM using SSH keys, make sure to add your SSH public key to the **Auth Key** section under **Advanced Settings**.
-
+**Note:** While optional, if you wish to SSH into your VM using SSH keys, make sure to add your SSH public key to the **Auth Key** section under **Advanced Settings**.  
 ![Create Apps screen](/developer/assets/how-to-deploy-vm/create-app-linux.png "Create Apps screen")
 
-The console will process your request and return you to the Apps page where you should see your application.
-
+The console will process your request and return you to the Apps page where you should see your application. 
 ## Step 5: Create an Application Instance  
 
-You are ready to deploy your application. The App Instances page is where you provision your application and deploy it to a cloudlet. This step is called application provisioning. This page displays information such as the current applications running on the platform and their location.
+You are ready to deploy your application. The App Instances page is where you provision your application and deploy it to a cloudlet. This step is called application provisioning. This page displays information such as the current applications running on the platform and their location.  
 
-1. On the left navigation, select **App Instances**.
+1. On the left navigation, select **App Instances**.  
 
-2. For *Region*, select **EU**.
+2. For *Region*, select **EU**.  
 
-3. For *Organization Name*, type in a name, such as **demoorg**.
+3. For *Organization Name*, type in a name, such as **demoorg**.  
 
-4. Type **vmtest** for *App Name*.
+4. Type **vmtest** for *App Name*.  
 
-5. For *App Version*, enter **1.0**.
+5. For *App Version*, enter **1.0**.  
 
-6. For *Operator*, select **TDG**.
+6. For *Operator*, select **TDG**.  
 
-7. For *Cloudlet*, select from the list of available cloudlets i.e. **munich-main**.
+7. For *Cloudlet*, select from the list of available cloudlets i.e. **munich-main**.  
 
-8. Select **Create**. The console will process your request and bring up a progress window. Once you close out of the progress window, you will be returned to the main App Instance page where you should see your new VM Instance.
-
+8. Select **Create**. The console will process your request and bring up a progress window. Once you close out of the progress window, you will be returned to the main App Instance page where you should see your new VM Instance.  
 ## Step 6: Test your VM  
 
-After the VM has been successfully provisioned, select **Application Instance** in order to view the Application Instance Details page. This page will contain all the information specific to your Virtual Machine Deployment, including the external IP address to connect to the instance.
-
+After the VM has been successfully provisioned, select **Application Instance** in order to view the Application Instance Details page. This page will contain all the information specific to your Virtual Machine Deployment, including the external IP address to connect to the instance. 
 ![External URI for Virtual Machine](/developer/assets/how-to-deploy-vm/vm-uri.png "External URI for Virtual Machine")
 
-To test that your VM was deployed correctly, navigate to the App Instance page and under the quick access menu, select [Terminal](/developer/deployments/deployment-workflow/app-instances#using-terminal/index.md). For the CentOS, you should be able to login with the credentials specified in the Deployment Manifest i.e. `demouser`, `changemeplz`.
+To test that your VM was deployed correctly, navigate to the App Instance page and under the quick access menu, select <a href="/deployments/deployment-workflow/app-instances#using-terminal">
+**Terminal</a>.** For the CentOS, you should be able to login with the credentials specified in the Deployment Manifest i.e. `demouser`, `changemeplz`.
 
 ![CentOS Application Instance in Terminal](/developer/assets/how-to-deploy-vm/vm-terminal.png "CentOS Application Instance in Terminal")
 

@@ -1,8 +1,8 @@
 ---
 title: Unity SDK
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Get Started using the Unity SDK
 
 ---

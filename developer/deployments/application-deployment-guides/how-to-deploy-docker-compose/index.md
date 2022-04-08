@@ -1,8 +1,8 @@
 ---
 title: Deploy Docker Compose using Multiple Files
 long_title: How to Create a Docker-Compose Deployment Using Multiple Files
-overview_description:
-description:
+overview_description: 
+description: 
 Provides steps and examples on how to create a docker-compose deployment.
 
 ---
@@ -14,7 +14,7 @@ This guide walks you through how to create a docker-compose deployment using mul
 **docker-compose.yml**
 
 ```
-version: ’3’
+version: ’3’  
 services:
 web:
   image: nginx
@@ -22,7 +22,7 @@ web:
       - ./data:/usr/share/nginx/html:ro
   ports:
     - "80:80"
-  command: [nginx-debug, ’-g’, ’daemon off;’]
+  command: [nginx-debug, ’-g’, ’daemon off;’]  
 
 ```
 
@@ -40,7 +40,7 @@ Our page is a very simple HTML page that tells us that things worked.
         &lt;p&gt;If you’re seeing this, the included file worked...&lt;/p&gt;
     &lt;/body&gt;
 
-&lt;/html&gt;
+&lt;/html&gt;  
 
 ```
 
@@ -50,7 +50,7 @@ We now create a manifest file that provides a path to our compose file (in this 
 
 ```
 dockercomposefiles:
-- docker-compose.yml
+- docker-compose.yml  
 
 ```
 
@@ -60,7 +60,7 @@ Our directory structure looks like this:
 ├── data
 │   └── index.html
 ├── docker-compose.yml
-└── manifest.yml
+└── manifest.yml  
 
 ```
 
@@ -71,7 +71,7 @@ $ zip -r compose-test.zip *
 updating: data/ (stored 0%)
 updating: docker-compose.yml (deflated 18%)
 updating: data/index.html (deflated 32%)
-  adding: manifest.yml (deflated 17%)
+  adding: manifest.yml (deflated 17%)  
 
 ```
 
@@ -98,7 +98,7 @@ Enter host password for user ’demo’:
   },
   "uri" : "[https://artifactory.mobiledgex.net/artifactory/repo-demoorg/compose-test.zip](https://artifactory.mobiledgex.net/artifactory/repo-demoorg/compose-test.zip)"
 
-}
+}  
 
 ```
 

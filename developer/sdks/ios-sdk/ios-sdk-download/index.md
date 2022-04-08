@@ -1,8 +1,8 @@
 ---
 title: Download Instructions
 long_title: Apple iOS SDK
-overview_description:
-description:
+overview_description: 
+description: 
 Learn how to use the MobiledgeX Matching Engine iOS SDK to create applications for iOS devices
 
 ---
@@ -16,14 +16,14 @@ The Matching Engine iOS SDK provides everything required to create edge-enabled 
 ## Prerequisites  
 
 - A MobiledgeX [Console Account](/developer/getting-started/index.md) to access our SDKs on the MobiledgeX [Artifactory](https://artifactory.mobiledgex.net)
-- MacOS Big Sur and an iOS Device
+- MacOS Big Sur and an iOS Device 
 - Xcode 13.2.1 (From the Apple store, search for [Xcode](https://developer.apple.com/xcode/))
 - An Apple ID. Create an ID from the developer site on [Apple](https://developer.apple.com)
 - [Cocoapods](https://cocoapods.org) installation
 
 ## Download the iOS SDK and libraries  
 
-**Step 1:** In terminal, run these commands to install Cocoapods: `gem install cocoapods` and `gem install cocoapods-art`.
+**Step 1:** In terminal, run these commands to install Cocoapods: `gem install cocoapods` and `gem install cocoapods-art`.  
 
 **Step 2:** Go to your root directory `cd ~`.
 
@@ -33,7 +33,7 @@ The Matching Engine iOS SDK provides everything required to create edge-enabled 
 
 `pod repo add cocoapods-releases https://artifactory.mobiledgex.net/artifactory/api/pods/cocoapods-releases`
 
-**Step 5:** Navigate to your XCode project directory and add the following lines to your podfile:
+**Step 5:** Navigate to your XCode project directory and add the following lines to your podfile:  
 
 - `plugin ’cocoapods-art’, :sources =&gt;; [’cocoapods-releases’]`
 - `pod ’MobiledgeXiOSGrpcLibrary’, ’= 3.0.5’`
@@ -48,7 +48,7 @@ platform :ios, ’13.0’
 
 source ’https://github.com/CocoaPods/Specs.git’
 plugin ’cocoapods-art’, :sources =&gt; [’cocoapods-releases’]
-target ’ARShooter’ do
+target ’ARShooter’ do  
   pod ’MobiledgeXiOSLibrary’,’= 3.0.5’
 
 end

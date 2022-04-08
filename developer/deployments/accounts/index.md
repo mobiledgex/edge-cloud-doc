@@ -1,8 +1,8 @@
 ---
 title: Organizations
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how to use the MobiledgeX Edge Computing Platform to deploy your applications and integrate our SDKs for Android, iOS, and Unity
 
 ---

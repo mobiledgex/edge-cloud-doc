@@ -1,8 +1,8 @@
 ---
 title: Design Principles
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn best practices and design principles to optimize your applications on the MobiledgeX Edge Computing platform
 
 ---

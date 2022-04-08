@@ -1,8 +1,8 @@
 ---
 title: Running SSHD Inside a Container
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Best Practices on How to Run SSH Inside a Container
 
 ---
@@ -21,10 +21,11 @@ Open the terminal. Input `sh`, which will start an interactive terminal for you 
 
 ```
 johndoe@JDOE-MAC ~ % sh
-sh-3.2$
+sh-3.2$ 
 ```
 
-The header for your terminal window should read sh as well now. More info about using the terminal can be found in the [Application Instances](/developer/deployments/deployment-workflow/app-instances/index.md) article.
+The header for your terminal window should read sh as well now. More info about using the terminal can be found in the <a href="https://developers.mobiledgex.com/deployments/deployment-workflow/app-instances/#using-terminal">
+**Application Instances</a>** article.
 
 ## SSHD Example
 
@@ -65,7 +66,7 @@ services:
       - USER_NAME=sshuser #optional
     ports:
       - 2222:2222
-    restart: unless-stopped
+    restart: unless-stopped   
 
 ```
 
@@ -108,7 +109,7 @@ $ mcctl  --addr [https://console.mobiledgex.net](https://console.mobiledgex.net)
         ports:
           - 2222:2222
         restart: unless-stopped
-  accesstype: AccessTypeLoadBalancer
+  accesstype: AccessTypeLoadBalancer  
 
 ```
 
@@ -149,7 +150,7 @@ $ mcctl  --addr [https://console.mobiledgex.net](https://console.mobiledgex.net)
   autoclusteripaccess: IpAccessShared
   healthcheck: HealthCheckOk
   powerstate: PowerOn
-  vmflavor: m4.small
+  vmflavor: m4.small  
 
 ```
 
@@ -162,7 +163,7 @@ To test, we will use a standard SSH client. You can retrieve the assigned port a
 ```
 $ mcctl  --addr [https://console.mobiledgex.net](https://console.mobiledgex.net) region ShowAppInst region=EU app-org=demoorg appname=sshtest appvers=1.0  | egrep "uri|publicport"
   uri: munich-main.tdg.mobiledgex.net
-    publicport: 10000
+    publicport: 10000  
 
 ```
 
@@ -183,7 +184,7 @@ tmpfs            1020356       0   1020356   0% /proc/acpi
 tmpfs            1020356       0   1020356   0% /proc/scsi
 tmpfs            1020356       0   1020356   0% /sys/firmware
 openssh-server:~$ uptime
- 09:47:23 up 7 min,  0 users,  load average: 0.01, 0.19, 0.14
+ 09:47:23 up 7 min,  0 users,  load average: 0.01, 0.19, 0.14   
 
 ```
 

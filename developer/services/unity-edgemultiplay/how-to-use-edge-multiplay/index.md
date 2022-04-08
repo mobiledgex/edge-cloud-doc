@@ -1,8 +1,8 @@
 ---
 title: Getting Started with EdgeMultiplay
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 How To Use the MobiledgeX Unity SDK and EdgeMultiplay Client to build a Multiplayer Game
 
 ---

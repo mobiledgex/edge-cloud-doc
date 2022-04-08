@@ -1,8 +1,8 @@
 ---
 title: MobiledgeX Edge Services
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Access some of our sample apps and connect to them using our SDKs
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: Auto Provisioning Policy
 long_title: Automatic Deployments using the Auto Provisioning Policy
-overview_description:
-description:
+overview_description: 
+description: 
 Learn about how to use the MobiledgeX Auto Provisioning Policy to do automatic deployments to various cloudlets on the MobiledgeX platform
 
 ---

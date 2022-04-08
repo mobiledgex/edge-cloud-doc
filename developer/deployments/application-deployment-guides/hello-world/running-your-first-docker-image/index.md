@@ -1,8 +1,8 @@
 ---
 title: Running a Docker Image as an Application Instance
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Create and deploy a dockerized webserver on the MobiledgeX platform
 
 ---

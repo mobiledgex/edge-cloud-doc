@@ -1,8 +1,8 @@
 ---
 title: Application and Monitoring Commands
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn about audit and event commands, and monitoring your applications with mcctl
 
 ---
@@ -443,13 +443,13 @@ Error: Please specify a command
 Usage: mcctl app [flags] [command]
 
 Available Commands:
-  create                      Create Application. Creates a definition for an application instance
+  create                      Create Application. Creates a definition for an application instance 
                               for Cloudlet deployment.
-  delete                      Delete Application. Deletes a definition of an Application instance.
-                              Make sure no other application instances exist with that definition.
+  delete                      Delete Application. Deletes a definition of an Application instance. 
+                              Make sure no other application instances exist with that definition. 
                               If they do exist, you must delete those Application instances first.
   update                      Update Application. Updates the definition of an Application instance.
-  show                        Show Applications. Lists all Application definitions managed from the
+  show                        Show Applications. Lists all Application definitions managed from the 
                               Edge Controller. Any fields specified will be used to filter results.
   addautoprovpolicy           Add an AutoProvPolicy to the App
   removeautoprovpolicy        Remove an AutoProvPolicy from the App

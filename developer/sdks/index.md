@@ -1,8 +1,8 @@
 ---
 title: Client SDK Integration
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 The MobiledgeX  Matching Engine SDKs are available in Android, iOS, and Unity  to provide you the flexibility to take advantage of our Mobile Network Edge Discovery APIs to connect to deployed applications.
 
 ---

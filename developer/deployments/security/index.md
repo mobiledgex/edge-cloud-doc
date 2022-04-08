@@ -1,8 +1,8 @@
 ---
 title: Security & Trust Policy
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how to secure your applications using the MobiledgeX Trust Policy
 
 ---

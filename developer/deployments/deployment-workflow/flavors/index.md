@@ -1,22 +1,79 @@
 ---
 title: Flavors
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Understanding Flavors and how to choose them
 
 ---
 
-**Last Modified:** 8/20/2021
+**Last Modified:** 8/20/2021  
 
 The term **Flavor** is used by the MobiledgeX platform to define varying resource configurations. Flavors can also be referred to as compute substrates. Flavors include several different resource dimensions and are divided by regions, as listed below. Selected Flavors are specified when you create a cluster instance. To designate the Flavor, choose the best Flavor suited to run your application instances while delivering consistent processing performance; refer to [Sizing your Deployment](/developer/design/sizing-applications/index.md) for guidelines.
+<table>
+<tbody>
+<tr>
+<td>
 
-| **Memory** | Amount of memory allocated to the application                    |
-|------------|------------------------------------------------------------------|
-| **Disk**   | Amount of disk space allocated to the application for storage    |
-| **vCPU**   | Number of virtual CPUs provided to the application               |
-| **GPU**    | Number of GPUs provided to the application                       |
-| **vGPU**   | This is supported. Please see details below under **GPU usage**. |
+- **Memory**
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Amount of memory allocated to the application
+
+</td>
+</tr>
+<tr>
+<td>
+
+- **Disk**
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Amount of disk space allocated to the application for storage
+
+</td>
+</tr>
+<tr>
+<td>
+
+- **vCPU**
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Number of virtual CPUs provided to the application  
+
+</td>
+</tr>
+<tr>
+<td>
+
+- **GPU**
+
+</td>
+<td colspan="1" rowspan="1">
+
+- Number of GPUs provided to the application
+
+</td>
+</tr>
+<tr>
+<td>
+
+- **vGPU**
+
+</td>
+<td colspan="1" rowspan="1">
+
+- This is supported. Please see details below under **GPU usage**.
+
+</td>
+</tr>
+</tbody>
+</table>
 
 On the MobiledgeX platform, application instances are hosted on cluster instances. The defined Flavor, which may be either the default Flavor for the application or the Flavor for the cluster instance, defines the resources available for use by the application instance. When additional application instances are deployed, additional cluster instances are created to host the new application instances. Since a cluster instance exists solely to support a deployed application instance, the resources provided to the cluster instance may be viewed as those resources being supplied to the application instance.
 
@@ -30,12 +87,10 @@ Regarding deployments on the MobiledgeX Platform, you should expect a vCPU to eq
 
 ## GPU usage  
 
-MobiledgeX supports GPU passthrough and virtual GPUs(vGPU). The flavor name will indicate GPU support. The flavor details page will show the number of GPUs (in the case of GPU passthrough) or vGPU slices (in the case of vGPU). GPU flavors are supported on cloudlets that support GPUs.
-
+MobiledgeX supports GPU passthrough and virtual GPUs(vGPU). The flavor name will indicate GPU support. The flavor details page will show the number of GPUs (in the case of GPU passthrough) or vGPU slices (in the case of vGPU). GPU flavors are supported on cloudlets that support GPUs. 
 ## VM Deployments  
 
-Flavors are also used in virtual machine deployments. Flavors within virtual machine deployment provide resources to the virtual machine directly, as opposed to container-based workloads where a host cluster receives the provided resources.
-
+Flavors are also used in virtual machine deployments. Flavors within virtual machine deployment provide resources to the virtual machine directly, as opposed to container-based workloads where a host cluster receives the provided resources.  
 ## Guidelines for Specifying Flavor
 
 When denoting the Flavor for your application instance, the Flavor assigned to the application instance is dependent on the following scenarios. For information on how to size your deployment and select the most appropriate Flavor for your application instance, refer to the [sizing your deployment](/developer/design/sizing-applications/index.md) document.
@@ -49,7 +104,7 @@ When denoting the Flavor for your application instance, the Flavor assigned to t
 The following actions may be performed on this page:
 
 - Filter Flavors by region
-- Type in a few letters to auto-populate your search results
+- Type in a few letters to auto-populate your search results  
 
 ![Flavors page](/developer/assets/flavorespage.png "Flavors page")
 

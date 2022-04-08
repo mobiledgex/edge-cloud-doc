@@ -1,8 +1,8 @@
 ---
 title: Monitoring Apps
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 MobiledgeX offers Monitoring features to make it easier to maintain the health and performance of your edge applications. Learn how to use Monitoring with our guides.
 
 ---

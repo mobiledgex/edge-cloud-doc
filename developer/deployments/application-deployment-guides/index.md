@@ -1,8 +1,8 @@
 ---
 title: How-To Guides
 long_title: Application Deployments Guides
-overview_description:
-description:
+overview_description: 
+description: 
 This selection of guides will show you how to deploy different application types.
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: Unity Download Instructions
 long_title: Unity SDK
-overview_description:
-description:
+overview_description: 
+description: 
 Learn how to use the Matching Engine Unity SDK to create applications for Unity devices
 
 ---
@@ -38,9 +38,7 @@ Once that completes, you will see the MobiledgeX SDK within your Package Manager
 
 ### 2019.2.x
 
-In order to import the MobiledgeX package into your project, you will need to edit the **manifest.json file**. This file is located at <strong>
-*UnityProjectPath/Packages/manifest.json*
-</strong>. When opened, the file will be in this format:
+In order to import the MobiledgeX package into your project, you will need to edit the **manifest.json file**. This file is located at *UnityProjectPath/Packages/manifest.json*. When opened, the file will be in this format:
 
 ```
 {
@@ -89,8 +87,7 @@ Select **Setup**, which will open a new Unity window asking you for your applica
 
 ![Unity menu: Setup](/developer/assets/unity-sdk/mobiledgex-unity-window.png "Unity menu: Setup")
 
-After you provide your application credentials, select the setup button, which will communicate with the DME to verify that your application definition exists on the MobiledgeX console. If successful, your project will be set up with the correct plugins and resources necessary to use our APIs. You can verify if these files were generated correctly by looking in the Plugins and Resources folders of your project.
-
+After you provide your application credentials, select the setup button, which will communicate with the DME to verify that your application definition exists on the MobiledgeX console. If successful, your project will be set up with the correct plugins and resources necessary to use our APIs. You can verify if these files were generated correctly by looking in the Plugins and Resources folders of your project.  
 ![Generated Plugins](/developer/assets/unity-sdk/generated-plugins.png "Generated Plugins")
 
 ![Generated Resources](/developer/assets/unity-sdk/generated-resources.png "Generated Resources")

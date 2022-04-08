@@ -1,8 +1,8 @@
 ---
 title: Cloudlets
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Service your applications through our cloudlets
 
 ---
@@ -37,11 +37,42 @@ Cloudlet Pools are collections of cloudlets that are defined on a per-regional b
 #### Permissions and roles
 
 Refer to the table below to understand the permissions depending on your organizational role.
-| Role           | Invite | Response | showgranted/pending | showinvite | showresponse |
-|----------------|--------|----------|---------------------|------------|--------------|
-| DevManager     | X      | X        | X                   | X          |
-| DevContributor |
-| DevViewer      |
+<table>
+<tbody>
+<tr>
+<th>Role</th>
+<th>Invite</th>
+<th>Response</th>
+<th>showgranted/pending</th>
+<th>showinvite</th>
+<th>showresponse</th>
+</tr>
+<tr>
+<td>DevManager</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>DevContributor</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DevViewer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 ### Example Request/Response query
 
@@ -68,7 +99,7 @@ mcctl --addr https://console.mobiledgex.net:443 --skipverify cloudletpoolrespons
 - org: mydevorg
   region: US
   cloudletpool: mypoolxxx
-  cloudletpoolorg: myoporg
+  cloudletpoolorg: myoporg  
 
 ```
 

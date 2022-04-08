@@ -1,8 +1,8 @@
 ---
 title: Storing Metrics and Insights
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how to use our application metrics to detect performance anomalies
 
 ---
@@ -94,7 +94,7 @@ The data from the above will be returned in json format, and will be presented a
     }
   ]
 
-}
+}  
 
 ```
 
@@ -121,14 +121,14 @@ To load this data into a TSDB we will need to transform it into a format that th
 In its simplest form line protocol provides the name of the metric, a list of one or more key/value paris of tags, a list of one or more key/value pairs of measurements, and an optional timestamp. The syntax is defined as:
 
 ```
-&lt;measurement&gt;[,&lt;tag_key&gt;=&lt;tag_value&gt;[,&lt;tag_key&gt;=&lt;tag_value&gt;]] &lt;field_key&gt;=&lt;field_value&gt;[,&lt;field_key&gt;=&lt;field_value&gt;] [&lt;timestamp&gt;]
+&lt;measurement&gt;[,&lt;tag_key&gt;=&lt;tag_value&gt;[,&lt;tag_key&gt;=&lt;tag_value&gt;]] &lt;field_key&gt;=&lt;field_value&gt;[,&lt;field_key&gt;=&lt;field_value&gt;] [&lt;timestamp&gt;]  
 
 ```
 
 For our purposes we will be constructing a very basic data payload. The following is an example of what that payload will look like for the memory metric:
 
 ```
-mem.app=compose-file-test,ver=10 mem="1990197"
+mem.app=compose-file-test,ver=10 mem="1990197"  
 
 ```
 
@@ -141,7 +141,7 @@ jq -r  '.data[0].Series[0] | (.columns | map(.)) as $headers| .values | \
  map(. as $row | $headers | with_entries({"key": .value, "value": $row[.key]})) |\
  {measurement: "mem", mem: .[].mem | tostring, app: .[].app, ver: .[].ver, \
  timestamp: .[].time }| \
- to_entries|map(.value)|@csv
+ to_entries|map(.value)|@csv  
 
 ```
 
@@ -155,14 +155,14 @@ jq -r  '.data[0].Series[0] | (.columns | map(.)) as $headers| .values | \
 This provides us with the following output:
 
 ```
-"mem","1990197","compose-file-test","10","2020-08-11T15:15:59.135953533Z"
+"mem","1990197","compose-file-test","10","2020-08-11T15:15:59.135953533Z"  
 
 ```
 
 The next step is finalizing the conversion. To do this we need to manipulate the data into the Line Protocol format. We will be using `awk` to complete the transformation:
 
 ```
-awk -F, '{gsub("\"","",$0);printf("%s.app=%s,ver=%s mem=\"%s\"\n",$1,$3,$4,$2)}'
+awk -F, '{gsub("\"","",$0);printf("%s.app=%s,ver=%s mem=\"%s\"\n",$1,$3,$4,$2)}'  
 
 ```
 
@@ -175,7 +175,7 @@ Breaking down that command, we are doing the following:
 The final output to be sent to InfluxDB is:
 
 ```
-mem.app=compose-file-test,ver=10 mem="1990197"
+mem.app=compose-file-test,ver=10 mem="1990197"  
 
 ```
 
@@ -191,7 +191,7 @@ The InfluxDB API can be used to load the processed data into InfluxDB. The forma
 
 ```
 curl -i -XPOST 'http://localhost:8086/write?db=mex'
---data-binary 'measurement-name.tag1=value1,tag2=value2 value=123 1434055562000000000'
+--data-binary 'measurement-name.tag1=value1,tag2=value2 value=123 1434055562000000000'  
 
 ```
 
@@ -204,7 +204,7 @@ The string passed conforms to the syntax described above under "Line Protocol".
 For this test, we are going to be inserting the following data:
 
 ```
-mem.app=compose-file-test,ver=10 mem="1990197"
+mem.app=compose-file-test,ver=10 mem="1990197"  
 
 ```
 
@@ -218,7 +218,7 @@ Request-Id: de38aed6-dc1d-11ea-8002-acde48001122
 X-Influxdb-Build: OSS
 X-Influxdb-Version: v1.8.1
 X-Request-Id: de38aed6-dc1d-11ea-8002-acde48001122
-Date: Tue, 11 Aug 2020 21:59:02 GMT
+Date: Tue, 11 Aug 2020 21:59:02 GMT  
 
 ```
 
@@ -239,7 +239,7 @@ name: mem.app=compose-file-test
 time                mem     ver
 ----                ---     ---
 1597096338602015000 1990197 10
-&gt;
+&gt;  
 
 ```
 
@@ -341,7 +341,7 @@ $MCCTLCONS selector=network | $JQ -r  '.data[0].Series[0] | (.columns | map(.)) 
 
 # Disk
 
-$MCCTLCONS selector=disk | $JQ -r  '.data[0].Series[0] | (.columns | map(.)) as $headers| .values | map(. as $row | $headers | with_entries({"key": .value, "value": $row[.key]}))| {measurement: "disk", disk: .[].disk | tostring, app: .[].app, ver: .[].ver, timestamp: .[].time }| to_entries|map(.value)|@csv' | awk -F, '{gsub("\"","",$0);printf("%s.app=%s,ver=%s mem=\"%s\"\n",$1,$3,$4,$2)}' | $CURLRC
+$MCCTLCONS selector=disk | $JQ -r  '.data[0].Series[0] | (.columns | map(.)) as $headers| .values | map(. as $row | $headers | with_entries({"key": .value, "value": $row[.key]}))| {measurement: "disk", disk: .[].disk | tostring, app: .[].app, ver: .[].ver, timestamp: .[].time }| to_entries|map(.value)|@csv' | awk -F, '{gsub("\"","",$0);printf("%s.app=%s,ver=%s mem=\"%s\"\n",$1,$3,$4,$2)}' | $CURLRC  
 
 ```
 
@@ -424,7 +424,7 @@ Once the script has completed it’s run you can use the CSV files for analysis 
 
 ```
 
-### Data Collection Script
+### Data Collection Script  
 
 #!/bin/env bash
 

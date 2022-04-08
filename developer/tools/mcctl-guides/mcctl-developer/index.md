@@ -1,8 +1,8 @@
 ---
 title: How to use the mcctl utility for Developers
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Provides steps and examples on how to use the mcctl utility for developers.
 
 ---
@@ -44,11 +44,11 @@ The following parameters are used throughout this exercise.
 To use `mcctl`, you must first log into the API to retrieve an authorization token.
 
 ```
-$ mcctl login --addr  https://console.mobiledgex.net  name=jschmidt                
+$ mcctl login --addr  https://console.mobiledgex.net  name=jschmidt                   
 password:
 login successful
 token saved to /home/jschmidt/.mctoken
-$
+$  
 
 ```
 
@@ -62,7 +62,7 @@ remote: Counting objects: 100% (22/22), done.
 remote: Compressing objects: 100% (21/21), done.
 remote: Total 22 (delta 8), reused 8 (delta 0), pack-reused 0
 Unpacking objects: 100% (22/22), 6.30 KiB | 379.00 KiB/s, done.
-$
+$  
 
 ```
 
@@ -123,7 +123,7 @@ Removing intermediate container 68df598f66ca
 
 Successfully built 3c320a9cd114
 Successfully tagged helloworld:2.0
-$
+$  
 
 ```
 
@@ -136,7 +136,7 @@ WARNING! Your password will be stored unencrypted in /home/jschmidt/.docker/conf
 Configure a credential helper to remove this warning. See
 https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 Login Succeeded
-$
+$   
 
 ```
 
@@ -144,14 +144,14 @@ $
 
 ```
 $ docker tag helloworld:2.0 docker.mobiledgex.net/demoorg/images/helloworld:2.0
-$
+$   
 
 ```
 
 ### Push the Docker Image to the Registry
 
 ```
-$ docker push docker.mobiledgex.net/demoorg/images/helloworld:2.0            
+$ docker push docker.mobiledgex.net/demoorg/images/helloworld:2.0               
 The push refers to repository [docker.mobiledgex.net/demoorg/images/helloworld]
 7dc5eba82ecd: Pushed
 0bb28eb62de6: Pushed
@@ -166,7 +166,7 @@ f3ed6cb59ab0: Pushed
 654f45ecb7e3: Pushed
 2c40c66f7667: Pushed
 2.0: digest: sha256:99c172c4225ffde587c88bc8898dbf7ab963bf14ce9089c8acc8fd7343f8a273 size: 2841
-$
+$  
 
 ```
 
@@ -175,7 +175,7 @@ $
 ```
 $ docker logout docker.mobiledgex.net
 Removing login credentials for docker.mobiledgex.net
-$
+$  
 
 ```
 
@@ -190,7 +190,7 @@ imagetype=ImageTypeDocker \
 imagepath=docker.mobiledgex.net/demoorg/images/helloworld:2.0 \
 defaultflavor=m4.small accesstype=AccessTypeDefaultForDeployment \
 accessports=tcp:8000 deployment=docker
-$
+$   
 
 ```
 
@@ -218,7 +218,7 @@ $ mcctl --addr https://console.mobiledgex.net --output-format json \
   }
 
 ]
-$
+$  
 
 ```
 
@@ -230,7 +230,7 @@ Use mcctl to delete an application.
 $ mcctl --addr https://console.mobiledgex.net --output-format json \
 app delete region=EU app-org=demoorg appname=helloworld appvers=2.0
 {}
-$
+$  
 
 ```
 
@@ -250,7 +250,7 @@ Use the `mcctl` utility to create a cluster instance; this is used to run the ap
 **Note:** The MobiledgeX API will automatically create a cluster (autocluster) for you if you pass through a cluster name beginning with autocluster to the AppInst creation payload.
 
 ```
-$ mcctl --addr https://console.mobiledgex.net \
+$ mcctl --addr https://console.mobiledgex.net \  
 clusterinst create region=EU cluster=hellocluster cloudlet-org=TDG cloudlet=hamburg-main \
 cluster-org=demoorg flavor=m4.small ipaccess=IpAccessDedicated \
 deployment=docker
@@ -278,14 +278,14 @@ cloudlet=hamburg-main cluster-org=demoorg [ { “key”: { “cluster_key”: \ 
 “hellocluster” }, “cloudlet_key”: { “organization”: “TDG”, “name”: “hamburg-main” },\
 “organization”: “demoorg” }, “flavor”: { “name”: “m4.small” }, “liveness”: 1,\
 “state”: 5, “ip_access”: 1, “allocated_ip”: “dynamic”, “node_flavor”: “m4.small”,\
-“deployment”: “docker”, “status”: {} } $
+“deployment”: “docker”, “status”: {} } $  
 
 ```
 
 ### Delete a Cluster Instance
 
 ```
-$ mcctl --addr https://console.mobiledgex.net --output-format json \
+$ mcctl --addr https://console.mobiledgex.net --output-format json \  
 clusterinst delete region=EU cluster=hellocluster cloudlet-org=TDG cloudlet=hamburg-main cluster-org=demoorg
 {
   "message": "Deleting"
@@ -306,7 +306,7 @@ $
 Check that the cluster has been deleted.
 
 ```
-$ mcctl --addr https://console.mobiledgex.net --output-format json \
+$ mcctl --addr https://console.mobiledgex.net --output-format json \  
 clusterinst show region=EU cluster=hellocluster cloudlet-org=TDG cloudlet=hamburg-main cluster-org=demoorg
 $
 
@@ -319,7 +319,7 @@ Use the  `mcctl` utility to create an application instance; this will run an ins
 **Note:** The MobiledgeX API will automatically create a cluster (autocluster) for you if you pass through a cluster name beginning with *autocluster* to the AppInst creation payload.
 
 ```
-$ mcctl --addr https://console.mobiledgex.net \
+$ mcctl --addr https://console.mobiledgex.net \  
 appinst create region=EU app-org=demoorg appname=helloworld appvers=2.0 cloudlet-org=TDG \
  cloudlet=hamburg-main cluster=hellocluster cluster-org=demoorg
 
@@ -400,29 +400,29 @@ $
 Retrieve the URI for the application; this example uses the [json](https://github.com/trentm/json) tool to parse the output:
 
 ```
-$ mcctl --addr https://console.mobiledgex.net --output-format json /
+$ mcctl --addr https://console.mobiledgex.net --output-format json /  
 appinst show region=EU app-org=demoorg appname=helloworld appvers=2.0  |  json -ag uri
 hellocluster.hamburg-main.tdg.mobiledgex.net
-$
+$  
 
 ```
 
 ### Use cUrl to test the application instance
 
 ```
-$ curl http://hellocluster.hamburg-main.tdg.mobiledgex.net:8000 &lt;!DOCTYPE html&gt;
+$ curl http://hellocluster.hamburg-main.tdg.mobiledgex.net:8000 &lt;!DOCTYPE html&gt;  
 
 ```
 
 <figure class="half">
-  <img src="/developer/assets/developer-ui-guide/hello-world.png" class="img-fluid slb" alt="">
+  <img src="/assets/developer-ui-guide/hello-world.png" class="img-fluid slb" alt="">
   <figcaption>
 
 </figcaption>
 </figure>
 
 ```
-$
+$  
 
 ```
 
@@ -456,7 +456,7 @@ $
 Check that the application instance has been deleted.
 
 ```
-$ mcctl --addr https://console.mobiledgex.net --output-format json \
+$ mcctl --addr https://console.mobiledgex.net --output-format json \  
 appinst show region=EU app-org=demoorg appname=helloworld appvers=2.0 \
   cluster=hellocluster
 
@@ -474,7 +474,7 @@ For the example below, we will use an application named `hello-actions`  running
 
 
 ```
-$ mcctl --addr https://console.mobiledgex.net \
+$ mcctl --addr https://console.mobiledgex.net \  
 autoprovpolicy create region=EU app-org=demoorg name=TestAutoScale deployclientcount=2 \
  deployintervalcount=10
 
@@ -486,7 +486,7 @@ autoprovpolicy create region=EU app-org=demoorg name=TestAutoScale deployclientc
 
 
 ```
-$ mcctl --output-format=json --addr https://console.mobiledgex.net \
+$ mcctl --output-format=json --addr https://console.mobiledgex.net \  
 autoprovpolicy show region=EU app-org=demoorg name=TestAutoScale
 [
   {
@@ -506,12 +506,12 @@ autoprovpolicy show region=EU app-org=demoorg name=TestAutoScale
 
 
 ```
-$ mcctl --output-format=json --addr https://console.mobiledgex.net \
+$ mcctl --output-format=json --addr https://console.mobiledgex.net \  
 autoprovpolicy addcloudlet region=EU app-org=demoorg name=TestAutoScale \
  cloudlet-org=TDG cloudlet=berlin-main
 
 {}
-$ mcctl --output-format=json --addr https://console.mobiledgex.ne  \
+$ mcctl --output-format=json --addr https://console.mobiledgex.ne  \  
 autoprovpolicy addcloudlet region=EU app-org=demoorg name=TestAutoScale \
  cloudlet-org=TDG cloudlet=hamburg-main
 
@@ -523,7 +523,7 @@ autoprovpolicy addcloudlet region=EU app-org=demoorg name=TestAutoScale \
 
 
 ```
-$ mcctl --output-format=json --addr https://console.mobiledgex.net \
+$ mcctl --output-format=json --addr https://console.mobiledgex.net \  
 autoprovpolicy show region=EU app-org=demoorg name=TestAutoScale
 [
   {
@@ -557,7 +557,7 @@ autoprovpolicy show region=EU app-org=demoorg name=TestAutoScale
     ]
   }
 
-]
+]   
 
 ```
 
@@ -565,11 +565,11 @@ autoprovpolicy show region=EU app-org=demoorg name=TestAutoScale
 
 
 ```
-$ mcctl --output-format=json --addr https://console.mobiledgex.net \
+$ mcctl --output-format=json --addr https://console.mobiledgex.net \  
 app addautoprovpolicy region=EU appkey.organization=demoorg \
  appkey.name=hello-actions appkey.version=1.0 autoprovpolicy=TestAutoScale
 
-{}
+{}  
 
 ```
 
@@ -577,7 +577,7 @@ app addautoprovpolicy region=EU appkey.organization=demoorg \
 
 
 ```
-$ mcctl --output-format=json --addr https://console.mobiledgex.net \
+$ mcctl --output-format=json --addr https://console.mobiledgex.net \  
 app show region=EU app-org=demoorg appname=hello-actions appvers=1.0
 [
   {
@@ -593,16 +593,16 @@ app show region=EU app-org=demoorg appname=hello-actions appvers=1.0
       "name": "m4.small"
     },
     "deployment": "kubernetes",
-    "deployment_manifest": "apiVersion: v1\nkind: Service\nmetadata:\n  name: hello-actions-tcp\n  labels:\n    run: hello-actions\nspec:\n  type: \
-    LoadBalancer\n  ports:\n  - name: tcp8000\n    protocol: TCP\n    port: 8000\n    targetPort: 8000\n  selector:\n run: hello-actions \
-    \n---\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: hello-actions-deployment\nspec:\n  replicas: 1\n  selector:\n \
-    matchLabels:\n      run: hello-actions\n  template:\n    metadata:\n      labels:\n        run: hello-actions\n \
-    spec:\n      volumes:\n imagePullSecrets:\n - name: docker.mobiledgex.net\n containers:\n \
-    - name: hello-actions\n image: docker.mobiledgex.net/demoorg/images/hello-actions:1.4\n \
-     imagePullPolicy: Always\n ports:\n  - containerPort: 8000\n  protocol: TCP\n", \
-    "deployment_generator": "kubernetes-basic",
-    "access_type": 2,
-    "auto_prov_policies": [
+    "deployment_manifest": "apiVersion: v1\nkind: Service\nmetadata:\n  name: hello-actions-tcp\n  labels:\n    run: hello-actions\nspec:\n  type: \  
+    LoadBalancer\n  ports:\n  - name: tcp8000\n    protocol: TCP\n    port: 8000\n    targetPort: 8000\n  selector:\n run: hello-actions \  
+    \n---\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: hello-actions-deployment\nspec:\n  replicas: 1\n  selector:\n \  
+    matchLabels:\n      run: hello-actions\n  template:\n    metadata:\n      labels:\n        run: hello-actions\n \  
+    spec:\n      volumes:\n imagePullSecrets:\n - name: docker.mobiledgex.net\n containers:\n \  
+    - name: hello-actions\n image: docker.mobiledgex.net/demoorg/images/hello-actions:1.4\n \  
+     imagePullPolicy: Always\n ports:\n  - containerPort: 8000\n  protocol: TCP\n", \  
+    "deployment_generator": "kubernetes-basic",  
+    "access_type": 2,  
+    "auto_prov_policies": [  
       "TestAutoScale"
     ]
   }
@@ -862,7 +862,7 @@ $
 
 ```
 $ mcctl --addr https://console.mobiledgex.net --output-format json \
-  usage app region=EU apporg=demoorg appname=helloworld appvers=2.0
+  usage app region=EU apporg=demoorg appname=helloworld appvers=2.0  
 
 {
   "data": [
@@ -910,7 +910,7 @@ $
 
 ```
 $ mcctl --addr https://console.mobiledgex.net --output-format json \
-  usage cluster  region=EU clusterorg=demoorg cluster=hellocluster     
+  usage cluster  region=EU clusterorg=demoorg cluster=hellocluster        
 
 {
   "data": [
@@ -1241,7 +1241,7 @@ tagkeys:
 In place of using the Show Event command, the Find Event command can be used to search events based on using the **OR** filter criteria, where it will return the best match possible.
 
 ```
-mcctl --addr https://console.mobiledgex.net:443 --skipverify events find type=event name="cluster-svc create AppInst" tags=traceid=1016ab314a549b44 tags=cloudlet=DFWVMW2 limit=4 timerange.startage=4000h time
+mcctl --addr https://console.mobiledgex.net:443 --skipverify events find type=event name="cluster-svc create AppInst" tags=traceid=1016ab314a549b44 tags=cloudlet=DFWVMW2 limit=4 timerange.startage=4000h time  
 
 ```
 
@@ -1697,7 +1697,7 @@ edge-cloud-infra git:(master) mcctl --addr https://console.mobiledgex.net:443 --
     spanid: 170bc3d792b48fa5
     status: "400"
     traceid: 170bc3d792b48fa5
-    username: testuser
+    username: testuser   
 
 ```
 

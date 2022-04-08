@@ -1,8 +1,8 @@
 ---
 title: "Best Practices : Deployments"
 long_title: Best Practices for Container Deployments on MobiledgeX
-overview_description:
-description:
+overview_description: 
+description: 
 Learn about best practices and recommendations for container deployment for deploying to the MobiledgeX Edge-Cloud platform.
 
 ---
@@ -13,15 +13,77 @@ Learn about best practices and recommendations for container deployment for depl
 The MobiledgeX platform allows the deployment of virtual machine images and any workload that may be containerized. MobiledgeX provides you with enormous flexibility, but keep in mind; not all supported deployment methods may be able to use all of  MobiledgeX’s platform features. The purpose of this document is to provide a high level overview of the deployment types we support, high-level descriptions of features applicable to each deployment types are provided, detailed security and storage considerations are outlined, and more.
 
 The table below shows the deployment methods and platform features available for each method.
+<table>
+<tbody>
+  <tr>
+    <th>
 
-| Deployment Type | Autoscale | Autoprovision | Health Check | Load Balancer | TLS Termination |
-|-----------------|-----------|---------------|--------------|---------------|-----------------|
-| Virtual Machine | X         | X             | X            |
-| Docker Image    | X         | X             | X            | X             |
-| Docker Compose  | X         | X             | X            | X             |
-| Kubernetes YAML | X         | X             | X            | X             | X               |
-| HELM Chart      | X         | X             | X            | X             | X               |
+<b>Deployment Type</b>
+</th>
+    <th align="center">
 
+<b>Autoscale</b>
+</th>
+    <th align="center">
+
+<b>Autoprovision</b>
+</th>
+    <th align="center">
+
+<b>Health Check</b>
+</th>
+    <th align="center">
+
+<b>Load Balancer</b>
+</th>
+    <th align="center">
+
+<b>TLS Termination</b>
+</th>
+  </tr>
+  <tr>
+    <td>Virtual Machine</td>
+    <td></td>
+    <td></td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+  </tr>
+  <tr>
+    <td>Docker Image</td>
+    <td></td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+  </tr>
+  <tr>
+    <td>Docker Compose</td>
+    <td></td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+  </tr>
+  <tr>
+    <td>Kubernetes YAML</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+  </tr>
+  <tr>
+    <td>HELM Chart</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+    <td align="center">X</td>
+  </tr>
+  </tbody>
+
+</table>   
 ## Feature Definition
 
 ### Autoscale

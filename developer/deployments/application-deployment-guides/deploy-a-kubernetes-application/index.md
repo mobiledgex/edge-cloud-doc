@@ -1,8 +1,8 @@
 ---
 title: Deploy a Kubernetes Application
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 This guide will show developers how to deploy a k8s.yaml file onto the MobiledgeX platform.
 
 ---

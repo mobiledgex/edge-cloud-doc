@@ -1,8 +1,8 @@
 ---
 title: What is MobiledgeX?
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 The MobiledgeX platform specializes in edge cloud operations and provides an Edge-Cloud Console, SDKs, and other edge tools.
 
 ---
@@ -23,7 +23,7 @@ This results in the two primary benefits compared to traditional cloud computing
 - Lower network latency
 - Lower network jitter
 
-To enable developers to deploy their applications onto the Mobile Network Edge, MobiledgeX provides a cloudlet agnostic platform, where you can deploy &amp; scale your server application across various Mobile Networks.
+To enable developers to deploy their applications onto the Mobile Network Edge, MobiledgeX provides a cloudlet agnostic platform, where you can deploy &amp; scale your server application across various Mobile Networks. 
 
 To get started, [Sign Up For Early Access]() to MobiledgeX.
 

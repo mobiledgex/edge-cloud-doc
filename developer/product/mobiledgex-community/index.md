@@ -1,8 +1,8 @@
 ---
 title: MobiledgeX Developer Community
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 The MobiledgeX Developer Community is the place to meet and chat with developers excited to leverage the Mobile Network edge cloud to build new and innovative applications
 
 ---

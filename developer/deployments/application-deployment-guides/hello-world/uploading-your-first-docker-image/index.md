@@ -1,8 +1,8 @@
 ---
 title: Create and Upload Your First Docker Image
 long_title: Create and Upload Your First Docker Image to MobiledgeX
-overview_description:
-description:
+overview_description: 
+description: 
 Create a Hello World Docker Image using a NGINX Webserver and Upload that Docker Image to MobiledgeX
 
 ---

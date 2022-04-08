@@ -1,8 +1,8 @@
 ---
 title: GitHub Actions
 long_title: Deploy Applications using GitHub Actions
-overview_description:
-description:
+overview_description: 
+description: 
 Learn how our CI/CD approach helps you bridge the gaps between development and operational activities to automate, test, and deploy applications
 
 ---

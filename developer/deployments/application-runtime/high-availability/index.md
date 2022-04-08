@@ -1,8 +1,8 @@
 ---
 title: High Availabilty
-long_title:
-overview_description:
-description:
+long_title: 
+overview_description: 
+description: 
 Learn how to ensure continuous availability of the MobiledgeX platform for all applications running on the cloudlets
 
 ---
