@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MobiledgeX Edge-Cloud 3.0: Enhanced GPU/vGPU Support | MobiledgeX</title>
+<meta name="description" content="The latest release of the MobiledgeX Edge-Cloud platform includes enhanced support for GPUs and vGPUs. With GPUs at the edge, an application developer has the benefit of deploying an application backend that has lower processing time with lower network latency." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MobiledgeX Edge-Cloud 3.0: Enhanced GPU/vGPU Support" />
+<meta property="og:description" content="The latest release of the MobiledgeX Edge-Cloud platform includes enhanced support for GPUs and vGPUs. With GPUs at the edge, an application developer has the benefit of deploying an application backend that has lower processing time with lower network latency." />
+<meta property="og:url" content="http://mexv3.test/blog/2021/09/08/mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="MobiledgeX Edge-Cloud 3.0: Enhanced GPU/vGPU Support" />
+<meta name="twitter:description" content="The latest release of the MobiledgeX Edge-Cloud platform includes enhanced support for GPUs and vGPUs. With GPUs at the edge, an application developer has the benefit of deploying an application backend that has lower processing time with lower network latency." />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/mobiledgex-2020.jpg/4f8bdef8246172bfdd43dad10a0754f8.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/mobiledgex-2020.jpg/4f8bdef8246172bfdd43dad10a0754f8.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2021/09/08/mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support" rel="canonical" />
+<link href="http://mexv3.test/blog/2021/09/08/mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support?page=2" rel="next" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support-content">
+      <div class="row">
+        <div class="col">
+  <h1>MobiledgeX Edge-Cloud 3.0: Enhanced GPU/vGPU Support</h1>
+  <p class="datestamp">September 8th, 2021</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/mobiledgex-2020.jpg" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/ashish-jain.png" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/ashish-jain">Ashish Jain</a></p>
+            <p class="job-title">Software Engineer</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2022/01/18/massive-technologies-showcases-unity-render-streaming">Massive Technologies Showcases the Advantage of Unity Render Streaming at hubraum</a></li>
+                        <li><a href="/blog/2021/11/09/developer-spotlight-ums">Developer Spotlight: Unmanned Life</a></li>
+                        <li><a href="/blog/2021/11/04/dt-nvidia-cloudxr">Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</a></li>
+                        <li><a href="/blog/2021/11/02/event-join-mobiledgex-and-partners-for-a-discussion-of-infrastructure-critical-to-mobile-ar-vr-at-awe-usa-2021-nov-11th-9-30-a-m-10-25-a-m-pt">[Event] Join MobiledgeX and partners for a discussion of infrastructure critical to mobile AR/VR at AWE USA 2021 (Nov 11th 9:30 a.m.- 10:25 a.m PT)</a></li>
+                        <li><a href="/blog/2021/10/07/developer-spotlight-forwardgame">Developer Spotlight: forwARdgame</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/developer">See more articles from the Developer category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/ashish-jain.png" class="img-fluid headshot" alt="Headshot for Ashish Jain" />
+        <div class="info">
+          <p class="name">Ashish Jain</p>
+          <p class="job-title">Software Engineer</p>
+        </div>
+      </div>
+      
+                  <p>Today, many applications rely on GPUs for accelerated image processing, graphics, video rendering, AI modeling, and more. For applications optimized for the edge, minimizing both network and processing latency is paramount.  With GPUs at the edge, an application developer has the benefit of deploying an application backend that has lower processing time with lower network latency. This provides the best user experience for applications on mobile devices over a cellular network.</p><p>It is very difficult and time-consuming for application developers to manage dependencies that exist between GPUs, GPU drivers, hypervisors, and operating systems as well as for the operators who have to maintain these environments.</p><p><em>For operators and developers, the MobiledgeX Edge-Cloud platform acts as a bridge to simplify the management of GPUs, making them easily accessible at the edge.</em></p><p>With the release of MobiledgeX Edge-Cloud 3.0, we&#039;ve introduced new GPU and vGPU management features, both for operators and developers.</p><p><em>Operators</em> will have simplified management of GPU drivers for their cloudlets. Our services will take care of installing appropriate drivers on the developer’s cluster VMs and associate appropriate license (if any) with that driver. We support managing GPU PCI-Passthrough drivers and vGPU drivers along with maintaining their respective license configurations. Operators are also provided with an insight into the usage statistics of the GPU resources on each cloudlet.</p><p><em>Developers</em> can use any of the GPU flavors for their application, providing access to GPU resources. It is completely automated for various application deployments with enough flexibility for customizations. Developers are also provided with an option to download the GPU driver, in case they want to set it up themselves.</p><h2 id='simplified-management-for-operators'><a class='anchor' aria-hidden='true' href='#simplified-management-for-operators'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Simplified Management For Operators</h2><p>Operators have to deal with setting up GPU hardware from a vendor, virtualizing it for various use cases, and managing license servers to enable applications to use that hardware. Although hardware setup is a one-time process, managing GPU drivers is not. Furthermore, maintaining support for various deployments like Kubernetes, Docker, VM, etc is complex. MobiledgeX simplifies this for operators.</p><p>Our software helps operators manage and automate the installation of GPU drivers and setup license configs for various application deployments. An operator is also provided with control over who can access those drivers. MobiledgeX supports simple APIs to manage GPU drivers of different types like PCI Passthrough and vGPUs and also maintain driver builds based on different versions of GPU drivers, hypervisors, kernel versions, operating systems, etc.</p><p>In the MobiledgeX Edge-Cloud Console, GPU drivers and their license configurations can be managed from the “GPU drivers” section as shown in the following screenshot:</p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-1-1631126095.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 1: List of GPU Drivers</figcaption>
+      </figure>
+      
+                   <p>Multiple builds of the same GPU driver can be maintained for various operating systems, hypervisors, kernel versions, etc. Here is an example of how to create a GPU driver from the console and add various builds to it:</p><p></p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-2-1631126159.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 2: GPU driver creation</figcaption>
+      </figure>
+      
+                   <p>Once a driver is created, it will be visible on the “GPU drivers” section. Detailed information of the driver can be seen by clicking on the driver from the list provided. Here’s the detailed information of the driver we just created:</p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-3-1631126189.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 3: Details about the GPU driver</figcaption>
+      </figure>
+      
+                   <p>As seen above, MobiledgeX Console provides enough flexibility to support multiple builds for a single GPU driver depending on the VM specification. All the drivers and their license configurations are cached in secure storage. Operators and MobiledgeX admins will control the access to that storage. Operator created GPU drivers are only accessible by users belonging to the operator organization and developers part of the operator’s <a href="https://developers.mobiledgex.com/deployments/deployment-workflow/cloudlet-pools/">cloudlet pool</a>. MobiledgeX created GPU drivers are accessible by all the users.</p><p>Operators can then associate a GPU driver with a <a href="https://operators.mobiledgex.com/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets/">cloudlet</a> either during create or update of the cloudlet. On the MobiledgeX Console, this can be done as part of “Advanced Settings” inside the cloudlet create or update page:<br></p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-4-1631126225.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 4: Associating GPU driver with a Cloudlet</figcaption>
+      </figure>
+      
+                   <p></p><p>Once a GPU driver is associated with a cloudlet, MobiledgeX services will automatically select and install matching drivers for various application deployments like Kubernetes, Helm, Docker, and VM. It will also automate license configuration wherever applicable.</p><p>Operators are provided with statistics on the count of GPUs used across their cloudlets. This gives operators a better insight into the usage pattern of GPUs that can help with cost optimization. This can be viewed in the <a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/">Monitoring</a> section of the MobiledgeX Edge-Cloud console:</p><p><br></p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-5.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 5: GPU usage statistics</figcaption>
+      </figure>
+      
+                   <h3 id='simplified-accessibility-for-developers'><a class='anchor' aria-hidden='true' href='#simplified-accessibility-for-developers'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Simplified Accessibility For Developers</h3><p>Ideally, an application developer never has to deal with managing the complexities of the underlying infrastructure and can focus primarily on their application code. For that reason, dealing with GPU drivers shouldn’t be a burden for the developers. We simplify this to great extent for diverse application deployment types and for various hypervisors and operating systems.</p><p>Once a GPU driver is associated with a cloudlet by the operator, along with the license config, a developer will only have to select a GPU flavor, and their application will have access to the GPU resource. Developers will not have to worry about setting up a GPU driver or setting up a license config for non-VM based applications. The goal is to simplify deployments for developers so that they can focus only on the application definition and scalability.</p><p>To enable access to a GPU resource, a developer will have to deploy a cluster instance or auto-cluster instance using a GPU flavor. More information on application deployment on a cluster instance can be found in this <a href="https://developers.mobiledgex.com/deployments/deployment-workflow/">Deployment Essentials</a> guide.</p><p>In the  MobiledgeX Edge-Cloud console, the “Flavors” section shows all the supported flavors including <strong>GPU flavors</strong>:</p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-6.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 6: List of flavors including GPU flavors</figcaption>
+      </figure>
+      
+                   <p></p><p>As seen above in this example, there are two GPU flavors: x1.medium.gpu and x1.large.vgpu. More details about the flavor can be found by selecting the flavor from the above list:</p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-7.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 7: Details about the GPU flavor</figcaption>
+      </figure>
+      
+                   <p></p><p>The Flavor details page provides additional information about the GPU flavor, for instance, in the above output x1.medium.gpu is a single instance of NVIDIA-T4 PCI Passthrough GPU. Similarly, x1.medium.vgpu is a single slice of vGPU hardware. As seen above, a developer can select from various types of GPU / vGPU hardware.</p><p>A developer can then use this flavor to enable access to GPU resources for their application. For example, the following page on MobiledgeX Console creates a Kubernetes cluster instance with GPU support:<br><br></p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-8.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 8: Cluster Instance creation using GPU flavor</figcaption>
+      </figure>
+      
+                   <p>After creating a cluster instance, an application can be deployed on it.</p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-9.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 9: Application Instance creation using GPU flavor</figcaption>
+      </figure>
+      
+                   <p>For Docker/Kubernetes/Helm based deployment, one additional step is required from developers if the developer uses a custom deployment manifest as part of the application definition. More information on that can be found in this <a href="https://developers.mobiledgex.com/deployments/application-deployment-guides/gpu/">Guide To Deploy GPU Applications</a>.</p><p>In the case of VM-based applications, a developer would require access to GPU drivers for their custom VM images. Developers can access any MobiledgeX provided GPU drivers and any operator provided drivers (if they are part of that operator’s cloudlet pool) from the details page of the GPU driver on MobiledgeX Console:<br></p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-10.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 10: Option to download specific GPU driver build</figcaption>
+      </figure>
+      
+                   <p></p><p>Users are provided access to the drivers which they can select based on parameters like kernel version, hypervisor, and operating system. To get the download URL of a specific build, one can click on the link icon as highlighted in the above screenshot. This opens a dialog box with details on the build download URL:</p><p></p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-11.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 11: Details on how to download a specific GPU driver build</figcaption>
+      </figure>
+      
+                   <p>There are two options to download the URL:</p><ol start="1"><li><p>cURL command: This is mainly intended for those users who want to download the GPU driver build inside a remote VM</p></li><li><p>Direct download: To directly download the build on the local machine</p></li></ol><p>The provided download URL is only valid for the duration mentioned on the above page, in this case, it is 20 minutes. Overall, developers are provided access to drivers which they can select based on parameters like kernel version, hypervisor, and operating system.</p><h3 id='conclusion'><a class='anchor' aria-hidden='true' href='#conclusion'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Conclusion</h3><p>With the increased demand for GPU support and access to edge sites for lower latency requirements, it is crucial for an edge cloud to support and simplify the process to manage and access GPU resources. MobiledgeX does simplify this to great extent for both developers and operators. Operators are provided with simple APIs to set up drivers for their cloudlet. And developers can access provided GPU resources by just selecting an appropriate GPU flavor.</p><p>GPU driver management is also supported using our <a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/">command-line</a> utility and <a href="https://api.mobiledgex.net/mc/">REST APIs</a>.</p><p>To learn more, visit the MobiledgeX <a href="http://developers.mobiledgex.com/">Developer</a> and <a href="http://operators.mobiledgex.com/">Operator</a> portals. </p><p>We would love to hear back from you. For feedback or questions, head to our <a href="https://developers.mobiledgex.com/getting-started/">Getting Started</a> page on the Developer Portal and sign up for a time to chat with our Developer Advocacy team. </p><p><br></p>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/09/08/mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support&title=MobiledgeX+Edge-Cloud+3.0%3A+Enhanced+GPU/vGPU+Support"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=MobiledgeX+Edge-Cloud+3.0%3A+Enhanced+GPU/vGPU+Support&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/09/08/mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/09/08/mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

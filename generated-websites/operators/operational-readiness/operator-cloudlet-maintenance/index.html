@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta name="robots" content="noindex,nofollow">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operator Cloudlet Maintenance | MobiledgeX Operators</title>
+<meta name="description" content="This page describes best practices to take cloudlet to maintenance state for maintenance activities by an operator." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Operator Cloudlet Maintenance" />
+<meta property="og:description" content="This page describes best practices to take cloudlet to maintenance state for maintenance activities by an operator." />
+<meta property="og:url" content="http://operator-portal.test/operational-readiness/operator-cloudlet-maintenance" />
+<meta property="og:site_name" content="MobiledgeX Operators" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mobiledgex" />
+<meta name="twitter:title" content="Operator Cloudlet Maintenance" />
+<meta name="twitter:description" content="This page describes best practices to take cloudlet to maintenance state for maintenance activities by an operator." />
+<meta property="og:image" content="http://operator-portal.test/img/containers/assets/operators-social.jpg/5c20751e252519234312d7cbdaeb6738.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://operator-portal.test/img/containers/assets/operators-social.jpg/5c20751e252519234312d7cbdaeb6738.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://operator-portal.test/" rel="home" />
+<link href="http://operator-portal.test/operational-readiness/operator-cloudlet-maintenance" rel="canonical" />
+<link type="text/plain" rel="author" href="http://operator-portal.test/humans.txt" />
+  <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=1641595153">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      hljs.highlightAll()
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+
+<body
+  class="bg-white default">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2V3KZZ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="duik-header">
+  <nav class="properties navbar fixed-top d-none d-md-flex">
+    <ul>
+      <li><a href="https://mobiledgex.com">MobiledgeX Home</a></li>
+      <li><a href="https://mobiledgex.com/product">Product</a></li>
+      <li><a href="https://mobiledgex.com/use-cases">Use Cases</a></li>
+      <li><a href="https://mobiledgex.com/about">About</a></li>
+      <li><a href="https://mobiledgex.com/blog">Blog</a></li>
+      <li><a href="https://developers.mobiledgex.com">Developers</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-dark fixed-top bg-terrain flex-nowrap p-0 main-nav">
+    <a class="navbar-brand col-md-3 col-xl-2 mr-0 py-3" href="/"><img
+        src="/img/logo-white.svg?v=1592862229" alt="MobiledgeX Developers"></a>
+
+    <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/product-overview">Product Overview</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/supported-iaas-stacks">Successful Use Cases</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0 active"
+          href="/operational-readiness">Operational Readiness</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0"
+          href="/product-overview/security-and-privacy-standards-policies">Security and Privacy Policies</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/operator-specific-mcctl-and-rest-apis">APIs</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0" href="/release-notes">Release
+          Notes</a>
+      </li>
+      <li class="nav-item d-none d-md-inline">
+        <form method="get" action="/search/" id="navbar-search">
+          <!-- Search field's name must be search -->
+          <input type="search" name="search" placeholder="Search">
+        </form>
+      </li>
+      <!-- Responsive Toggle Button -->
+      <div class="d-flex d-md-none justify-content-between mb-5">
+        <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav"
+          aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+              d="M4 7h22M4 15h22M4 23h22" />
+          </svg>
+        </button>
+      </div>
+      <!-- End Responsive Toggle Button -->
+    </ul>
+  </nav>
+</header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+  <div class="collapse navbar-collapse" id="sidebar-nav">
+    <div class="js-scrollbar duik-sidebar-sticky">
+      <ul class="duik-sidebar__nav">
+                          <li class="duik-sidebar__item">
+            <a href="/documentation" class="duik-sidebar__link">Documentation</a>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Product Overview</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Edge-Cloud Console</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Account Management</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/account-management" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/account-management/accounts" class="duik-sidebar__link">Accounts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/account-management/organizations-and-users" class="duik-sidebar__link">Organizations and Users</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/edgebox-proof-of-concept-testing" class="duik-sidebar__link">EdgeBox: Proof of Concept Testing</a>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Resource Management and Workflow</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/resource-management-and-workflow" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/resource-management-and-workflow/direct-vs-restricted-access" class="duik-sidebar__link">Direct vs. Restricted Access</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Cloudlet Deployment Guides</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/cloudlet-deployment-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets" class="duik-sidebar__link">Deploying Cloudlets</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools" class="duik-sidebar__link">Cloudlet Pools</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/manage-gpu-drivers-for-cloudlets" class="duik-sidebar__link">Manage GPU Drivers for Cloudlets</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Debugging</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/debugging" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/health-check-and-alert" class="duik-sidebar__link">Health Check and Alerts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/operator-monitoring-and-metrics" class="duik-sidebar__link">Monitoring: Events, Usage, and Metrics</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/reports" class="duik-sidebar__link">Resource Management and Reporting</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/appendix-a-ports" class="duik-sidebar__link">Inbound and Outbound Ports</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Edge-Cloud Resource Manager Plugin</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: OpenStack</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-1-openstack" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-option" class="duik-sidebar__link">Openstack Tenant Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-options" class="duik-sidebar__link">OpenStack Tenant Deployment Options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: Vsphere</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment" class="duik-sidebar__link">vSphere Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment-options" class="duik-sidebar__link">VSphere Deployment options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: VMPool</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/vmpool-deployment" class="duik-sidebar__link">VMPool Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/scenario-deployment-model-2-mobiledgex-assisted-openstack-deployment-operator-provides-the-bare-metal-server" class="duik-sidebar__link">VMpool Deployment Options</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/vm-pool" class="duik-sidebar__link">VM Pool Installation on VMware vCD</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: VMware Cloud Director</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-3-vcd" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-3-vcd/vcd-deployment-operator-provides-a-tenant" class="duik-sidebar__link">VCD Deployment: Operator Provides a Tenant</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-3-vcd/vmware-vcloud-director-vcd-deployment" class="duik-sidebar__link">VMware vCloud Director (VCD) Deployment</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: Bare Metal OpenStack</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-deployment-for-baremetal-openstack" class="duik-sidebar__link">MobiledgeX Assisted Deployment for Bare Metal Openstack</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-openstack-deployment-options" class="duik-sidebar__link">MobiledgeX Assisted OpenStack Deployment Options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-6-baremetal-anthos" class="duik-sidebar__link">IaaS Type: Bare Metal Anthos</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/security-and-privacy-standards-policies" class="duik-sidebar__link">Security and Privacy Standards Policies</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Operational Readiness</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operational-readiness" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item active current">
+            <a href="/operational-readiness/operator-cloudlet-maintenance" class="duik-sidebar__link">Operator Cloudlet Maintenance</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Operator Specific MCCTL and REST APIs</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operator-specific-mcctl-and-rest-apis" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/mc/" class="duik-sidebar__link">Orchestration APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/api-token-access-and-permissions" class="duik-sidebar__link">API Key Access and Permissions</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">mcctl Utility Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/mcctl-installation-and-setup-guide" class="duik-sidebar__link">mcctl Installation and Setup Guide</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/intro-to-mcctl-metric-commands" class="duik-sidebar__link">Metric Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/cloudlet-commands" class="duik-sidebar__link">Cloudlet Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/reports-and-monitoring" class="duik-sidebar__link">Reports and Monitoring Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/audit-and-regional-commands" class="duik-sidebar__link">Regional Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/mapping-virtual-machines-to-iaas" class="duik-sidebar__link">Mapping Virtual Machines to IaaS</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-3-0" class="duik-sidebar__link">3.0</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-2-4-1" class="duik-sidebar__link">2.4.1</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-2-4" class="duik-sidebar__link">2.4</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/iaas-supported-features" class="duik-sidebar__link">Supported Features across IaaS</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/faqs-and-support" class="duik-sidebar__link">FAQs and Support</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/search" class="duik-sidebar__link">Search</a>
+          </li>
+                
+      </ul>
+      <hr class="d-block d-md-none">
+      <ul class="duik-sidebar__nav d-block d-md-none">
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com" class="duik-sidebar__link">MobiledgeX Home</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/product" class="duik-sidebar__link">Product</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/use-cases" class="duik-sidebar__link">Use Cases</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/about" class="duik-sidebar__link">About</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/blog" class="duik-sidebar__link">Blog</a></li>
+        <li class="duik-sidebar__item"><a href="https://developers.mobiledgex.com" class="duik-sidebar__link">Developers</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('li.subs.depth-3 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-3').removeClass('active');
+        } else {
+          $('li.subs.depth-3').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-2 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-2').removeClass('active');
+        } else {
+          $('li.subs.depth-2').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-1 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-1').removeClass('active');
+        } else {
+          $('li.subs.depth-1').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      })
+    });
+</script>
+
+
+                  <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+        <div class="row pt-3">
+          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block toc"></div>          <div class="col-xl-10 order-xl-1 duik-content border-bottom">
+            <div class="mb-7">
+              
+
+<div class="markdown-body">
+  <h1>Operator Cloudlet Maintenance</h1>
+
+            <p>Operators can enable Maintenance Mode for their cloudlets via the <a href="https://console.mobiledgex.net/#/">MobiledgeX Console</a> to handle multiple operator scenarios such as data centers, power maintenance, and underlying IaaS platform or hardware upgrade activities. </p><p>The cloudlet maintenance option enables planned downtimes of cloudlets or any of the underlying components like IaaS, servers, switches or network configurations easily without affecting developer app deployments since no new app creations or operations are permitted during the maintenance window. </p><p>Please note that cloudlets should be in the maintenance state before the actual start of the operator maintenance window since this state change involve message exchanges between MobiledgeX Centralized Controller, MobiledgeX auto provisioning service and the cloudlet manager. Furthermore, Cloudlet Maintenance state can only be updated by users with either the <strong>MobiledgeXAdmin</strong> or <strong>operator </strong>role.</p><h2 id='to-enable-maintenance-mode-for-cloudlet'><a class='anchor' aria-hidden='true' href='#to-enable-maintenance-mode-for-cloudlet'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>To Enable Maintenance Mode for Cloudlet:</strong></h2><p><strong>Step 1</strong>: From the <a href="https://console.mobiledgex.net/#/"><strong>Edge-Cloud Console</strong></a>, select <strong>Cloudlets </strong>on the left navigation.</p><p><strong>Step 2</strong>: Click on <strong>Actions</strong> tab of the Operator Cloudlet you plan to set the maintenance state and select the <strong>Update </strong>cloudlet option.</p>
+                      <figure class="center-half">
+        <img src="/assets/updatecloudlet.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                <p></p><p><strong>Step 3</strong>: Under <strong>Advanced Settings </strong>section of<strong> </strong>Update Cloudlet, select the <strong>Maintenance Start </strong>option for the <strong>Maintenance State</strong> field (<strong>No failover</strong> option can be selected if Cloudlet AutoProvisioning failover to a different cloudlet of the same Operator is not planned for redundancy).</p>
+                      <figure class="">
+        <img src="/assets/operational-readiness/2.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                <p><strong>Step 4</strong>: Select the <strong>Update </strong>tab which will automatically put Cloudlet in maintenance state.</p>
+                      <figure class="">
+        <img src="/assets/operational-readiness/3.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                      <figure class="center-half">
+        <img src="/assets/maintenance.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                <h2 id='to-restore-normal-operation-of-cloudlet-from-maintenance-mode'><a class='anchor' aria-hidden='true' href='#to-restore-normal-operation-of-cloudlet-from-maintenance-mode'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>To Restore Normal Operation of Cloudlet from Maintenance Mode:</strong></h2><p><strong>Step 1</strong>: From the <a href="https://console.mobiledgex.net/#/"><strong>Edge-Cloud Console</strong></a>, select <strong>Cloudlets </strong>on the left navigation.</p><p><strong>Step 2</strong>: Select the <strong>Actions</strong> tab of the Operator Cloudlet which is already in the maintenance state and select the <strong>Update </strong>Cloudlet option.</p>
+                      <figure class="center-half">
+        <img src="/assets/actionsupdate.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                <p><strong>Step 3</strong>: In <strong>Advanced Settings </strong>section of<strong> Update Cloudlet, </strong>select the <strong>Normal Operation </strong>option for <strong>Maintenance State</strong> field.</p>
+                      <figure class="">
+        <img src="/assets/operational-readiness/5.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                <p></p><p><strong>Step 4</strong>: Select the <strong>Update</strong> tab which will automatically put the Cloudlet back to normal operation and will be available online from the maintenance state.</p>
+                      <figure class="">
+        <img src="/assets/operational-readiness/6.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                      <figure class="center-half">
+        <img src="/assets/updatedcloudlet-1635786864.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+      
+</div>
+
+              <link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".slb").simplebox()
+  });
+</script>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <div class="text-center"><p>© 2022  MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="https://www.mobiledgex.com/privacy-policy">Privacy Policy</a> | <a href="https://www.mobiledgex.com/terms-of-use">Terms of Use</a> | <a href="https://www.mobiledgex.com/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+            
+    </div>
+  </div>
+
+  
+
+    <script type="text/javascript">
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.duik-content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h2, h3',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: false,
+      listItemClass: 'duik-content-nav__item',
+      orderedList: false,
+      listClass: 'js-scroll-nav duik-content-nav',
+      collapseDepth: 6,
+      activeLinkClass: 'active',
+    });
+  </script>
+  </body>
+
+</html>

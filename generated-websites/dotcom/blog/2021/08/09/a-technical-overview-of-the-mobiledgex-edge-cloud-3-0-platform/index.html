@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Technical Overview of the MobiledgeX Edge-Cloud 3.0 Platform | MobiledgeX</title>
+<meta name="description" content="A technical overview of the most important new features of the MobiledgeX Edge-Cloud 3.0 platfiorm update." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="A Technical Overview of the MobiledgeX Edge-Cloud 3.0 Platform&nbsp;" />
+<meta property="og:description" content="A technical overview of the most important new features of the MobiledgeX Edge-Cloud 3.0 platfiorm update." />
+<meta property="og:url" content="http://mexv3.test/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="A Technical Overview of the MobiledgeX Edge-Cloud 3.0 Platform&nbsp;" />
+<meta name="twitter:description" content="A technical overview of the most important new features of the MobiledgeX Edge-Cloud 3.0 platfiorm update." />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/mobiledgex-2020.jpg/4f8bdef8246172bfdd43dad10a0754f8.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/mobiledgex-2020.jpg/4f8bdef8246172bfdd43dad10a0754f8.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform" rel="canonical" />
+<link href="http://mexv3.test/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform?page=12" rel="prev" />
+<link href="http://mexv3.test/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform?page=14" rel="next" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform-content">
+      <div class="row">
+        <div class="col">
+  <h1>A Technical Overview of the MobiledgeX Edge-Cloud 3.0 Platform </h1>
+  <p class="datestamp">August 9th, 2021</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/mobiledgex-2020.jpg" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/wonho-headshot-2021-2.jpg" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/wonho-park">Wonho Park</a></p>
+            <p class="job-title">Chief Product Officer & SVP Product Development</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2021/11/04/dt-nvidia-cloudxr">Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</a></li>
+                        <li><a href="/blog/2021/08/25/mobiledgex-edge-cloud-3-0-improved-visibility-and-operational-management-of-cloudlets-for-operators">MobiledgeX Edge-Cloud 3.0: Improved Visibility and Operational Management of Cloudlets for Operators</a></li>
+                        <li><a href="/blog/2021/08/17/mobiledgex-edge-cloud-3-0-optimal-edge-connectivity-with-edgeevents">MobiledgeX Edge-Cloud 3.0: Optimal Edge Connectivity with EdgeEvents</a></li>
+                        <li><a href="/blog/2021/05/04/how-mobiledgex-helps-telecom-operators-manage-private-and-trusted-cloudlets-for-their-enterprise-customers">How MobiledgeX Helps Telecom Operators Manage Private and Trusted Cloudlets for their Enterprise Customers</a></li>
+                        <li><a href="/blog/2021/04/29/mobiledgex-edge-cloud-with-google-cloud-s-anthos-a-powerful-platform-for-5g-cdn-and-privacy-centric-ai-applications">MobiledgeX Edge-Cloud with Google Cloud’s Anthos: A Powerful Platform for 5G, CDN, and Privacy-Centric AI Applications</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/technical">See more articles from the Technical category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/wonho-headshot-2021-2.jpg" class="img-fluid headshot" alt="Headshot for Wonho Park" />
+        <div class="info">
+          <p class="name">Wonho Park</p>
+          <p class="job-title">Chief Product Officer & SVP Product Development</p>
+        </div>
+      </div>
+      
+                  <p>On behalf of the MobiledgeX team, I’m excited to announce the release of MobiledgeX Edge-Cloud 3.0, which delivers numerous new features designed to enhance the experience and capabilities of our operator and developer user communities. MobiledgeX Edge-Cloud 3.0 is a huge release and a testament to our commitment to product development and our promise to continue delivering features that will benefit and satisfy our customers. </p><p>The MobiledgeX Edge-Cloud 3.0 platform brings a host of new capabilities for mobile network operators (MNOs) and application developers seeking to take advantage of the telco edge. For operators, this latest update brings more choice and control to MNOs looking to choose the best approach for their business to engage with public cloud providers. For developers, our enhanced Distributed Matching Engine (DME) architecture provides improved edge connectivity and many other benefits.</p><p>Collectively, it is the leading software product, implementing GSMA TEC specifications, that is solely focused on enabling MNOs to deliver on their promise of edge cloud.</p><p>I’d like to discuss these improvements in a bit more detail, starting first with the technical benefits our MobiledgeX Edge-Cloud 3.0 platform brings to developers.</p><h3 id='improved-edge-connectivity-for-developers'><a class='anchor' aria-hidden='true' href='#improved-edge-connectivity-for-developers'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>Improved Edge Connectivity for Developers</strong></h3><p>Our enhanced DME Architecture introduced in MobiledgeX Edge-Cloud 3.0 goes far beyond just routing end-users to the closest cloudlet location by providing a wealth of critical data -- such as latency and device information --  to help developers select  the most optimum cloudlet to provide  the best end-user experience at any given time. Leveraging persistent connections through server-side DME events (<em>aka EdgeEvents</em>), we can collect and examine data such as latency measurements, mobility tracking, and other valuable information to quickly respond and help developers optimize their application deployment (<em>aka Smart Edge Discovery</em>). We removed the need for developers to self-manage our platform for much of the application deployment process. MobiledgeX takes on all the heavy lifting for our customers, allowing developers to focus on providing the best application experience for their users (<em>aka Smart Edge Allocation</em>). Additionally, developers are in complete control using our robust SDKs to determine how often they wish to be notified about their application instances. This freedom of control allows developers to optimize their edge-to-cloudlet connectivity based on location awareness and their desire to enhance performance and elevate the end-user experience.</p>
+                         <figure class="full">
+        <img src="/assets/blog/MobiledgeX-Edge-Cloud-3.0a.jpg" class="img-fluid slb" alt="" />
+        <figcaption>Figure 1: A dashboard providing performance insights to clients connected to edge infrastructure.</figcaption>
+      </figure>
+      
+                   <h3 id='improved-visibility-and-operational-management-of-cloudlets-for-operators'><a class='anchor' aria-hidden='true' href='#improved-visibility-and-operational-management-of-cloudlets-for-operators'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>Improved Visibility and Operational Management of Cloudlets for Operators</strong></h3><p>We’ve made significant changes providing operators more control and visibility over their cloudlets. Operators may now leverage our controller as their resource manager rather than rely only on their IaaS layer to determine resource availability. Using the controller to manage resources, operators can directly retrieve cloudlet usage information through generated reports detailing the usage.  The controller also assists operators with validating their cloudlet resources, receiving notifications when their cloudlet and infrastructure exceed a defined usage threshold and providing notification controls for events, such as auto-provisioning, cluster services, and more. In addition, our <em>Edge-Cloud Private Edge</em> provides operators the ability to  view developer-specific information about usage, logs, and metrics. With the MobiledgeX EdgeCloud 3.0 feature set operators can now utilize their own telco network edge infrastructure to create, run, and monetize edge clouds.</p>
+                         <figure class="full">
+        <img src="/assets/blog/MobiledgeX-Edge-Cloud-3.0b.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 2: Cloudlet Monitoring: Events, Usage, and Metrics</figcaption>
+      </figure>
+      
+                   <h3 id='mobiledgex-edge-cloud-30-feature-highlights'><a class='anchor' aria-hidden='true' href='#mobiledgex-edge-cloud-30-feature-highlights'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>MobiledgeX Edge-Cloud 3.0 Feature Highlights</strong></h3><p>Below is a list of several of the highlighted features included in Edge-Cloud 3.0. Refer to the <a href="https://operators.mobiledgex.com/release-notes/edge-cloud-console-release-notes-3-0">Operators Release Notes</a> and <a href="https://developers.mobiledgex.com/release-notes/console/release-notes-3-0">Developers Release Notes</a> for a complete list of all supported features.</p><p> </p><table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Highlights of 3.0</strong></p></td><td colspan="1" rowspan="1"><p><strong>Key Benefits</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/reports/"><strong>Resource Management</strong></a></p></td><td colspan="1" rowspan="1"><p>Operators no longer need to rely exclusively on their hardware for resource availability and are able to leverage resource management capabilities directly within the Controller.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/reports/#report-scheduler"><strong>Operator reports and scheduler</strong></a></p></td><td colspan="1" rowspan="1"><p>Generate a summary of usage reports detailing the status of cloudlets</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools/#to-create-a-cloudlet-pool"><strong>Invite Developers to join the cloudlet pool</strong></a></p></td><td colspan="1" rowspan="1"><p>Operators can now be alerted when quota limits are reached and view developer metrics and logs.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/#viewing-developer-metrics"><strong>Monitor developer metrics and usage info</strong></a></p></td><td colspan="1" rowspan="1"><p>View developer-specific information about usage, logs, number of devices connected.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets/#what-is-trust-policy"><strong>Trust Policy</strong></a></p></td><td colspan="1" rowspan="1"><p>Turn public cloudlets into private cloudlets, and segment edge infrastructure.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/reports/#using-kafka-to-push-cloudlet-events"><strong>Stream cloudlet events through Kafka</strong></a></p></td><td colspan="1" rowspan="1"><p>View and filter real-time events by either operator or developer and stream the events to a Kafka cluster.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/health-check-and-alert/#supported-alerts-"><strong>Supported alerts</strong></a></p></td><td colspan="1" rowspan="1"><p>Receive alerts when cloudlets are down, or resources limitations have exceeded.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://developers.mobiledgex.com/design/testing-and-debugging/alarms#alert-policy"><strong>Alert Policy</strong></a></p></td><td colspan="1" rowspan="1"><p>Set up alert policies to further monitor applications and be alerted when applications violate those policies. </p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/health-check-and-alert/#severity-levels"><strong>Alert severity</strong></a></p></td><td colspan="1" rowspan="1"><p>Classify alerts based on severity levels.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#cloudlet-resource-usage-metrics"><strong>Cloudlet alerts</strong></a></p></td><td colspan="1" rowspan="1"><p>Generate alerts for cloudlet and cloudlet usage when resource limitations exceed thresholds.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#client-cloudlet-usage-metrics"><strong>Cloudlet metrics</strong></a></p></td><td colspan="1" rowspan="1"><p>Receive and collect client cloud metrics and usages.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/operator-monitoring-and-metrics"><strong>Monitor events, usage, and metrics</strong></a></p></td><td colspan="1" rowspan="1"><p>New search capabilities and additional events are added, including other filters and tag options to refine searches. Usage logs help you understand the application activity occurring with cloudlets.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://operators.mobiledgex.com/product-overview/cloudlet-onboarding/edgebox-proof-of-concept-testing"><strong>EdgeBox</strong></a></p></td><td colspan="1" rowspan="1"><p>Enable members of organizations to onboard cloudlets, run and deploy edge applications, and test locally.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://developers.mobiledgex.com/deployments/deployment-workflow/cloudlet-pools"><strong>Developers can become members of cloudlet pools</strong></a></p></td><td colspan="1" rowspan="1"><p>Once invited, developer organizations can deploy cluster and application instances to cloudlets.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://developers.mobiledgex.com/deployments/monitoring-and-metrics/monitoring-edge-events"><strong>Monitor of client edge events</strong></a></p></td><td colspan="1" rowspan="1"><p>View statistical aggregated data of client applications, including latency statistics, and filter them by data types.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://developers.mobiledgex.com/design/testing-and-debugging/health-check"><strong>Health Checks</strong></a></p></td><td colspan="1" rowspan="1"><p>View extended health checks on VMs.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://developers.mobiledgex.com/deployments/application-deployment-guides/gpu/"><strong>Support for K8S cluster on GPU resource</strong></a></p></td><td colspan="1" rowspan="1"><p>Deploy a GPU-config for K8s-based application</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://developers.mobiledgex.com/deployments/application-deployment-guides/virtual-machine/windows"><strong>Support for Windows VM deployment</strong></a></p></td><td colspan="1" rowspan="1"><p>OpenStack has worked with Microsoft to provide a ready-to-use qcow2 formatted image that can be deployed directly to MobiledgeX.</p></td></tr><tr><td colspan="1" rowspan="1"><p><a href="https://developers.mobiledgex.com/deployments/application-runtime/autoscale#auto-scale-policy--"><strong>Extended support for active connections</strong></a></p></td><td colspan="1" rowspan="1"><p>In addition to CPU, the auto-scale policy can also be based on the number of active connections and memory utilization to allow for scaling based on these multiple metrics.</p></td></tr></tbody></table><p>We’re excited to share more technical details about our 3.0 release, so we’ll be starting a series of technical blog posts -- starting next week -- that will provide additional information on what 3.0 has to offer. </p><p>You can also reach out to our <a href="https://mobiledgex.com/about/contact">operator business development team</a> or our <a href="https://developers.mobiledgex.com/getting-started">developer relations team</a> for more information on this release from an operator or developer perspective, respectively. You can also try our <a href="https://operators.mobiledgex.com/product-overview/cloudlet-onboarding/edgebox-proof-of-concept-testing">MobiledgeX EdgeBox demo</a> for a free trial so you can see first-hand what the MobiledgeX Edge-Cloud platform has to offer.</p>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform&title=A+Technical+Overview+of+the+MobiledgeX+Edge-Cloud+3.0+Platform%C2%A0"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=A+Technical+Overview+of+the+MobiledgeX+Edge-Cloud+3.0+Platform%C2%A0&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

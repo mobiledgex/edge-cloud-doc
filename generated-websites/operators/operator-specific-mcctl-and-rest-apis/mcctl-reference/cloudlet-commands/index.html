@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta name="robots" content="noindex,nofollow">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloudlet Commands | MobiledgeX Operators</title>
+<meta name="description" content="Use cloudlet metric commands using mcctl utility" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Cloudlet Commands" />
+<meta property="og:description" content="Use cloudlet metric commands using mcctl utility" />
+<meta property="og:url" content="http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/cloudlet-commands" />
+<meta property="og:site_name" content="MobiledgeX Operators" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mobiledgex" />
+<meta name="twitter:title" content="Cloudlet Commands" />
+<meta name="twitter:description" content="Use cloudlet metric commands using mcctl utility" />
+<meta property="og:image" content="http://operator-portal.test/img/containers/assets/operators-social.jpg/5c20751e252519234312d7cbdaeb6738.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://operator-portal.test/img/containers/assets/operators-social.jpg/5c20751e252519234312d7cbdaeb6738.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://operator-portal.test/" rel="home" />
+<link href="http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/cloudlet-commands" rel="canonical" />
+<link type="text/plain" rel="author" href="http://operator-portal.test/humans.txt" />
+  <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=1641595153">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      hljs.highlightAll()
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+
+<body
+  class="bg-white default">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2V3KZZ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="duik-header">
+  <nav class="properties navbar fixed-top d-none d-md-flex">
+    <ul>
+      <li><a href="https://mobiledgex.com">MobiledgeX Home</a></li>
+      <li><a href="https://mobiledgex.com/product">Product</a></li>
+      <li><a href="https://mobiledgex.com/use-cases">Use Cases</a></li>
+      <li><a href="https://mobiledgex.com/about">About</a></li>
+      <li><a href="https://mobiledgex.com/blog">Blog</a></li>
+      <li><a href="https://developers.mobiledgex.com">Developers</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-dark fixed-top bg-terrain flex-nowrap p-0 main-nav">
+    <a class="navbar-brand col-md-3 col-xl-2 mr-0 py-3" href="/"><img
+        src="/img/logo-white.svg?v=1592862229" alt="MobiledgeX Developers"></a>
+
+    <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/product-overview">Product Overview</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/supported-iaas-stacks">Successful Use Cases</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0"
+          href="/operational-readiness">Operational Readiness</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0"
+          href="/product-overview/security-and-privacy-standards-policies">Security and Privacy Policies</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0 active"
+          href="/operator-specific-mcctl-and-rest-apis">APIs</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0" href="/release-notes">Release
+          Notes</a>
+      </li>
+      <li class="nav-item d-none d-md-inline">
+        <form method="get" action="/search/" id="navbar-search">
+          <!-- Search field's name must be search -->
+          <input type="search" name="search" placeholder="Search">
+        </form>
+      </li>
+      <!-- Responsive Toggle Button -->
+      <div class="d-flex d-md-none justify-content-between mb-5">
+        <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav"
+          aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+              d="M4 7h22M4 15h22M4 23h22" />
+          </svg>
+        </button>
+      </div>
+      <!-- End Responsive Toggle Button -->
+    </ul>
+  </nav>
+</header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+  <div class="collapse navbar-collapse" id="sidebar-nav">
+    <div class="js-scrollbar duik-sidebar-sticky">
+      <ul class="duik-sidebar__nav">
+                          <li class="duik-sidebar__item">
+            <a href="/documentation" class="duik-sidebar__link">Documentation</a>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Product Overview</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Edge-Cloud Console</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Account Management</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/account-management" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/account-management/accounts" class="duik-sidebar__link">Accounts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/account-management/organizations-and-users" class="duik-sidebar__link">Organizations and Users</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/edgebox-proof-of-concept-testing" class="duik-sidebar__link">EdgeBox: Proof of Concept Testing</a>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Resource Management and Workflow</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/resource-management-and-workflow" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/resource-management-and-workflow/direct-vs-restricted-access" class="duik-sidebar__link">Direct vs. Restricted Access</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Cloudlet Deployment Guides</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/cloudlet-deployment-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets" class="duik-sidebar__link">Deploying Cloudlets</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools" class="duik-sidebar__link">Cloudlet Pools</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/manage-gpu-drivers-for-cloudlets" class="duik-sidebar__link">Manage GPU Drivers for Cloudlets</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Debugging</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/debugging" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/health-check-and-alert" class="duik-sidebar__link">Health Check and Alerts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/operator-monitoring-and-metrics" class="duik-sidebar__link">Monitoring: Events, Usage, and Metrics</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/reports" class="duik-sidebar__link">Resource Management and Reporting</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/appendix-a-ports" class="duik-sidebar__link">Inbound and Outbound Ports</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Edge-Cloud Resource Manager Plugin</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: OpenStack</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-1-openstack" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-option" class="duik-sidebar__link">Openstack Tenant Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-options" class="duik-sidebar__link">OpenStack Tenant Deployment Options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: Vsphere</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment" class="duik-sidebar__link">vSphere Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment-options" class="duik-sidebar__link">VSphere Deployment options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: VMPool</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/vmpool-deployment" class="duik-sidebar__link">VMPool Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/scenario-deployment-model-2-mobiledgex-assisted-openstack-deployment-operator-provides-the-bare-metal-server" class="duik-sidebar__link">VMpool Deployment Options</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/vm-pool" class="duik-sidebar__link">VM Pool Installation on VMware vCD</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: VMware Cloud Director</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-3-vcd" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-3-vcd/vcd-deployment-operator-provides-a-tenant" class="duik-sidebar__link">VCD Deployment: Operator Provides a Tenant</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-3-vcd/vmware-vcloud-director-vcd-deployment" class="duik-sidebar__link">VMware vCloud Director (VCD) Deployment</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: Bare Metal OpenStack</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-deployment-for-baremetal-openstack" class="duik-sidebar__link">MobiledgeX Assisted Deployment for Bare Metal Openstack</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-openstack-deployment-options" class="duik-sidebar__link">MobiledgeX Assisted OpenStack Deployment Options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-6-baremetal-anthos" class="duik-sidebar__link">IaaS Type: Bare Metal Anthos</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/security-and-privacy-standards-policies" class="duik-sidebar__link">Security and Privacy Standards Policies</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Operational Readiness</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operational-readiness" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operational-readiness/operator-cloudlet-maintenance" class="duik-sidebar__link">Operator Cloudlet Maintenance</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Operator Specific MCCTL and REST APIs</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operator-specific-mcctl-and-rest-apis" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/mc/" class="duik-sidebar__link">Orchestration APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/api-token-access-and-permissions" class="duik-sidebar__link">API Key Access and Permissions</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item active">
+            <a class="duik-sidebar__link">mcctl Utility Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/mcctl-installation-and-setup-guide" class="duik-sidebar__link">mcctl Installation and Setup Guide</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/intro-to-mcctl-metric-commands" class="duik-sidebar__link">Metric Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item active current">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/cloudlet-commands" class="duik-sidebar__link">Cloudlet Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/reports-and-monitoring" class="duik-sidebar__link">Reports and Monitoring Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/audit-and-regional-commands" class="duik-sidebar__link">Regional Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/mapping-virtual-machines-to-iaas" class="duik-sidebar__link">Mapping Virtual Machines to IaaS</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-3-0" class="duik-sidebar__link">3.0</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-2-4-1" class="duik-sidebar__link">2.4.1</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-2-4" class="duik-sidebar__link">2.4</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/iaas-supported-features" class="duik-sidebar__link">Supported Features across IaaS</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/faqs-and-support" class="duik-sidebar__link">FAQs and Support</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/search" class="duik-sidebar__link">Search</a>
+          </li>
+                
+      </ul>
+      <hr class="d-block d-md-none">
+      <ul class="duik-sidebar__nav d-block d-md-none">
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com" class="duik-sidebar__link">MobiledgeX Home</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/product" class="duik-sidebar__link">Product</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/use-cases" class="duik-sidebar__link">Use Cases</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/about" class="duik-sidebar__link">About</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/blog" class="duik-sidebar__link">Blog</a></li>
+        <li class="duik-sidebar__item"><a href="https://developers.mobiledgex.com" class="duik-sidebar__link">Developers</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('li.subs.depth-3 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-3').removeClass('active');
+        } else {
+          $('li.subs.depth-3').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-2 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-2').removeClass('active');
+        } else {
+          $('li.subs.depth-2').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-1 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-1').removeClass('active');
+        } else {
+          $('li.subs.depth-1').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      })
+    });
+</script>
+
+
+                  <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+        <div class="row pt-3">
+          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block toc"></div>          <div class="col-xl-10 order-xl-1 duik-content border-bottom">
+            <div class="mb-7">
+              
+
+<div class="markdown-body">
+  <h1>Cloudlet Commands</h1>
+
+            <h2 id='cloudlet-metrics'><a class='anchor' aria-hidden='true' href='#cloudlet-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>Cloudlet Metrics</strong></h2><pre><code>$ mcctl metrics cloudlet
+
+Required Args:
+  region                   Region name
+  selector                 Comma separated list of metrics to view. Available metrics: &quot;network&quot;, &quot;utilization&quot;, &quot;ipusage&quot;
+
+Optional Args:
+  limit                    Display the last X metrics
+  numsamples               Display X samples spaced out evenly over start and end times
+  starttime                Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime                  Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage                 Relative age from now of search range start (default 48h)
+  endage                   Relative age from now of search range end (default 0)
+  cloudlet                 Name of the cloudlet(Deprecated)
+  cloudlets:#.cloudletorg  Company or Organization name of the cloudlet
+  cloudlets:#.cloudlet     Name of the cloudlet</code></pre><h3 id='data-keys'><a class='anchor' aria-hidden='true' href='#data-keys'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Data keys</h3><ul><li><p><code>time</code></p></li><li><p><code>cloudlet</code></p></li><li><p><code>cloudletorg</code></p></li><li><p><code>vCpuUsed</code></p></li><li><p><code>vCpuMax</code></p></li><li><p><code>memUsed</code></p></li><li><p><code>memMax</code></p></li><li><p><code>diskUsed</code></p></li><li><p><code>diskMax</code></p></li><li><p><code>netSend</code></p></li><li><p><code>netRecv</code></p></li><li><p><code>floatingIpsUsed</code></p></li><li><p><code>floatingIpsMax</code></p></li><li><p><code>ipv4Used</code></p></li><li><p><code>ipv4Max</code></p></li></ul><h3 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example</h3><pre><code>$ mcctl region=EU cloudlet-org=TDG selector=utilization,network,ipusage last=1
+{
+  &quot;data&quot;: [
+    {
+      &quot;Series&quot;: [
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;vCpuUsed&quot;,
+            &quot;vCpuMax&quot;,
+            &quot;memUsed&quot;,
+            &quot;memMax&quot;,
+            &quot;diskUsed&quot;,
+            &quot;diskMax&quot;,
+            &quot;netSend&quot;,
+            &quot;netRecv&quot;,
+            &quot;floatingIpsUsed&quot;,
+            &quot;floatingIpsMax&quot;,
+            &quot;ipv4Used&quot;,
+            &quot;ipv4Max&quot;
+          ],
+          &quot;name&quot;: &quot;cloudlet-utilization&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:38:00.458128973Z&quot;,
+              &quot;munich-main&quot;,
+              &quot;TDG&quot;,
+              188,
+              200,
+              350208,
+              512000,
+              920,
+              5000,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;vCpuUsed&quot;,
+            &quot;vCpuMax&quot;,
+            &quot;memUsed&quot;,
+            &quot;memMax&quot;,
+            &quot;diskUsed&quot;,
+            &quot;diskMax&quot;,
+            &quot;netSend&quot;,
+            &quot;netRecv&quot;,
+            &quot;floatingIpsUsed&quot;,
+            &quot;floatingIpsMax&quot;,
+            &quot;ipv4Used&quot;,
+            &quot;ipv4Max&quot;
+          ],
+          &quot;name&quot;: &quot;cloudlet-network&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T01:52:29.244553765Z&quot;,
+              &quot;berlin-main&quot;,
+              &quot;TDG&quot;,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              0,
+              null,
+              null,
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;vCpuUsed&quot;,
+            &quot;vCpuMax&quot;,
+            &quot;memUsed&quot;,
+            &quot;memMax&quot;,
+            &quot;diskUsed&quot;,
+            &quot;diskMax&quot;,
+            &quot;netSend&quot;,
+            &quot;netRecv&quot;,
+            &quot;floatingIpsUsed&quot;,
+            &quot;floatingIpsMax&quot;,
+            &quot;ipv4Used&quot;,
+            &quot;ipv4Max&quot;
+          ],
+          &quot;name&quot;: &quot;cloudlet-ipusage&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:38:08.425162762Z&quot;,
+              &quot;munich-main&quot;,
+              &quot;TDG&quot;,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              0,
+              10,
+              33,
+              1004
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre><h3 id='utilization-example'><a class='anchor' aria-hidden='true' href='#utilization-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Utilization example</h3><p>Cloudlet utilization information.</p><pre><code>$ mcctl metrics cloudlet region=US cloudlet-org=packet selector=utilization cloudlet=packetcloudlet last=1
+data:
+- series:
+  - columns:
+    - time
+    - cloudlet
+    - cloudletorg
+    - vCpuUsed
+    - vCpuMax
+    - memUsed
+    - memMax
+    - diskUsed
+    - diskMax
+    name: cloudlet-utilization
+    values:
+    - - &quot;2021-07-10T05:58:03.842430299Z&quot;
+      - packetcloudlet
+      - packet
+      - 24
+      - 768
+      - 49152
+      - 97818
+      - 0
+      - 1000</code></pre><p></p><p><code>diskMax</code> Maximum available Disk size in GBs</p><p><code>diskUsed</code> Disk used at a timestamp in GBs</p><p><code>memMax</code> Maximum memory on this cloudlet in MBs</p><p><code>memUsed</code> Memory used at timestamp in MBs</p><p><code>vCpuMax</code> Maximum available number of vCPUs on this cloudlet</p><p><code>vCpuUsed</code> Number vCPUs on this cloudlet at timestamp</p><h3 id='network-example'><a class='anchor' aria-hidden='true' href='#network-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Network example</h3><p>The total number of data sent and received in the Cloudlet in bytes. This is currently not supported on OpenStack.</p><pre><code>$ mcctl metrics cloudlet region=US cloudlet-org=packet selector=network cloudlet=packetcloudlet last=1
+
+data:
+- series:
+  - columns:
+    - time
+    - cloudlet
+    - cloudletorg
+    - netSend
+    - netRecv
+    name: cloudlet-network
+    values:
+    - - &quot;2021-07-10T05:58:03.842430299Z&quot;
+      - packetcloudlet
+      - packet
+      - null
+      - 0</code></pre><h3 id='ipusage-example'><a class='anchor' aria-hidden='true' href='#ipusage-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>IPUsage example</h3><p>Cloudlet utilization information.</p><pre><code>$ mcctl metrics cloudlet region=US cloudlet-org=packet selector=ipusage cloudlet=packetcloudlet last=1
+data:
+- series:
+  - columns:
+    - time
+    - cloudlet
+    - cloudletorg
+    - floatingIpsUsed
+    - floatingIpsMax
+    - ipv4Used
+    - ipv4Max
+    name: cloudlet-ipusage
+    values:
+    - - &quot;2021-07-10T05:58:03.842430299Z&quot;
+      - packetcloudlet
+      - packet
+      - 0
+      - 10
+      - 4
+      - 12</code></pre><p></p><ul><li><p><code>floatingIpsMax</code>: Max available number of floating IP addresses</p></li><li><p><code>floatingIpsUsad</code>: Number floating IP addresses on this cloudlet at timestamp</p></li><li><p><code>ipv4Max</code>: Max available number of external IPv4 addresses</p></li><li><p><code>ipv4Used</code>: Number external IPv4 addresses on this cloudlet at timestamp</p></li></ul><h2 id='client-cloudlet-usage-metrics'><a class='anchor' aria-hidden='true' href='#client-cloudlet-usage-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Client Cloudlet Usage Metrics</h2><p>This command is used to collect latency and device information metrics for application instances deployed on cloudlets.</p><pre><code>$ mcctl metrics clientcloudletusage region=US  -h
+View client Cloudlet usage
+
+Usage: mcctl metrics clientcloudletusage [flags] [args]
+
+Required Args:
+  region           Region name
+  cloudlet-org     Company or Organization name of the cloudlet
+  selector         Comma separated list of metrics to view. Available metrics: &quot;latency&quot;, &quot;deviceinfo&quot;
+
+Optional Args:
+  cloudlet         Name of the cloudlet
+  locationtile     Location tile. Provides the range of GPS coordinates for the location tile/square. Format is: &quot;LocationUnderLongitude,LocationUnderLatitude_LocationOverLongitude,LocationOverLatitude_LocationTileLength&quot;. LocationUnder are the GPS coordinates of the corner closest to (0,0) of the location tile. LocationOver are the GPS coordinates of the corner farthest from (0,0) of the location tile. LocationTileLength is the length (in kilometers) of one side of the location tile square. Can be used for selectors: latency, deviceinfo.
+  deviceos         Device operating system. Can be used for selectors: deviceinfo.
+  devicemodel      Device model. Can be used for selectors: deviceinfo.
+  devicecarrier    Device carrier. Can be used for selectors: latency, deviceinfo.
+  datanetworktype  Data network type used by client device. Can be used for selectors: latency.
+  limit            Display the last X metrics
+  numsamples       Display X samples spaced out evenly over start and end times
+  starttime        Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime          Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage         Relative age from now of search range start (default 48h)
+  endage           Relative age from now of search range end (default 0)
+
+Flags:
+  -h, --help   help for clientcloudletusage</code></pre><h3 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example</h3><pre><code>$ mcctl metrics clientcloudletusage region=US  selector=deviceinfo cloudlet-org=tmus limit=1
+data:
+- series:
+  - columns:
+    - time
+    - numsessions
+    name: device-metric
+    tags:
+      cloudlet: tmocloud-2
+      cloudletorg: tmus
+      devicecarrier: tmus
+      devicemodel: Samsung S20
+      deviceos: Android
+      locationtile: -90.998922,30.993940_-91.007905,31.002985_1
+    values:
+    - - &quot;2021-07-13T19:08:10.100138782Z&quot;
+      - 1</code></pre><h2 id='cloudlet-resource-usage-metrics'><a class='anchor' aria-hidden='true' href='#cloudlet-resource-usage-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Cloudlet Resource Usage Metrics</h2><pre><code>metrics cloudletusage -h
+View Cloudlet usage
+
+Usage: mcctl metrics cloudletusage [flags] [args]
+
+Required Args:region
+Region        name
+cloudlet-org  Company or Organization name of the cloudlet
+selector      Comma separated list of metrics to view. Available metrics: &quot;resourceusage&quot;, &quot;flavorusage&quot;
+
+Optional Args:
+cloudlet      Name of the cloudlet
+last          Display the last X metrics
+starttime     Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+endtime       Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+
+Flags:
+  -h, --help   help for cloudlet resource usage</code></pre><p></p><h3 id='example-resource-usage'><a class='anchor' aria-hidden='true' href='#example-resource-usage'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example: Resource usage</h3><pre><code>metrics cloudletusage region=EU cloudlet-org=TDG selector=resourceusage cloudlet=automationMunichCloudlet last=2
+data:
+series:
+columns:
+time
+cloudlet
+cloudletorg
+externalIpsUsed
+floatingIpsUsed
+gpusUsed
+instancesUsed
+ramUsed
+vcpusUsed
+ name: openstack-resource-usage
+ values:
+- &quot;2021-07-16T05:41:47.187017795Z&quot;
+automationMunichCloudlet
+TDG
+2
+0
+0
+2
+8192
+4
+- &quot;2021-07-16T05:16:38.376372537Z&quot;
+automationMunichCloudlet
+TDG
+2
+0
+1
+4
+14336
+8</code></pre><h3 id='example-flavor-usage'><a class='anchor' aria-hidden='true' href='#example-flavor-usage'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example: Flavor usage</h3><pre><code>metrics cloudletusage region=EU cloudlet-org=TDG selector=flavorusage cloudlet=automationMunichCloudlet last=2
+data:
+series:
+columns:
+time
+cloudlet
+cloudletorg
+count
+flavor    name: cloudlet-flavor-usage
+values:
+- &quot;2021-07-16T05:41:47.187017795Z&quot;
+automationMunichCloudlet
+TDG
+2
+m4.medium
+- &quot;2021-07-16T05:16:38.376372537Z&quot;
+automationMunichCloudlet
+TDG
+1
+m4.small-gpu</code></pre><h2 id='cloudletinfo-show'><a class='anchor' aria-hidden='true' href='#cloudletinfo-show'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>CloudletInfo Show</strong></h2><p>This command provides information about cloudlet key, cloudlet state, cloudlet resources, flavors, platform VMs, clusters, trust policy and more, as shown in the example below.</p><h3 id='-cloudletinfo-show-example'><a class='anchor' aria-hidden='true' href='#-cloudletinfo-show-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a> Cloudletinfo show example</h3><pre><code>mcctl --addr https://console.mobiledgex.net cloudletinfo show region=EU cloudlet=automationHamburgCloudlet
+- key:
+    organization: TDG
+    name: automationHamburgCloudlet
+  state: CloudletStateReady
+  notifyid: 29
+  controller: controller-f9454c787-j8t4q@10.244.5.43:55001
+  osmaxram: 512000
+  osmaxvcores: 200
+  osmaxvolgb: 5000
+  flavors:
+  - name: m4.xxlarge16
+    vcpus: 16
+    ram: 65536
+    disk: 120
+    propmap:
+      hw: mem_page_size=large
+  - name: m4.small-gpu
+    vcpus: 2
+    ram: 4096
+    disk: 40
+    propmap:
+      hw: numa_nodes=1
+      pci_passthrough: alias=t4gpu:1
+  - name: m4.large-gpu
+    vcpus: 4
+    ram: 8192
+    disk: 80
+    propmap:
+      hw: numa_nodes=1
+      pci_passthrough: alias=t4gpu:1
+  - name: m4.medium
+    vcpus: 2
+    ram: 4096
+    disk: 40
+    propmap:
+      hw: mem_page_size=large
+  - name: m4.xlarge-gpu
+    vcpus: 4
+    ram: 8192
+    disk: 160
+    propmap:
+      hw: numa_nodes=1
+      pci_passthrough: alias=t4gpu:1
+  - name: m4.xxlarge32-64-160
+    vcpus: 32
+    ram: 65536
+    disk: 160
+    propmap:
+      hw: mem_page_size=large
+  - name: m4.xxlarge-gpu
+    vcpus: 4
+    ram: 32768
+    disk: 160
+    propmap:
+      hw: numa_nodes=1
+      pci_passthrough: alias=t4gpu:1
+  - name: m4.large
+    vcpus: 4
+    ram: 8192
+    disk: 80
+    propmap:
+      hw: mem_page_size=large
+  - name: m4.tiny
+    vcpus: 1
+    ram: 512
+    disk: 10
+    propmap:
+      hw: mem_page_size=large
+  - name: m4.xlarge
+    vcpus: 8
+    ram: 16384
+    disk: 160
+    propmap:
+      hw: mem_page_size=large
+  - name: m4.xxxlarge-gpu
+    vcpus: 8
+    ram: 16384
+    disk: 160
+    propmap:
+      hw: numa_nodes=1
+      pci_passthrough: alias=t4gpu:1
+  - name: m4.large-vgpu
+    vcpus: 4
+    ram: 8192
+    disk: 80
+    propmap:
+      hw: mem_page_size=large
+      resources: VGPU=1
+  - name: ram64
+    vcpus: 1
+    ram: 64
+    disk: 1
+    propmap:
+      hw: mem_page_size=large
+  - name: m4.small
+    vcpus: 2
+    ram: 2048
+    disk: 20
+    propmap:
+      hw: mem_page_size=large
+  containerversion: 2021-06-08-1
+  controllercachereceived: true
+  resourcessnapshot:
+    platformvms:
+    - name: automationHamburgCloudlet-TDG-pf
+      type: platform
+      status: ACTIVE
+      infraflavor: m4.medium
+      ipaddresses:
+      - externalip: 80.187.135.175
+    - name: automationhamburgcloudlet.tdg.mobiledgex.net
+      type: rootlb
+      status: ACTIVE
+      infraflavor: m4.medium
+      ipaddresses:
+      - externalip: 80.187.134.197
+      - internalip: 10.101.28.1
+    info:
+    - name: RAM
+      value: 339968
+      inframaxvalue: 512000
+      units: MB
+    - name: vCPUs
+      value: 178
+      inframaxvalue: 200
+    - name: Instances
+      value: 67
+      inframaxvalue: 100
+    - name: Floating IPs
+      inframaxvalue: 10
+    clusterinsts:
+    - clusterkey:
+        name: cluster1623136354-852825
+      organization: automation_dev_org
+    - clusterkey:
+        name: cluster1623158521-1634557
+      organization: automation_dev_org
+    - clusterkey:
+        name: porttestcluster
+      organization: MobiledgeX
+  trustpolicystate: NotPresent
+  compatibilityversion: 1</code></pre>
+      
+</div>
+
+              <link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".slb").simplebox()
+  });
+</script>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <div class="text-center"><p>© 2022  MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="https://www.mobiledgex.com/privacy-policy">Privacy Policy</a> | <a href="https://www.mobiledgex.com/terms-of-use">Terms of Use</a> | <a href="https://www.mobiledgex.com/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+            
+    </div>
+  </div>
+
+  
+
+    <script type="text/javascript">
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.duik-content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h2, h3',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: false,
+      listItemClass: 'duik-content-nav__item',
+      orderedList: false,
+      listClass: 'js-scroll-nav duik-content-nav',
+      collapseDepth: 6,
+      activeLinkClass: 'active',
+    });
+  </script>
+  </body>
+
+</html>

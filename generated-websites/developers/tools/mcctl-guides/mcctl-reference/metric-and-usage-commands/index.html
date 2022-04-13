@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metric and Usage Commands | MobiledgeX Developers</title>
+<meta name="description" content="Learn about metric and usage commands with mcctl utility" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Metric and Usage Commands" />
+<meta property="og:description" content="Learn about metric and usage commands with mcctl utility" />
+<meta property="og:url" content="http://dev-v3.test/tools/mcctl-guides/mcctl-reference/metric-and-usage-commands" />
+<meta property="og:site_name" content="MobiledgeX Developers" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mobiledgex" />
+<meta name="twitter:title" content="Metric and Usage Commands" />
+<meta name="twitter:description" content="Learn about metric and usage commands with mcctl utility" />
+<meta property="og:image" content="http://dev-v3.test/img/containers/assets/social-developers.jpg/b1d19eb47e0ea441f7510b1a27b43974.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://dev-v3.test/img/containers/assets/social-developers.jpg/b1d19eb47e0ea441f7510b1a27b43974.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://dev-v3.test/" rel="home" />
+<link href="http://dev-v3.test/tools/mcctl-guides/mcctl-reference/metric-and-usage-commands" rel="canonical" />
+<link type="text/plain" rel="author" href="http://dev-v3.test/humans.txt" />
+  <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=1643734718">
+  <link rel="stylesheet" href="/css/androidstudio.min.css?v=1628534070">
+  <script src="/js/highlight.min.js?v=1628534070"></script>
+
+  <meta name="robots" content="noindex,nofollow">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+
+<body
+  class="bg-white default">
+
+  <header class="duik-header">
+  <nav class="properties navbar fixed-top d-none d-md-flex">
+    <ul>
+      <li><a href="https://mobiledgex.com">MobiledgeX Home</a></li>
+      <li><a href="https://mobiledgex.com/product">Product</a></li>
+      <li><a href="https://mobiledgex.com/use-cases">Use Cases</a></li>
+      <li><a href="https://mobiledgex.com/about">About</a></li>
+      <li><a href="https://mobiledgex.com/blog">Blog</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-dark fixed-top bg-terrain flex-nowrap p-0 main-nav">
+    <a class="navbar-brand col-md-3 col-xl-2 mr-0 py-3" href="/">
+      <img src="/img/logo-white.svg?v=1592862229" alt="MobiledgeX Developers" />
+    </a>
+    <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/getting-started">Getting
+          Started</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/deployments">Guides and
+          Tutorials</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0" href="/design">Design Principles</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0" href="/sdks">SDK and Libraries</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/apis">API Reference</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0" href="/support">Support</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0"
+          href="/product/mobiledgex-community">Community</a>
+      </li>
+      <li class="nav-item d-none d-md-inline">
+        <form method="get" action="/search" id="navbar-search">
+          <!-- Search field's name must be addsearch -->
+          <input type="search" name="search" placeholder="Search" />
+        </form>
+      </li>
+      <!-- Responsive Toggle Button -->
+      <div class="d-flex d-md-none justify-content-between mb-5">
+        <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav"
+          aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+              d="M4 7h22M4 15h22M4 23h22" />
+          </svg>
+        </button>
+      </div>
+      <!-- End Responsive Toggle Button -->
+    </ul>
+  </nav>
+</header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+  <div class="collapse navbar-collapse" id="sidebar-nav">
+    <div class="js-scrollbar duik-sidebar-sticky">
+      <ul class="duik-sidebar__nav">
+                          <li class="duik-sidebar__item">
+            <a href="/getting-started" class="duik-sidebar__link">Getting Started</a>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Product Overview</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/overview" class="duik-sidebar__link">What is MobiledgeX?</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-edge-cloud" class="duik-sidebar__link">MobiledgeX Edge-Cloud Console</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-sdk" class="duik-sidebar__link">MobiledgeX Client SDKs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-edge-services" class="duik-sidebar__link">MobiledgeX Edge Services</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-community" class="duik-sidebar__link">MobiledgeX Developer Community</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-demo" class="duik-sidebar__link">MobiledgeX Demo App</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Console App Deployments</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Organizations</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/accounts" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/accounts/manage-accts" class="duik-sidebar__link">Manage Accounts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/accounts/org-users" class="duik-sidebar__link">Developer Organizations</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/supported-apps-types" class="duik-sidebar__link">Application Types</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Deployment Essentials</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/deployment-workflow" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/cloudlets" class="duik-sidebar__link">Cloudlets</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/cloudlet-pools" class="duik-sidebar__link">Cloudlet Pools</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/flavors" class="duik-sidebar__link">Flavors</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/clusters" class="duik-sidebar__link">Cluster Instances</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/app-definition" class="duik-sidebar__link">Application Definition</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/app-instances" class="duik-sidebar__link">Application Instances</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">How-To Guides</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Hello World</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides/hello-world" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image" class="duik-sidebar__link">Create and Upload Your First Docker Image</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/hello-world/running-your-first-docker-image" class="duik-sidebar__link">Running a Docker Image as an Application Instance</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Deploying Virtual Machines</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides/virtual-machine" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/virtual-machine/linux" class="duik-sidebar__link">How To Deploy Linux VMs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/virtual-machine/windows" class="duik-sidebar__link">How To Deploy Windows VMs</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/how-to-deploy-docker-compose" class="duik-sidebar__link">Deploy Docker Compose using Multiple Files</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/gpu" class="duik-sidebar__link">Deploy GPU Applications</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/deploy-helm" class="duik-sidebar__link">Deploy a Helm V3 Application</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/deploy-a-kubernetes-application" class="duik-sidebar__link">Deploy a Kubernetes Application</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Runtime Policies</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-runtime" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/autoscale" class="duik-sidebar__link">Auto Scaling with Kubernetes</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/auto-prov" class="duik-sidebar__link">Auto Provisioning Policy</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/high-availability" class="duik-sidebar__link">High Availabilty</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/security" class="duik-sidebar__link">Security & Trust Policy</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Monitoring Apps</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/monitoring-and-metrics" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/application-utilization-metrics" class="duik-sidebar__link">Utilization Metrics</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/logs" class="duik-sidebar__link">Usage Logs & Events</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/monitoring-edge-events" class="duik-sidebar__link">Monitoring Edge Events</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Continuous Deployment / Integration</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/ci-cd" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/ci-cd/github-actions" class="duik-sidebar__link">GitHub Actions</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Client SDK Integration</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/tech-overview" class="duik-sidebar__link">Technical Overview</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/edge-events-overview" class="duik-sidebar__link">Edge Events Overview</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Android SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/android-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-sdk-download" class="duik-sidebar__link">Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-sdk-sample" class="duik-sidebar__link">SDK Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/add-face-detection" class="duik-sidebar__link">Integrate Face Detection</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-third-party-licenses" class="duik-sidebar__link">Android Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">iOS SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/ios-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-download" class="duik-sidebar__link">Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-sample" class="duik-sidebar__link">Augmented Reality Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-third-party-licenses" class="duik-sidebar__link">iOS SDK Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Unity SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/unity-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/c-sharp-sdk" class="duik-sidebar__link">C# Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/unity-sdk-download" class="duik-sidebar__link">Unity Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/unity-sdk-sample" class="duik-sidebar__link">Unity Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/edge-events" class="duik-sidebar__link">Unity Edge Events (Beta)</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/c-sdk-third-party-licenses" class="duik-sidebar__link">C# SDK Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Edge Services</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Computer Vision</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services/computer-vision" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/cv-deployment" class="duik-sidebar__link">Computer Vision Server Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/how-to-computer-vision-api" class="duik-sidebar__link">Computer Vision Server REST API</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/add-comp-vision-unity" class="duik-sidebar__link">Unity Computer Vision SDK</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Multiplayer Service</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services/unity-edgemultiplay" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/unity-edgemultiplay/how-to-use-edge-multiplay" class="duik-sidebar__link">Getting Started with EdgeMultiplay</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/unity-edgemultiplay/running-edge-multiplay" class="duik-sidebar__link">Running the EdgeMultiplay Server Locally</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Edge Developer Tools</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Command Line Interface: mcctl</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools/mcctl-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/api-key-access" class="duik-sidebar__link">API Key Access and Permissions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-developer" class="duik-sidebar__link">How to use the mcctl utility for Developers</a>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item active">
+            <a class="duik-sidebar__link">mcctl Utility Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools/mcctl-guides/mcctl-reference" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/mcctl-installation-and-setup-guide" class="duik-sidebar__link">mcctl Installation and Setup Guide</a>
+          </li>
+                                  <li class="duik-sidebar__item active current">
+            <a href="/tools/mcctl-guides/mcctl-reference/metric-and-usage-commands" class="duik-sidebar__link">Metric and Usage Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/application-and-monitoring-commands" class="duik-sidebar__link">Application and Monitoring Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/audit-and-regional-commands" class="duik-sidebar__link">Regional Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/alert-management-commands" class="duik-sidebar__link">Alert Management Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/automatic-policies-commands" class="duik-sidebar__link">Automatic Policies Commands</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/edgebox" class="duik-sidebar__link">Local Edge Testing : EdgeBox</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Design Principles</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/design" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/best-practice-container-deploy" class="duik-sidebar__link">Best Practices : Deployments</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/best-practice-sdk" class="duik-sidebar__link">Best Practices : Client SDKs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/load-balancing" class="duik-sidebar__link">Best Practices : Load Balancing</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/sizing-applications" class="duik-sidebar__link">Best Practices : Sizing Applications</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Best Practices: Debugging</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/design/testing-and-debugging" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/alarms" class="duik-sidebar__link">Alerts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/health-check" class="duik-sidebar__link">Health Check</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/storing-metrics" class="duik-sidebar__link">Storing Metrics and Insights</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/how-to-stress-test" class="duik-sidebar__link">Stress Testing</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/running-sshd-inside-container" class="duik-sidebar__link">Running SSHD Inside a Container</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/sdk" class="duik-sidebar__link">SDK Release Notes</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Console Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes/console" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/release-notes-3-0" class="duik-sidebar__link">3.0</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/2_4_0" class="duik-sidebar__link">2.4</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/2_0_0" class="duik-sidebar__link">2.0</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">API Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/apis" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net" class="duik-sidebar__link">Device APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/mc" class="duik-sidebar__link">Edge Orchestration APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/edge-cloud-sdk-unity" class="duik-sidebar__link">Unity SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/edge-cloud-sdk-android/" class="duik-sidebar__link">Android SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/MatchingEngineSDK/rest/index.html" class="duik-sidebar__link">Swift SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/swagger/mexdemo/edge-cloud-sdk-csharp/html/index.html" class="duik-sidebar__link">C# SDK Manual</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/support" class="duik-sidebar__link">FAQs and Support</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/search" class="duik-sidebar__link">Search</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/glossary-of-terms" class="duik-sidebar__link">Glossary of Terms</a>
+          </li>
+                
+      </ul>
+      <hr class="d-block d-md-none">
+      <ul class="duik-sidebar__nav d-block d-md-none">
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com" class="duik-sidebar__link">MobiledgeX Home</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/product" class="duik-sidebar__link">Product</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/use-cases" class="duik-sidebar__link">Use Cases</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/about" class="duik-sidebar__link">About</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/blog" class="duik-sidebar__link">Blog</a></li>
+        <li class="duik-sidebar__item"><a href="https://operators.mobiledgex.com" class="duik-sidebar__link">Operators</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('li.subs.depth-3 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-3').removeClass('active');
+        } else {
+          $('li.subs.depth-3').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-2 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-2').removeClass('active');
+        } else {
+          $('li.subs.depth-2').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-1 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-1').removeClass('active');
+        } else {
+          $('li.subs.depth-1').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      })
+    });
+</script>
+
+                  <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+        <div class="row pt-3">
+          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block toc"></div>          <div class="col-xl-10 order-xl-1 duik-content border-bottom">
+            <div class="mb-7">
+              <script type="text/javascript">
+  $(document).ready(function () {
+    $('#copyshortlink').click(function (e) {
+      e.preventDefault()
+      var copyText = document.getElementById('shortlink')
+      var tooltip = document.getElementById('myTooltip')
+      $(copyText).show()
+      copyText.select()
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand('copy')
+      $(copyText).hide()
+      tooltip.innerHTML = 'Copied: ' + copyText.value
+    })
+    $('#copyshortlink').mouseout(function () {
+      var tooltip = document.getElementById('myTooltip')
+      tooltip.innerHTML = 'Copy link to clipboard'
+    })
+  })
+</script>
+
+
+<div class="markdown-body">
+      <h1>
+    Metric and Usage Commands <input type="text" id="shortlink" value="http://dev-v3.test/t/fa112f63" style="display: none;">
+    <div class="copyTooltip">
+      <a href="" id="copyshortlink">
+        <span class="tooltiptext" id="myTooltip">Copy link to clipboard</span>
+        <svg fill="rgba(39,60,76,.5)" width="15pt" height="15pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="m91.762 8.2422c-5.3164-5.3164-12.379-8.2422-19.887-8.2422s-14.57 2.9258-19.883 8.2422c0 0-17.742 17.734-18.758 18.742-5.293 5.3047-8.2188 12.379-8.2305 19.938 0.011719 7.5 2.9375 14.547 8.2383 19.848l2.2891 2.2891c0.60938 0.60938 1.4102 0.91406 2.2109 0.91406 0.80078 0 1.6016-0.30469 2.2109-0.91406l4.418-4.418c1.2227-1.2227 1.2227-3.1953 0-4.418l-2.2891-2.2891c-5.9922-5.9961-6.0742-15.824-0.17969-21.922 0.18359-0.1875 18.934-18.93 18.934-18.93 2.9414-2.957 6.8672-4.582 11.043-4.582 4.168 0 8.0898 1.625 11.039 4.5703 0.003906 0 0.003906 0.007813 0.003906 0.007813 6.1016 6.1094 6.1016 15.992 0.003906 22.094l-0.96875 0.96484c1.5195 4.0586 2.4141 8.4102 2.418 12.988 0 0.83203-0.11328 1.6289-0.16406 2.4414l7.5547-7.5547c10.984-10.988 10.977-28.801-0.003906-39.77z" />
+            <path d="m8.2383 91.758c5.3164 5.3164 12.379 8.2422 19.887 8.2422s14.57-2.9258 19.883-8.2422c0 0 17.742-17.734 18.758-18.742 5.293-5.3047 8.2188-12.379 8.2305-19.938-0.011719-7.5-2.9375-14.547-8.2383-19.848l-2.2891-2.2891c-0.60938-0.60938-1.4102-0.91406-2.2109-0.91406-0.80078 0-1.6016 0.30469-2.2109 0.91406l-4.418 4.418c-1.2227 1.2227-1.2227 3.1953 0 4.418l2.2891 2.2891c5.9922 5.9961 6.0742 15.824 0.17969 21.922-0.18359 0.1875-18.934 18.93-18.934 18.93-2.9414 2.957-6.8672 4.582-11.043 4.582-4.168 0-8.0898-1.625-11.039-4.5703l-0.003906-0.007813c-6.1016-6.1094-6.1016-15.992-0.003906-22.094l0.96875-0.96484c-1.5195-4.0586-2.4141-8.4102-2.418-12.988 0-0.83203 0.11328-1.6289 0.16406-2.4414l-7.5547 7.5547c-10.984 10.988-10.977 28.801 0.003906 39.77z" />
+          </g>
+        </svg>
+      </a>
+    </div>
+  </h1>
+    
+      <h2 id='metric-commands'><a class='anchor' aria-hidden='true' href='#metric-commands'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>Metric Commands</strong></h2><p>The same metrics that are presented in the MobiledgeX Web GUI can be viewed from the CLI by using the metrics command to the <code>mcctl</code> utility.</p><p>The examples below request the output in JSON format, but it is possible to retrieve the data in YAML or condensed JSON (JSON without extra whitespace formatting).</p><p><strong>Note</strong>: The <code>mcctl</code> utility provides a stable interface to the MobiledgeX APIs. The API can be accessed directly, but the API interface is subject to change.</p><pre><code>$ mcctl metrics
+Usage: mcctl metrics [flags] [command]
+
+Available Commands:
+  app                  View App metrics
+  cluster              View ClusterInst metrics
+  cloudlet             View Cloudlet metrics
+  cloudletusage        View Cloudlet usage
+  clientapiusage       View client API usage
+  clientappusage       View client App usage
+  clientcloudletusage  View client Cloudlet usage
+  appv2                View App metrics(v2 format)</code></pre><p>All metrics commands can be qualified with a time or duration parameter.</p><ul><li><p><em>last N</em> Shows the last N series of data.</p></li><li><p><em>starttime datetime</em> Start time of displayed data.</p></li><li><p><em>endtime datetime</em> End time of displayed data.</p></li></ul><h3 id='using-start-end-times'><a class='anchor' aria-hidden='true' href='#using-start-end-times'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Using Start/End Times</h3><p>Several of the <code>mcctl</code> subcommands accept a start/end time to filter output. Time should be passed through in the format as outlined in <a href="https://tools.ietf.org/html/rfc3339"><strong>RFC 3339</strong></a>. For example, to specify <em>10:35 PM UTC on August 7, 2019</em>, you would code the time as <code>2019-08-07T20:35:00Z</code>. Please note that the entire date/time string, including the time zone indicator, must be passed to the command.</p><h2 id='application-level-metrics'><a class='anchor' aria-hidden='true' href='#application-level-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Application Level Metrics</h2><pre><code>$ mcctl metrics app
+Usage: mcctl metrics app [flags] [args]
+
+Required Args:
+  region                  Region name
+  selector                Comma separated list of metrics to view. Available metrics: &quot;cpu&quot;, &quot;mem&quot;, &quot;disk&quot;, &quot;network&quot;, &quot;connections&quot;, &quot;udp&quot;
+
+Optional Args:
+  limit                   Display the last X metrics
+  numsamples              Display X samples spaced out evenly over start and end times
+  starttime               Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime                 Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage                Relative age from now of search range start (default 48h)
+  endage                  Relative age from now of search range end (default 0)
+  appinsts:#.apporg       Organization or Company name of the App
+  appinsts:#.appname      App name
+  appinsts:#.appvers      App version
+  appinsts:#.cluster      Cluster name
+  appinsts:#.clusterorg   Organization or Company Name that a Cluster is used by
+  appinsts:#.cloudletorg  Company or Organization name of the cloudlet
+  appinsts:#.cloudlet     Name of the cloudlet</code></pre><h3 id='data-keys'><a class='anchor' aria-hidden='true' href='#data-keys'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Data Keys</h3><ul><li><p><code>time</code></p></li><li><p><code>app</code></p></li><li><p><code>ver</code></p></li><li><p><code>cluster</code></p></li><li><p><code>clusterorg</code></p></li><li><p><code>cloudlet</code></p></li><li><p><code>cloudletorg</code></p></li><li><p><code>apporg</code></p></li><li><p><code>pod</code></p></li><li><p><code>cpu</code></p></li><li><p><code>mem</code></p></li><li><p><code>disk</code></p></li><li><p><code>sendBytes</code></p></li><li><p><code>recvBytes</code></p></li></ul><h3 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example</h3><pre><code>$ mcctl  --addr <a href="https://console.mobiledgex.net">https://console.mobiledgex.net</a>  --output-format json metrics app region=EU app/
+org=demoorg selector=cpu,mem,disk,network last=1 appname=mexfastapi10
+
+{
+  &quot;data&quot;: [
+    {
+      &quot;Series&quot;: [
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;app&quot;,
+            &quot;ver&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;apporg&quot;,
+            &quot;pod&quot;,
+            &quot;cpu&quot;,
+            &quot;mem&quot;,
+            &quot;disk&quot;,
+            &quot;sendBytes&quot;,
+            &quot;recvBytes&quot;
+          ],
+          &quot;name&quot;: &quot;appinst-network&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:16:46.88950592Z&quot;,
+              &quot;mexfastapi10&quot;,
+              null,
+              &quot;fastapiCluster&quot;,
+              &quot;demoorg&quot;,
+              &quot;hamburg-main&quot;,
+              &quot;TDG&quot;,
+              &quot;demoorg&quot;,
+              &quot;mexfastapi10&quot;,
+              null,
+              null,
+              null,
+              603979776,
+              138412032
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;app&quot;,
+            &quot;ver&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;apporg&quot;,
+            &quot;pod&quot;,
+            &quot;cpu&quot;,
+            &quot;mem&quot;,
+            &quot;disk&quot;,
+            &quot;sendBytes&quot;,
+            &quot;recvBytes&quot;
+          ],
+          &quot;name&quot;: &quot;appinst-mem&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:16:46.88950592Z&quot;,
+              &quot;mexfastapi10&quot;,
+              null,
+              &quot;fastapiCluster&quot;,
+              &quot;demoorg&quot;,
+              &quot;hamburg-main&quot;,
+              &quot;TDG&quot;,
+              &quot;demoorg&quot;,
+              &quot;mexfastapi10&quot;,
+              null,
+              269588889,
+              null,
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;app&quot;,
+            &quot;ver&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;apporg&quot;,
+            &quot;pod&quot;,
+            &quot;cpu&quot;,
+            &quot;mem&quot;,
+            &quot;disk&quot;,
+            &quot;sendBytes&quot;,
+            &quot;recvBytes&quot;
+          ],
+          &quot;name&quot;: &quot;appinst-disk&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:16:46.88950592Z&quot;,
+              &quot;mexfastapi10&quot;,
+              null,
+              &quot;fastapiCluster&quot;,
+              &quot;demoorg&quot;,
+              &quot;hamburg-main&quot;,
+              &quot;TDG&quot;,
+              &quot;demoorg&quot;,
+              &quot;mexfastapi10&quot;,
+              null,
+              null,
+              0,
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;app&quot;,
+            &quot;ver&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;apporg&quot;,
+            &quot;pod&quot;,
+            &quot;cpu&quot;,
+            &quot;mem&quot;,
+            &quot;disk&quot;,
+            &quot;sendBytes&quot;,
+            &quot;recvBytes&quot;
+          ],
+          &quot;name&quot;: &quot;appinst-cpu&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:16:46.88950592Z&quot;,
+              &quot;mexfastapi10&quot;,
+              null,
+              &quot;fastapiCluster&quot;,
+              &quot;demoorg&quot;,
+              &quot;hamburg-main&quot;,
+              &quot;TDG&quot;,
+              &quot;demoorg&quot;,
+              &quot;mexfastapi10&quot;,
+              0.24,
+              null,
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre><h3 id='cpu-example'><a class='anchor' aria-hidden='true' href='#cpu-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>CPU example</h3><p>AppInst CPU usage for an app with 2 containers. CPU value format is in percentages.</p><pre><code>$ mcctl metrics app region=US appname=app-us-k8s  selector=cpu last=1 cluster=k8smonitoring cluster-org=testmonitor cloudlet-org=packet app-org=testmonitor
+data:
+- series:
+  - columns:
+    - time
+    - app
+    - ver
+    - cluster
+    - clusterorg
+    - cloudlet
+    - cloudletorg
+    - apporg
+    - pod
+    - cpu
+    name: appinst-cpu
+    values:
+    - - &quot;2021-07-10T06:22:54.944999933Z&quot;
+      - app-us-k8s
+      - v1
+      - k8smonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - testmonitor
+      - app-us-k8s-deployment-dvpdb
+      - 9.169075980500652e-06</code></pre><h4 id='memory-example'><a class='anchor' aria-hidden='true' href='#memory-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Memory Example</h4><p>The current memory footprint of a given app instance in bytes.</p><pre><code>$ mcctl metrics app region=US appname=app-us-k8s  selector=mem last=1 cluster=k8smonitoring cluster-org=testmonitor cloudlet-org=packet app-org=testmonitor
+data:
+- series:
+  - columns:
+    - time
+    - app
+    - ver
+    - cluster
+    - clusterorg
+    - cloudlet
+    - cloudletorg
+    - apporg
+    - pod
+    - mem
+    name: appinst-mem
+    values:
+    - - &quot;2021-07-10T06:22:54.960000038Z&quot;
+      - app-us-k8s
+      - v1
+      - k8smonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - testmonitor
+      - app-us-k8s-deployment-dvpdb
+      - 3.014656e+06</code></pre><h3 id='disk-example'><a class='anchor' aria-hidden='true' href='#disk-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Disk example</h3><p>The filesystem usage for an app instance in bytes.</p><pre><code>$ mcctl metrics app region=US appname=app-us-k8s  selector=disk last=1 cluster=k8smonitoring cluster-org=testmonitor cloudlet-org=packet app-org=testmonitor
+data:
+- series:
+  - columns:
+    - time
+    - app
+    - ver
+    - cluster
+    - clusterorg
+    - cloudlet
+    - cloudletorg
+    - apporg
+    - pod
+    - disk
+    name: appinst-disk
+    values:
+    - - &quot;2021-07-10T06:22:54.97600007Z&quot;
+      - app-us-k8s
+      - v1
+      - k8smonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - testmonitor
+      - app-us-k8s-deployment-dvpdb
+      - 1.35168e+06</code></pre><h3 id='network-example'><a class='anchor' aria-hidden='true' href='#network-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Network example</h3><p>Application instance Tx/Rx traffic rate in bytes/seconds averaged over 1 minute.</p><pre><code>$ mcctl metrics app region=US appname=app-us-k8s  selector=network last=1 cluster=k8smonitoring cluster-org=testmonitor cloudlet-org=packet app-org=testmonitor
+data:
+- series:
+  - columns:
+    - time
+    - app
+    - ver
+    - cluster
+    - clusterorg
+    - cloudlet
+    - cloudletorg
+    - apporg
+    - pod
+    - sendBytes
+    - recvBytes
+    name: appinst-network
+    values:
+    - - &quot;2021-07-10T06:22:55.007999897Z&quot;
+      - app-us-k8s
+      - v1
+      - k8smonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - testmonitor
+      - app-us-k8s-deployment-dvpdb
+      - 22
+      - 36</code></pre><h3 id='active-connections-example'><a class='anchor' aria-hidden='true' href='#active-connections-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Active Connections Example</h3><p>App instance connection information by port; number of accepted, active, and handled connections, as well as the total number of bytes that are sent/received, and a histogram of session times in milliseconds. For example, P50 is the 50th percentile in session time. In the example below, 50% of all sessions lasted 6ms or less.</p><pre><code>$ mcctl metrics app region=US appname=app-us-k8s  selector=connections last=1 cluster=k8smonitoring cluster-org=testmonitor cloudlet-org=packet app-org=testmonitor
+data:
+- series:
+  - columns:
+    - time
+    - app
+    - ver
+    - cluster
+    - clusterorg
+    - cloudlet
+    - cloudletorg
+    - apporg
+    - port
+    - active
+    - handled
+    - accepts
+    - bytesSent
+    - bytesRecvd
+    - P0
+    - P25
+    - P50
+    - P75
+    - P90
+    - P95
+    - P99
+    - P99.5
+    - P99.9
+    - P100
+    name: appinst-connections
+    values:
+    - - &quot;2021-07-10T06:22:54.96920476Z&quot;
+      - app-us-k8s
+      - v1
+      - k8smonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - testmonitor
+      - 8080
+      - 0
+      - 22971
+      - 22971
+      - 4.386043e+06
+      - 4.223098e+06
+      - 2
+      - 28.37329784151818
+      - 28.789258293495582
+      - 29.412349003056324
+      - 29.913826226167952
+      - 31.095333333333336
+      - 85.29000000000087
+      - 217.76320754716988
+      - 1902.8999999998632
+      - 1.7e+06</code></pre><h3 id='api-example'><a class='anchor' aria-hidden='true' href='#api-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>API example</h3><ul><li><p>Valid selector: <code>api</code></p></li><li><p>Valid method names: <code>RegisterClient</code>, <code>VerifyLocation</code>, <code>FindCloudlet</code>, <code>GetLocation</code>, <code>AppinstList</code>, <code>FqdnList</code>, <code>DynamicLocGroup</code>, <code>QosPosition</code>.</p></li><li><p><code>Cellid</code> 0 is invalid.</p></li></ul><h3 id='findcloudlet-example'><a class='anchor' aria-hidden='true' href='#findcloudlet-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>FindCloudlet example</h3><pre><code>$ mcctl --addr https://console.mobiledgex.net  --output-format json metrics clientapiusage region=EU appname=healthcheck appvers=3.1 app-org=demoorg method=FindCloudlet selector=api
+{
+  &quot;data&quot;: [
+    {
+      &quot;Series&quot;: [
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;reqs&quot;,
+            &quot;errs&quot;
+          ],
+          &quot;name&quot;: &quot;dme-api&quot;,
+          &quot;tags&quot;: {
+            &quot;app&quot;: &quot;healthcheck&quot;,
+            &quot;apporg&quot;: &quot;demoorg&quot;,
+            &quot;cellID&quot;: &quot;&quot;,
+            &quot;cloudlet&quot;: &quot;mexplat-mexdemo-cloudlet&quot;,
+            &quot;cloudletorg&quot;: &quot;TDG&quot;,
+            &quot;dmeId&quot;: &quot;dme-68c4585d98-48r9c&quot;,
+            &quot;foundCloudlet&quot;: &quot;&quot;,
+            &quot;foundOperator&quot;: &quot;&quot;,
+            &quot;method&quot;: &quot;FindCloudlet&quot;,
+            &quot;ver&quot;: &quot;3.1&quot;
+          },
+          &quot;values&quot;: [
+            [
+              &quot;2022-03-22T09:36:29.67647683Z&quot;,
+              2,
+              0
+            ],
+            [
+              &quot;2022-03-22T09:35:59.676135779Z&quot;,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre><ul><li><p><code>100ms, 10ms, 25ms, 50ms, 5ms</code>: Latency buckets for the API call RTT</p></li><li><p><code>cellID</code>: Cell Id of the tower where the API request came from. This can be used in geolocation grouping.</p></li><li><p><code>errs</code>: Number of errors returned for this AppInst, method, and cellID for this timestamp</p></li><li><p><code>foundCloudlet</code>: Cloudlet name that was returned as a result of this FindCloudlet api call</p></li><li><p><code>foundOperator</code>: Operator name that was returned as a result of this FindCloudlet api call</p></li><li><p><code>id</code>: Hostname where DME is(Unused)</p></li><li><p><code>inf</code>: UNUSED</p></li><li><p><code>method</code>: One of <code>RegisterClient</code>, <code>VerifyLocation</code>, <code>FindCloudlet</code>, <code>GetLocation</code>, <code>AppInstList</code>, <code>FqdnList</code>, <code>DynamicLocGroup</code>, <code>QosPosition</code></p></li><li><p><code>oper</code>: Operator name where the DME is</p></li><li><p><code>reqs</code>: Number of requests sent since last collection</p></li></ul><h3 id='registerclient-example'><a class='anchor' aria-hidden='true' href='#registerclient-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>RegisterClient example</h3><pre><code>$ mcctl --addr https://console.mobiledgex.net  --output-format json metrics clientapiusage region=EU appname=healthcheck appvers=3.1 app-org=demoorg method=RegisterClient selector=api
+{
+  &quot;data&quot;: [
+    {
+      &quot;Series&quot;: [
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;reqs&quot;,
+            &quot;errs&quot;
+          ],
+          &quot;name&quot;: &quot;dme-api&quot;,
+          &quot;tags&quot;: {
+            &quot;app&quot;: &quot;healthcheck&quot;,
+            &quot;apporg&quot;: &quot;demoorg&quot;,
+            &quot;cellID&quot;: &quot;&quot;,
+            &quot;cloudlet&quot;: &quot;mexplat-mexdemo-cloudlet&quot;,
+            &quot;cloudletorg&quot;: &quot;TDG&quot;,
+            &quot;dmeId&quot;: &quot;dme-68c4585d98-48r9c&quot;,
+            &quot;foundCloudlet&quot;: &quot;&quot;,
+            &quot;foundOperator&quot;: &quot;&quot;,
+            &quot;method&quot;: &quot;RegisterClient&quot;,
+            &quot;ver&quot;: &quot;3.1&quot;
+          },
+          &quot;values&quot;: [
+            [
+              &quot;2022-03-22T09:36:29.67647683Z&quot;,
+              2,
+              0
+            ],
+            [
+              &quot;2022-03-22T09:35:59.676135779Z&quot;,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre><p><strong>Note</strong>: <code>foundCloudlet</code> and <code>foundOperator</code> fields are “null“, these are only available for FindCloudlet method.</p><p><strong>All methods example with start and end time, rather than last N elements</strong></p><pre><code># mcctl --addr https://console.mobiledgex.net  --output-format json metrics clientapiusage region=EU appname=healthcheck appvers=3.1 app-org=demoorg selector=api
+{
+  &quot;data&quot;: [
+    {
+      &quot;Series&quot;: [
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;reqs&quot;,
+            &quot;errs&quot;
+          ],
+          &quot;name&quot;: &quot;dme-api&quot;,
+          &quot;tags&quot;: {
+            &quot;app&quot;: &quot;healthcheck&quot;,
+            &quot;apporg&quot;: &quot;demoorg&quot;,
+            &quot;cellID&quot;: &quot;&quot;,
+            &quot;cloudlet&quot;: &quot;mexplat-mexdemo-cloudlet&quot;,
+            &quot;cloudletorg&quot;: &quot;TDG&quot;,
+            &quot;dmeId&quot;: &quot;dme-68c4585d98-48r9c&quot;,
+            &quot;foundCloudlet&quot;: &quot;&quot;,
+            &quot;foundOperator&quot;: &quot;&quot;,
+            &quot;method&quot;: &quot;RegisterClient&quot;,
+            &quot;ver&quot;: &quot;3.1&quot;
+          },
+          &quot;values&quot;: [
+            [
+              &quot;2022-03-22T09:36:29.67647683Z&quot;,
+              2,
+              0
+            ],
+            [
+              &quot;2022-03-22T09:35:59.676135779Z&quot;,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;reqs&quot;,
+            &quot;errs&quot;
+          ],
+          &quot;name&quot;: &quot;dme-api&quot;,
+          &quot;tags&quot;: {
+            &quot;app&quot;: &quot;healthcheck&quot;,
+            &quot;apporg&quot;: &quot;demoorg&quot;,
+            &quot;cellID&quot;: &quot;&quot;,
+            &quot;cloudlet&quot;: &quot;mexplat-mexdemo-cloudlet&quot;,
+            &quot;cloudletorg&quot;: &quot;TDG&quot;,
+            &quot;dmeId&quot;: &quot;dme-68c4585d98-48r9c&quot;,
+            &quot;foundCloudlet&quot;: &quot;&quot;,
+            &quot;foundOperator&quot;: &quot;&quot;,
+            &quot;method&quot;: &quot;FindCloudlet&quot;,
+            &quot;ver&quot;: &quot;3.1&quot;
+          },
+          &quot;values&quot;: [
+            [
+              &quot;2022-03-22T09:36:29.67647683Z&quot;,
+              2,
+              0
+            ],
+            [
+              &quot;2022-03-22T09:35:59.676135779Z&quot;,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre><p><strong>Note</strong>: This allows for a single call with all the results.</p><h2 id='client-app-usage-metrics'><a class='anchor' aria-hidden='true' href='#client-app-usage-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Client App Usage Metrics</h2><p>This command is used to collect aggregated latency and device metrics about clients connected to application instances.</p><pre><code>$ mcctl metrics clientappusage
+Usage: mcctl metrics clientappusage [flags] [args]
+
+Required Args:
+  region           Region name
+  selector         Comma separated list of metrics to view. Available metrics: &quot;latency&quot;, &quot;deviceinfo&quot;
+
+Optional Args:
+  limit            Display the last X metrics
+  numsamples       Display X samples spaced out evenly over start and end times
+  starttime        Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime          Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage         Relative age from now of search range start (default 48h)
+  endage           Relative age from now of search range end (default 0)
+  appname          App name
+  appvers          App version
+  apporg           Organization or Company name of the App
+  cluster          Cluster name
+  clusterorg       Organization or Company Name that a Cluster is used by
+  cloudlet         Name of the cloudlet
+  cloudletorg      Company or Organization name of the cloudlet
+  locationtile     Location tile. Provides the range of GPS coordinates for the location tile/square. Format is: &quot;LocationUnderLongitude,LocationUnderLatitude_LocationOverLongitude,LocationOverLatitude_LocationTileLength&quot;. LocationUnder are the GPS coordinates of the corner closest to (0,0) of the location tile. LocationOver are the GPS coordinates of the corner farthest from (0,0) of the location tile. LocationTileLength is the length (in kilometers) of one side of the location tile square. Can be used for selectors: latency, deviceinfo.
+  deviceos         Device operating system. Can be used for selectors: deviceinfo.
+  devicemodel      Device model. Can be used for selectors: deviceinfo.
+  devicecarrier    Device carrier. Can be used for selectors: deviceinfo.
+  datanetworktype  Data network type used by client device. Can be used for selectors: latency, deviceinfo.</code></pre><h3 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example</h3><pre><code>mcctl --addr https://console.mobiledgex.net metrics clientappusage region=US selector=latency app-org=automation_dev_org limit=1
+data:
+- series:
+  - columns:
+    - time
+    - 0s
+    - 5ms
+    - 10ms
+    - 25ms
+    - 50ms
+    - 100ms
+    - max
+    - min
+    - avg
+    - variance
+    - stddev
+    - numsamples
+    name: latency-metric
+    tags:
+      app: app1626203266-6561713
+      apporg: automation_dev_org
+      cloudlet: tmocloud-2
+      cloudletorg: tmus
+      cluster: autocluster
+      clusterorg: MobiledgeX
+      datanetworktype: 5G
+      locationtile: -90.998922,30.993940_-91.007905,31.002985_1
+      ver: &quot;1.0&quot;
+    values:
+    - - &quot;2021-07-13T19:08:10.100185182Z&quot;
+      - 4
+      - 2
+      - 2
+      - 2
+      - 0
+      - 4
+      - 440
+      - 0.5
+      - 94.50714285714287
+      - 24799.08494505494
+      - 157.47725215108034
+      - 14</code></pre><h2 id='client-api-usage-metrics'><a class='anchor' aria-hidden='true' href='#client-api-usage-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Client API Usage Metrics</h2><pre><code>$ mcctl metrics clientapiusage
+Usage: mcctl metrics clientapiusage [flags] [args]
+
+Required Args:
+  region       Region name
+  selector     Comma separated list of metrics to view. Currently only &quot;api&quot; is supported.
+
+Optional Args:
+  limit        Display the last X metrics
+  numsamples   Display X samples spaced out evenly over start and end times
+  starttime    Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime      Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage     Relative age from now of search range start (default 48h)
+  endage       Relative age from now of search range end (default 0)
+  appname      App name
+  appvers      App version
+  apporg       Organization or Company name of the App
+  cloudlet     Name of the cloudlet
+  cloudletorg  Company or Organization name of the cloudlet
+  dmecloudlet  Cloudlet name where DME is running
+  dmeorg       Operator org where DME is running
+  method       Api call method, one of: FindCloudlet, PlatformFindCloudlet, RegisterClient, VerifyLocation</code></pre><h2 id='client-cloudlet-api-usage'><a class='anchor' aria-hidden='true' href='#client-cloudlet-api-usage'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Client Cloudlet API Usage</h2><pre><code>$ mcctl metrics  clientcloudletusage
+Usage: mcctl metrics clientcloudletusage [flags] [args]
+
+Required Args:
+  region           Region name
+  cloudletorg      Company or Organization name of the cloudlet
+  selector         Comma separated list of metrics to view. Available metrics: &quot;latency&quot;, &quot;deviceinfo&quot;
+
+Optional Args:
+  limit            Display the last X metrics
+  numsamples       Display X samples spaced out evenly over start and end times
+  starttime        Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime          Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage         Relative age from now of search range start (default 48h)
+  endage           Relative age from now of search range end (default 0)
+  cloudlet         Name of the cloudlet
+  locationtile     Location tile. Provides the range of GPS coordinates for the location tile/square. Format is: &quot;LocationUnderLongitude,LocationUnderLatitude_LocationOverLongitude,LocationOverLatitude_LocationTileLength&quot;. LocationUnder are the GPS coordinates of the corner closest to (0,0) of the location tile. LocationOver are the GPS coordinates of the corner farthest from (0,0) of the location tile. LocationTileLength is the length (in kilometers) of one side of the location tile square. Can be used for selectors: latency, deviceinfo.
+  deviceos         Device operating system. Can be used for selectors: deviceinfo.
+  devicemodel      Device model. Can be used for selectors: deviceinfo.
+  devicecarrier    Device carrier. Can be used for selectors: latency, deviceinfo.
+  datanetworktype  Data network type used by client device. Can be used for selectors: latency.</code></pre><h2 id='cluster-level-metrics'><a class='anchor' aria-hidden='true' href='#cluster-level-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Cluster Level Metrics</h2><pre><code>$ mcctl metrics cluster
+Usage: mcctl metrics cluster [flags] [args]
+
+Required Args:
+  region                      Region name
+  selector                    Comma separated list of metrics to view. Available metrics: &quot;cpu&quot;, &quot;mem&quot;, &quot;disk&quot;, &quot;network&quot;, &quot;tcp&quot;, &quot;udp&quot;
+
+Optional Args:
+  limit                       Display the last X metrics
+  numsamples                  Display X samples spaced out evenly over start and end times
+  starttime                   Time to start displaying stats from in RFC3339 format (ex. 2002-12-31T15:00:00Z)
+  endtime                     Time up to which to display stats in RFC3339 format (ex. 2002-12-31T10:00:00-05:00)
+  startage                    Relative age from now of search range start (default 48h)
+  endage                      Relative age from now of search range end (default 0)
+  clusterinsts:#.cluster      Cluster name
+  clusterinsts:#.clusterorg   Organization or Company Name that a Cluster is used by
+  clusterinsts:#.cloudletorg  Company or Organization name of the cloudlet
+  clusterinsts:#.cloudlet     Name of the cloudlet</code></pre><h3 id='data-keys'><a class='anchor' aria-hidden='true' href='#data-keys'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Data Keys</h3><ul><li><p><code>time</code></p></li><li><p><code>cluster</code></p></li><li><p><code>clusterorg</code></p></li><li><p><code>cloudlet</code></p></li><li><p><code>cloudletorg</code></p></li><li><p><code>cpu</code></p></li><li><p><code>mem</code></p></li><li><p><code>disk</code></p></li><li><p><code>sendBytes</code></p></li><li><p><code>recvBytes</code></p></li></ul><h4 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example</h4><pre><code>$ mcctl  --addr <a href="https://console.mobiledgex.net">https://console.mobiledgex.net</a>  --output-format json metrics cluster \
+region=EU cluster-org=demoorg selector=cpu,mem,disk,network, tcp, udp last=1
+{
+  &quot;data&quot;: [
+    {
+      &quot;Series&quot;: [
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;cpu&quot;,
+            &quot;mem&quot;,
+            &quot;disk&quot;,
+            &quot;sendBytes&quot;,
+            &quot;recvBytes&quot;
+          ],
+          &quot;name&quot;: &quot;cluster-network&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:22:38.972597948Z&quot;,
+              &quot;action-test-cluster&quot;,
+              &quot;demoorg&quot;,
+              &quot;munich-main&quot;,
+              &quot;TDG&quot;,
+              null,
+              null,
+              null,
+              675353748,
+              30297980534
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;cpu&quot;,
+            &quot;mem&quot;,
+            &quot;disk&quot;,
+            &quot;sendBytes&quot;,
+            &quot;recvBytes&quot;
+          ],
+          &quot;name&quot;: &quot;cluster-mem&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:22:38.972597948Z&quot;,
+              &quot;action-test-cluster&quot;,
+              &quot;demoorg&quot;,
+              &quot;munich-main&quot;,
+              &quot;TDG&quot;,
+              null,
+              6.191279821549256,
+              null,
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;cpu&quot;,
+            &quot;mem&quot;,
+            &quot;disk&quot;,
+            &quot;sendBytes&quot;,
+            &quot;recvBytes&quot;
+          ],
+          &quot;name&quot;: &quot;cluster-disk&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:22:38.972597948Z&quot;,
+              &quot;action-test-cluster&quot;,
+              &quot;demoorg&quot;,
+              &quot;munich-main&quot;,
+              &quot;TDG&quot;,
+              null,
+              null,
+              15.501801142916749,
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          &quot;columns&quot;: [
+            &quot;time&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;cpu&quot;,
+            &quot;mem&quot;,
+            &quot;disk&quot;,
+            &quot;sendBytes&quot;,
+            &quot;recvBytes&quot;
+          ],
+          &quot;name&quot;: &quot;cluster-cpu&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;2020-06-08T22:22:38.972597948Z&quot;,
+              &quot;action-test-cluster&quot;,
+              &quot;demoorg&quot;,
+              &quot;munich-main&quot;,
+              &quot;TDG&quot;,
+              0,
+              null,
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre><h3 id='api-example'><a class='anchor' aria-hidden='true' href='#api-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>API example</h3><ul><li><p>Valid selector: <code>api</code></p></li><li><p>Valid method names: <code>RegisterClient</code>, <code>VerifyLocation</code>, <code>FindCloudlet</code>, <code>GetLocation</code>, <code>AppinstList</code>, <code>FqdnList</code>, <code>DynamicLocGroup</code>, <code>QosPosition</code>.</p></li><li><p><code>Cellid</code> 0 is invalid.</p></li></ul><h4 id='findcloudlet-example'><a class='anchor' aria-hidden='true' href='#findcloudlet-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>FindCloudlet example</strong></h4><pre><code>$ http --verify=false --auth-type=jwt --auth=$SUPERPASS POST <a href="https://console.mobiledgex.net/api/v1/auth/metrics/client">https://console.mobiledgex.net/api/v1/auth/metrics/client</a> &lt;&lt;&lt;\
+ {&quot;region&quot;:&quot;local&quot;,&quot;appinst&quot;:{&quot;app_key&quot;:{&quot;organization&quot;:&quot;AcmeAppCo&quot;,&quot;name&quot;:\
+ &quot;someapplication1&quot;,&quot;version&quot;:&quot;1.0&quot;}},&quot;method&quot;:&quot;FindCloudlet&quot;,&quot;selector&quot;:&quot;api&quot;,&quot;last&quot;:1}&#039;\
+ HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Sun, 19 Apr 2020 01:45:04 GMT
+Transfer-Encoding: chunked
+{
+    &quot;data&quot;: [
+        {
+            &quot;Messages&quot;: null,
+            &quot;Series&quot;: [
+                {
+                    &quot;columns&quot;: [
+                        &quot;time&quot;,
+                        &quot;100ms&quot;,
+                        &quot;10ms&quot;,
+                        &quot;25ms&quot;,
+                        &quot;50ms&quot;,
+                        &quot;5ms&quot;,
+                        &quot;app&quot;,
+                        &quot;apporg&quot;,
+                        &quot;cellID&quot;,
+                        &quot;cloudlet&quot;,
+                        &quot;cloudletorg&quot;,
+                        &quot;errs&quot;,
+                        &quot;foundCloudlet&quot;,
+                        &quot;foundOperator&quot;,
+                        &quot;inf&quot;,
+                        &quot;method&quot;,
+                        &quot;reqs&quot;,
+                        &quot;ver&quot;
+                    ],
+                    &quot;name&quot;: &quot;dme-api&quot;,
+                    &quot;values&quot;: [
+                        [
+                            &quot;2020-04-19T01:42:21.588926Z&quot;,
+                            0,
+                            0,
+                            0,
+                            0,
+                            2,
+                            &quot;someapplication1&quot;,
+                            &quot;AcmeAppCo&quot;,
+                            &quot;1234&quot;,
+                            &quot;tmus-cloud-1&quot;,
+                            &quot;tmus&quot;,
+                            0,
+                            &quot;tmus-cloud-2&quot;,
+                            &quot;tmus&quot;,
+                            0,
+                            &quot;FindCloudlet&quot;,
+                            2,
+                            &quot;1.0&quot;
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}
+</code></pre><ul><li><p><code>100ms, 10ms, 25ms, 50ms, 5ms</code>: Latency buckets for the API call RTT</p></li><li><p><code>cellID</code>: Cell Id of the tower where the API request came from. This can be used in geolocation grouping.</p></li><li><p><code>err</code>: Number of errors returned for this AppInst, method, and cellID for this timestamp</p></li><li><p><code>foundCloudlet</code>: Cloudlet name that was returned as a result of this FindCloudlet api call</p></li><li><p><code>foundOperator</code>: Operator name that was returned as a result of this FindCloudlet api call</p></li><li><p><code>id</code>: Hostname where DME is(Unused)</p></li><li><p><code>inf</code>: UNUSED</p></li><li><p><code>method</code>: One of <code>RegisterClient</code>, <code>VerifyLocation</code>, <code>FindCloudlet</code>, <code>GetLocation</code>, <code>AppInstList</code>, <code>FqdnList</code>, <code>DynamicLocGroup</code>, <code>QosPosition</code></p></li><li><p><code>oper</code>: Operator name where the DME is</p></li><li><p><code>reqs</code>: Number of requests sent since last collection</p></li></ul><h4 id='registerclient-example'><a class='anchor' aria-hidden='true' href='#registerclient-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>RegisterClient example</strong></h4><pre><code>$ http --verify=false --auth-type=jwt --auth=$SUPERPASS POST <a href="https://console.mobiledgex.net/api/v1/auth/metrics/client">https://console.mobiledgex.net/api/v1/auth/metrics/client</a> &lt;&lt;&lt;\
+&#039;{&quot;region&quot;:&quot;local&quot;,&quot;appinst&quot;:{&quot;app_key&quot;:{&quot;organization&quot;:&quot;AcmeAppCo&quot;,&quot;name&quot;:\
+&quot;someapplication1&quot;,&quot;version&quot;:&quot;1.0&quot;}},&quot;method&quot;:&quot;RegisterClient&quot;,&quot;selector&quot;:&quot;api&quot;,&quot;last&quot;:1}&#039;\
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Sun, 19 Apr 2020 01:46:13 GMT
+Transfer-Encoding: chunked
+{
+    &quot;data&quot;: [
+        {
+            &quot;Messages&quot;: null,
+            &quot;Series&quot;: [
+                {
+                    &quot;columns&quot;: [
+                        &quot;time&quot;,
+                        &quot;100ms&quot;,
+                        &quot;10ms&quot;,
+                        &quot;25ms&quot;,
+                        &quot;50ms&quot;,
+                        &quot;5ms&quot;,
+                        &quot;app&quot;,
+                        &quot;apporg&quot;,
+                        &quot;cellID&quot;,
+                        &quot;cloudlet&quot;,
+                        &quot;cloudletorg&quot;,
+                        &quot;errs&quot;,
+                        &quot;foundCloudlet&quot;,
+                        &quot;foundOperator&quot;,
+                        &quot;inf&quot;,
+                        &quot;method&quot;,
+                        &quot;reqs&quot;,
+                        &quot;ver&quot;
+                    ],
+                    &quot;name&quot;: &quot;dme-api&quot;,
+                    &quot;values&quot;: [
+                        [
+                            &quot;2020-04-19T01:42:21.588926Z&quot;,
+                            0,
+                            0,
+                            0,
+                            0,
+                            4,
+                            &quot;someapplication1&quot;,
+                            &quot;AcmeAppCo&quot;,
+                            &quot;1234&quot;,
+                            &quot;tmus-cloud-1&quot;,
+                            &quot;tmus&quot;,
+                            0,
+                            null,
+                            null,
+                            0,
+                            &quot;RegisterClient&quot;,
+                            4,
+                            &quot;1.0&quot;
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}
+</code></pre><p><strong>Note</strong>: <code>foundCloudlet</code> and <code>foundOperator</code> fields are “null“, these are only available for FindCloudlet method.</p><h4 id='all-methods-example-with-start-and-end-time-rather-than-last-n-elements'><a class='anchor' aria-hidden='true' href='#all-methods-example-with-start-and-end-time-rather-than-last-n-elements'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>All methods example with start and end time, rather than last N elements</strong></h4><pre><code>$ http --verify=false --auth-type=jwt --auth=$SUPERPASS POST <a href="https://console.mobiledgex.net/api/v1/auth/metrics/client">https://console.mobiledgex.net/api/v1/auth/metrics/client</a> &lt;&lt;&lt;\
+&#039;{&quot;region&quot;:&quot;local&quot;,&quot;appinst&quot;:{&quot;app_key&quot;:{&quot;organization&quot;:&quot;AcmeAppCo&quot;,&quot;name&quot;:\
+&quot;someapplication1&quot;,&quot;version&quot;:&quot;1.0&quot;}},&quot;selector&quot;:&quot;api&quot;,&quot;starttime&quot;:&quot;2020-04-\
+19T01:42:21Z&quot;,&quot;endtime&quot;:&quot;2020-04-19T01:42:22Z&quot;}&#039;\
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Sun, 19 Apr 2020 01:49:08 GMT
+Transfer-Encoding: chunked
+{
+    &quot;data&quot;: [
+        {
+            &quot;Messages&quot;: null,
+            &quot;Series&quot;: [
+                {
+                    &quot;columns&quot;: [
+                        &quot;time&quot;,
+                        &quot;100ms&quot;,
+                        &quot;10ms&quot;,
+                        &quot;25ms&quot;,
+                        &quot;50ms&quot;,
+                        &quot;5ms&quot;,
+                        &quot;app&quot;,
+                        &quot;apporg&quot;,
+                        &quot;cellID&quot;,
+                        &quot;cloudlet&quot;,
+                        &quot;cloudletorg&quot;,
+                        &quot;errs&quot;,
+                        &quot;foundCloudlet&quot;,
+                        &quot;foundOperator&quot;,
+                        &quot;inf&quot;,
+                        &quot;method&quot;,
+                        &quot;reqs&quot;,
+                        &quot;ver&quot;
+                    ],
+                    &quot;name&quot;: &quot;dme-api&quot;,
+                    &quot;values&quot;: [
+                        [
+                            &quot;2020-04-19T01:42:21.588926Z&quot;,
+                            0,
+                            0,
+                            0,
+                            0,
+                            4,
+                            &quot;someapplication1&quot;,
+                            &quot;AcmeAppCo&quot;,
+                            &quot;1234&quot;,
+                            &quot;tmus-cloud-1&quot;,
+                            &quot;tmus&quot;,
+                            0,
+                            null,
+                            null,
+                            0,
+                            &quot;RegisterClient&quot;,
+                            4,
+                            &quot;1.0&quot;
+                        ],
+                        [
+                            &quot;2020-04-19T01:42:21.588926Z&quot;,
+                            0,
+                            0,
+                            0,
+                            0,
+                            2,
+                            &quot;someapplication1&quot;,
+                            &quot;AcmeAppCo&quot;,
+                            &quot;1234&quot;,
+                            &quot;tmus-cloud-1&quot;,
+                            &quot;tmus&quot;,
+                            0,
+                            &quot;tmus-cloud-2&quot;,
+                            &quot;tmus&quot;,
+                            0,
+                            &quot;FindCloudlet&quot;,
+                            2,
+                            &quot;1.0&quot;
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}
+</code></pre><p><strong>Note</strong>: This allows for a single call with all the results.</p><h2 id='usage-commands'><a class='anchor' aria-hidden='true' href='#usage-commands'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Usage Commands</h2><h2 id='application-instance-usage'><a class='anchor' aria-hidden='true' href='#application-instance-usage'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Application Instance Usage</h2><pre><code>$ mcctl usage app
+
+Required Args:
+  region       Region name
+  starttime    Time to start displaying usage from
+  endtime      Time up to which to display usage
+
+Optional Args:
+  appname      App name
+  apporg       Organization or Company Name that a Developer is part of
+  appvers      App version
+  cluster      Cluster namedf
+  cloudlet     Name of the cloudlet
+  cloudletorg  Organization name owning of the cloudlet
+  vmonly       Only show VM based apps
+
+Flags:
+  -h, --help   help for app
+
+Global Flags:
+      --addr string            MC address (default &quot;http://127.0.0.1:9900&quot;)
+      --data string            json formatted input data, alternative to name=val args list
+      --datafile string        file containing json/yaml formatted input data, alternative to name=val args list
+      --debug                  debug
+      --output-format string   output format: yaml, json, or json-compact (default &quot;yaml&quot;)
+      --output-stream          stream output incrementally if supported by command (default true)
+      --parsable               generate parsable output
+      --silence-usage          silence-usage
+      --skipverify             don&#039;t verify cert for TLS connections
+      --token string           JWT token</code></pre><h3 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>Example</strong></h3><pre><code>$ mcctl usage app --addr=<a href="https://console.mobiledgex.net">https://console.mobiledgex.net</a> region=US cluster=dockermonitoring appname=app-us cloudlet-org=packet cloudlet= starttime=2020-01-11T05:00:00+00:00 endtime=2021-06-14T23:03:07+00:00 app-org=testmonitor  
+
+data:
+- series:
+  - columns:
+    - region
+    - app
+    - apporg
+    - version
+    - cluster
+    - clusterorg
+    - cloudlet
+    - cloudletorg
+    - flavor
+    - deployment
+    - startime
+    - endtime
+    - duration
+    - note
+    name: appinst-usage
+    values:
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-03-11T06:07:28.18109284Z&quot;
+      - &quot;2021-03-23T15:35:24.971452827Z&quot;
+      - 1.070876790359987e+15
+      - HEALTH_CHECK_FAIL
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-03-23T15:35:40.174447583Z&quot;
+      - &quot;2021-03-24T06:14:57.19314355Z&quot;
+      - 5.2757018695967e+13
+      - HEALTH_CHECK_FAIL
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-03-24T06:15:12.25505126Z&quot;
+      - &quot;2021-04-26T16:29:58.850334201Z&quot;
+      - 2.888086595282941e+15
+      - DELETED
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-04-26T17:08:43.816096459Z&quot;
+      - &quot;2021-04-29T15:30:12.323913187Z&quot;
+      - 2.53288507816728e+14
+      - DELETED
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-04-29T15:36:57.068458556Z&quot;
+      - &quot;2021-05-04T04:58:09.22534242Z&quot;
+      - 3.93672156883864e+14
+      - HEALTH_CHECK_FAIL
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-05-04T04:58:24.325805291Z&quot;
+      - &quot;2021-05-05T06:39:38.782789994Z&quot;
+      - 9.2474456984703e+13
+      - HEALTH_CHECK_FAIL
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-05-05T06:39:53.978863752Z&quot;
+      - &quot;2021-05-10T15:56:06.553279919Z&quot;
+      - 4.65372574416167e+14
+      - DELETED
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-05-10T15:59:22.509334925Z&quot;
+      - &quot;2021-05-26T19:33:24.278133127Z&quot;
+      - 1.395241768798202e+15
+      - DELETED
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-05-26T19:38:52.582966722Z&quot;
+      - &quot;2021-05-28T05:11:08.758367596Z&quot;
+      - 1.20736175400874e+14
+      - HEALTH_CHECK_FAIL
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-05-28T05:11:23.935822011Z&quot;
+      - &quot;2021-06-08T05:54:24.508299295Z&quot;
+      - 9.52980572477284e+14
+      - HEALTH_CHECK_FAIL
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-06-08T05:54:39.578361976Z&quot;
+      - &quot;2021-06-11T04:38:53.913277031Z&quot;
+      - 2.54654334915055e+14
+      - HEALTH_CHECK_FAIL
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-06-11T04:39:08.960407727Z&quot;
+      - &quot;2021-06-12T14:55:55.729278524Z&quot;
+      - 1.23406768870797e+14
+      - HEALTH_CHECK_FAIL
+    - - US
+      - app-us
+      - testmonitor
+      - v1
+      - dockermonitoring
+      - testmonitor
+      - packetcloudlet
+      - packet
+      - &lt;nil&gt;
+      - docker
+      - &quot;2021-06-12T14:56:10.893751774Z&quot;
+      - &quot;2021-06-14T23:03:07Z&quot;
+      - 2.02016106248226e+14
+      - Running
+</code></pre><h3 id='api-example'><a class='anchor' aria-hidden='true' href='#api-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>API example</strong></h3><h4 id='api-call'><a class='anchor' aria-hidden='true' href='#api-call'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>API call</strong></h4><pre><code>POST /auth/usage/app</code></pre><h4 id='payload'><a class='anchor' aria-hidden='true' href='#payload'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>Payload</strong></h4><pre><code>{
+  &quot;StartTime&quot;: &quot;2021-01-28T20:35:00Z&quot;,
+  &quot;EndTime&quot;: &quot;2021-01-28T23:35:00Z&quot;,
+  &quot;AppInst&quot;: {
+      &quot;cluster_inst_key&quot;: {
+            &quot;organization&quot;: &quot;demoorg&quot;,
+            &quot;cloudlet_key&quot;: {
+                    &quot;organization&quot;: &quot;TDG&quot;,
+                    &quot;name&quot;: &quot;berlin-main&quot;
+                  },
+            &quot;cluster_key&quot;: {
+                    &quot;name&quot;: &quot;jaycluster02&quot;
+                  }
+          },
+      &quot;app_key&quot;: {
+            &quot;organization&quot;: &quot;demoorg&quot;,
+            &quot;name&quot;: &quot;k8jaypi&quot;,
+            &quot;version&quot;: &quot;1.0&quot;
+          }
+    },
+  &quot;Region&quot;: &quot;EU&quot;
+}</code></pre><h4 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a><strong>Example</strong></h4><pre><code>POST /auth/usage/app &lt; payload.json
+
+{
+  &quot;data&quot;: [
+    {
+      &quot;Series&quot;: [
+        {
+          &quot;columns&quot;: [
+            &quot;region&quot;,
+            &quot;app&quot;,
+            &quot;apporg&quot;,
+            &quot;version&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;flavor&quot;,
+            &quot;deployment&quot;,
+            &quot;startime&quot;,
+            &quot;endtime&quot;,
+            &quot;duration&quot;,
+            &quot;note&quot;
+          ],
+          &quot;name&quot;: &quot;appinst-usage&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;EU&quot;,
+              &quot;k8jaypi&quot;,
+              &quot;demoorg&quot;,
+              &quot;1.0&quot;,
+              &quot;jaycluster02&quot;,
+              &quot;demoorg&quot;,
+              &quot;berlin-main&quot;,
+              &quot;TDG&quot;,
+              &quot;&lt;nil&gt;&quot;,
+              &quot;kubernetes&quot;,
+              &quot;2021-01-28T21:13:15.501752085Z&quot;,
+              &quot;2021-01-28T23:35:00Z&quot;,
+              8504498247915,
+              &quot;Running&quot;
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre><h2 id='cluster-usage'><a class='anchor' aria-hidden='true' href='#cluster-usage'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Cluster Usage</h2><pre><code>mcctl usage cluster
+
+Required Args:
+  region       Region name
+  starttime    Time to start displaying usage from
+  endtime      Time up to which to display usage
+
+Optional Args:
+  cluster      Cluster name
+  clusterorg   Organization or Company Name that a Developer is part of
+  cloudletorg  Organization name owning of the cloudlet
+  cloudlet     Name of the cloudlet
+
+Flags:
+  -h, --help   help for cluster
+
+Global Flags:
+      --addr string            MC address (default &quot;http://127.0.0.1:9900&quot;)
+      --data string            json formatted input data, alternative to name=val args list
+      --datafile string        file containing json/yaml formatted input data, alternative to name=val args list
+      --debug                  debug
+      --output-format string   output format: yaml, json, or json-compact (default &quot;yaml&quot;)
+      --output-stream          stream output incrementally if supported by command (default true)
+      --parsable               generate parsable output
+      --silence-usage          silence-usage
+      --skipverify             don&#039;t verify cert for TLS connections
+      --token string           JWT token</code></pre><h3 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example</h3><pre><code>$ mcctl usage cluster --addr=<a href="https://console.mobiledgex.net">https://console.mobiledgex.net</a> region=EU cluster=TDG-Docker-Cluster cluster-org=testmonitor cloudlet-org=TDG starttime=2021-06-14T05:00:00+00:00 endtime=2021-06-16T23:03:07+00:00
+   
+data:
+- series:
+  - columns:
+    - region
+    - cluster
+    - clusterorg
+    - cloudlet
+    - cloudletorg
+    - flavor
+    - numnodes
+    - ipaccess
+    - startime
+    - endtime
+    - duration
+    - note
+    name: cluster-usage
+    values:
+    - - EU
+      - TDG-Docker-Cluster
+      - testmonitor
+      - automationBerlinCloudlet
+      - TDG
+      - automation_api_flavor
+      - 0
+      - IP_ACCESS_DEDICATED
+      - &quot;2021-06-15T18:33:02.124504691Z&quot;
+      - &quot;2021-06-15T20:15:04.280783803Z&quot;
+      - 6.122156279112e+12
+      - DELETED
+    - - EU
+      - TDG-Docker-Cluster
+      - testmonitor
+      - automationBerlinCloudlet
+      - TDG
+      - automation_api_flavor
+      - 2
+      - IP_ACCESS_DEDICATED
+      - &quot;2021-06-15T20:22:36.455527265Z&quot;
+      - &quot;2021-06-16T07:34:10.086085844Z&quot;
+      - 4.0293630558579e+13
+      - DELETED
+    - - EU
+      - TDG-Docker-Cluster
+      - testmonitor
+      - automationBerlinCloudlet
+      - TDG
+      - automation_api_flavor
+      - 0
+      - IP_ACCESS_DEDICATED
+      - &quot;2021-06-16T13:07:16.564976337Z&quot;
+      - &quot;2021-06-16T17:13:38.247399481Z&quot;
+      - 1.4781682423144e+13
+      - DELETED</code></pre><h3 id='api-example'><a class='anchor' aria-hidden='true' href='#api-example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>API example</h3><h4 id='api-call'><a class='anchor' aria-hidden='true' href='#api-call'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>API call</h4><pre><code>POST /auth/usage/cluster</code></pre><h4 id='payload'><a class='anchor' aria-hidden='true' href='#payload'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Payload</h4><pre><code>{
+  &quot;ClusterInst&quot;: {
+      &quot;cluster_key&quot;: {
+            &quot;name&quot;: &quot;jaycluster02&quot;
+          },
+      &quot;cloudlet_key&quot;: {
+            &quot;name&quot;: &quot;berlin-main&quot;,
+            &quot;organization&quot;: &quot;TDG&quot;
+          },
+      &quot;organization&quot;: &quot;demoorg&quot;
+    },
+  &quot;Region&quot;: &quot;EU&quot;,
+  &quot;StartTime&quot;: &quot;2021-01-28T20:35:00Z&quot;,
+  &quot;EndTime&quot;: &quot;2021-01-28T23:35:00Z&quot;
+}</code></pre><h4 id='example'><a class='anchor' aria-hidden='true' href='#example'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Example</h4><pre><code>POST /auth/usage/cluster &lt; payload.json
+
+{
+  &quot;data&quot;: [
+    {
+      &quot;Series&quot;: [
+        {
+          &quot;columns&quot;: [
+            &quot;region&quot;,
+            &quot;cluster&quot;,
+            &quot;clusterorg&quot;,
+            &quot;cloudlet&quot;,
+            &quot;cloudletorg&quot;,
+            &quot;flavor&quot;,
+            &quot;numnodes&quot;,
+            &quot;ipaccess&quot;,
+            &quot;startime&quot;,
+            &quot;endtime&quot;,
+            &quot;duration&quot;,
+            &quot;note&quot;
+          ],
+          &quot;name&quot;: &quot;cluster-usage&quot;,
+          &quot;values&quot;: [
+            [
+              &quot;EU&quot;,
+              &quot;jaycluster02&quot;,
+              &quot;demoorg&quot;,
+              &quot;berlin-main&quot;,
+              &quot;TDG&quot;,
+              &quot;m4.small&quot;,
+              2,
+              &quot;IP_ACCESS_SHARED&quot;,
+              &quot;2021-01-28T20:35:00Z&quot;,
+              &quot;2021-01-28T23:35:00Z&quot;,
+              10800000000000,
+              &quot;Running&quot;
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+  
+</div>
+
+              <link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".slb").simplebox()
+  });
+</script>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="https://www.mobiledgex.com/privacy-policy">Privacy Policy</a> | <a href="https://www.mobiledgex.com/terms-of-use">Terms of Use</a> | <a href="https://www.mobiledgex.com/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+            
+    </div>
+  </div>
+
+  
+
+    <script type="text/javascript">
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.duik-content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h2, h3',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: false,
+      listItemClass: 'duik-content-nav__item',
+      orderedList: false,
+      listClass: 'js-scroll-nav duik-content-nav',
+      collapseDepth: 6,
+      activeLinkClass: 'active',
+    })
+    $(document).ready(function() {
+      hljs.highlightAll()
+    });
+  </script>
+  </body>
+
+</html>

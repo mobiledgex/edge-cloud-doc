@@ -1,0 +1,10 @@
+/feed /feed.xml 301
+/feed/ /feed.xml 301
+/feed/index.html /feed.xml 301
+/contact /about/contact 301
+/blog/2018/09/25/finding-the-edge-at-scale-nl2ze /blog/2018/09/25/finding-the-edge-at-scale 301
+/company /about 301
+/news /about/press 301
+/technology /product 301
+/ecosystem /about/ecosystem 301
+/about/partners* /partners:splat 301

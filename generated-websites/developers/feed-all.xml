@@ -1,0 +1,628 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://developers.mobiledgex.com/feed-all.xml" rel="self" type="application/rss+xml" />
+    <title>MobiledgeX</title>
+    <link><![CDATA[https://developers.mobiledgex.com]]></link>
+    <description>MobiledgeX is a creating a marketplace of edge resources and services that will connect developers with the world’s largest mobile networks to power the next generation of applications and devices.</description>
+    <category>Edge Computing</category>
+    <image>
+      <url><![CDATA[https://mobiledgex.com/img/asset/c29jaWFsL21vYmlsZWRnZXhfc29jaWFsLWltYWdlLnBuZw==?p=seo&s=f1af75ae8d562d2da2025d535fcebb93]]></url>
+      <title>MobiledgeX</title>
+      <link>https://developers.mobiledgex.com</link>
+    </image>
+
+        <item>
+      <title><![CDATA[2.0]]></title>
+      <link><![CDATA[http://dev-v3.test/release-notes/console/2_0_0/]]></link>      <description><![CDATA[Lists new features and known issues for the MobiledgeX Edge-Cloud Console.
+]]></description>
+      <pubDate>Tue, 27 Jul 21 20:00:48 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[2.4]]></title>
+      <link><![CDATA[http://dev-v3.test/release-notes/console/2_4_0/]]></link>      <description><![CDATA[Lists new features and known issues for the MobiledgeX Edge-Cloud Console.
+]]></description>
+      <pubDate>Tue, 27 Jul 21 20:00:21 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[3.0]]></title>
+      <link><![CDATA[http://dev-v3.test/release-notes/console/release-notes-3-0/]]></link>      <description><![CDATA[MobiledgeX Edge-Cloud Console Release Notes 3.0
+]]></description>
+      <pubDate>Mon, 23 Aug 21 18:15:59 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Alert Management Commands]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/mcctl-reference/alert-management-commands/]]></link>      <description><![CDATA[Manage AlertReceiver and create alerts using mcctl
+]]></description>
+      <pubDate>Wed, 16 Mar 22 15:40:25 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Alerts]]></title>
+      <link><![CDATA[http://dev-v3.test/design/testing-and-debugging/alarms/]]></link>      <description><![CDATA[View a list of the different alarm logs to help you take action to repair or maintain the MobiledgeX platform and its components
+]]></description>
+      <pubDate>Mon, 28 Feb 22 15:07:45 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Android SDK]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/android-sdk/]]></link>      <description><![CDATA[Use our Android SDK to locate the most optimal server backend for applications on Android devices. Try some of the provided examples that we provided to start using the Android SDK.
+]]></description>
+      <pubDate>Wed, 22 Sep 21 16:07:26 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Android Third Party Licenses]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/android-sdk/android-third-party-licenses/]]></link>      <description><![CDATA[Android Third Party Licenses
+]]></description>
+      <pubDate>Fri, 14 Jan 22 23:54:26 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[API Key Access and Permissions]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/api-key-access/]]></link>      <description><![CDATA[Provides steps on how to set up API token and permissions.
+]]></description>
+      <pubDate>Fri, 23 Jul 21 16:34:00 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[API Reference]]></title>
+      <link><![CDATA[http://dev-v3.test/apis/]]></link>      <description><![CDATA[Learn how to use the MobiledgeX  Device and Orchestration APIs to manage and monitor edge computing applications.
+]]></description>
+      <pubDate>Mon, 14 Jun 21 21:16:50 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Application and Monitoring Commands]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/mcctl-reference/application-and-monitoring-commands/]]></link>      <description><![CDATA[Learn about audit and event commands, and monitoring your applications with mcctl
+]]></description>
+      <pubDate>Thu, 17 Mar 22 18:05:55 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Application Definition]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/deployment-workflow/app-definition/]]></link>      <description><![CDATA[Define the application definition used to create application instances that can be deployed on MobiledgeX
+]]></description>
+      <pubDate>Mon, 15 Nov 21 16:58:00 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Application Instances]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/deployment-workflow/app-instances/]]></link>      <description><![CDATA[Ready, set, deploy!
+]]></description>
+      <pubDate>Mon, 28 Feb 22 22:48:27 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Application Types]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/supported-apps-types/]]></link>      <description><![CDATA[Learn about the different application types we support
+]]></description>
+      <pubDate>Mon, 15 Nov 21 15:58:48 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Augmented Reality Sample App]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/ios-sdk/ios-sdk-sample/]]></link>      <description><![CDATA[Build on top of the MobiledgeX iOS AR shooting sample application that demonstrates how to use the iOS MobiledgeX SDK
+]]></description>
+      <pubDate>Wed, 19 Jan 22 21:59:19 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Auto Provisioning Policy]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-runtime/auto-prov/]]></link>      <description><![CDATA[Learn about how to use the MobiledgeX Auto Provisioning Policy to do automatic deployments to various cloudlets on the MobiledgeX platform
+]]></description>
+      <pubDate>Thu, 18 Nov 21 18:09:29 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Auto Scaling with Kubernetes]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-runtime/autoscale/]]></link>      <description><![CDATA[Learn how to auto scale your Kubernetes (K8s) edge applications using MobiledgeX auto scale policies
+]]></description>
+      <pubDate>Thu, 18 Nov 21 17:56:23 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Automatic Policies Commands]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/mcctl-reference/automatic-policies-commands/]]></link>      <description><![CDATA[Learn about policy management commands with mcctl utility
+]]></description>
+      <pubDate>Mon, 25 Oct 21 18:17:38 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Best Practices : Client SDKs]]></title>
+      <link><![CDATA[http://dev-v3.test/design/best-practice-sdk/]]></link>      <description><![CDATA[Learn the best practices for utilizing the MobiledgeX Client SDKs for Android, iOS, and Unity
+]]></description>
+      <pubDate>Wed, 28 Jul 21 23:19:03 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Best Practices : Deployments]]></title>
+      <link><![CDATA[http://dev-v3.test/design/best-practice-container-deploy/]]></link>      <description><![CDATA[Learn about best practices and recommendations for container deployment for deploying to the MobiledgeX Edge-Cloud platform.
+]]></description>
+      <pubDate>Wed, 28 Jul 21 23:19:59 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Best Practices : Load Balancing]]></title>
+      <link><![CDATA[http://dev-v3.test/design/load-balancing/]]></link>      <description><![CDATA[Learn how to use MobiledgeX TLS securely to route your network traffic
+]]></description>
+      <pubDate>Wed, 28 Jul 21 23:20:52 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Best Practices : Sizing Applications]]></title>
+      <link><![CDATA[http://dev-v3.test/design/sizing-applications/]]></link>      <description><![CDATA[Some tips and tricks for sizing your application instances on MobiledgeX before deploying on cloudlets
+]]></description>
+      <pubDate>Fri, 20 Aug 21 21:23:10 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Best Practices: Debugging]]></title>
+      <link><![CDATA[http://dev-v3.test/design/testing-and-debugging/]]></link>      <description><![CDATA[Learn the various ways we help you collect metrics to detect performance anomalies and increase operational efficiencies
+]]></description>
+      <pubDate>Tue, 21 Sep 21 20:34:45 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[C# Download Instructions]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/unity-sdk/c-sharp-sdk/]]></link>      <description><![CDATA[Download the Matching Engine C# SDK to create applications for your device
+]]></description>
+      <pubDate>Tue, 23 Nov 21 17:10:14 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[C# SDK Third Party Licenses]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/unity-sdk/c-sdk-third-party-licenses/]]></link>      <description><![CDATA[C# SDK Third Party Licenses
+]]></description>
+      <pubDate>Fri, 14 Jan 22 22:39:16 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Client SDK Integration]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/]]></link>      <description><![CDATA[The MobiledgeX  Matching Engine SDKs are available in Android, iOS, and Unity  to provide you the flexibility to take advantage of our Mobile Network Edge Discovery APIs to connect to deployed applications.
+]]></description>
+      <pubDate>Mon, 24 Jan 22 22:47:45 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Cloudlet Pools]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/deployment-workflow/cloudlet-pools/]]></link>      <description><![CDATA[Learn about cloudlet pools and how to join them as a developer on MobiledgeX
+]]></description>
+      <pubDate>Mon, 15 Nov 21 16:27:38 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Cloudlets]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/deployment-workflow/cloudlets/]]></link>      <description><![CDATA[Service your applications through our cloudlets
+]]></description>
+      <pubDate>Mon, 15 Nov 21 16:25:52 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Cluster Instances]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/deployment-workflow/clusters/]]></link>      <description><![CDATA[Cluster instance descriptions and uses
+]]></description>
+      <pubDate>Mon, 15 Nov 21 16:41:21 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Command Line Interface: mcctl]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/]]></link>      <description><![CDATA[These guides provide usage and reference information about our mcctl utility as a Command Line Interface for interacting with the MobiledgeX platform
+]]></description>
+      <pubDate>Wed, 10 Nov 21 19:13:33 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Computer Vision Server Deployment]]></title>
+      <link><![CDATA[http://dev-v3.test/services/computer-vision/cv-deployment/]]></link>      <description><![CDATA[How to deploy a Docker Image of Computer Vision to the MobiledgeX platform
+]]></description>
+      <pubDate>Fri, 04 Feb 22 16:58:59 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Computer Vision Server REST API]]></title>
+      <link><![CDATA[http://dev-v3.test/services/computer-vision/how-to-computer-vision-api/]]></link>      <description><![CDATA[Learn how to use REST APIs for MobiledgeX Computer Vision Server to integrate Computer Vision Edge Services into your mobile applications.
+]]></description>
+      <pubDate>Wed, 24 Nov 21 21:23:23 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Console App Deployments]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/]]></link>      <description><![CDATA[Learn how to use the MobiledgeX Edge Computing Platform to deploy your applications and integrate our SDKs for Android, iOS, and Unity
+]]></description>
+      <pubDate>Tue, 21 Sep 21 20:39:56 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Console Release Notes]]></title>
+      <link><![CDATA[http://dev-v3.test/release-notes/console/]]></link>      <description><![CDATA[Lists new features and known issues for the MobiledgeX Edge-Cloud Console.
+]]></description>
+      <pubDate>Thu, 29 Jul 21 22:05:09 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Continuous Deployment / Integration]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/ci-cd/]]></link>      <description><![CDATA[We help you deliver your application to a production environment efficiently.
+]]></description>
+      <pubDate>Wed, 22 Sep 21 15:37:57 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Create and Upload Your First Docker Image]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image/]]></link>      <description><![CDATA[Create a Hello World Docker Image using a NGINX Webserver and Upload that Docker Image to MobiledgeX
+]]></description>
+      <pubDate>Tue, 16 Nov 21 21:23:42 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Deploy a Helm V3 Application]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/deploy-helm/]]></link>      <description><![CDATA[This guide will show developers how to deploy their own Helm charts onto the MobiledgeX platform.
+]]></description>
+      <pubDate>Thu, 18 Nov 21 16:46:17 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Deploy a Kubernetes Application]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/deploy-a-kubernetes-application/]]></link>      <description><![CDATA[This guide will show developers how to deploy a k8s.yaml file onto the MobiledgeX platform.
+]]></description>
+      <pubDate>Fri, 04 Feb 22 16:53:06 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Deploy Docker Compose using Multiple Files]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/how-to-deploy-docker-compose/]]></link>      <description><![CDATA[Provides steps and examples on how to create a docker-compose deployment.
+]]></description>
+      <pubDate>Thu, 18 Nov 21 16:28:34 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Deploy GPU Applications]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/gpu/]]></link>      <description><![CDATA[How to deploy a GPU Application to the operator edge using the MobiledgeX Edge-Cloud Console
+]]></description>
+      <pubDate>Mon, 24 Jan 22 22:01:29 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Deploying Virtual Machines]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/virtual-machine/]]></link>      <description><![CDATA[Learn how to deploy a Virtual Machine on the MobiledgeX Edge-Cloud Console in order to setup your server on edge infrastructure.
+]]></description>
+      <pubDate>Wed, 28 Jul 21 22:56:15 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Deployment Essentials]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/deployment-workflow/]]></link>      <description><![CDATA[Learn how to use the MobiledgeX Edge Computing Platform to deploy your applications and integrate our SDKs for Android, iOS, and Unity
+]]></description>
+      <pubDate>Tue, 21 Sep 21 20:41:23 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Design Principles]]></title>
+      <link><![CDATA[http://dev-v3.test/design/]]></link>      <description><![CDATA[Learn best practices and design principles to optimize your applications on the MobiledgeX Edge Computing platform
+]]></description>
+      <pubDate>Tue, 21 Sep 21 21:07:39 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Developer Organizations]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/accounts/org-users/]]></link>      <description><![CDATA[Add organizations and manage users
+]]></description>
+      <pubDate>Fri, 12 Nov 21 22:00:10 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Documentation]]></title>
+      <link><![CDATA[http://dev-v3.test/]]></link>      <description><![CDATA[The MobiledgeX Platform enables developers to dynamically scale and deploy applications on Telco data centers (cloudlets) geographically close to your end-users. Deploying to MobiledgeX's cloudlets provides applications the advantage of low latency, which can be extremely useful for real-time applications such as Augmented Reality, Mobile Gaming, Self-Driving Cars, Drones, etc.]]></description>
+      <pubDate>Mon, 14 Jun 21 21:16:49 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Download Instructions]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/android-sdk/android-sdk-download/]]></link>      <description><![CDATA[Download the Matching Engine Android SDK to create applications for your device
+]]></description>
+      <pubDate>Fri, 30 Jul 21 22:15:42 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Download Instructions]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/ios-sdk/ios-sdk-download/]]></link>      <description><![CDATA[Learn how to use the MobiledgeX Matching Engine iOS SDK to create applications for iOS devices
+]]></description>
+      <pubDate>Thu, 20 Jan 22 00:08:13 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Edge Developer Tools]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/]]></link>      <description><![CDATA[Tools and Resources that developers may use in order to make it easier to utilize the MobiledgeX platform.
+]]></description>
+      <pubDate>Tue, 21 Sep 21 21:07:15 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Edge Events Overview]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/edge-events-overview/]]></link>      <description><![CDATA[MobiledgeX Edge Events allows developers to dynamically find the closest edge cloudlet based on the client's location and cellular connectivity.
+]]></description>
+      <pubDate>Tue, 23 Nov 21 15:24:19 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[FAQs and Support]]></title>
+      <link><![CDATA[http://dev-v3.test/support/]]></link>      <description><![CDATA[Access the MobiledgeX most frequently asked questions and answers on terminology and how the platform operates.
+]]></description>
+      <pubDate>Mon, 14 Feb 22 15:31:29 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Flavors]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/deployment-workflow/flavors/]]></link>      <description><![CDATA[Understanding Flavors and how to choose them
+]]></description>
+      <pubDate>Tue, 16 Nov 21 20:48:57 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Getting Started]]></title>
+      <link><![CDATA[http://dev-v3.test/getting-started/]]></link>      <description><![CDATA[Have an application that could benefit from edge computing? Here is how you can get started!
+]]></description>
+      <pubDate>Thu, 03 Mar 22 23:31:25 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Getting Started with EdgeMultiplay]]></title>
+      <link><![CDATA[http://dev-v3.test/services/unity-edgemultiplay/how-to-use-edge-multiplay/]]></link>      <description><![CDATA[How To Use the MobiledgeX Unity SDK and EdgeMultiplay Client to build a Multiplayer Game
+]]></description>
+      <pubDate>Mon, 22 Nov 21 17:54:16 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[GitHub Actions]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/ci-cd/github-actions/]]></link>      <description><![CDATA[Learn how our CI/CD approach helps you bridge the gaps between development and operational activities to automate, test, and deploy applications
+]]></description>
+      <pubDate>Fri, 11 Feb 22 20:33:40 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Glossary of Terms]]></title>
+      <link><![CDATA[http://dev-v3.test/glossary-of-terms/]]></link>      <description><![CDATA[This glossary contains definitions for frequently used and technical terms throughout the documentation. Familiarize yourself with these terms to understand their application in the docs.
+]]></description>
+      <pubDate>Mon, 24 Jan 22 22:08:38 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Health Check]]></title>
+      <link><![CDATA[http://dev-v3.test/design/testing-and-debugging/health-check/]]></link>      <description><![CDATA[Understand the various health check types to identify inconsistencies, irregularities, and issues that can possibly decrease operational efficiencies
+]]></description>
+      <pubDate>Mon, 14 Jun 21 21:16:50 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[High Availabilty]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-runtime/high-availability/]]></link>      <description><![CDATA[Learn how to ensure continuous availability of the MobiledgeX platform for all applications running on the cloudlets
+]]></description>
+      <pubDate>Thu, 18 Nov 21 18:56:51 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[How To Deploy Linux VMs]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/virtual-machine/linux/]]></link>      <description><![CDATA[Learn how to deploy a Linux Virtual Machine image to a Cloudlet using the MobiledgeX Edge-Cloud Console
+]]></description>
+      <pubDate>Thu, 18 Nov 21 16:24:14 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[How To Deploy Windows VMs]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/virtual-machine/windows/]]></link>      <description><![CDATA[Learn how to deploy a Windows Virtual Machine image to a Cloudlet using the MobiledgeX Edge-Cloud Console
+]]></description>
+      <pubDate>Thu, 18 Nov 21 16:16:58 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[How to use the mcctl utility for Developers]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/mcctl-developer/]]></link>      <description><![CDATA[Provides steps and examples on how to use the mcctl utility for developers.
+]]></description>
+      <pubDate>Tue, 19 Oct 21 16:41:46 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[How-To Guides]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/]]></link>      <description><![CDATA[This selection of guides will show you how to deploy different application types.
+]]></description>
+      <pubDate>Wed, 22 Sep 21 15:44:12 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Integrate Face Detection]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/android-sdk/add-face-detection/]]></link>      <description><![CDATA[Add Face Detection to an Android workshop application
+]]></description>
+      <pubDate>Tue, 23 Nov 21 16:12:55 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[iOS SDK]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/ios-sdk/]]></link>      <description><![CDATA[Use our iOS SDK to locate the most optimal server backend for applications on iOS devices. We have provided an example of how to add Edge support to an augmented reality game.
+]]></description>
+      <pubDate>Wed, 22 Sep 21 16:08:07 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[iOS SDK Third Party Licenses]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/ios-sdk/ios-sdk-third-party-licenses/]]></link>      <description><![CDATA[iOS SDK Third Party Licenses
+]]></description>
+      <pubDate>Fri, 14 Jan 22 22:38:51 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Local Edge Testing : EdgeBox]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/edgebox/]]></link>      <description><![CDATA[A How-To Guide for Developers to set up MobiledgeX EdgeBox for local edge computing testing.
+]]></description>
+      <pubDate>Thu, 29 Jul 21 22:02:59 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Manage Accounts]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/accounts/manage-accts/]]></link>      <description><![CDATA[Learn how to manage your accounts
+]]></description>
+      <pubDate>Fri, 12 Nov 21 21:07:19 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[mcctl Installation and Setup Guide]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/mcctl-reference/mcctl-installation-and-setup-guide/]]></link>      <description><![CDATA[Download and install the mcctl utility, review mcctl commands, and manage roles, users, and organizations
+]]></description>
+      <pubDate>Mon, 28 Mar 22 17:01:47 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[mcctl Utility Reference]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/mcctl-reference/]]></link>      <description><![CDATA[Provides reference information for the mcctl utility.
+]]></description>
+      <pubDate>Tue, 19 Oct 21 15:59:56 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Metric and Usage Commands]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/mcctl-reference/metric-and-usage-commands/]]></link>      <description><![CDATA[Learn about metric and usage commands with mcctl utility
+]]></description>
+      <pubDate>Fri, 08 Apr 22 18:52:09 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Client SDKs]]></title>
+      <link><![CDATA[http://dev-v3.test/product/mobiledgex-sdk/]]></link>      <description><![CDATA[Learn how our SDKs are built on top of our APIs to make it simpler to find the closest deployed application instance
+]]></description>
+      <pubDate>Thu, 15 Jul 21 20:17:12 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Computer Vision]]></title>
+      <link><![CDATA[http://dev-v3.test/services/computer-vision/]]></link>      <description><![CDATA[Learn how to take advantage of mobile edge computing through the use of our MobiledgeX Computer Vision Android library and Face Detection Server
+]]></description>
+      <pubDate>Tue, 21 Sep 21 21:06:49 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Demo App]]></title>
+      <link><![CDATA[http://dev-v3.test/product/mobiledgex-demo/]]></link>      <description><![CDATA[The MobiledgeX Android Demo showcases how a Client Device interacts with the MobiledgeX platform and Cloudlets located around the world.
+]]></description>
+      <pubDate>Fri, 12 Nov 21 20:11:49 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Developer Community]]></title>
+      <link><![CDATA[http://dev-v3.test/product/mobiledgex-community/]]></link>      <description><![CDATA[The MobiledgeX Developer Community is the place to meet and chat with developers excited to leverage the Mobile Network edge cloud to build new and innovative applications
+]]></description>
+      <pubDate>Mon, 24 Jan 22 22:48:21 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Edge Services]]></title>
+      <link><![CDATA[http://dev-v3.test/product/mobiledgex-edge-services/]]></link>      <description><![CDATA[Access some of our sample apps and connect to them using our SDKs
+]]></description>
+      <pubDate>Fri, 10 Sep 21 20:52:50 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Edge Services]]></title>
+      <link><![CDATA[http://dev-v3.test/services/]]></link>      <description><![CDATA[MobiledgeX Edge Services are tested products that allow you to focus on building applications for your clients.
+]]></description>
+      <pubDate>Wed, 22 Sep 21 16:13:48 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Edge-Cloud Console]]></title>
+      <link><![CDATA[http://dev-v3.test/product/mobiledgex-edge-cloud/]]></link>      <description><![CDATA[Learn how MobiledgeX Edge Computing platform can help developers host and scale applications on the Mobile Network Edge and reduce latency by bringing applications closer to your users
+]]></description>
+      <pubDate>Mon, 25 Oct 21 20:31:54 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Hello World]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/hello-world/]]></link>      <description><![CDATA[Guides for Deploying a Simple Hello World Web Application on the MobiledgeX platform
+]]></description>
+      <pubDate>Mon, 14 Jun 21 21:16:49 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Multiplayer Service]]></title>
+      <link><![CDATA[http://dev-v3.test/services/unity-edgemultiplay/]]></link>      <description><![CDATA[These step-by-step guides provide instructions on how to use the MobiledgeX Edge Multiplay Client &amp; Multiplayer Server.
+]]></description>
+      <pubDate>Tue, 21 Sep 21 21:07:00 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Release Notes]]></title>
+      <link><![CDATA[http://dev-v3.test/release-notes/]]></link>      <description><![CDATA[The MobiledgeX release notes cover all new features and known issues for both the MobiledgeX Edge-Cloud Console and our platform SDKs for Android, iOS, and Unity.
+]]></description>
+      <pubDate>Mon, 14 Jun 21 21:16:50 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Monitoring Apps]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/monitoring-and-metrics/]]></link>      <description><![CDATA[MobiledgeX offers Monitoring features to make it easier to maintain the health and performance of your edge applications. Learn how to use Monitoring with our guides.
+]]></description>
+      <pubDate>Tue, 20 Jul 21 03:21:34 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Monitoring Edge Events]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/monitoring-and-metrics/monitoring-edge-events/]]></link>      <description><![CDATA[Once Edge Events is integrated into your device via the MobiledgeX SDK, you may view the Edge Events data via the MobiledgeX Console
+]]></description>
+      <pubDate>Wed, 28 Jul 21 15:15:20 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Organizations]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/accounts/]]></link>      <description><![CDATA[Learn how to use the MobiledgeX Edge Computing Platform to deploy your applications and integrate our SDKs for Android, iOS, and Unity
+]]></description>
+      <pubDate>Tue, 21 Sep 21 20:40:15 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Product Overview]]></title>
+      <link><![CDATA[http://dev-v3.test/product/]]></link>      <description><![CDATA[Learn how MobiledgeX Edge Computing platform can help developers host and scale applications on the Telco Edge and reduce latency by bringing applications closer to your users
+]]></description>
+      <pubDate>Mon, 20 Sep 21 17:46:25 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Regional Commands]]></title>
+      <link><![CDATA[http://dev-v3.test/tools/mcctl-guides/mcctl-reference/audit-and-regional-commands/]]></link>      <description><![CDATA[Pull information from users and orgs, and view most common commands for deployment
+]]></description>
+      <pubDate>Mon, 28 Mar 22 17:00:05 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Running a Docker Image as an Application Instance]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-deployment-guides/hello-world/running-your-first-docker-image/]]></link>      <description><![CDATA[Create and deploy a dockerized webserver on the MobiledgeX platform
+]]></description>
+      <pubDate>Fri, 08 Apr 22 19:01:10 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Running SSHD Inside a Container]]></title>
+      <link><![CDATA[http://dev-v3.test/design/running-sshd-inside-container/]]></link>      <description><![CDATA[Best Practices on How to Run SSH Inside a Container
+]]></description>
+      <pubDate>Wed, 01 Dec 21 21:39:16 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Running the EdgeMultiplay Server Locally]]></title>
+      <link><![CDATA[http://dev-v3.test/services/unity-edgemultiplay/running-edge-multiplay/]]></link>      <description><![CDATA[How To Setup the MobiledgeX Edge Multiplay Server Locally and Connect To It With the SDK
+]]></description>
+      <pubDate>Mon, 14 Jun 21 21:16:50 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Runtime Policies]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/application-runtime/]]></link>      <description><![CDATA[Learn about application containers, VMs, zero-touch management and configuration, security, and scale based on the demand from clients
+]]></description>
+      <pubDate>Tue, 21 Sep 21 20:41:57 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[SDK Release Notes]]></title>
+      <link><![CDATA[http://dev-v3.test/release-notes/sdk/]]></link>      <description><![CDATA[Release Notes for all versions of the MobiledgeX SDKs for Android, iOS, and Unity. Learn about the new features and known issues for each release.
+]]></description>
+      <pubDate>Thu, 29 Jul 21 22:03:46 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[SDK Sample App]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/android-sdk/android-sdk-sample/]]></link>      <description><![CDATA[Add Edge support to the Android workshop application
+]]></description>
+      <pubDate>Tue, 23 Nov 21 15:30:42 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Search]]></title>
+      <link><![CDATA[http://dev-v3.test/search/]]></link>      <description><![CDATA[Can't find what you need? It might be somewhere else. Use the Search tool to filter content across all MobiledgeX web properties.
+]]></description>
+      <pubDate>Thu, 13 Jan 22 17:40:27 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Security & Trust Policy]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/security/]]></link>      <description><![CDATA[Learn how to secure your applications using the MobiledgeX Trust Policy
+]]></description>
+      <pubDate>Thu, 18 Nov 21 20:04:44 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Storing Metrics and Insights]]></title>
+      <link><![CDATA[http://dev-v3.test/design/testing-and-debugging/storing-metrics/]]></link>      <description><![CDATA[Learn how to use our application metrics to detect performance anomalies
+]]></description>
+      <pubDate>Tue, 15 Jun 21 22:13:52 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Stress Testing]]></title>
+      <link><![CDATA[http://dev-v3.test/design/how-to-stress-test/]]></link>      <description><![CDATA[How To Stress Test an Application Instance on MobiledgeX for Production Deployments
+]]></description>
+      <pubDate>Wed, 28 Jul 21 23:20:24 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Technical Overview]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/tech-overview/]]></link>      <description><![CDATA[Learn how our APIs work to connect Client Applications to deployed Application Instances
+]]></description>
+      <pubDate>Wed, 03 Nov 21 15:37:42 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Unity Computer Vision SDK]]></title>
+      <link><![CDATA[http://dev-v3.test/services/computer-vision/add-comp-vision-unity/]]></link>      <description><![CDATA[Learn how to add the MobiledgeX OpenCV Computer Vision library to your Unity Project
+]]></description>
+      <pubDate>Wed, 01 Dec 21 16:12:28 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Unity Download Instructions]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/unity-sdk/unity-sdk-download/]]></link>      <description><![CDATA[Learn how to use the Matching Engine Unity SDK to create applications for Unity devices
+]]></description>
+      <pubDate>Tue, 23 Nov 21 17:32:39 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Unity Edge Events (Beta)]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/unity-sdk/edge-events/]]></link>      <description><![CDATA[Learn how to integrate Edge Events into your Unity applications and games.
+]]></description>
+      <pubDate>Tue, 23 Nov 21 17:47:03 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Unity Sample App]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/unity-sdk/unity-sdk-sample/]]></link>      <description><![CDATA[Learn the potential benefits for low latency in a real-time application on an edge cloudlet server
+]]></description>
+      <pubDate>Thu, 29 Jul 21 21:29:38 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Unity SDK]]></title>
+      <link><![CDATA[http://dev-v3.test/sdks/unity-sdk/]]></link>      <description><![CDATA[Get Started using the Unity SDK
+]]></description>
+      <pubDate>Tue, 21 Sep 21 21:06:18 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Usage Logs & Events]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/monitoring-and-metrics/logs/]]></link>      <description><![CDATA[Learn about the various logs &amp; events that MobiledgeX supports and records from various sources to store in a single collection
+]]></description>
+      <pubDate>Thu, 18 Nov 21 22:03:42 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Utilization Metrics]]></title>
+      <link><![CDATA[http://dev-v3.test/deployments/monitoring-and-metrics/application-utilization-metrics/]]></link>      <description><![CDATA[Learn about the monitoring utilization metrics that are provided by MobiledgeX to help monitor the health and performance of your application.
+]]></description>
+      <pubDate>Fri, 14 Jan 22 20:33:14 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[What is MobiledgeX?]]></title>
+      <link><![CDATA[http://dev-v3.test/product/overview/]]></link>      <description><![CDATA[The MobiledgeX platform specializes in edge cloud operations and provides an Edge-Cloud Console, SDKs, and other edge tools.
+]]></description>
+      <pubDate>Thu, 13 Jan 22 17:23:22 +0000</pubDate>
+    </item>
+    
+
+  </channel>
+</rss>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finding the Edge at Scale | MobiledgeX</title>
+<meta name="description" content="After presenting at Edge Computing Congress in Berlin, Sunay Tripathi shares insights on the high value in being able to execute various services near the edge of the mobile network." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Finding the Edge at Scale" />
+<meta property="og:description" content="After presenting at Edge Computing Congress in Berlin, Sunay Tripathi shares insights on the high value in being able to execute various services near the edge of the mobile network." />
+<meta property="og:url" content="http://mexv3.test/blog/2018/09/25/finding-the-edge-at-scale" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="Finding the Edge at Scale" />
+<meta name="twitter:description" content="After presenting at Edge Computing Congress in Berlin, Sunay Tripathi shares insights on the high value in being able to execute various services near the edge of the mobile network." />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/mobiledgex-2020.jpg/4f8bdef8246172bfdd43dad10a0754f8.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/mobiledgex-2020.jpg/4f8bdef8246172bfdd43dad10a0754f8.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2018/09/25/finding-the-edge-at-scale" rel="canonical" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="finding-the-edge-at-scale-content">
+      <div class="row">
+        <div class="col">
+  <h1>Finding the Edge at Scale</h1>
+  <p class="datestamp">September 25th, 2018</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/mobiledgex-2020.jpg" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/sunay-tripathi.jpg" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/sunay-tripathi">Sunay Tripathi</a></p>
+            <p class="job-title">Chief Technology Officer & EVP of Engineering & Product</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2022/04/04/webinar-mobiledgex-and-intel-discuss-building-on-demand-edge-clouds-with-mixed-infrastructure">Webinar: MobiledgeX and Intel discuss "Building On-Demand Edge Clouds with Mixed Infrastructure"</a></li>
+                        <li><a href="/blog/2021/11/08/mobile-operator-edge-is-critical-to-facebook-s-meta">Mobile operator Edge is critical to Facebook’s “Meta”</a></li>
+                        <li><a href="/blog/2021/11/04/dt-nvidia-cloudxr">Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</a></li>
+                        <li><a href="/blog/2021/08/25/mobiledgex-edge-cloud-3-0-improved-visibility-and-operational-management-of-cloudlets-for-operators">MobiledgeX Edge-Cloud 3.0: Improved Visibility and Operational Management of Cloudlets for Operators</a></li>
+                        <li><a href="/blog/2021/08/17/mobiledgex-edge-cloud-3-0-optimal-edge-connectivity-with-edgeevents">MobiledgeX Edge-Cloud 3.0: Optimal Edge Connectivity with EdgeEvents</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/edge-computing">See more articles from the Edge Computing category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/sunay-tripathi.jpg" class="img-fluid headshot" alt="Headshot for Sunay Tripathi" />
+        <div class="info">
+          <p class="name">Sunay Tripathi</p>
+          <p class="job-title">Chief Technology Officer & EVP of Engineering & Product</p>
+        </div>
+      </div>
+      
+                  <p>In our  <a target="_blank" href="https://hubs.ly/H0dYgjG0">first blog</a>, Jason wrote about our coming out at Mobile World Congress Americas (MWCA) and he talked about what MobiledgeX was doing as a business at a high level, and why that makes good sense. The week after MCWA we participated in the Edge Congress in Berlin and it was my turn to talk a little about how we are doing this (a few more engineering and architecture details) and to even show an actual Android application running with MobiledgeX augmentation on the Deutsche Telekom German infrastructure. It was a real demo (not slideware or screenware)—real software running on real cellular infrastructure. I’ll give a few more details after setting the context (spoiler alert: the big story is how to deal with the scope and complexity of the mobile infrastructure).</p>
+                         <figure class="left">
+        <img src="/assets/blog/edge_scale_infographic.jpg" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>It’s easy to forget the scope and complexity of the global cellular infrastructure because it does what most computer technology can only aspire to—it just works and does so transparently. As an engineer and system architect, that tends to leave me breathless if I think about all the mechanisms it takes for me to get off the plane in Berlin, turn my phone on, use it and get billed for what I do. The cellular system is built out of the same digital computer and network technologies that computer people use (including a lot of software running on standard servers), but there is a lot more to it than most suspect. Let me put it this way—the global cellular infrastructure represents more than 1.7 trillion dollars of investment in the past 10 years. In contrast, the public cloud giants  have spent 300 billion dollars over a similar time period. There are nearly 800 mobile operators globally, connecting more than 5 billion people today [<a target="_blank" href="https://www.gsma.com/mobileeconomy/wp-content/uploads/2018/02/The-Mobile-Economy-Global-2018.pdf">https://www.gsma.com/mobileeconomy/wp-content/uploads/2018/02/The-Mobile-Economy-Global-2018.pdf</a> ] and with a forecast of 3.5 billion addition IOT connections by 2023 [<a target="_blank" href="https://www.ericsson.com/en/mobility-report/reports/june-2018/iot-connections-outlook">https://www.ericsson.com/en/mobility-report/reports/june-2018/iot-connections-outlook</a> ].  Both people and machines are connected at the edge via  more than 6 million cell towers [<a target="_blank" href="https://www.mobileworldlive.com/blog/blog-global-base-station-count-7m-or-4-times-higher/">https://www.mobileworldlive.com/blog/blog-global-base-station-count-7m-or-4-times-higher/</a> ].</p><p>I’m repeating all these statistics because you need to hold them in mind when you consider what MobiledgeX is doing.  When we’re fully deployed (many mobile operators, not just Deutsche Telekom) and when we’ve built a successful marketplace to provide edge augmentation services, when a smartphone user lands in some city around the globe, turns on their phone and starts to use one of the many MobiledgeX-enhanced applications, our infrastructure will have to perform quickly at global scale, as transparently as the cellular system places phone calls today. From the first time I thought about this opportunity, I thought of the issue of scale and when I talk to my engineers or our marketing team it’s the same reminder—it’s all about doing this at scale.</p><h2 id='our-approach-to-edge'><a class='anchor' aria-hidden='true' href='#our-approach-to-edge'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Our Approach to Edge</h2><p>Let’s double click down on what we’re doing. We believe there is high value in being able to execute various services near the edge of the mobile network (conceptually next to the radio network that the phone connects to). These could be functions that take advantage of the untapped capabilities of cellular services (e.g, better knowledge of who you are and where you are), that provide new edge services in the cellular network (e.g, CDN proxies), that augment the capabilities of the phone for demanding A/R and V/R applications, or enable high-speed collaboration between groups of nearby users playing games, for example.</p><p>We do that based on having formed business relationships with a large set of mobile operators around the world (there are many MobiledgeX values that accrue to the mobile operator as well as the device user and application owner—we believe we have something for almost everyone). These operators agree to give us access to excess server capacity (just like roaming today is the sharing of excess telephony capacity) between operators. In contrast to Internet ISP’s, the mobile operators operate lots of standard servers to run their businesses (technically and commercially). All we need to do our bit is access to some standard infrastructure (e.g., OpenStack or VMW) that can create containers or virtual servers as needed, that we can discover and use. We run software on specific created instances to implement our distributed control structure and to provide services in support of a mobile user or application. We pay the mobile operators for what we use, and recover that in the fees we charge</p>
+                   <blockquote>
+        <p>Our goal is to do this without requiring any participant (mobile operator, application or service owner) to change its business model or mode of operation.</p>
+       </blockquote>
+                   <p>To do this our software has to perform an impedance match between two very different worlds and technologies: to a developer or application owner we need to be friendly, dynamic and cloud-like, and our marketplace (the collective community of our developers) has to offer compelling functionality for important applications.  The mobile operators need to trust us as a business partner and trust us technically not to destabilize the global cellular infrastructure. Our goal is to do this without requiring any participant (mobile operator, application or service owner) to change its business model or mode of operation.</p><h2 id='edge-services-we’re-working-on'><a class='anchor' aria-hidden='true' href='#edge-services-we’re-working-on'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Edge Services We’re Working On</h2><p>There are many ways in which the MobiledgeX infrastructure can be used commercially. In the case of a MobiledgeX-augmented smartphone application, it typically happens this way. The application developer includes a MobiledgeX library in their software build.  When the application runs the application and device/subscriber register with our global control infrastructure.  The registration process identifies the “backend” software the application would like to use (although in this case it’s more like “edgeend.”) The MobiledgeX system then determines an optimal location to run that backend from the set of operator partner locations, and deploys and instantiates that backend, all in the veritable blink of an eye.</p><p>We call the subsystem that does this the Distributed Matching Engine, a microservices-based distributed component of MobiledgeX. The initial version is up and running on Google Cloud, written in such a way that we believe it can scale in capacity and distribution to meet our ambitious objectives. We’re not going to say a lot more about the details, but those of us who have been my distributed systems colleagues at Sun and then Pluribus can guess at some of the bits. In the end, we think this fabric would speak for itself just by doing what it’s designed to do, but that demonstration will be continuing rolling thunder as we sign up more operators and support more applications and give more demos. Stay tuned.</p><p>The other major components of our system include a geographically distributed, microservices based, controller to manage the developers, developer applications and operator provided cloudlets and a microservices based Cloudlet Resource Manager (CRM) that manages individual cloudlets while being agnostic to the IaaS layer the operator used underneath. On top is a micro-services based edge-cloud controller that can be country specific (to deal with country specific privacy laws) and deploys application backend on cloudlets based on demand seen for that particular application by the Distributed Matching Engines in each location. Obviously the system has to deal with more complexity than that but this should give the idea at a high level and in future blogs I will go into more details.</p><h2 id='quick-glimpse-of-the-edge-demo'><a class='anchor' aria-hidden='true' href='#quick-glimpse-of-the-edge-demo'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Quick Glimpse of the Edge demo</h2><p>Oh, at the beginning I promised to describe our demo briefly, so here goes.  We have a working version of the initial libraries that need to be included in an Android application (IoS is still under development). Using the library, we built a simple application where the user can say what his location is (or use the location that the phone already has calculated). When the application has begun, the device (and user) are registered in the MobiledgeX control system, and we find an optimal location to execute the backend component of the application.  When the user submits his location, we use our integration with Deutsche Telekom’s cellular infrastructure to verify that the location claimed is consistent with the location seen by the phone system (which cell is being used). If those answers disagree, the location claimed is declared to be fraudulent.</p><p>As any engineer knows, it feels wonderful to see your technical baby take its first steps and I’m very proud of what the team has done in a short period of time, but I’m even prouder of the fact that this simple demo is running on an early version or our infrastructure that can scale to match the modern global cellular infrastructure.</p>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2018/09/25/finding-the-edge-at-scale&title=Finding+the+Edge+at+Scale"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=Finding+the+Edge+at+Scale&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2018/09/25/finding-the-edge-at-scale&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2018/09/25/finding-the-edge-at-scale"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

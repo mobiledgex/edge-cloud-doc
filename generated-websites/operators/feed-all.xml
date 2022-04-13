@@ -1,0 +1,297 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://operators.mobiledgex.com/feed-all.xml" rel="self" type="application/rss+xml" />
+    <title>MobiledgeX</title>
+    <link><![CDATA[https://developers.mobiledgex.com]]></link>
+    <description>MobiledgeX is a creating a marketplace of edge resources and services that will connect developers with the world’s largest mobile networks to power the next generation of applications and devices.</description>
+    <category>Edge Computing</category>
+    <image>
+      <url><![CDATA[https://mobiledgex.com/img/asset/c29jaWFsL21vYmlsZWRnZXhfc29jaWFsLWltYWdlLnBuZw==?p=seo&s=f1af75ae8d562d2da2025d535fcebb93]]></url>
+      <title>MobiledgeX</title>
+      <link>https://developers.mobiledgex.com</link>
+    </image>
+
+        <item>
+      <title><![CDATA[2.4]]></title>
+      <link><![CDATA[http://operator-portal.test/release-notes/edge-cloud-console-release-notes-2-4/]]></link>      <description><![CDATA[Edge-Cloud Release Notes for 2.4]]></description>
+      <pubDate>Mon, 26 Jul 21 22:56:50 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[2.4.1]]></title>
+      <link><![CDATA[http://operator-portal.test/release-notes/edge-cloud-console-release-notes-2-4-1/]]></link>      <description><![CDATA[Edge-Cloud Release Notes for 2.4.1]]></description>
+      <pubDate>Mon, 26 Jul 21 22:51:48 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[3.0]]></title>
+      <link><![CDATA[http://operator-portal.test/release-notes/edge-cloud-console-release-notes-3-0/]]></link>      <description><![CDATA[Edge-Cloud Release Notes for 3.0]]></description>
+      <pubDate>Tue, 23 Nov 21 21:21:52 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Account Management]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/account-management/]]></link>      <description><![CDATA[Learn how to manage your accounts]]></description>
+      <pubDate>Thu, 07 Oct 21 17:01:59 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Accounts]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/account-management/accounts/]]></link>      <description><![CDATA[Learn how to create and manage accounts]]></description>
+      <pubDate>Tue, 19 Oct 21 18:08:15 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[API Key Access and Permissions]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/api-token-access-and-permissions/]]></link>      <description><![CDATA[Provides steps on how to set up API token access and permissions]]></description>
+      <pubDate>Wed, 22 Sep 21 21:02:12 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Cloudlet Commands]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/cloudlet-commands/]]></link>      <description><![CDATA[Use cloudlet metric commands using mcctl utility]]></description>
+      <pubDate>Fri, 01 Apr 22 18:18:42 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Cloudlet Deployment Guides]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/cloudlet-deployment-guides/]]></link>      <description><![CDATA[Learn about Cloudlets and how to deploy them]]></description>
+      <pubDate>Tue, 26 Oct 21 14:24:55 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Cloudlet Pools]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools/]]></link>      <description><![CDATA[Learn how to setup pool membership to restrict users from accessing cloudlets that are defined for a particular Cloudlet pool]]></description>
+      <pubDate>Tue, 25 Jan 22 16:13:06 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Debugging]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/debugging/]]></link>      <description><![CDATA[Learn the various ways to help you collect metrics to detect performance anomalies and increase operational efficiencies]]></description>
+      <pubDate>Tue, 26 Oct 21 14:27:13 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Deploying Cloudlets]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets/]]></link>      <description><![CDATA[Learn the different ways to deploy Cloudlets]]></description>
+      <pubDate>Fri, 18 Feb 22 23:02:37 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Direct vs. Restricted Access]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/resource-management-and-workflow/direct-vs-restricted-access/]]></link>      <description><![CDATA[Learn about the different access types used depending on the IaaS type supported]]></description>
+      <pubDate>Mon, 08 Nov 21 22:43:05 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Documentation]]></title>
+      <link><![CDATA[http://operator-portal.test/documentation/]]></link>      <description><![CDATA[Edge computing brings computing resources to where they are needed the most. The MobiledgeX Edge-Cloud Platform helps Mobile Network Operators build their own edge clouds and generate new revenue while giving developers a platform to run their apps utilizing the telco edge infrastructure.]]></description>
+      <pubDate>Mon, 31 Jan 22 21:03:11 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Edge-Cloud Resource Manager Plugin]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/]]></link>      <description><![CDATA[Learn how edge infrastructures are aggregated across network locations and the various supported IaaS types]]></description>
+      <pubDate>Tue, 25 Jan 22 15:52:10 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[EdgeBox: Proof of Concept Testing]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/edgebox-proof-of-concept-testing/]]></link>      <description><![CDATA[Test Drive our MobiledgeX Platform and test locally without impact to existing network infrastructure]]></description>
+      <pubDate>Fri, 19 Nov 21 19:41:21 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[FAQs and Support]]></title>
+      <link><![CDATA[http://operator-portal.test/faqs-and-support/]]></link>      <description><![CDATA[Access the MobiledgeX most frequently asked questions and answers on terminology and how the platform operates.]]></description>
+      <pubDate>Mon, 14 Feb 22 16:11:39 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Getting Started]]></title>
+      <link><![CDATA[http://operator-portal.test/]]></link>      <description><![CDATA[Begin getting started with the MobiledgeX Edge-Cloud Console]]></description>
+      <pubDate>Wed, 12 Jan 22 19:09:26 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Health Check and Alerts]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/debugging/health-check-and-alert/]]></link>      <description><![CDATA[Understand how health checks can help identify inconsistencies, irregularities, and issues that can possibly decrease operational efficiencies]]></description>
+      <pubDate>Thu, 17 Feb 22 19:08:22 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[IaaS Type: Bare Metal Anthos]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-6-baremetal-anthos/]]></link>      <description><![CDATA[Support for Bare Metal Anthos]]></description>
+      <pubDate>Thu, 21 Oct 21 14:38:51 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[IaaS Type: Bare Metal OpenStack]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/]]></link>      <description><![CDATA[Discusses MobiledgeX support for Operator without IaaS Virtualization Stack for Edge]]></description>
+      <pubDate>Mon, 06 Dec 21 15:24:30 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[IaaS Type: OpenStack]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-1-openstack/]]></link>      <description><![CDATA[Discusses Openstack support for Operators]]></description>
+      <pubDate>Fri, 03 Dec 21 22:39:31 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[IaaS Type: VMPool]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-4-vmpool/]]></link>      <description><![CDATA[Support for VMPool]]></description>
+      <pubDate>Mon, 06 Dec 21 15:21:20 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[IaaS Type: VMware Cloud Director]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-3-vcd/]]></link>      <description><![CDATA[Support for VMware vCD]]></description>
+      <pubDate>Mon, 06 Dec 21 15:22:01 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[IaaS Type: Vsphere]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-2-vsphere/]]></link>      <description><![CDATA[Discusses Vsphere support]]></description>
+      <pubDate>Fri, 03 Dec 21 22:46:00 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Inbound and Outbound Ports]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/debugging/appendix-a-ports/]]></link>      <description><![CDATA[Learn which ports are used to manage inbound/outbound traffic on the MobiledgeX platform]]></description>
+      <pubDate>Fri, 19 Nov 21 19:34:16 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Manage GPU Drivers for Cloudlets]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/cloudlet-deployment-guides/manage-gpu-drivers-for-cloudlets/]]></link>      <description><![CDATA[Learn about GPU/vGPU support for cloudlets]]></description>
+      <pubDate>Wed, 13 Apr 22 17:12:33 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Mapping Virtual Machines to IaaS]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/mapping-virtual-machines-to-iaas/]]></link>      <description><![CDATA[Learn how to map resources from the MobiledgeX platform to IaaS platforms using mcctl]]></description>
+      <pubDate>Fri, 15 Oct 21 17:31:50 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[mcctl Installation and Setup Guide]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/mcctl-installation-and-setup-guide/]]></link>      <description><![CDATA[Learn how to download and install the mcctl utility, manage users and organizations, and review mcctl commands]]></description>
+      <pubDate>Fri, 01 Apr 22 16:07:53 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[mcctl Utility Reference]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/]]></link>      <description><![CDATA[The mcctl utility is designed to provide access to the MobiledgeX APIs from the command line. This is a MobiledgeX supported utility and can be downloaded from Artifactory.]]></description>
+      <pubDate>Tue, 19 Oct 21 16:04:02 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Metric Commands]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/intro-to-mcctl-metric-commands/]]></link>      <description><![CDATA[Learn how to use application and cluster level commands using mcctl utility]]></description>
+      <pubDate>Fri, 08 Apr 22 18:57:41 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Assisted Deployment for Bare Metal Openstack]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-deployment-for-baremetal-openstack/]]></link>      <description><![CDATA[MobiledgeX assisted deployment]]></description>
+      <pubDate>Thu, 10 Mar 22 19:35:00 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Assisted OpenStack Deployment Options]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-openstack-deployment-options/]]></link>      <description><![CDATA[Discusses MobiledgeX assisted Openstack options]]></description>
+      <pubDate>Wed, 27 Oct 21 14:21:13 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[MobiledgeX Edge-Cloud Console]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/]]></link>      <description><![CDATA[Learn how MobiledgeX Edge-Cloud Console can simplify deployments of cloudlets and offers tools to manage and monitor resources]]></description>
+      <pubDate>Tue, 25 Jan 22 17:16:13 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Monitoring: Events, Usage, and Metrics]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/debugging/operator-monitoring-and-metrics/]]></link>      <description><![CDATA[Learn how to use operator metrics to detect performance anomalies and help manage cloudlets, clusters, and pools]]></description>
+      <pubDate>Wed, 13 Apr 22 17:08:20 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Openstack Tenant Deployment]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-option/]]></link>      <description><![CDATA[Supported OpenStack Tenant Deployment]]></description>
+      <pubDate>Tue, 09 Nov 21 19:32:30 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[OpenStack Tenant Deployment Options]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-options/]]></link>      <description><![CDATA[Discusses the various OpenStack Tenant Deployment options]]></description>
+      <pubDate>Wed, 27 Oct 21 14:20:24 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Operational Readiness]]></title>
+      <link><![CDATA[http://operator-portal.test/operational-readiness/]]></link>      <description><![CDATA[Operational Readiness]]></description>
+      <pubDate>Mon, 14 Mar 22 17:29:47 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Operator Cloudlet Maintenance]]></title>
+      <link><![CDATA[http://operator-portal.test/operational-readiness/operator-cloudlet-maintenance/]]></link>      <description><![CDATA[This page describes best practices to take cloudlet to maintenance state for maintenance activities by an operator.]]></description>
+      <pubDate>Thu, 10 Feb 22 19:58:29 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Operator Specific MCCTL and REST APIs]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/]]></link>      <description><![CDATA[Operator Specific MCCTL and REST APIs]]></description>
+      <pubDate>Fri, 25 Sep 20 17:59:10 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Organizations and Users]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/account-management/organizations-and-users/]]></link>      <description><![CDATA[Add organizations and manager users]]></description>
+      <pubDate>Thu, 10 Feb 22 20:02:58 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Product Overview]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/]]></link>      <description><![CDATA[Learn how Mobile Network Operators can host network edge infrastructure and offer it to developers to help expedite application development and deployment]]></description>
+      <pubDate>Thu, 17 Feb 22 19:37:53 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Regional Commands]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/audit-and-regional-commands/]]></link>      <description><![CDATA[Regional commands using the mcctl utility]]></description>
+      <pubDate>Mon, 28 Mar 22 17:03:35 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Release Notes]]></title>
+      <link><![CDATA[http://operator-portal.test/release-notes/]]></link>      <description><![CDATA[Release Notes for Operators]]></description>
+      <pubDate>Tue, 09 Nov 21 18:49:36 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Reports and Monitoring Commands]]></title>
+      <link><![CDATA[http://operator-portal.test/operator-specific-mcctl-and-rest-apis/mcctl-reference/reports-and-monitoring/]]></link>      <description><![CDATA[Monitor application, app instance, and Cloudletpool usage with mcctl]]></description>
+      <pubDate>Wed, 16 Mar 22 17:21:52 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Resource Management and Reporting]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/debugging/reports/]]></link>      <description><![CDATA[Describes the report scheduler feature]]></description>
+      <pubDate>Wed, 27 Oct 21 20:14:48 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Resource Management and Workflow]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/operator-guides/resource-management-and-workflow/]]></link>      <description><![CDATA[Learn how to work with MobiledgeX to manage cloudlet objects and resources in a secure manner]]></description>
+      <pubDate>Mon, 08 Nov 21 22:49:34 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Search]]></title>
+      <link><![CDATA[http://operator-portal.test/search/]]></link>      <description><![CDATA[Can't find what you need? It might be somewhere else. Use the Search tool to filter content across all MobiledgeX web properties.]]></description>
+      <pubDate>Thu, 13 Jan 22 17:41:53 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Security and Privacy Standards Policies]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/security-and-privacy-standards-policies/]]></link>      <description><![CDATA[Learn about our approach to security and privacy policies to protect users and data]]></description>
+      <pubDate>Thu, 28 Oct 21 15:00:23 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[Supported Features across IaaS]]></title>
+      <link><![CDATA[http://operator-portal.test/iaas-supported-features/]]></link>      <description><![CDATA[Supported features across IaaS]]></description>
+      <pubDate>Wed, 23 Mar 22 18:34:22 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[VCD Deployment: Operator Provides a Tenant]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-3-vcd/vcd-deployment-operator-provides-a-tenant/]]></link>      <description><![CDATA[Supported vCD Deployment Scenario]]></description>
+      <pubDate>Mon, 31 Jan 22 16:44:46 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[VM Pool Installation on VMware vCD]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-4-vmpool/vm-pool/]]></link>      <description><![CDATA[Describes the end to end steps to deploy a MobiledgeX cloudlet using VM Pool Deployment option on VMware vCD Virtualized Infrastructure Manager.]]></description>
+      <pubDate>Thu, 10 Mar 22 19:34:01 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[VMPool Deployment]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-4-vmpool/vmpool-deployment/]]></link>      <description><![CDATA[Supported VMPool deployment]]></description>
+      <pubDate>Thu, 10 Mar 22 19:29:32 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[VMpool Deployment Options]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-4-vmpool/scenario-deployment-model-2-mobiledgex-assisted-openstack-deployment-operator-provides-the-bare-metal-server/]]></link>      <description><![CDATA[Describes VMPool Deployment Options]]></description>
+      <pubDate>Wed, 18 Aug 21 18:13:45 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[VMware vCloud Director (VCD) Deployment]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-3-vcd/vmware-vcloud-director-vcd-deployment/]]></link>      <description><![CDATA[Requirements for VMware Deployment]]></description>
+      <pubDate>Wed, 27 Oct 21 21:14:01 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[vSphere Deployment]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment/]]></link>      <description><![CDATA[Supported vSphere Deployment]]></description>
+      <pubDate>Thu, 10 Mar 22 19:27:51 +0000</pubDate>
+    </item>
+        <item>
+      <title><![CDATA[VSphere Deployment options]]></title>
+      <link><![CDATA[http://operator-portal.test/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment-options/]]></link>      <description><![CDATA[Discusses VSphere deployment options]]></description>
+      <pubDate>Thu, 10 Mar 22 19:30:29 +0000</pubDate>
+    </item>
+    
+
+  </channel>
+</rss>

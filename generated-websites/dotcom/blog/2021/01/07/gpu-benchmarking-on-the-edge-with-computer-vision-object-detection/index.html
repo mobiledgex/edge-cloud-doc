@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPU Benchmarking on the Edge with Computer Vision Object Detection | MobiledgeX</title>
+<meta name="description" content="With the growing popularity of Artificial Intelligence and Machine Learning applications, GPU availability has become more critical than ever." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="GPU Benchmarking on the Edge with Computer Vision Object Detection" />
+<meta property="og:description" content="With the growing popularity of Artificial Intelligence and Machine Learning applications, GPU availability has become more critical than ever." />
+<meta property="og:url" content="http://mexv3.test/blog/2021/01/07/gpu-benchmarking-on-the-edge-with-computer-vision-object-detection" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="GPU Benchmarking on the Edge with Computer Vision Object Detection" />
+<meta name="twitter:description" content="With the growing popularity of Artificial Intelligence and Machine Learning applications, GPU availability has become more critical than ever." />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/image-20201208-173507.jpg/ffc84a0cc3a7692587051587cd953669.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/image-20201208-173507.jpg/ffc84a0cc3a7692587051587cd953669.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2021/01/07/gpu-benchmarking-on-the-edge-with-computer-vision-object-detection" rel="canonical" />
+<link href="http://mexv3.test/blog/2021/01/07/gpu-benchmarking-on-the-edge-with-computer-vision-object-detection?page=5" rel="prev" />
+<link href="http://mexv3.test/blog/2021/01/07/gpu-benchmarking-on-the-edge-with-computer-vision-object-detection?page=7" rel="next" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="gpu-benchmarking-on-the-edge-with-computer-vision-object-detection-content">
+      <div class="row">
+        <div class="col">
+  <h1>GPU Benchmarking on the Edge with Computer Vision Object Detection</h1>
+  <p class="datestamp">January 7th, 2021</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/image-20201208-173507.jpg" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/bruce-armstrong-headshot.jpg" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/bruce-armstrong">Bruce Armstrong</a></p>
+            <p class="job-title">Principal Engineer</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2022/01/18/massive-technologies-showcases-unity-render-streaming">Massive Technologies Showcases the Advantage of Unity Render Streaming at hubraum</a></li>
+                        <li><a href="/blog/2021/11/09/developer-spotlight-ums">Developer Spotlight: Unmanned Life</a></li>
+                        <li><a href="/blog/2021/11/04/dt-nvidia-cloudxr">Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</a></li>
+                        <li><a href="/blog/2021/11/02/event-join-mobiledgex-and-partners-for-a-discussion-of-infrastructure-critical-to-mobile-ar-vr-at-awe-usa-2021-nov-11th-9-30-a-m-10-25-a-m-pt">[Event] Join MobiledgeX and partners for a discussion of infrastructure critical to mobile AR/VR at AWE USA 2021 (Nov 11th 9:30 a.m.- 10:25 a.m PT)</a></li>
+                        <li><a href="/blog/2021/10/07/developer-spotlight-forwardgame">Developer Spotlight: forwARdgame</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/developer">See more articles from the Developer category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                                                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/bruce-armstrong-headshot.jpg" class="img-fluid headshot" alt="Headshot for Bruce Armstrong" />
+        <div class="info">
+          <p class="name">Bruce Armstrong</p>
+          <p class="job-title">Principal Engineer</p>
+        </div>
+      </div>
+      
+                  <h2 id='introduction'><a class='anchor' aria-hidden='true' href='#introduction'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Introduction</h2><p>With the growing popularity of Artificial Intelligence and Machine Learning applications, GPU availability has become more critical than ever. For the cases of compute offload or remote rendering, GPU is essential at the Edge. At MobiledgeX, we are in the process of deploying GPUs to more of our cloudlet locations. As of today, GPU cloudlets are a hot commodity, but still relatively scarce. Because of this, it is vital to understand how many concurrent users a single GPU can support. The use case we will study for this is Object Detection. We will be running our open source <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/tree/master/ComputerVisionServer">ComputerVision server</a> on a GPU enabled cloudlet and connecting to it with multiple clients simultaneously to stress the server.</p><h2 id='cpu-gpu-comparisons'><a class='anchor' aria-hidden='true' href='#cpu-gpu-comparisons'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>CPU/GPU Comparisons</h2><p>There’s no question that the types of computer vision processing that we’re interested in benefit significantly from a GPU. This table shows a comparison between CPU-only and GPU-enabled processing for a couple of different computer vision activities. The values shown are the average times to process one frame.</p><table><tbody><tr><th colspan="1" data-colwidth="170" rowspan="1"><p>Activity</p></th><th colspan="1" data-colwidth="170" rowspan="1"><p>CPU-only</p></th><th colspan="1" data-colwidth="170" rowspan="1"><p>GPU Support</p></th><th colspan="1" data-colwidth="170" rowspan="1"><p>Performance Improvement</p></th></tr><tr><td colspan="1" data-colwidth="170" rowspan="1"><p><a href="https://developers.mobiledgex.com/guides-and-tutorials/computer-vision/how-to-computer-vision-api#pose-detection">Pose Detection</a></p></td><td colspan="1" data-colwidth="170" rowspan="1"><p>14408.680 ms</p></td><td colspan="1" data-colwidth="170" rowspan="1"><p>64.589 ms</p></td><td colspan="1" data-colwidth="170" rowspan="1"><p>223.08x</p></td></tr><tr><td colspan="1" data-colwidth="170" rowspan="1"><p><a href="https://developers.mobiledgex.com/guides-and-tutorials/computer-vision/how-to-computer-vision-api#object-detection">Object Detection</a></p></td><td colspan="1" data-colwidth="170" rowspan="1"><p>403.652 ms</p></td><td colspan="1" data-colwidth="170" rowspan="1"><p>41.340 ms</p></td><td colspan="1" data-colwidth="170" rowspan="1"><p>9.76x</p></td></tr></tbody></table><p>These computer vision activities benefit significantly from GPU support. We have found Object Detection has been more popular as a computer vision demonstration, so let’s dig in and see how much performance we can squeeze out of a single GPU.</p><h2 id='the-use-case'><a class='anchor' aria-hidden='true' href='#the-use-case'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>The Use Case</h2><p>We are testing for a use case where a ComputerVision app instance runs on a cloudlet and serves multiple clients. Those clients might be surveillance cameras, drones, self-driving cars, etc. In this use case, the number of frames processed per second is important to each client. The time it takes for an object detection result to be returned for an image might make the difference between a smooth, uneventful ride, and a severe car crash. We want to discover the configuration that will give us the lowest possible latency for each client to receive each result. We know Edge computing gives us the lowest possible network latency, and that a GPU-equipped server will process object detection requests much faster than a CPU-only server. But is that enough? This image shows an example of our use case:</p>
+                         <figure class="full">
+        <img src="/assets/blog/image-20201208-210304.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <h2 id='testing-methodology'><a class='anchor' aria-hidden='true' href='#testing-methodology'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Testing Methodology</h2><h3 id='using-edge-to-test-edge'><a class='anchor' aria-hidden='true' href='#using-edge-to-test-edge'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Using Edge to Test Edge</h3><p>As most of our GPUs are deployed in Germany, we are also using simulated clients in Germany to approximate a low-latency Edge environment. We use the <code>/client/benchmark</code> web service, which runs as part of every ComputerVision instance in Germany. This allowed us to use any ComputerVision instance as a client to connect to any specified server. One nice thing about this setup is that no software installation is required at all to run a test. As long as you have access to the “curl” command, you can start a benchmarking session.</p><p>The following diagram shows a laptop in the U.S. initiating tests on multiple ComputerVision app instances in Germany, acting as clients and connecting to the server in Frankfurt.</p>
+                         <figure class="full">
+        <img src="/assets/blog/image-20201208-180915.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>Here’s an example command line that launches a client in Dusseldorf which connects to a server in Berlin and processes each frame of a specified video:</p><p><code>curl -X POST https://cv-gpu-cluster.dusseldorf-main.tdg.mobiledgex.net:8008/client/benchmark/ -d &quot;-s cv-gpu-cluster.berlin-main.tdg.mobiledgex.net --tls -e /object/detect/ -c websocket -f objects_320x180.mp4 -n PING --server-stats”</code></p><p>These are the results returned:</p><pre><code>========================================================================================
+Grand totals for cv-gpu-cluster.berlin-main.tdg.mobiledgex.net /object/detect/ websocket
+1 threads repeated 1 times on 1 files. 313 total frames. FPS=17.51
+========================================================================================
+====&gt; Average Latency Full Process=54.830 ms (stddev=26.618) FPS=18.24
+====&gt; Average Latency Network Only=11.763 ms (stddev=0.522)
+====&gt; Average Server Processing Time=31.972 ms (stddev=3.005)
+====&gt; Average CPU Utilization=17.1%
+====&gt; Average Memory Utilization=55.0%
+====&gt; Average GPU Utilization=33.5%
+====&gt; Average GPU Memory Utilization=20.4%
+</code></pre><p>Details of what the client actually does can be seen in the source of the <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/ComputerVisionServer/moedx/client/multi_client.py">multi_client.py</a> script in our repo. This script can be run from the command line to initiate a test, or it can be called from the <code>/client/benchmark</code> endpoint to remotely launch a client benchmark to any ComputerVision server.</p><p>With another script, we can launch multiple clients simultaneously, and aggregate the results. Here is an example command line for <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/ComputerVisionServer/moedx/client/remote_bench.py">remote_bench.py</a> and a snippet of the results:</p><p><code>python remote_bench.py -n 2</code></p><pre><code>2/2 clients reporting:
+Num Clients, FPS/Client, Total FPS, % CPU, %Mem, %GPU, %GPU Mem
+2, 13.41, 26.81, 23.08, 17.83, 25.02, 15.05
+</code></pre><p>The last couple of lines allow importing CSV data into a spreadsheet. We will see several spreadsheets in the “Results” section below.</p><h2 id='server-hardware-architecture'><a class='anchor' aria-hidden='true' href='#server-hardware-architecture'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Server Hardware Architecture</h2><h3 id='cpu-only '><a class='anchor' aria-hidden='true' href='#cpu-only '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>CPU-only </h3><p>This configuration is used as a baseline to collect results with no GPU support. The CPU is an Intel Xeon Processor (Skylake, IBRS) with four cores running at 2992.968 MHz. Server configuration summary:</p><table><tbody><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>RAM Size(GB)</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>8</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Number of vCPUs</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>4</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Disk Space(GB)</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>80</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Number of GPUs</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>0</p></td></tr></tbody></table><h3 id='gpu-support '><a class='anchor' aria-hidden='true' href='#gpu-support '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>GPU Support </h3><p>This configuration keeps the same CPU and RAM as above, but adds a GPU.</p><table><tbody><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>RAM Size(GB)</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>8</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Number of vCPUs</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>4</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Disk Space(GB)</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>160</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Number of GPUs</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>1</p></td></tr></tbody></table><p>The GPU is a <strong>NVIDIA Tesla T4</strong> with 16GB. The NVIDIA GPU driver used is version 440.64 and the CUDA version is 10.2.</p><p>Our ComputerVision server was developed using the the <a href="https://pytorch.org/">pytorch</a> package and the Django framework. With Django, multiple workers can simultaneously handle incoming requests more efficiently than a single process with multi-threading. In the multi-worker case, there is no concept of shared memory between workers. This means that each worker must load all of the required object detection libraries and pre-trained models into both system and GPU memory.</p><p>We found that with this 8GB configuration and the GPU version of our ComputerVision server, only a single worker could be executed at a time without running out of system memory. In this configuration with a single worker process, Memory Utilization was 55%. Two workers would be 110%, which is not possible, and it shows us that a single worker is all we can run in this configuration.</p><h3 id='gpu-support-with-high-system-ram'><a class='anchor' aria-hidden='true' href='#gpu-support-with-high-system-ram'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>GPU Support with High System RAM</h3><p>This is the exact same CPU and GPU configuration as above, but with 32GB of system RAM, allowing multiple Django worker processes can be executed simultaneously.</p><table><tbody><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>RAM Size(GB)</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>32</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Number of vCPUs</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>4</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Disk Space(GB)</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>160</p></td></tr><tr><td colspan="1" data-colwidth="340" rowspan="1"><p>Number of GPUs</p></td><td colspan="1" data-colwidth="340" rowspan="1"><p>1</p></td></tr></tbody></table><h2 id='gpu-benchmarks'><a class='anchor' aria-hidden='true' href='#gpu-benchmarks'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>GPU Benchmarks</h2><h2 id='measurement'><a class='anchor' aria-hidden='true' href='#measurement'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Measurement</h2><p>To measure CPU and GPU utilization, we have a web service endpoint called “/server/usage/”. Here is an example curl command and some sample output while the server is under load:</p><p><code>curl https://cv-gpu-cluster.frankfurt-main.tdg.mobiledgex.net:8008/server/usage/</code></p><pre><code>{&quot;cpuutil&quot;: 34.6, &quot;memutil&quot;: 49.9, &quot;gpuutil&quot;: &quot;46&quot;, &quot;gpumem_util&quot;: &quot;29&quot;}</code></pre><p>Internally, this web service uses the <a href="https://psutil.readthedocs.io/en/latest/">psutil</a> Python package and the <a href="https://developer.download.nvidia.com/compute/DCGM/docs/nvidia-smi-367.38.pdf">nvidia-smi</a> command. Here is an example command line, followed by example output. The first two samples are before the test is started, and show “utilization” values of 0%. The rest of the output is during a single-client run with a single worker process:</p><p><code>nvidia-smi --query-gpu=utilization.gpu,utilization.memory,memory.total,memory.used --format=csv -l 1</code></p><pre><code>utilization.gpu [%], utilization.memory [%], memory.total [MiB], memory.used [MiB]
+0 %, 0 %, 15109 MiB, 3155 MiB
+0 %, 0 %, 15109 MiB, 3155 MiB
+40 %, 24 %, 15109 MiB, 3155 MiB
+30 %, 18 %, 15109 MiB, 3155 MiB
+46 %, 27 %, 15109 MiB, 3155 MiB
+45 %, 27 %, 15109 MiB, 3155 MiB
+39 %, 24 %, 15109 MiB, 3155 MiB
+</code></pre><p>From this, we can see that even at idle, 3155 MiB of the GPU memory is allocated or “used”, even though the “utilization.memory [%]” value “0 %”. This shows that a worker process consumes GPU memory even if it is not currently processing. When the worker goes from idle to actively performing object detection, the “memory.used” value remains constant. Only the “utilization.gpu” and “utilization.memory” values increase and may become limiting factors. Defining what these utilization numbers mean is beyond the scope of this post. You can read specifically from the <a href="https://developer.download.nvidia.com/compute/DCGM/docs/nvidia-smi-367.38.pdf">nvidia-smi documentation</a> what each of these utilization values represents. While 100% utilization does not exactly imply the GPU’s maximum utilization, it gives us a rough approximation. To get a true reflection of the maximum capacity for a single GPU, we would need to use <a href="https://developer.nvidia.com/nvidia-visual-profiler">GPU profiling</a>, which is an upcoming feature in the MobiledgeX platform.</p><p>Adding additional workers increases the “memory.used [MiB]” value. With our 16GB GPU, we found that four workers were the most we could use.</p><table><tbody><tr><td colspan="1" data-colwidth="213" rowspan="1"><p><strong>Number of Workers</strong></p></td><td colspan="1" data-colwidth="223" rowspan="1"><p><strong>memory.used [MiB]</strong></p></td><td colspan="1" data-colwidth="324" rowspan="1"><p><strong>Worker Startup Status</strong></p></td></tr><tr><td colspan="1" data-colwidth="213" rowspan="1"><p>1</p></td><td colspan="1" data-colwidth="223" rowspan="1"><p>3155</p></td><td colspan="1" data-colwidth="324" rowspan="1"><p>CUDNN<em>_</em>STATUS_SUCCESS</p></td></tr><tr><td colspan="1" data-colwidth="213" rowspan="1"><p>2</p></td><td colspan="1" data-colwidth="223" rowspan="1"><p>6033</p></td><td colspan="1" data-colwidth="324" rowspan="1"><p>CUDNN_STATUS_SUCCESS</p></td></tr><tr><td colspan="1" data-colwidth="213" rowspan="1"><p>3</p></td><td colspan="1" data-colwidth="223" rowspan="1"><p>8911</p></td><td colspan="1" data-colwidth="324" rowspan="1"><p>CUDNN_STATUS_SUCCESS</p></td></tr><tr><td colspan="1" data-colwidth="213" rowspan="1"><p>4</p></td><td colspan="1" data-colwidth="223" rowspan="1"><p>11789</p></td><td colspan="1" data-colwidth="324" rowspan="1"><p>CUDNN_STATUS_SUCCESS</p></td></tr><tr><td colspan="1" data-colwidth="213" rowspan="1"><p>5</p></td><td colspan="1" data-colwidth="223" rowspan="1"><p>14927</p></td><td colspan="1" data-colwidth="324" rowspan="1"><p>CUDNN_STATUS_INTERNAL_ERROR</p></td></tr></tbody></table><p>It seems that we should still have GPU memory free after starting the fifth worker, but in fact, it crashes with a CUDNN<em>STATUS</em>INTERNAL_ERROR. More investigation is required to find a solution to this error, but for the time being, the max number of worker processes we can start is four.</p><h3 id='max-gpu-usage'><a class='anchor' aria-hidden='true' href='#max-gpu-usage'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Max GPU Usage</h3><p>To get a feel for how the GPU can perform for our object detection implementation, we started with an artificial test that involved no network transfers, instead processing frames from a local video file.</p><p><em>It is important to note that all processing times and FPS values are based on image inference times specific to our Object Detection implementation using the <a href="https://pytorch.org/">pytorch</a> package. They are also specific to the frame size and contents of the video file used as input, which remains constant throughout the tests. Using a different video or resolution is expected to change the values, possibly quite significantly. Additionally, the FPS values calculated are unrelated to any video rendering FPS values the reader might be familiar with.</em></p><p>The ComputerVision Server’s <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/ComputerVisionServer/moedx/object_detection/object_detector.py">object_detector.py</a> source file contains the code for the ObjectDetector class that does the actual object detection. It also contains code for creating an ObjectDetector instance and benchmarking it from the command line. In this case, we use the option to take an MP4 video file as an input, and perform object detection on each individual frame. Example command line and output:</p><p><code>python objectdetector.py -f ../client/objects320x180.mp4 --server-stats</code></p><pre><code>==================================================================
+Grand totals
+1 threads repeated 1 times on 1 files. 313 total frames.
+==================================================================
+====&gt; Average Processing Time=27.688 ms (stddev=3.865) FPS=36.12
+====&gt; Average CPU Utilization=26.5%
+====&gt; Average Memory Utilization=34.4%
+====&gt; Average GPU Utilization=72.8%
+====&gt; Average GPU Memory Utilization=42.2%
+</code></pre><p>We see that the average GPU utilization is 72.8% and 36.12 FPS are processed. This is the maximum throughput possible for a single worker process. If we extrapolate the utilization and FPS numbers, we calculate that the theoretical maximum FPS at 100% GPU utilization would be 49.6 FPS (36.12/72.8*100).</p><p>How close could we get to this theory? To find out, we launched three simultaneous instances of object_detector.py, and aggregated the results. The three instances finished with FPS results of 15.37, 14.35, and 14.85, totaling 44.57 FPS, and these were the CPU, RAM, and GPU stats:</p><pre><code>====&gt; Average CPU Utilization=76.3%
+====&gt; Average Memory Utilization=87.8%
+====&gt; Average GPU Utilization=95.9%
+====&gt; Average GPU Memory Utilization=49.7%
+</code></pre><p>At 95.9% GPU utilization, we are approaching the max. Checking the math, we see that 95.9% of our theoretical max is 47.57 FPS, so this measured 44.57 FPS isn’t too far off. Note that the CPU utilization is still significantly less than the GPU utilization, confirming that our implementation is GPU-bound, at least in this local-only test, where no network transfer is in play.</p><h3 id='lowest-latency-single-client'><a class='anchor' aria-hidden='true' href='#lowest-latency-single-client'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Lowest Latency Single Client</h3><p>We don’t expect to reach the single client performance that we achieved with local-only processing in a real-world client-server configuration. A full round-trip includes the time to upload the image, process it with the object detection code, and return the client’s results.</p>
+                         <figure class="full">
+        <img src="/assets/blog/image-20201203-223720.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>Since each frame goes through this “full process latency”, it is the measurement we use to calculate FPS. For example, if the average full process time=48.028 ms, we calculate 1/48.028*1000=20.82 FPS.</p><p>Let’s take a look at the best-case client/server scenario. Since we are doing all of our testing in Germany, we did some measurements to see which cloudlets have the lowest latency between them. Of the 5 Germany cloudlets, Dusseldorf and Frankfurt are the closest to each other on the map, and not coincidentally, they have the lowest latency between them.</p><p>For this test we used a single client in Dusseldorf to run the test script, connecting to the server on the Frankfurt ComputerVision app instance. Here is the command line used, and the results:</p><p><code>$ curl -X POST https://cv-gpu-cluster.dusseldorf-main.tdg.mobiledgex.net:8008/client/benchmark/ -d &quot;-s cv-gpu-cluster.frankfurt-main.tdg.mobiledgex.net --tls -e /object/detect/ -c websocket -f objects_320x180.mp4 -n PING --server-stats&quot;</code></p><pre><code>===========================================================================================
+Grand totals for cv-gpu-cluster.frankfurt-main.tdg.mobiledgex.net /object/detect/ websocket
+1 threads repeated 1 times on 1 files. 313 total frames.
+===========================================================================================
+====&gt; Average Latency Full Process=48.028 ms (stddev=32.025) FPS=20.82
+====&gt; Average Latency Network Only=3.845 ms (stddev=0.263)
+====&gt; Average Server Processing Time=31.907 ms (stddev=2.935)
+====&gt; Average CPU Utilization=19.4%
+====&gt; Average Memory Utilization=17.9%
+====&gt; Average GPU Utilization=33.0%
+====&gt; Average GPU Memory Utilization=19.6%
+</code></pre><p>This test resulted in a 3.8 ms latency and 20.82 FPS processed. GPU utilization was 33% -- a perfect 1/3 of the max. We would soon find that this didn’t mean we could just connect with three clients to hit 100%.</p><h2 id='benchmark-results'><a class='anchor' aria-hidden='true' href='#benchmark-results'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Benchmark Results</h2><p>Now that we have established the theoretical maximum FPS for object detection on our GPU, and the measured results for the best-case single-client and single-worker scenarios, it’s time to examine multi-client and multi-worker scenarios. For each configuration, we start with one client and take measurements. We then increase the client count retake the measurement. We repeat this until we reach five clients, the most we tested with. Then we increase the worker process count and do the whole test again.</p><h3 id='single-worker-process'><a class='anchor' aria-hidden='true' href='#single-worker-process'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Single Worker Process</h3><p>The single worker configuration is the default for all of our deployed ComputerVision-GPU app instances. When a single client is connected, we see the same ~20 FPS measurement we’ve seen before. When a second client connects, we see an immediate drop-off in FPS per client, though the total FPS does increase slightly to almost 24 FPS. The third, fourth, and fifth clients cause both the FPS per client and total FPS to drop significantly. Neither the CPU nor GPU is seriously taxed, both maxing out in the 2-client scenario. From this, we can assume that there is an I/O bottleneck, that hopefully additional worker processes will alleviate.</p><p>Note that the system RAM usage (%MEM) stayed constant throughout these tests. This is because once the worker process is instantiated and has loaded in the object detection libraries and pre-trained models, no further memory is consumed during image processing.</p><table><tbody><tr><th colspan="1" data-colwidth="118" rowspan="1"><p>Num Clients</p></th><th colspan="1" data-colwidth="107" rowspan="1"><p>FPS/Client</p></th><th colspan="1" data-colwidth="107" rowspan="1"><p>Total FPS</p></th><th colspan="1" data-colwidth="107" rowspan="1"><p>%CPU</p></th><th colspan="1" data-colwidth="107" rowspan="1"><p>%MEM</p></th><th colspan="1" data-colwidth="107" rowspan="1"><p>%GPU</p></th><th colspan="1" data-colwidth="107" rowspan="1"><p>%GPU MEM</p></th></tr><tr><td colspan="1" data-colwidth="118" rowspan="1"><p>1</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>20.0</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>20.0</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>23.8</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>17.0</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>38.3</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>23.1</p></td></tr><tr><td colspan="1" data-colwidth="118" rowspan="1"><p>2</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>11.7</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>23.5</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>28.9</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>17.0</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>39.9</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>23.8</p></td></tr><tr><td colspan="1" data-colwidth="118" rowspan="1"><p>3</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>6.2</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>18.5</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>28.5</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>17.0</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>33.3</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>20.1</p></td></tr><tr><td colspan="1" data-colwidth="118" rowspan="1"><p>4</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>3.6</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>14.4</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>28.4</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>17.0</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>28.0</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>16.6</p></td></tr><tr><td colspan="1" data-colwidth="118" rowspan="1"><p>5</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>2.4</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>11.9</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>28.2</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>17.0</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>27.1</p></td><td colspan="1" data-colwidth="107" rowspan="1"><p>15.1</p></td></tr></tbody></table>
+                         <figure class="full">
+        <img src="/assets/blog/image-20201203-174705.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <h3 id='two-worker-processes'><a class='anchor' aria-hidden='true' href='#two-worker-processes'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Two Worker Processes</h3><p>Our second scenario adds a second worker process. We see better results for multiple clients, and both the CPU and GPU utilization is higher as expected, though we never seriously tax either. The highest total FPS that we see is with three clients and this is also the highest GPU usage seen. Adding clients 4 and 5 increases %CPU, but does not increase the %GPU or Total FPS. The bottleneck has been reached again.</p><p>While the FPS/Client did increase when the second worker was added, we were surprised that the two client configuration did not hit 20 FPS for each client, since they each had their own dedicated worker. This suggests there is likely an I/O bottleneck with the Python worker implementation to the GPU. We would likely need to investigate optimizing sending the load to the GPU.</p><p>Again note that %MEM remains steady no matter how many clients are served.</p><table><tbody><tr><th colspan="1" rowspan="1"><p>Num Clients</p></th><th colspan="1" rowspan="1"><p>FPS/Client</p></th><th colspan="1" rowspan="1"><p>Total FPS</p></th><th colspan="1" rowspan="1"><p>%CPU</p></th><th colspan="1" rowspan="1"><p>%MEM</p></th><th colspan="1" rowspan="1"><p>%GPU</p></th><th colspan="1" rowspan="1"><p>%GPU MEM</p></th></tr><tr><td colspan="1" rowspan="1"><p>1</p></td><td colspan="1" rowspan="1"><p>20.6</p></td><td colspan="1" rowspan="1"><p>20.6</p></td><td colspan="1" rowspan="1"><p>27.9</p></td><td colspan="1" rowspan="1"><p>28.0</p></td><td colspan="1" rowspan="1"><p>39.4</p></td><td colspan="1" rowspan="1"><p>23.7</p></td></tr><tr><td colspan="1" rowspan="1"><p>2</p></td><td colspan="1" rowspan="1"><p>13.7</p></td><td colspan="1" rowspan="1"><p>27.4</p></td><td colspan="1" rowspan="1"><p>42.4</p></td><td colspan="1" rowspan="1"><p>28.1</p></td><td colspan="1" rowspan="1"><p>50.5</p></td><td colspan="1" rowspan="1"><p>27.6</p></td></tr><tr><td colspan="1" rowspan="1"><p>3</p></td><td colspan="1" rowspan="1"><p>10.8</p></td><td colspan="1" rowspan="1"><p>32.3</p></td><td colspan="1" rowspan="1"><p>50.8</p></td><td colspan="1" rowspan="1"><p>28.0</p></td><td colspan="1" rowspan="1"><p>64.4</p></td><td colspan="1" rowspan="1"><p>35.0</p></td></tr><tr><td colspan="1" rowspan="1"><p>4</p></td><td colspan="1" rowspan="1"><p>7.5</p></td><td colspan="1" rowspan="1"><p>30.1</p></td><td colspan="1" rowspan="1"><p>55.1</p></td><td colspan="1" rowspan="1"><p>28.0</p></td><td colspan="1" rowspan="1"><p>63.9</p></td><td colspan="1" rowspan="1"><p>34.8</p></td></tr><tr><td colspan="1" rowspan="1"><p>5</p></td><td colspan="1" rowspan="1"><p>6.5</p></td><td colspan="1" rowspan="1"><p>32.4</p></td><td colspan="1" rowspan="1"><p>54.2</p></td><td colspan="1" rowspan="1"><p>28.1</p></td><td colspan="1" rowspan="1"><p>58.1</p></td><td colspan="1" rowspan="1"><p>32.6</p></td></tr></tbody></table>
+                         <figure class="full">
+        <img src="/assets/blog/image-20201203-180624.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <h3 id='three-worker-processes'><a class='anchor' aria-hidden='true' href='#three-worker-processes'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Three Worker Processes</h3><p>The next test adds a third worker. Here at four clients, we are starting to tax the GPU at over 75%. We’re now seeing a clear pattern where the best overall throughput is when <em>Number of Clients &gt; Number of Workers.</em></p><table><tbody><tr><th colspan="1" rowspan="1"><p>Num Clients</p></th><th colspan="1" rowspan="1"><p>FPS/Client</p></th><th colspan="1" rowspan="1"><p>Total FPS</p></th><th colspan="1" rowspan="1"><p>%CPU</p></th><th colspan="1" rowspan="1"><p>%MEM</p></th><th colspan="1" rowspan="1"><p>%GPU</p></th><th colspan="1" rowspan="1"><p>%GPU MEM</p></th></tr><tr><td colspan="1" rowspan="1"><p>1</p></td><td colspan="1" rowspan="1"><p>20.7</p></td><td colspan="1" rowspan="1"><p>20.7</p></td><td colspan="1" rowspan="1"><p>21.2</p></td><td colspan="1" rowspan="1"><p>39.2</p></td><td colspan="1" rowspan="1"><p>36.3</p></td><td colspan="1" rowspan="1"><p>21.6</p></td></tr><tr><td colspan="1" rowspan="1"><p>2</p></td><td colspan="1" rowspan="1"><p>15.2</p></td><td colspan="1" rowspan="1"><p>30.5</p></td><td colspan="1" rowspan="1"><p>45.8</p></td><td colspan="1" rowspan="1"><p>39.1</p></td><td colspan="1" rowspan="1"><p>56.8</p></td><td colspan="1" rowspan="1"><p>30.6</p></td></tr><tr><td colspan="1" rowspan="1"><p>3</p></td><td colspan="1" rowspan="1"><p>11.2</p></td><td colspan="1" rowspan="1"><p>33.7</p></td><td colspan="1" rowspan="1"><p>71.0</p></td><td colspan="1" rowspan="1"><p>39.1</p></td><td colspan="1" rowspan="1"><p>73.3</p></td><td colspan="1" rowspan="1"><p>38.0</p></td></tr><tr><td colspan="1" rowspan="1"><p>4</p></td><td colspan="1" rowspan="1"><p>8.7</p></td><td colspan="1" rowspan="1"><p>34.7</p></td><td colspan="1" rowspan="1"><p>73.8</p></td><td colspan="1" rowspan="1"><p>39.2</p></td><td colspan="1" rowspan="1"><p>75.9</p></td><td colspan="1" rowspan="1"><p>39.5</p></td></tr><tr><td colspan="1" rowspan="1"><p>5</p></td><td colspan="1" rowspan="1"><p>7.0</p></td><td colspan="1" rowspan="1"><p>35.0</p></td><td colspan="1" rowspan="1"><p>63.2</p></td><td colspan="1" rowspan="1"><p>39.4</p></td><td colspan="1" rowspan="1"><p>65.4</p></td><td colspan="1" rowspan="1"><p>35.2</p></td></tr></tbody></table>
+                         <figure class="full">
+        <img src="/assets/blog/image-20201203-180739.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <h3 id='four-worker-processes'><a class='anchor' aria-hidden='true' href='#four-worker-processes'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Four Worker Processes</h3><p>The final test scenario increases the worker process count to four, which is the most our GPU supports. The pattern we were seeing doesn’t quite hold, as using four clients hits the highest total FPS, %CPU, and %GPU of all the tests.</p><p>The max total FPS seen is 41.5 with a GPU usage of 84.8%. Another math check: 84.8% of our theoretical max of 49.6 comes out to 42.1 FPS. This measured 41.5 FPS is very close.</p><table><tbody><tr><th colspan="1" rowspan="1"><p>Num Clients</p></th><th colspan="1" rowspan="1"><p>FPS/Client</p></th><th colspan="1" rowspan="1"><p>Total FPS</p></th><th colspan="1" rowspan="1"><p>%CPU</p></th><th colspan="1" rowspan="1"><p>%MEM</p></th><th colspan="1" rowspan="1"><p>%GPU</p></th><th colspan="1" rowspan="1"><p>%GPU MEM</p></th></tr><tr><td colspan="1" rowspan="1"><p>1</p></td><td colspan="1" rowspan="1"><p>19.6</p></td><td colspan="1" rowspan="1"><p>19.6</p></td><td colspan="1" rowspan="1"><p>31.5</p></td><td colspan="1" rowspan="1"><p>50.2</p></td><td colspan="1" rowspan="1"><p>36.8</p></td><td colspan="1" rowspan="1"><p>22.3</p></td></tr><tr><td colspan="1" rowspan="1"><p>2</p></td><td colspan="1" rowspan="1"><p>14.4</p></td><td colspan="1" rowspan="1"><p>28.7</p></td><td colspan="1" rowspan="1"><p>55.2</p></td><td colspan="1" rowspan="1"><p>50.2</p></td><td colspan="1" rowspan="1"><p>64.4</p></td><td colspan="1" rowspan="1"><p>33.5</p></td></tr><tr><td colspan="1" rowspan="1"><p>3</p></td><td colspan="1" rowspan="1"><p>11.7</p></td><td colspan="1" rowspan="1"><p>35.2</p></td><td colspan="1" rowspan="1"><p>62.6</p></td><td colspan="1" rowspan="1"><p>50.2</p></td><td colspan="1" rowspan="1"><p>74.1</p></td><td colspan="1" rowspan="1"><p>39.3</p></td></tr><tr><td colspan="1" rowspan="1"><p>4</p></td><td colspan="1" rowspan="1"><p>10.4</p></td><td colspan="1" rowspan="1"><p>41.5</p></td><td colspan="1" rowspan="1"><p>83.4</p></td><td colspan="1" rowspan="1"><p>50.2</p></td><td colspan="1" rowspan="1"><p>84.8</p></td><td colspan="1" rowspan="1"><p>43.2</p></td></tr><tr><td colspan="1" rowspan="1"><p>5</p></td><td colspan="1" rowspan="1"><p>7.8</p></td><td colspan="1" rowspan="1"><p>39.2</p></td><td colspan="1" rowspan="1"><p>80.4</p></td><td colspan="1" rowspan="1"><p>50.3</p></td><td colspan="1" rowspan="1"><p>76.2</p></td><td colspan="1" rowspan="1"><p>39.5</p></td></tr></tbody></table>
+                         <figure class="">
+        <img src="/assets/blog/image-20201203-180820.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <h2 id='conclusion'><a class='anchor' aria-hidden='true' href='#conclusion'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Conclusion</h2><p>For a processing-intensive activity like object detection, a GPU improves processing time tremendously. Still, if the server is being used in a multi-client scenario, the GPU processing power is quickly exhausted.</p><p>It is clear that to get the most out of our GPU, we must enable multiple worker processes (at the expense of system RAM). Revisiting the earlier diagram of our use case, we present an updated image showing each client connecting to its own worker process. This is the ideal case.</p>
+                         <figure class="full">
+        <img src="/assets/blog/image-20201208-210328.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>To support multiple workers with our current implementation requires a high RAM server, which may not be financially viable for many organizations. We must continue to investigate ways to reduce our memory footprint and remove bottlenecks. These are some topics on our roadmap to hopefully improve our ComputerVision server performance:</p><ul><li><p>Video streaming - Our current implementation sends a single frame at a time, and when processing results are received, it sends the next one. A video streaming implementation could improve the overall FPS, but possibly at an upstream bandwidth cost.</p></li><li><p><a href="https://developer.nvidia.com/deepstream-sdk">DeepStream</a> - Early experiments with NVIDIA’s DeepStream SDK show enormous promise in terms of sheer FPS throughput. Defining our use case and implementing it should prove exciting and rewarding.</p></li></ul>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/01/07/gpu-benchmarking-on-the-edge-with-computer-vision-object-detection&title=GPU+Benchmarking+on+the+Edge+with+Computer+Vision+Object+Detection"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=GPU+Benchmarking+on+the+Edge+with+Computer+Vision+Object+Detection&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/01/07/gpu-benchmarking-on-the-edge-with-computer-vision-object-detection&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/01/07/gpu-benchmarking-on-the-edge-with-computer-vision-object-detection"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

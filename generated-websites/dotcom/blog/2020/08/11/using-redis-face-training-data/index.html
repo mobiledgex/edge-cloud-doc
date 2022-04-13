@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using Redis Face Training Data | MobiledgeX</title>
+<meta name="description" content="What we want to accomplish is to use Redis to store the face training images that get uploaded to the centralized Face Training Server, and make them available to the Face Recognition process on each instance of a Computer Vision Server." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Using Redis Face Training Data" />
+<meta property="og:description" content="What we want to accomplish is to use Redis to store the face training images that get uploaded to the centralized Face Training Server, and make them available to the Face Recognition process on each instance of a Computer Vision Server." />
+<meta property="og:url" content="http://mexv3.test/blog/2020/08/11/using-redis-face-training-data" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="Using Redis Face Training Data" />
+<meta name="twitter:description" content="What we want to accomplish is to use Redis to store the face training images that get uploaded to the centralized Face Training Server, and make them available to the Face Recognition process on each instance of a Computer Vision Server." />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/blog-category-developers.png/7cb443d804cacdca3a528f0f249d0b8e.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/blog-category-developers.png/7cb443d804cacdca3a528f0f249d0b8e.png" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2020/08/11/using-redis-face-training-data" rel="canonical" />
+<link href="http://mexv3.test/blog/2020/08/11/using-redis-face-training-data?page=3" rel="prev" />
+<link href="http://mexv3.test/blog/2020/08/11/using-redis-face-training-data?page=5" rel="next" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="using-redis-face-training-data-content">
+      <div class="row">
+        <div class="col">
+  <h1>Using Redis Face Training Data</h1>
+  <p class="datestamp">August 11th, 2020</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/blog-category-developers.png" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/bruce-armstrong-headshot.jpg" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/bruce-armstrong">Bruce Armstrong</a></p>
+            <p class="job-title">Principal Engineer</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2021/11/04/dt-nvidia-cloudxr">Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</a></li>
+                        <li><a href="/blog/2021/08/25/mobiledgex-edge-cloud-3-0-improved-visibility-and-operational-management-of-cloudlets-for-operators">MobiledgeX Edge-Cloud 3.0: Improved Visibility and Operational Management of Cloudlets for Operators</a></li>
+                        <li><a href="/blog/2021/08/17/mobiledgex-edge-cloud-3-0-optimal-edge-connectivity-with-edgeevents">MobiledgeX Edge-Cloud 3.0: Optimal Edge Connectivity with EdgeEvents</a></li>
+                        <li><a href="/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform">A Technical Overview of the MobiledgeX Edge-Cloud 3.0 Platform </a></li>
+                        <li><a href="/blog/2021/05/04/how-mobiledgex-helps-telecom-operators-manage-private-and-trusted-cloudlets-for-their-enterprise-customers">How MobiledgeX Helps Telecom Operators Manage Private and Trusted Cloudlets for their Enterprise Customers</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/technical">See more articles from the Technical category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/bruce-armstrong-headshot.jpg" class="img-fluid headshot" alt="Headshot for Bruce Armstrong" />
+        <div class="info">
+          <p class="name">Bruce Armstrong</p>
+          <p class="job-title">Principal Engineer</p>
+        </div>
+      </div>
+      
+                  <p>In the <a href="https://mobiledgex.com/blog/2020/02/11/multi-container-applications">Multi-Application Containers</a> blog, we discussed our design for centralizing the location of our face recognition training data server in the public cloud, while keeping the latency-sensitive face recognition servers running on Edge cloudlets.</p><h2 id='what’s-the-problem'><a class='anchor' aria-hidden='true' href='#what’s-the-problem'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>What’s the Problem?</h2><p>As the number of face training subjects has increased, the trained data set has grown as well. There are currently 30 subjects with a total of 442 images. The Android app that uploads training images resizes them to 180x240 before sending them to the centralized Face Training server in the public cloud. Altogether, these images add up to about 4 MB. When training is performed, the resulting database (a YAML file) is 42 MB. When this file is downloaded, Gzip compression is used, so the transfer is approximately 2 MB. From the logs of a Face Detection server instance, we can see that the transfer takes about 7.4 seconds:</p><pre><code>[facial_detection.face_recognizer:424] Checking with FaceTrainingServer
+[facial_detection.face_recognizer:458] is_training_data_file_current() url=http://opencv.facetraining.mobiledgex.net:8009/trainer/lastupdate/
+[facial_detection.face_recognizer:461] 177.856 ms to get centralized training data timestamp: 1588979555. local=1582146029
+[facial_detection.face_recognizer:465] Newer training data available.
+[facial_detection.face_recognizer:478] Downloading from http://opencv.facetraining.mobiledgex.net:8009/trainer/download...
+[facial_detection.face_recognizer:486] 7452.165 ms to download centralized training data. training_data_timestamp=1588979555
+</code></pre><p>There’s also the issue of when to perform this download. Every instance of the Face Recognition Server has to check with the Face Training Server to see if new training data was available. It does this at startup and at the start of each new face recognition session. This polling model was not ideal. We prefer that the centralized server had a means of alerting the distributed Face Recognition Server instances.</p><p>These problems aren’t terrible, and the system works as-is. Some might say, “if it ain’t broke, don’t fix it,” but really, we just want an excuse to try out Redis.</p><h2 id='what-is-redis-and-what-are-we-trying-to-do-with-it'><a class='anchor' aria-hidden='true' href='#what-is-redis-and-what-are-we-trying-to-do-with-it'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>What is Redis, and what are we trying to do with it?</h2><p>From<a href="https://redis.io/"> the Redis web site</a>:</p>
+                   <blockquote>
+        <p>Redis is an open-source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.</p>
+       </blockquote>
+                   <p>We are most interested in using it as a database to store the face training images, but will also be using the message broker capabilities to alert Face Recognition instances of changes to the training set.<br></p><p>What we want to accomplish is to use Redis to store the face training images that get uploaded to the centralized Face Training Server, and make them available to the Face Recognition process on each instance of a Computer Vision Server. When this happens, a notification will be sent out to all Computer Vision Servers, and they will request the new images from Redis. Once the images are received from the database, the training procedure will take place on each Computer Vision Server. Subsequently, face recognition will be performed there for images sent by the client (e.g. Android app, Unity app, etc.).</p>
+                         <figure class="full">
+        <img src="/assets/blog/diagram.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <h2 id='first-attempt-with-redis'><a class='anchor' aria-hidden='true' href='#first-attempt-with-redis'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>First Attempt with Redis</h2><p>This is the first project in which I have attempted to use Redis. After figuring out the basics, I was ready to try a simple, unsophisticated design to prove the concept was feasible. Redis allows you to store anything as a string of bytes, so I elected to store each of the entire JPEG face images that were submitted for training in this way. I used a scheme where each user had an index value (0001, 0002, etc.) and used the key “subject_name:index” to store the subject name with a<a href="https://redis.io/commands/set"> set</a> command, and the key “subject_images:index” to store a list of the images with a series of<a href="https://redis.io/commands/lpush"> lpush</a> commands. Finally, I used the<a href="https://redis.io/commands/ltrim"> ltrim</a> command to limit the image list to the 15 most recent images for this particular user. We currently do not limit the number of users that may store training data.</p><p>This is implemented in a<a href="https://docs.djangoproject.com/en/3.0/howto/custom-management-commands/"> custom Django-admin command</a> called images_to_redis. Here is the handle method that does the actual work:</p><pre><code>def handle(self, *args, **options):
+	logger.info(&#039;Connecting to redis server %s&#039; %self.training_data_hostname)
+	self.connect()
+	r = self.redis
+	r.set(SUBJECT_KEY_INDEX, 0)
+	valid_extensions = (&#039;jpg&#039;,&#039;jpeg&#039;, &#039;png&#039;)
+	dirs = os.listdir(TRAINING_DATA_DIR)
+	for dir in dirs:
+    	r.incr(SUBJECT_KEY_INDEX, 1)  # If key doesn&#039;t exist it will get created
+    	index = r.get(SUBJECT_KEY_INDEX).decode(&#039;utf-8&#039;)  # Decode from byte to string
+    	index = index.zfill(4)
+    	subject_images_key = &#039;subject_images:%s&#039; % index
+    	subject_name_key = &#039;subject_name:%s&#039; % index
+    	r.set(subject_name_key, dir)
+    	files = os.listdir(TRAINING_DATA_DIR+&#039;/&#039;+dir)
+    	for file in files:
+        	if file.endswith(valid_extensions):
+            	f = open(&quot;%s/%s/%s&quot; %(TRAINING_DATA_DIR, dir, file), &quot;rb&quot;)
+            	image = f.read()
+            	r.lpush(subject_images_key, image)
+    	r.ltrim(subject_images_key, 0, MAX_IMAGE_COUNT-1) # Limit to the MAX_IMAGE_COUNT most recent images.
+
+	r.publish(PUB_CHANNEL_ADDED, &quot;&quot;) # Blank means all
+	logger.info(&quot;Published notification to channel: %s&quot; %PUB_CHANNEL_ADDED)
+</code></pre><p>Full source code is available in our<a href="https://github.com/mobiledgex/edge-cloud-sampleapps"> edge-cloud-sampleapps</a> public Github repository in the FaceTrainingServer directory. (This code of interest was later moved to the FaceRecognizer class so that it could be called both by the images_to_redis handle method and by the /trainer/train code as well. Full path: FaceTrainingServer/facerec/facerec/FaceRecognizer.py, redis_save_subject_images)<br></p><h2 id='the-actual-data'><a class='anchor' aria-hidden='true' href='#the-actual-data'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>The Actual Data</h2>
+                         <figure class="full">
+        <img src="/assets/blog/database-original.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>In this screenshot, you can see the list of “subject_images:*” keys. You can see that there are 30 keys, corresponding to the 30 subjects, and that 15 is the maximum size of any list. I have selected “subject_images:0004” which displays the data bytes for the first image. Note the “JFIF” bytes signifying that this is a JPEG image.</p><p>Below is the code that reads the images from Redis. It gets the length of the list with the llen command, then in a loop, pulls each image from the database with the lindex command.</p><pre><code>num_images = redis.llen(subject_images_key)
+for i in range(0, num_images):
+	image_bytes = redis.lindex(subject_images_key, i)
+	total_bytes += len(image_bytes)
+	image = imageio.imread(io.BytesIO(image_bytes)) # convert to numpy array
+</code></pre><p>And here is the result:</p><pre><code>[facial_detection.face_recognizer:227] 33281.337 ms to download 360 images totaling 2616371 bytes from redis</code></pre><p>Over 30 seconds! That’s pretty terrible. A little research showed that the way we were looping and using lindex meant that every image was retrieved from the database in a separate transaction. 360 separate times, each one with its own ACKs.</p><h1 id='incremental-improvements'><a class='anchor' aria-hidden='true' href='#incremental-improvements'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Incremental Improvements</h1><p>the <code>lrange</code> command</p><pre><code>num_images = redis.llen(subject_images_key)
+for image_bytes in redis.lrange(subject_images_key, 0, -1):
+	total_bytes += len(image_bytes)
+	total_images += 1
+	image = imageio.imread(io.BytesIO(image_bytes)) # convert to numpy array
+
+[facial_detection.face_recognizer:227] 12000.340 ms to download 360 images totaling 2616371 bytes from redis
+</code></pre><p>Over twice as fast. Maybe this Redis idea isn’t a bust after all. Let’s see what else we can do to optimize things.<br></p><h2 id='pipelining'><a class='anchor' aria-hidden='true' href='#pipelining'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Pipelining</h2><p>Redis has a feature called<a href="https://redis.io/topics/pipelining"> pipelining</a> that allows queries to be queued together and executed all at once in a single transaction. Let’s implement this to pull all the images at once, and then process them in a separate loop.</p><pre><code>[facial_detection.face_recognizer:210] 2089.997 ms to download images for 30 subjects in a batch from redis</code></pre><p>Just over 2 seconds. That’s more like it. However, as a fair comparison, we need to include the time it takes to do face detection on each image, and add the faces to the face recognizer instance before performing the training. Adding faces to the face recognizer was previously completed within the download loops, but now it is a separate loop executed after the download. When adding that time to the total, we see the entire process takes a little over 5 seconds.</p><pre><code>[facial_detection.face_recognizer:234] 5421.897 ms to download 360 images totaling 2616371 bytes from redis</code></pre><p>A nice improvement over where we started, and faster than the old way of downloading the pre-trained database (old way=7.4 seconds, new way=5.4 seconds).</p><h2 id='schema-simplification'><a class='anchor' aria-hidden='true' href='#schema-simplification'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Schema Simplification</h2><p>After working with the data for a while, it became evident that the database schema we initially chose was needlessly complicated. We iterated over an integer value and used that value for two separate keys to get the complete data for a subject. For example, subject_name:0001 and subject_images:0001 were used as keys for the first subject. Why not use the subject name itself as the key so that all information is available in one place? After making this change, our database now looks like this:</p>
+                         <figure class="full">
+        <img src="/assets/blog/database-simplified.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>Originally, our code retrieved the number of subjects (stored in yet another separate key) and iterated over a range of integers:</p><pre><code>num_subjects = = int(self.redis.get(&#039;subject_key_index&#039;))
+for i in range(0, num_images):
+	# Process subject number i
+</code></pre><p>And the “i” value was used to create <code>subject_name:000X</code> and <code>subject_images:000X</code> keys to retrieve the data.</p><p>With our new schema, we don’t need to track the number of subjects. We now iterate over all the images of the subjects with this loop:</p><pre><code>for key in self.redis.scan_iter(&quot;subject_images:*&quot;):
+	# Process subject referenced by this key
+</code></pre><p>The subject name is right in the key, and the key allows us to retrieve the image data. We need not only the ability to iterate over all subjects, but also the ability to directly access a subject’s data. Directly accessing a subject’s data is easily done by appending the subject name so the key used looks like this: “subject_images:Holly”</p><h2 id='when-to-retrieve-the-data'><a class='anchor' aria-hidden='true' href='#when-to-retrieve-the-data'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>When to Retrieve the Data?</h2><p>In our old implementation, we used a polling model, described in the “<a href="https://mobiledgex.atlassian.net/wiki/spaces/SWDEV/blog/2020/08/07/976912417/Using+Redis+for+Face+Training+Data#What%E2%80%99s-the-Problem%3F">What’s the Problem</a>” section above. Now we use a<a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern"> PubSub</a><a href="https://redis.io/topics/pubsub"> model</a>: Any time the training data is updated on the Face Training Server running in the public cloud, the server publishes a notification for this to a &#039;training.added&#039; or &#039;training.removed&#039; channel.</p><pre><code>redis.publish(&#039;training.added&#039;, pubsub_added_name) # Blank name means &quot;all&quot;</code></pre><p>Each Face Recognition Server instance (running within the ComputerVisionServer process on an Edge cloudlet) is subscribed to these channels and will “wake up” and download new data immediately. Here’s the subscription code:</p><pre><code>self.channel = &#039;training.*&#039;
+    	self.pubsub = self.redis.pubsub()
+    	self.pubsub.psubscribe(self.channel)
+    	logger.info(&#039;Pattern subscribed to channel %s&#039; %self.channel)
+</code></pre><h2 id='the-code'><a class='anchor' aria-hidden='true' href='#the-code'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>The Code</h2><p>Full source code for the image retrieval functionality is available in our<a href="https://github.com/mobiledgex/edge-cloud-sampleapps"> edge-cloud-sampleapps</a> public Github repository in the ComputerVisionServer directory. The full path is ComputerVisionServer/moedx/facial_detection/face_recognizer.py. Search for “redis” to see relevant code.</p><h2 id='what’s-next'><a class='anchor' aria-hidden='true' href='#what’s-next'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>What’s Next?</h2><p>One more Redis feature that we plan to take advantage of in the future is “Time To Live” (TTL). We can use the<a href="https://redis.io/commands/expire"> expire</a> command to determine how long a particular subject’s face images should be retained. If someone performs training, and uses the face recognition app for a single day, never to return, there is no reason to keep their data in the database.</p>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2020/08/11/using-redis-face-training-data&title=Using+Redis+Face+Training+Data"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=Using+Redis+Face+Training+Data&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2020/08/11/using-redis-face-training-data&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2020/08/11/using-redis-face-training-data"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

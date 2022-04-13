@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2.0 | MobiledgeX Developers</title>
+<meta name="description" content="Lists new features and known issues for the MobiledgeX Edge-Cloud Console." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="2.0" />
+<meta property="og:description" content="Lists new features and known issues for the MobiledgeX Edge-Cloud Console." />
+<meta property="og:url" content="http://dev-v3.test/release-notes/console/2_0_0" />
+<meta property="og:site_name" content="MobiledgeX Developers" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mobiledgex" />
+<meta name="twitter:title" content="2.0" />
+<meta name="twitter:description" content="Lists new features and known issues for the MobiledgeX Edge-Cloud Console." />
+<meta property="og:image" content="http://dev-v3.test/img/containers/assets/social-developers.jpg/b1d19eb47e0ea441f7510b1a27b43974.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://dev-v3.test/img/containers/assets/social-developers.jpg/b1d19eb47e0ea441f7510b1a27b43974.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://dev-v3.test/" rel="home" />
+<link href="http://dev-v3.test/release-notes/console/2_0_0" rel="canonical" />
+<link type="text/plain" rel="author" href="http://dev-v3.test/humans.txt" />
+  <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=1643734718">
+  <link rel="stylesheet" href="/css/androidstudio.min.css?v=1628534070">
+  <script src="/js/highlight.min.js?v=1628534070"></script>
+
+  <meta name="robots" content="noindex,nofollow">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+
+<body
+  class="bg-white default">
+
+  <header class="duik-header">
+  <nav class="properties navbar fixed-top d-none d-md-flex">
+    <ul>
+      <li><a href="https://mobiledgex.com">MobiledgeX Home</a></li>
+      <li><a href="https://mobiledgex.com/product">Product</a></li>
+      <li><a href="https://mobiledgex.com/use-cases">Use Cases</a></li>
+      <li><a href="https://mobiledgex.com/about">About</a></li>
+      <li><a href="https://mobiledgex.com/blog">Blog</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-dark fixed-top bg-terrain flex-nowrap p-0 main-nav">
+    <a class="navbar-brand col-md-3 col-xl-2 mr-0 py-3" href="/">
+      <img src="/img/logo-white.svg?v=1592862229" alt="MobiledgeX Developers" />
+    </a>
+    <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/getting-started">Getting
+          Started</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/deployments">Guides and
+          Tutorials</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0" href="/design">Design Principles</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0" href="/sdks">SDK and Libraries</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/apis">API Reference</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0" href="/support">Support</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0"
+          href="/product/mobiledgex-community">Community</a>
+      </li>
+      <li class="nav-item d-none d-md-inline">
+        <form method="get" action="/search" id="navbar-search">
+          <!-- Search field's name must be addsearch -->
+          <input type="search" name="search" placeholder="Search" />
+        </form>
+      </li>
+      <!-- Responsive Toggle Button -->
+      <div class="d-flex d-md-none justify-content-between mb-5">
+        <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav"
+          aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+              d="M4 7h22M4 15h22M4 23h22" />
+          </svg>
+        </button>
+      </div>
+      <!-- End Responsive Toggle Button -->
+    </ul>
+  </nav>
+</header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+  <div class="collapse navbar-collapse" id="sidebar-nav">
+    <div class="js-scrollbar duik-sidebar-sticky">
+      <ul class="duik-sidebar__nav">
+                          <li class="duik-sidebar__item">
+            <a href="/getting-started" class="duik-sidebar__link">Getting Started</a>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Product Overview</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/overview" class="duik-sidebar__link">What is MobiledgeX?</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-edge-cloud" class="duik-sidebar__link">MobiledgeX Edge-Cloud Console</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-sdk" class="duik-sidebar__link">MobiledgeX Client SDKs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-edge-services" class="duik-sidebar__link">MobiledgeX Edge Services</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-community" class="duik-sidebar__link">MobiledgeX Developer Community</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-demo" class="duik-sidebar__link">MobiledgeX Demo App</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Console App Deployments</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Organizations</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/accounts" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/accounts/manage-accts" class="duik-sidebar__link">Manage Accounts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/accounts/org-users" class="duik-sidebar__link">Developer Organizations</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/supported-apps-types" class="duik-sidebar__link">Application Types</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Deployment Essentials</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/deployment-workflow" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/cloudlets" class="duik-sidebar__link">Cloudlets</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/cloudlet-pools" class="duik-sidebar__link">Cloudlet Pools</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/flavors" class="duik-sidebar__link">Flavors</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/clusters" class="duik-sidebar__link">Cluster Instances</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/app-definition" class="duik-sidebar__link">Application Definition</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/app-instances" class="duik-sidebar__link">Application Instances</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">How-To Guides</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Hello World</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides/hello-world" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image" class="duik-sidebar__link">Create and Upload Your First Docker Image</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/hello-world/running-your-first-docker-image" class="duik-sidebar__link">Running a Docker Image as an Application Instance</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Deploying Virtual Machines</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides/virtual-machine" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/virtual-machine/linux" class="duik-sidebar__link">How To Deploy Linux VMs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/virtual-machine/windows" class="duik-sidebar__link">How To Deploy Windows VMs</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/how-to-deploy-docker-compose" class="duik-sidebar__link">Deploy Docker Compose using Multiple Files</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/gpu" class="duik-sidebar__link">Deploy GPU Applications</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/deploy-helm" class="duik-sidebar__link">Deploy a Helm V3 Application</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/deploy-a-kubernetes-application" class="duik-sidebar__link">Deploy a Kubernetes Application</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Runtime Policies</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-runtime" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/autoscale" class="duik-sidebar__link">Auto Scaling with Kubernetes</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/auto-prov" class="duik-sidebar__link">Auto Provisioning Policy</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/high-availability" class="duik-sidebar__link">High Availabilty</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/security" class="duik-sidebar__link">Security & Trust Policy</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Monitoring Apps</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/monitoring-and-metrics" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/application-utilization-metrics" class="duik-sidebar__link">Utilization Metrics</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/logs" class="duik-sidebar__link">Usage Logs & Events</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/monitoring-edge-events" class="duik-sidebar__link">Monitoring Edge Events</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Continuous Deployment / Integration</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/ci-cd" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/ci-cd/github-actions" class="duik-sidebar__link">GitHub Actions</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Client SDK Integration</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/tech-overview" class="duik-sidebar__link">Technical Overview</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/edge-events-overview" class="duik-sidebar__link">Edge Events Overview</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Android SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/android-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-sdk-download" class="duik-sidebar__link">Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-sdk-sample" class="duik-sidebar__link">SDK Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/add-face-detection" class="duik-sidebar__link">Integrate Face Detection</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-third-party-licenses" class="duik-sidebar__link">Android Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">iOS SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/ios-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-download" class="duik-sidebar__link">Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-sample" class="duik-sidebar__link">Augmented Reality Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-third-party-licenses" class="duik-sidebar__link">iOS SDK Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Unity SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/unity-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/c-sharp-sdk" class="duik-sidebar__link">C# Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/unity-sdk-download" class="duik-sidebar__link">Unity Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/unity-sdk-sample" class="duik-sidebar__link">Unity Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/edge-events" class="duik-sidebar__link">Unity Edge Events (Beta)</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/c-sdk-third-party-licenses" class="duik-sidebar__link">C# SDK Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Edge Services</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Computer Vision</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services/computer-vision" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/cv-deployment" class="duik-sidebar__link">Computer Vision Server Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/how-to-computer-vision-api" class="duik-sidebar__link">Computer Vision Server REST API</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/add-comp-vision-unity" class="duik-sidebar__link">Unity Computer Vision SDK</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Multiplayer Service</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services/unity-edgemultiplay" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/unity-edgemultiplay/how-to-use-edge-multiplay" class="duik-sidebar__link">Getting Started with EdgeMultiplay</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/unity-edgemultiplay/running-edge-multiplay" class="duik-sidebar__link">Running the EdgeMultiplay Server Locally</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Edge Developer Tools</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Command Line Interface: mcctl</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools/mcctl-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/api-key-access" class="duik-sidebar__link">API Key Access and Permissions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-developer" class="duik-sidebar__link">How to use the mcctl utility for Developers</a>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">mcctl Utility Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools/mcctl-guides/mcctl-reference" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/mcctl-installation-and-setup-guide" class="duik-sidebar__link">mcctl Installation and Setup Guide</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/metric-and-usage-commands" class="duik-sidebar__link">Metric and Usage Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/application-and-monitoring-commands" class="duik-sidebar__link">Application and Monitoring Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/audit-and-regional-commands" class="duik-sidebar__link">Regional Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/alert-management-commands" class="duik-sidebar__link">Alert Management Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/automatic-policies-commands" class="duik-sidebar__link">Automatic Policies Commands</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/edgebox" class="duik-sidebar__link">Local Edge Testing : EdgeBox</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Design Principles</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/design" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/best-practice-container-deploy" class="duik-sidebar__link">Best Practices : Deployments</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/best-practice-sdk" class="duik-sidebar__link">Best Practices : Client SDKs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/load-balancing" class="duik-sidebar__link">Best Practices : Load Balancing</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/sizing-applications" class="duik-sidebar__link">Best Practices : Sizing Applications</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Best Practices: Debugging</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/design/testing-and-debugging" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/alarms" class="duik-sidebar__link">Alerts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/health-check" class="duik-sidebar__link">Health Check</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/storing-metrics" class="duik-sidebar__link">Storing Metrics and Insights</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/how-to-stress-test" class="duik-sidebar__link">Stress Testing</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/running-sshd-inside-container" class="duik-sidebar__link">Running SSHD Inside a Container</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item active">
+            <a class="duik-sidebar__link">MobiledgeX Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/sdk" class="duik-sidebar__link">SDK Release Notes</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Console Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes/console" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/release-notes-3-0" class="duik-sidebar__link">3.0</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/2_4_0" class="duik-sidebar__link">2.4</a>
+          </li>
+                                  <li class="duik-sidebar__item active current">
+            <a href="/release-notes/console/2_0_0" class="duik-sidebar__link">2.0</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">API Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/apis" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net" class="duik-sidebar__link">Device APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/mc" class="duik-sidebar__link">Edge Orchestration APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/edge-cloud-sdk-unity" class="duik-sidebar__link">Unity SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/edge-cloud-sdk-android/" class="duik-sidebar__link">Android SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/MatchingEngineSDK/rest/index.html" class="duik-sidebar__link">Swift SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/swagger/mexdemo/edge-cloud-sdk-csharp/html/index.html" class="duik-sidebar__link">C# SDK Manual</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/support" class="duik-sidebar__link">FAQs and Support</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/search" class="duik-sidebar__link">Search</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/glossary-of-terms" class="duik-sidebar__link">Glossary of Terms</a>
+          </li>
+                
+      </ul>
+      <hr class="d-block d-md-none">
+      <ul class="duik-sidebar__nav d-block d-md-none">
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com" class="duik-sidebar__link">MobiledgeX Home</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/product" class="duik-sidebar__link">Product</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/use-cases" class="duik-sidebar__link">Use Cases</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/about" class="duik-sidebar__link">About</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/blog" class="duik-sidebar__link">Blog</a></li>
+        <li class="duik-sidebar__item"><a href="https://operators.mobiledgex.com" class="duik-sidebar__link">Operators</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('li.subs.depth-3 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-3').removeClass('active');
+        } else {
+          $('li.subs.depth-3').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-2 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-2').removeClass('active');
+        } else {
+          $('li.subs.depth-2').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-1 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-1').removeClass('active');
+        } else {
+          $('li.subs.depth-1').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      })
+    });
+</script>
+
+                  <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+        <div class="row pt-3">
+          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block toc"></div>          <div class="col-xl-10 order-xl-1 duik-content border-bottom">
+            <div class="mb-7">
+              <script type="text/javascript">
+  $(document).ready(function () {
+    $('#copyshortlink').click(function (e) {
+      e.preventDefault()
+      var copyText = document.getElementById('shortlink')
+      var tooltip = document.getElementById('myTooltip')
+      $(copyText).show()
+      copyText.select()
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand('copy')
+      $(copyText).hide()
+      tooltip.innerHTML = 'Copied: ' + copyText.value
+    })
+    $('#copyshortlink').mouseout(function () {
+      var tooltip = document.getElementById('myTooltip')
+      tooltip.innerHTML = 'Copy link to clipboard'
+    })
+  })
+</script>
+
+
+<div class="markdown-body">
+      <h1>
+    MobiledgeX Edge-Cloud Console Release Notes 2.0 <input type="text" id="shortlink" value="http://dev-v3.test/t/8c4349e8" style="display: none;">
+    <div class="copyTooltip">
+      <a href="" id="copyshortlink">
+        <span class="tooltiptext" id="myTooltip">Copy link to clipboard</span>
+        <svg fill="rgba(39,60,76,.5)" width="15pt" height="15pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="m91.762 8.2422c-5.3164-5.3164-12.379-8.2422-19.887-8.2422s-14.57 2.9258-19.883 8.2422c0 0-17.742 17.734-18.758 18.742-5.293 5.3047-8.2188 12.379-8.2305 19.938 0.011719 7.5 2.9375 14.547 8.2383 19.848l2.2891 2.2891c0.60938 0.60938 1.4102 0.91406 2.2109 0.91406 0.80078 0 1.6016-0.30469 2.2109-0.91406l4.418-4.418c1.2227-1.2227 1.2227-3.1953 0-4.418l-2.2891-2.2891c-5.9922-5.9961-6.0742-15.824-0.17969-21.922 0.18359-0.1875 18.934-18.93 18.934-18.93 2.9414-2.957 6.8672-4.582 11.043-4.582 4.168 0 8.0898 1.625 11.039 4.5703 0.003906 0 0.003906 0.007813 0.003906 0.007813 6.1016 6.1094 6.1016 15.992 0.003906 22.094l-0.96875 0.96484c1.5195 4.0586 2.4141 8.4102 2.418 12.988 0 0.83203-0.11328 1.6289-0.16406 2.4414l7.5547-7.5547c10.984-10.988 10.977-28.801-0.003906-39.77z" />
+            <path d="m8.2383 91.758c5.3164 5.3164 12.379 8.2422 19.887 8.2422s14.57-2.9258 19.883-8.2422c0 0 17.742-17.734 18.758-18.742 5.293-5.3047 8.2188-12.379 8.2305-19.938-0.011719-7.5-2.9375-14.547-8.2383-19.848l-2.2891-2.2891c-0.60938-0.60938-1.4102-0.91406-2.2109-0.91406-0.80078 0-1.6016 0.30469-2.2109 0.91406l-4.418 4.418c-1.2227 1.2227-1.2227 3.1953 0 4.418l2.2891 2.2891c5.9922 5.9961 6.0742 15.824 0.17969 21.922-0.18359 0.1875-18.934 18.93-18.934 18.93-2.9414 2.957-6.8672 4.582-11.043 4.582-4.168 0-8.0898-1.625-11.039-4.5703l-0.003906-0.007813c-6.1016-6.1094-6.1016-15.992-0.003906-22.094l0.96875-0.96484c-1.5195-4.0586-2.4141-8.4102-2.418-12.988 0-0.83203 0.11328-1.6289 0.16406-2.4414l-7.5547 7.5547c-10.984 10.988-10.977 28.801 0.003906 39.77z" />
+          </g>
+        </svg>
+      </a>
+    </div>
+  </h1>
+    
+<p>With the release of <a href="https://mobiledgex.com/product">Edge-Cloud R2.0</a>, a number of capabilities such as the management, operations and monitoring of application deployments and resources are available through an easy-to-use <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a>. As a Developer, you can use the console to manage your software deployment across all operator’s distributed edge infrastructure, further simplifying the deployment of enterprise resources and applications. Operators, on the other hand,  can use the <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a> to monitor the usage of the Operator-owned Cloudlets. Both Developers and Operators can monitor and manage most of their operations through a single pane of glass.</p>
+<p>For a comprehensive list of features and capabilities, refer to our recent announcement of <a href="https://mobiledgex.com/product">Edge-Cloud 2.0</a>. Documentation and Resources can be found on our <a href="https://developers.mobiledgex.com/">Developer Portal</a>, where we continuously publish new documentation and resources to help you realize the potential of our solutions and offerings.</p>
+<p>The table below lists specific features added to our <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a>.</p>
+<h2 id='new-features-on-edge-cloud-console'><a class='anchor' aria-hidden='true' href='#new-features-on-edge-cloud-console'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>New Features on Edge-Cloud Console</h2>
+<table>
+<tbody>
+<tr>
+<th><b>Title</b></th>
+<th align="center"><b>Description</b></th>
+</tr>
+<tr>
+<td>Alert Framework </td>
+<td>Currently a beta feature, MobiledgeX’s Platform provides an <b>AlertManager</b> that serves as the global component responsible for distributing alerts to application owners and cloudlet operators. Alarms are consolidated at the regional level, where each regional controller receives alarms. Based on the user configuration, an alert receiver can be created, and depending on user preference; an alert notification is sent via email or Slack to the user for mitigation.</td>
+</tr>
+<tr>
+<td>Alert Receivers</td>
+<td>A new Alert Receivers sub-menu is added to simplify the creation of alert receivers. Users can set up alert receivers for application instances, clusters, and cloudlets.  
+<p>Additionally, AlertReceiver APIs have been added through the mcctl utility program to provide users flexibility to integrate with their existing monitoring systems.</p>  
+<ul>
+<li><b>api/v1/auth/alertreceiver/create</b></li>
+<li><b>api/v1/auth/alertreceiver/delete</b></li>
+<li><b>api/v1/auth/alertreceiver/show</b></li></ul>
+</td>
+<tr>
+<td>Monitoring</td>
+<td>A more simplified interface is implemented to help users continue to filter and display analytics and data for clusters, application instances, and cloudlets, where filtering can be done by <i>App Inst</i>, <i>Cluster Inst</i>, <i>Cloudlet</i>, and <i>Org</i>. <b>Audit</b>, <b>Event</b>, and <b>Usage</b> detailed logs can all be viewed through the Monitoring page by selecting a drop-down icon.
+<p>The details of all <b>Alerts</b> generated can also be viewed from this page.</p>
+<ul>
+<li><b>Audit logs</b>: Log user activities such as logging, creating applications, deleting users, creating policies, etc.</li>
+<li><b>Event logs</b>: These are system-generated events and can include services such as auto-provision policy, auto-scaling, application instance, or HA, where our platform will trigger events based on these user policies. </li>
+<li><b>Usage Logs</b>: These logs are generated to view the status (online or offline) of clusters, application instances status, or Cloudlets, and maintenance status. </li></ul>
+</td>
+</tr>
+<tr>
+<td>App event log displayed for an app instance (Developer interface)</td>
+<td>On the Monitoring page, we now display event logs for application instances deployed via the auto-provision policy for reservable cluster instances.</td>
+</tr>
+<tr>
+<td>Auto-Provision Policy Undeploy (Developer interface)</td>
+<td>We now provide the ability to undeploy application instances based on the threshold and value set for the <b>Undeploy Request Count</b> and <b>Undeploy Interval Count(s)</b>. </td>
+</tr>
+<tr>
+<td>Cloudlet selection for HA (Operator interface)</td>
+<td><p>Previously for HA-based cloudlets, two cloudlets in the same location would only allow one cloudlet to be utilized while the other stayed idle. Now, with the implementation of randomized cloudlet selection, both cloudlets can be utilized.</p>  
+</td>
+</tr>
+<tr>
+<td>Cloudlet Events (Operator interface)</td>
+<td>Alerts and events are now generated for cloudlets that are down, in the process of upgrading, or are in maintenance mode. These events can be viewed through the Monitoring page. Operators can set up alert receivers to receive an alert notification when these alarms are triggered. </td>
+</tr>
+<tr>
+<td>Bot Protection</td>
+<td>With the implementation of <b>CAPTCHA</b>, users are now presented with a <b>CAPTCHA</b> checkbox during the registration process. If the system detects suspicious behavior, further validation will be required through an image recognition task. </td>
+</tr>
+<tr>
+<td>Two-Factor Authentication (2FA)</td>
+<td>Users can optionally set this up during account registration for an added layer of security, where an additional step of verification is required during sign-in.</td>
+</tr>
+<tr>
+<td>Strong Passwords</td>
+<td>Passwords now must meet all password requirements and guidelines to help thwart possible brute force attacks. In addition to the password requirements, password strength must also meet all scoring requirements provided by MobiledgeX through an entropy scoring system for passwords to be considered strong.</td>
+</tr>
+</tbody>
+</table>  
+<h2 id='new-features-on-edge-cloud-console'><a class='anchor' aria-hidden='true' href='#new-features-on-edge-cloud-console'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>New Features on Edge-Cloud Console</h2>
+<table>
+<tbody>
+<tr>
+<th><b>Title</b></th>
+<th align="center"><b>Description</b></th>
+</tr>
+<tr>
+<td>Login and registration mechanism</td>
+<td>Login and Self-serve registration capabilities are provided on the <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a> to allow appropriate resource access to all users.</td>
+</tr>
+<tr>
+<td>RBAC support</td>
+<td>Role-Based Access Control provides the ability to assign different roles to users per Organization.  
+<ul><li>As a Developer, your role may include Manager, Contributor, or Viewer.</li>
+<li>As an Operator, your role may include Manager, Contributor, or Viewer.</li></ul>
+</td>
+<tr>
+<td>Developer interface</td>
+<td>The <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a> lets Developers debug issues related to their application instances in the Operator cloudlets, where they are deployed. </td>
+</tr>
+<tr>
+<td>Operator interface</td>
+<td>The <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a> lets Operators monitor the usage of the Operator-owned Cloudlets.</td>
+</tr>
+<tr>
+<td>Add/invite users to your Organization</td>
+<td>If a Developer or Operator creates an Organization, they become the Administrator for that Organization. As an Administrator, the Developer or Operator can add other users to their Organization and assign user roles. </td>
+</tr>
+<tr>
+<td>Auto-create VM repository for Developers during CreateDeveloper</td>
+<td><p>During the CreateDeveloper process, once the user’s identity is confirmed by email verification, a repository is automatically created under the MobiledgeX VM Registry.</p>  
+<p>With SSO implemented, the same Edge-Cloud Console login credentials is used to access the VM registry.</p>  </td>
+</tr>
+<tr>
+<td>Auto-create Docker repository for Developers during CreateDeveloper</td>
+<td><p>During the CreateDeveloper process, once the user’s identify is confirmed by email verification, a repository is automatically created under the MobiledgeX Docker Registry.</p>
+<p>With SSO implemented, the same Edge-Cloud Console login credentials is used to access the Docker registry.</p> </td>
+</tr>
+<tr>
+<td>Self-serviced tool tips</td>
+<td>Tool tips can be found throughout the <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a> wherever a question mark is available. Click on the question mark to access a brief helper text about an element or its function. </td>
+</tr>
+<tr>
+<td>Regional controller</td>
+<td>For scalability, privacy, and the operational ease of managing your Organization, all  cloudlets are part of a controller, and are organized by regions. As a developer, you can deploy your application instance to multiple cloudlets within the same Operator and region. As an Operator, you can deploy multiple cloudlets with the same region. Each region has its own controller along with its own database. Each database contains data, such as Cloudlets, Flavors, ClusterInstance, Apps, that exist within that region. The Master Controller directly communicates with each regional controller, and all requests made by the console passes through the Master Controller. The Master Controller will determine which regional controller to communicate with when you select an available Region from the pull-down list. </td>
+</tr>
+<tr>
+<td>3 application deployment types supported</td>
+<td>When creating Apps, you can choose to deploy your application using the 3 available deployment types:  
+<ul><li><b>VM</b>: QCOW2 image</li>
+<li><b>Docker</b>: docker-compose</li>
+<li><b>Kubernetes</b>: k8s yaml, single helm chart</li>
+</ul> </td>
+</tr>
+<tr>
+<td>Ability to add security group during CreateAppInst</td>
+<td>During the CreateAppInst process, Developers can configure security groups. </td>
+</tr>  
+<tr>
+<td>Upgrade App and App Instances</td>
+<td>Developers can update an application or application instance by specifying a revision field, which identifies the specific revision number. Furthermore, you can update application instances independently of the applications, maintaining a mix of current existing revisions. Simultaneously upgrading multiple instances of applications and application instances is also supported. However, developers are responsible for maintaining the history of their upgrades or revisions; MobiledgeX does not track or maintain older versions of application and application instances. </td>
+</tr>
+<tr>
+<td>Dedicated security group per cluster</td>
+<td>Dedicated clusters are assigned to each security group, and restricted traffic occurs for groups that are not part of the default group. You can also create multiple clusters at once. Furthermore, you can have a <b>dedicated</b> or <b>shared</b> Root-LB balancer. When you create a cluster, we automatically create a shared Root-LB balancer. If flagged as <b>shared</b>, Kubernetes cluster will use that shared Root-LB balancer. </td>
+</tr>
+<tr>
+<td>Different Flavors supported</td>
+<td>Multiple T-shirt size for VMs are available. </td>
+</tr>
+<tr>
+<td>Logging actions</td>
+<td>Logs are created each time you or someone within your Organization creates, deletes, or modifies settings/configurations for your Organization. </td>
+</tr>
+<tr>
+<td>Able to deploy to multiple cloudlets</td>
+<td>As a Developer, you can deploy your Cluster and Application Instances to multiple cloudlets within the same region and operator. </td>
+</tr>
+<tr>
+<td>Metrics available for VM, Docker, and Kubernetes</td>
+<td>We provide a single pane of glass to monitor all deployed applications. </td>
+</tr>
+<tr>
+<td>Auto Provisioning Policy of Application Instance </td>
+<td>Based on policy, such as user location, MobiledgeX can auto-deploy your application instance. </td>
+</tr>
+<tr>
+<td>Auto Provision-Privacy Policy </td>
+<td>Once you create a cluster, you can add a privacy policy to that cluster instance, and thus, making your cluster private. </td>
+</tr>
+<tr>
+<td>Root-LB based Health checking for application instances</td>
+<td>We’ve added a health check <b>AppInst.Health</b> that provides the current state of the AppInst., and marks it as either <b>Offline</b> or <b>Ready</b>. </td>
+</tr>
+<tr>
+<td>Basic health monitoring scheme of developer AppInstances</td>
+<td>Health Monitoring is available to monitor the health of applications through a single pane of glass.</td>
+</tr>
+<tr>
+<td>Docker Log Exposure</td>
+<td>Provides Application Developers access to docker logs. </td>
+</tr>
+<tr>
+<td>Kubernetes Log Exposure </td>
+<td>Provides Application Developers access to Kubernetes logs. </td>
+</tr>
+<tr>
+<td>Security Policy on Outbound Connection to make deployment fully Private </td>
+<td>As part of our Privacy Policy, and during the application creation process, the privacy settings are enabled. Upon deployment of the AppInstance, the security settings are auto-set such that any outbound connection is prohibited. This is only supported for  Dedicated IP access. </td>
+</tr>
+<tr>
+<td>Shell access capabilities for Developers </td>
+<td>From the <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a>, Developers have shell access to their containers for the purpose of debugging and testing.  You use the ‘Run’ command to go inside container and  ‘Show Log’ to view changes. </td>
+</tr>
+<tr>
+<td>Terminal access capabilities for Developers </td>
+<td>From the <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a>, Developers have shell access to their VMs for the purpose of debugging and testing.  Use the terminal commands from the AppInst Page. </td>
+</tr>
+<tr>
+<td>DME Metrics </td>
+<td><p>A powerful monitoring tool is available and provides valuable metrics to assist you in making informed decisions about your application deployment and their locations.  You can view data such as the number of users associated with an application, or the number of users communicating to your backend instances. This valuable data can help you scale up your deployments based on user activity. The dashboard also provides several ways to filter your data or analytics, drilling even further down to examine your application's usage and performance.</p>  
+<p>Snapshots of your application's analytics are represented visually by tiles that you control.
+</p></td>
+</tr>  
+<tr>
+<td>Audit logging supported </td>
+<td><p>We generate audit logs based on User ID. You can view your own historical activities from the <a href="https://console.mobiledgex.net/site1?pg=0">Edge-Cloud Console</a>.</p>
+<p>You can also view logs and examine historical activities by users within your Organization. These logs can be used for diagnostic purposes or for error correction.</p> </td>
+</tr>
+<tr>
+<td>Integrate with GitHub Actions </td>
+<td><p>You can integrate <a href="https://github.com/features/actions">GitHub Actions</a> into your own edge applications hosted on GitHub to auto-deploy your applications to our cloudlets. </p>
+<p><b>Note</b>: The current version of <a href="https://github.com/features/actions">GitHub Actions</a> only supports Docker and Kubernetes-based deployments.</p> </td>
+</tr>
+<tr>
+<td>Automatic Onboarding of Cloudlets </td>
+<td>Operators can automatically onboard their Cloudlets.</td>
+</tr>
+<tr>
+<td>Cloudlet Metrics </td>
+<td>Operators can view their deployed Cloudlets through a single pane of glass. </td>
+</tr>
+<tr>
+<td>Cloudlet Event Logs </td>
+<td>Operators can view event logs for their deployed Cloudlets. </td>
+</tr>
+<tr>
+<td>Cloudlet Pools </td>
+<td>Operators can make their cloudlets private, and Organizations that are part of the cloudlet pool can only view those particular cloudlets. </td>
+</tr>
+<tr>
+<td>GPU support </td>
+<td><a href="https://www.nvidia.com/en-us/data-center/tesla-t4/">Nvidia T4</a> GPUs are supported in pass-through mode for virtual machines, enabling the entire GPU to be exclusively dedicated to a virtual machine. </td>
+</tr>
+</tbody>
+</table>  
+<h2 id='known-issues'><a class='anchor' aria-hidden='true' href='#known-issues'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Known Issues</h2>
+<p>There are no known issues documented at this time.</p>
+
+</div>
+
+              <link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".slb").simplebox()
+  });
+</script>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="https://www.mobiledgex.com/privacy-policy">Privacy Policy</a> | <a href="https://www.mobiledgex.com/terms-of-use">Terms of Use</a> | <a href="https://www.mobiledgex.com/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+            
+    </div>
+  </div>
+
+  
+
+    <script type="text/javascript">
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.duik-content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h2, h3',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: false,
+      listItemClass: 'duik-content-nav__item',
+      orderedList: false,
+      listClass: 'js-scroll-nav duik-content-nav',
+      collapseDepth: 6,
+      activeLinkClass: 'active',
+    })
+    $(document).ready(function() {
+      hljs.highlightAll()
+    });
+  </script>
+  </body>
+
+</html>

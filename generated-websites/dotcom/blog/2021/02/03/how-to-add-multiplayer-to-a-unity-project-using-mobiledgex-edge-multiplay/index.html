@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Add Multiplayer to a Unity Project using MobiledgeX Edge Multiplay | MobiledgeX</title>
+<meta name="description" content="To support developers with use cases in multiplayer gaming, MobiledgeX has open sourced a multiplayer message relay game server called Edge Multiplay." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="How to Add Multiplayer to a Unity Project using MobiledgeX Edge Multiplay" />
+<meta property="og:description" content="To support developers with use cases in multiplayer gaming, MobiledgeX has open sourced a multiplayer message relay game server called Edge Multiplay." />
+<meta property="og:url" content="http://mexv3.test/blog/2021/02/03/how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="How to Add Multiplayer to a Unity Project using MobiledgeX Edge Multiplay" />
+<meta name="twitter:description" content="To support developers with use cases in multiplayer gaming, MobiledgeX has open sourced a multiplayer message relay game server called Edge Multiplay." />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/Screen-Shot-2021-02-03-at-3.52.48-PM.jpg/bb34a11f293155176302bbfd477970a5.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/Screen-Shot-2021-02-03-at-3.52.48-PM.jpg/bb34a11f293155176302bbfd477970a5.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2021/02/03/how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay" rel="canonical" />
+<link href="http://mexv3.test/blog/2021/02/03/how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay?page=5" rel="prev" />
+<link href="http://mexv3.test/blog/2021/02/03/how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay?page=7" rel="next" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay-content">
+      <div class="row">
+        <div class="col">
+  <h1>How to Add Multiplayer to a Unity Project using MobiledgeX Edge Multiplay</h1>
+  <p class="datestamp">February 3rd, 2021</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/Screen-Shot-2021-02-03-at-3.52.48-PM.jpg" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/Vasanth-Mohan.jpg" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/vasanth-mohan">Vasanth Mohan</a></p>
+            <p class="job-title">Developer Adovcate</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2022/01/18/massive-technologies-showcases-unity-render-streaming">Massive Technologies Showcases the Advantage of Unity Render Streaming at hubraum</a></li>
+                        <li><a href="/blog/2021/11/09/developer-spotlight-ums">Developer Spotlight: Unmanned Life</a></li>
+                        <li><a href="/blog/2021/11/04/dt-nvidia-cloudxr">Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</a></li>
+                        <li><a href="/blog/2021/11/02/event-join-mobiledgex-and-partners-for-a-discussion-of-infrastructure-critical-to-mobile-ar-vr-at-awe-usa-2021-nov-11th-9-30-a-m-10-25-a-m-pt">[Event] Join MobiledgeX and partners for a discussion of infrastructure critical to mobile AR/VR at AWE USA 2021 (Nov 11th 9:30 a.m.- 10:25 a.m PT)</a></li>
+                        <li><a href="/blog/2021/10/07/developer-spotlight-forwardgame">Developer Spotlight: forwARdgame</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/developer">See more articles from the Developer category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/Vasanth-Mohan.jpg" class="img-fluid headshot" alt="Headshot for Vasanth Mohan" />
+        <div class="info">
+          <p class="name">Vasanth Mohan</p>
+          <p class="job-title">Developer Adovcate</p>
+        </div>
+      </div>
+      
+                  <p>Among the developers we work with at MobiledgeX, gaming, especially multiplayer gaming, has been a use case that sparks considerable interest. To support developers with use cases in multiplayer gaming, MobiledgeX has open sourced a multiplayer message relay game server called <a href="https://developers.mobiledgex.com/guides-and-tutorials/unity-edgemultiplay/how-to-use-edge-multiplay">Edge Multiplay</a>.</p><p>Additionally, to make it extremely simple to integrate this solution into existing Unity games, MobiledgeX has also created an open source Unity client with simple prefabs and function calls. These function calls are designed to make it simple to connect players to the closest Edge Multiplay Server and communicate game-specific events among players.</p><p>To make it easy to integrate Edge Multiplay into your existing games, we provide you <a href="https://mobiledgex.github.io/edge-multiplay-unity-client/">documentation</a> on using the various Edge Multiplay features. We have also created a <a href="https://www.youtube.com/playlist?list=PLwUZZfaECSv18E5d0ooDR7S8416pImW8W">series of videos</a> to help you start developing with Edge Multiplay. Below, you can watch each of these videos, which will explain how you can start from an empty Unity project to a simple multiplayer networked game. </p><p>If you are interested in learning more about Edge Multiplay, join our <a href="https://discord.gg/BERcWQV2ra">Discord</a> to ask questions and chat with the team on how you can best integrate Edge Multiplay into your own game. </p><h2 id='getting-started'><a class='anchor' aria-hidden='true' href='#getting-started'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Getting Started</h2>
+                    <div class="embed-responsive embed-responsive-16by9">
+        <!-- Youtube and Video -->
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/8fGakyNBotg" ...></iframe>
+      </div>
+                         <p>A step-by-step guide on installing  the MobiledgeX Unity SDK and importing the Edge Multiplay Client. In this video, we will also show you how to test Edge Multiplay using our Ping Pong example and connect to one of our sample servers. </p><h2 id='avatar-selection'><a class='anchor' aria-hidden='true' href='#avatar-selection'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Avatar Selection</h2>
+                    <div class="embed-responsive embed-responsive-16by9">
+        <!-- Youtube and Video -->
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/9kMz6Q3g0xQ" ...></iframe>
+      </div>
+                         <p>Starting from a project where you have just imported Edge Multiplay, this video will walk you through setting up your scene with the correct scripts and prefabs to integrate with Edge Multiplay. Once setup, we will walk you through instantiating a player selected avatar when your game starts. </p><h2 id='events-amp-callbacks'><a class='anchor' aria-hidden='true' href='#events-amp-callbacks'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Events &amp; Callbacks</h2>
+                    <div class="embed-responsive embed-responsive-16by9">
+        <!-- Youtube and Video -->
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/zC-7Oz_C2oA" ...></iframe>
+      </div>
+                         <p>To help each player keep track of the state of other players that are connected to the server, Edge Multiplay provides many different types of events with callbacks that developers can listen for. For example, there are events for when your player joins a room, when other players join the same room, and when the room is full and the game can begin. In this video, we will go over some of these events and how you can listen for them to best serve the game you are building. </p><h2 id='sending-data-amp-messages'><a class='anchor' aria-hidden='true' href='#sending-data-amp-messages'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Sending Data &amp; Messages</h2>
+                    <div class="embed-responsive embed-responsive-16by9">
+        <!-- Youtube and Video -->
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/4kQpnjc_mPY" ...></iframe>
+      </div>
+                         <p>Finally, the most critical aspect we offer is how game-specific data can be sent using Edge Multiplay across all your players during the game’s duration. In this video, we will go over two specific ways you can integrate Edge Multiplay into your game: using Edge Multiplay Observer and by Sending Messages with the Edge Manager. The Edge Multiplay Observer is a drag and drop Unity component that can be applied to player avatars or to any other game object within your scene in order to easily sync position or rotation of a game object. If you have more custom messages or data that needs to be sent, you can use the Edge Manager to send those specific messages to all other players connected to the room. </p><h2 id='what-is-next'><a class='anchor' aria-hidden='true' href='#what-is-next'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>What is Next?</h2><p>If you are interested in trying out Edge Multiplay, we encourage you to follow this series to try it yourself. We look forward to seeing what amazing multiplayer games the community can build using Edge Multiplay.</p><p>If you are interested in other solutions that leverage the edge, we encourage you to reach out on <a href="https://discord.gg/BERcWQV2ra">Discord</a> for Early Access to the MobiledgeX Edge-Cloud platform.</p><p>We also encourage you to follow us on <a href="https://twitter.com/MobiledgeX">Twitter</a> for the latest updates from MobiledgeX.</p>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/02/03/how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay&title=How+to+Add+Multiplayer+to+a+Unity+Project+using+MobiledgeX+Edge+Multiplay"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=How+to+Add+Multiplayer+to+a+Unity+Project+using+MobiledgeX+Edge+Multiplay&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/02/03/how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/02/03/how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

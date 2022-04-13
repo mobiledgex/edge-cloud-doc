@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta name="robots" content="noindex,nofollow">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation | MobiledgeX Operators</title>
+<meta name="description" content="Edge computing brings computing resources to where they are needed the most. The MobiledgeX Edge-Cloud Platform helps Mobile Network Operators build their own edge clouds and generate new revenue while giving developers a platform to run their apps utilizing the telco edge infrastructure." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Documentation" />
+<meta property="og:description" content="Edge computing brings computing resources to where they are needed the most. The MobiledgeX Edge-Cloud Platform helps Mobile Network Operators build their own edge clouds and generate new revenue while giving developers a platform to run their apps utilizing the telco edge infrastructure." />
+<meta property="og:url" content="http://operator-portal.test/documentation" />
+<meta property="og:site_name" content="MobiledgeX Operators" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mobiledgex" />
+<meta name="twitter:title" content="Documentation" />
+<meta name="twitter:description" content="Edge computing brings computing resources to where they are needed the most. The MobiledgeX Edge-Cloud Platform helps Mobile Network Operators build their own edge clouds and generate new revenue while giving developers a platform to run their apps utilizing the telco edge infrastructure." />
+<meta property="og:image" content="http://operator-portal.test/img/containers/assets/operators-social.jpg/5c20751e252519234312d7cbdaeb6738.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://operator-portal.test/img/containers/assets/operators-social.jpg/5c20751e252519234312d7cbdaeb6738.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://operator-portal.test/" rel="home" />
+<link href="http://operator-portal.test/documentation" rel="canonical" />
+<link type="text/plain" rel="author" href="http://operator-portal.test/humans.txt" />
+  <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=1641595153">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+
+<body class="bg-white home">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2V3KZZ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="duik-header">
+  <nav class="properties navbar fixed-top d-none d-md-flex">
+    <ul>
+      <li><a href="https://mobiledgex.com">MobiledgeX Home</a></li>
+      <li><a href="https://mobiledgex.com/product">Product</a></li>
+      <li><a href="https://mobiledgex.com/use-cases">Use Cases</a></li>
+      <li><a href="https://mobiledgex.com/about">About</a></li>
+      <li><a href="https://mobiledgex.com/blog">Blog</a></li>
+      <li><a href="https://developers.mobiledgex.com">Developers</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-dark fixed-top bg-terrain flex-nowrap p-0 main-nav">
+    <a class="navbar-brand col-md-3 col-xl-2 mr-0 py-3" href="/"><img
+        src="/img/logo-white.svg?v=1592862229" alt="MobiledgeX Developers"></a>
+
+    <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/product-overview">Product Overview</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/supported-iaas-stacks">Successful Use Cases</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0"
+          href="/operational-readiness">Operational Readiness</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0"
+          href="/product-overview/security-and-privacy-standards-policies">Security and Privacy Policies</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/operator-specific-mcctl-and-rest-apis">APIs</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0" href="/release-notes">Release
+          Notes</a>
+      </li>
+      <li class="nav-item d-none d-md-inline">
+        <form method="get" action="/search/" id="navbar-search">
+          <!-- Search field's name must be search -->
+          <input type="search" name="search" placeholder="Search">
+        </form>
+      </li>
+      <!-- Responsive Toggle Button -->
+      <div class="d-flex d-md-none justify-content-between mb-5">
+        <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav"
+          aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+              d="M4 7h22M4 15h22M4 23h22" />
+          </svg>
+        </button>
+      </div>
+      <!-- End Responsive Toggle Button -->
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Promo Section -->
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+  <div class="collapse navbar-collapse" id="sidebar-nav">
+    <div class="js-scrollbar duik-sidebar-sticky">
+      <ul class="duik-sidebar__nav">
+                          <li class="duik-sidebar__item active current">
+            <a href="/documentation" class="duik-sidebar__link">Documentation</a>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Product Overview</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Edge-Cloud Console</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Account Management</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/account-management" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/account-management/accounts" class="duik-sidebar__link">Accounts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/account-management/organizations-and-users" class="duik-sidebar__link">Organizations and Users</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/edgebox-proof-of-concept-testing" class="duik-sidebar__link">EdgeBox: Proof of Concept Testing</a>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Resource Management and Workflow</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/resource-management-and-workflow" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/resource-management-and-workflow/direct-vs-restricted-access" class="duik-sidebar__link">Direct vs. Restricted Access</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Cloudlet Deployment Guides</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/cloudlet-deployment-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets" class="duik-sidebar__link">Deploying Cloudlets</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools" class="duik-sidebar__link">Cloudlet Pools</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/manage-gpu-drivers-for-cloudlets" class="duik-sidebar__link">Manage GPU Drivers for Cloudlets</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Debugging</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/debugging" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/health-check-and-alert" class="duik-sidebar__link">Health Check and Alerts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/operator-monitoring-and-metrics" class="duik-sidebar__link">Monitoring: Events, Usage, and Metrics</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/reports" class="duik-sidebar__link">Resource Management and Reporting</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/appendix-a-ports" class="duik-sidebar__link">Inbound and Outbound Ports</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Edge-Cloud Resource Manager Plugin</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: OpenStack</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-1-openstack" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-option" class="duik-sidebar__link">Openstack Tenant Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-options" class="duik-sidebar__link">OpenStack Tenant Deployment Options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: Vsphere</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment" class="duik-sidebar__link">vSphere Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment-options" class="duik-sidebar__link">VSphere Deployment options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: VMPool</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/vmpool-deployment" class="duik-sidebar__link">VMPool Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/scenario-deployment-model-2-mobiledgex-assisted-openstack-deployment-operator-provides-the-bare-metal-server" class="duik-sidebar__link">VMpool Deployment Options</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/vm-pool" class="duik-sidebar__link">VM Pool Installation on VMware vCD</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: VMware Cloud Director</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-3-vcd" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-3-vcd/vcd-deployment-operator-provides-a-tenant" class="duik-sidebar__link">VCD Deployment: Operator Provides a Tenant</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-3-vcd/vmware-vcloud-director-vcd-deployment" class="duik-sidebar__link">VMware vCloud Director (VCD) Deployment</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: Bare Metal OpenStack</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-deployment-for-baremetal-openstack" class="duik-sidebar__link">MobiledgeX Assisted Deployment for Bare Metal Openstack</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-openstack-deployment-options" class="duik-sidebar__link">MobiledgeX Assisted OpenStack Deployment Options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-6-baremetal-anthos" class="duik-sidebar__link">IaaS Type: Bare Metal Anthos</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/security-and-privacy-standards-policies" class="duik-sidebar__link">Security and Privacy Standards Policies</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Operational Readiness</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operational-readiness" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operational-readiness/operator-cloudlet-maintenance" class="duik-sidebar__link">Operator Cloudlet Maintenance</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Operator Specific MCCTL and REST APIs</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operator-specific-mcctl-and-rest-apis" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/mc/" class="duik-sidebar__link">Orchestration APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/api-token-access-and-permissions" class="duik-sidebar__link">API Key Access and Permissions</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">mcctl Utility Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/mcctl-installation-and-setup-guide" class="duik-sidebar__link">mcctl Installation and Setup Guide</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/intro-to-mcctl-metric-commands" class="duik-sidebar__link">Metric Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/cloudlet-commands" class="duik-sidebar__link">Cloudlet Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/reports-and-monitoring" class="duik-sidebar__link">Reports and Monitoring Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/audit-and-regional-commands" class="duik-sidebar__link">Regional Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/mapping-virtual-machines-to-iaas" class="duik-sidebar__link">Mapping Virtual Machines to IaaS</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-3-0" class="duik-sidebar__link">3.0</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-2-4-1" class="duik-sidebar__link">2.4.1</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-2-4" class="duik-sidebar__link">2.4</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/iaas-supported-features" class="duik-sidebar__link">Supported Features across IaaS</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/faqs-and-support" class="duik-sidebar__link">FAQs and Support</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/search" class="duik-sidebar__link">Search</a>
+          </li>
+                
+      </ul>
+      <hr class="d-block d-md-none">
+      <ul class="duik-sidebar__nav d-block d-md-none">
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com" class="duik-sidebar__link">MobiledgeX Home</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/product" class="duik-sidebar__link">Product</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/use-cases" class="duik-sidebar__link">Use Cases</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/about" class="duik-sidebar__link">About</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/blog" class="duik-sidebar__link">Blog</a></li>
+        <li class="duik-sidebar__item"><a href="https://developers.mobiledgex.com" class="duik-sidebar__link">Developers</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('li.subs.depth-3 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-3').removeClass('active');
+        } else {
+          $('li.subs.depth-3').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-2 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-2').removeClass('active');
+        } else {
+          $('li.subs.depth-2').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-1 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-1').removeClass('active');
+        } else {
+          $('li.subs.depth-1').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      })
+    });
+</script>
+
+
+      <main class="ml-md-auto col-md-9 col-xl-10 px-0">
+        <section class="bg-terrain-light">
+          <div class="container">
+            <div class="justify-content-center position-relative row">
+              <div class="col-12">
+                <h1>Learn How MobiledgeX Helps Operators Create the Telco Edge Cloud</h1>
+              </div>
+              <div class="col-lg-6">
+                <p>Edge computing brings computing resources to where they are needed the most. The MobiledgeX Edge-Cloud Platform helps Mobile Network Operators build their own edge clouds and generate new revenue while giving developers a platform to run their apps utilizing the telco edge infrastructure.</p>
+
+                <p>If you’re interested in learning more about how MobiledgeX can help operators get the most out of their network edge infrastructure, check out our technical product overview,  or contact our sales and business development team to determine how MobiledgeX Edge-Cloud Platform can work for you.</p>
+
+              </div>
+              <div class="col-lg-6">
+                <img src="/assets/home/edge-cloud-management.jpg?v=20211018" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Promo Section -->
+
+        <section class="secondary">
+          <div class="container">
+            <div class="row">
+              <div class="row">
+    <div class="col-md-6">
+        <img src="/assets/home/5reasons.png?v=20211018" class="img-fluid">
+    </div>
+    <div class="col-md-6 recent-articles" id="articles">
+        <h2>Featured Articles</h2>
+        <ul>
+            <li><a
+                    href="https://mobiledgex.com/blog/2021/04/01/how-mobiledgex-is-working-with-nvidia-to-bring-metropolis-to-the-telco-edge">How
+                    MobiledgeX is working with NVIDIA to Bring Metropolis to the Telco Edge</a></li>
+            <li><a href="https://mobiledgex.com/blog/2020/09/23/powering-the-telco-edge-cloud">How MobiledgeX Helps
+                    Operators (and Developers) Get the Most Out of the Telco Network Edge</a></li>
+            <li><a href="https://mobiledgex.com/blog/2020/08/14/how-mobiledgex-is-building-a-marketplace-for-edge">How
+                    MobiledgeX is Building a Marketplace for Edge</a></li>
+            <li><a
+                    href="https://mobiledgex.com/blog/2020/07/13/how-mobiledgex-helped-slavic-monsters-during-the-first-gsma-tec-trial">How
+                    MobiledgeX Helped Slavic Monsters During the First GSMA TEC Trial</a></li>
+        </ul>
+    </div>
+</div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  
+
+  <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+    <link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".slb").simplebox()
+  });
+</script>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <div class="text-center"><p>© 2022  MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="https://www.mobiledgex.com/privacy-policy">Privacy Policy</a> | <a href="https://www.mobiledgex.com/terms-of-use">Terms of Use</a> | <a href="https://www.mobiledgex.com/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+</body>
+
+</html>

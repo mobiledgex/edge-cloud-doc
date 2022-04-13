@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDK Sample App | MobiledgeX Developers</title>
+<meta name="description" content="Add Edge support to the Android workshop application" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="SDK Sample App" />
+<meta property="og:description" content="Add Edge support to the Android workshop application" />
+<meta property="og:url" content="http://dev-v3.test/sdks/android-sdk/android-sdk-sample" />
+<meta property="og:site_name" content="MobiledgeX Developers" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mobiledgex" />
+<meta name="twitter:title" content="SDK Sample App" />
+<meta name="twitter:description" content="Add Edge support to the Android workshop application" />
+<meta property="og:image" content="http://dev-v3.test/img/containers/assets/social-developers.jpg/b1d19eb47e0ea441f7510b1a27b43974.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://dev-v3.test/img/containers/assets/social-developers.jpg/b1d19eb47e0ea441f7510b1a27b43974.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://dev-v3.test/" rel="home" />
+<link href="http://dev-v3.test/sdks/android-sdk/android-sdk-sample" rel="canonical" />
+<link type="text/plain" rel="author" href="http://dev-v3.test/humans.txt" />
+  <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=1643734718">
+  <link rel="stylesheet" href="/css/androidstudio.min.css?v=1628534070">
+  <script src="/js/highlight.min.js?v=1628534070"></script>
+
+  <meta name="robots" content="noindex,nofollow">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+
+<body
+  class="bg-white default">
+
+  <header class="duik-header">
+  <nav class="properties navbar fixed-top d-none d-md-flex">
+    <ul>
+      <li><a href="https://mobiledgex.com">MobiledgeX Home</a></li>
+      <li><a href="https://mobiledgex.com/product">Product</a></li>
+      <li><a href="https://mobiledgex.com/use-cases">Use Cases</a></li>
+      <li><a href="https://mobiledgex.com/about">About</a></li>
+      <li><a href="https://mobiledgex.com/blog">Blog</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-dark fixed-top bg-terrain flex-nowrap p-0 main-nav">
+    <a class="navbar-brand col-md-3 col-xl-2 mr-0 py-3" href="/">
+      <img src="/img/logo-white.svg?v=1592862229" alt="MobiledgeX Developers" />
+    </a>
+    <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/getting-started">Getting
+          Started</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/deployments">Guides and
+          Tutorials</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0" href="/design">Design Principles</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0 active" href="/sdks">SDK and Libraries</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/apis">API Reference</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0" href="/support">Support</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0"
+          href="/product/mobiledgex-community">Community</a>
+      </li>
+      <li class="nav-item d-none d-md-inline">
+        <form method="get" action="/search" id="navbar-search">
+          <!-- Search field's name must be addsearch -->
+          <input type="search" name="search" placeholder="Search" />
+        </form>
+      </li>
+      <!-- Responsive Toggle Button -->
+      <div class="d-flex d-md-none justify-content-between mb-5">
+        <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav"
+          aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+              d="M4 7h22M4 15h22M4 23h22" />
+          </svg>
+        </button>
+      </div>
+      <!-- End Responsive Toggle Button -->
+    </ul>
+  </nav>
+</header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+  <div class="collapse navbar-collapse" id="sidebar-nav">
+    <div class="js-scrollbar duik-sidebar-sticky">
+      <ul class="duik-sidebar__nav">
+                          <li class="duik-sidebar__item">
+            <a href="/getting-started" class="duik-sidebar__link">Getting Started</a>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Product Overview</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/overview" class="duik-sidebar__link">What is MobiledgeX?</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-edge-cloud" class="duik-sidebar__link">MobiledgeX Edge-Cloud Console</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-sdk" class="duik-sidebar__link">MobiledgeX Client SDKs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-edge-services" class="duik-sidebar__link">MobiledgeX Edge Services</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-community" class="duik-sidebar__link">MobiledgeX Developer Community</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-demo" class="duik-sidebar__link">MobiledgeX Demo App</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Console App Deployments</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Organizations</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/accounts" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/accounts/manage-accts" class="duik-sidebar__link">Manage Accounts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/accounts/org-users" class="duik-sidebar__link">Developer Organizations</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/supported-apps-types" class="duik-sidebar__link">Application Types</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Deployment Essentials</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/deployment-workflow" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/cloudlets" class="duik-sidebar__link">Cloudlets</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/cloudlet-pools" class="duik-sidebar__link">Cloudlet Pools</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/flavors" class="duik-sidebar__link">Flavors</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/clusters" class="duik-sidebar__link">Cluster Instances</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/app-definition" class="duik-sidebar__link">Application Definition</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/app-instances" class="duik-sidebar__link">Application Instances</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">How-To Guides</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Hello World</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides/hello-world" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image" class="duik-sidebar__link">Create and Upload Your First Docker Image</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/hello-world/running-your-first-docker-image" class="duik-sidebar__link">Running a Docker Image as an Application Instance</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Deploying Virtual Machines</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides/virtual-machine" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/virtual-machine/linux" class="duik-sidebar__link">How To Deploy Linux VMs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/virtual-machine/windows" class="duik-sidebar__link">How To Deploy Windows VMs</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/how-to-deploy-docker-compose" class="duik-sidebar__link">Deploy Docker Compose using Multiple Files</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/gpu" class="duik-sidebar__link">Deploy GPU Applications</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/deploy-helm" class="duik-sidebar__link">Deploy a Helm V3 Application</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/deploy-a-kubernetes-application" class="duik-sidebar__link">Deploy a Kubernetes Application</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Runtime Policies</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-runtime" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/autoscale" class="duik-sidebar__link">Auto Scaling with Kubernetes</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/auto-prov" class="duik-sidebar__link">Auto Provisioning Policy</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/high-availability" class="duik-sidebar__link">High Availabilty</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/security" class="duik-sidebar__link">Security & Trust Policy</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Monitoring Apps</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/monitoring-and-metrics" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/application-utilization-metrics" class="duik-sidebar__link">Utilization Metrics</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/logs" class="duik-sidebar__link">Usage Logs & Events</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/monitoring-edge-events" class="duik-sidebar__link">Monitoring Edge Events</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Continuous Deployment / Integration</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/ci-cd" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/ci-cd/github-actions" class="duik-sidebar__link">GitHub Actions</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Client SDK Integration</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/tech-overview" class="duik-sidebar__link">Technical Overview</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/edge-events-overview" class="duik-sidebar__link">Edge Events Overview</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Android SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/android-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-sdk-download" class="duik-sidebar__link">Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item active current">
+            <a href="/sdks/android-sdk/android-sdk-sample" class="duik-sidebar__link">SDK Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/add-face-detection" class="duik-sidebar__link">Integrate Face Detection</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-third-party-licenses" class="duik-sidebar__link">Android Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">iOS SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/ios-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-download" class="duik-sidebar__link">Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-sample" class="duik-sidebar__link">Augmented Reality Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-third-party-licenses" class="duik-sidebar__link">iOS SDK Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Unity SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/unity-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/c-sharp-sdk" class="duik-sidebar__link">C# Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/unity-sdk-download" class="duik-sidebar__link">Unity Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/unity-sdk-sample" class="duik-sidebar__link">Unity Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/edge-events" class="duik-sidebar__link">Unity Edge Events (Beta)</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/c-sdk-third-party-licenses" class="duik-sidebar__link">C# SDK Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Edge Services</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Computer Vision</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services/computer-vision" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/cv-deployment" class="duik-sidebar__link">Computer Vision Server Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/how-to-computer-vision-api" class="duik-sidebar__link">Computer Vision Server REST API</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/add-comp-vision-unity" class="duik-sidebar__link">Unity Computer Vision SDK</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Multiplayer Service</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services/unity-edgemultiplay" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/unity-edgemultiplay/how-to-use-edge-multiplay" class="duik-sidebar__link">Getting Started with EdgeMultiplay</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/unity-edgemultiplay/running-edge-multiplay" class="duik-sidebar__link">Running the EdgeMultiplay Server Locally</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Edge Developer Tools</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Command Line Interface: mcctl</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools/mcctl-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/api-key-access" class="duik-sidebar__link">API Key Access and Permissions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-developer" class="duik-sidebar__link">How to use the mcctl utility for Developers</a>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">mcctl Utility Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools/mcctl-guides/mcctl-reference" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/mcctl-installation-and-setup-guide" class="duik-sidebar__link">mcctl Installation and Setup Guide</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/metric-and-usage-commands" class="duik-sidebar__link">Metric and Usage Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/application-and-monitoring-commands" class="duik-sidebar__link">Application and Monitoring Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/audit-and-regional-commands" class="duik-sidebar__link">Regional Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/alert-management-commands" class="duik-sidebar__link">Alert Management Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/automatic-policies-commands" class="duik-sidebar__link">Automatic Policies Commands</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/edgebox" class="duik-sidebar__link">Local Edge Testing : EdgeBox</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Design Principles</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/design" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/best-practice-container-deploy" class="duik-sidebar__link">Best Practices : Deployments</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/best-practice-sdk" class="duik-sidebar__link">Best Practices : Client SDKs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/load-balancing" class="duik-sidebar__link">Best Practices : Load Balancing</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/sizing-applications" class="duik-sidebar__link">Best Practices : Sizing Applications</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Best Practices: Debugging</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/design/testing-and-debugging" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/alarms" class="duik-sidebar__link">Alerts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/health-check" class="duik-sidebar__link">Health Check</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/storing-metrics" class="duik-sidebar__link">Storing Metrics and Insights</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/how-to-stress-test" class="duik-sidebar__link">Stress Testing</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/running-sshd-inside-container" class="duik-sidebar__link">Running SSHD Inside a Container</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/sdk" class="duik-sidebar__link">SDK Release Notes</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Console Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes/console" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/release-notes-3-0" class="duik-sidebar__link">3.0</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/2_4_0" class="duik-sidebar__link">2.4</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/2_0_0" class="duik-sidebar__link">2.0</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">API Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/apis" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net" class="duik-sidebar__link">Device APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/mc" class="duik-sidebar__link">Edge Orchestration APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/edge-cloud-sdk-unity" class="duik-sidebar__link">Unity SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/edge-cloud-sdk-android/" class="duik-sidebar__link">Android SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/MatchingEngineSDK/rest/index.html" class="duik-sidebar__link">Swift SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/swagger/mexdemo/edge-cloud-sdk-csharp/html/index.html" class="duik-sidebar__link">C# SDK Manual</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/support" class="duik-sidebar__link">FAQs and Support</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/search" class="duik-sidebar__link">Search</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/glossary-of-terms" class="duik-sidebar__link">Glossary of Terms</a>
+          </li>
+                
+      </ul>
+      <hr class="d-block d-md-none">
+      <ul class="duik-sidebar__nav d-block d-md-none">
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com" class="duik-sidebar__link">MobiledgeX Home</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/product" class="duik-sidebar__link">Product</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/use-cases" class="duik-sidebar__link">Use Cases</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/about" class="duik-sidebar__link">About</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/blog" class="duik-sidebar__link">Blog</a></li>
+        <li class="duik-sidebar__item"><a href="https://operators.mobiledgex.com" class="duik-sidebar__link">Operators</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('li.subs.depth-3 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-3').removeClass('active');
+        } else {
+          $('li.subs.depth-3').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-2 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-2').removeClass('active');
+        } else {
+          $('li.subs.depth-2').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-1 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-1').removeClass('active');
+        } else {
+          $('li.subs.depth-1').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      })
+    });
+</script>
+
+                  <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+        <div class="row pt-3">
+          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block toc"></div>          <div class="col-xl-10 order-xl-1 duik-content border-bottom">
+            <div class="mb-7">
+              <script type="text/javascript">
+  $(document).ready(function () {
+    $('#copyshortlink').click(function (e) {
+      e.preventDefault()
+      var copyText = document.getElementById('shortlink')
+      var tooltip = document.getElementById('myTooltip')
+      $(copyText).show()
+      copyText.select()
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand('copy')
+      $(copyText).hide()
+      tooltip.innerHTML = 'Copied: ' + copyText.value
+    })
+    $('#copyshortlink').mouseout(function () {
+      var tooltip = document.getElementById('myTooltip')
+      tooltip.innerHTML = 'Copy link to clipboard'
+    })
+  })
+</script>
+
+
+<div class="markdown-body">
+      <h1>
+    Learn how to use our Matching Engine SDK for Android devices <input type="text" id="shortlink" value="http://dev-v3.test/t/459eebb6" style="display: none;">
+    <div class="copyTooltip">
+      <a href="" id="copyshortlink">
+        <span class="tooltiptext" id="myTooltip">Copy link to clipboard</span>
+        <svg fill="rgba(39,60,76,.5)" width="15pt" height="15pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="m91.762 8.2422c-5.3164-5.3164-12.379-8.2422-19.887-8.2422s-14.57 2.9258-19.883 8.2422c0 0-17.742 17.734-18.758 18.742-5.293 5.3047-8.2188 12.379-8.2305 19.938 0.011719 7.5 2.9375 14.547 8.2383 19.848l2.2891 2.2891c0.60938 0.60938 1.4102 0.91406 2.2109 0.91406 0.80078 0 1.6016-0.30469 2.2109-0.91406l4.418-4.418c1.2227-1.2227 1.2227-3.1953 0-4.418l-2.2891-2.2891c-5.9922-5.9961-6.0742-15.824-0.17969-21.922 0.18359-0.1875 18.934-18.93 18.934-18.93 2.9414-2.957 6.8672-4.582 11.043-4.582 4.168 0 8.0898 1.625 11.039 4.5703 0.003906 0 0.003906 0.007813 0.003906 0.007813 6.1016 6.1094 6.1016 15.992 0.003906 22.094l-0.96875 0.96484c1.5195 4.0586 2.4141 8.4102 2.418 12.988 0 0.83203-0.11328 1.6289-0.16406 2.4414l7.5547-7.5547c10.984-10.988 10.977-28.801-0.003906-39.77z" />
+            <path d="m8.2383 91.758c5.3164 5.3164 12.379 8.2422 19.887 8.2422s14.57-2.9258 19.883-8.2422c0 0 17.742-17.734 18.758-18.742 5.293-5.3047 8.2188-12.379 8.2305-19.938-0.011719-7.5-2.9375-14.547-8.2383-19.848l-2.2891-2.2891c-0.60938-0.60938-1.4102-0.91406-2.2109-0.91406-0.80078 0-1.6016 0.30469-2.2109 0.91406l-4.418 4.418c-1.2227 1.2227-1.2227 3.1953 0 4.418l2.2891 2.2891c5.9922 5.9961 6.0742 15.824 0.17969 21.922-0.18359 0.1875-18.934 18.93-18.934 18.93-2.9414 2.957-6.8672 4.582-11.043 4.582-4.168 0-8.0898-1.625-11.039-4.5703l-0.003906-0.007813c-6.1016-6.1094-6.1016-15.992-0.003906-22.094l0.96875-0.96484c-1.5195-4.0586-2.4141-8.4102-2.418-12.988 0-0.83203 0.11328-1.6289 0.16406-2.4414l-7.5547 7.5547c-10.984 10.988-10.977 28.801 0.003906 39.77z" />
+          </g>
+        </svg>
+      </a>
+    </div>
+  </h1>
+    
+      <p><strong>Last Modified:</strong> 11/23/21</p><p>In this guide, we will be making use of a MobiledgeX library: the <strong>MobiledgeX MatchingEngine</strong> library exposes various services that MobiledgeX offers such as finding the nearest MobiledgeX <a href="/deployments/deployment-workflow/cloudlets">Cloudlet</a> for client-server communication or workload processing offload. </p><p>This library has been published to a Maven repository and we will be adding them to our workshop project.  To download the code and read instructions on how to run it yourself, check out code on the <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/tree/master/android/WorkshopCompleted">MobiledgeX Samples Github</a>. In this tutorial, we&#039;ll show you the key bits of code necessary on how the sample integrates the MobiledgeX Android SDK. </p><h2 id='prerequisites'><a class='anchor' aria-hidden='true' href='#prerequisites'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Prerequisites</h2><ul><li><p>A MobiledgeX <a href="/getting-started/">Console Account</a> to access our SDKs on the MobiledgeX <a href="https://artifactory.mobiledgex.net">Artifactory</a></p></li><li><p>Experience with Android app development.</p></li><li><p>Android Studio 4.2 installed or higher</p></li><li><p>A device with API v.23 or higher (Android 6.0)</p></li></ul><h2 id='import-the-android-sdk-matching-engine-library'><a class='anchor' aria-hidden='true' href='#import-the-android-sdk-matching-engine-library'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Import the Android SDK Matching Engine Library</h2><p>Within the Workshop Completed Sample, there is a <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/android/WorkshopCompleted/build.gradle">build.gradle</a> file that contains all the dependencies necessary for this sample Android app. Included within the build.gradle are the settings needed to pull the MobiledgeX Android SDK from a Maven repository. If you are looking to use the MobiledgeX SDK within this sample application, you will need to update the Artifactory credentials so that you will be able to get the latest version of the Android SDK. You can create and define these within the <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/0c4ed18ea8ff17c3e73e6cece0584a3e8aebbc52/android/WorkshopCompleted/build.gradle#L5">local.properties</a> file, which is a file that will be created after you first open the project within Android Studio:</p><ul><li><p><code>MobiledgeX Username</code> with the username (not e-mail) used to login with the MobiledgeX Console</p></li><li><p><code>Mobiledgex Password</code> with the password used to login with the MobiledgeX Console</p></li></ul><pre><code>sdk.dir=/Users/demouser/Library/Android/sdk
+artifactory_user=[MobiledgeX Username]
+artifactory_password=[Mobiledgex Password]</code></pre><h2 id='opening-the-project-in-android-studio'><a class='anchor' aria-hidden='true' href='#opening-the-project-in-android-studio'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Opening the Project in Android Studio</h2><p>Once you have opened the Workshop Completed application within Android Studio, you will need to update the project so that it is in <strong>Android</strong> view. This will allow Android Studio to correctly read the project. </p>
+
+      <figure class="center-half">
+  <img src="/assets/how-to-add-edge-support-to-an-android-app/android-view-screenshot.png" class="img-fluid slb" alt="">
+  <figcaption>Android View</figcaption>
+</figure>
+
+
+      <p>Once in Android View, you can verify that the project is working correctly by deploying it to your Android phone by selecting <strong>Run/Run App</strong>. Once the build completes and the app is deployed to your phone, you should see the MobiledgeX Workshop running. </p>
+
+      <figure class="third">
+  <img src="/assets/how-to-add-edge-support-to-an-android-app/workshop-completed.png" class="img-fluid slb" alt="">
+  <figcaption>MobiledgeX Workshop App</figcaption>
+</figure>
+
+
+      <h2 id='project-dependencies'><a class='anchor' aria-hidden='true' href='#project-dependencies'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Project Dependencies</h2><p>The MobiledgeX SDK requires a few packages such as GRPC in order to successfully communicate with the MobiledgeX Matching Engine API. In the Workshop Completed sample, this is declared within the <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/android/WorkshopCompleted/app/build.gradle">app&#039;s build.gradle</a>. </p><pre><code>// Matching Engine SDK
+implementation &#039;com.mobiledgex:matchingengine:3.0&#039;
+implementation &#039;com.mobiledgex:mel:1.0.11&#039;
+implementation &quot;io.grpc:grpc-okhttp:${grpcVersion}&quot;
+implementation &quot;io.grpc:grpc-stub:${grpcVersion}&quot;
+implementation &quot;io.grpc:grpc-protobuf-lite:${grpcVersion}&quot;</code></pre><p>If you are changing versions or adding these packages for the first time, you will need to make sure you click <strong>Sync Now</strong> to pull in the newly added libraries.  </p>
+
+      <figure class="full">
+  <img src="/assets/how-to-add-edge-support-to-an-android-app/6.png" class="img-fluid slb" alt="">
+  <figcaption>Sync Gradle File Dependencies</figcaption>
+</figure>
+
+
+      <h2 id='device-permissions'><a class='anchor' aria-hidden='true' href='#device-permissions'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Device Permissions</h2><p>For the Workshop Completed Sample App, you will need to request a few different permissions which are mentioned within the <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/android/WorkshopCompleted/app/src/main/AndroidManifest.xml">AndroidManifest.xml</a>. </p><p>This specific application runs an example of Face Detection and as such will require the mobile phone&#039;s camera in order to work sucessfully. Additionally the MobiledgeX Android SDK requires the <strong><em>READPHONESTATE</em></strong> permission as well as a Location Permission (either <strong><em>ACCESSFINELOCATION</em></strong> or <strong><em>ACCESSCOARSELOCATION</em></strong>) in order to find the best edge instance of your application. </p><pre><code>&lt;uses-permission android:name=&quot;android.permission.READPHONESTATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;
+&lt;uses-feature android:name=&quot;android.hardware.camera&quot; /&gt;
+&lt;uses-feature android:name=&quot;android.hardware.camera.autofocus&quot; /&gt;</code></pre><p>The app must explicitly ask the users for any special permissions. The Matching Engine SDK provides a utility to simplify this</p><pre><code>com.mobiledgex.matchingengine.util.RequestPermissions</code></pre><p>This is used within the <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/5ea48b1c1c4b3d079d79df433fdb0b4074fa8895/android/WorkshopCompleted/app/src/main/java/com/mobiledgex/workshopskeleton/MainActivity.java#L589-L593">Main Activity</a> of the sample. </p><pre><code>mRpUtil = new RequestPermissions();
+if (mRpUtil.getNeededPermissions(this).size() &gt; 0) {
+    mRpUtil.requestMultiplePermissions(this);
+    return;
+}</code></pre><h2 id='android-matchingengine-sdk-intetgration'><a class='anchor' aria-hidden='true' href='#android-matchingengine-sdk-intetgration'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Android MatchingEngine SDK Intetgration</h2><p>We will show how to use the MobiledgeX Distributed Matching Engine APIs to register the user and find the optimal edge data center (cloudlet) running the app. To learn more about the workflow, you may refer to the <a href="/sdks/tech-overview">SDK Technical Overview Documentation</a>. </p><p>We will be showing the implementation for the following: </p><p><strong>RegisterClient()</strong> - Identifies the user (Organization Name) and application details (appName and appVersion), and allows the usage of MobiledgeX integration.</p><p><strong>FindCloudlet()</strong> - Returns the edge application server to communicate with, in the form of an AppPort list that needs to be parsed to retrieve your particular application&#039;s server details. Either TCP or UDP transport. A cloudlet is a small-scale cloud datacenter.</p><p><strong>Edge Events()</strong> - Listen for events and send updates about the client to the MobiledgeX Distributed Matching Engine in order to determine the optimal time in your application workflow to switch to a better cloudlet for your end users.  </p><h2 id='setup-matching-engine-parameters'><a class='anchor' aria-hidden='true' href='#setup-matching-engine-parameters'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Setup Matching Engine Parameters</h2><p>First you will need to <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/5ea48b1c1c4b3d079d79df433fdb0b4074fa8895/android/WorkshopCompleted/app/src/main/java/com/mobiledgex/workshopskeleton/MainActivity.java#L595-L596">instantiate the MatchingEngine object</a>, which is responsible for making the Matching Engine API calls. </p><pre><code>matchingEngine = new MatchingEngine(ctx);
+matchingEngine.setNetworkSwitchingEnabled(false);</code></pre><p>To use the APIs, you will need to have deployed an application on the MobiledgeX Platform at an edge cloudlet. For the purposes of this guide, you may <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/5ea48b1c1c4b3d079d79df433fdb0b4074fa8895/android/WorkshopCompleted/app/src/main/java/com/mobiledgex/workshopskeleton/MainActivity.java#L289-L292">use these credentials</a> for the Workshop Completed app that leverages the Face Detection deployed as part of MobiledgeX Samples. </p><pre><code>appName = &quot;ComputerVision&quot;;
+appVersion = &quot;2.2&quot;;
+orgName = &quot;MobiledgeX-Samples&quot;;</code></pre><h2 id='register-client'><a class='anchor' aria-hidden='true' href='#register-client'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Register Client</h2><p>With the parameters specified above, we can make the first API call with the Matching Engine : RegisterClient. As the name implies, this registers the client Android device with the MobiledgeX Matching Engine and confirms if that specified application, <strong>Computer Vision</strong> in this case, has been deployed to the edge. The request returns a Session Cookie in the RegisterClientReply that must be used for following API calls. This is the <a target="_blank" href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/5ea48b1c1c4b3d079d79df433fdb0b4074fa8895/android/WorkshopCompleted/app/src/main/java/com/mobiledgex/workshopskeleton/MainActivity.java#L305-L314">specific example code</a> for making a Register Client Call. </p><pre><code>AppClient.RegisterClientRequest registerClientRequest;
+registerClientRequest = matchingEngine.createDefaultRegisterClientRequest(ctx, orgName)
+	.setAppName(appName).setAppVers(appVersion)
+	.setCarrierName(carrierName).build();
+AppClient.RegisterClientReply registerStatus = 
+	matchingEngine.registerClient (registerClientRequest, host, port, 10000);</code></pre><h2 id='find-cloudlet'><a class='anchor' aria-hidden='true' href='#find-cloudlet'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Find Cloudlet</h2><p>After Registering the Client Device, we can now call the Find Cloudlet API, which is responsible for determining the best cloudlet that your application is deployed onto for the client, based on the GPS location and operator cellular connection. This is the <a target="_blank" href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/5ea48b1c1c4b3d079d79df433fdb0b4074fa8895/android/WorkshopCompleted/app/src/main/java/com/mobiledgex/workshopskeleton/MainActivity.java#L349-L352">specific example code</a> for making a Find Cloudlet call. </p><pre><code>AppClient.FindCloudletRequest findCloudletRequest;
+findCloudletRequest = matchingEngine.createDefaultFindCloudletRequest(ctx, location)
+	.setCarrierName(carrierName).build();
+mClosestCloudlet = matchingEngine.findCloudlet(findCloudletRequest, host, port, 10000);</code></pre><h2 id='getconnection-workflow'><a class='anchor' aria-hidden='true' href='#getconnection-workflow'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>GetConnection workflow:</h2><p>The GetConnection workflow is the suggested workflow to register the user using an application, find the nearest cloudlet with the application backend deployed, and get a “connection” object to send and receive data.</p><p>The full workflow is:</p><ol start="1"><li><p><strong>RegisterAndFindCloudlet</strong>(): Wrapper function for registerClient() and findCloudlet(). Returns a dictionary with findCloudletReply fields.</p></li><li><p><strong>Get[Protocol]AppPorts</strong>(): Returns a dictionary (key: String, value: [String: Any]), where keys are the internal port specified on app deployment and values are the AppPort “object” returned in the ports field of findCloudletReply. (This object may contain a range of ports and an fqdn prefix that is specific to the application backend)</p></li><li><p>For your app, you should know what internal port is required and get the <strong>AppPort</strong> “object” from the dictionary that corresponds to that internal port. This returned AppPort object will then be used in the GetConnection call. </p></li><li><p><strong>Get[Protocol]Connection()</strong>: Depending on the protocol (TCP, UDP, HTTP, Websockets), this will return a different Android object to be used to send and receive data.</p></li></ol><p>In the <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/5ea48b1c1c4b3d079d79df433fdb0b4074fa8895/android/WorkshopCompleted/app/src/main/java/com/mobiledgex/workshopskeleton/FaceProcessorActivity.java#L75">FaceProcessorActivity</a>, we provide an example of how you can implement the complete flow of Registering and Finding a Cloudlet to establishing a connection to that cloudlet with the GetConnection method. With this example, a TCP socket connection is established between the Android app and the Computer Application deployed on MobiledgeX.  </p><pre><code>Future&lt;AppClient.FindCloudletReply&gt; future = me.registerAndFindCloudlet(this, orgName, appName, appVersion,  location, &quot;&quot;, 0, &quot;&quot;, &quot;&quot;, null);AppClient.FindCloudletReply findCloudletReply;
+try {
+    findCloudletReply = future.get();
+} catch (ExecutionException | InterruptedException e) {
+    Log.e(TAG, &quot;RegisterAndFindCloudlet error &quot; + e.getMessage());
+    return null;
+}</code></pre><pre><code>HashMap&lt;Integer, Appcommon.AppPort&gt; portMap = appConnect.getTCPMap(findCloudletReply);
+Appcommon.AppPort one = portMap.get(8008); // 8011 for persistent tcp
+
+Future&lt;Socket&gt; fs = appConnect.getTcpSocket(findCloudletReply, one, one.getPublicPort(), 15000);
+if (fs == null) {
+    Log.e(TAG, &quot;Socket future didnt return anything&quot;);
+    return null;
+}
+Socket socket;
+try {
+    socket = fs.get();
+} catch (ExecutionException | InterruptedException e) {
+    Log.e(TAG, &quot;Cannot get socket from future. Exception: &quot; + e.getMessage());
+    return null;
+}</code></pre><pre><code>return socket;</code></pre><h2 id='edge-events'><a class='anchor' aria-hidden='true' href='#edge-events'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Edge Events</h2><p>Edge Events allows your Android app to continuously send and get updates from MobiledgeX in order for our platform to determine if there is a more suitable cloudlet for your client to connect to. To simplify integration, the Android SDK provides a Default Configuration method that you may utilize, that sets parameters for when your app would like to switch to a different cloudlet. To learn more about Edge Events, refer to your guide on <a href="/sdks/edge-events-overview">Maintaining Optimal Connectivity to the Edge</a>.</p><pre><code>mEdgeEventsSubscriber = new EdgeEventsSubscriber(); me.getEdgeEventsBus().register(mEdgeEventsSubscriber);
+// set a default config.
+// There is also a parameterized version to further customize.
+EdgeEventsConfig backgroundEdgeEventsConfig = me.createDefaultEdgeEventsConfig();
+backgroundEdgeEventsConfig.latencyTestType = NetTest.TestType.CONNECT;
+// This is the internal port, that has not been remapped to a public port for a particular appInst.
+backgroundEdgeEventsConfig.latencyInternalPort = 3765; // 0 will grab first UDP port but will favor the first TCP port if found.
+// Latency config. There is also a very similar location update config.
+backgroundEdgeEventsConfig.latencyUpdateConfig.maxNumberOfUpdates = 0; // Default is 0, which means test forever.
+backgroundEdgeEventsConfig.latencyUpdateConfig.updateIntervalSeconds = 7; // The default is 30.
+backgroundEdgeEventsConfig.latencyThresholdTrigger = 186;</code></pre>
+
+      <div class="next_steps">
+    <h2>What's Next</h2>
+    <ul>
+    <li><a href="/services/computer-vision/how-to-deploy-a-backend-application-to-mobiledgex/">Computer Vision on MobiledgeX</a><br>Learn how to deploy the Open Source MobiledgeX Computer Vision service to an edge cloudlet</li>
+    <li><a href="/services/computer-vision/how-to-android-workshop-add-face-detection-to-workshop-app/">Face Detection Integration</a><br>Learn how to add Face Detection to the Workshop Completed App</li>
+  
+  </ul>
+</div>
+
+  
+</div>
+
+              <link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".slb").simplebox()
+  });
+</script>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="https://www.mobiledgex.com/privacy-policy">Privacy Policy</a> | <a href="https://www.mobiledgex.com/terms-of-use">Terms of Use</a> | <a href="https://www.mobiledgex.com/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+            
+    </div>
+  </div>
+
+  
+
+    <script type="text/javascript">
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.duik-content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h2, h3',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: false,
+      listItemClass: 'duik-content-nav__item',
+      orderedList: false,
+      listClass: 'js-scroll-nav duik-content-nav',
+      collapseDepth: 6,
+      activeLinkClass: 'active',
+    })
+    $(document).ready(function() {
+      hljs.highlightAll()
+    });
+  </script>
+  </body>
+
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Continuous Deployment / Integration | MobiledgeX Developers</title>
+<meta name="description" content="We help you deliver your application to a production environment efficiently." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Continuous Deployment / Integration" />
+<meta property="og:description" content="We help you deliver your application to a production environment efficiently." />
+<meta property="og:url" content="http://dev-v3.test/deployments/ci-cd" />
+<meta property="og:site_name" content="MobiledgeX Developers" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mobiledgex" />
+<meta name="twitter:title" content="Continuous Deployment / Integration" />
+<meta name="twitter:description" content="We help you deliver your application to a production environment efficiently." />
+<meta property="og:image" content="http://dev-v3.test/img/containers/assets/social-developers.jpg/b1d19eb47e0ea441f7510b1a27b43974.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://dev-v3.test/img/containers/assets/social-developers.jpg/b1d19eb47e0ea441f7510b1a27b43974.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://dev-v3.test/" rel="home" />
+<link href="http://dev-v3.test/deployments/ci-cd" rel="canonical" />
+<link type="text/plain" rel="author" href="http://dev-v3.test/humans.txt" />
+  <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=1643734718">
+  <link rel="stylesheet" href="/css/androidstudio.min.css?v=1628534070">
+  <script src="/js/highlight.min.js?v=1628534070"></script>
+
+  <meta name="robots" content="noindex,nofollow">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+
+<body
+  class="bg-white default bg-terrain-light overview">
+
+  <header class="duik-header">
+  <nav class="properties navbar fixed-top d-none d-md-flex">
+    <ul>
+      <li><a href="https://mobiledgex.com">MobiledgeX Home</a></li>
+      <li><a href="https://mobiledgex.com/product">Product</a></li>
+      <li><a href="https://mobiledgex.com/use-cases">Use Cases</a></li>
+      <li><a href="https://mobiledgex.com/about">About</a></li>
+      <li><a href="https://mobiledgex.com/blog">Blog</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-dark fixed-top bg-terrain flex-nowrap p-0 main-nav">
+    <a class="navbar-brand col-md-3 col-xl-2 mr-0 py-3" href="/">
+      <img src="/img/logo-white.svg?v=1592862229" alt="MobiledgeX Developers" />
+    </a>
+    <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/getting-started">Getting
+          Started</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0 active" href="/deployments">Guides and
+          Tutorials</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0" href="/design">Design Principles</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0" href="/sdks">SDK and Libraries</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0" href="/apis">API Reference</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0" href="/support">Support</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0"
+          href="/product/mobiledgex-community">Community</a>
+      </li>
+      <li class="nav-item d-none d-md-inline">
+        <form method="get" action="/search" id="navbar-search">
+          <!-- Search field's name must be addsearch -->
+          <input type="search" name="search" placeholder="Search" />
+        </form>
+      </li>
+      <!-- Responsive Toggle Button -->
+      <div class="d-flex d-md-none justify-content-between mb-5">
+        <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav"
+          aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+              d="M4 7h22M4 15h22M4 23h22" />
+          </svg>
+        </button>
+      </div>
+      <!-- End Responsive Toggle Button -->
+    </ul>
+  </nav>
+</header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+  <div class="collapse navbar-collapse" id="sidebar-nav">
+    <div class="js-scrollbar duik-sidebar-sticky">
+      <ul class="duik-sidebar__nav">
+                          <li class="duik-sidebar__item">
+            <a href="/getting-started" class="duik-sidebar__link">Getting Started</a>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Product Overview</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/overview" class="duik-sidebar__link">What is MobiledgeX?</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-edge-cloud" class="duik-sidebar__link">MobiledgeX Edge-Cloud Console</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-sdk" class="duik-sidebar__link">MobiledgeX Client SDKs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-edge-services" class="duik-sidebar__link">MobiledgeX Edge Services</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-community" class="duik-sidebar__link">MobiledgeX Developer Community</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product/mobiledgex-demo" class="duik-sidebar__link">MobiledgeX Demo App</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Console App Deployments</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Organizations</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/accounts" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/accounts/manage-accts" class="duik-sidebar__link">Manage Accounts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/accounts/org-users" class="duik-sidebar__link">Developer Organizations</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/supported-apps-types" class="duik-sidebar__link">Application Types</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Deployment Essentials</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/deployment-workflow" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/cloudlets" class="duik-sidebar__link">Cloudlets</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/cloudlet-pools" class="duik-sidebar__link">Cloudlet Pools</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/flavors" class="duik-sidebar__link">Flavors</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/clusters" class="duik-sidebar__link">Cluster Instances</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/app-definition" class="duik-sidebar__link">Application Definition</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/deployment-workflow/app-instances" class="duik-sidebar__link">Application Instances</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">How-To Guides</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Hello World</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides/hello-world" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/hello-world/uploading-your-first-docker-image" class="duik-sidebar__link">Create and Upload Your First Docker Image</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/hello-world/running-your-first-docker-image" class="duik-sidebar__link">Running a Docker Image as an Application Instance</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Deploying Virtual Machines</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-deployment-guides/virtual-machine" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/virtual-machine/linux" class="duik-sidebar__link">How To Deploy Linux VMs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/virtual-machine/windows" class="duik-sidebar__link">How To Deploy Windows VMs</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/how-to-deploy-docker-compose" class="duik-sidebar__link">Deploy Docker Compose using Multiple Files</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/gpu" class="duik-sidebar__link">Deploy GPU Applications</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/deploy-helm" class="duik-sidebar__link">Deploy a Helm V3 Application</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-deployment-guides/deploy-a-kubernetes-application" class="duik-sidebar__link">Deploy a Kubernetes Application</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Runtime Policies</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/application-runtime" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/autoscale" class="duik-sidebar__link">Auto Scaling with Kubernetes</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/auto-prov" class="duik-sidebar__link">Auto Provisioning Policy</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/application-runtime/high-availability" class="duik-sidebar__link">High Availabilty</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/security" class="duik-sidebar__link">Security & Trust Policy</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Monitoring Apps</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/deployments/monitoring-and-metrics" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/application-utilization-metrics" class="duik-sidebar__link">Utilization Metrics</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/logs" class="duik-sidebar__link">Usage Logs & Events</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/monitoring-and-metrics/monitoring-edge-events" class="duik-sidebar__link">Monitoring Edge Events</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Continuous Deployment / Integration</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item active current"><a href="/deployments/ci-cd" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/deployments/ci-cd/github-actions" class="duik-sidebar__link">GitHub Actions</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Client SDK Integration</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/tech-overview" class="duik-sidebar__link">Technical Overview</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/edge-events-overview" class="duik-sidebar__link">Edge Events Overview</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Android SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/android-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-sdk-download" class="duik-sidebar__link">Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-sdk-sample" class="duik-sidebar__link">SDK Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/add-face-detection" class="duik-sidebar__link">Integrate Face Detection</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/android-sdk/android-third-party-licenses" class="duik-sidebar__link">Android Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">iOS SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/ios-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-download" class="duik-sidebar__link">Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-sample" class="duik-sidebar__link">Augmented Reality Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/ios-sdk/ios-sdk-third-party-licenses" class="duik-sidebar__link">iOS SDK Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Unity SDK</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/sdks/unity-sdk" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/c-sharp-sdk" class="duik-sidebar__link">C# Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/unity-sdk-download" class="duik-sidebar__link">Unity Download Instructions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/unity-sdk-sample" class="duik-sidebar__link">Unity Sample App</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/edge-events" class="duik-sidebar__link">Unity Edge Events (Beta)</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/sdks/unity-sdk/c-sdk-third-party-licenses" class="duik-sidebar__link">C# SDK Third Party Licenses</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Edge Services</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Computer Vision</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services/computer-vision" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/cv-deployment" class="duik-sidebar__link">Computer Vision Server Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/how-to-computer-vision-api" class="duik-sidebar__link">Computer Vision Server REST API</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/computer-vision/add-comp-vision-unity" class="duik-sidebar__link">Unity Computer Vision SDK</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Multiplayer Service</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/services/unity-edgemultiplay" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/unity-edgemultiplay/how-to-use-edge-multiplay" class="duik-sidebar__link">Getting Started with EdgeMultiplay</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/services/unity-edgemultiplay/running-edge-multiplay" class="duik-sidebar__link">Running the EdgeMultiplay Server Locally</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Edge Developer Tools</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Command Line Interface: mcctl</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools/mcctl-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/api-key-access" class="duik-sidebar__link">API Key Access and Permissions</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-developer" class="duik-sidebar__link">How to use the mcctl utility for Developers</a>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">mcctl Utility Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/tools/mcctl-guides/mcctl-reference" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/mcctl-installation-and-setup-guide" class="duik-sidebar__link">mcctl Installation and Setup Guide</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/metric-and-usage-commands" class="duik-sidebar__link">Metric and Usage Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/application-and-monitoring-commands" class="duik-sidebar__link">Application and Monitoring Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/audit-and-regional-commands" class="duik-sidebar__link">Regional Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/alert-management-commands" class="duik-sidebar__link">Alert Management Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/mcctl-guides/mcctl-reference/automatic-policies-commands" class="duik-sidebar__link">Automatic Policies Commands</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/tools/edgebox" class="duik-sidebar__link">Local Edge Testing : EdgeBox</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Design Principles</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/design" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/best-practice-container-deploy" class="duik-sidebar__link">Best Practices : Deployments</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/best-practice-sdk" class="duik-sidebar__link">Best Practices : Client SDKs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/load-balancing" class="duik-sidebar__link">Best Practices : Load Balancing</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/sizing-applications" class="duik-sidebar__link">Best Practices : Sizing Applications</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Best Practices: Debugging</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/design/testing-and-debugging" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/alarms" class="duik-sidebar__link">Alerts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/health-check" class="duik-sidebar__link">Health Check</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/testing-and-debugging/storing-metrics" class="duik-sidebar__link">Storing Metrics and Insights</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/how-to-stress-test" class="duik-sidebar__link">Stress Testing</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/design/running-sshd-inside-container" class="duik-sidebar__link">Running SSHD Inside a Container</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">MobiledgeX Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/sdk" class="duik-sidebar__link">SDK Release Notes</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Console Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes/console" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/release-notes-3-0" class="duik-sidebar__link">3.0</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/2_4_0" class="duik-sidebar__link">2.4</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/console/2_0_0" class="duik-sidebar__link">2.0</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">API Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/apis" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net" class="duik-sidebar__link">Device APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/mc" class="duik-sidebar__link">Edge Orchestration APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/edge-cloud-sdk-unity" class="duik-sidebar__link">Unity SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/edge-cloud-sdk-android/" class="duik-sidebar__link">Android SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://mobiledgex.github.io/MatchingEngineSDK/rest/index.html" class="duik-sidebar__link">Swift SDK Manual</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/swagger/mexdemo/edge-cloud-sdk-csharp/html/index.html" class="duik-sidebar__link">C# SDK Manual</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/support" class="duik-sidebar__link">FAQs and Support</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/search" class="duik-sidebar__link">Search</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/glossary-of-terms" class="duik-sidebar__link">Glossary of Terms</a>
+          </li>
+                
+      </ul>
+      <hr class="d-block d-md-none">
+      <ul class="duik-sidebar__nav d-block d-md-none">
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com" class="duik-sidebar__link">MobiledgeX Home</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/product" class="duik-sidebar__link">Product</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/use-cases" class="duik-sidebar__link">Use Cases</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/about" class="duik-sidebar__link">About</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/blog" class="duik-sidebar__link">Blog</a></li>
+        <li class="duik-sidebar__item"><a href="https://operators.mobiledgex.com" class="duik-sidebar__link">Operators</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('li.subs.depth-3 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-3').removeClass('active');
+        } else {
+          $('li.subs.depth-3').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-2 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-2').removeClass('active');
+        } else {
+          $('li.subs.depth-2').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-1 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-1').removeClass('active');
+        } else {
+          $('li.subs.depth-1').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      })
+    });
+</script>
+
+                  <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+        <section class="duik-promo text-center">
+          <div class="container duik-promo-container">
+            <div class="d-flex justify-content-center position-relative py-11">
+              <div class="align-self-center w-md-75">
+                <h1>Continuous Deployment / Continuous Integration</h1>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Promo Section -->
+
+        <div class="content-wrap">
+          <div class="col-xl-10 content container">
+            <div class="mb-7">
+              <script type="text/javascript">
+  $(document).ready(function () {
+    $('#copyshortlink').click(function (e) {
+      e.preventDefault()
+      var copyText = document.getElementById('shortlink')
+      var tooltip = document.getElementById('myTooltip')
+      $(copyText).show()
+      copyText.select()
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand('copy')
+      $(copyText).hide()
+      tooltip.innerHTML = 'Copied: ' + copyText.value
+    })
+    $('#copyshortlink').mouseout(function () {
+      var tooltip = document.getElementById('myTooltip')
+      tooltip.innerHTML = 'Copy link to clipboard'
+    })
+  })
+</script>
+
+
+<div class="markdown-body">
+      
+      <p>We help you deliver your application to a production environment with speed, security, and reliability. We make it easy to auto-deploy your applications using GitHub Actions. We have provided a sample repository to help you get started.</p>
+
+  
+</div>
+
+            </div>
+            <!-- Icon Blocks -->
+            <div class="z-index-2 position-relative">
+              <section class="duik-icon-block">
+                <div class="row"><a class="col-md-4 col-lg-3 col-xs-6" href="/deployments/ci-cd/github-actions">
+  <div class="duik-icon-block__item">
+    <h4 class="h5 mb-2">GitHub Actions</h4>
+    <span><p>Learn how our CI/CD approach helps you bridge the gaps between development and operational activities to automate, test, and deploy applications</p>
+</span>
+  </div>
+</a>
+
+</div>
+              </section>
+            </div>
+            <!-- End Icon Blocks -->
+          </div>
+          <link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".slb").simplebox()
+  });
+</script>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="https://www.mobiledgex.com/privacy-policy">Privacy Policy</a> | <a href="https://www.mobiledgex.com/terms-of-use">Terms of Use</a> | <a href="https://www.mobiledgex.com/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </main>
+            
+    </div>
+  </div>
+
+  
+
+    <script type="text/javascript">
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.duik-content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h2, h3',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: false,
+      listItemClass: 'duik-content-nav__item',
+      orderedList: false,
+      listClass: 'js-scroll-nav duik-content-nav',
+      collapseDepth: 6,
+      activeLinkClass: 'active',
+    })
+    $(document).ready(function() {
+      hljs.highlightAll()
+    });
+  </script>
+  </body>
+
+</html>

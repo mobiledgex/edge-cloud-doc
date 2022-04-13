@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta name="robots" content="noindex,nofollow">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitoring: Events, Usage, and Metrics | MobiledgeX Operators</title>
+<meta name="description" content="Learn how to use operator metrics to detect performance anomalies and help manage cloudlets, clusters, and pools" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Monitoring: Events, Usage, and Metrics" />
+<meta property="og:description" content="Learn how to use operator metrics to detect performance anomalies and help manage cloudlets, clusters, and pools" />
+<meta property="og:url" content="http://operator-portal.test/product-overview/operator-guides/debugging/operator-monitoring-and-metrics" />
+<meta property="og:site_name" content="MobiledgeX Operators" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@mobiledgex" />
+<meta name="twitter:title" content="Monitoring: Events, Usage, and Metrics" />
+<meta name="twitter:description" content="Learn how to use operator metrics to detect performance anomalies and help manage cloudlets, clusters, and pools" />
+<meta property="og:image" content="http://operator-portal.test/img/containers/assets/operators-social.jpg/5c20751e252519234312d7cbdaeb6738.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://operator-portal.test/img/containers/assets/operators-social.jpg/5c20751e252519234312d7cbdaeb6738.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://operator-portal.test/" rel="home" />
+<link href="http://operator-portal.test/product-overview/operator-guides/debugging/operator-monitoring-and-metrics" rel="canonical" />
+<link type="text/plain" rel="author" href="http://operator-portal.test/humans.txt" />
+  <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/theme.css?v=1641595153">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      hljs.highlightAll()
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+
+<body
+  class="bg-white default">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2V3KZZ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="duik-header">
+  <nav class="properties navbar fixed-top d-none d-md-flex">
+    <ul>
+      <li><a href="https://mobiledgex.com">MobiledgeX Home</a></li>
+      <li><a href="https://mobiledgex.com/product">Product</a></li>
+      <li><a href="https://mobiledgex.com/use-cases">Use Cases</a></li>
+      <li><a href="https://mobiledgex.com/about">About</a></li>
+      <li><a href="https://mobiledgex.com/blog">Blog</a></li>
+      <li><a href="https://developers.mobiledgex.com">Developers</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-dark fixed-top bg-terrain flex-nowrap p-0 main-nav">
+    <a class="navbar-brand col-md-3 col-xl-2 mr-0 py-3" href="/"><img
+        src="/img/logo-white.svg?v=1592862229" alt="MobiledgeX Developers"></a>
+
+    <ul class="navbar-nav duik-header__nav small text-nowrap flex-row px-3 ml-0 ml-sm-3">
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0 active"
+          href="/product-overview">Product Overview</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/supported-iaas-stacks">Successful Use Cases</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0"
+          href="/operational-readiness">Operational Readiness</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-xl-inline">
+        <a class="nav-link px-0"
+          href="/product-overview/security-and-privacy-standards-policies">Security and Privacy Policies</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-lg-inline">
+        <a class="nav-link px-0"
+          href="/operator-specific-mcctl-and-rest-apis">APIs</a>
+      </li>
+      <li class="nav-item ml-lg-6 mb-2 mb-lg-0 d-none d-md-inline">
+        <a class="nav-link px-0" href="/release-notes">Release
+          Notes</a>
+      </li>
+      <li class="nav-item d-none d-md-inline">
+        <form method="get" action="/search/" id="navbar-search">
+          <!-- Search field's name must be search -->
+          <input type="search" name="search" placeholder="Search">
+        </form>
+      </li>
+      <!-- Responsive Toggle Button -->
+      <div class="d-flex d-md-none justify-content-between mb-5">
+        <button class="btn btn-link pl-0" type="button" data-toggle="collapse" data-target="#sidebar-nav"
+          aria-controls="sidebar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+              d="M4 7h22M4 15h22M4 23h22" />
+          </svg>
+        </button>
+      </div>
+      <!-- End Responsive Toggle Button -->
+    </ul>
+  </nav>
+</header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-xl-2 bg-light duik-sidebar navbar-expand-md">
+  <div class="collapse navbar-collapse" id="sidebar-nav">
+    <div class="js-scrollbar duik-sidebar-sticky">
+      <ul class="duik-sidebar__nav">
+                          <li class="duik-sidebar__item">
+            <a href="/documentation" class="duik-sidebar__link">Documentation</a>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Product Overview</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-2 duik-sidebar__item active">
+            <a class="duik-sidebar__link">MobiledgeX Edge-Cloud Console</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Account Management</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/account-management" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/account-management/accounts" class="duik-sidebar__link">Accounts</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/account-management/organizations-and-users" class="duik-sidebar__link">Organizations and Users</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/edgebox-proof-of-concept-testing" class="duik-sidebar__link">EdgeBox: Proof of Concept Testing</a>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Resource Management and Workflow</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/resource-management-and-workflow" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/resource-management-and-workflow/direct-vs-restricted-access" class="duik-sidebar__link">Direct vs. Restricted Access</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">Cloudlet Deployment Guides</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/cloudlet-deployment-guides" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/deploying-cloudlets" class="duik-sidebar__link">Deploying Cloudlets</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools" class="duik-sidebar__link">Cloudlet Pools</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/cloudlet-deployment-guides/manage-gpu-drivers-for-cloudlets" class="duik-sidebar__link">Manage GPU Drivers for Cloudlets</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item active">
+            <a class="duik-sidebar__link">Debugging</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/operator-guides/debugging" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/health-check-and-alert" class="duik-sidebar__link">Health Check and Alerts</a>
+          </li>
+                                  <li class="duik-sidebar__item active current">
+            <a href="/product-overview/operator-guides/debugging/operator-monitoring-and-metrics" class="duik-sidebar__link">Monitoring: Events, Usage, and Metrics</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/reports" class="duik-sidebar__link">Resource Management and Reporting</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/operator-guides/debugging/appendix-a-ports" class="duik-sidebar__link">Inbound and Outbound Ports</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">Edge-Cloud Resource Manager Plugin</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: OpenStack</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-1-openstack" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-option" class="duik-sidebar__link">Openstack Tenant Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-1-openstack/openstack-tenant-deployment-options" class="duik-sidebar__link">OpenStack Tenant Deployment Options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: Vsphere</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment" class="duik-sidebar__link">vSphere Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-2-vsphere/vsphere-deployment-options" class="duik-sidebar__link">VSphere Deployment options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: VMPool</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/vmpool-deployment" class="duik-sidebar__link">VMPool Deployment</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/scenario-deployment-model-2-mobiledgex-assisted-openstack-deployment-operator-provides-the-bare-metal-server" class="duik-sidebar__link">VMpool Deployment Options</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-4-vmpool/vm-pool" class="duik-sidebar__link">VM Pool Installation on VMware vCD</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: VMware Cloud Director</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-3-vcd" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-3-vcd/vcd-deployment-operator-provides-a-tenant" class="duik-sidebar__link">VCD Deployment: Operator Provides a Tenant</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-3-vcd/vmware-vcloud-director-vcd-deployment" class="duik-sidebar__link">VMware vCloud Director (VCD) Deployment</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-3 duik-sidebar__item">
+            <a class="duik-sidebar__link">IaaS Type: Bare Metal OpenStack</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-deployment-for-baremetal-openstack" class="duik-sidebar__link">MobiledgeX Assisted Deployment for Bare Metal Openstack</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-5-baremetal-openstack/mobiledgex-assisted-openstack-deployment-options" class="duik-sidebar__link">MobiledgeX Assisted OpenStack Deployment Options</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/cloudlet-onboarding/scenario-6-baremetal-anthos" class="duik-sidebar__link">IaaS Type: Bare Metal Anthos</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/product-overview/security-and-privacy-standards-policies" class="duik-sidebar__link">Security and Privacy Standards Policies</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Operational Readiness</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operational-readiness" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operational-readiness/operator-cloudlet-maintenance" class="duik-sidebar__link">Operator Cloudlet Maintenance</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Operator Specific MCCTL and REST APIs</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operator-specific-mcctl-and-rest-apis" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="https://api.mobiledgex.net/mc/" class="duik-sidebar__link">Orchestration APIs</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/api-token-access-and-permissions" class="duik-sidebar__link">API Key Access and Permissions</a>
+          </li>
+                                  <li class="subs depth-2 duik-sidebar__item">
+            <a class="duik-sidebar__link">mcctl Utility Reference</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/mcctl-installation-and-setup-guide" class="duik-sidebar__link">mcctl Installation and Setup Guide</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/intro-to-mcctl-metric-commands" class="duik-sidebar__link">Metric Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/cloudlet-commands" class="duik-sidebar__link">Cloudlet Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/reports-and-monitoring" class="duik-sidebar__link">Reports and Monitoring Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/audit-and-regional-commands" class="duik-sidebar__link">Regional Commands</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/operator-specific-mcctl-and-rest-apis/mcctl-reference/mapping-virtual-machines-to-iaas" class="duik-sidebar__link">Mapping Virtual Machines to IaaS</a>
+          </li>
+                
+              </ul>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="subs depth-1 duik-sidebar__item">
+            <a class="duik-sidebar__link">Release Notes</a>
+              <ul class="duik-sidebar__nav">
+                <li class="duik-sidebar__item"><a href="/release-notes" class="duik-sidebar__link">Overview</a></li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-3-0" class="duik-sidebar__link">3.0</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-2-4-1" class="duik-sidebar__link">2.4.1</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/release-notes/edge-cloud-console-release-notes-2-4" class="duik-sidebar__link">2.4</a>
+          </li>
+                
+              </ul>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/iaas-supported-features" class="duik-sidebar__link">Supported Features across IaaS</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/faqs-and-support" class="duik-sidebar__link">FAQs and Support</a>
+          </li>
+                                  <li class="duik-sidebar__item">
+            <a href="/search" class="duik-sidebar__link">Search</a>
+          </li>
+                
+      </ul>
+      <hr class="d-block d-md-none">
+      <ul class="duik-sidebar__nav d-block d-md-none">
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com" class="duik-sidebar__link">MobiledgeX Home</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/product" class="duik-sidebar__link">Product</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/use-cases" class="duik-sidebar__link">Use Cases</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/about" class="duik-sidebar__link">About</a></li>
+        <li class="duik-sidebar__item"><a href="https://mobiledgex.com/blog" class="duik-sidebar__link">Blog</a></li>
+        <li class="duik-sidebar__item"><a href="https://developers.mobiledgex.com" class="duik-sidebar__link">Developers</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('li.subs.depth-3 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-3').removeClass('active');
+        } else {
+          $('li.subs.depth-3').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-2 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-2').removeClass('active');
+        } else {
+          $('li.subs.depth-2').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      });
+      $('li.subs.depth-1 > a').click(function() {
+        if ($(this).parent().hasClass('active')) {
+          $('li.subs.depth-1').removeClass('active');
+        } else {
+          $('li.subs.depth-1').removeClass('active');
+          $(this).parent().toggleClass('active');
+        }
+      })
+    });
+</script>
+
+
+                  <main class="ml-md-auto col-md-9 col-xl-10 px-4 pt-0 pt-md-11">
+        <div class="row pt-3">
+          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block toc"></div>          <div class="col-xl-10 order-xl-1 duik-content border-bottom">
+            <div class="mb-7">
+              
+
+<div class="markdown-body">
+  <h1>Monitoring: Events, Usage, and Metrics</h1>
+
+            <p>Monitoring your infrastructure is critical to ensure the performance of your services. This page is intended to provide an overview of the monitoring capabilities of the MobiledgeX platform. It is written for operators responsible for managing cloudlets, pools, clusters, applications, and application instances. </p><p>As an operator, having insights into operational events and metrics can help you mitigate issues quickly, thereby, reducing downtime for developers who have applications and cluster instances deployed to your cloudlets. Also, usage information is invaluable when you need to determine whether scaling up resources is necessary to accommodate your users based on their application and deployment needs.</p><p>In addition to monitoring operator-specific events and metrics, you can also view developer metrics, usage, and logs as long as they are part of the cloudlet pool. Information types may include application usage, audit logs, the number of devices connected, and more.</p><h3 id='security-and-permissions '><a class='anchor' aria-hidden='true' href='#security-and-permissions '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Security and Permissions </h3><p>To access monitoring information, you need to be part of the organization that owns the object being queried. For example, to be able to query information about a given cluster or application instance, or cloudlets, you must be part of the organization that owns the cluster or application. </p><p>Account management is out of scope for this document, but an explanation of the roles available within the MobiledgeX platform and the security considerations for those roles are available in the <a href="https://operators.mobiledgex.com/product-overview/operator-guides/account-management/organizations-and-users/">Organizations and Users Guide</a> as well as the <a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#account-management">mcctl Utility Reference</a> guide.</p><h3 id='trace-id '><a class='anchor' aria-hidden='true' href='#trace-id '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Trace ID </h3><p>The MobiledgeX platform uses distributed tracing. Each discrete action/event within the MobiledgeX platform will include a <em>trace-id</em>. When troubleshooting with MobiledgeX Support, please include the relevant trace ids to expedite the process. </p><h2 id='monitoring-components'><a class='anchor' aria-hidden='true' href='#monitoring-components'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Monitoring Components</h2><p>There are three monitoring components provided by the MobiledgeX platform in which you can access through a quick menu. In addition to the monitoring dashboard, which will be described later in the guide, these monitoring components all play an important role in ensuring the health and availability of applications and cloudlets, as well as components to detect anomalies that may impact usage or application performance, and can even reveal usage and behavior patterns or trends that may influence you to modify or readjust current rules or conditions to accommodate users and resource needs.</p><p><strong>These monitoring components include</strong>:</p><ul><li><p>Events and Audit Events</p></li><li><p>Usage Logs</p></li><li><p>Metrics</p></li></ul><p>Details are provided below for each of the three monitoring components, including an overview of how to use the monitoring information from both the Edge-Cloud Console and the MobiledgeX API. Some examples of the <code>mcctl</code>commands will be used in this document to demonstrate how to retrieve events, usage, and metric information, but we will not cover their complete usage in detail. If you would like to learn more about these commands, refer to the <a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#account-management">mcctl Utility Reference</a> guide.</p><h2 id='events-and-audit-events'><a class='anchor' aria-hidden='true' href='#events-and-audit-events'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Events and Audit Events</h2><p>The MobiledgeX platform logs events and audit events as they occur. Unlike metrics, which are collected on an ongoing basis on intervals that you define, events include lifecycle milestones such as <strong>applications</strong> created, <strong>clusters</strong> deployed, or <strong>cloudlets </strong>deployed. They are collected as they occur, while audits capture and provide the records of the events.  You can only view events and audit events from Organizations that you are part of. </p><p>Events and audits events generate logs that you can use to understand the applications, cloudlets, and their usage and any performance issues detected through a trail of events which include what occurred, when, and where. <em>Audit logs</em> may include capturing activities such as logging, creating applications, deleting users, creating policies, etc. You can specify a range within the audit log display by using a range selector (calendar). On the other hand<em>, event logs </em>may include system-generated events that include services like auto-provision policy, auto-scaling, application instance, or HA. You can set up notifications of alerts when certain threshold conditions are met or exceeded. For more on <strong>alerts</strong>, see the <a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/health-check-and-alert/#alerts">Health Check and Alerts Guide</a>.</p><p>Viewing events and audit events are role-based. Therefore, access to the different events and audit events are specific to the role. </p><h3 id='using-the-mobiledgex-api-to-view-events-and-audit-events'><a class='anchor' aria-hidden='true' href='#using-the-mobiledgex-api-to-view-events-and-audit-events'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Using the MobiledgeX API to view events and audit events</h3><p>There are two event types that we support: <code>type=event</code> and <code>type: audit</code>.  To filter and view these types of events, the <code>show</code> or <code>terms</code> command can be used to view and filter the event types. See the example belows.</p><p><code>$ mcctl events show type=audit</code></p><p><code>$ mcctl events show type=event</code></p><p><code>$ mcctl events terms type=audit</code></p><p><code>$ mcctl events terms type=event</code></p><pre><code>$ mcctl events
+Usage: mcctl events [flags] [command]
+
+Available Commands:
+  show       Show events and audit events
+  showold    Show events and audit events (for old events format)
+  find       Find events and audit events, results sorted by relevance
+  terms      Show aggregated events terms</code></pre><p><br>For more information on these commands and usages, refer to the <a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#event-commands">MCCTL Reference Guide</a>. For this guide, we will be focusing more on using the user interface to view the different event types.</p><p>The same events that are presented using the <code>mcctl</code> commands can also be viewed from the Edge-Cloud Console, as described in the next section.</p><h3 id='using-the-edge-cloud-console-to-view-events-and-audit-events'><a class='anchor' aria-hidden='true' href='#using-the-edge-cloud-console-to-view-events-and-audit-events'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Using the Edge-Cloud Console to view events and audit events</h3><p>On the right side of the MobiledgeX console, there should be three buttons in what is called the <strong>Logs Column</strong>. The Logs Column contains three icons, Audit Logs, Event Logs, and Usage Logs. Select <strong>Events Logs </strong>from the menu.</p>
+                      <figure class="third">
+        <img src="/assets/eventlogs.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                <p>You will see a Live view of the Events log, as shown below. </p>
+                      <figure class="third">
+        <img src="/assets/event-main.png" class="img-fluid slb" alt="">
+        <figcaption>Events Log- Live view</figcaption>
+      </figure>
+      
+                <p>You can also go from the Live view to a more specific search by using the <strong>Filter </strong>and <strong>Time Range </strong>icons. Select the filter icon on the top left, as shown below.</p>
+                      <figure class="third">
+        <img src="/assets/filter-time-range.png" class="img-fluid slb" alt="">
+        <figcaption>Filter icon</figcaption>
+      </figure>
+      
+                <p>You will see the Filter and Tags option, along with a Time range. Click the + sign to expand the Tags. If you do not wish to enter a value for your selected tag, you can input an asterisk in the <strong>Value</strong> field. Click the + sign multiple times if you wish to add a query using additional tags. </p>
+                      <figure class="third">
+        <img src="/assets/tags-menu.png" class="img-fluid slb" alt="">
+        <figcaption>Filter options</figcaption>
+      </figure>
+      
+                <p>Tags are a list of objects that you can use to query your search.  Scroll through the options in the Tag list, specify a date range, and click <strong>Fetch. </strong>The availability of tags is specific to your role as developer or operator. </p>
+                      <figure class="third">
+        <img src="/assets/tags.png" class="img-fluid slb" alt="">
+        <figcaption>Tags options</figcaption>
+      </figure>
+      
+                <p>The following screen examples show the one-to-one mapping between the UI and CLI command when you use the filter tags to search for the events.</p>
+                      <figure class="third">
+        <img src="/assets/tagsvalues.png" class="img-fluid slb" alt="">
+        <figcaption>Events-UI example</figcaption>
+      </figure>
+      
+                <p><strong>CLI command example mapping to the above UI example:</strong></p><pre><code>1 $ mcctl events show tags=apporg=automation_dev_org tags=cloudlet=automation-qa2-vcd-01 tags=state=HEALTH_CHECK_OK  limit=1
+2- name: AppInst online
+3  org:
+4  - automation_dev_org
+5  type: event
+6  region: US
+7  timestamp: 2021-07-13T10:29:39.286515537Z
+8  mtags:
+9    app: app1626171337-7131228
+10    apporg: automation_dev_org
+11    appver: &quot;1.0&quot;
+12    cloudlet: automation-qa2-vcd-01
+13    cloudletorg: packet
+14    cluster: cluster1626171337-7131228
+15    clusterorg: automation_dev_org
+16    hostname: controller-688cf789bf-vfkc5
+17    lineno: node/events.go:325
+18    spanid: 3a03cb3420d1fbe1
+19    state: HEALTH_CHECK_OK
+20    traceid: 94303eecf4707f0</code></pre><p></p><p>Select <strong>Audit Logs</strong> to view a record of historical events performed by you, your organization&#039;s members, or the system. As mentioned earlier, send the <strong>Trace ID </strong>to MobiledgeX Support to assist with troubleshooting.</p><p>The following example shows an audit log search and displays the location of where you can find the audit term name. For example, DeleteApp is a term from <code>type=audit</code>.</p>
+                      <figure class="third">
+        <img src="/assets/auditlogsfilter.png" class="img-fluid slb" alt="">
+        <figcaption>Audit Log search-UI example</figcaption>
+      </figure>
+      
+                <p>The following screen example shows the one-to-one mapping between the CLI command and the UI when you use the filter to search events.</p>
+                      <figure class="third">
+        <img src="/assets/Screen-Shot-2021-09-13-at-1.20.31-PM.png" class="img-fluid slb" alt="">
+        <figcaption>Events-UI example</figcaption>
+      </figure>
+      
+                <h3 id='events-list'><a class='anchor' aria-hidden='true' href='#events-list'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Events list</h3><p>The following table lists the events supported by our platform, based on roles. The <code>mcctl</code> command to display all the terms can be found in the <a href="https://operator.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference#event-terms">MCCTL Reference Guide</a>.  </p><table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Role</strong></p></td><td colspan="1" rowspan="1"><p><strong>Event name</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p>OperatorManager</p></td><td colspan="1" rowspan="1"><p>Create Cloudlet Pool</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete Cloudlet Pool</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Update Cloudlet Pool</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create Cloudlet Pool Access Invitation</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Update Cloudlet</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Stream Cloudlet</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create Cloudlet</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete Cloudlet</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Upgrading Cloudlet</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Cloudlet Online</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create GPU Driver</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete GPU Driver</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Update GPU Driver</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Update VM Pool</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Cloudlet Maintenance Done</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Cloudlet Maintenance Start</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Cloudlet Offline</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Add Cloudlet ResMapping</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Add Rest Tag</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete VM Pool</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create VM Pool</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Add User</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Remove User</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Get Cloudlet Resource Usage</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Get Cloudlet Resource Quota Props</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Remove Cloudlet Pool Member</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Add Cloudlet Pool Member</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Get Cloudlet Manifest</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Revoke Access Key</p></td></tr></tbody></table><table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Role</strong></p></td><td colspan="1" rowspan="1"><p><strong>Event name</strong></p></td></tr><tr><td colspan="1" rowspan="1"><p>DevelopManager</p></td><td colspan="1" rowspan="1"><p>Create App</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete App</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Update App</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create App Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete App Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>App Inst Offline</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>App Inst Online</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create AutoScale Policy</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Update AutoScale Policy</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete AutoScale Policy</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Free Cluster Inst Reservation</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create Cluster Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Reserve Cluster Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>AutoCluster Create</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete Custer Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create Cloudlet Pool Access Response</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete Cloudlet Pool Access Response</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Run Command</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Show Logs</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create Org</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Add User</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Remove User</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Request App Inst Latency</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Update Cluster Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Run Console</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Show App Inst Client</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create AutoProv Policy</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete AutoProv Policy</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create Cluster Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete App Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Add AutoProv Policy Cloudlet</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Remove AutoProv Policy Cloudlet</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Update App Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete App Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Delete Cluster Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Add AutoProv Policy</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Create App Inst</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Remove App AutoProv Policy</p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>TLS Certs Error</p></td></tr></tbody></table><h2 id='usage-logs'><a class='anchor' aria-hidden='true' href='#usage-logs'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Usage Logs</h2><p>You can view application usage (<strong>application instances</strong>) across client devices, locations, and the number of users connected to those applications. Using this data over time helps you understand the application activity that is occurring within your cloudlets, where you can drill down into specific events and uncover usage trends to measure user engagement. Additionally, you can also retrieve usage information about <strong>cluster instances</strong> and <strong>cloudlet pools</strong>. The ability to view cloudlets and cloudlet pool usage are strictly for Operators; Developers do not have the ability to view usage logs outside of cluster instances and application instances.</p><h3 id='using-the-mobiledgex-api-to-view-usage-logs'><a class='anchor' aria-hidden='true' href='#using-the-mobiledgex-api-to-view-usage-logs'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Using the MobiledgeX API to view usage logs</h3><p>MobiledgeX provides two ways for you to view usage logs. The same events that are presented in the Edge-Cloud UI can be viewed from the CLI by using the usage commands in the <code>mcctl</code> utility. </p><pre><code>&gt; mcctl usage
+Usage: mcctl usage [flags] [command]
+Available Commands:
+  app           View App usage
+  cluster       View ClusterInst usage
+  cloudletpool  View CloudletPool usage</code></pre><p></p><p><strong>The following is an example of the </strong><code>cluster usage</code><strong> logs command.</strong></p><pre><code> mcctl usage cluster region=EU cluster=TDG-Docker-Cluster cluster-org=testmonitor cloudlet-org=TDG starttime=2021-06-14T05:00:00+00:00 endtime=2021-06-16T23:03:07+00:00
+2 data:
+3 - series:
+4  - columns:
+5    - region
+6    - cluster
+7    - clusterorg
+8    - cloudlet
+9    - cloudletorg
+10    - flavor
+11    - numnodes
+12    - ipaccess
+13    - startime
+14    - endtime
+15    - duration
+16    - note
+17    name: cluster-usage
+18    values:
+19    - EU
+20      - TDG-Docker-Cluster
+21      - testmonitor
+22      - automationBerlinCloudlet
+23      - TDG
+24      - automation_api_flavor
+25      - 0
+26      - IP_ACCESS_DEDICATED
+27      - &quot;2021-06-15T18:33:02.124504691Z&quot;
+28      - &quot;2021-06-15T20:15:04.280783803Z&quot;
+29      - 6.122156279112e+12
+30      - DELETED
+31      - EU
+32      - TDG-Docker-Cluster
+33      - testmonitor
+34      - automationBerlinCloudlet
+35      - TDG
+36      - automation_api_flavor
+37      - 2
+38      - IP_ACCESS_DEDICATED
+39      - &quot;2021-06-15T20:22:36.455527265Z&quot;
+40      - &quot;2021-06-16T07:34:10.086085844Z&quot;
+41      - 4.0293630558579e+13
+42      - DELETED
+43      - EU
+44      - TDG-Docker-Cluster
+45      - testmonitor
+46      - automationBerlinCloudlet
+47      - TDG
+48      - automation_api_flavor
+49      - 0
+50      - IP_ACCESS_DEDICATED
+51      - &quot;2021-06-16T13:07:16.564976337Z&quot;
+52      - &quot;2021-06-16T17:13:38.247399481Z&quot;
+53      - 1.4781682423144e+13
+54      - DELETED</code></pre><p></p><p><strong>The following is an example of an </strong><code>application instance</code><strong> usage command:</strong></p><pre><code>$ mcctl usage app region=US cluster=dockermonitoring appname=app-us cloudlet-org=packet cloudlet= starttime=2020-01-11T05:00:00+00:00 endtime=2021-06-14T23:03:07+00:00 app-org=testmonitor
+2data:
+3- series:
+4  - columns:
+5    - region
+6    - app
+7    - apporg
+8    - version
+9    - cluster
+10    - clusterorg
+11    - cloudlet
+12    - cloudletorg
+13    - flavor
+14    - deployment
+15    - startime
+16    - endtime
+17    - duration
+18    - note
+19    name: appinst-usage
+20    values:
+21    - - US
+22      - app-us
+23      - testmonitor
+24      - v1
+25      - dockermonitoring
+26      - testmonitor
+27      - packetcloudlet
+28      - packet
+29      - &lt;nil&gt;
+30      - docker
+31      - &quot;2021-03-11T06:07:28.18109284Z&quot;
+32      - &quot;2021-03-23T15:35:24.971452827Z&quot;
+33      - 1.070876790359987e+15
+34      - HEALTH_CHECK_FAIL
+35    - - US
+36      - app-us
+37      - testmonitor
+38      - v1
+39      - dockermonitoring
+40      - testmonitor
+41      - packetcloudlet
+42      - packet
+43      - &lt;nil&gt;
+44      - docker
+45      - &quot;2021-03-23T15:35:40.174447583Z&quot;
+46      - &quot;2021-03-24T06:14:57.19314355Z&quot;
+47      - 5.2757018695967e+13
+48      - HEALTH_CHECK_FAIL
+49    - - US
+50      - app-us
+51      - testmonitor
+52      - v1
+53      - dockermonitoring
+54      - testmonitor
+55      - packetcloudlet
+56      - packet
+57      - &lt;nil&gt;
+58      - docker
+59      - &quot;2021-03-24T06:15:12.25505126Z&quot;
+60      - &quot;2021-04-26T16:29:58.850334201Z&quot;
+61      - 2.888086595282941e+15
+62      - DELETED
+63    - - US
+64      - app-us
+65      - testmonitor
+66      - v1
+      - dockermonitoring
+68      - testmonitor
+69      - packetcloudlet
+70      - packet
+71      - &lt;nil&gt;
+72      - docker
+73      - &quot;2021-04-26T17:08:43.816096459Z&quot;
+74      - &quot;2021-04-29T15:30:12.323913187Z&quot;
+75      - 2.53288507816728e+14
+76      - DELETED
+77    - - US
+78      - app-us
+79      - testmonitor
+80      - v1
+81      - dockermonitoring
+82      - testmonitor
+      - packetcloudlet
+84      - packet
+85      - &lt;nil&gt;
+86      - docker
+87      - &quot;2021-04-29T15:36:57.068458556Z&quot;
+88      - &quot;2021-05-04T04:58:09.22534242Z&quot;
+89      - 3.93672156883864e+14
+90      - HEALTH_CHECK_FAIL
+91    - - US
+92      - app-us
+93      - testmonitor
+94      - v1
+95      - dockermonitoring
+96      - testmonitor
+97      - packetcloudlet
+98      - packet
+99      - &lt;nil&gt;
+100      - docker
+101      - &quot;2021-05-04T04:58:24.325805291Z&quot;
+102      - &quot;2021-05-05T06:39:38.782789994Z&quot;
+103      - 9.2474456984703e+13
+104      - HEALTH_CHECK_FAIL
+105    - - US
+106      - app-us
+107      - testmonitor
+108      - v1
+109      - dockermonitoring
+110      - testmonitor
+111      - packetcloudlet
+112      - packet
+113      - &lt;nil&gt;
+114      - docker
+115      - &quot;2021-05-05T06:39:53.978863752Z&quot;
+116      - &quot;2021-05-10T15:56:06.553279919Z&quot;
+117      - 4.65372574416167e+14 118      - DELETED</code></pre><p></p><p>For more information on these commands and usages, refer to the <a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#event-commands">MCCTL Reference Guide</a>. For this guide, we will be focusing more on using the user interface to view the different usage logs.</p><h3 id='using-the-edge-cloud-console-to-view-usage-logs'><a class='anchor' aria-hidden='true' href='#using-the-edge-cloud-console-to-view-usage-logs'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Using the Edge-Cloud Console to view usage logs</h3><p>Usage logs pull data in from your existing configurations for application instances, clusters, cloudlets, etc. Therefore, if you delete an app instance, for example, and refresh the Usage log, the usage log will indicate that it was deleted. </p><p>Select the <strong>Usage Logs </strong>from the Logs Column on the right side of the console.</p>
+                      <figure class="third">
+        <img src="/assets/usage-logs-1631112201.png" class="img-fluid slb" alt="">
+        <figcaption>Usage log option</figcaption>
+      </figure>
+      
+                <p>The following is an example screen displayed when you click Usage log.</p>
+                      <figure class="third">
+        <img src="/assets/usage-logs.png" class="img-fluid slb" alt="">
+        <figcaption>Usage log screen</figcaption>
+      </figure>
+      
+                <p>The left panel contains tabs to view detailed information about cluster instances, app instances, etc., depending on your selections. Underneath those options are specific information detailing things such as start time, region, action, status, etc. You can view the items specific to the available selection--cluster instance, app instance, cloudlets, etc. For example, if you want to see a cluster instance usage log, you will see items like Flavors, vCPU, RAM, and Disk.</p><p>The right panel contains the actual usage logs for these objects where you can view information such as actions and status.  You may filter the logs based on month, day, hour, or minute. The left and right arrow icons will move through selections of the highlighted time interval. If you would like to return to the current time interval, select the <strong>Today </strong>icon, which looks like a calendar. The time interval can be changed by selecting <strong>Month</strong>, <strong>Day</strong>, <strong>Hour</strong>, or <strong>Minute</strong>.</p>
+                      <figure class="">
+        <img src="/assets/timeline.png" class="img-fluid slb" alt="">
+        <figcaption></figcaption>
+      </figure>
+      
+                <p></p><p>The <strong>Action</strong> row contains color-coded bars, indicating whether something was created or deleted while the <strong>Status</strong> row contains color-coded bars to indicated whether the object is up or down. By clicking and dragging the bar, you can expand your view to extend the dates.</p><h2 id='metrics'><a class='anchor' aria-hidden='true' href='#metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Metrics</h2><p>Metrics refer to the availability of resources such as vCPU, memory, disk, RAM, etc. The MobiledgeX platform collects metrics for the following components. </p><ul><li><p>Cloudlets</p></li><li><p>Clusters </p></li><li><p>Application Instances</p></li></ul><p>Collecting resource metrics is useful if you use them in conjunction with <a href="https://operators.mobiledgex.com/product-overview/operator-guides/debugging/health-check-and-alert/#alerts">alerts</a> that can help you identify issues and quickly respond to them. For example, you can set alerts and be notified when you have exceeded the threshold for vCPU. Metric information can also be useful when you want to understand the utilization of your resources to determine the percentage of your resource&#039;s capacity that is in use and whether to increase them based on user demand.</p><h3 id='using-the-mobiledgex-api-to-view-metrics'><a class='anchor' aria-hidden='true' href='#using-the-mobiledgex-api-to-view-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Using the MobiledgeX API to view metrics</h3><p>MobiledgeX provides two ways for you to view metrics. The same metrics information that are presented in the Monitoring Dashboard can be viewed from the CLI by using the metrics commands in the <code>mcctl</code> utility. </p><pre><code>&gt; mcctl metrics
+Usage: mcctl metrics [flags] [command]
+Available Commands:
+  app                  View App metrics
+  cluster              View ClusterInst metrics
+  cloudlet             View Cloudlet metrics
+  cloudletusage        View Cloudlet usage
+  clientapiusage       View client API usage
+  clientappusage       View client App usage
+  clientcloudletusage  View client Cloudlet usage</code></pre><p>For more information on these commands and usages, refer to the <a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#event-commands">mcctl Utility Reference</a> guide. For this guide, we will be focusing more on using the user interface to view metrics information.</p><h3 id='using-the-monitoring-dashboard-to-view-metrics'><a class='anchor' aria-hidden='true' href='#using-the-monitoring-dashboard-to-view-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Using the monitoring dashboard to view metrics</h3><p>From the Edge-Cloud Console UI, select <strong>Monitoring </strong>from the left navigation. The Monitoring page opens. Make sure that you are managing the Organization that you wish to view metrics information. </p><p>The MobiledgeX Edge-Cloud Console provides a <strong>Monitoring Dashboard</strong> to help you visually centralize, collect, aggregate, and analyze events, logs, and traces so that you can get a bigger picture of what is going on across your infrastructure in real-time. Within a single pane of glass and a customizable UI to enlarge your view and change the graphic representation of your data, you can view both current and historical data, log and analyze pattern usages and trends to make informed decisions about your infrastructure to help your users get the most out of your services offered. </p><h5 id='filtering'><a class='anchor' aria-hidden='true' href='#filtering'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Filtering</h5><p>The Monitoring Dashboard provides many ways to filter the data you need to view and access. You can view by organization, regions, metric types, app instance, cluster instance or cloudlet, and search by admins, developers, or operators. You can also filter by time ranges. While the maximum allocated days you can search for audit logs is one day (within the last 24hrs), you can further refine your search for logs with the span of the 24 hour period.  Start time default is 12:00a.m. and End Time default is 11:59p.m.</p><p>You can also refresh your data and specify your refresh rate by <strong>seconds</strong>, <strong>minutes</strong>, or <strong>hours</strong>. You will see a progress bar at the top of the page which serves as an indicator. Click the eye icon to customize your view and include specific metrics information. </p>
+                      <figure class="third">
+        <img src="/assets/Monitoring.png" class="img-fluid slb" alt="">
+        <figcaption>Monitoring Dashboard</figcaption>
+      </figure>
+      
+                <p>You may find the following information displayed on your Monitoring Dashboard:</p><ul><li><p>Cluster level resource utilization, performance, and status metrics</p></li><li><p>Load balancer (Layer 4) metrics and status</p></li><li><p>Application Instance resource utilization, performance, and status metrics</p></li><li><p>Application Instance event logs, showing state changes and other Application Instance events</p></li><li><p>Distributed Matching Engine (DME) metrics, including location-based metrics for remote users</p></li><li><p>Cloudlet level information including regions, operator, disk and memory usage, and more.</p></li></ul><h2 id='more-on-metrics'><a class='anchor' aria-hidden='true' href='#more-on-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>More on metrics</h2><p>The following table provides a list of metrics and their details for each cluster, application instance, and cloudlets. Head over to the <a href="https://operators.mobiledgex.com/operator-specific-mcctl-and-rest-apis/mcctl-reference/#metric-commands">mcctl Utility Reference</a> guide for more information on their commands and example usages.</p><h3 id='cluster-metrics '><a class='anchor' aria-hidden='true' href='#cluster-metrics '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Cluster Metrics </h3><table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Metric </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Unit </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Detail </strong></p></td></tr><tr><td colspan="1" rowspan="1"><p>CPU </p></td><td colspan="1" rowspan="1"><p>Percentage </p></td><td colspan="1" rowspan="1"><p>CPU usage expressed as a percentage of allocated CPU. </p></td></tr><tr><td colspan="1" rowspan="1"><p>MEM </p></td><td colspan="1" rowspan="1"><p>Percentage </p></td><td colspan="1" rowspan="1"><p>Memory usage expressed as a percentage of allocated Memory. </p></td></tr><tr><td colspan="1" rowspan="1"><p>DISK </p></td><td colspan="1" rowspan="1"><p>Percentage </p></td><td colspan="1" rowspan="1"><p>Filesystem usage expressed as a percentage of available disk. </p></td></tr><tr><td colspan="1" rowspan="1"><p>NET </p></td><td colspan="1" rowspan="1"><p>Bytes/Sec </p></td><td colspan="1" rowspan="1"><p>Transmit and Received data expressed as bytes/sec averaged over sixty seconds (60s) </p></td></tr><tr><td colspan="1" rowspan="1"><p>TCP </p></td><td colspan="1" rowspan="1"><p>Integer </p></td><td colspan="1" rowspan="1"><p>Total number of tcp connections / retransmissions expressed as an integer. </p></td></tr><tr><td colspan="1" rowspan="1"><p>UDP </p></td><td colspan="1" rowspan="1"><p>Integer </p></td><td colspan="1" rowspan="1"><p>Total number of udp datagrams transmitted and received, plus any errors expressed as an integer. </p></td></tr></tbody></table><h3 id='application-instances '><a class='anchor' aria-hidden='true' href='#application-instances '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Application Instances </h3><table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Metric</strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Unit </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Detail </strong></p></td></tr><tr><td colspan="1" rowspan="1"><p>CPU </p></td><td colspan="1" rowspan="1"><p>Percentage </p></td><td colspan="1" rowspan="1"><p>CPU usage expressed as a percentage of allocated CPU. </p></td></tr><tr><td colspan="1" rowspan="1"><p>MEM </p></td><td colspan="1" rowspan="1"><p>Bytes </p></td><td colspan="1" rowspan="1"><p>Memory footprint expressed in Bytes. </p></td></tr><tr><td colspan="1" rowspan="1"><p>DISK </p></td><td colspan="1" rowspan="1"><p>Bytes </p></td><td colspan="1" rowspan="1"><p>Filesystem usage expressed in Bytes. </p></td></tr><tr><td colspan="1" rowspan="1"><p>NET </p></td><td colspan="1" rowspan="1"><p>Bytes/Sec </p></td><td colspan="1" rowspan="1"><p>Transmit and Received data expressed as bytes/sec averaged over sixty seconds (60s) </p></td></tr><tr><td colspan="1" rowspan="1"><p>Connections per Port </p><p>(Bytes Sent/Received) </p></td><td colspan="1" rowspan="1"><p>Bytes/Sec </p></td><td colspan="1" rowspan="1"><p>Bytes sent/received averaged over sixty seconds (60s). </p></td></tr><tr><td colspan="1" rowspan="1"><p>Connections per Port </p><p>(Sessions) </p></td><td colspan="1" rowspan="1"><p>Sessions </p></td><td colspan="1" rowspan="1"><p>Count for accepted, handled, and active sessions. </p></td></tr><tr><td colspan="1" rowspan="1"><p>Connections per Port </p><p>(Session Time Histogram) </p></td><td colspan="1" rowspan="1"><p>Connection time in ms. </p></td><td colspan="1" rowspan="1"><p>Data is reported for: </p><ul><li><p>P0 </p></li></ul><ul><li><p>P25 </p></li><li><p>P50 </p></li><li><p>P75 </p></li><li><p>P90 </p></li><li><p>P95 </p></li><li><p>P99 </p></li><li><p>P99.5 </p></li><li><p>P99.9 </p></li><li><p>P100 </p></li></ul><p><br></p></td></tr></tbody></table><h3 id='cloudlet-metrics '><a class='anchor' aria-hidden='true' href='#cloudlet-metrics '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Cloudlet Metrics </h3><table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Metric </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Unit </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Detail </strong></p></td></tr><tr><td colspan="1" rowspan="1"><p>Utilization </p></td><td colspan="1" rowspan="1"><p>Multiple; based on context </p></td><td colspan="1" rowspan="1"><ul><li><p><strong>diskMax</strong>: Max available Disk size in GB </p></li><li><p><strong>diskUsed</strong>: Disk used at a timestamp in GBs </p></li><li><p><strong>memMax</strong>: Max memory on this cloudlet in MB </p></li><li><p><strong>memUsed</strong>: Memory used at timestamp in MB </p></li><li><p><strong>vCpuMax</strong>: Max available number of vCPUs on this cloudlet </p></li><li><p><strong>vCpuUsed</strong>: Number vCPUs on this cloudlet at timestamp </p></li></ul></td></tr><tr><td colspan="1" rowspan="1"><p>Network </p></td><td colspan="1" rowspan="1"><p>Bytes </p></td><td colspan="1" rowspan="1"><p>Broken down by bytes sent and bytes received. </p></td></tr><tr><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Multiple; based on context </p></td><td colspan="1" rowspan="1"><ul><li><p><strong>floatingIpsMax</strong>: Maximum available number of floating IP addresses </p></li><li><p><strong>floatingIpsUsed</strong>: Number of floating IP addresses in use on this cloudlet at timestamp </p></li><li><p><strong>ipv4Max</strong>: Maximum available number of external IPv4 addresses </p></li><li><p><strong>ipv4Used</strong>: Number of external IPv4 addresses in use on this cloudlet at timestamp </p></li></ul></td></tr></tbody></table><p></p><h2 id='viewing-aggregated-statistical-data'><a class='anchor' aria-hidden='true' href='#viewing-aggregated-statistical-data'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Viewing Aggregated Statistical Data</h2><p>You can view latency statistics and filter them by cloudlet, location, and data network type. Device information statistics, such as the number of devices, type of devices, and the number of clients/locations are aggregated over cloudlet, device OS, device model, carrier, and location. It&#039;s important to note that user data and location are not being stored.  </p><p><br>1. From the Monitoring page, select the Actions menu and click <strong>Show Latency Metrics.</strong></p>
+                      <figure class="third">
+        <img src="/assets/show-latency-metrics.png" class="img-fluid slb" alt="">
+        <figcaption>Monitoring page</figcaption>
+      </figure>
+      
+                      <figure class="third">
+        <img src="/assets/monitor-dashboard/stats-data/default-view.png" class="img-fluid slb" alt="">
+        <figcaption>Default view</figcaption>
+      </figure>
+      
+                <p>From the Default view page, the time slider appears at the bottom of the page where you can slide to view aggregated data for the available period of time. The top left side of the screen displays the latency bar (heatmap) while the upper-hand corner of the screen displays cloudlet details. </p><p>Use the drop-down box on the upper-righthand side to specify the absolute time range and apply it or select a relative time range. </p>
+                      <figure class="center-half">
+        <img src="/assets/monitor-dashboard/time-selection.png" class="img-fluid slb" alt="">
+        <figcaption>Time range selection</figcaption>
+      </figure>
+      
+                <p></p>
+                      <figure class="center-half">
+        <img src="/assets/monitor-dashboard/time-range-selection.png" class="img-fluid slb" alt="">
+        <figcaption>Time range selection box</figcaption>
+      </figure>
+      
+                <p></p><p>You can also filter latency data by avg. min, and max.</p>
+                      <figure class="center-half">
+        <img src="/assets/monitor-dashboard/stats-data/avg-latency.png" class="img-fluid slb" alt="">
+        <figcaption>Filter latency range</figcaption>
+      </figure>
+      
+                <ol start="3"><li><p>Click the target location icon under <strong>Cloudlet Location</strong> to display the Cloudlet location view. </p></li></ol>
+                      <figure class="center-half">
+        <img src="/assets/monitor-dashboard/stats-data/target-icon.png" class="img-fluid slb" alt="">
+        <figcaption>Cloudlet target location icon</figcaption>
+      </figure>
+      
+                <p>The Cloudlet location default page opens. </p>
+                      <figure class="full">
+        <img src="/assets/monitor-dashboard/stats-data/clould-location-default-page.png" class="img-fluid slb" alt="">
+        <figcaption>Cloudlet location default page</figcaption>
+      </figure>
+      
+                <p>The purple cloud that you see in the sample above displays the average latency data based on cloudlets, and not location. </p><ol start="4"><li><p>To drill-down latency data for a specific location type, click the <strong>Location Tile</strong>.</p></li></ol>
+                      <figure class="full">
+        <img src="/assets/monitor-dashboard/stats-data/location-tile.png" class="img-fluid slb" alt="">
+        <figcaption>Location Tile</figcaption>
+      </figure>
+      
+                      <figure class="full">
+        <img src="/assets/monitor-dashboard/stats-data/avg-location-tile.png" class="img-fluid slb" alt="">
+        <figcaption>Average location type</figcaption>
+      </figure>
+      
+                <p>The example above shows the location in green, which takes the average of the latency aggregated for all cloudlets within that particular location and records that under <strong>No. of Sample</strong>.</p><ol start="5"><li><p>As you slide the timer slider at the bottom, which monitors latency and performance degradation over time, the aggregate latency data may change based on the timeline, where each dot on the timer slider represents the latency, which is time-based and captures the average latency. </p></li></ol><p>Performance is considered optimal when the Location tile is green, along with the Cloudlet Location tile, and falls under 0-5 or 5-10 milliseconds. Latency falling under 10-25ms and 25-50ms will be yellow, while 50-100ms and greater is red, indicating performance degradation.</p><h2 id='viewing-developer-metrics'><a class='anchor' aria-hidden='true' href='#viewing-developer-metrics'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Viewing Developer metrics</h2><p>As mentioned earlier, you can view Developer metrics as long as they are part of your <a href="https://operators.mobiledgex.com/product-overview/operator-guides/cloudlet-deployment-guides/cloudlet-pools/#to-create-a-cloudlet-pool">Cloudlet Pool</a>. When you first log into the Edge-Cloud Console, your default view does not include Developer metrics. However, once you invited your Developer to join your Cloudlet Pool and they have accepted the invitation, the default view will change to include Developer metrics. Please note that you may need to refresh your Monitoring Dashboard. </p><p>To view the different types of Developer metrics, navigate to the Cloudlet drop-down option and select <strong>App Inst</strong>, <strong>Cluster Inst</strong>, or <strong>Cloudlet</strong>, as shown below.</p>
+                      <figure class="third">
+        <img src="/assets/cloudlet.png" class="img-fluid slb" alt="">
+        <figcaption>Cloudlet drop-down option</figcaption>
+      </figure>
+      
+                      <figure class="third">
+        <img src="/assets/cluster-instance.png" class="img-fluid slb" alt="">
+        <figcaption>Developer metrics options</figcaption>
+      </figure>
+      
+                <p>Depending on your selection, the Monitoring Dashboard will display Developer metrics specific to what you selected from the options provided.</p>
+                      <figure class="third">
+        <img src="/assets/app-inst.png" class="img-fluid slb" alt="">
+        <figcaption>Developer metrics</figcaption>
+      </figure>
+      
+                <h3 id='client-cloudlet-usage-metrics '><a class='anchor' aria-hidden='true' href='#client-cloudlet-usage-metrics '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Client cloudlet usage metrics </h3><table><tbody><tr><td colspan="1" rowspan="1"><p><strong>Metric </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Unit </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Detail </strong></p></td></tr><tr><td colspan="1" rowspan="1"><p>Latency</p></td><td colspan="1" rowspan="1"><p>milliseconds</p></td><td colspan="1" rowspan="1"><p>Returns min/max/avg. values</p></td></tr><tr><td colspan="1" rowspan="1"><p>Device info</p></td><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p>Returns the number of sessions</p></td></tr></tbody></table><h3 id='client-app-usage-metrics '><a class='anchor' aria-hidden='true' href='#client-app-usage-metrics '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Client app usage metrics </h3><table><tbody><tr><td colspan="1" data-colwidth="270" rowspan="1"><p><strong>Metric </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Unit </strong></p></td><td colspan="1" rowspan="1"><p><strong>Measurement Detail </strong></p></td></tr><tr><td colspan="1" data-colwidth="270" rowspan="1"><p>Latency </p></td><td colspan="1" rowspan="1"><p>milliseconds</p></td><td colspan="1" rowspan="1"><ul><li><p><strong>signalstrength- </strong>null</p></li></ul></td></tr><tr><td colspan="1" data-colwidth="270" rowspan="1"><p>Device info</p></td><td colspan="1" rowspan="1"><p></p></td><td colspan="1" rowspan="1"><p><strong>DeviceInfoDynamic</strong>-Info on dynamic devices<br><strong>DeviceInforStatic</strong>-Info on static devices</p></td></tr></tbody></table>
+      
+</div>
+
+              <link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".slb").simplebox()
+  });
+</script>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <div class="text-center"><p>© 2022  MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="https://www.mobiledgex.com/privacy-policy">Privacy Policy</a> | <a href="https://www.mobiledgex.com/terms-of-use">Terms of Use</a> | <a href="https://www.mobiledgex.com/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+            
+    </div>
+  </div>
+
+  
+
+    <script type="text/javascript">
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.duik-content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h2, h3',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: false,
+      listItemClass: 'duik-content-nav__item',
+      orderedList: false,
+      listClass: 'js-scroll-nav duik-content-nav',
+      collapseDepth: 6,
+      activeLinkClass: 'active',
+    });
+  </script>
+  </body>
+
+</html>

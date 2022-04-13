@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR | MobiledgeX</title>
+<meta name="description" content="Deutsche Telekom, NVIDIA, and MobiledgeX have collaborated to highlight the advantages of running CloudXR at on the Telco Edge" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR" />
+<meta property="og:description" content="Deutsche Telekom, NVIDIA, and MobiledgeX have collaborated to highlight the advantages of running CloudXR at on the Telco Edge" />
+<meta property="og:url" content="http://mexv3.test/blog/2021/11/04/dt-nvidia-cloudxr" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR" />
+<meta name="twitter:description" content="Deutsche Telekom, NVIDIA, and MobiledgeX have collaborated to highlight the advantages of running CloudXR at on the Telco Edge" />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/5g-promo2.png/902ba1b156314d3a676afa645e1c20f3.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/5g-promo2.png/902ba1b156314d3a676afa645e1c20f3.png" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2021/11/04/dt-nvidia-cloudxr" rel="canonical" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="dt-nvidia-cloudxr-content">
+      <div class="row">
+        <div class="col">
+  <h1>Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</h1>
+  <p class="datestamp">November 4th, 2021</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/5g-promo2.png" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/terry.jpg" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/terry-schussler">Terry xR Schussler</a></p>
+            <p class="job-title">Senior Director, Spatial Computing at Deutsche Telekom</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2022/04/04/webinar-mobiledgex-and-intel-discuss-building-on-demand-edge-clouds-with-mixed-infrastructure">Webinar: MobiledgeX and Intel discuss "Building On-Demand Edge Clouds with Mixed Infrastructure"</a></li>
+                        <li><a href="/blog/2021/11/08/mobile-operator-edge-is-critical-to-facebook-s-meta">Mobile operator Edge is critical to Facebook’s “Meta”</a></li>
+                        <li><a href="/blog/2021/08/25/mobiledgex-edge-cloud-3-0-improved-visibility-and-operational-management-of-cloudlets-for-operators">MobiledgeX Edge-Cloud 3.0: Improved Visibility and Operational Management of Cloudlets for Operators</a></li>
+                        <li><a href="/blog/2021/08/17/mobiledgex-edge-cloud-3-0-optimal-edge-connectivity-with-edgeevents">MobiledgeX Edge-Cloud 3.0: Optimal Edge Connectivity with EdgeEvents</a></li>
+                        <li><a href="/blog/2021/06/04/test-drive-the-mobiledgex-edge-cloud-platform-with-edgebox">Test-Drive the MobiledgeX Edge-Cloud Platform with EdgeBox</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/edge-computing">See more articles from the Edge Computing category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                                                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/terry.jpg" class="img-fluid headshot" alt="Headshot for Terry xR Schussler" />
+        <div class="info">
+          <p class="name">Terry xR Schussler</p>
+          <p class="job-title">Senior Director, Spatial Computing at Deutsche Telekom</p>
+        </div>
+      </div>
+      
+                  <h2 id='introduction'><a class='anchor' aria-hidden='true' href='#introduction'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Introduction</h2><p>The use of augmented reality (AR) in smartphone applications has become relatively common. Still, due to the ergonomic challenges of holding the device at arm’s length, reduced field of view, and lack of stereoscopic visualization, most people don’t use such applications for extended periods. As a result, there has been significant investment and advancement in the development of extended reality (XR) head-mounted devices (HMDs) over the past five years.</p><p>Commercially available XR HMDs are commonly designed to physically tether to smartphones - to achieve a better physical form factor. This is done by offloading the compute, connectivity, and often the battery/power responsibilities to the connected smartphone.</p><p>While modern smartphones are a valuable part of the XR ecosystem, even the fastest ones have compute limitations that can significantly limit the quality of the rendered user experience.</p><h2 id='the-glass-house-project'><a class='anchor' aria-hidden='true' href='#the-glass-house-project'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>The Glass House Project</h2>
+                         <figure class="full">
+        <img src="/assets/blog/background-SH.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p><a href="https://www.telekom.com"><strong>Deutsche Telekom</a>, <a href="https://mobiledgex.com/">MobiledgeX</a> </strong>and<strong> <a href="https://www.nvidia.com/en-us/design-visualization/solutions/cloud-xr/">NVIDIA </strong></a>wanted to explore extending XR HMDs to leverage Edge Computing with remote data center GPU resources hosted on 5G edge networks to <strong>significantly increase the performance and quality of the rendered user experience.</strong> A Glass House visualization app was selected because it presented unique and complex rendering challenges, which served as an excellent testbed.</p><p>Deutsche Telekom’s Edge team built the prototype client app using a game engine that runs on a smartphone connected to commercially available XR HMDs. The smartphone was connected through 5G to a Windows virtual machine (VM) server instance running on an Edge Computing node in the network of Deutsche Telekom. The VM was running the Glass House experience built using another game engine. Orchestration of access to 5G edge data centers where the Glass House app ran was provided through the <strong>MobiledgeX</strong> Edge-Cloud platform to select the most performant connection for the user. <a href="https://www.nvidia.com/en-us/design-visualization/solutions/cloud-xr/"><strong>NVIDIA</strong> CloudXR</a> technology coordinates the bidirectional data flow between the user’s XR HMD and the remote rendering tasks running on NVIDIA RTX GPUs.</p>
+                         <figure class="center">
+        <img src="/assets/blog/cloudxr.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>The main goal in building this prototype application was to demonstrate an end-to-end remote rendering pipeline for high-end augmented reality user experiences using Edge Computing and 5G. </p>
+                         <figure class="full">
+        <img src="/assets/blog/Comp_Still.png" class="img-fluid slb" alt="" />
+        <figcaption>Left: Server / Right: Local</figcaption>
+      </figure>
+      
+                   <p>One question that often comes from customers is how remote rendering compares to local device rendering. As part of the application, we wanted to enable users to quickly switch back and forth between local and remote rendering so that the differences between the two became more immediately apparent.</p><p>Finally, customers wanted to understand the specific benefits of RTX GPU-based remote rendering (e.g., ray tracing, reflection, shadows).</p><p>With 5G, improvements for better latency behavior of the network are introduced. 5G enables shorter transmission time intervals (TTI), shorter Hybrid Automatic Repeat Request Round Trip Time (HARQ RTT), etc,. to reduce radio interface latency. 5G also provides broader spectrum for greater capacity and throughput. New methods such as <a href="#credits-and-further-reading">Managed Latency with L4S</a> are also examined to achieve a stable latency with minimum jitter.</p><p>The completed project successfully demonstrates the significant qualitative difference between local on-device rendering and RTX GPU-enabled remote rendering. Switching between the different rendering sources is instantaneous – making the comparison easy to visualize and understand. The project showcases the advantages of coordinating remote NVIDIA GPU resources using NVIDIA’s CloudXR technology and MobiledgeX’s edge compute discovery and orchestrating services. And most importantly, the XR HMD user experience is highly immersive, interactive, and at maximum quality and performance.</p><h2 id='demonstration-video '><a class='anchor' aria-hidden='true' href='#demonstration-video '><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Demonstration Video </h2><p>To better explain how everything works, we created a demonstration video that shows the user experience from a first-person PoV and highlights specific technical aspects of the project:</p>
+                    <div class="embed-responsive embed-responsive-16by9">
+        <!-- Youtube and Video -->
+        <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/3nO9jYwjR04" ...></iframe>
+      </div>
+                         <h2 id='demonstration-overview'><a class='anchor' aria-hidden='true' href='#demonstration-overview'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Demonstration Overview</h2><p>There are several advantages in utilizing remote rendering based on RTX GPUs. We focused on a few specific qualitative ones.</p>
+                         <figure class="full">
+        <img src="/assets/blog/Raytrace.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>Remote rendering can properly compute reflections and shadows using ray tracing. Correctly rendered shadows are particularly key to creating highly immersive and blended augmented reality experiences.</p>
+                         <figure class="full">
+        <img src="/assets/blog/Ambiente.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>Another aspect of how shadows are properly rendered is factoring in the lighting and geometry of objects. Screen space ambient occlusion darkens creases, holes and surfaces that are close to each other - creating a highly realistic shadow.</p>
+                         <figure class="full">
+        <img src="/assets/blog/Refractions-1635111074.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>A third benefit we demonstrate is the ability to compute refractions. As you can see in the example above, the way the lampshade reflections distort the light passing through the glass creates a more realistic rendering result for the user.</p><h2 id='remote-rendering-process-flow'><a class='anchor' aria-hidden='true' href='#remote-rendering-process-flow'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Remote Rendering Process Flow</h2>
+                         <figure class="full">
+        <img src="/assets/blog/Remote_Flowchart_2.0.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p>The diagram above provides a summary overview of how the demonstration project was enabled and the flow between the different enabling components. In particular, this describes how the pipeline works when the user requests remote server rendering of the Glass House application. Let’s get into the details.</p><h3 id='user-starts-the-xr-application-built-using-game-engine-1-on-their-smartphone'><a class='anchor' aria-hidden='true' href='#user-starts-the-xr-application-built-using-game-engine-1-on-their-smartphone'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>User starts the XR application built using Game Engine 1 on their smartphone.</h3><p>After the user connects their tethered XR HMD to their smartphone, they launch a smartphone app built using Game Engine 1 (GE1) and containing an NVIDIA CloudXR client. The app connects to the network over 5G and utilizes MobiledgeX APIs to locate the best choice Edge Computing cloudlet. A VM instance is spun up in the selected cloudlet, containing an NVIDIA CloudXR server and remote rendering application built using Game Engine 2 (GE2). The application pipeline is now up and running.</p><h3 id='ge1-client-sends-xr-hmd-positional-tracking-data-to-ge2-client'><a class='anchor' aria-hidden='true' href='#ge1-client-sends-xr-hmd-positional-tracking-data-to-ge2-client'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>GE1 client sends XR HMD positional tracking data to GE2 client</h3><p>Since we are projecting a view for the user based on where they are looking in the real world, we need to track changes in the user’s actual head position, so we know where the user is looking and provide instructions to render the proper frame. This head pose data is relatively simple and requires little bandwidth.</p><p>GE1 running on the user’s smartphone gets the user’s head pose data intrinsics from the XR HMD. GE1 then packages this with additional data describing the scene to be rendered and then uses its CloudXR client to connect to the remote CloudXR server and transmit the data.</p>
+                         <figure class="full">
+        <img src="/assets/blog/cloudxr-1635266405.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <p></p><p>The NVIDIA CloudXR server then forwards the data package to GE2 via OpenVR.</p><h3 id='ge2-remotely-renders-the-image-using-advanced-rtx-gpu-features'><a class='anchor' aria-hidden='true' href='#ge2-remotely-renders-the-image-using-advanced-rtx-gpu-features'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>GE2 remotely renders the image using advanced RTX GPU features</h3><p>Using the package of head pose and other data sent by GE1, the desired scene image renders using the advanced features of the associated RTX GPU. Now that we have the image, we need to send it back to GE1 to show it to the user!</p><h3 id='the-remotely-rendered-image-is-sent-back-to-the-local-ge1-client'><a class='anchor' aria-hidden='true' href='#the-remotely-rendered-image-is-sent-back-to-the-local-ge1-client'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>The remotely rendered image is sent back to the local GE1 client</h3><p>A simple way to think of this is that we are reversing the flow of the original data package. GE2 packages up the rendered image and sends that to the connected NVIDIA Cloud server via OpenVR. The rendered frame image continues to get shuttled by NVIDIA CloudXR server to the NVIDIA CloudXR client and into the GE1 application.</p><h3 id='ge1-presents-the-rendered-image-on-the-xr-hmd'><a class='anchor' aria-hidden='true' href='#ge1-presents-the-rendered-image-on-the-xr-hmd'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>GE1 presents the rendered image on the XR HMD</h3><p>GE1 streams the rendered frame directly to the display stack on the XR HMD. Finally, the display optics of the XR HMD render the frame so the user can see it correctly.</p><h2 id='key-applications-for-remote-rendering'><a class='anchor' aria-hidden='true' href='#key-applications-for-remote-rendering'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Key Applications for Remote Rendering</h2><p>In addition to our prototype Glass House project, there are several applications where high-level remote rendering quality and performance matters for XR use cases. A key example is Architecture, Engineering &amp; Construction (AEC) projects which commonly require the ability to visualize and interact with tremendously high-resolution CAD/CAM models or point clouds. No smartphone made today is capable of rendering such data locally. Architects can bring clients into virtual models of buildings before construction, preventing costly changes requested by the client after the buildings are completed. Access to 3D plans can be matched against the building in progress in the construction industry, alerting managers to clashes detected between the plans and the actual build out.</p><p>Another powerful use case is remote collaboration, where people work together interactively with complex 3D models. (An excellent resource for learning more about XR collaboration solutions and best practices can be found here: <a href="https://xrcollaboration.com">https://xrcollaboration.com</a>)</p><p>Other key areas which can significantly benefit from more advanced remote rendering are field support, healthcare and medical, education, business meetings, and trade shows.</p><h2 id='technical-reference'><a class='anchor' aria-hidden='true' href='#technical-reference'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Technical Reference</h2><h3 id='rendering-comparison'><a class='anchor' aria-hidden='true' href='#rendering-comparison'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Rendering Comparison</h3><p>The following chart provides context for the qualitative and quantitative differences between local on device and remote server rendering.</p><table><tbody><tr><td colspan="1" rowspan="1"><p> </p></td><td colspan="1" rowspan="1"><p>SMARTPHONE Adreno GPU</p></td><td colspan="1" rowspan="1"><p>NVIDIA A40 GPU</p></td></tr><tr><td colspan="1" rowspan="1"><p>Rendered Polygons</p></td><td colspan="1" rowspan="1"><p>350K</p></td><td colspan="1" rowspan="1"><p>5M</p></td></tr><tr><td colspan="1" rowspan="1"><p>FPS</p></td><td colspan="1" rowspan="1"><p>60</p></td><td colspan="1" rowspan="1"><p>60</p></td></tr><tr><td colspan="1" rowspan="1"><p>Raytracing</p></td><td colspan="1" rowspan="1"><p>NO</p></td><td colspan="1" rowspan="1"><p>YES</p></td></tr><tr><td colspan="1" rowspan="1"><p>Screen Space Ambient Occlusion</p></td><td colspan="1" rowspan="1"><p>NO</p></td><td colspan="1" rowspan="1"><p>YES</p></td></tr><tr><td colspan="1" rowspan="1"><p>Refraction</p></td><td colspan="1" rowspan="1"><p>NO</p></td><td colspan="1" rowspan="1"><p>YES</p></td></tr></tbody></table><h3 id='gpu-power-memory-comparison'><a class='anchor' aria-hidden='true' href='#gpu-power-memory-comparison'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>GPU Power/Memory Comparison</h3><p><strong><em>Approximate power and memory specifications for mobile GPUs and Systems on a Chip (SoC) and workstation GPUs. Workstation GPUs can offer significantly more computing power and memory profiles.</em></strong></p><table><tbody><tr><td colspan="1" rowspan="1"><p> </p></td><td colspan="1" rowspan="1"><p>QCOM XR2 (SoC)*</p></td><td colspan="1" rowspan="1"><p>NVIDIA A10 GPU</p></td><td colspan="1" rowspan="1"><p>NVIDIA A40 GPU</p></td></tr><tr><td colspan="1" rowspan="1"><p>Power (TDP)</p></td><td colspan="1" rowspan="1"><p>10 W</p></td><td colspan="1" rowspan="1"><p>150 W</p></td><td colspan="1" rowspan="1"><p>300 W</p></td></tr><tr><td colspan="1" rowspan="1"><p>Memory</p></td><td colspan="1" rowspan="1"><p>8 GB</p></td><td colspan="1" rowspan="1"><p>24 GB</p></td><td colspan="1" rowspan="1"><p>48 GB</p></td></tr></tbody></table><h3 id='glossary-of-terms'><a class='anchor' aria-hidden='true' href='#glossary-of-terms'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Glossary of Terms</h3><p><strong>XR HMD</strong> - a head-worn device that displays a digital overlay on the user’s view of the real world.</p><p><strong>Game Engine 1</strong> - a commercially available game engine</p><p><strong>Game Engine 2</strong> - another commercially available game engine</p><p><strong>OpenVR</strong> - an API and runtime that allows access to VR hardware from multiple vendors without requiring that applications have specific knowledge of the hardware they are targeting.</p><p><strong>NVIDIA CloudXR</strong> - NVIDIA CloudXR provides a powerful edge computing platform for extended reality. Built on NVIDIA RTX and virtual GPU technology, NVIDIA CloudXR is an advanced streaming technology that delivers VR and AR across 5G and Wi-Fi networks.</p><p><strong>MobiledgeX</strong> - MobiledgeX SDKs simplify the development process of connecting to the best- deployed application instance (closest cloudlet). This ensures that the edge computing connection has low network latency and low network jitter.</p><p><strong>RTX</strong> - NVIDIA RTX enables real-time ray tracing – generating interactive images that react to lighting, shadows, and reflections.</p><p><strong>GPU</strong> - A single-chip processor with integrated transform, lighting, triangle setup/clipping, and rendering engines.</p><p><strong>5G</strong> - Fifth-generation wireless (5G) is the latest iteration of cellular technology, engineered to greatly increase the speed and responsiveness of wireless networks.</p><p><strong>Edge Computing</strong> - The computational processing of data close to the logical edge of the network, closer to user devices and sources of data..</p><p><strong>L4S</strong> - Low-Latency, Low-Loss, Scalable Throughput (L4S) is a method for fast congestion indication and can be the basis for a common rate adaptation framework in 5G. As part of this framework, using L4S-capable quality-of-service (QoS) flows can ensure that time-critical high data rate applications work well over 5G.</p><p><strong>AML</strong> - Adaptive Managed Latency (AML) is a concept that enables low jitter over 5G to support latency-critical applications. It provides Quality of Service (QoS) in combination with a fast feedback-loop from the network to the application in order to perform rate adaptation (using L4S). This results in a stable latency and smoother uniform experience.</p><p><strong>Latency</strong> - Latency is the time it takes for data to be transferred between its original source and its destination, usually measured in milliseconds. Latency is often measured as the delay between a user&#039;s action and a network application&#039;s response to that action, also referred to as total round trip time.</p><p><strong>Jitter</strong> - variation in the time between data packets arriving, typically caused by network congestion or route changes. </p><h3 id='nvidia-cloudxr-30'><a class='anchor' aria-hidden='true' href='#nvidia-cloudxr-30'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>NVIDIA CloudXR 3.0</h3><p>This project was created using NVIDIA CloudXR 1.2. Since then, NVIDIA has implemented several improvements. The latest CloudXR release of 3.0 adds bidirectional audio support to streamed XR, enabling users to improve collaboration within any immersive experience. Bidirectional audio delivers real-time communication capability for any XR environment, including immersive automotive design reviews, collaborative AEC approvals, and interactive training. Users can discuss design options with colleagues while immersed in virtual or augmented environments even from a mobile device.</p><h3 id='mobiledgex-30'><a class='anchor' aria-hidden='true' href='#mobiledgex-30'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>MobiledgeX 3.0</h3><p>Since this project was initially created, MobiledgeX has launched the 3.0 version of their Edge-Cloud SDKs. Key new features include:</p>
+                         <figure class="center">
+        <img src="/assets/blog/square.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <ul><li><p>Support for Nvidia’s vGPU technology, which enables scale-out their GPU infrastructure and allows applications to consume the right amount of GPU resources necessary for their application (<a href="https://mobiledgex.com/blog/2021/09/08/mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support/">vGPU Blog</a>) </p></li><li><p>Dynamic Edge Connectivity with MobiledgeX Edge Events enables clients to receive events at run time to determine if there is a better server for their client to connect with. (<a href="https://mobiledgex.com/blog/2021/08/17/mobiledgex-edge-cloud-3-0-optimal-edge-connectivity-with-edgeevents/">Edge Events Blog</a>)</p></li></ul><ul><li><p>“Trusted Cloudlets&#039;&#039; for private edge support. Extends MobiledgeX Edge-Cloud’s common key management, security, and management architecture to work with public cloud capabilities. This unlocks multi-cloud support and control necessary to consume edge resources for operator 5G applications alongside third-party applications while still benefiting from cloud economics.</p></li><li><p>Improved insights and management of cloudlets for operators. Operators can use MobiledgeX Edge-Cloud 3.0 for better resource management and visibility in the cloud versus relying on hardware to determine resource availability.</p></li></ul><h2 id='credits-and-further-reading'><a class='anchor' aria-hidden='true' href='#credits-and-further-reading'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Credits and Further Reading</h2><p>There were several people involved in this collaboration project. Particular thanks go to:</p><p><strong>Deutsche Telekom</strong> - <em>Dominik Schnieders, Marie Kacerovsky, Mihail Luchian, Jan Wollner, Terry xR. Schussler</em></p><p><strong>MobiledgeX</strong> - <em>Vasanth Mohan, Thomas Vits</em></p><p><strong>NVIDIA</strong> - <em>Gregory Jones, Veronica Yip</em></p><p>We recommend reading the following web pages and documents to get further information on the topics discussed in this article:</p><p>Deutsche Telekom: <a href="https://www.telekom.com/en/company/topic-specials/special-5g">https://www.telekom.com/en/company/topic-specials/special-5g</a></p><p>MobiledgeX Edge-Cloud 3.0: <a href="https://mobiledgex.com/product/">https://mobiledgex.com/product/</a></p><p>NVIDIA CloudXR 3.0: <a href="https://www.nvidia.com/en-us/design-visualization/solutions/cloud-xr/">https://www.nvidia.com/en-us/design-visualization/solutions/cloud-xr/</a></p><p>“Enabling time-critical applications over 5G with rate adaptation” white paper co-authored by Ericsson and Deutsche Telekom: <a href="https://www.telekom.com/resource/blob/628060/db8412520298f03744f938dc33b0dc9a/dl-210526-whitepaper-data.pdf">https://www.telekom.com/resource/blob/628060/db8412520298f03744f938dc33b0dc9a/dl-210526-whitepaper-data.pdf</a></p>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/11/04/dt-nvidia-cloudxr&title=Case+Study%3A+Deutsche+Telekom+Remote+Augmented+Reality+Rendering+using+MobiledgeX+and+NVIDIA+CloudXR"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=Case+Study%3A+Deutsche+Telekom+Remote+Augmented+Reality+Rendering+using+MobiledgeX+and+NVIDIA+CloudXR&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/11/04/dt-nvidia-cloudxr&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/11/04/dt-nvidia-cloudxr"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

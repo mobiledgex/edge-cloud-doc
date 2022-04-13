@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computer Vision WebSocket Support | MobiledgeX</title>
+<meta name="description" content="We recently upgraded our Android MobiledgeX SDK Demo from using Persistent TCP to a Websocket implementation. Let&#039;s learn about the benefits of using Websocket for your implementation." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Computer Vision WebSocket Support" />
+<meta property="og:description" content="We recently upgraded our Android MobiledgeX SDK Demo from using Persistent TCP to a Websocket implementation. Let&#039;s learn about the benefits of using Websocket for your implementation." />
+<meta property="og:url" content="http://mexv3.test/blog/2020/04/22/computer-vision-websocket-support" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="Computer Vision WebSocket Support" />
+<meta name="twitter:description" content="We recently upgraded our Android MobiledgeX SDK Demo from using Persistent TCP to a Websocket implementation. Let&#039;s learn about the benefits of using Websocket for your implementation." />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/blog-category-developers.png/7cb443d804cacdca3a528f0f249d0b8e.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/blog-category-developers.png/7cb443d804cacdca3a528f0f249d0b8e.png" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2020/04/22/computer-vision-websocket-support" rel="canonical" />
+<link href="http://mexv3.test/blog/2020/04/22/computer-vision-websocket-support?page=3" rel="prev" />
+<link href="http://mexv3.test/blog/2020/04/22/computer-vision-websocket-support?page=5" rel="next" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="computer-vision-websocket-support-content">
+      <div class="row">
+        <div class="col">
+  <h1>Computer Vision WebSocket Support</h1>
+  <p class="datestamp">April 22nd, 2020</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/blog-category-developers.png" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/bruce-armstrong-headshot.jpg" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/bruce-armstrong">Bruce Armstrong</a></p>
+            <p class="job-title">Principal Engineer</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2021/11/04/dt-nvidia-cloudxr">Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</a></li>
+                        <li><a href="/blog/2021/08/25/mobiledgex-edge-cloud-3-0-improved-visibility-and-operational-management-of-cloudlets-for-operators">MobiledgeX Edge-Cloud 3.0: Improved Visibility and Operational Management of Cloudlets for Operators</a></li>
+                        <li><a href="/blog/2021/08/17/mobiledgex-edge-cloud-3-0-optimal-edge-connectivity-with-edgeevents">MobiledgeX Edge-Cloud 3.0: Optimal Edge Connectivity with EdgeEvents</a></li>
+                        <li><a href="/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform">A Technical Overview of the MobiledgeX Edge-Cloud 3.0 Platform </a></li>
+                        <li><a href="/blog/2021/05/04/how-mobiledgex-helps-telecom-operators-manage-private-and-trusted-cloudlets-for-their-enterprise-customers">How MobiledgeX Helps Telecom Operators Manage Private and Trusted Cloudlets for their Enterprise Customers</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/technical">See more articles from the Technical category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/bruce-armstrong-headshot.jpg" class="img-fluid headshot" alt="Headshot for Bruce Armstrong" />
+        <div class="info">
+          <p class="name">Bruce Armstrong</p>
+          <p class="job-title">Principal Engineer</p>
+        </div>
+      </div>
+      
+                  <h2 id='introduction'><a class='anchor' aria-hidden='true' href='#introduction'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Introduction</h2><p>The MobiledgeX Computer Vision Android library and Face Detection Server are a couple of pieces of software that help demonstrate some of the advantages of mobile edge computing. We use them in our demo app, and in our workshop projects. This is all open source code and is available in our <a href="https://github.com/mobiledgex/edge-cloud-sampleapps">Github repository</a>.</p><h2 id='a-little-history'><a class='anchor' aria-hidden='true' href='#a-little-history'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>A Little History</h2><p>The initial implementation of the Android library had only one method of communicating with the server running on the Edge cloudlet, and that was via an HTTP REST interface. Last year we added support for a second method, which was a <a href="https://developers.mobiledgex.com/technical-articles/computer-vision-persist-tcpconnect">persistent TCP socket connection</a>. This offered speed improvements, but also added complexity, and it was difficult for client software to implement the protocol required to send images to the server and receive results.</p><h2 id='what039s-a-websocket'><a class='anchor' aria-hidden='true' href='#what039s-a-websocket'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>What&#039;s a WebSocket?</h2><p>From <a href="https://en.wikipedia.org/wiki/WebSocket">Wikipedia</a>: WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection.</p><p>This sounds quite similar to what we invented in our persistent TCP socket connection implementation, but common sense tells us WebSockets probably have some advantages over our own hastily-invented and unoptimized protocol. Having been a standard for many years, and having libraries available for most programming languages in use today, we can easily see why having WebSocket support for our computer vision server and Android library is an attractive proposition.</p>
+                         <figure class="center">
+        <img src="/assets/blog/websocket-rest-http.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <h2 id='websocket-libraries'><a class='anchor' aria-hidden='true' href='#websocket-libraries'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>WebSocket Libraries</h2><p>Now that we’ve decided to add WebSocket support to our server and client, we need to find some libraries.</p><h3 id='client'><a class='anchor' aria-hidden='true' href='#client'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Client</h3><p>Our most fully featured client is written in Java for Android devices. If you search for “Android WebSocket libraries”, you’ll find a few to choose from. We went with <a href="https://square.github.io/okhttp/4.x/okhttp/okhttp3/-web-socket/">OkHttp</a>’s version because we were already using their main library in the app for HTTP communication in other parts of our code. Their WebSocket implementation is pretty simple. In particular, you create a <code>okhttp3.WebSocket</code> instance to send data on, and an <code>okhttp3.WebSocketListener</code> instance to receive results back from the server. You get the image from the camera, convert it to a string of bytes, and call <code>send()</code> on the WebSocket instance. Much simpler than having to worry about headers and lengths and offsets like with our own protocol.</p><p>Here is the code for our <code>WebSocketListener</code>. The <code>onMessage</code> method is where we receive the results from the server. We call <code>handleResponse</code> exactly the same as if the results came from the REST server or Persistent TCP server.</p><pre><code>private final class ResultWebSocketListener extends WebSocketListener {
+    @Override
+    public void onMessage(WebSocket webSocket, String text) {
+        Log.i(TAG, &quot;onMessage text=&quot;+text);
+        mBusy = false;
+        long endTime = System.nanoTime();
+        mLatency = endTime - mStartTime;
+        handleResponse(text, mLatency);
+    }
+    @Override
+    public void onClosing(WebSocket webSocket, int code, String reason) {
+        webSocket.close(NORMAL_CLOSURE_STATUS, null);
+        Log.i(TAG, &quot;Closing: &quot; + code + &quot; / &quot; + reason);
+        mWebSocketClient.dispatcher().cancelAll();
+    }
+    @Override
+    public void onFailure(WebSocket webSocket, Throwable t, okhttp3.Response response) {
+        String message = &quot;WebSocket Error: &quot; + t.getMessage();
+        Log.e(TAG, message);
+        mWebSocketClient.dispatcher().cancelAll();
+    }
+}
+</code></pre><p>The <code>startWebSocketClient</code> method is what we call to start communicating with the WebSocket server. Notice that the &#039;listener&#039; used is an instance of the &#039;ResultWebSocketListener&#039; defined above.</p><pre><code>private void startWebSocketClient() {
+    String url = &quot;ws://&quot;+mHost+&quot;:8008/ws&quot;+mDjangoUrl;
+    okhttp3.Request request = new okhttp3.Request.Builder().url(url).build();
+    ResultWebSocketListener listener = new ResultWebSocketListener();
+    mWebSocketClient = new OkHttpClient();
+    mWebSocket = mWebSocketClient.newWebSocket(request, listener);
+    mWebSocketClient.dispatcher().executorService().shutdown();
+    Log.i(TAG, &quot;Started WebSocket client. url: &quot; + url);
+}
+</code></pre><p>Finally, this is the code that sends the image data “bytes” to the WebSocket server. It really couldn’t be much simpler.</p><pre><code>if(mConnectionMode == ConnectionMode.WEBSOCKET) {
+    mWebSocket.send(ByteString.of(bytes));
+}
+</code></pre><p>You can see the full Java source code for the ImageSender class <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/android/MobiledgeXSDKDemo/computervision/src/main/java/com/mobiledgex/computervision/ImageSender.java">here</a>.</p><h3 id='server'><a class='anchor' aria-hidden='true' href='#server'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Server</h3><p>Our server code is written in Python and I expected it would be easy to find a WebSocket library to use. Our server has been based on the Django framework since day one. Django is specifically for single-shot HTTP request/response messages. Because of this I didn’t have high hopes for being able to tightly integrate any WebSocket implementation with the Django server. I was pleasantly surprised when I discovered the <a href="https://github.com/django/channels">Channels library</a>. It does exactly what I was looking for, and will allow us to use all of our existing face detection, face recognition, pose detection, and object detection Python class files with little to no modification.</p><p>After using the Channels framework to set up routing for the WSS URLs, the code that actually handles the data from the WebSocket connection is in <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/FaceDetectionServer/moedx/tracker/consumers.py">consumers.py</a>. Here is an example of a <code>WebsocketConsumer</code> that uses the existing <code>FaceDetector</code> instance to perform detection, then returns the results via the send function.</p><pre><code>from tracker.apps import myFaceDetector, myFaceRecognizer, myOpenPose, myOpWrapper, myObjectDetector
+
+class ImageConsumerFaceDetector(WebsocketConsumer):
+    def connect(self):
+        self.accept()
+        logger.info(&quot;ImageConsumerFaceDetector&quot;)
+
+    def disconnect(self, close_code):
+        logger.info(&quot;disconnect. close_code=%s&quot; %close_code)
+
+    def receive(self, text_data=None, bytes_data=None):
+        if bytes_data != None:
+            logger.info(&quot;bytes_data length=%d&quot; %(len(bytes_data)))
+            start = time.time()
+            image = imread(io.BytesIO(bytes_data))
+            rects = myFaceDetector.detect_faces(image)
+            elapsed = &quot;%.3f&quot; %((time.time() - start)*1000)
+            if len(rects) == 0:
+                ret = {&quot;success&quot;: &quot;false&quot;, &quot;server_processing_time&quot;: elapsed}
+            else:
+                ret = {&quot;success&quot;: &quot;true&quot;, &quot;server_processing_time&quot;: elapsed, &quot;rects&quot;: rects.tolist()}
+            response = json.dumps(ret)
+        else:
+            logger.info(&quot;text_data=%s&quot; %(text_data))
+            # If text is received, just echo back what we received.
+            response = text_data
+
+        logger.info(&quot;response=%s&quot; %response)
+        self.send(text_data=response)
+</code></pre><p>You can see the full Python source code for the the ImageConsumer classes <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/FaceDetectionServer/moedx/tracker/consumers.py">here</a>.</p><h2 id='results'><a class='anchor' aria-hidden='true' href='#results'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Results</h2><p>The results we are interested in are the “Full Process Latency” values. The full process numbers are not simply network-only latency plus server processing time. The value also includes time to transfer the image data and receive back the results. Depending on network speed, that transfer time can be the biggest part of “full process” value. We shrink the camera image down to 180x240 before sending it. We also switched from PNG to JPG at some point for another speedup.</p>
+                         <figure class="center">
+        <img src="/assets/blog/latency.png" class="img-fluid slb" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      
+                   <h2 id='real-world-testing'><a class='anchor' aria-hidden='true' href='#real-world-testing'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Real World Testing</h2><p>These first results were measured using a Samsung Galaxy S8 phone on 4G LTE, connecting to a server with around a 40 ms ping time. This output is from the Benchmark feature of the MobiledgeX SDK Demo app’s Face Detection activity.</p><pre><code>Apr 19, 2020 17:35
+EDGE hostname: 139.178.86.3
+Connection mode=REST
+Latency test method=socket
+
+EDGE Full Process Latency:
+min/avg/max/stddev = 93/110/142/10 ms
+
+EDGE Network Only Latency:
+min/avg/max/stddev = 25/40/66/10 ms
+</code></pre><pre><code>Apr 19, 2020 17:37
+EDGE hostname: 139.178.86.3
+Connection mode=WEBSOCKET
+Latency test method=socket
+
+EDGE Full Process Latency:
+min/avg/max/stddev = 41/53/78/7 ms
+
+EDGE Network Only Latency:
+min/avg/max/stddev = 26/43/64/11 ms
+</code></pre><p>The main numbers we care about are the Full Process average values. We see 110ms for REST, and 53ms for WebSocket. Using <code>(new-old)/old x 100%</code>, we see that this is a 51.82% decrease in latency. Stated another way, this is over a 2x speedup!</p><h3 id='synthetic-testing'><a class='anchor' aria-hidden='true' href='#synthetic-testing'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Synthetic Testing</h3><p>Another method of measuring we can use is our <a href="https://github.com/mobiledgex/edge-cloud-sampleapps/blob/master/FaceDetectionServer/client/multi_client.py">multi_client.py</a> test script. This script can send images to our server and receive results using either REST or WebSocket. For our test setup, we have two machines on the same LAN. One acting as the client, and the other as the server. Since this results in a ping time between the machines of less than 1ms, this is not a very realistic scenario, even for Edge computing. To remedy this, we use the linux Traffic Control tool, <code>tc</code>, which allows us to <a href="https://bencane.com/2012/07/16/tc-adding-simulated-network-latency-to-your-linux-server/">add a delay to a specified network interface</a>. The following command gives us around a 15 ms ping time between the 2 machines.</p><pre><code>sudo tc qdisc add dev eth0 root netem delay 15ms</code></pre><p>This is a much more realistic Edge-like environment. Let’s see the results.</p><pre><code>$ python3 multi_client.py -s 192.168.1.116 -e /detector/detect/ -c rest -f Bruce.jpg -r 40 --base64
+2020-04-20 16:35:08,622 - MainThread - INFO - =====================================================
+2020-04-20 16:35:08,622 - MainThread - INFO - Grand totals for 192.168.1.116 /detector/detect/ rest
+2020-04-20 16:35:08,623 - MainThread - INFO - 1 threads repeated 40 times on 1 files
+2020-04-20 16:35:08,623 - MainThread - INFO - =====================================================
+2020-04-20 16:35:08,623 - MainThread - INFO - ====&gt; Average Latency Full Process=44.963 ms (stddev=1.846)
+2020-04-20 16:35:08,623 - MainThread - INFO - ====&gt; Average Latency Network Only=15.408 ms (stddev=0.077)
+2020-04-20 16:35:08,623 - MainThread - INFO - ====&gt; Average Server Processing Time=3.477 ms (stddev=0.203)
+
+$ python3 multi_client.py -s 192.168.1.116 -e /detector/detect/ -c websocket -f Bruce.jpg -r 40
+2020-04-20 16:35:24,353 - MainThread - INFO - ==========================================================
+2020-04-20 16:35:24,354 - MainThread - INFO - Grand totals for 192.168.1.116 /detector/detect/ websocket
+2020-04-20 16:35:24,354 - MainThread - INFO - 1 threads repeated 40 times on 1 files
+2020-04-20 16:35:24,354 - MainThread - INFO - ==========================================================
+2020-04-20 16:35:24,354 - MainThread - INFO - ====&gt; Average Latency Full Process=22.300 ms (stddev=0.556)
+2020-04-20 16:35:24,355 - MainThread - INFO - ====&gt; Average Latency Network Only=16.644 ms (stddev=0.187)
+2020-04-20 16:35:24,355 - MainThread - INFO - ====&gt; Average Server Processing Time=4.382 ms (stddev=0.234)
+</code></pre><p>In this case, we see 44.963 ms for REST, and 22.3 ms for WebSocket. This is a 50.4% decrease in latency. Again, right around a 2x speedup.</p><p>Using the <code>tc</code> command, we can easily modify our environment to simulate different network scenarios. These are the <strong>Full Process</strong> results for several different network delay values.</p>
+                   <table class="table table-striped table-bordered">
+                 <thead>
+          <tr>
+                        <th><p>Network Latency</p>
+</th>
+                        <th><p>REST Full Process</p>
+</th>
+                        <th><p>WebSocket Full Process</p>
+</th>
+                        <th><p>Full Process Latency Decrease</p>
+</th>
+                        <th><p>Full Process Speedup</p>
+</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+                         <tr>
+                        <td><p>5 ms</p>
+</td>
+                        <td><p>24.826 ms</p>
+</td>
+                        <td><p>12.196 ms</p>
+</td>
+                        <td><p>50.87%</p>
+</td>
+                        <td><p>1.97x</p>
+</td>
+            
+          </tr>
+                         <tr>
+                        <td><p>10 ms</p>
+</td>
+                        <td><p>34.835 ms</p>
+</td>
+                        <td><p>17.08 ms</p>
+</td>
+                        <td><p>50.97%</p>
+</td>
+                        <td><p>1.96x</p>
+</td>
+            
+          </tr>
+                         <tr>
+                        <td><p>20 ms</p>
+</td>
+                        <td><p>55.085 ms</p>
+</td>
+                        <td><p>27.317 ms</p>
+</td>
+                        <td><p>50.41%</p>
+</td>
+                        <td><p>1.98x</p>
+</td>
+            
+          </tr>
+                         <tr>
+                        <td><p>40 ms</p>
+</td>
+                        <td><p>94.614 ms</p>
+</td>
+                        <td><p>47.304 ms</p>
+</td>
+                        <td><p>50.00%</p>
+</td>
+                        <td><p>2.00x</p>
+</td>
+            
+          </tr>
+                         <tr>
+                        <td><p>80 ms</p>
+</td>
+                        <td><p>174.706 ms</p>
+</td>
+                        <td><p>87.618 ms</p>
+</td>
+                        <td><p>49.85%</p>
+</td>
+                        <td><p>2.01x</p>
+</td>
+            
+          </tr>
+                         <tr>
+                        <td><p>160 ms</p>
+</td>
+                        <td><p>335.182 ms</p>
+</td>
+                        <td><p>167.215 ms</p>
+</td>
+                        <td><p>50.11%</p>
+</td>
+                        <td><p>2.00x</p>
+</td>
+            
+          </tr>
+                         <tr>
+                        <td><p>320 ms</p>
+</td>
+                        <td><p>654.888 ms</p>
+</td>
+                        <td><p>327.8 ms</p>
+</td>
+                        <td><p>49.95%</p>
+</td>
+                        <td><p>2.00x</p>
+</td>
+            
+          </tr>
+                  </tbody>
+          
+      </table>
+                   <p>This is very linear and somewhat surprising. I thought there might be some differences when different network latencies were used, but it looks like it’s safe to say we can expect a 2x speedup in most any network we encounter.</p><h2 id='bonus-speedup-for-rest'><a class='anchor' aria-hidden='true' href='#bonus-speedup-for-rest'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Bonus Speedup for REST</h2><p>During benchmarking with the Python client script, we were not able to reproduce the numbers we were seeing on the Android phone. Investigation revealed that we had introduced a significant speedup to the server some time ago, but never took advantage of it in the Android client. That speedup was removing the requirement that the image data be encoded in Base64 before being sent. Sending the raw image bytes instead of Base64-encoding them meant a much smaller outgoing payload and a faster overall processing of the image. Base64 encoding an image results in a 30% average increase in data size.</p><p>The <code>--base64</code> option added to the <code>multi_client.py</code> script was to allow for an “apples to apples” comparison with the Android phone. A Jira ticket has been opened against the Android code to remove Base64 encoding and enjoy the same speedup seen by our Python script.</p><h2 id='conclusion'><a class='anchor' aria-hidden='true' href='#conclusion'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Conclusion</h2><p>Adding WebSocket support to our client and server was well worth it. The benefits in better latency and easier compatibility for new clients is a great payoff. The existence of well-designed libraries allowed our implementations to be relatively quick and uncomplicated.</p><p>This new WebSocket implementation completely supersedes the old Persistent TCP socket connection method in every way. We’ll keep support around for a while for all 3 connection methods, if only for experimentation and benchmarking purposes, but I expect that Persistent TCP support will eventually be removed.</p>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2020/04/22/computer-vision-websocket-support&title=Computer+Vision+WebSocket+Support"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=Computer+Vision+WebSocket+Support&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2020/04/22/computer-vision-websocket-support&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2020/04/22/computer-vision-websocket-support"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

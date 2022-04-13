@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MobiledgeX Edge-Cloud 3.0: Continuous Integration and Development using MobiledgeX EdgeBox | MobiledgeX</title>
+<meta name="description" content="With the release of MobiledgeX Edge-Cloud 3.0, developers on the platform can begin quick iterative testing and deployments of their applications using MobilegeX EdgeBox." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MobiledgeX Edge-Cloud 3.0: Continuous Integration and Development using MobiledgeX EdgeBox" />
+<meta property="og:description" content="With the release of MobiledgeX Edge-Cloud 3.0, developers on the platform can begin quick iterative testing and deployments of their applications using MobilegeX EdgeBox." />
+<meta property="og:url" content="http://mexv3.test/blog/2021/09/16/mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox" />
+<meta property="og:site_name" content="MobiledgeX" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@MobiledgeX" />
+<meta name="twitter:title" content="MobiledgeX Edge-Cloud 3.0: Continuous Integration and Development using MobiledgeX EdgeBox" />
+<meta name="twitter:description" content="With the release of MobiledgeX Edge-Cloud 3.0, developers on the platform can begin quick iterative testing and deployments of their applications using MobilegeX EdgeBox." />
+<meta property="og:image" content="http://mexv3.test/img/containers/social/edge-cloud-social.jpg/3ba0e4fee17e24fa7ba58f1be053a2b3.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta property="og:image:alt" content="" />
+<meta name="twitter:image" content="http://mexv3.test/img/containers/social/edge-cloud-social.jpg/3ba0e4fee17e24fa7ba58f1be053a2b3.jpg" />
+<meta name="twitter:image:alt" content="" />
+<link href="http://mexv3.test/" rel="home" />
+<link href="http://mexv3.test/blog/2021/09/16/mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox" rel="canonical" />
+<link href="http://mexv3.test/blog/2021/09/16/mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox?page=2" rel="prev" />
+<link href="http://mexv3.test/blog/2021/09/16/mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox?page=4" rel="next" />
+<link type="text/plain" rel="author" href="http://mexv3.test/humans.txt" />
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <link rel="stylesheet" href="/css/mex.min.css?v=1645052280">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="theme-color" content="#273c4c">
+</head>
+
+<body class=" article">
+  <div
+    class="section headwrap "
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+  <nav
+    class="navbar navbar-expand-md navbar-dark">
+    <li class="logo-nav d-block d-md-none">
+      <a class="navbar-brand mobile" href="/"></a>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="main-nav navbar-nav">
+        <li class="logo-nav d-none d-md-block">
+          <a class="navbar-brand" href="/"></a>
+        </li>
+        <li>
+          <ul class="navbar-nav">
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/product">Product</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Solutions
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="/solution-briefs">Solution Briefs</a>
+                                <a class="dropdown-item" href="/use-cases">Use Cases</a>
+                                <a class="dropdown-item" href="/solutions/edge-services">Edge Services</a>
+                                <a class="dropdown-item" href="/solutions/edge-lab">Edge Lab</a>
+                                <a class="dropdown-item" href="/solutions/success-stories">MNO Success Stories</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/partners">Partners</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" href="/about" id="navbarDropdown" aria-haspopup="true"
+                aria-expanded="false">
+                About
+              </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Overview</a>
+                                                <a class="dropdown-item" href="/about/leadership">Leadership</a>
+                                <a class="dropdown-item" href="/about/press">Newsroom</a>
+                                <a class="dropdown-item" href="/about/careers">Careers</a>
+                                <a class="dropdown-item" href="/about/contact">Contact</a>
+                
+              </div>
+                          </li>
+                        <li
+              class="nav-item  ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                          </li>
+                        <li
+              class="nav-item  dropdown  ">
+                                          <a class="nav-link dropdown-toggle" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="https://operators.mobiledgex.com">Operator Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com">Developer Docs</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/sdk-libraries">SDK & Libraries</a>
+                                <a class="dropdown-item" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+                                <a class="dropdown-item" href="/blog?category=technical">Technical Articles</a>
+                                <a class="dropdown-item" href="mailto:support@mobiledgex.com">Support</a>
+                                <a class="dropdown-item" href="https://console.mobiledgex.net/">Console</a>
+                
+              </div>
+                          </li>
+            
+          </ul>
+        </li>
+        <li class="right-nav">
+          <a href="/search" class="search d-none d-lg-block"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      </div>
+    </div>
+    <div class="container" id="mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox-content">
+      <div class="row">
+        <div class="col">
+  <h1>MobiledgeX Edge-Cloud 3.0: Continuous Integration and Development using MobiledgeX EdgeBox</h1>
+  <p class="datestamp">September 16th, 2021</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+   
+
+<div class="container section white-default">
+  <div class="row">
+    <div class="col-md-4 buffer">
+      <div class="article-info">
+        <img src="/assets/social/edge-cloud-social.jpg" class="img-fluid d-none d-md-block social"
+          alt="Decorative graphic" />
+                <div class="author d-none d-md-flex">
+          <img src="/assets/headshots/Vasanth-Mohan.jpg" class="img-fluid headshot" alt="Headshot for " />
+          <div class="info">
+            <p class="name"><a href="/blog/authors/vasanth-mohan">Vasanth Mohan</a></p>
+            <p class="job-title">Developer Adovcate</p>
+          </div>
+        </div>
+        
+                        
+        <div class="related-content d-none d-md-block">
+          <h3>Related Articles</h3>
+          <ul>
+                        <li><a href="/blog/2022/01/18/massive-technologies-showcases-unity-render-streaming">Massive Technologies Showcases the Advantage of Unity Render Streaming at hubraum</a></li>
+                        <li><a href="/blog/2021/11/09/developer-spotlight-ums">Developer Spotlight: Unmanned Life</a></li>
+                        <li><a href="/blog/2021/11/04/dt-nvidia-cloudxr">Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR</a></li>
+                        <li><a href="/blog/2021/11/02/event-join-mobiledgex-and-partners-for-a-discussion-of-infrastructure-critical-to-mobile-ar-vr-at-awe-usa-2021-nov-11th-9-30-a-m-10-25-a-m-pt">[Event] Join MobiledgeX and partners for a discussion of infrastructure critical to mobile AR/VR at AWE USA 2021 (Nov 11th 9:30 a.m.- 10:25 a.m PT)</a></li>
+                        <li><a href="/blog/2021/10/07/developer-spotlight-forwardgame">Developer Spotlight: forwARdgame</a></li>
+            
+                        <li class="readmore">
+              <a href="/blog/tags/developer">See more articles from the Developer category</a>
+            </li>
+                      </ul>
+        </div>
+        
+                
+      </div>
+    </div>
+    <div class="col-md-8 article-content clearfix">
+            <div class="author d-flex d-md-none">
+        <img src="/assets/headshots/Vasanth-Mohan.jpg" class="img-fluid headshot" alt="Headshot for Vasanth Mohan" />
+        <div class="info">
+          <p class="name">Vasanth Mohan</p>
+          <p class="job-title">Developer Adovcate</p>
+        </div>
+      </div>
+      
+                  <p>With the release of MobiledgeX Edge-Cloud 3.0, developers on the platform can begin quick iterative testing and deployments of their applications using MobiledgeX EdgeBox. We understand that the development of edge solutions frequently happens far away from the actual production deployment and that developers need a solution locally to build their edge applications. With MobiledgeX EdgeBox, developers can transform their Mac or Linux laptop into a test cloudlet that is accessible via the MobiledgeX platform. This allows developers to test MobiledgeX APIs and deployment policies for their Docker and Kubernetes applications, which can easily be transferred to production. </p><h3 id='getting-started'><a class='anchor' aria-hidden='true' href='#getting-started'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Getting Started</h3><p>Getting started with EdgeBox requires just three easy steps: </p><ol start="1"><li><p>Creating a free account on the <a href="https://console.mobiledgex.net/">MobiledgeX Console</a>.</p></li><li><p>Setting up your laptop as an edge cloudlet</p></li><li><p>Deploying Docker containers or Kubernetes pods to your laptop cloudlet<br></p></li></ol><p>In our <a href="https://mobiledgex.com/blog/2021/06/04/test-drive-the-mobiledgex-edge-cloud-platform-with-edgebox/">previous blog</a> about EdgeBox, setting up your laptop as a cloudlet can be done very simply using the EdgeBox Command Line Interface. With Python3 and Docker installed, simply:</p><ol start="1"><li><p>pip3 install edgebox </p></li><li><p>docker login -u &lt;username&gt; docker.mobiledgex.net</p></li><li><p>edgebox create &lt;test-edge&gt;</p></li></ol><p>Finally, follow up with our <a href="https://developers.mobiledgex.com/tools/edgebox/">guide on the Developer Portal</a> to learn how to use the MobiledgeX Console to configure your newly created private cloudlet for test deployments.</p>
+                         <figure class="">
+        <img src="/assets/blog/Figure-1---EdgeBox-Cloudlet.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 1: Edge Box Cloudlet</figcaption>
+      </figure>
+      
+                   <h3 id='continuous-integration-and-continuous-delivery'><a class='anchor' aria-hidden='true' href='#continuous-integration-and-continuous-delivery'><svg class='octicon octicon-link' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'><path fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'></path></svg></a>Continuous Integration and Continuous Delivery</h3>
+                         <figure class="">
+        <img src="/assets/blog/Figure-2---GitHub-Actions.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 2: Github Actions CI/CD Workflow</figcaption>
+      </figure>
+      
+                   <p>To best utilize EdgeBox within your application Continuous Integration / Continuous Deployments, we recommend using the MobiledgeX Github Actions workflow. By setting up an EdgeBox for your developer organization, you can run and make builds that automatically get deployed to the MobiledgeX platform and can be dynamically spun up as a cloudlet. This provides an easy and free way for your development team to continuously test your application and ensure that it works within the MobiledgeX platform. </p><p>Github Actions can be integrated into your existing Github projects to allow you to iteratively test on your EdgeBox in just a few steps. </p><ol start="1"><li><p>Once you have created an account on MobiledgeX, you will need to add your MobiledgeX username and password to your Github secrets. This will allow your CI/CD pipeline to handle deployments to MobiledgeX</p></li></ol>
+                         <figure class="">
+        <img src="/assets/blog/Figure-3---Github-Secrets.png" class="img-fluid slb" alt="" />
+        <figcaption>Figure 3: Github Actions Secrets</figcaption>
+      </figure>
+      
+                   <ol start="2"><li><p>Next, you will need to create two yaml files in a .mobiledgex folder in your Github repo</p><ol start="1"><li><p>app.yaml : Specifies the parameters on how to create your application like the compute resources required, the type of deployment, ports required, etc. Here is an example <a href="https://github.com/mobiledgex/github-actions-sample/blob/master/.mobiledgex/app.yml">yaml file</a>.  </p></li><li><p>appinst.yml (optional) : Specifies where your application instances should be deployed when you create a new release of your Github project. Here is an example <a href="https://github.com/mobiledgex/github-actions-sample/blob/master/.mobiledgex/appinsts.yml">yaml file</a> and while testing, you can specify EdgeBox cloudlet as a deployment site. </p></li></ol></li><li><p>In Github, you will need to create a Github workflow, which specifies when you push changes or create a release, what actions should happen to make a build of your application and start the deployments. This is all specified in a <a href="https://github.com/mobiledgex/github-actions-sample/blob/master/.github/workflows/main.yml">main.yml </a>file and here is an example. </p></li><li><p>Then finally, make changes to your application, push the changes to Github, create a release, and then watch your application get built and automatically deployed to your EdgeBox. </p><p></p></li></ol><p>When it is time for your application to get deployed onto a live cloudlet, you can simply change the deployment locations with your Github actions appinst.yaml file, which will then push your changes into production. This allows your team to have one workflow to help manage your application with MobiledgeX. </p><p>To get started, you can read our documentation on the <a href="https://developers.mobiledgex.com/deployments/ci-cd/github-actions/">Developer Portal for using Github Actions with MobiledgeX</a>.<br>If you are a developer new to MobiledgeX, head over to our <a href="https://developers.mobiledgex.com/getting-started/">Getting Started</a> page to learn more about the MobiledgeX Edge-Cloud platform and try it out today!</p>
+              <ul class="social float-left">
+        <li>Share:</li>
+        <li>
+          <a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/09/16/mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox&title=MobiledgeX+Edge-Cloud+3.0%3A+Continuous+Integration+and+Development+using+MobiledgeX+EdgeBox"
+            target="_blank"><img src="/img/linkedin.svg?v=1617657073"
+              alt="Share on Linkedin" /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/intent/tweet?source=MobiledgeX%20Blog&text=MobiledgeX+Edge-Cloud+3.0%3A+Continuous+Integration+and+Development+using+MobiledgeX+EdgeBox&url=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/09/16/mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox&via=mobiledgex"
+            target="_blank"><img src="/img/twitter.svg?v=1617657073"
+              alt="Share on Twitter" /></a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/share.php?u=https%3A%2F%2Fwww.mobiledgex.com/blog/2021/09/16/mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox"
+            target="_blank"><img src="/img/facebook.svg?v=1617657073"
+              alt="Share on Facebook" /></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <!-- row -->
+</div>
+<!-- container -->
+<link rel="stylesheet" href="/css/simplebox.min.css" />
+<script src="/js/simplebox.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(".slb").simplebox();
+  });
+</script>
+
+
+  <script src="/js/mex.min.js?v=1644432456"></script>
+
+  <div class="footer section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <a class="brand" href="/"></a>
+        <ul class="footnav">
+                    <li>
+                        <a href="/product">Product</a>
+            <ul>
+              <li><a href="/product">MobiledgeX Edge-Cloud</a></li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/use-cases">Use Cases</a>
+            <ul>
+              <li><a href="/use-cases">Overview</a></li>
+                            <li><a href="/use-cases/quarkxr">QuarkXR</a></li>
+                            <li><a href="/use-cases/aicuda-technology">Aicuda Technology</a></li>
+                            <li><a href="/use-cases/interactor">Interactor</a></li>
+              
+              <li><a href="/use-cases">View All</a></li>
+              <li>
+                <a class="external" href="https://seamster.io">Seamster</a>
+              </li>
+            </ul>
+                      </li>
+                    <li>
+                        <a href="/about">About</a>
+            <ul>
+                            <li><a href="/about">Overview</a></li>
+                             <li><a href="/about/leadership">Leadership</a></li>
+                            <li><a href="/about/press">Newsroom</a></li>
+                            <li><a href="/partners">Partners</a></li>
+                            <li><a href="/about/careers">Careers</a></li>
+                            <li><a href="/about/contact">Contact</a></li>
+                            <li><a href="/blog">Blog</a></li>
+              
+            </ul>
+                      </li>
+                    <li>
+                        <a href="https://operators.mobiledgex.com">Operators</a>
+                      </li>
+          
+          <li>
+            <a href="https://developers.mobiledgex.com">Developers</a>
+            <ul>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com">Documentation</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/sdk-libraries">SDK &amp; Libraries</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/api-references">API Reference</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/technical-articles">Technical Articles</a>
+              </li>
+              <li>
+                <a class="external" href="https://developers.mobiledgex.com/operators">Network Operators</a>
+              </li>
+              <li>
+                <a class="external" href="mailto:support@mobiledgex.com">Support</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+            <ul>
+              <li><a href="/about/contact" class="contact">Contact Us</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/mobiledgex/" class="linkedin">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/mobiledgex" class="twitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UC41LaIqKFq9jykonX0gsKNw" class="youtube">YouTube</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/nZAmkZqj8t" class="chat">Dev Chat</a>
+              </li>
+              <li><a href="/feed.xml" class="rss">RSS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://console.mobiledgex.net/" class="d-none d-lg-block">Log-in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center"><p>©2022 MobiledgeX, Inc. 333 W. San Carlos Street Ste. 600, San Jose, CA 95110  | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/about/contact">Contact</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  _linkedin_partner_id = "1099500";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function () {
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+  })();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt=""
+    src="https://px.ads.linkedin.com/collect/?pid=1099500&fmt=gif" />
+</noscript>
+
+
+  
+
+  <script type="text/javascript" async defer src="/js/theme-colors.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,999 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://mobiledgex.com/feed.xml" rel="self" type="application/rss+xml" />
+    <title>MobiledgeX</title>
+    <link><![CDATA[https://mobiledgex.com]]></link>
+    <description>MobiledgeX is a creating a marketplace of edge resources and services that will connect developers with the world’s largest mobile networks to power the next generation of applications and devices.</description>
+    <category>Edge Computing</category>
+    <image>
+      <url><![CDATA[https://mobiledgex.com/img/asset/c29jaWFsL21vYmlsZWRnZXhfc29jaWFsLWltYWdlLnBuZw==?p=seo&s=f1af75ae8d562d2da2025d535fcebb93]]></url>
+      <title>MobiledgeX</title>
+      <link>https://mobiledgex.com</link>
+    </image>
+
+        <item>
+      <title>Article: <![CDATA[Webinar: MobiledgeX and Intel discuss "Building On-Demand Edge Clouds with Mixed Infrastructure"]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2022/04/04/webinar-mobiledgex-and-intel-discuss-building-on-demand-edge-clouds-with-mixed-infrastructure]]></link>      <description><![CDATA[Watch MobiledgeX's Thomas Vits and Intel discuss the creation of on-demand, unified edge computing environments from multi-cloud infrastructure vendor environments:
+https://networkbuilders.intel.com/social-hub/webcast/building-on-demand-edge-clouds-with-mixed-infrastructure]]></description>
+      <pubDate>Mon, 04 Apr 22 19:45:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA["GSMA Telco Edge Cloud Value & Achievements" whitepaper features MobiledgeX powered trials]]></title>
+      <link><![CDATA[https://www.gsma.com/futurenetworks/resources/tec-value-whitepaper/]]></link>      <description><![CDATA[GSMA issued a  white paper documenting mobile network operator (MNO) trial validated edge computing uses cases, most of which are deployed atop MobiledgeX]]></description>
+      <pubDate>Mon, 28 Mar 22 17:19:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[What is Telco Federated Edge?]]></title>
+      <link><![CDATA[https://stlpartners.com/articles/edge-computing/what-is-telco-federated-edge/]]></link>      <description><![CDATA[Most recently, Bridge Alliance, MobiledgeX, Singtel and Telefonica announced that they successfully achieved hub-to-hub interconnection between the Bridge Alliance Federated Edge Hub (FEH) and MobiledgeX Edge-Cloud platform allowing edge applications to be deployed across different edge platforms and regions served by each hub. Another important announcement was at MWC’22 where Telefónica unveiled the CAMARA industry initiative in partnership with GSMA, the Linux Foundation, DT and other players with the mission of defining APIs for exposing network capabilities to third parties.]]></description>
+      <pubDate>Mon, 28 Mar 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[DT and Rubean successfully demonstrate time and security-critical payment mobile "Point of Sale"  application (PhonePOS)with edge computing]]></title>
+      <link><![CDATA[https://www.linkedin.com/pulse/card-present-payments-cloud-rubean-ag/?trackingId=1l36pN%2BlfYWheCtC2xsuWw%3D%3D]]></link>      <description><![CDATA[Edge Computing tested by Deutsche Telekom (DT) and Rubean promises to deliver a new seamless user experience for time-and security-critical payment applications such as the Cloud Point-of-Sale PhonePOS from Rubean. The collaborative partners showed how edge computing enables interactive cloud-based payment transactions and protects the payment processed in the edge cloud on Deutsche Telekom’s network in Germany using MobiledgeX’s Edge Cloud PaaS.]]></description>
+      <pubDate>Thu, 24 Mar 22 15:24:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX powered projects win GSMA Foundry Excellence Awards]]></title>
+      <link><![CDATA[https://www.gsma.com/iot/gsma-foundry/the-gsma-foundry-a-unique-environment-where-new-opportunities-are-created-across-the-mobile-industry/]]></link>      <description><![CDATA[MobiledgeX was the unified edge computing and federation layer for several winners of the GSMA Foundry Excellence awards:
+* 5G XR MEC Global PaaS trial
+* Federated Edge Hub & Interconnect Trial
+* Autonomous Drones trial with Telefonica & "Unmanned Life"]]></description>
+      <pubDate>Mon, 21 Mar 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX latest edge PaaS promises write once, run on 25 telco networks]]></title>
+      <link><![CDATA[https://www.edgeir.com/mobiledgex-latest-edge-paas-promises-write-once-run-on-25-telco-networks-20220303]]></link>      <description><![CDATA[MobiledgeX recently launched version 3.1 of its MobiledgeX Edge-Cloud platform, introducing federation between any standards-based mobile edge computing platform. This is an important development as edge application developers seek a “write once, deploy everywhere” experience in mobile network environments. As different regions and operators standardize on an edge computing platform of choice, MobiledgeX can ensure that the now 25 mobile operators with which it has rolled out edge cloudlets can interface with other edges around the globe.]]></description>
+      <pubDate>Fri, 04 Mar 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[What's up with CAMARA ?]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/digital-platforms-services/what-s-up-with-camara-orange-elisa-43790/]]></link>      <description><![CDATA[A new open source initiative, dubbed ‘CAMARA – The Telco Global API Alliance’, has been formed by the Linux Foundation and the GSMA, with support from multiple major network operators, to “address challenges in porting and reproducing API services across heterogenous operator and cloud architectures.” Essentially, the aim is to define APIs that can expose network capabilities to third parties. The initiative has the support of a bevy of major names, including  AT&T, Capgemini, Deutsche Telekom, Ericsson, Google Cloud, IBM, Intel, KDDI, Microsoft, MobiledgeX, Nokia, Orange, NGMN, T-Mobile US, TIM, Telefónica, TELUS, and Vodafone.]]></description>
+      <pubDate>Tue, 01 Mar 22 07:51:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[DT starts 5G Network API Early Access Program]]></title>
+      <link><![CDATA[https://www.telekom.com/en/media/media-information/archive/hubraum-starts-5g-early-access-program-in-berlin-648992]]></link>      <description><![CDATA[Deutsche Telekom's 5G network will enable completely new use cases and significantly improve the customer experience. Open interfaces, known as application programming interfaces (APIs), will enable service providers to use certain functions of the network for their own offerings in the future. Third parties will also be able to use parts of the 5G network exclusively via 5G network slicing, which is of great importance for the future autonomous control of cars, robots and the Internet of Things, for example. "It is key for us to work with Deutsche Telekom and the relevant standardization bodies to develop easy-to-use standard APIs for 5G edge cloud and network services that will benefit the entire mobile network operator community," commented Thomas Vits of MobiledgeX. MobiledgeX's edge cloud platform provides developers within the 5G Early Access program with easy access to edge and network resources.]]></description>
+      <pubDate>Tue, 01 Mar 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[Linux Foundation Announces New Project “CAMARA – The Telco Global API Alliance” with Global Industry Ecosystem]]></title>
+      <link><![CDATA[]]></link>      <description><![CDATA[A close collaboration has been set up between the CAMARA project and the GSMA’s Operator Platform initiative that is defining a federated platform solution for exposing operator network capabilities to external applications. This collaboration will ensure that developers relying on the CAMARA project’s API solution and abstraction will facilitate users across operator networks.
+
+CAMARA is supported by leading industry organizations, including: AT&T, Capgemini, Deutsche Telekom, Ericsson, GSMA, Google Cloud, IBM, Intel, Kandy, KDDI, Microsoft, MobiledgeX, Nokia, Orange, NGMN, Scenera, T-Mobile US, TIM, Telefonica, TELUS, the Linux Foundation and Vodafone.]]></description>
+      <pubDate>Tue, 01 Mar 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Bridge Alliance, MobiledgeX, Singtel and Telefonica achieve world-first interconnection of heterogenous MEC platforms utilising hub-to-hub architecture]]></title>
+      <link><![CDATA[https://www.telefonica.com/en/communication-room/bridge-alliance-mobiledgex-singtel-and-telefonica-achieve-world-first-interconnection-of-heterogenous-multi-access-edge-computing-mec-platforms-utilising-hub-to-hub-architecture/]]></link>      <description><![CDATA[In a world first, Bridge Alliance, MobiledgeX, Singtel and Telefonica have successfully achieved an interconnection between two heterogenous multi-access edge computing (MEC) platforms as part of a GSM Association (GSMA) Foundry Telco Edge Cloud trial. The hub-to-hub interconnection between the Bridge Alliance Federated Edge Hub (FEH) and MobiledgeX Edge-Cloud platform could allow edge applications to be deployed across different edge platforms and regions served by each hub.]]></description>
+      <pubDate>Fri, 25 Feb 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX pushes edge interoperability]]></title>
+      <link><![CDATA[https://www.mobileworldlive.com/featured-content/top-three/mobiledgex-pushes-edge-interoperability]]></link>      <description><![CDATA[Edge computing company MobiledgeX claimed the latest version of its cloud platform would deliver a key advance by enabling software developers to write once and deploy everywhere.
+
+The Deutsche Telekom-backed company stated version 3.1 of its edge-cloud platform will work with any standards-based set up, providing global compatibility for a customer list now comprised of 25 mobile operators and more than 200 software developers.]]></description>
+      <pubDate>Fri, 25 Feb 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[What’s up with… MobiledgeX, Mavenir, VIAVI]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/edge/what-s-up-with-mobiledgex-mavenir-viavi-43733/]]></link>      <description><![CDATA[Deutsche Telekom-backed MobiledgeX has reached something of a milestone with the claim that the latest version of its Edge-Cloud software can federate “between any standards-based mobile edge computing platform,” something that would open up the telco edge market significantly and truly enable a “write once, deploy everywhere” opportunity for app developers.]]></description>
+      <pubDate>Thu, 24 Feb 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX Introduces Federation With Any Edge Platform To Streamline Mobile Network Deployments For Developers]]></title>
+      <link><![CDATA[https://www.globenewswire.com/news-release/2022/02/23/2390316/0/en/MobiledgeX-Introduces-Federation-With-Any-Edge-Platform-To-Streamline-Mobile-Network-Deployments-For-Developers.html]]></link>      <description><![CDATA[MobiledgeX today announced version 3.1 of its MobiledgeX Edge-Cloud platform, introducing federation between any standards-based mobile edge computing platform, 5G QoS services and support for “bare metal” Kubernetes deployments including Google Anthos]]></description>
+      <pubDate>Wed, 23 Feb 22 22:32:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Panel Discussion: Is Kubernetes right for the edge?]]></title>
+      <link><![CDATA[https://www.fiercetelecom.com/cloud/lumen-avassa-execs-debate-whether-kubernetes-right-edge]]></link>      <description><![CDATA[Speaking during FierceTelecom’s Cloud Networking virtual event this week, MobiledgeX CEO Jason Hoffman said his company has already onboarded hundreds of different use cases.]]></description>
+      <pubDate>Thu, 03 Feb 22 22:40:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[TelecomTV Video Roundtable: The Critical Role of Edge-Native Clouds]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/cloud-native/the-critical-role-of-edge-native-clouds-43477/]]></link>      <description><![CDATA[Jason Hoffman, President and CEO at MobiledgeX, and Caroline Chappell, Research Director, Cloud, at Analysys Mason, outline the critical role that edge-native cloud platforms will play as network operators transform their architectures for the digital services future.]]></description>
+      <pubDate>Wed, 02 Feb 22 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[How operators win with an edge-native cloud]]></title>
+      <link><![CDATA[https://the-mobile-network.com/2022/01/how-operators-win-with-an-edge-native-cloud/]]></link>      <description><![CDATA[Operator edge-native clouds can provide a unified compute fabric for multiple networks and use cases, says Caroline Chappell of Analysys Mason.]]></description>
+      <pubDate>Fri, 28 Jan 22 19:36:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Massive Technologies Showcases the Advantage of Unity Render Streaming at hubraum]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2022/01/18/massive-technologies-showcases-unity-render-streaming]]></link>      <description><![CDATA[As part of hubraum's iOS AR Innovation Program, MobiledgeX worked with startups like Massive Technologies to help take advantage of edge computing.]]></description>
+      <pubDate>Tue, 18 Jan 22 15:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Developer Spotlight: Unmanned Life]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/11/09/developer-spotlight-ums]]></link>      <description><![CDATA[MobiledgeX Developer Advocate Vasanth Mohan sits down with Kim Clement, the CTO of Unmanned Life, to find out how they are using 5G and the MobiledgeX Edge-Cloud platform for autonomous vehicles and drones to save lives!]]></description>
+      <pubDate>Tue, 09 Nov 21 09:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Mobile operator Edge is critical to Facebook’s “Meta”]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/11/08/mobile-operator-edge-is-critical-to-facebook-s-meta]]></link>      <description><![CDATA[Mobile network operator supplied edge cloud is critical to the realization of Facebook "Meta"]]></description>
+      <pubDate>Mon, 08 Nov 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Case Study: Deutsche Telekom Remote Augmented Reality Rendering using MobiledgeX and NVIDIA CloudXR]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/11/04/dt-nvidia-cloudxr]]></link>      <description><![CDATA[Deutsche Telekom, NVIDIA, and MobiledgeX have collaborated to highlight the advantages of running CloudXR at on the Telco Edge]]></description>
+      <pubDate>Thu, 04 Nov 21 09:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX and Intel Partner to Optimize AI, Security and Portability for Multi-cloud Deployments]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/11/02/mobiledgex-and-intel-partner-to-optimize-ai-security-and-portability-for-multi-cloud-deployments]]></link>      <description><![CDATA[MobiledgeX and Intel have partnered to integrate Intel’s 3rd Gen Intel® Xeon® Scalable processors for built-in AI, crypto acceleration and advanced security capabilities for mobile edge infrastructure, services and applications.]]></description>
+      <pubDate>Tue, 02 Nov 21 23:57:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[[Event] Join MobiledgeX and partners for a discussion of infrastructure critical to mobile AR/VR at AWE USA 2021 (Nov 11th 9:30 a.m.- 10:25 a.m PT)]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/11/02/event-join-mobiledgex-and-partners-for-a-discussion-of-infrastructure-critical-to-mobile-ar-vr-at-awe-usa-2021-nov-11th-9-30-a-m-10-25-a-m-pt]]></link>      <description><![CDATA[Join Vasanth Mohan, Developer Advocate at MobiledgeX, and XR/AR ecosystem innovators for “5G EDGE COMPUTE : ESSENTIAL INFRASTRUCTURE TO SCALE AR & VR”, an AWE USA 2021 hosted panel discussion on Nov 11th 9:30am-10:25am PT.]]></description>
+      <pubDate>Tue, 02 Nov 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX and Google Anthos Integration Now Live at the WWT Advanced Technology Center]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/11/01/mobiledgex-and-google-anthos-integration-now-live-at-the-wwt-advanced-technology-center]]></link>      <description><![CDATA[MobiledgeX on Anthos delivers maximum infrastructure choice and workload control for the mobile network operator and enterprise customer.]]></description>
+      <pubDate>Mon, 01 Nov 21 19:29:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[KDDI, Deutsche Telekom, MobiledgeX, Sturfee and Mawari to Demonstrate Bloom City Next-Generation AR Mobile App Experience in Alignment with GSMA Foundry Telco Edge Cloud (TEC) Trials Initiative]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2021/10/26/kddi-deutsche-telekom-mobiledgex-sturfee-and-mawari-to-demonstrate-bloom-city-next-generation-ar-mobile-app-experience-in-alignment-with-gsma-foundry-telco-edge-cloud-tec-trials-initiative]]></link>      <description><![CDATA[Jointly-developed proof of concept will feature hyper-realistic virtual human from KDDI’s au VISION STUDIO, demonstrating development and testing of XR enablers and applications harmonized across multiple mobile network operator (MNO) edge networks and infrastructures.]]></description>
+      <pubDate>Tue, 26 Oct 21 10:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Developer Spotlight: forwARdgame]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/10/07/developer-spotlight-forwardgame]]></link>      <description><![CDATA[MobiledgeX Developer Advocate Vasanth Mohan sits down with Tim Friedland, the CEO of forwARdgame, to find out how they are using 5G and the MobiledgeX Edge-Cloud platform for multiplayer AR application development around the world.]]></description>
+      <pubDate>Thu, 07 Oct 21 23:40:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Developer Spotlight: Krasi Nikolov from QuarkXR]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/09/29/developer-spotlight-quarkxr]]></link>      <description><![CDATA[MobiledgeX Developer Advocate Vasanth Mohan sits down with Krasi Nikolov, the CEO of QuarkXR, to find out how QuarkXR is using 5G and the MobiledgeX Edge-Cloud platform for CloudXR application development.]]></description>
+      <pubDate>Wed, 29 Sep 21 16:49:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX, Telefonica O2 and Deutsche Telekom showcase inter-carrier edge cloud]]></title>
+      <link><![CDATA[https://www.edgeir.com/mobiledgex-telefonica-o2-and-deutsche-telekom-showcase-inter-carrier-edge-cloud-20210925]]></link>      <description><![CDATA[Edge cloud orchestrator MobiledgeX, along with Telefonica and Deutsche Telekom, recently took part in a GSMA Telco Edge trial demonstrating MobiledgeX’s ability to hook up multiple clouds at the edge.]]></description>
+      <pubDate>Mon, 27 Sep 21 20:12:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Edge-Cloud 3.0: Continuous Integration and Development using MobiledgeX EdgeBox]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/09/16/mobiledgex-edge-cloud-3-0-continuous-integration-and-development-using-mobiledgex-edgebox]]></link>      <description><![CDATA[With the release of MobiledgeX Edge-Cloud 3.0, developers on the platform can begin quick iterative testing and deployments of their applications using MobilegeX EdgeBox.]]></description>
+      <pubDate>Thu, 16 Sep 21 13:08:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[TelecomTV Video Roundtable: Cloud native in a multi-cloud environment]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/cloud-native-telco-summit-21/cloud-native-in-a-multi-cloud-environment-42355/]]></link>      <description><![CDATA[Cloud native is proving that it can be applied to multi-cloud scenarios in telco operational environments, supporting the trend towards using multiple cloud providers. Kubernetes could be the key to orchestrating programmable multi-cloud managed services.]]></description>
+      <pubDate>Tue, 14 Sep 21 14:22:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Edge-Cloud 3.0: Enhanced GPU/vGPU Support]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/09/08/mobiledgex-edge-cloud-3-0-enhanced-gpu-vgpu-support]]></link>      <description><![CDATA[The latest release of the MobiledgeX Edge-Cloud platform includes enhanced support for GPUs and vGPUs. With GPUs at the edge, an application developer has the benefit of deploying an application backend that has lower processing time with lower network latency.]]></description>
+      <pubDate>Wed, 08 Sep 21 18:21:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Edge-Cloud 3.0: Improved Visibility and Operational Management of Cloudlets for Operators]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/08/25/mobiledgex-edge-cloud-3-0-improved-visibility-and-operational-management-of-cloudlets-for-operators]]></link>      <description><![CDATA[With MobiledgeX Edge-Cloud 3.0 operators can now start leveraging our controller as the resource manager rather than relying only on their IaaS layer to determine the resource availability of cloudlets.]]></description>
+      <pubDate>Wed, 25 Aug 21 14:21:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[CEO Interview: Jason Hoffman, MobiledgeX]]></title>
+      <link><![CDATA[https://www.6gworld.com/exclusives/ceo-interview-jason-hoffman-mobiledgex/]]></link>      <description><![CDATA[When it comes to edge computing and the telecom industry Jason Hoffman, President and CEO of MobiledgeX, does not mince his words. In this interview with 6GWorld, he addresses industry mindset, edge’s roles, and shares his vision on the market’s future.]]></description>
+      <pubDate>Thu, 19 Aug 21 20:26:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Edge-Cloud 3.0: Optimal Edge Connectivity with EdgeEvents]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/08/17/mobiledgex-edge-cloud-3-0-optimal-edge-connectivity-with-edgeevents]]></link>      <description><![CDATA[Learn how MobiledgeX EdgeEvents — introduced in MobiledgeX Edge-Cloud 3.0 — improves edge connectivity for developers.]]></description>
+      <pubDate>Tue, 17 Aug 21 19:16:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[A Technical Overview of the MobiledgeX Edge-Cloud 3.0 Platform ]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/08/09/a-technical-overview-of-the-mobiledgex-edge-cloud-3-0-platform]]></link>      <description><![CDATA[A technical overview of the most important new features of the MobiledgeX Edge-Cloud 3.0 platfiorm update.]]></description>
+      <pubDate>Mon, 09 Aug 21 23:30:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Real-world metaverse 'TwinWorld' selected as 5G Telco Edge Cloud testbed for 3 global mobile carriers]]></title>
+      <link><![CDATA[https://www.yahoo.com/now/real-world-metaverse-twinworld-selected-161500696.html]]></link>      <description><![CDATA[DoubleMe is proud to announce the launch of HoloVerse, a proof of concept project in partnership with Telefónica, Deutsche Telekom, TIM, and MobiledgeX.]]></description>
+      <pubDate>Tue, 03 Aug 21 10:09:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[KDDI, Deutsche Telekom, MobiledgeX, Sturfee, and Mawari Announce the First Global PaaS Collaboration to Accelerate XR Application Development on an Edge Computing Platform]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2021/06/29/kddi-deutsche-telekom-mobiledgex-sturfee-and-mawari-announce-the-first-global-paas-platform-as-a-service-collaboration-to-accelerate-xr-application-development-on-an-edge-computing-platform]]></link>      <description><![CDATA[Creation of business opportunities through global distribution of content from KDDI’s au VISION STUDIO]]></description>
+      <pubDate>Tue, 29 Jun 21 13:38:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX Resurfaces with New Investors, Operator Engagements]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/edge/mobiledgex-resurfaces-with-new-investors-operator-engagements-41839/]]></link>      <description><![CDATA[MobiledgeX, the edge computing management specialist launched by Deutsche Telekom in early 2018, has resurfaced with new partnerships, new investors, additional operator engagements and a platform upgrade.]]></description>
+      <pubDate>Mon, 28 Jun 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX, Mavenir collaborate on 5G edge with Deutsche Telekom]]></title>
+      <link><![CDATA[https://www.fiercewireless.com/tech/mobiledgex-mavenir-collaborate-5g-edge-deutsche-telekom]]></link>      <description><![CDATA[Separately, both Mavenir and MobiledgeX have done their fair share of deals with Deutsche Telekom. Today, they announced a collaboration whereby they’re validating the reference design for deploying cloud-native 5G User Plane Function (UPF) to support Multi-Access Edge Computing (MEC) applications, tailored for proximity and performance use cases.]]></description>
+      <pubDate>Tue, 22 Jun 21 17:17:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX and Mavenir Enable Global Edge Connectivity with Deutsche Telekom]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2021/06/22/mobiledgex-and-mavenir-enable-global-edge-connectivity-with-deutsche-telekom]]></link>      <description><![CDATA[Cloud-native dynamic deployment of 5G Core driven by emerging application needs including 4G/5G Private Networks]]></description>
+      <pubDate>Tue, 22 Jun 21 08:45:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Deutsche Telekom Pushes User Plane to the Edge]]></title>
+      <link><![CDATA[https://www.mobileworldlive.com/featured-content/top-three/deutsche-telekom-5g-user-plane]]></link>      <description><![CDATA[Deutsche Telekom teamed with Mavenir and MobiledgeX to demonstrate a reference design for software capable of bringing the 5G user plane to the network edge, a move the operator tipped to boost its ability to deploy fresh services.]]></description>
+      <pubDate>Tue, 22 Jun 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX sits in the middle seat of multi-cloud networking craze]]></title>
+      <link><![CDATA[https://www.fiercetelecom.com/tech/mobiledgex-sits-middle-seat-multi-cloud-networking-craze]]></link>      <description><![CDATA[MobiledgeX is a subsidiary of Deutsche Telekom that provides software for edge computing, and the company is at the forefront of the multi-cloud networking craze.]]></description>
+      <pubDate>Mon, 21 Jun 21 22:44:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX Platform Update Brings Choice And Control To Mobile Network Operators Deploying To Public Clouds]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2021/06/17/mobiledgex-platform-update-brings-choice-and-control-to-mobile-network-operators-deploying-to-public-clouds]]></link>      <description><![CDATA[MobiledgeX Edge-Cloud 3.0 provides a common interface to manage public and private edge cloud rollouts, laying the groundwork for telecom operators to diversify hyperscaler engagement.]]></description>
+      <pubDate>Thu, 17 Jun 21 16:17:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Test-Drive the MobiledgeX Edge-Cloud Platform with EdgeBox]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/06/04/test-drive-the-mobiledgex-edge-cloud-platform-with-edgebox]]></link>      <description><![CDATA[With the MobiledgeX EdgeBox demo program, operators can test drive our MobiledgeX Edge-Cloud platform using a Mac, Windows, or Linux PC with Python 3 and internet access.]]></description>
+      <pubDate>Fri, 04 Jun 21 18:45:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[The Telco Edge Cloud Explained]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/05/27/the-telco-edge-cloud-explained]]></link>      <description><![CDATA[What is the telco edge cloud, and how does it differ from both cloud computing and edge computing? We’ll explain the differences and explain why the telco edge cloud is so important for the next generation of 5G mobile applications.]]></description>
+      <pubDate>Thu, 27 May 21 22:19:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Nvidia GTC 2021 Recap : How Operators can work with AI Use Cases using MobiledgeX and Nvidia]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/05/24/nvidia-gtc-2021-recap-how-operators-can-work-with-ai-use-cases-using-mobiledgex-and-nvidia]]></link>      <description><![CDATA[Nvidia GTC was chock full of many amazing announcements this year, with one of the core focuses being on AI use cases leveraging 5G and edge computing.]]></description>
+      <pubDate>Mon, 24 May 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Managing Edge Applications using the MobiledgeX Auto Provisioning Policy Engine]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/05/20/managing-edge-applications-using-the-mobiledgex-auto-provisioning-policy-engine]]></link>      <description><![CDATA[In this blog post we’ll discuss the policies that MobiledgeX provides for automatically deploying applications for two use cases: on-demand deployment, and high-availability deployment.]]></description>
+      <pubDate>Thu, 20 May 21 11:33:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[How MobiledgeX Helps Leading Telecom Operators Embrace a Cloud-Native Edge Network Strategy]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/05/19/how-mobiledgex-helps-leading-telecom-operators-embrace-a-cloud-native-edge-network-strategy]]></link>      <description><![CDATA[We're excited to share some of our successful work from the GSMA TEC and OPG services trials, where we worked closely with leading telecom operators such as Deutsche Telekom, Telefonica, and British Telecom to prove our technology.]]></description>
+      <pubDate>Wed, 19 May 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[How MobiledgeX Helps Telecom Operators Manage Private and Trusted Cloudlets for their Enterprise Customers]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/05/04/how-mobiledgex-helps-telecom-operators-manage-private-and-trusted-cloudlets-for-their-enterprise-customers]]></link>      <description><![CDATA[Learn how the MobiledgeX Edge-Cloud platform provides a flexible architecture that offers telecom operators the opportunity to transform their edge cloudlets into private edge cloudlets.]]></description>
+      <pubDate>Tue, 04 May 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Edge-Cloud with Google Cloud’s Anthos: A Powerful Platform for 5G, CDN, and Privacy-Centric AI Applications]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/04/29/mobiledgex-edge-cloud-with-google-cloud-s-anthos-a-powerful-platform-for-5g-cdn-and-privacy-centric-ai-applications]]></link>      <description><![CDATA[MobiledgeX Edge-Cloud on Anthos gives telecom operators the freedom and flexibility to orchestrate and automate select 5G applications that demand a higher level of security and privacy. ]]></description>
+      <pubDate>Thu, 29 Apr 21 17:05:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX Launches Beta Program for Orchestrating Edge Computing Workloads on Google Cloud’s Anthos]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2021/04/27/mobiledgex-launches-beta-program-for-orchestrating-edge-computing-workloads-on-google-cloud-s-anthos]]></link>      <description><![CDATA[Beta program to demonstrate how integrating the MobiledgeX Edge-Cloud platform with Anthos allows telco operators to deploy privacy-centric applications while maintaining data sovereignty and control.]]></description>
+      <pubDate>Tue, 27 Apr 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[New Open Grid Alliance Aims to Rearchitect the Internet]]></title>
+      <link><![CDATA[https://www.vmware.com/content/vmware/vmware-published-sites/us/company/news/releases/vmw-newsfeed.New-Open-Grid-Alliance-Aims-to-Rearchitect-the-Internet.1627536f-7bca-4967-b9fb-c88bc948c0a6.html]]></link>      <description><![CDATA[A new industry alliance will define and accelerate the open grid, with MobiledgeX, Dell Technologies, DriveNets, PacketFabric, Vapor IO, and VMware as founding members.]]></description>
+      <pubDate>Wed, 14 Apr 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[How MobiledgeX is working with NVIDIA to Bring Metropolis to the Telco Edge]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/04/01/how-mobiledgex-is-working-with-nvidia-to-bring-metropolis-to-the-telco-edge]]></link>      <description><![CDATA[Working jointly with our developer partners, we've deployed applications that demonstrate the advantages of combining NVIDIA technologies leveraging GPUs with telco edge cloud infrastructure to help solve edge computing challenges. ]]></description>
+      <pubDate>Thu, 01 Apr 21 17:06:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Top 10 Edge Computing Companies to Watch in 2021]]></title>
+      <link><![CDATA[https://www.analyticsinsight.net/top-10-edge-computing-companies-to-watch-in-2021/]]></link>      <description><![CDATA[Guess who made it onto a top 10 list? MobiledgeX is mentioned in a list of edge computing companies to watch in 2021.]]></description>
+      <pubDate>Wed, 10 Feb 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[How to Add Multiplayer to a Unity Project using MobiledgeX Edge Multiplay]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/02/03/how-to-add-multiplayer-to-a-unity-project-using-mobiledgex-edge-multiplay]]></link>      <description><![CDATA[To support developers with use cases in multiplayer gaming, MobiledgeX has open sourced a multiplayer message relay game server called Edge Multiplay.]]></description>
+      <pubDate>Wed, 03 Feb 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Join the MobiledgeX Developer Community on Discord]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/01/28/join-the-mobiledgex-developer-community-on-discord]]></link>      <description><![CDATA[We're happy to announce our new MobiledgeX developer community on Discord, which will help us work even more closely with developers making the next generation of applications for the telco edge.]]></description>
+      <pubDate>Thu, 28 Jan 21 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[GPU Benchmarking on the Edge with Computer Vision Object Detection]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2021/01/07/gpu-benchmarking-on-the-edge-with-computer-vision-object-detection]]></link>      <description><![CDATA[With the growing popularity of Artificial Intelligence and Machine Learning applications, GPU availability has become more critical than ever.]]></description>
+      <pubDate>Thu, 07 Jan 21 17:06:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Simplifies 5G Edge for Google Cloud Developers]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/12/08/mobiledgex-simplifies-5g-edge-for-google-cloud-developers]]></link>      <description><![CDATA[Google Cloud developers will have new access to 5G telco edge cloud services such as latency reduction and device-based location to drive the next generation of edge computing applications.]]></description>
+      <pubDate>Tue, 08 Dec 20 06:30:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Bringing Partner Applications to the Google Cloud]]></title>
+      <link><![CDATA[https://cloud.google.com/blog/topics/anthos/anthos-for-telecom-puts-google-cloud-partners-apps-at-the-edge]]></link>      <description><![CDATA[Google Cloud joins with popular industry application providers to deliver more than 200 partner applications at the edge, from 30-plus launch partners, on Google Cloud.]]></description>
+      <pubDate>Tue, 08 Dec 20 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Sharpening the Edge: The Linux Foundation Edge Framework and Taxonomy]]></title>
+      <link><![CDATA[https://thenewstack.io/sharpening-the-edge-the-linux-foundation-edge-framework-and-taxonomy/]]></link>      <description><![CDATA[MobiledgeX Lead Product Manager Vikram Siwach discusses the new Linux Foundation (LF) Edge framework and taxonomy in this article for the The New Stack.]]></description>
+      <pubDate>Fri, 04 Dec 20 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Developer Insights: How App Developers are using MobiledgeX Edge-Cloud]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/11/23/developer-insights-how-app-developers-are-using-mobiledgex-edge-cloud]]></link>      <description><![CDATA[We've worked with dozens of app developers over the last few years, and that experience has given us valuable insight into how developers are using our MobiledgeX Edge-Cloud platform.]]></description>
+      <pubDate>Mon, 23 Nov 20 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Helps Startups Utilize the Telco Edge Cloud]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/10/22/mobiledgex-helps-startups-utilize-the-telco-edge-cloud]]></link>      <description><![CDATA[In order to make edge computing practical, MobiledgeX partnered with each of the startups in the 5G Consumer Entertainment Program in order to provide early access to our platform and enable each startup to deploy their backend services on our telco edge cloud.]]></description>
+      <pubDate>Thu, 22 Oct 20 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Developer Spotlight: Offloading Computer Vision Workloads to the Telco Edge for Unity Applications]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/09/24/developer-spotlight-creating-a-unity-application-client-to-the-mobiledgedgex-computer-vision-server]]></link>      <description><![CDATA[Ahmed Hassan at MobiledgeX has been working on an open source Computer Vision solution for Unity that connects to an OpenCV server deployed on the MobiledgeX Edge Computing platform.]]></description>
+      <pubDate>Thu, 24 Sep 20 15:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[How MobiledgeX Helps Operators (and Developers) Get the Most Out of the Telco Network Edge]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/09/23/powering-the-telco-edge-cloud]]></link>      <description><![CDATA[Using the MobiledgeX Edge-Cloud platform, telco operators can utilize their own telco network edge infrastructure to create — and monetize — their own edge clouds.]]></description>
+      <pubDate>Wed, 23 Sep 20 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Unity SDK 2.1.2 with Magic Leap One]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/09/17/mobiledgex-unity-sdk-2-1-2-with-magic-leap-one]]></link>      <description><![CDATA[Learn how to use the new MobiledgeX Unity SDK to harness the telco edge cloud to enhance face detection performance with Magic Leap One AR glasses.]]></description>
+      <pubDate>Thu, 17 Sep 20 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Deutsche Telekom prepares Edge-Native Gaming Experiences]]></title>
+      <link><![CDATA[https://www.telekom.com/en/company/details/deutsche-telekom-prepares-edge-native-gaming-experiences-606842]]></link>      <description><![CDATA[Deutsche Telekom and MobiledgeX are building an ecosystem of partners around the edge.]]></description>
+      <pubDate>Thu, 27 Aug 20 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[How MobiledgeX is Building a Marketplace for Edge]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/08/14/how-mobiledgex-is-building-a-marketplace-for-edge]]></link>      <description><![CDATA[MobiledgeX is putting forward a single interface that creates a marketplace shared between Telcos and developers to deliver value propositions, where both types of consumers can take advantage of a number of benefits offered by the Platform.]]></description>
+      <pubDate>Fri, 14 Aug 20 09:39:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Using Redis Face Training Data]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/08/11/using-redis-face-training-data]]></link>      <description><![CDATA[What we want to accomplish is to use Redis to store the face training images that get uploaded to the centralized Face Training Server, and make them available to the Face Recognition process on each instance of a Computer Vision Server.]]></description>
+      <pubDate>Tue, 11 Aug 20 13:31:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[How MobiledgeX Helped Slavic Monsters During the First GSMA TEC Trial]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/07/13/how-mobiledgex-helped-slavic-monsters-during-the-first-gsma-tec-trial]]></link>      <description><![CDATA[The race to provide the future of edge computing is being led by an inspired initiative called the GSMA Telco Edge Cloud (TEC).  TEC creates and launches global edge computing services that are being proven to provide businesses, developers, and gamers with an open, global, and federated solution from Telco networks.]]></description>
+      <pubDate>Mon, 13 Jul 20 13:58:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Broadpeak tests dynamic video caching with MobiledgeX]]></title>
+      <link><![CDATA[https://www.telecompaper.com/news/broadpeak-tests-dynamic-video-caching-with-mobiledgex--1340348]]></link>      <description><![CDATA[Broadpeak announced a new collaboration with MobiledgeX. Broadpeak has deployed its virtual BroadCache Box local caching technology for mobile networks via the MobiledgeX Edge-Cloud platform. This aggregates more than a dozen global mobile networks to provide a single common interface to developers to optimise their video applications.]]></description>
+      <pubDate>Thu, 28 May 20 08:43:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[5G accelerates edge computing with Seamster initiative]]></title>
+      <link><![CDATA[https://rethinkresearch.biz/articles/5g-accelerates-edge-computing-with-seamster-initiative/]]></link>      <description><![CDATA[5G accelerates edge computing with Seamster initiative]]></description>
+      <pubDate>Thu, 14 May 20 10:54:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Computer Vision WebSocket Support]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/04/22/computer-vision-websocket-support]]></link>      <description><![CDATA[We recently upgraded our Android MobiledgeX SDK Demo from using Persistent TCP to a Websocket implementation. Let's learn about the benefits of using Websocket for your implementation.]]></description>
+      <pubDate>Wed, 22 Apr 20 11:11:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[How Real-time Event Streaming Improves Vehicle Mobility]]></title>
+      <link><![CDATA[https://www.cdotrends.com/story/14788/how-real-time-event-streaming-improves-vehicle-mobility]]></link>      <description><![CDATA[How Real-time Event Streaming Improves Vehicle Mobility]]></description>
+      <pubDate>Mon, 20 Apr 20 10:56:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Inside 5G Edge Cloud Opportunities]]></title>
+      <link><![CDATA[https://www.futuriom.com/articles/news/inside-5g-edge-cloud-opportunities/2020/04]]></link>      <description><![CDATA[Inside 5G Edge Cloud Opportunities]]></description>
+      <pubDate>Thu, 16 Apr 20 10:55:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[Accedian, Solace, and MobiledgeX Partner to Deliver Assured Performance for Next-Generation 5G and IoT Services]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/04/16/accedian-solace-and-mobiledgex-partner-to-deliver-assured-performance-for-next-generation-5g-and-iot-services]]></link>      <description><![CDATA[Accedian, Solace, and MobiledgeX today announced a partnership that enables leading organizations to make edge computing a key pillar in their digital transformation strategy. The partnership meets the acute market need for the event-driven edge  infrastructure required for mission-critical applications that is also focused on business outcomes.]]></description>
+      <pubDate>Thu, 16 Apr 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Telecoms have unique challenges in adopting AI]]></title>
+      <link><![CDATA[https://www.techrepublic.com/article/telecoms-have-unique-challenges-in-adopting-ai/]]></link>      <description><![CDATA[Telecoms have unique challenges in adopting AI]]></description>
+      <pubDate>Tue, 14 Apr 20 10:55:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX and Savari partner to advance C-V2X to the mobile edge]]></title>
+      <link><![CDATA[https://www.mobileeurope.co.uk/press-wire/14693-mobiledgex-and-savari-partner-to-advance-c-v2x-to-the-mobile-edge]]></link>      <description><![CDATA[MobiledgeX and Savari partner to advance C-V2X to the mobile edge]]></description>
+      <pubDate>Thu, 09 Apr 20 10:54:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[Solace and MobiledgeX Partner to Help Automakers Transform the Future of Mobility]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/04/08/solace-and-mobiledgex-partner-to-help-automakers-transform-the-future-of-mobility]]></link>      <description><![CDATA[Solace, the leading enabler of real-time event-driven data streaming for enterprise computing, IoT and mobile applications, and MobiledgeX, which is making edge computing widely accessible and easy to consume, today announced a partnership designed to help automakers offer hyper-personalized mobility services that enhance safety and convenience for drivers.]]></description>
+      <pubDate>Wed, 08 Apr 20 12:30:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Dell EMC, VMware, MobiledgeX, More Form Hybrid 5G Enterprise Edge Ecosystem]]></title>
+      <link><![CDATA[https://www.channelfutures.com/mobility/dell-emc-vmware-mobileedgex-more-form-hybrid-5g-enterprise-edge-ecosystem]]></link>      <description><![CDATA[Dell EMC, VMware, MobiledgeX, More Form Hybrid 5G Enterprise Edge Ecosystem]]></description>
+      <pubDate>Wed, 08 Apr 20 10:53:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Pre-engineering a solution for edge]]></title>
+      <link><![CDATA[https://appledoreresearch.com/report/pre-engineering-a-solution-for-edge/]]></link>      <description><![CDATA[Pre-engineering a solution for edge]]></description>
+      <pubDate>Wed, 08 Apr 20 10:46:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Global edge computing initiative aims to accelerate adoption for ‘everyone’]]></title>
+      <link><![CDATA[https://www.rcrwireless.com/20200403/network-infrastructure/global-edge-computing-initiative-aims-to-accelerate-adoption-for-everyone]]></link>      <description><![CDATA[Global edge computing initiative aims to accelerate adoption for ‘everyone’]]></description>
+      <pubDate>Fri, 03 Apr 20 10:46:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[How Mobile Edge Computing Will Benefit Network Providers]]></title>
+      <link><![CDATA[https://www.isemag.com/2020/04/telecom-edge-computing-deutsche-telekom-case-study/]]></link>      <description><![CDATA[How Mobile Edge Computing Will Benefit Network Providers]]></description>
+      <pubDate>Wed, 01 Apr 20 10:45:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[Seamster Edge Computing Initiative to Capture Enterprise Use Cases And Accelerate Adoption]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/04/01/seamster-edge-computing-initiative-to-capture-enterprise-use-cases-and-accelerate-adoption]]></link>      <description><![CDATA[MobiledgeX to work with end-to-end edge value chain to advance edge computing technologies, best practices, research and innovation]]></description>
+      <pubDate>Wed, 01 Apr 20 09:02:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Savari collaborates with MobiledgeX to enable enhanced C-V2X use cases for automotive OEMs]]></title>
+      <link><![CDATA[https://autotechinsight.ihsmarkit.com/news/5254421/savari-collaborates-with-mobiledgex-to-enable-enhanced-c-v2x-use-cases-for-automotive-oems]]></link>      <description><![CDATA[Savari collaborates with MobiledgeX to enable enhanced C-V2X use cases for automotive OEMs]]></description>
+      <pubDate>Mon, 30 Mar 20 10:45:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX and Savari Partner to Bring C-V2X to the Mobile Edge]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/03/26/mobiledgex-and-savari-partner-to-bring-c-v2x-to-the-mobile-edge]]></link>      <description><![CDATA[MobiledgeX, Inc., which is making edge computing widely accessible and easy to consume, and Savari, Inc., a Silicon Valley-based auto tech company and a pioneer of Vehicle-to-Everything (V2X) communications technology for smart infrastructure, today announced a strategic partnership to jointly enable enhanced Cellular Vehicle-to-Everything (C-V2X) use cases for automotive OEMs, their fleet management, and mobility-as-a-service partners.]]></description>
+      <pubDate>Thu, 26 Mar 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[GSMA Telco Edge Cloud turns to MobiledgeX to take ownership of the edge marketplace]]></title>
+      <link><![CDATA[https://www.vanillaplus.com/2020/03/18/51386-gsma-telco-edge-cloud-turns-mobiledgex-take-ownership-edge-marketplace/]]></link>      <description><![CDATA[GSMA Telco Edge Cloud turns to MobiledgeX to take ownership of the edge marketplace]]></description>
+      <pubDate>Wed, 18 Mar 20 10:44:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[GSMA-led edge initiative aims for global reach, but history is against it]]></title>
+      <link><![CDATA[https://rethinkresearch.biz/articles/gsma-led-edge-initiative-aims-for-global-reach-but-history-is-against-it/]]></link>      <description><![CDATA[GSMA-led edge initiative aims for global reach, but history is against it]]></description>
+      <pubDate>Mon, 16 Mar 20 10:44:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[STRATACACHE and MobiledgeX Announce a Transformational Partnership in 5G/Edge Computing Technology]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/03/16/stratacache-and-mobiledgex-announce-a-transformational-partnership-in-5g-edge-computing-technology]]></link>      <description><![CDATA[The Companies will Bring Global Customers and Leading Telco Providers Scaled Content, Media and Application Delivery Solutions]]></description>
+      <pubDate>Mon, 16 Mar 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Another MEC initiative targets key holes in edge compute standards]]></title>
+      <link><![CDATA[https://the-mobile-network.com/2020/03/another-mec-initiative-targets-key-holes-in-edge-compute-standards/]]></link>      <description><![CDATA[Another MEC initiative targets key holes in edge compute standards]]></description>
+      <pubDate>Tue, 10 Mar 20 10:43:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[Accedian and MobiledgeX Partner to Bring an Open Ecosystem for Flawless Delivery of Low Latency 5G Digital Experiences]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/03/09/accedian-and-mobiledgex-partner-to-bring-an-open-ecosystem-for-flawless-delivery-of-low-latency-5g-digital-experiences]]></link>      <description><![CDATA[Performance management and security threat detection visibility from Accedian to augment MobiledgeX Edge-Cloud with critical customer experience and revenue stream assurance capabilities.]]></description>
+      <pubDate>Mon, 09 Mar 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Edge’s low latency is a big advantage for gamers and game streamers]]></title>
+      <link><![CDATA[Edge’s low latency is a big advantage for gamers and game streamers]]></link>      <description><![CDATA[Edge’s low latency is a big advantage for gamers and game streamers]]></description>
+      <pubDate>Thu, 05 Mar 20 10:43:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[GSMA has big plans for 5G and the edge]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/edge/gsma-has-big-plans-for-5g-and-the-edge-37925/]]></link>      <description><![CDATA[GSMA has big plans for 5G and the edge]]></description>
+      <pubDate>Wed, 04 Mar 20 10:42:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX extends edge computing support to the enterprise with platform update]]></title>
+      <link><![CDATA[https://www.vanillaplus.com/2020/03/03/51036-mobiledgex-extends-edge-computing-support-enterprise-platform-update/]]></link>      <description><![CDATA[MobiledgeX extends edge computing support to the enterprise with platform update]]></description>
+      <pubDate>Tue, 03 Mar 20 10:41:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX and VMware Collaborate on Edge to Power the Next Wave of Telco Transformation]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/03/03/mobiledgex-and-vmware-collaborate-on-edge-to-power-the-next-wave-of-telco-transformation]]></link>      <description><![CDATA[With the launch of MobiledgeX Edge-Cloud R2.0 and its adoption within GSMA’s recently announced Telco Edge Cloud initiative, it is now possible to seamlessly lifecycle manage application and solution software across both enterprise on-premises edge infrastructure and telecom operator public edge to maximize performance and availability, and minimize cost.]]></description>
+      <pubDate>Tue, 03 Mar 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[GSMA supports operators’ initiative to develop an interoperable edge platform]]></title>
+      <link><![CDATA[https://www.mobileeurope.co.uk/press-wire/gsma-supports-operators-initiative-to-develop-an-interoperable-edge-platform]]></link>      <description><![CDATA[GSMA supports operators’ initiative to develop an interoperable edge platform]]></description>
+      <pubDate>Fri, 28 Feb 20 10:40:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX Updates Platform With Edge Computing Support Extension]]></title>
+      <link><![CDATA[https://data-economy.com/mobiledgex-updates-platform-with-edge-computing-support-extension/]]></link>      <description><![CDATA[MobiledgeX Updates Platform With Edge Computing Support Extension]]></description>
+      <pubDate>Thu, 27 Feb 20 12:05:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Introducing MobiledgeX Edge-Cloud 2.0]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/02/27/mobiledgex-edge-cloud-r2-0-is-released]]></link>      <description><![CDATA[We've released MobiledgeX Edge-Cloud 2.0, which extends the capabilities into the private edge with on-premise deployments now as easy to manage as public edge.]]></description>
+      <pubDate>Thu, 27 Feb 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX Extends Edge Computing Support To The Enterprise With Platform Update]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/02/27/mobiledgex-extends-edge-computing-support-to-the-enterprise-with-platform-update]]></link>      <description><![CDATA[MobiledgeX Edge-Cloud 2.0 seamlessly integrates private and public edges, allowing developers to deploy location-specific services globally]]></description>
+      <pubDate>Thu, 27 Feb 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Nine operators join forces on global edge computing, with GSMA’s support]]></title>
+      <link><![CDATA[https://www.rcrwireless.com/20200227/telco-cloud/nine-operators-join-forces-on-global-edge-computing-with-gsmas-support]]></link>      <description><![CDATA[Nine telcos in Europe and the Asia-Pacific region said today that they are working together to develop a global edge computing framework and reference platform aimed at supporting the needs of enterprises and app developers, so that edge computing resources in markets around the world can be made “widely and easily available.”]]></description>
+      <pubDate>Thu, 27 Feb 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Second forum forms to deliver a united front at the operator edge]]></title>
+      <link><![CDATA[https://the-mobile-network.com/2020/02/second-forum-forms-to-deliver-a-united-front-at-the-operator-edge/]]></link>      <description><![CDATA[In January, a group of operators formed a Forum called the 5G Future Forum. The group of operators wanted to set out interoperable standards for the way developers could interact with “5G and mobile-edge computing-enabled solutions.”]]></description>
+      <pubDate>Thu, 27 Feb 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Multi-Container Applications]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/02/11/multi-container-applications]]></link>      <description><![CDATA[Learn how the Android MobiledgeX SDK Demo is architected using multi-containers that are hosted both on the MobiledgeX Edge infrastructure and public cloud.]]></description>
+      <pubDate>Tue, 11 Feb 20 14:18:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Perfect Edge Cloud Storm to Rain Opportunity]]></title>
+      <link><![CDATA[https://pipelinepub.com/pervasive_mobility/edge-cloud-storm]]></link>      <description><![CDATA[Perfect Edge Cloud Storm to Rain Opportunity]]></description>
+      <pubDate>Sat, 01 Feb 20 12:04:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Converting P2P Application to Client-Server]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/01/31/converting-p2p-application-to-client-server]]></link>      <description><![CDATA[Peer to Peer apps are built to optimize for local low latency situations. Edge Computing offers the same benefit and more, but using client-server architecture. Learn more about why it's worth converting to client-server.]]></description>
+      <pubDate>Fri, 31 Jan 20 13:27:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[15 Edge computing companies to watch in 2020]]></title>
+      <link><![CDATA[https://stlpartners.com/edge-computing/edge-computing-companies-2020/]]></link>      <description><![CDATA[15 Edge computing companies to watch in 2020]]></description>
+      <pubDate>Fri, 31 Jan 20 12:04:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[NTT Docomo signs up with MobiledgeX for proof of concept]]></title>
+      <link><![CDATA[https://rethinkresearch.biz/articles/ntt-docomo-signs-up-with-mobiledgex-for-proof-of-concept/]]></link>      <description><![CDATA[NTT Docomo signs up with MobiledgeX for proof of concept]]></description>
+      <pubDate>Thu, 16 Jan 20 12:03:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[The Year of the Mobile Edge]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/01/15/the-year-of-the-mobile-edge]]></link>      <description><![CDATA[As we launch into the new year, Sunay Tripathi takes a look at the evolving mobile, internet and cloud ecosystems to explain why 2020 will be the year of the mobile edge and why now is the time to take action for anyone who wants to be a player in the emerging mobile edge market.]]></description>
+      <pubDate>Wed, 15 Jan 20 09:37:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Computer Vision Persistent TCP Connection]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2020/01/14/computer-vision-persistent-tcp-connection]]></link>      <description><![CDATA[We recently upgraded our Android MobiledgeX SDK Demo from using REST API Calls to a Persistent TCP implementation. Let's learn about the benefits of using Persistent TCP for your implementation.]]></description>
+      <pubDate>Tue, 14 Jan 20 09:26:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX, NTT DoCoMo Trial MEC for 5G Applications]]></title>
+      <link><![CDATA[https://www.sdxcentral.com/articles/news/mobiledgex-ntt-docomo-trial-mec-for-5g-applications/2020/01/?hit=c845713a-d3cb-45c6-a739-5a63e0b42258]]></link>      <description><![CDATA[MobiledgeX, NTT DoCoMo Trial MEC for 5G Applications]]></description>
+      <pubDate>Thu, 09 Jan 20 12:02:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[NTT DOCOMO and MobiledgeX Demonstrate Worldwide Distribution of 5G Applications in Japan]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2020/01/08/ntt-docomo-and-mobiledgex-demonstrate-worldwide-distribution-of-5g-applications-in-japan]]></link>      <description><![CDATA[Quick, easy distribution of 5G solutions will help partners expand globally]]></description>
+      <pubDate>Wed, 08 Jan 20 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[2019 MobiledgeX Developer Engagement Recap]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/12/31/2019-mobiledgex-developer-engagement-recap]]></link>      <description><![CDATA[Once again we are at the end of the year and quite a year it has been for MobiledgeX.]]></description>
+      <pubDate>Tue, 31 Dec 19 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Edge Networking's Role in 5G Monetization]]></title>
+      <link><![CDATA[https://www.sdxcentral.com/wp-content/uploads/2019/12/Edge-Networkings-Role-in-5G-Monetization_.pdf]]></link>      <description><![CDATA[Edge Networking's Role in 5G Monetization]]></description>
+      <pubDate>Sun, 15 Dec 19 12:01:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX and QiO Technologies Interoperability Underpins 5G-Enabled Digital Transformation Solutions]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/12/04/mobiledgex-and-qio-technologies-interoperability-underpins-5g-enabled-digital-transformation-solutions]]></link>      <description><![CDATA[QiO’s industrial Analytical Applications can now be seamlessly orchestrated to the edge, private and public cloud.]]></description>
+      <pubDate>Wed, 04 Dec 19 05:30:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Privacy and Edge Compute at the LF Edge + Akraino Hackathon]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/11/25/privacy-and-edge-compute-at-the-lf-edge-akraino-hackathon]]></link>      <description><![CDATA[We just wrapped an LF Edge + Akraino hackathon with Nokia, SuSE, Qualcomm, ARM, ETSI MEC, Broadcom, Tencent, and Futurewei in San Diego that was run concurrently with KubeCon.]]></description>
+      <pubDate>Mon, 25 Nov 19 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Telus and MobiledgeX unleash live edge computing access in Canada]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/edge/telus-and-mobiledgex-unleash-live-edge-computing-access-in-canada-37033/]]></link>      <description><![CDATA[Canadian telco, Telus, is working with MobiledgeX on the ‘MobiledgeX Early Access Programme’ which is to open soon in Canada. MobiledgeX is a San Francisco-based start-up, established by Deutsche Telekom and headed up by CEO Jason Hoffman.]]></description>
+      <pubDate>Fri, 22 Nov 19 11:58:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[TELUS and MobiledgeX first in North America to unleash live edge computing access]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/11/21/telus-and-mobiledgex-first-in-north-america-to-unleash-live-edge-computing-access]]></link>      <description><![CDATA[Canadian developers will have access to experiment with edge computing functionality that brings mobile data processing closer to users and powers next-generation 5G use cases]]></description>
+      <pubDate>Thu, 21 Nov 19 05:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX hails potential of edge technology]]></title>
+      <link><![CDATA[https://www.mobileworldlive.com/featured-content/top-three/mobiledgex-hails-potential-of-edge-technology/]]></link>      <description><![CDATA[Jason Hoffman, president and CEO of MobiledgeX (pictured), a Deutsche Telekom subsidiary, tipped commercial edge compute deployments to take off in 2020, giving operators access to new revenue streams.]]></description>
+      <pubDate>Tue, 12 Nov 19 11:56:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[5G Edge Challenge Event Recap]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/11/07/5g-edge-challenge-event-recap]]></link>      <description><![CDATA[Alex Donn recaps the Rogers 5G Edge Challenge in Vancouver.]]></description>
+      <pubDate>Thu, 07 Nov 19 11:44:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Interview with MobiledgeX CEO Jason Hoffman]]></title>
+      <link><![CDATA[https://www.mobileworldlive.com/videos/interviews/interview-mobiledgex/]]></link>      <description><![CDATA[CEO Jason Hoffman updates on the vendor’s edge compute trials with operators and also why the developer community is so important to the future of edge computing.]]></description>
+      <pubDate>Wed, 30 Oct 19 11:55:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Discovering Edge Use Cases]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/10/28/discovering-edge-use-cases]]></link>      <description><![CDATA[Learn how MobiledgeX is discovering and understanding edge use cases]]></description>
+      <pubDate>Mon, 28 Oct 19 12:36:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX, WWT, Dell, and VMware Team Up on MEC]]></title>
+      <link><![CDATA[https://www.sdxcentral.com/articles/news/mobiledgex-wwt-dell-and-vmware-team-up-on-mec/2019/10/]]></link>      <description><![CDATA[MobiledgeX and World Wide Technology (WWT) announced a partnership to make it easier for service providers to deploy MobiledgeX’s mobile edge computing (MEC) platform — and more quickly create new revenue streams.]]></description>
+      <pubDate>Thu, 24 Oct 19 16:28:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[World Wide Technology And MobiledgeX Partner For Mobile Edge Computing Deployments Push]]></title>
+      <link><![CDATA[https://data-economy.com/world-wide-technology-and-mobiledgex-partner-for-mobile-edge-computing-deployments-push/]]></link>      <description><![CDATA[World Wide Technology and edge computing firm MobiledgeX have partnered to accelerate the commercialisation of scalable MEC deployments.]]></description>
+      <pubDate>Thu, 24 Oct 19 16:26:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Digitizing the Real World @ CloudXR Hackathon Hubraum]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/10/24/digitizing-the-real-world-cloudxr-hackathon-hubraum]]></link>      <description><![CDATA[Boy did the developers deliver on new ideas for our recent CloudXR Hackathon hosted by Hubraum in Berlin on October 19th.]]></description>
+      <pubDate>Thu, 24 Oct 19 13:30:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX and World Wide Technology Expand Partnership to Accelerate Mobile Edge Computing Deployments and Power 5G Profitability]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/10/21/mobiledgex-and-world-wide-technology-expand-partnership-to-accelerate-mobile-edge-computing-deployments-and-power-5g-profitability]]></link>      <description><![CDATA[Sunay Tripathi shares an update on our partnership with WWT]]></description>
+      <pubDate>Mon, 21 Oct 19 12:43:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[World Wide Technology and MobiledgeX Expand Partnership to Accelerate Mobile Edge Computing Deployments and Power 5G Profitability]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/10/21/world-wide-technology-and-mobiledgex-expand-partnership-to-accelerate-mobile-edge-computing-deployments-and-power-5g-profitability]]></link>      <description><![CDATA[Partnership will enable service providers to more quickly commercialize 5G with scalable deployments to power emerging services ranging from industrial automation to augmented reality]]></description>
+      <pubDate>Mon, 21 Oct 19 10:12:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Real-World Challenges in Hackathon Prove the Power of Edge]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/10/18/real-world-challenges-in-hackathon-prove-the-power-of-edge]]></link>      <description><![CDATA[Alex Donn recaps the first Edge Experience Hackathon in Krakow Poland.]]></description>
+      <pubDate>Fri, 18 Oct 19 12:39:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX CEO cites challenges at the edge]]></title>
+      <link><![CDATA[https://www.fiercewireless.com/tech/mobiledgex-ceo-cites-challenges-at-edge]]></link>      <description><![CDATA[At the Open Networking Foundation (ONF) summit in Santa Clara, California, last month MobiledgeX CEO Jason Hoffman said, “No matter who you ask ‘what is edge?’ they always have an answer that is very specific to themselves. But, it involves everybody.”]]></description>
+      <pubDate>Thu, 03 Oct 19 15:17:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Realtime Karaoke @ the 2019 London Ege Compute Congress Hackathon]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/10/03/realtime-karaoke-the-2019-london-ege-compute-congress-hackathon]]></link>      <description><![CDATA[This year’s Edge Computing Congress (ECC) hackathon was packed with great ideas and teams from all over Europe.]]></description>
+      <pubDate>Thu, 03 Oct 19 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX gains more than a dozen operator customers]]></title>
+      <link><![CDATA[https://www.rcrwireless.com/20190919/network-function-virtualization-nfv/mobiledgex-gains-more-than-a-dozen-operator-customers]]></link>      <description><![CDATA[Deutsche Telekom-backed edge computing company MobiledgeX says it has 13 network operator customers and is expanding its early access program into Asia this month, with North America to follow in October.]]></description>
+      <pubDate>Thu, 19 Sep 19 12:14:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX Rapidly Expands Global Mobile Edge Adoption and Ecosystem]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/09/19/mobiledgex-rapidly-expands-global-mobile-edge-adoption-and-ecosystem]]></link>      <description><![CDATA[MobiledgeX, Inc., which is making edge computing widely accessible and easy to access, today reported that it now counts 30 category-defining developer applications and 13 top-tier mobile operators as part of its fast-growing global edge network initiative.]]></description>
+      <pubDate>Thu, 19 Sep 19 01:01:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Exploring the Edge — Observations from our Hackathon with SKT]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/08/21/exploring-the-edge-observations-from-our-hackathon-with-skt]]></link>      <description><![CDATA[Wonho Park recaps our experience at the SKT 5G Hackathon.]]></description>
+      <pubDate>Wed, 21 Aug 19 17:25:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[5G Unpacked]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/08/17/5g-unpacked]]></link>      <description><![CDATA[Telco and Cloud are intrinsically different because of the much broader use of standards in Telco, and how those standards then dictate a long, complex and expensive generational system, with the unfortunate need to sell the future that no one really understands until it emerges.]]></description>
+      <pubDate>Sat, 17 Aug 19 14:46:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[SKT and MobiledgeX Discovering the 5G and Edge Computing Future Together]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/08/12/skt-and-mobiledgex-discovering-the-5g-and-edge-computing-future-together]]></link>      <description><![CDATA[This blog posts explains what we are doing with SKT this week, why we are doing it and at the end how other operators interested can do similar in their markets around the world.]]></description>
+      <pubDate>Mon, 12 Aug 19 10:36:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX shares three years of Edge Computing research data]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/edge/mobiledgex-shares-three-years-of-edge-computing-research-data-35543/]]></link>      <description><![CDATA[The Deutsche Telekom start-up wants to kick-start industry collaboration
+Has identified the most viable near-term edge use cases
+Offering an interactive edge modelling tool for apps and devices
+Will also grant developers test access to live edge networks
+]]></description>
+      <pubDate>Mon, 24 Jun 19 10:07:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Tech MobiledgeX launches living edge market model tool for developers]]></title>
+      <link><![CDATA[https://www.fiercewireless.com/tech/embargo-until-9-am-et-thursday-mobiledgex-launches-living-edge-market-model-tool-for]]></link>      <description><![CDATA[MobiledgeX has launched a new, interactive tool designed to foster industry-wide collaboration on near-term edge computing use cases.]]></description>
+      <pubDate>Thu, 20 Jun 19 09:56:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX Shares Mammoth Edge Computing Research Data For Global Collaborations]]></title>
+      <link><![CDATA[https://data-economy.com/mobiledgex-shares-mammoth-edge-computing-research-data-for-global-collaborations/]]></link>      <description><![CDATA[Edge computing firm MobiledgeX has released more than three years of proprietary edge market research, and launched its interactive Edge Navigator tool to kick off edge knowledge collaborations.]]></description>
+      <pubDate>Thu, 20 Jun 19 07:37:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Advancing Developer Engagement]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/06/20/advancing-developer-engagement]]></link>      <description><![CDATA[Launching our first Early Access program and the public launch of our Edge Navigator use case research tool.]]></description>
+      <pubDate>Thu, 20 Jun 19 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX Shares Wealth Of Edge Computing Research Data To Jumpstart Industry-Wide Collaboration As It Kicks Off Early Access Developer Program]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/06/20/mobiledgex-launches-edge-navigator-and-early-access-developer-program]]></link>      <description><![CDATA[Released more than three years of proprietary edge use case research and launches its interactive Edge Navigator tool to kick off industry-wide edge knowledge sharing and collaboration.]]></description>
+      <pubDate>Thu, 20 Jun 19 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX Kicks Off “Edge Experience” Developer Discovery]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/06/06/mobiledgex-kicks-off-edge-experience-developer-discovery]]></link>      <description><![CDATA[Powers first edge computing hackathon ahead of upcoming early access program that will make its code available to application developers for early edge experimentation in real networks.]]></description>
+      <pubDate>Thu, 06 Jun 19 09:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Telus, MobiledgeX Trial Mobile Edge Network in Canada]]></title>
+      <link><![CDATA[https://www.sdxcentral.com/articles/news/telus-mobiledgex-trial-mobile-edge-network-in-canada/2019/05/?hit=4f327789-68dc-4325-9353-61af1c4464b6]]></link>      <description><![CDATA[Canadian operator Telus and MobiledgeX, the edge computing startup backed by Deutsche Telekom, today said they will trial a mobile edge network in Canada.]]></description>
+      <pubDate>Tue, 07 May 19 15:40:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX and TELUS to trial mobile edge network in Canada]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/05/07/mobiledgex-and-telus-to-trial-mobile-edge-network-in-canada]]></link>      <description><![CDATA[MobiledgeX, which helps make edge computing widely accessible and easy to consume, today announced it will work with TELUS, one of Canada’s largest telecommunications companies, to trial its edge network in Canada. Third parties, such as mobile application developers, consumer device makers, and IoT hardware manufacturers will be enabled by end-to-end low latency and a global network of participating MobiledgeX operators to innovate with these new edge performance capabilities.]]></description>
+      <pubDate>Tue, 07 May 19 08:57:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Hacking with Open Source and TIP]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/04/23/hacking-with-open-source-and-tip]]></link>      <description><![CDATA[Alex Donn shares details on what to expect at the Edge Application Developer Hackathon on April 30.]]></description>
+      <pubDate>Tue, 23 Apr 19 14:02:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[The Future is Now: AR as a Service]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/04/11/1000realities-ar-as-a-service]]></link>      <description><![CDATA[1000 realities is a Hub:raum startup developing an “Augmented Reality (AR) as a Service” platform using mobile edge computing.]]></description>
+      <pubDate>Thu, 11 Apr 19 12:37:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Meet a startup trying to bring cloud flexibility to connectivity]]></title>
+      <link><![CDATA[https://staceyoniot.com/meet-a-startup-trying-to-bring-cloud-flexibility-to-connectivity/]]></link>      <description><![CDATA[Telcos are figuring out that between cloud computing and the internet of things, they have the potential to create a new line of business that looks more like AWS than anything from the stodgy old telephone world. That is why Deutsche Telekom created a subsidiary called MobiledgeX.]]></description>
+      <pubDate>Tue, 26 Mar 19 15:58:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX: Who Benefits From Edge Computing?]]></title>
+      <link><![CDATA[https://www.lightreading.com/the-edge/mobiledgex-who-benefits-from-edge-computing-/v/d-id/750135]]></link>      <description><![CDATA[Jason Hoffman explains how MobiledgeX is supporting the edge ecosystem where mobile operators, application developers, cloud providers and device makers can participate and leverage their existing assets and investments to generate new experiences and new revenue streams.]]></description>
+      <pubDate>Mon, 18 Mar 19 12:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Does the mobile edge need an aggregator model?]]></title>
+      <link><![CDATA[http://the-mobile-network.com/2019/03/does-the-mobile-edge-need-an-aggregator-model/]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Tue, 12 Mar 19 11:41:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MWC19: Jason Hoffman, president and CEO of MobiledgeX]]></title>
+      <link><![CDATA[https://www.youtube.com/embed/hmC-4G6cC58/?autoplay=1&rel=0&showinfo=1]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Mon, 11 Mar 19 15:17:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Taking it to the mobile edge]]></title>
+      <link><![CDATA[http://the-mobile-network.com/2019/03/taking-it-to-the-mobile-edge/]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Mon, 11 Mar 19 15:16:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[How Edge Computing Will Deliver on the Promise of 5G]]></title>
+      <link><![CDATA[https://thenewstack.io/how-edge-computing-will-deliver-on-the-promise-of-5g/]]></link>      <description><![CDATA[Previous years at the Mobile World Congress Barcelona — the premier world conference for mobile consumer electronics — focused on topics like bringing the next billion online. This year at the event, you couldn’t walk a minute without someone touting the promise of 5G, the next generation of cellular mobile communications that promises to bring dramatically higher data rates, reduced latency, and massive device connectivity.]]></description>
+      <pubDate>Fri, 08 Mar 19 09:12:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX surfaces mobile networks to public clouds and app developers]]></title>
+      <link><![CDATA[https://www.telecomtv.com/content/edge/mobiledgex-surfaces-mobile-networks-to-public-clouds-and-app-developers-34381/]]></link>      <description><![CDATA[Filmed at Mobile World Congress 2019]]></description>
+      <pubDate>Wed, 06 Mar 19 10:27:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX: Enabling New Immersive Experiences With Edge Computing]]></title>
+      <link><![CDATA[https://www.lightreading.com/the-edge/mobiledgex-enabling-new-immersive-experiences-with-edge-computing--/v/d-id/749883]]></link>      <description><![CDATA[MobiledgeX, Deutsche Telekom, Samsung and Niantic showcase the world's first edge-enabled, multiplayer augmented-reality demo at Mobile World Congress 2019. Geoff Hollingworth, CMO of MobiledgeX, explains how edge computing supports speed and scalability challenges to seamlessly execute edge-enabled experiences today.]]></description>
+      <pubDate>Mon, 04 Mar 19 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Codename: Neon – The First Mobile Edge Mixed Reality Multiplayer Game Demoed at MWC 2019]]></title>
+      <link><![CDATA[https://arpost.co/2019/03/01/codename-neon-mobile-edge-mixed-reality-multiplayer-game-mwc-2019/]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Fri, 01 Mar 19 08:59:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Why the Developer of the New 'Harry Potter' Mobile Game and 'Pokemon Go' Loves 5G]]></title>
+      <link><![CDATA[http://fortune.com/2019/02/26/niantic-5g-harry-potter-ar-pokemon/]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Tue, 26 Feb 19 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[TIP Community Lab Launches Cloudlet for Edge Application Developers]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/02/25/tip-community-lab-launches-cloudlet-for-edge-application-developers]]></link>      <description><![CDATA[Edge Application Developer Project Group (EAD) announced availability of edge computing ("cloudlet") infrastructure at the TIP Community Lab in Menlo Park, California.]]></description>
+      <pubDate>Mon, 25 Feb 19 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX Seeks to Conquer the Network Edge, From Barcelona]]></title>
+      <link><![CDATA[https://www.lightreading.com/the-edge/mobiledgex-seeks-to-conquer-the-network-edge-from-barcelona/d/d-id/749678?f_src=lightreading_editorspicks_rss_latest]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Sun, 24 Feb 19 19:34:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[Deutsche Telekom, Niantic Inc., MobiledgeX and Samsung Showcase World’s First Mobile Edge Mixed Reality Multi-Gamer Experience]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/02/22/deutsche-telekom-niantic-mobiledgex-samsung-showcase-worlds-first-mobile-edge-mixed-reality-multi-gamer-experience]]></link>      <description><![CDATA[Niantic’s “Codename: Neon”, the world’s first edge-enhanced Mixed Reality Multiplayer Experience, delivered by ultra-low latency, Deutsche Telekom edge-enabled network, and Samsung Galaxy S10+ with edge computing enablement, will be playable by the public for the first time.]]></description>
+      <pubDate>Fri, 22 Feb 19 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[NIANTIC, SAMSUNG, DEUTSCHE TELEKOM UNVEIL 'FIRST' MOBILE EDGE MR MULTIPLAYER EXPERIENCE]]></title>
+      <link><![CDATA[https://mobilemarketingmagazine.com/niantic-samsung-deutsche-telekom-mobiledgex-mobile-edge-mixed-reality-multiplayer-mwc-2019]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Fri, 22 Feb 19 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Edge-based AR experiences to be showcased at MWC in Spain]]></title>
+      <link><![CDATA[http://www.ajudaily.com/view/20190221103509643]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Thu, 21 Feb 19 19:35:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Edge Featured in Newest Heavy Reading “5G Network & Service Strategies Operator Survey”]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/02/21/edge-featured-in-newest-heavy-reading-5g-network-and-service-strategies-operator-survey]]></link>      <description><![CDATA[Eric Braun shares insights on the latest findings from the recent Heavy Reading whitepaper, and the value edge can bring to 5G.]]></description>
+      <pubDate>Thu, 21 Feb 19 14:49:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[World Wide Technology and MobiledgeX partner to validate Mobile Edge Computing solution readiness for global operator edge deployments]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/02/21/world-wide-technology-and-mobiledgex-partner-to-validate-mobile-edge-computing-solution-readiness-for-global-operator-edge-deployments]]></link>      <description><![CDATA[]]></description>
+      <pubDate>Thu, 21 Feb 19 06:20:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[World Wide Technology collaborated with MobiledgeX to validate mobile edge computing solution]]></title>
+      <link><![CDATA[https://www.mirrorreview.com/world-wide-technology-collaborated-with-mobiledgex/]]></link>      <description><![CDATA[The partnership will enable mobile operators to quickly and confidently deploy edge services at a global scale to meet the requirements of next-gen applications and devices.]]></description>
+      <pubDate>Thu, 21 Feb 19 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX and SK Telecom to Demonstrate the Next Generation of Connected Devices and Edge-Enabled Application Experiences at MWC]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/02/20/mobiledgex-and-sk-telecom-to-demonstrate-the-next-generation-of-connected-devices-and-edge-enabled-application-experiences-at-mwc]]></link>      <description><![CDATA[MobiledgeX and SK Telecom have moved from partnership announcement at the end of 2018 to demonstrating live edge-enabled applications, devices, and experiences in the SK Telecom booth at Mobile World Congress 2019.]]></description>
+      <pubDate>Wed, 20 Feb 19 18:01:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Deutsche Telekom deploys MobiledgeX Edge-Cloud]]></title>
+      <link><![CDATA[https://www.convergedigest.com/2019/02/deutsche-telekom-deploys-mobiledgex.html]]></link>      <description><![CDATA[MobiledgeX, the edge computing company founded by Deutsche Telekom AG, unveiled its architecture for connecting mobile users to application cloud containers created by aggregating existing operator network resources.]]></description>
+      <pubDate>Tue, 19 Feb 19 19:23:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX Public Mobile Edge Network Goes Live With Deutsche Telekom]]></title>
+      <link><![CDATA[https://www.sdxcentral.com/articles/news/mobiledgex-public-mobile-edge-network-goes-live-with-deutsche-telekom/2019/02/]]></link>      <description><![CDATA[The network is powered by MobiledgeX’s Edge-Cloud R1.0 platform, also announced today. The platform connects mobile users to application cloud containers created by aggregating existing operator network resources. These containers execute close to end devices, which provides low latency and high performance needed for next-gen mobile apps.]]></description>
+      <pubDate>Tue, 19 Feb 19 15:21:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobileEdgeX’s first public cloud edge network is live with Deutsche Telekom]]></title>
+      <link><![CDATA[https://www.rcrwireless.com/20190218/network-infrastructure/mobileedgexs-first-public-cloud-network-is-live]]></link>      <description><![CDATA[The edge computing company founded by Deutsche Telekom, MobiledgeX, is now live with its first public edge network that aggregates existing network operator resources — from parent DT — to host application cloud containers.]]></description>
+      <pubDate>Tue, 19 Feb 19 07:55:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Making Edge a Reality]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/02/19/making-edge-reality]]></link>      <description><![CDATA[For the first time, 3rd parties are deploying directly to private mobile operator edge infrastructure without any human involvement, dynamically allocating their workloads as close to their mobile users as possible.]]></description>
+      <pubDate>Tue, 19 Feb 19 06:04:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[MobiledgeX Releases World’s First Public Mobile Edge]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/02/19/mobiledgex-releases-world-first-public-mobile-edge]]></link>      <description><![CDATA[We’ve announced the first public mobile edge running in the Deutsche Telekom cellular infrastructure in Germany.  Let’s unpack that.]]></description>
+      <pubDate>Tue, 19 Feb 19 06:01:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[Deutsche Telekom Completes World’s First Public Mobile Edge Network, Powered By MobiledgeX Edge-Cloud R1.0]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/02/19/deutsche-telekom-completes-worlds-first-public-mobile-edge-network-powered-by-mobiledgex-edge-cloud-r1-0]]></link>      <description><![CDATA[MobiledgeX Edge-Cloud R1.0 gives developers worldwide immediate access to deploy application backend close to mobile users inside Telekom Deutschland network in Germany for live trials around Augmented Reality (AR), Mixed Reality (MR), and Simultaneous Localization and Mapping (SLAM) use cases in the same way they deploy workloads in the public cloud.]]></description>
+      <pubDate>Tue, 19 Feb 19 06:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX touts public mobile edge network with Deutsche Telekom]]></title>
+      <link><![CDATA[https://www.fiercewireless.com/wireless/mobiledgex-touts-public-mobile-edge-network-deutsche-telekom]]></link>      <description><![CDATA[Just in time for Mobile World Congress 2019, MobiledgeX is announcing several milestones, including the completion of what it describes as the first public mobile edge network deployment—with Deutsche Telekom in Germany—and the introduction of MobiledgeX Edge-Cloud R1.0, which is already in the hands of developers.]]></description>
+      <pubDate>Tue, 19 Feb 19 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Solving for Scalability with Edge Infrastructure]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/02/15/solving-for-scalability-with-edge-infrastructure]]></link>      <description><![CDATA[VREE develops platforms that enable multiple-users to have a synchronized full-body experience in VR. Read how VREE's platform takes advantage of 5G and edge compute to deliver a solid real time experience within these virtual environments.]]></description>
+      <pubDate>Fri, 15 Feb 19 15:57:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[VR / AR / XR and You]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/02/11/vr-ar-xr-and-you]]></link>      <description><![CDATA[Holo-Light, German startup, focuses on the development of core technologies to enable efficient AR/VR use and leverage MobiledgeX’s edge service to enable new industrial applications.]]></description>
+      <pubDate>Mon, 11 Feb 19 10:36:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Cloudlet Infrastructure Explained]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/02/04/cloudlet-infrastructure-explained]]></link>      <description><![CDATA[Knowing a little about modern infrastructure makes it a lot easier to understand where MobiledgeX fits in and creates value. Let's talk through the components]]></description>
+      <pubDate>Mon, 04 Feb 19 14:47:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Get the Power of the Edge with a Single Line of Code]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/02/04/edgemesh-power-of-edge-single-line-of-code]]></link>      <description><![CDATA[edgemesh is an American startup founded by Jacob Loveless. Six months after opening for general availability, edgemesh operates on more than 3,500 networks globally, providing their dynamic web acceleration platform to websites where milliseconds matter.]]></description>
+      <pubDate>Mon, 04 Feb 19 14:47:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[OnEdge #4: Enabling Edge at the Speed of Technology]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2019/01/18/onedge-4-enabling-edge-at-the-speed-of-technology]]></link>      <description><![CDATA[Geoff Hollingworth, Chief Marketing Officer at MobiledgeX, shares why the timing is right for edge and the business opportunities for mobile operators and developers.]]></description>
+      <pubDate>Fri, 18 Jan 19 15:52:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX & Sfara form a Global Technology Partnership]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2019/01/14/mobiledgex-and-sfara-form-a-global-technology-partnership]]></link>      <description><![CDATA[Addressing Driver Analytics and Mobile Assurance Services for the Reinsurance & Insurance industry arising from the introduction and ongoing development of semi-autonomous and fully-autonomous Level 3 through Level 5 automotive, trucking, transportation, mobility, fleet management and ride sharing services.]]></description>
+      <pubDate>Mon, 14 Jan 19 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[New TIP Edge Application Developer Project Group]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/12/19/the-dummys-guide-to-the-new-tip-edge-application-developer-project-group]]></link>      <description><![CDATA[At the TIP Summit, a new working group called “The Edge Application Developer Project Group” was announced. Many questions have come up, so we thought we’d explain why it was created.]]></description>
+      <pubDate>Wed, 19 Dec 18 11:25:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[SK Telecom Partners with MobiledgeX to Enable the Next Generation of Connected Devices and Mobile Application Experiences]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2018/12/13/sk-telecom-partners-with-mobiledgex-to-enable-the-next-generation-of-connected-devices-and-mobile-application-experiences]]></link>      <description><![CDATA[SK Telecom Partners with MobiledgeX, Supporting a New Collaborative Ecosystem of Telecoms, Public Clouds, Device Makers, and Technology Partners in Developing the Next Generation of Mobile Application Experiences and Surrounding Business Models.]]></description>
+      <pubDate>Thu, 13 Dec 18 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[OnEdge #3: Aligning the Industry for Edge]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/11/29/onedge-3-aligning-the-industry-for-edge]]></link>      <description><![CDATA[As VP Operator Ecosystem and Support for MobiledgeX, Tomasz Gerszberg discusses how to bring together an ecosystem of operators, cloud providers, and developers for edge computing.]]></description>
+      <pubDate>Thu, 29 Nov 18 15:39:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Use Cases—The Strange Dance of Invention, Innovation and Discovery]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/11/20/usecases-invention-innovation-discovery]]></link>      <description><![CDATA[Every successful innovator discovers, sooner or later, the important role that customers play in the process of innovation. I’m not talking about innovation being market driven—most interesting innovation begins with some form of technical invention.]]></description>
+      <pubDate>Tue, 20 Nov 18 11:18:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[OnEdge #2: Building an Edge Marketplace]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/11/15/onedge-2-building-an-edge-marketplace]]></link>      <description><![CDATA[Eric Braun, Chief Commercial Officer at MobiledgeX, shares insights on building an edge marketplace and how all the key players must come together.]]></description>
+      <pubDate>Thu, 15 Nov 18 15:37:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[How Our Mobile Operator Partners Benefit]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/11/14/how-our-mobile-operator-partners-benefit]]></link>      <description><![CDATA[This new developer-friendly and cloud-agile partnership enables mobile operators to participate in rapidly emerging and evolving opportunities since they can now augment and evolve their own infrastructure and local offerings at cloud-speed.]]></description>
+      <pubDate>Wed, 14 Nov 18 11:13:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[OnEdge #1: How Will Edge Work?]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/11/01/onedge-podcast-ep1-how-will-edge-work]]></link>      <description><![CDATA[Sunay Tripathi, CTO & EVP Engineering at MobiledgeX, kicks off the podcast with a description of how Edge completes the mobility journey.]]></description>
+      <pubDate>Thu, 01 Nov 18 15:31:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Everyone Gets Paid]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/10/23/everyone-gets-paid]]></link>      <description><![CDATA[The future looks very different. It always does. The future requires different solutions. It always does. It is hard to see what these new solutions will look like before they arrive, this is the challenge MobiledgeX has undertaken, to transform how we enable software developers and new device makers to build the experiences of the future.]]></description>
+      <pubDate>Tue, 23 Oct 18 11:06:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Deutsche Telekom and SK Telecom Sign Strategic Cross-Investment Agreement]]></title>
+      <link><![CDATA[https://www.telekom.com/en/media/media-information/archive/strategic-cross-investment-agreement-549114]]></link>      <description><![CDATA[Deutsche Telekom and SK Telecom today entered into a cross investment agreement to further strengthen their  competitiveness in 5G and deepen their cooperation in the global market. Under the agreement, SK Telecom plans to invest in MobiledgeX, an edge computing company founded by Deutsche Telekom and  headquartered in Menlo Park, California, focused on delivering  developer-facing edge computing services.]]></description>
+      <pubDate>Mon, 22 Oct 18 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX Joins the Telecom Infra Project’s Edge Application Developer Project Group]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2018/10/16/mobiledgex-joins-the-telecom-infra-projects-edge-application-developer-project-group]]></link>      <description><![CDATA[MobiledgeX, Deutsche Telekom and Intel Taking Leading Roles in Launch of New TIP Project Group Focused on Enabling Developers to Build the Next Generation of Mobile Applications on Operators’ Edge Infrastructure]]></description>
+      <pubDate>Tue, 16 Oct 18 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[Deutsche Telekom, Niantic And Mobiledgex Partner To Create Advanced Augmented Reality Experiences Over New Mobile Network Technologies]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2018/10/11/deutsche-telekom-niantic-and-mobiledgex-partner-to-create-advanced-augmented-reality-experiences-over-new-mobile-network-technologies]]></link>      <description><![CDATA[Niantic to Bring Proprietary Real World Platform for Augmented Reality Gaming to Deutsche Telekom’s MobiledgeX Edge Servers And 5G Network to Create Scalable End-User Experiences]]></description>
+      <pubDate>Thu, 11 Oct 18 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Why Deutsche Telekom Created MobiledgeX]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/10/01/why-deutsche-telekom-created-mobiledgex]]></link>      <description><![CDATA[It may seem strange or even counter-intuitive that Deutsche Telekom (DT), a mobile operator with a specific cellular telephony franchise in competitive markets, would create MobiledgeX, a new venture chartered to serve any or all mobile operators (not just DT). Here’s the backstory that explains why.]]></description>
+      <pubDate>Mon, 01 Oct 18 10:56:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX and Deutsche Telekom Show Edge Live in Germany]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2018/09/26/mobiledgex-and-deutsche-telekom-show-edge-live-in-germany]]></link>      <description><![CDATA[At Edge Computing Congress, Berlin, MobiledgeX, publicly demonstrated its ability to bring the Cloud closer to users by placing 3rd party workloads into live telecom edge based on end user location]]></description>
+      <pubDate>Wed, 26 Sep 18 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Finding the Edge at Scale]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/09/25/finding-the-edge-at-scale]]></link>      <description><![CDATA[After presenting at Edge Computing Congress in Berlin, Sunay Tripathi shares insights on the high value in being able to execute various services near the edge of the mobile network.]]></description>
+      <pubDate>Tue, 25 Sep 18 13:14:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX Revs Up & Shifts Into Gear]]></title>
+      <link><![CDATA[https://ubm.io/2Nu03pe]]></link>      <description><![CDATA[At Edge Computing Congress 2018, MobiledgeX has unveiled its suite of edge computing software tools designed to bring third-party application developers on board next-generation networks, outlined its open source plans and ramped up its network operator charm offensive in an effort to get the entire carrier community on board by Mobile World Congress 2019.]]></description>
+      <pubDate>Thu, 20 Sep 18 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Article: <![CDATA[Edge as an Opportunity]]></title>
+      <link><![CDATA[http://mexv3.test/blog/2018/09/16/mobile-edge-opportunity]]></link>      <description><![CDATA[At Mobile World Congress America, Jason Hoffman presented a high-level explanation of what MobiledgeX is building, and why.]]></description>
+      <pubDate>Sun, 16 Sep 18 12:44:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>Press Release: <![CDATA[MobiledgeX selected to the 'GSMA' 100]]></title>
+      <link><![CDATA[http://mexv3.test/press-releases/2018/09/11/mobiledgex-selected-to-the-gsma-100]]></link>      <description><![CDATA[MobiledgeX Taking Leading Role in GSMA Initiative to Advance Next Generation of Connectivity and Digital Services]]></description>
+      <pubDate>Tue, 11 Sep 18 08:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[MobiledgeX's Jason Hoffman: State of the Edge]]></title>
+      <link><![CDATA[https://ubm.io/2wvCSjk]]></link>      <description><![CDATA[Jason Hoffman, CEO of MobiledgeX, discusses everything that is needed from an edge perspective leading up to 5G. Why is edge important, what services are needed, who is edge for and what is needed to make sure we build an edge for people other than ourselves?]]></description>
+      <pubDate>Mon, 16 Jul 18 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[Telefónica Joins the MobiledgeX Fan Club]]></title>
+      <link><![CDATA[https://www.lightreading.com/the-edge/telefonica-joins-the-mobiledgex-fan-club/d/d-id/743754]]></link>      <description><![CDATA[Telefónica is the latest operator to forge a relationship with Deutsche Telekom's edge computing offshoot MobiledgeX.]]></description>
+      <pubDate>Thu, 07 Jun 18 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[DT-Owned MobiledgeX to Power German Telco's Edge Rollout]]></title>
+      <link><![CDATA[https://www.lightreading.com/mobile/mec-(mobile-edge-computing)/dt-owned-mobiledgex-to-power-german-telcos-edge-rollout/d/d-id/740845]]></link>      <description><![CDATA[Deutsche Telekom will start investing in new edge-computing facilities this year in Germany using technology developed by MobiledgeX, its wholly owned, Silicon Valley-based subsidiary that is central to its edge-computing strategy.]]></description>
+      <pubDate>Wed, 28 Feb 18 00:00:00 +0000</pubDate>
+    </item>
+        <item>
+      <title>News Mention: <![CDATA[OrbTV: MobiledgeX Further Exploring Edge Computing Opportunities]]></title>
+      <link><![CDATA[https://www.telekom.com/en/company/details/orbtv--mobiledgex-further-exploring-edge-computing-opportunities-517786]]></link>      <description><![CDATA[Jason Hoffman, CEO of MobiledgeX, explains Deutsche Telekom's role in launching MobiledgeX and how edge computing supports new applications and technologies such as IoT.]]></description>
+      <pubDate>Wed, 28 Feb 18 00:00:00 +0000</pubDate>
+    </item>
+    
+
+  </channel>
+</rss>
